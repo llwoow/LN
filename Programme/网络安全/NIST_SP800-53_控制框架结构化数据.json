@@ -1,0 +1,216 @@
+{
+  "document_info": {
+    "title": "NIST SP 800-53 Revision 5: Security and Privacy Controls for Information Systems and Organizations",
+    "version": "Revision 5 (Release 5.2.0)",
+    "publication_date": "2020-09",
+    "latest_update": "2025-08-27",
+    "total_pages": 492,
+    "doi": "10.6028/NIST.SP.800-53r5",
+    "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+  },
+  "framework_overview": {
+    "description": "Comprehensive catalog of security and privacy controls for information systems and organizations",
+    "threats_addressed": [
+      "Hostile attacks",
+      "Human errors", 
+      "Natural disasters",
+      "Structural failures",
+      "Foreign intelligence entities",
+      "Privacy risks"
+    ],
+    "control_perspectives": [
+      "Functionality (strength of security mechanisms)",
+      "Assurance (confidence in security capabilities)"
+    ]
+  },
+  "control_families": [
+    {
+      "family_code": "AC",
+      "family_name": "Access Control",
+      "description": "Manages system access and authorization",
+      "focus_areas": ["Access management", "Authorization", "Privilege control"],
+      "key_controls": ["AC-1", "AC-2", "AC-3", "AC-6", "AC-17", "AC-18", "AC-19"]
+    },
+    {
+      "family_code": "IA", 
+      "family_name": "Identification and Authentication",
+      "description": "Handles user identity verification",
+      "focus_areas": ["User identification", "Authentication methods", "Identity management"],
+      "key_controls": ["IA-2", "IA-3", "IA-5", "IA-8", "IA-11"]
+    },
+    {
+      "family_code": "SC",
+      "family_name": "System and Communications Protection", 
+      "description": "Protects information systems and communication channels",
+      "focus_areas": ["Network protection", "Encryption", "Communication security"],
+      "key_controls": ["SC-7", "SC-8", "SC-12", "SC-13", "SC-28"]
+    },
+    {
+      "family_code": "SI",
+      "family_name": "System and Information Integrity",
+      "description": "Maintains system integrity and information accuracy", 
+      "focus_areas": ["Malware protection", "System monitoring", "Defect remediation"],
+      "key_controls": ["SI-2", "SI-3", "SI-4", "SI-5", "SI-7"]
+    },
+    {
+      "family_code": "AU",
+      "family_name": "Audit and Accountability",
+      "description": "Provides audit trails and accountability",
+      "focus_areas": ["Audit logging", "Event monitoring", "Accountability"],
+      "key_controls": ["AU-2", "AU-6", "AU-8", "AU-12", "AU-16"]
+    },
+    {
+      "family_code": "CA",
+      "family_name": "Security Assessment and Authorization",
+      "description": "Assesses and authorizes security control effectiveness",
+      "focus_areas": ["Security assessment", "Authorization", "Continuous monitoring"],
+      "key_controls": ["CA-1", "CA-2", "CA-3", "CA-5", "CA-7"]
+    },
+    {
+      "family_code": "CM",
+      "family_name": "Configuration Management",
+      "description": "Manages system configuration and changes",
+      "focus_areas": ["Configuration control", "Change management", "Baseline management"],
+      "key_controls": ["CM-1", "CM-2", "CM-3", "CM-6", "CM-8"]
+    },
+    {
+      "family_code": "IR",
+      "family_name": "Incident Response", 
+      "description": "Prepares for, detects, analyzes, contains, and recovers from security incidents",
+      "focus_areas": ["Incident handling", "Response procedures", "Recovery planning"],
+      "key_controls": ["IR-1", "IR-2", "IR-3", "IR-4", "IR-6"]
+    },
+    {
+      "family_code": "MA",
+      "family_name": "Maintenance",
+      "description": "Ensures proper system maintenance",
+      "focus_areas": ["Maintenance procedures", "Remote maintenance", "Maintenance personnel"],
+      "key_controls": ["MA-1", "MA-2", "MA-4", "MA-5", "MA-6"]
+    },
+    {
+      "family_code": "SM",
+      "family_name": "System and Maintenance",
+      "description": "Ensures proper system maintenance (updated family)",
+      "focus_areas": ["Organizational control", "Implementation control", "Monitoring control"],
+      "key_controls": ["SM-1", "SM-2", "SM-3", "SM-4", "SM-5"]
+    }
+  ],
+  "latest_updates": {
+    "release_5_2_0": {
+      "release_date": "2025-08-27",
+      "new_controls": [
+        {
+          "control_id": "SA-15(13)",
+          "description": "Development Process and Tools Evaluation"
+        },
+        {
+          "control_id": "SA-24", 
+          "description": "Information System Life Cycle"
+        },
+        {
+          "control_id": "SI-02(07)",
+          "description": "Flaw Remediation - Defect Disclosure"
+        }
+      ]
+    }
+  },
+  "implementation_guidance": {
+    "implementation_approach": [
+      "Risk management process integration",
+      "Flexible and customizable controls",
+      "Organization-wide risk management"
+    ],
+    "control_selection": [
+      "Based on risk assessment results",
+      "Customizable to organizational needs", 
+      "Flexible implementation methods"
+    ]
+  },
+  "framework_mappings": [
+    {
+      "framework": "NIST Cybersecurity Framework",
+      "mapping_available": true
+    },
+    {
+      "framework": "NIST Privacy Framework", 
+      "mapping_available": true
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "mapping_available": true
+    }
+  ],
+  "available_formats": [
+    {
+      "format": "PDF",
+      "description": "Complete document",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf"
+    },
+    {
+      "format": "Excel Workbooks",
+      "description": "Control mappings and analysis",
+      "files": [
+        "Analysis of updates between 800-53 Rev. 5 and Rev. 4",
+        "Mapping of Appendix J Privacy Controls (Rev. 4) to Rev. 5",
+        "Mappings: Cybersecurity Framework and Privacy Framework to Rev. 5"
+      ]
+    },
+    {
+      "format": "OSCAL",
+      "description": "Machine-readable format (JSON, XML, YAML)",
+      "url": "https://github.com/usnistgov/oscal-content/tree/v1.3.0/nist.gov/SP800-53/rev5"
+    }
+  ],
+  "supplemental_materials": [
+    {
+      "title": "Analysis of updates between 800-53 Rev. 5 and Rev. 4",
+      "type": "Excel workbook",
+      "description": "Detailed analysis of changes between versions"
+    },
+    {
+      "title": "Mapping of Appendix J Privacy Controls (Rev. 4) to Rev. 5",
+      "type": "Excel workbook", 
+      "description": "Privacy control mapping analysis"
+    },
+    {
+      "title": "Mappings: Cybersecurity Framework and Privacy Framework to Rev. 5",
+      "type": "Excel workbook",
+      "description": "Framework crosswalks and mappings"
+    },
+    {
+      "title": "Crosswalk: 800-53 Rev. 5 to ISO/IEC 27001:2022",
+      "type": "Reference catalog",
+      "description": "International standard mapping"
+    },
+    {
+      "title": "Control Collaboration Index Template",
+      "type": "Excel/Word template",
+      "description": "Tool for organizing control collaboration"
+    }
+  ],
+  "related_publications": [
+    {
+      "title": "SP 800-53A Rev. 5",
+      "description": "Assessing Security Controls in Federal Information Systems and Organizations",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/a/r5/final"
+    },
+    {
+      "title": "SP 800-53B",
+      "description": "Minimum Security Requirements for Federal Information and Information Systems",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/b/upd1/final"
+    }
+  ],
+  "important_notice": {
+    "warning": "Due to a lapse in federal funding, this website is not being updated after October 1, 2025",
+    "impact": "May affect the timeliness or accuracy of information provided after that date"
+  },
+  "extraction_metadata": {
+    "extraction_date": "2025-11-02",
+    "extraction_method": "Web page content extraction and analysis",
+    "sources": [
+      "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf"
+    ],
+    "data_completeness": "High-level overview and framework structure extracted. Detailed control text requires full document access."
+  }
+}

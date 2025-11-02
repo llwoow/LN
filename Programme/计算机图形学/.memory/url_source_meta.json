@@ -1,0 +1,300 @@
+{
+  "_source_id": 41,
+  "sources": {
+    "现代图形学和实时渲染技术": {
+      "https://docs.vulkan.org/tutorial/latest/00_Introduction.html": {
+        "id": 1,
+        "publisher": "Khronos Group",
+        "url": "https://docs.vulkan.org/tutorial/latest/00_Introduction.html",
+        "title": "Vulkan教程：GPU架构和渲染管线",
+        "info": "提取了Vulkan教程中关于GPU架构、渲染管线、并行计算和显存管理的详细信息，包括Vulkan 1.4特性、图形管线基础、计算着色器和内存管理"
+      },
+      "https://zhuanlan.zhihu.com/p/651037352": {
+        "id": 2,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/651037352",
+        "title": "NVIDIA GPU风格架构",
+        "info": "获取了NVIDIA GPU架构设计的详细信息，包括GPU流水线、并行计算单元、内存系统、SIMD/SIMT架构、on-chip存储系统等核心概念"
+      },
+      "https://ddlee-cn.github.io/blog/2024/CG-Pipeline/": {
+        "id": 3,
+        "publisher": "李佳丞的个人博客",
+        "url": "https://ddlee-cn.github.io/blog/2024/CG-Pipeline/",
+        "title": "实时渲染管线",
+        "info": "提取了实时渲染管线的详细信息，包括5个主要阶段：应用阶段、几何处理、光栅化、像素处理和后处理阶段"
+      },
+      "https://zhuanlan.zhihu.com/p/629011309": {
+        "id": 4,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/629011309",
+        "title": "渲染性能优化之几种LOD层次细节总结",
+        "info": "获取了LOD技术的详细信息，包括基本概念、算法三要素、各种LOD类型、选择策略和优化方法"
+      },
+      "https://zhuanlan.zhihu.com/p/488397172": {
+        "id": 5,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/488397172",
+        "title": "DXR光线追踪学习（1）API和渲染管线",
+        "info": "提取了DXR光线追踪技术的详细信息，包括光线生成、交点计算、5个新着色器类型和算法实现"
+      },
+      "https://zhuanlan.zhihu.com/p/13967215533": {
+        "id": 6,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/13967215533",
+        "title": "探讨Forward与DeFered和Forward+",
+        "info": "获取了前向渲染、延迟渲染和Forward+渲染技术的详细对比，包括基本原理、优缺点、适用场景和实现方法"
+      },
+      "https://zhuanlan.zhihu.com/p/1911724285317316687": {
+        "id": 7,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/1911724285317316687",
+        "title": "OpenGL、Vulkan、DirectX、Metal对比分析",
+        "info": "提取了OpenGL、Vulkan、DirectX、Metal的详细对比分析，包括API特性、性能表现、跨平台能力、易用性和行业采用趋势"
+      }
+    },
+    "图形渲染管线核心技术研究": {
+      "https://zhuanlan.zhihu.com/p/466508365": {
+        "id": 8,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/466508365",
+        "title": "3D物体渲染到2D屏幕的矩阵变换过程：模型变换、视图变换、投影变换",
+        "info": "详细介绍了MVP变换的完整流程，包括模型变换、视图变换、投影变换的数学原理和矩阵推导"
+      },
+      "https://www.yumefx.com/?p=3889": {
+        "id": 9,
+        "publisher": "yumefx.com",
+        "url": "https://www.yumefx.com/?p=3889",
+        "title": "GPU渲染管线中的MVP变换矩阵",
+        "info": "介绍了GPU渲染管线中的MVP变换矩阵，包括模型变换、视图变换、投影变换和视口变换的详细说明"
+      },
+      "https://zhuanlan.zhihu.com/p/120955585": {
+        "id": 10,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/120955585",
+        "title": "二维光栅图形的扫描：直线的DDA、Bresenham算法",
+        "info": "详细介绍了DDA算法和Bresenham算法的原理、实现步骤和完整代码示例"
+      },
+      "https://zhuanlan.zhihu.com/p/646544508": {
+        "id": 11,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/646544508",
+        "title": "一文读懂：计算机图形学基础之纹理映射",
+        "info": "完整介绍了纹理映射的原理、UV坐标系统、纹理采样技术和双线性插值的数学原理"
+      },
+      "https://blog.csdn.net/qq_43149051/article/details/105925787": {
+        "id": 12,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/qq_43149051/article/details/105925787",
+        "title": "现代计算机图形学（正交投影，透视投影，MVP变换）",
+        "info": "MVP变换的完整数学推导，包括模型变换、视图变换、投影变换的详细推导过程和实现细节"
+      },
+      "https://blog.csdn.net/qw8704149/article/details/126869588": {
+        "id": 13,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/qw8704149/article/details/126869588",
+        "title": "计算机图形学(八)-纹理映射、计算重心坐标、UV插值、双线性插值",
+        "info": "详细介绍了纹理映射的基本概念、重心坐标、UV坐标和双线性插值等核心内容"
+      },
+      "https://zhuanlan.zhihu.com/p/1933178564041241167": {
+        "id": 14,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/1933178564041241167",
+        "title": "zBuffer算法",
+        "info": "Z-buffer算法的完整原理，包含深度缓冲实现方法、深度测试步骤和隐藏面消除技术"
+      },
+      "https://www.bilibili.com/opus/924961025886781473": {
+        "id": 15,
+        "publisher": "哔哩哔哩",
+        "url": "https://www.bilibili.com/opus/924961025886781473",
+        "title": "深度缓存器算法（Z-buffer）简介",
+        "info": "深度缓存器算法（Z-buffer）的详细介绍，包括算法原理、实现方法、优缺点分析以及改进措施"
+      }
+    },
+    "计算机图形学基础理论和数学基础研究": {
+      "https://zhuanlan.zhihu.com/p/412423861": {
+        "id": 16,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/412423861",
+        "title": "计算机图形学入门(GAMES101)数学基础",
+        "info": "提取了向量运算、矩阵运算的详细数学公式，包括向量点乘、叉乘、矩阵乘法的定义和性质"
+      },
+      "https://zhuanlan.zhihu.com/p/465542492": {
+        "id": 17,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/465542492",
+        "title": "现代计算机图形学基础 第1章 [数学工具•上篇]",
+        "info": "提取了集合与映射理论、向量运算的数学基础，包括点积和叉积的详细公式推导"
+      },
+      "https://zhuanlan.zhihu.com/p/527171571": {
+        "id": 18,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/527171571",
+        "title": "《Games 101》总结与思考——Part 3:变换(二维与三维)(下)",
+        "info": "提取了变换的详细数学推导，包括齐次坐标系下的平移、旋转、缩放矩阵表示和组合变换"
+      },
+      "https://zhuanlan.zhihu.com/p/539347633": {
+        "id": 19,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/539347633",
+        "title": "【个人笔记】速通计算机图形学基础",
+        "info": "提取了计算机图形学入门教程中关于数学基础和向量运算的核心内容，包括点乘和叉乘的技巧"
+      },
+      "https://www.jianshu.com/p/8ff4872e088f": {
+        "id": 20,
+        "publisher": "简书",
+        "url": "https://www.jianshu.com/p/8ff4872e088f",
+        "title": "RGB、CMY、CMYK、YUV、HSV、HSI、LAB颜色空间详解",
+        "info": "提取了七种主要颜色空间的详细理论和数学转换公式，包括RGB、CMYK、YUV、HSV、HSI、Lab等"
+      },
+      "https://www.ekdoc.com/d-1744887.html": {
+        "id": 21,
+        "publisher": "一课资料网",
+        "url": "https://www.ekdoc.com/d-1744887.html",
+        "title": "图形变换与齐次坐标.ppt",
+        "info": "提取了计算机图形学中齐次坐标的概念和各类变换的数学推导，包括二维和三维变换的矩阵表示"
+      },
+      "https://www.cnblogs.com/SmalBox/p/19092582": {
+        "id": 22,
+        "publisher": "博客园",
+        "url": "https://www.cnblogs.com/SmalBox/p/19092582",
+        "title": "Unity中的光照模型概念辨析",
+        "info": "提取了光照模型的详细理论，包括环境光、漫反射、镜面反射的计算方法和Phong光照模型"
+      }
+    },
+    "计算机图形学高级技术研究": {
+      "https://www.geeksforgeeks.org/computer-graphics/phong-model-specular-reflection-in-computer-graphics/": {
+        "id": 23,
+        "publisher": "GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/computer-graphics/phong-model-specular-reflection-in-computer-graphics/",
+        "title": "Phong模型镜面反射在计算机图形学中的应用",
+        "info": "提取了Phong镜面反射模型的完整数学公式、反射向量计算和实现细节"
+      },
+      "https://blog.csdn.net/u013412391/article/details/120597248": {
+        "id": 24,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/u013412391/article/details/120597248",
+        "title": "基于Cook-Torrance与GGX的微表面模型实现",
+        "info": "详细介绍了Cook-Torrance微表面模型的数学原理、GGX分布函数和Smith几何函数"
+      },
+      "https://blog.csdn.net/weixin_60379788/article/details/137075663": {
+        "id": 25,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/weixin_60379788/article/details/137075663",
+        "title": "贝塞尔曲线与de Casteljau算法",
+        "info": "提取了de Casteljau算法的数学推导和Bezier曲线求值方法"
+      },
+      "https://blog.csdn.net/weixin_44953347/article/details/116015734": {
+        "id": 26,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/weixin_44953347/article/details/116015734",
+        "title": "GAMES202-高质量实时渲染笔记04-Environment Mapping",
+        "info": "详细介绍了IBL技术、蒙特卡洛积分和Split Sum优化方法"
+      },
+      "https://cg.cs.tsinghua.edu.cn/course/docs/chap3_final.pdf": {
+        "id": 27,
+        "publisher": "清华大学计算机系",
+        "url": "https://cg.cs.tsinghua.edu.cn/course/docs/chap3_final.pdf",
+        "title": "计算机图形学课程资料：BRDF与反射模型",
+        "info": "提供了BRDF的完整理论基础、渲染方程推导和反射模型的数学基础"
+      },
+      "https://www.pbr-book.org/3ed-2018/Reflection_Models/Microfacet_Models": {
+        "id": 28,
+        "publisher": "PBR Book",
+        "url": "https://www.pbr-book.org/3ed-2018/Reflection_Models/Microfacet_Models",
+        "title": "微表面模型理论",
+        "info": "详细介绍了微表面理论的物理基础、Cook-Torrance模型和微表面BRDF的数学推导"
+      },
+      "https://developer.nvidia.com/gpugems/gpugems/part-iii-materials/chapter-19-image-based-lighting": {
+        "id": 29,
+        "publisher": "NVIDIA",
+        "url": "https://developer.nvidia.com/gpugems/gpugems/part-iii-materials/chapter-19-image-based-lighting",
+        "title": "GPU Gems：基于图像的光照",
+        "info": "提供了IBL技术的实现细节、环境贴图处理和实时渲染优化方法"
+      },
+      "https://web.eecs.umich.edu/~sugih/courses/eecs487/lectures/16-Phong+Shading.pdf": {
+        "id": 30,
+        "publisher": "密歇根大学",
+        "url": "https://web.eecs.umich.edu/~sugih/courses/eecs487/lectures/16-Phong+Shading.pdf",
+        "title": "Phong与Blinn-Phong光照模型讲义",
+        "info": "详细推导了Phong和Blinn-Phong模型的数学公式和实现算法"
+      },
+      "https://zhuanlan.zhihu.com/p/409173749": {
+        "id": 31,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/409173749",
+        "title": "GAMES101：Shadow Mapping笔记",
+        "info": "提供了阴影映射算法的完整实现流程、深度偏差处理和软阴影技术"
+      },
+      "https://www.devmaster.net/articles/shadow_techniques/1/102006/4/10": {
+        "id": 32,
+        "publisher": "DevMaster",
+        "url": "https://www.devmaster.net/articles/shadow_techniques/1/102006/4/10",
+        "title": "阴影技术：Shadow Volume",
+        "info": "详细介绍了阴影体积算法的实现原理、模板缓存技术和几何构造方法"
+      },
+      "https://developer.download.nvidia.com/presentations/2008/GDC/GDC08_SoftShadowMapping.pdf": {
+        "id": 33,
+        "publisher": "NVIDIA",
+        "url": "https://developer.download.nvidia.com/presentations/2008/GDC/GDC08_SoftShadowMapping.pdf",
+        "title": "高级软阴影映射技术",
+        "info": "提供了PCF和PCSS软阴影算法的数学原理和实现细节"
+      },
+      "https://en.wikipedia.org/wiki/Non-uniform_rational_B-spline": {
+        "id": 34,
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Non-uniform_rational_B-spline",
+        "title": "非均匀有理B样条(NURBS)",
+        "info": "提供了NURBS理论的完整数学基础、权重控制和B样条的扩展"
+      },
+      "https://graphics.stanford.edu/~mdfisher/subdivision.html": {
+        "id": 35,
+        "publisher": "Stanford",
+        "url": "https://graphics.stanford.edu/~mdfisher/subdivision.html",
+        "title": "细分曲面算法",
+        "info": "详细介绍了细分曲面算法的理论基础、Catmull-Clark和Loop细分方法"
+      },
+      "https://en.wikipedia.org/wiki/Cohen%E2%80%93Sutherland_algorithm": {
+        "id": 36,
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cohen%E2%80%93Sutherland_algorithm",
+        "title": "Cohen-Sutherland裁剪算法",
+        "info": "提供了Cohen-Sutherland和Sutherland-Hodgman裁剪算法的完整实现和复杂度分析"
+      },
+      "https://dl.acm.org/doi/10.1145/3550454.3555460": {
+        "id": 37,
+        "publisher": "ACM",
+        "url": "https://dl.acm.org/doi/10.1145/3550454.3555460",
+        "title": "交互式鲁棒网格布尔运算",
+        "info": "提供了先进的网格布尔运算算法、几何构造和相交检测技术"
+      },
+      "https://algs4.cs.princeton.edu/93intersection/": {
+        "id": 38,
+        "publisher": "Princeton University",
+        "url": "https://algs4.cs.princeton.edu/93intersection/",
+        "title": "几何相交算法",
+        "info": "提供了线段相交、多边形相交等几何算法的完整实现和复杂度分析"
+      },
+      "https://web.mit.edu/hyperbook/Patrikalakis-Maekawa-Cho/node13.html": {
+        "id": 39,
+        "publisher": "MIT",
+        "url": "https://web.mit.edu/hyperbook/Patrikalakis-Maekawa-Cho/node13.html",
+        "title": "Bezier曲线算法",
+        "info": "提供了Bezier曲线的数学理论、de Casteljau算法和曲线求值方法"
+      },
+      "https://doc.cgal.org/latest/Subdivision_method_3/index.html": {
+        "id": 40,
+        "publisher": "CGAL",
+        "url": "https://doc.cgal.org/latest/Subdivision_method_3/index.html",
+        "title": "3D表面细分方法文档",
+        "info": "提供了CGAL库中细分曲面算法的完整实现和API文档"
+      },
+      "https://zh.wikipedia.org/wiki/%E9%9B%99%E5%90%91%E5%8F%8D%E5%B0%84%E5%88%86%E4%BD%88%E5%87%BD%E6%95%B8": {
+        "id": 41,
+        "publisher": "Wikipedia",
+        "url": "https://zh.wikipedia.org/wiki/%E9%9B%99%E5%90%91%E5%8F%8D%E5%B0%84%E5%88%86%E4%BD%88%E5%87%BD%E6%95%B8",
+        "title": "双向反射分布函数(BRDF)",
+        "info": "提供了BRDF的基本定义、性质和在计算机图形学中的应用"
+      }
+    }
+  }
+}

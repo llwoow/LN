@@ -1,0 +1,27 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "研究软件测试课程的核心知识点和考点",
+        "details": "收集软件测试的基础理论、方法论、技术要点等，确保内容全面且符合课程要求",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "创建结构化的软件测试笔记文档",
+        "details": "按照章节组织内容，包含：1.基础理论 2.测试方法 3.测试技术 4.测试管理 5.工具使用等，使用markdown格式，公式用LaTeX语法",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "添加交互式内容和图表说明",
+        "details": "为重要定理和推导添加<details>标签实现展开/收起功能，创建表格整理知识点，必要时添加图表说明",
+        "status": "completed",
+        "priority": "medium"
+      }
+    }
+  }
+}

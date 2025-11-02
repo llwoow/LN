@@ -1,0 +1,50 @@
+📄 Extracted from page: Block io priorities — The Linux Kernel documentation
+URL: https://www.kernel.org/doc/html/latest/block/ioprio.html
+
+Extracted content:
+```json
+{
+  "title": "Block io priorities — The Linux Kernel documentation",
+  "url": "https://www.kernel.org/doc/html/latest/block/ioprio.html",
+  "summary": "该文档详细介绍了Linux内核中的I/O优先级（I/O nice）功能，它允许用户像CPU调度一样为进程或进程组设置I/O优先级。该功能依赖于I/O调度器，目前由bfq和mq-deadline支持。文档阐述了三种I/O调度类别（实时、尽力而为、空闲），它们的行为和优先级级别，并提供了一个C语言实现的`ionice`工具示例，展示了如何在用户空间通过系统调用与内核进行交互，设置和获取I/O优先级，包括相关的系统调用细节、常量定义和优先级值编码方式。",
+  "key_points": [
+    {
+      "topic": "I/O优先级系统实现原理",
+      "details": [
+        "I/O优先级功能旨在让进程或进程组拥有类似CPU调度的I/O『nice』级别。",
+        "此功能依赖于特定的I/O调度器，目前由bfq和mq-deadline支持。",
+        "提供了三种通用的I/O调度类别：",
+        "  - **IOPRIO_CLASS_RT (Realtime - 实时类)**: 具有最高优先级，每次都优先获得磁盘访问权。需谨慎使用，单个RT进程可能导致系统饥饿。该类别内有8个优先级级别（class data），决定进程在每次服务中占用磁盘的时间，未来可能改为直接映射到所需数据速率。",
+        "  - **IOPRIO_CLASS_BE (Best-Effort - 尽力而为类)**: 默认的调度类别，适用于未设置特定I/O优先级的进程。优先级级别（class data）决定进程获得的I/O带宽，与CPU nice级别粗略对应。0为最高BE优先级，7为最低。映射关系为：io_nice = (cpu_nice + 20) / 5。",
+        "  - **IOPRIO_CLASS_IDLE (Idle - 空闲类)**: 优先级最低，仅当没有其他进程需要磁盘I/O时才能获得I/O时间。此类别没有（概念上的）优先级级别（class data）。",
+        "I/O优先级设置会通过fork操作继承给子进程。"
+      ]
+    },
+    {
+      "topic": "源码细节与用户空间接口",
+      "details": [
+        "用户空间通过`sys_ioprio_set`和`sys_ioprio_get`系统调用与内核交互来设置和获取I/O优先级。",
+        "系统调用号因架构而异，例如`__NR_ioprio_set`在i386上为289，在x86_64上为251。",
+        "提供的`ionice.c`工具示例展示了如何实现这些系统调用的包装函数（`ioprio_set`和`ioprio_get`）。",
+        "`ioprio_set`系统调用接收一个打包的I/O优先级值，该值由优先级类别和级别组合而成。",
+        "`ioprio_get`系统调用返回一个打包的I/O优先级值，用户空间需要解析以获取类别和级别。",
+        "工具中使用了`execvp`来在设置优先级后启动新的命令。"
+      ]
+    },
+    {
+      "topic": "数据结构与优先级编码",
+      "details": [
+        "I/O优先级值是一个整数，其中优先级类别和级别被编码在一个32位整数中。",
+        "**`IOPRIO_CLASS_SHIFT`** (值为13) 定义了类别信息的偏移量。类别信息存储在该整数的高位部分，通过`ioprio_class << IOPRIO_CLASS_SHIFT`进行编码。",
+        "优先级级别信息存储在低位部分，通常通过`ioprio & 0xff`提取（假定级别占用低8位）。",
+        "`ionice.c`中定义的枚举类型：",
+        "  - `enum { IOPRIO_CLASS_NONE, IOPRIO_CLASS_RT, IOPRIO_CLASS_BE, IOPRIO_CLASS_IDLE, };` 定义了I/O调度类别。",
+        "  - `enum { IOPRIO_WHO_PROCESS = 1, IOPRIO_WHO_PGRP, IOPRIO_WHO_USER, };` 定义了优先级作用的对象（进程、进程组、用户）。",
+        "尽管`IOPRIO_CLASS_IDLE`被描述为『没有class data』，`ionice.c`在设置`IDLE`类时仍会将级别设置为7（`ioprio = 7`），并将其与类别一起打包发送给内核，这表明内核接口预期接收一个完整的打包值。"
+      ]
+    }
+  ],
+  "relevant_links": [],
+  "file_name": "linux_kernel_ioprio_details.json"
+}
+```

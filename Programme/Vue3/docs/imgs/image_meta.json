@@ -1,0 +1,392 @@
+[
+  {
+    "query": "Vue.js 3.0官方logo图片，用于文档头部",
+    "image_info": {
+      "url": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fv3o6v5x5rk4mjnpv6spc.png",
+      "img_format": "WEBP",
+      "mode": "RGB",
+      "file_size": 9952,
+      "width": 952,
+      "height": 400,
+      "total_pixels": 380800,
+      "basic_score": 0.7747091963045567,
+      "file_name": "vuejs-3-official-logo-banner.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image is a perfect match for the search query, showing the official Vue.js 3 logo. The graphic is perfectly clear, has no watermarks, and is formatted as a banner, making it ideal for use as a document header as specified in the prompt.",
+      "file_name": "vuejs-3-official-logo-banner.jpg",
+      "caption": "The official logo for Vue.js 3, commonly known as Vue 3. The design features the iconic green 'V' emblem next to the number '3' in a dark blue font, all set against a muted green background with subtle wave patterns.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue.js 3.0官方logo图片，用于文档头部",
+    "image_info": {
+      "url": "https://uploads.sitepoint.com/wp-content/uploads/2021/05/1622032089Vue3-768x404.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 18079,
+      "width": 768,
+      "height": 404,
+      "total_pixels": 310272,
+      "basic_score": 0.7823862586809324,
+      "file_name": "vuejs-3-official-logo-banner.jpg_5f"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is a perfect match for the query, displaying the official Vue.js logo in a high-quality banner format suitable for a document header. The clarity is excellent, with a sharp main logo and a subtle, well-designed background pattern. There are no watermarks, and the overall composition and color scheme are professional and aesthetically pleasing.",
+      "file_name": "vuejs-3-official-logo-banner.jpg",
+      "caption": "The official logo for the Vue.js 3 JavaScript framework, featuring a stylized letter 'V' in two shades of green (bright green and dark teal). The logo is centered on a light beige background with a faint, repeating pattern of tech-related icons like smartphones, monitors, and gears.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue.js 3.0官方logo图片，用于文档头部",
+    "image_info": {
+      "url": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fvg0v5vm9a0c1ix6mdp9s.png",
+      "img_format": "WEBP",
+      "mode": "RGB",
+      "file_size": 18236,
+      "width": 1000,
+      "height": 420,
+      "total_pixels": 420000,
+      "basic_score": 0.7878670721374194,
+      "file_name": "vue-js-3-official-logo-banner.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect match for the search query, displaying the official Vue.js 3 logo. The clarity is very good for a raster image, with clean lines and legible text. There are no watermarks. Its wide aspect ratio makes it perfectly suited for the intended use as a document header or banner.",
+      "file_name": "vue-js-3-official-logo-banner.jpg",
+      "caption": "The official logo for the Vue.js 3 JavaScript framework. The image features the iconic green 'V' emblem alongside the text 'Vue.js 3' in a dark font, all set against a complementary solid green background.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue.js 3.0官方logo图片，用于文档头部",
+    "image_info": {
+      "url": "https://vuejsdevelopers.com/images/posts/vue_3_tutorial.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 43775,
+      "width": 1200,
+      "height": 642,
+      "total_pixels": 770400,
+      "basic_score": 0.8951184019608188,
+      "file_name": "vue-js-3-official-logo.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is a widely recognized and highly relevant celebratory logo for the release of Vue.js 3, often called the 'One Piece' version. It is perfectly clear, with sharp vector lines and no compression artifacts or watermarks, making it excellent for use in a document header as requested by the prompt.",
+      "file_name": "vue-js-3-official-logo.jpg",
+      "caption": "The official celebratory logo for the Vue.js 3 release. The design features the classic Vue 'V' shape in two shades of green, set against a solid dark blue background. At the center is a golden winged crest with a blue circle containing the number '3' in yellow.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3响应式系统原理图，展示Proxy代理机制",
+    "image_info": {
+      "url": "https://cdn.hashnode.com/res/hashnode/image/upload/v1651283150028/1WyeWVfrK.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 107942,
+      "width": 919,
+      "height": 693,
+      "total_pixels": 636867,
+      "basic_score": 0.8815788708586239,
+      "file_name": "vue3-reactivity-dependency-tracking-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is an excellent and highly relevant diagram explaining the core data structures (`targetMap`, `depsMap`) used for dependency tracking in Vue 3's reactivity system. This is a fundamental concept directly related to how the Proxy mechanism works. The hand-drawn style is clear, legible, and effective for technical illustration. The image is high resolution and contains no watermarks.",
+      "file_name": "vue3-reactivity-dependency-tracking-diagram.jpg",
+      "caption": "A hand-drawn diagram illustrating the dependency tracking mechanism in Vue 3's reactivity system. It shows a 'targetMap' that maps target objects to their respective dependency maps ('depsMap'). Each 'depsMap' then maps object properties (like 'price', 'quantity') to a collection of effects or functions (like 'updateTotalPrice') that should run when the property's value changes. This data structure is fundamental to how Vue 3 uses JavaScript Proxies to create reactive state.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3组合式API架构图，展示setup函数和响应式API",
+    "image_info": {
+      "url": "https://learnvue.co/cdn/img/articles/vue-lifecycle-hooks-guide/1.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 297471,
+      "width": 1024,
+      "height": 544,
+      "total_pixels": 557056,
+      "basic_score": 0.8776581750119111,
+      "file_name": "vue3_composition_api_lifecycle_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 90.0,
+      "clarity_score": 75.0,
+      "watermark_score": 50.0,
+      "overall_score": 70.0,
+      "explanation": "The image is highly relevant as it clearly illustrates the Vue.js 3 lifecycle, including key Composition API hooks like `setup`, `onMounted`, and `onUpdated`. It accurately visualizes the flow from creation to mounting, updates, and unmounting. However, the image resolution is moderate, leading to slight blurriness in the text, and there is a prominent watermark and URL in the bottom-right corner.",
+      "file_name": "vue3_composition_api_lifecycle_diagram.jpg",
+      "caption": "A flowchart diagram illustrating the lifecycle hooks of a Vue.js 3 application, comparing the Options API hooks (e.g., `beforeCreate`, `created`) with their Composition API equivalents (e.g., `setup`, `onMounted`). The diagram shows the sequence from app creation and mounting to reactive data changes, virtual DOM re-rendering, and unmounting.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3组合式API架构图，展示setup函数和响应式API",
+    "image_info": {
+      "url": "https://vuenoob.com/image/posts/vue-js-lifecycle-hooks.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 89988,
+      "width": 764,
+      "height": 1200,
+      "total_pixels": 916800,
+      "basic_score": 0.9005713361798408,
+      "file_name": "vue3_component_lifecycle_composition_api_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 90.0,
+      "clarity_score": 90.0,
+      "watermark_score": 75.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a highly relevant and clear flowchart explaining the Vue component lifecycle, specifically highlighting the 'setup' function from the Composition API. The diagram is well-structured and easy to understand. The only minor issue is a faint watermark in the bottom right corner, but it does not significantly detract from the overall quality.",
+      "file_name": "vue3_component_lifecycle_composition_api_diagram.jpg",
+      "caption": "A flowchart diagram illustrating the lifecycle of a Vue.js component. It shows the sequence of events from when the renderer encounters a component, through initialization, mounting, updating, and unmounting. The diagram explicitly points out where the `setup` function from the Composition API fits in, alongside the traditional Options API hooks like `beforeCreate`, `created`, `mounted`, etc.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3组合式API架构图，展示setup函数和响应式API",
+    "image_info": {
+      "url": "https://www.tatvasoft.com/outsourcing/wp-content/uploads/2024/11/Lifecycle-Hooks-1-562x1024.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 37820,
+      "width": 562,
+      "height": 1024,
+      "total_pixels": 575488,
+      "basic_score": 0.8524947889968432,
+      "file_name": "vue_lifecycle_hooks_composition_api_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 70.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is highly relevant, providing a clear flowchart of Vue's component lifecycle hooks and correctly placing the 'setup' function from the Composition API, which directly addresses the search query and prompt. The diagram is well-structured and easy to understand. However, the image clarity is only mediocre due to a lower resolution, causing some text and lines to appear slightly pixelated, though it remains legible. There are no watermarks. Overall, it's a very useful and well-designed diagram for developers despite the technical quality.",
+      "file_name": "vue_lifecycle_hooks_composition_api_diagram.jpg",
+      "caption": "A flowchart diagram illustrating the component lifecycle hooks in the Vue.js framework. It shows the sequence of events from component creation to destruction, including initialization, mounting, updating, and unmounting phases. The diagram specifically highlights the position of the `setup` hook from the Composition API relative to the traditional Options API hooks like `beforeCreate` and `created`.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3组件生命周期钩子图表，对比Vue2和Vue3",
+    "image_info": {
+      "url": "https://canopas-blogs.s3.ap-south-1.amazonaws.com/vu3_hooks_realtime_example_404b063ce2.webp",
+      "img_format": "WEBP",
+      "mode": "RGB",
+      "file_size": 34560,
+      "width": 1280,
+      "height": 720,
+      "total_pixels": 921600,
+      "basic_score": 0.9332032915657452,
+      "file_name": "vue-3-lifecycle-hooks-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 80.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The infographic is highly relevant, clearly illustrating Vue 3 lifecycle hooks, which matches the search query. However, it does not include the comparison to Vue 2 requested in the prompt, hence the slightly lower relevance score. The image clarity is good, though some smaller text is slightly pixelated. The overall design is professional, clean, and free of watermarks.",
+      "file_name": "vue-3-lifecycle-hooks-diagram.jpg",
+      "caption": "An infographic diagram illustrating the Vue 3 component lifecycle hooks. On the left, the title reads 'Vue 3 lifecycle hooks with real-time example.' On the right, a circular diagram with the Vue.js V3 logo in the center shows the update cycle, including steps like 'Instance Data,' 'Data Changes,' 'Virtual DOM updated,' and 'Browser DOM Patched.' Explanations for the 'updated' and 'beforeUpdate' events are provided.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3组件生命周期钩子图表，对比Vue2和Vue3",
+    "image_info": {
+      "url": "https://learnvue.co/cdn/img/articles/vue-lifecycle-hooks-guide/1.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 297471,
+      "width": 1024,
+      "height": 544,
+      "total_pixels": 557056,
+      "basic_score": 0.8776581750119111,
+      "file_name": "vue-3-component-lifecycle-hooks-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 75.0,
+      "watermark_score": 70.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a highly relevant and well-structured flowchart of the Vue 3 component lifecycle, directly matching the search query. While its clarity is slightly reduced by compression artifacts and it contains a small watermark in the bottom-right corner, its excellent informational design and accuracy make it a very valuable resource.",
+      "file_name": "vue-3-component-lifecycle-hooks-diagram.jpg",
+      "caption": "A flowchart diagram illustrating the complete lifecycle of a Vue 3 component. The chart shows the sequence from creation (`Vue.createApp().mount()`) through initialization, mounting, updates due to reactive data changes, and finally unmounting. Key lifecycle hooks such as `beforeCreate`, `created`, `beforeMount`, `mounted`, `updated`, and `unmounted` are highlighted, along with their Composition API equivalents like `setup` and `onMounted`.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3组件生命周期钩子图表，对比Vue2和Vue3",
+    "image_info": {
+      "url": "https://vuejs.org/assets/lifecycle.MuZLBFAS.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 190608,
+      "width": 1266,
+      "height": 2002,
+      "total_pixels": 2534532,
+      "basic_score": 0.5673306295954869,
+      "file_name": "vue3-component-lifecycle-hooks-diagram.png"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 90.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is highly relevant as it accurately depicts the Vue component lifecycle, including the `setup` hook from the Composition API which is central to Vue 3. It doesn't explicitly compare Vue 2 and Vue 3 as requested by the prompt, which slightly lowers the perfect relevance. The image itself is of excellent quality, with high clarity, sharp text, and no watermarks. The flowchart is well-composed and easy to follow, making it a professional and effective technical diagram.",
+      "file_name": "vue3-component-lifecycle-hooks-diagram.png",
+      "caption": "A detailed flowchart diagram illustrating the lifecycle of a Vue.js component. The chart begins with the 'Renderer encounters component' and flows downwards through various stages, including 'Init Options API', template compilation, and rendering. Key lifecycle hooks such as 'setup (Composition API)', 'beforeCreate', 'created', 'beforeMount', 'mounted', 'beforeUpdate', 'updated', 'beforeUnmount', and 'unmounted' are shown at the points where they are triggered in the process. The diagram uses color-coding to distinguish between processes, decision points, and lifecycle states.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3组件生命周期钩子图表，对比Vue2和Vue3",
+    "image_info": {
+      "url": "https://vuenoob.com/image/posts/vue-js-lifecycle-hooks.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 89988,
+      "width": 764,
+      "height": 1200,
+      "total_pixels": 916800,
+      "basic_score": 0.9005713361798408,
+      "file_name": "vue3-component-lifecycle-hooks-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 70.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a perfectly relevant and clear flowchart illustrating the Vue.js component lifecycle. It effectively compares the traditional Options API hooks with the new Composition API's `setup` function, making it ideal for understanding Vue 3 as requested by the prompt. The diagram is clean and easy to read, though it does contain a small, unobtrusive watermark in the bottom corners.",
+      "file_name": "vue3-component-lifecycle-hooks-diagram.jpg",
+      "caption": "A flowchart diagram illustrating the lifecycle of a Vue.js component. The chart shows the sequence of events from initialization, through DOM mounting, updates, and finally unmounting. It highlights the order of execution for lifecycle hooks in both the Options API (e.g., `beforeCreate`, `created`) and the new Composition API (`setup`), showing that `setup` is called before the Options API hooks.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3虚拟DOM性能优化示意图",
+    "image_info": {
+      "url": "https://www.blueshoe.io/__og-image__/static/blog/vue-vapor-performance-without-virtual-dom/og.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 218563,
+      "width": 1200,
+      "height": 600,
+      "total_pixels": 720000,
+      "basic_score": 0.8940399546871785,
+      "file_name": "vue_vapor_performance_vs_virtual_dom.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 90.0,
+      "clarity_score": 95.0,
+      "watermark_score": 50.0,
+      "overall_score": 75.0,
+      "explanation": "The image is highly relevant to the search query, directly discussing Vue, Virtual DOM, and performance. The text is very clear and legible. However, it contains a prominent company logo ('blueshoe') which acts as a large watermark, reducing its general usability. The overall design is clean and professional, but the logo's presence is a significant drawback.",
+      "file_name": "vue_vapor_performance_vs_virtual_dom.jpg",
+      "caption": "An informational graphic titled 'Vue Vapor: Goodbye Virtual DOM, Hello Performance!'. It serves as a banner for an article explaining Vue Vapor's performance benefits for developers by moving away from the Virtual DOM, with a light blue gradient background and the 'blueshoe' company logo.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3虚拟DOM性能优化示意图",
+    "image_info": {
+      "url": "https://vuejs.org/assets/render-pipeline.CwxnH_lZ.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 41635,
+      "width": 1376,
+      "height": 500,
+      "total_pixels": 688000,
+      "basic_score": 0.825479478661097,
+      "file_name": "vue-virtual-dom-rendering-pipeline-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 60.0,
+      "watermark_score": 100.0,
+      "overall_score": 75.0,
+      "explanation": "The image is a highly relevant flowchart that accurately illustrates the virtual DOM rendering process, which is central to Vue.js performance. The diagram is logically structured and easy to understand. However, the image quality is low, with noticeable pixelation and artifacting, especially on the text, which reduces its overall professional quality.",
+      "file_name": "vue-virtual-dom-rendering-pipeline-diagram.jpg",
+      "caption": "A diagram illustrating the rendering pipeline of a modern JavaScript framework like Vue.js. The flowchart shows the process starting with a 'Template' (green box), which is 'compiled into' 'render function code' (yellow box). This code 'returns' a 'Virtual DOM tree' (purple box), which is then used to 'mount/patch' the 'Actual DOM' (blue box). A feedback loop is also shown, where 'component reactive state' (red box) 'tracks dependencies' from the render function and can 'trigger re-render' when the state changes.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Vue3虚拟DOM性能优化示意图",
+    "image_info": {
+      "url": "https://cdn.hashnode.com/res/hashnode/image/upload/v1705848281766/88f71047-7613-46d3-9013-7a47d5bba4bb.png?auto=compress,format&format=webp",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 34766,
+      "width": 591,
+      "height": 446,
+      "total_pixels": 263586,
+      "basic_score": 0.762974813292572,
+      "file_name": "vue-dom-tree-structure-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 65.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a high-quality, clear diagram illustrating the basic structure of a DOM tree, which is a foundational concept for understanding the virtual DOM in Vue. However, its relevance to the specific query about 'Vue3 virtual DOM performance' and 'optimization' is moderate, as it only shows the structure and not any performance-related processes like diffing or patching. The visual style is excellent for educational content and there are no watermarks.",
+      "file_name": "vue-dom-tree-structure-diagram.jpg",
+      "caption": "A clear, hand-drawn diagram illustrating the concept of a Document Object Model (DOM) tree. It shows a root 'div' element with the ID '#app', which has three child elements: 'h1', 'p', and 'img'. The diagram visually separates 'DOM Elements' (represented by green circles) from 'Text Nodes' (represented by dashed boxes with content), providing a foundational understanding for concepts like the virtual DOM in JavaScript frameworks such as Vue.js.",
+      "recommend": true,
+      "error": ""
+    }
+  }
+]

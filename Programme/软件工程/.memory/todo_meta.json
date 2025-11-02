@@ -1,0 +1,20 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "研究软件工程课程核心知识点和考试重点",
+        "details": "1. 调研软件工程的主要章节内容\n2. 收集软件工程考试重点和常考知识点\n3. 整理软件工程理论、模型、方法论等核心概念\n4. 收集相关图表和示例图片",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "编写软件工程笔记总结",
+        "details": "1. 按照章节结构组织内容\n2. 使用表格整理知识点\n3. 用LaTeX语法编写公式\n4. 用HTML details标签包裹定理推导\n5. 插入相关配图说明\n6. 确保内容紧跟考点，重点详细",
+        "status": "completed",
+        "priority": "high"
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "_source_id": 9,
+  "sources": {
+    "计算机组成与结构课程重点难点分析": {
+      "https://zhuanlan.zhihu.com/p/659263092": {
+        "id": 1,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/659263092",
+        "title": "408历年真题解析计算机组成原理篇",
+        "info": "提供408计算机考研真题计算机组成原理部分2009-2023年历年真题解析，包含出题规律和解题特点分析"
+      },
+      "https://blog.csdn.net/qq_46685895/article/details/147380104": {
+        "id": 2,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/qq_46685895/article/details/147380104",
+        "title": "计算机组成原理考研易错知识点总结",
+        "info": "基于王道2026版的计算机组成原理考研易错知识点总结，涵盖七大核心模块的易错点辨析"
+      },
+      "https://blog.csdn.net/weixin_47135547/article/details/107566603": {
+        "id": 3,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/weixin_47135547/article/details/107566603",
+        "title": "计算机组成原理重点总结（学习笔记）含计算公式",
+        "info": "完整的计算机组成原理重点总结和计算公式文档，涵盖六大核心模块的详细概念解释和性能指标"
+      },
+      "https://developer.aliyun.com/article/1101158": {
+        "id": 4,
+        "publisher": "阿里云开发者社区",
+        "url": "https://developer.aliyun.com/article/1101158",
+        "title": "主存储器与CPU的连接计算题详解",
+        "info": "主存储器与CPU连接的计算题详解，包含地址分配、芯片选择、片选信号确定等计算方法"
+      },
+      "https://zhuanlan.zhihu.com/p/643677360": {
+        "id": 5,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/643677360",
+        "title": "虚拟存储器（4）——TLB和Cache",
+        "info": "计算机组成原理中TLB和Cache的概念区别和联系分析"
+      },
+      "https://cloud.tencent.com/developer/article/2148192": {
+        "id": 6,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2148192",
+        "title": "计算机组成原理寻址方式研究报告",
+        "info": "成功提取了计算机组成原理中9种寻址方式的完整解释，包括每种寻址方式的定义、特点、应用场景和考试重点"
+      },
+      "https://www.cnblogs.com/swjswjswj/p/18818269": {
+        "id": 7,
+        "publisher": "博客园",
+        "url": "https://www.cnblogs.com/swjswjswj/p/18818269",
+        "title": "Cache地址映射算法的技术内容",
+        "info": "成功提取了Cache地址映射算法的技术内容，包含组相联映射的详细原理和实现方法"
+      },
+      "https://www.cnblogs.com/jva-index/p/13897423.html": {
+        "id": 8,
+        "publisher": "博客园",
+        "url": "https://www.cnblogs.com/jva-index/p/13897423.html",
+        "title": "浮点数加法减法的舍入原则——计算机组成原理",
+        "info": "成功提取了IEEE754标准中浮点数舍入的详细规则和具体方法"
+      },
+      "https://www.eefocus.com/article/1836878.html": {
+        "id": 9,
+        "publisher": "与非网",
+        "url": "https://www.eefocus.com/article/1836878.html",
+        "title": "一文看懂内存管理及TLB的基本原理",
+        "info": "成功提取了虚拟存储器是现代计算机系统中管理内存的重要机制，通过MMU实现虚拟地址到物理地址的转换"
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "_source_id": 29,
+  "sources": {
+    "软件工程课程考试重点分析": {
+      "https://zhuanlan.zhihu.com/p/27665092375": {
+        "id": 1,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/27665092375",
+        "title": "25年软考高项：案例分析题答题策略",
+        "info": "详细介绍了软考高项案例分析题的考试结构、题型分析、备考方法和具体答题技巧，包括计算题、问答题、分析题和理论题的解题策略"
+      },
+      "https://blog.csdn.net/qq_45777026/article/details/118381143": {
+        "id": 2,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/qq_45777026/article/details/118381143",
+        "title": "《软件工程》期末复习题型整理",
+        "info": "提供了软件工程课程的四大题型：判断题、名词解释、分析论述题和画图题的完整内容，包含具体题目和答案"
+      },
+      "https://zhuanlan.zhihu.com/p/656125897": {
+        "id": 3,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/656125897",
+        "title": "软件质量模型详解",
+        "info": "详细介绍了McCall模型和ISO/IEC 9126软件质量模型的层次结构、质量特性和度量指标"
+      },
+      "https://zhuanlan.zhihu.com/p/1898744725147715036": {
+        "id": 4,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/1898744725147715036",
+        "title": "对比分析：黑盒测试 VS 白盒测试",
+        "info": "全面对比了黑盒测试和白盒测试的定义、特点、适用阶段和技术要求"
+      },
+      "https://blog.csdn.net/weixin_73355603/article/details/144459723": {
+        "id": 5,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/weixin_73355603/article/details/144459723",
+        "title": "软考中级软件设计师-【UML图】必考题完整汇总",
+        "info": "汇总了UML图的16个主要知识点和相应的真题练习，包括依赖关系、关联关系、类图、用例图等"
+      }
+    },
+    "软件项目管理理论与度量方法研究": {
+      "https://zhuanlan.zhihu.com/p/448837371": {
+        "id": 6,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/448837371",
+        "title": "软件项目估算：COCOMO经验估算模型",
+        "info": "详细介绍了COCOMO模型的基本公式、中间模型、工作量计算方法，包括E = a * (KLOC)^b等核心公式和CAD软件案例计算"
+      },
+      "https://blog.csdn.net/linjinpeng0819/article/details/147977792": {
+        "id": 7,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/linjinpeng0819/article/details/147977792",
+        "title": "项目管理关键路径法（CPM）详解",
+        "info": "提供了CPM的6步计算方法，包括正推法、反推法、浮动时间计算等详细步骤和实例数据"
+      },
+      "https://docs.pingcode.com/baike/473837": {
+        "id": 8,
+        "publisher": "PingCode智库",
+        "url": "https://docs.pingcode.com/baike/473837",
+        "title": "软件项目中如何管理风险",
+        "info": "系统阐述了软件项目风险管理的四个核心步骤：识别、评估、制定应对策略、持续监控调整"
+      },
+      "https://www.luckeeinc.com/24/576.html": {
+        "id": 9,
+        "publisher": "乐凯咨询",
+        "url": "https://www.luckeeinc.com/24/576.html",
+        "title": "软考高项计算题难关攻克：常考公式与解题步骤详解",
+        "info": "详细解析了EVM、CPM、PERT和沟通渠道计算的完整公式体系和解题策略"
+      },
+      "https://blog.csdn.net/csssbad/article/details/143681314": {
+        "id": 10,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/csssbad/article/details/143681314",
+        "title": "软件项目管理中的风险识别与应对策略",
+        "info": "提供了风险识别方法、评估技术、应对策略和监控系统的完整框架"
+      },
+      "https://www.lanyancloud.com/news/1951310066229612544": {
+        "id": 11,
+        "publisher": "蓝燕云",
+        "url": "https://www.lanyancloud.com/news/1951310066229612544",
+        "title": "系统集成项目管理工程师计算题怎么做：掌握关键公式与解题步骤",
+        "info": "系统梳理了五大类计算题：工期估算、进度控制、挣值管理、成本控制、资源优化"
+      },
+      "https://zhuanlan.zhihu.com/p/693789578": {
+        "id": 12,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/693789578",
+        "title": "质量课堂 | LEC法风险分级管控应用示例",
+        "info": "详细介绍了风险矩阵分析法(LS)、作业条件危险性分析法(LEC)、风险程度分析法(MES)等量化方法"
+      }
+    },
+    "软件工程生命周期模型研究报告": {
+      "https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%A8%A1%E5%9E%8B/5746636": {
+        "id": 13,
+        "publisher": "百度百科",
+        "url": "https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%A8%A1%E5%9E%8B/5746636",
+        "title": "软件生命周期模型",
+        "info": "软件生命周期模型的定义、分类和各模型的基本信息，包括瀑布型、迭代模型、快速原型模型的特点"
+      },
+      "https://baike.baidu.com/item/%E6%95%8F%E6%8D%B7%E6%96%B9%E6%B3%95/5436042": {
+        "id": 14,
+        "publisher": "百度百科",
+        "url": "https://baike.baidu.com/item/%E6%95%8F%E6%8D%B7%E6%96%B9%E6%B3%95/5436042",
+        "title": "敏捷方法",
+        "info": "敏捷开发方法的定义、特点、优缺点、适用场景，以及敏捷宣言的四个价值观和十二条原则"
+      },
+      "https://developer.aliyun.com/article/1614862": {
+        "id": 15,
+        "publisher": "阿里云开发者社区",
+        "url": "https://developer.aliyun.com/article/1614862",
+        "title": "软件项目进度计划详解",
+        "info": "PERT和CPM的详细计算方法、公式和核心概念，包括期望值、标准差、关键路径等计算"
+      },
+      "https://segmentfault.com/a/1190000046973160": {
+        "id": 16,
+        "publisher": "SegmentFault 思否",
+        "url": "https://segmentfault.com/a/1190000046973160",
+        "title": "软件项目管理决策树",
+        "info": "决策树在软件项目管理中的应用方法、构建步骤和模型选择指南"
+      },
+      "https://blog.csdn.net/weixin_44407238/article/details/147194432": {
+        "id": 17,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/weixin_44407238/article/details/147194432",
+        "title": "软件开发模型对比与应用指南",
+        "info": "9大核心软件模型的对比分析、决策树选型指南和实际应用案例"
+      }
+    },
+    "软件测试理论与质量保证技术研究": {
+      "https://zhuanlan.zhihu.com/p/683761480": {
+        "id": 18,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/683761480",
+        "title": "几种常见测试的区别——单元测试、集成测试",
+        "info": "提取了单元测试、集成测试、系统测试、端到端测试和冒烟测试的详细定义、目的、特点和方法"
+      },
+      "https://zhuanlan.zhihu.com/p/658519540": {
+        "id": 19,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/658519540",
+        "title": "黑盒测试、白盒测试、灰盒测试之间的异同点",
+        "info": "提取了黑盒测试、白盒测试、灰盒测试的定义、特点、优缺点和适用场景的对比分析"
+      },
+      "https://cloud.tencent.com/developer/article/2095650": {
+        "id": 20,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2095650",
+        "title": "黑盒测试用例设计方法一（等价类划分、边界值分析）",
+        "info": "提取了等价类划分法和边界值分析法的详细原理、设计步骤和实战案例"
+      },
+      "https://zhuanlan.zhihu.com/p/713143802": {
+        "id": 21,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/713143802",
+        "title": "ISO/IEC 25010 2023年底第2版：系统和软件工程",
+        "info": "提取了ISO/IEC 25010:2023质量模型的详细定义、九大质量特性和37个子特性"
+      },
+      "https://blog.csdn.net/2301_81882590/article/details/147373178": {
+        "id": 22,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/2301_81882590/article/details/147373178",
+        "title": "软件测试中的各种覆盖（Coverage）详解",
+        "info": "提取了语句覆盖、分支覆盖、条件覆盖、路径覆盖等代码覆盖率类型的定义、计算方法和应用"
+      },
+      "https://www.itbuilder.cn/xueyuan1/docs/Software-Testing-Basics/Testing-Basics-Principles/seven-principles-of-software-testing/": {
+        "id": 23,
+        "publisher": "itBuilder学院",
+        "url": "https://www.itbuilder.cn/xueyuan1/docs/Software-Testing-Basics/Testing-Basics-Principles/seven-principles-of-software-testing/",
+        "title": "软件测试七大基本原则详解",
+        "info": "提取了软件测试的七大基本原则及其详细说明和实际应用意义"
+      },
+      "https://zhuanlan.zhihu.com/p/618052954": {
+        "id": 24,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/618052954",
+        "title": "测试用例设计之错误推测法",
+        "info": "提取了错误推测法的定义、应用方法、实践案例和与其他方法的区别"
+      }
+    },
+    "软件测试理论与质量保证技术研究（权威版）": {
+      "https://astqb.org/istqb-foundation-level-seven-testing-principles/": {
+        "id": 25,
+        "publisher": "ASTQB官方",
+        "url": "https://astqb.org/istqb-foundation-level-seven-testing-principles/",
+        "title": "ISTQB Foundation Level - Seven Testing Principles",
+        "info": "提取了ISTQB官方关于软件测试七大原则的权威定义和详细说明，包括测试显示缺陷存在、穷举测试不可能、早期测试节省时间、缺陷聚集、农药悖论、测试上下文相关性和错误缺失谬误"
+      },
+      "https://www.iso.org/standard/78176.html": {
+        "id": 26,
+        "publisher": "ISO国际标准化组织",
+        "url": "https://www.iso.org/standard/78176.html",
+        "title": "ISO/IEC 25010:2023 - Systems and software engineering",
+        "info": "提取了ISO/IEC 25010:2023标准的权威信息，包括九大质量特性定义、开发时间线和标准详细信息"
+      },
+      "https://www.geeksforgeeks.org/software-engineering/mccalls-quality-model/": {
+        "id": 27,
+        "publisher": "GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/software-engineering/mccalls-quality-model/",
+        "title": "McCall's Quality Model",
+        "info": "提取了McCall软件质量模型的详细定义，包括三大质量视角（产品操作、产品修订、产品转换）和11个质量因子的详细说明"
+      },
+      "https://blog.csdn.net/Sgirll/article/details/146984185": {
+        "id": 28,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/Sgirll/article/details/146984185",
+        "title": "CVSS-通用漏洞评分系统版本 4.0：规范文档",
+        "info": "提取了CVSS v4.0的完整规范内容，包括四个指标组（基础、威胁、环境、补充）的详细定义、攻击向量、攻击复杂性等维度的具体选项"
+      },
+      "https://www.ndls.org.cn/standard/detail/b79dfb07dff7727b4de59da7ebf4eb25": {
+        "id": 29,
+        "publisher": "国家标准馆",
+        "url": "https://www.ndls.org.cn/standard/detail/b79dfb07dff7727b4de59da7ebf4eb25",
+        "title": "IEEE 982.1-1988-IEEE标准软件可靠性度量词典",
+        "info": "提取了IEEE 982.1-1988软件可靠性度量词典的权威定义，包括软件可靠性指标的定义度量、计算方法和生命周期评估方法"
+      }
+    }
+  }
+}

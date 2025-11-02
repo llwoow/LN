@@ -1,0 +1,336 @@
+{
+  "设备驱动API索引": {
+    "file_path": "/workspace/kernel_driver_api_index.html",
+    "content_info": {
+      "title": "Driver implementer’s API guide — The Linux Kernel  documentation",
+      "content": "English Chinese (Simplified) Driver implementer’s API guide¶ The kernel offers a wide variety of interfaces to support the development of device drivers. This document is an only somewhat organized collection of some of those interfaces — it will hopefully get better over time! The available subsections can be seen below. General information for driver authors¶ This section contains documentation that should, at some point or other, be of interest to most developers working on device drivers. Driver Basics Driver Model Device links Device drivers infrastructure ioctl based interfaces CPU and Device Power Management Useful support libraries¶ This section contains documentation that should, at some point or other, be of interest to most developers working on device drivers. Early Userspace Kernel Connector Bus-Independent Device Accesses Device Frequency Scaling Buffer Sharing and Synchronization (dma-buf) Component Helper for Aggregate Drivers The io_mapping functions Ordering I/O writes to memory-mapped addresses The Userspace I/O HOWTO VFIO Mediated devices VFIO - “Virtual Function I/O” Acceptance criteria for vfio-pci device specific driver variants Bus-level documentation¶ Auxiliary Bus Compute Express Link EISA bus support Firewire (IEEE 1394) driver Interface Guide I3C subsystem ISA Drivers MEN Chameleon Bus The Linux PCI driver implementer’s API guide The Linux RapidIO Subsystem Linux kernel SLIMbus support Linux USB API Virtio VME Device Drivers W1: Dallas’ 1-wire bus Xillybus driver for generic FPGA interface Subsystem-specific APIs¶ Linux 802.11 Driver Developer’s Guide ACPI Support Kernel driver lp855x The Common Clk Framework Confidential Computing Console Drivers Crypto Drivers DMAEngine documentation The Linux kernel dpll subsystem Error Detection And Correction (EDAC) Devices Extcon Device Subsystem Linux Firmware API FPGA Subsystem Frame Buffer Library Managing Ownership of the Framebuffer Aperture Generic Counter Interface General Purpose Input/Output (GPIO) High Speed Synchronous Serial Interface (HSI) The Linux Hardware Timestamping Engine (HTE) I2C and SMBus Subsystem Industrial I/O InfiniBand and Remote DMA (RDMA) Interfaces Input Subsystem Generic System Interconnect Subsystem IPMB Driver for a Satellite MC The Linux IPMI Driver libATA Developer’s Guide The Common Mailbox Framework RAID Media subsystem kernel internal API Intel(R) Management Engine Interface (Intel(R) MEI) Memory Controller drivers Message-based devices Miscellaneous Devices Parallel Port Devices 16x50 UART Driver Pulse-Width Modulation (PWM) MMC/SD/SDIO card support Memory Technology Device (MTD) MTD NAND Driver Programming Interface Near Field Communication NTB Drivers Non-Volatile Memory Device (NVDIMM) NVMEM Subsystem PARPORT interface documentation Generic PHY Framework PINCTRL (PIN CONTROL) subsystem PLDM Firmware Flash Update Library Overview of the pldmfw library PPS - Pulse Per Second PTP hardware clock infrastructure for Linux Pulse Width Modulation (PWM) interface Power Sequencing API Voltage and current regulator API Reset controller API rfkill - RF kill switch support Writing s390 channel device drivers SCSI Interfaces Guide Support for Serial devices SM501 Driver SoundWire Documentation Serial Peripheral Interface (SPI) Surface System Aggregator Module (SSAM) Linux Switchtec Support Sync File API Guide target and iSCSI Interfaces Guide TEE (Trusted Execution Environment) driver API Thermal TTY WBRF - Wifi Band RFI Mitigations WMI Driver API Xilinx FPGA Writing Device Drivers for Zorro Devices ©The kernel development community. | Powered by Sphinx 5.3.0 & Alabaster 0.7.16 | Page source",
+      "length": 3652
+    },
+    "structured_info": {
+      "code_blocks": [],
+      "headings": [
+        "H1: The Linux Kernel",
+        "H1: Driver implementer’s API guide¶",
+        "H2: General information for driver authors¶",
+        "H2: Useful support libraries¶",
+        "H2: Bus-level documentation¶",
+        "H2: Subsystem-specific APIs¶",
+        "H3: Quick search",
+        "H3: Contents",
+        "H3: This Page"
+      ],
+      "links": [
+        {
+          "text": "The Linux Kernel",
+          "url": "../index.html"
+        },
+        {
+          "text": "Development process",
+          "url": "../process/development-process.html"
+        },
+        {
+          "text": "Submitting patches",
+          "url": "../process/submitting-patches.html"
+        },
+        {
+          "text": "Code of conduct",
+          "url": "../process/code-of-conduct.html"
+        },
+        {
+          "text": "Maintainer handbook",
+          "url": "../maintainer/index.html"
+        },
+        {
+          "text": "All development-process docs",
+          "url": "../process/index.html"
+        },
+        {
+          "text": "Core API",
+          "url": "../core-api/index.html"
+        },
+        {
+          "text": "Driver APIs",
+          "url": "#"
+        },
+        {
+          "text": "General information for driver authors",
+          "url": "#general-information-for-driver-authors"
+        },
+        {
+          "text": "Driver Basics",
+          "url": "basics.html"
+        },
+        {
+          "text": "Driver Model",
+          "url": "driver-model/index.html"
+        },
+        {
+          "text": "Device links",
+          "url": "device_link.html"
+        },
+        {
+          "text": "Device drivers infrastructure",
+          "url": "infrastructure.html"
+        },
+        {
+          "text": "ioctl based interfaces",
+          "url": "ioctl.html"
+        },
+        {
+          "text": "CPU and Device Power Management",
+          "url": "pm/index.html"
+        }
+      ]
+    }
+  },
+  "设备驱动模型": {
+    "file_path": "/workspace/driver_model.html",
+    "content_info": {
+      "title": "Driver Model — The Linux Kernel  documentation",
+      "content": "Driver Model¶ Driver Binding Bus Types Device Driver Design Patterns The Basic Device Structure Devres - Managed Device Resource Device Drivers The Linux Kernel Device Model Platform Devices and Drivers Porting Drivers to the New Driver Model ©The kernel development community. | Powered by Sphinx 5.3.0 & Alabaster 0.7.16 | Page source",
+      "length": 336
+    },
+    "structured_info": {
+      "code_blocks": [],
+      "headings": [
+        "H1: The Linux Kernel",
+        "H1: Driver Model¶",
+        "H3: Quick search",
+        "H3: Contents",
+        "H3: This Page"
+      ],
+      "links": [
+        {
+          "text": "The Linux Kernel",
+          "url": "../../index.html"
+        },
+        {
+          "text": "Development process",
+          "url": "../../process/development-process.html"
+        },
+        {
+          "text": "Submitting patches",
+          "url": "../../process/submitting-patches.html"
+        },
+        {
+          "text": "Code of conduct",
+          "url": "../../process/code-of-conduct.html"
+        },
+        {
+          "text": "Maintainer handbook",
+          "url": "../../maintainer/index.html"
+        },
+        {
+          "text": "All development-process docs",
+          "url": "../../process/index.html"
+        },
+        {
+          "text": "Core API",
+          "url": "../../core-api/index.html"
+        },
+        {
+          "text": "Driver APIs",
+          "url": "../index.html"
+        },
+        {
+          "text": "General information for driver authors",
+          "url": "../index.html#general-information-for-driver-authors"
+        },
+        {
+          "text": "Driver Basics",
+          "url": "../basics.html"
+        },
+        {
+          "text": "Driver Model",
+          "url": "#"
+        },
+        {
+          "text": "Device links",
+          "url": "../device_link.html"
+        },
+        {
+          "text": "Device drivers infrastructure",
+          "url": "../infrastructure.html"
+        },
+        {
+          "text": "ioctl based interfaces",
+          "url": "../ioctl.html"
+        },
+        {
+          "text": "CPU and Device Power Management",
+          "url": "../pm/index.html"
+        }
+      ]
+    }
+  },
+  "PCI驱动框架": {
+    "file_path": "/workspace/pci_driver.html",
+    "content_info": {
+      "title": "The Linux PCI driver implementer’s API guide — The Linux Kernel  documentation",
+      "content": "The Linux PCI driver implementer’s API guide¶ Table of contents PCI Support Library PCI Hotplug Support Library PCI Peer-to-Peer DMA Support Driver Writer’s Guide P2P DMA Support Library ©The kernel development community. | Powered by Sphinx 5.3.0 & Alabaster 0.7.16 | Page source",
+      "length": 280
+    },
+    "structured_info": {
+      "code_blocks": [],
+      "headings": [
+        "H1: The Linux Kernel",
+        "H1: The Linux PCI driver implementer’s API guide¶",
+        "H3: Quick search",
+        "H3: Contents",
+        "H3: This Page"
+      ],
+      "links": [
+        {
+          "text": "The Linux Kernel",
+          "url": "../../index.html"
+        },
+        {
+          "text": "Development process",
+          "url": "../../process/development-process.html"
+        },
+        {
+          "text": "Submitting patches",
+          "url": "../../process/submitting-patches.html"
+        },
+        {
+          "text": "Code of conduct",
+          "url": "../../process/code-of-conduct.html"
+        },
+        {
+          "text": "Maintainer handbook",
+          "url": "../../maintainer/index.html"
+        },
+        {
+          "text": "All development-process docs",
+          "url": "../../process/index.html"
+        },
+        {
+          "text": "Core API",
+          "url": "../../core-api/index.html"
+        },
+        {
+          "text": "Driver APIs",
+          "url": "../index.html"
+        },
+        {
+          "text": "General information for driver authors",
+          "url": "../index.html#general-information-for-driver-authors"
+        },
+        {
+          "text": "Useful support libraries",
+          "url": "../index.html#useful-support-libraries"
+        },
+        {
+          "text": "Bus-level documentation",
+          "url": "../index.html#bus-level-documentation"
+        },
+        {
+          "text": "Auxiliary Bus",
+          "url": "../auxiliary_bus.html"
+        },
+        {
+          "text": "Compute Express Link",
+          "url": "../cxl/index.html"
+        },
+        {
+          "text": "EISA bus support",
+          "url": "../eisa.html"
+        },
+        {
+          "text": "Firewire (IEEE 1394) driver Interface Guide",
+          "url": "../firewire.html"
+        }
+      ]
+    }
+  },
+  "字符设备驱动": {
+    "file_path": "/workspace/character_device.html",
+    "content_info": {
+      "title": "TTY — The Linux Kernel  documentation",
+      "content": "TTY¶ Teletypewriter (TTY) layer takes care of all those serial devices. Including the virtual ones like pseudoterminal (PTY). TTY structures¶ There are several major TTY structures. Every TTY device in a system has a corresponding struct tty_port. These devices are maintained by a TTY driver which is struct tty_driver. This structure describes the driver but also contains a reference to operations which could be performed on the TTYs. It is struct tty_operations. Then, upon open, a struct tty_struct is allocated and lives until the final close. During this time, several callbacks from struct tty_operations are invoked by the TTY layer. Every character received by the kernel (both from devices and users) is passed through a preselected TTY Line Discipline (in short ldisc; in C, struct tty_ldisc_ops). Its task is to transform characters as defined by a particular ldisc or by user too. The default one is n_tty, implementing echoes, signal handling, jobs control, special characters processing, and more. The transformed characters are passed further to user/device, depending on the source. In-detail description of the named TTY structures is in separate documents: TTY Driver and TTY Operations Allocation Registration TTY Driver Reference TTY Operations Reference TTY Port TTY Port Functions TTY Port Reference TTY Port Operations Reference TTY Struct Initialization Name Reference counting Install Read & Write Start & Stop Wakeup Hangup Misc TTY Struct Flags TTY Struct Reference TTY Line Discipline Registration Other Functions Line Discipline Operations Reference Driver Access TTY Flags Locking Internal Functions TTY Buffer Flip Buffer Management Other Functions Buffer Locking Internal Functions TTY IOCTL Helpers TTY Internals Kopen Exported Internal Functions Internal Functions Console Struct Console Struct Consw Console functions Writing TTY Driver¶ Before one starts writing a TTY driver, they must consider Serial and USB Serial layers first. Drivers for serial devices can often use one of these specific layers to implement a serial driver. Only special devices should be handled directly by the TTY Layer. If you are about to write such a driver, read on. A typical sequence a TTY driver performs is as follows: Allocate and register a TTY driver (module init) Create and register TTY devices as they are probed (probe function) Handle TTY operations and events like interrupts (TTY core invokes the former, the device the latter) Remove devices as they are going away (remove function) Unregister and free the TTY driver (module exit) Steps regarding driver, i.e. 1., 3., and 5. are described in detail in TTY Driver and TTY Operations. For the other two (devices handling), look into TTY Port. Other Documentation¶ Miscellaneous documentation can be further found in these documents: MOXA Smartio/Industio Family Device Driver Installation Guide 1. Introduction 2. System Requirement 3. Installation 4. Utilities 5. Setserial 6. Troubleshooting GSM 0710 tty multiplexor HOWTO How to use it N_TTY External Functions Internal Functions ©The kernel development community. | Powered by Sphinx 5.3.0 & Alabaster 0.7.16 | Page source",
+      "length": 3160
+    },
+    "structured_info": {
+      "code_blocks": [
+        "struct tty_port",
+        "struct tty_driver",
+        "struct tty_operations",
+        "struct tty_struct",
+        "struct\ntty_operations",
+        "struct tty_ldisc_ops"
+      ],
+      "headings": [
+        "H1: The Linux Kernel",
+        "H1: TTY¶",
+        "H2: TTY structures¶",
+        "H2: Writing TTY Driver¶",
+        "H2: Other Documentation¶",
+        "H3: Quick search",
+        "H3: Contents",
+        "H3: This Page"
+      ],
+      "links": [
+        {
+          "text": "The Linux Kernel",
+          "url": "../../index.html"
+        },
+        {
+          "text": "Development process",
+          "url": "../../process/development-process.html"
+        },
+        {
+          "text": "Submitting patches",
+          "url": "../../process/submitting-patches.html"
+        },
+        {
+          "text": "Code of conduct",
+          "url": "../../process/code-of-conduct.html"
+        },
+        {
+          "text": "Maintainer handbook",
+          "url": "../../maintainer/index.html"
+        },
+        {
+          "text": "All development-process docs",
+          "url": "../../process/index.html"
+        },
+        {
+          "text": "Core API",
+          "url": "../../core-api/index.html"
+        },
+        {
+          "text": "Driver APIs",
+          "url": "../index.html"
+        },
+        {
+          "text": "General information for driver authors",
+          "url": "../index.html#general-information-for-driver-authors"
+        },
+        {
+          "text": "Useful support libraries",
+          "url": "../index.html#useful-support-libraries"
+        },
+        {
+          "text": "Bus-level documentation",
+          "url": "../index.html#bus-level-documentation"
+        },
+        {
+          "text": "Subsystem-specific APIs",
+          "url": "../index.html#subsystem-specific-apis"
+        },
+        {
+          "text": "Linux 802.11 Driver Developer’s Guide",
+          "url": "../80211/index.html"
+        },
+        {
+          "text": "ACPI Support",
+          "url": "../acpi/index.html"
+        },
+        {
+          "text": "Kernel driver lp855x",
+          "url": "../backlight/lp855x-driver.html"
+        }
+      ]
+    }
+  }
+}

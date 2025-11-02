@@ -1,0 +1,74 @@
+📄 Extracted from page: Immutable biovecs and biovec iterators — The Linux Kernel documentation
+URL: https://www.kernel.org/doc/html/latest/block/biovecs.html
+
+Extracted content:
+```json
+{
+  "title": "Immutable biovecs and biovec iterators — The Linux Kernel documentation",
+  "url": "https://www.kernel.org/doc/html/latest/block/biovecs.html",
+  "summary": "该文档详细介绍了Linux内核中自3.13版本引入的不可变biovecs和biovec迭代器机制。为了解决bio在提交后仍被修改的问题，内核引入了`struct bvec_iter`来封装可变状态，从而使得biovec本身成为不可变结构。这一改变通过将`bi_sector`、`bi_size`、`bi_idx`以及新的`bi_bvec_done`字段从`bio`结构体或对`biovec`的直接修改中分离出来，统一到迭代器中管理，大大简化了bio的遍历、拆分和部分提交操作，并提升了代码的清晰度和可维护性。",
+  "key_points": [
+    {
+      "section": "引入背景与核心理念",
+      "details": [
+        "自Linux内核3.13版本起，`biovecs`在`bio`提交后不应再被修改。",
+        "引入了新的`struct bvec_iter`结构体，它代表一个`biovec`的范围。",
+        "`bvec_iter`会在`bio`完成时被修改，而不是`biovec`本身，从而实现了`biovec`的不可变性。"
+      ]
+    },
+    {
+      "section": "实现原理与数据结构变化",
+      "details": [
+        "**旧机制:** 在旧代码中，部分完成一个`bio`需要更新`bi_sector`和`bi_size`，并推进`bi_idx`到下一个`biovec`。如果`biovec`只完成了一部分，还需要增量修改`bv_offset`并递减`bv_len`。",
+        "**新机制:** 所有必须随`bio`部分完成而发生变化的状态（`bi_sector`、`bi_size`和`bi_idx`）都被移至`struct bvec_iter`。",
+        "代替修改`bv_offset`和`bv_len`，`struct bvec_iter`包含一个`bi_bvec_done`字段，表示当前`bvec`中已完成的字节数。",
+        "提供了一系列辅助宏，以隐藏底层细节，并在代码中呈现出部分完成的`biovec`的假象，避免代码直接处理`bi_bvec_done`。"
+      ]
+    },
+    {
+      "section": "核心API与源码细节",
+      "details": [
+        "**获取`biovec`数据:** 驱动代码不应再直接引用`biovecs`。应使用`bio_iovec()`和`bio_iter_iovec()`宏，它们返回字面量`struct biovec`，这些结构是从原始`biovec`动态构建的，并考虑了`bi_bvec_done`和`bi_size`。",
+        "**遍历`bio`段:** `bio_for_each_segment()`已更新为接受`bvec_iter`参数，而非旧的整数索引。",
+        "**推进迭代器:**",
+        "- `bio_advance_iter()`: 用于推进`bvec_iter`。",
+        "- `bio_advance()`: 是`bio_advance_iter()`的封装，作用于`bio->bi_iter`，并且会推进`bio`完整性迭代器（如果存在）。",
+        "- `bvec_iter_advance()`: 一个更低层的推进函数，接受一个`biovec`指针（而非`bio`），主要供`bio`完整性代码使用。",
+        "**限制:** 自Linux 5.12版本起，不再支持`bv_len`为零的`bvec`段。"
+      ]
+    },
+    {
+      "section": "带来的优势",
+      "details": [
+        "**简化迭代逻辑:** 在处理非精确一个`bvec`大小的数据时（例如`bio_copy_data()`），迭代`bio`变得更加直观和简单，无需处理复杂的双向遍历逻辑。",
+        "**`biovec`数据持久化:** 代码可以在`bio`完成甚至重提交后安全地使用`biovec`，无需额外保存整个`bvec`数组。",
+        "**`biovec`共享与高效拆分:** `biovecs`可以在多个`bio`之间共享，`bvec_iter`可以表示现有`biovec`的任意范围。这使得`bio`的拆分（如改进后的`bio_split()`）变得高效，新`bio`可以直接共享旧`bio`的`biovec`。需通过`bio_chain()`管理`biovec`的生命周期以防提前释放。",
+        "**支持部分完成的`bio`提交:** 现在提交部分完成的`bio`是完全安全的。由于所有驱动程序都被审计并强制要求通过`bvec`迭代器进行访问，避免了旧版本中某些驱动不遵守`bi_idx`导致的问题。"
+      ]
+    },
+    {
+      "section": "其他影响与注意事项",
+      "details": [
+        "**`bi_idx`的使用:** 几乎所有对`bi_idx`的直接使用都是不正确的，应替换为`bvec_iter`和辅助宏（如`bio_iter_iovec()`）。",
+        "**`bi_vcnt`的信任问题:** 驱动代码不应再依赖`bi_vcnt`。在迭代`bio`时不再使用它，且在克隆`bio`并复用原始`biovec`时，计算新`bio`的`bi_vcnt`效率低下且不必要。`bi_size`用于确定`bio`的结束。",
+        "**块层拆分`bio`的能力:** 块层现在可以根据需要拆分`bio`，显著减少了堆叠驱动的复杂性，消除了对`merge_bvec_fn()`回调的需要。创建`bio`的代码可以自由创建任何大小的`bio`，而无需担心底层设备的限制。"
+      ]
+    },
+    {
+      "section": "辅助宏的使用指南",
+      "details": [
+        "**`_all`后缀宏:** (`bio_for_each_segment_all()`, `bio_for_each_bvec_all()`, `bio_first_bvec_all()`, `bio_first_page_all()`, `bio_first_folio_all()`, `bio_last_bvec_all()`) 只能用于非`BIO_CLONED`的`bio`，通常由文件系统代码使用。驱动程序不应使用，因为`bio`可能在到达驱动前已被拆分。",
+        "**单页段迭代器:** (`bio_for_each_segment()`, `bio_for_each_segment_all()`) 迭代时，传入的`struct bio_vec`将包含一个单页I/O向量。",
+        "**多页bvec迭代器:** (`bio_for_each_bvec()`, `bio_for_each_bvec_all()`, `rq_for_each_bvec()`) 迭代时，传入的`struct bio_vec`将包含一个多页I/O向量。"
+      ]
+    }
+  ],
+  "relevant_links": [
+    "https://www.kernel.org/doc/html/latest/core-api/kernel-api.html#c.bio_advance",
+    "https://www.kernel.org/doc/html/latest/filesystems/api-summary.html#c.bio_copy_data",
+    "https://www.kernel.org/doc/html/latest/filesystems/api-summary.html#c.bio_split",
+    "https://www.kernel.org/doc/html/latest/filesystems/api-summary.html#c.bio_chain"
+  ],
+  "file_name": "linux_kernel_biovecs_iterators.json"
+}
+```

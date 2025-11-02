@@ -1,0 +1,29 @@
+📄 Extracted from page: Immutable biovecs and biovec iterators — The Linux Kernel documentation
+URL: https://www.kernel.org/doc/html/latest/block/biovecs.html
+
+Extracted content:
+```json
+{
+    "title": "Immutable biovecs and biovec iterators — The Linux Kernel documentation",
+    "url": "https://www.kernel.org/doc/html/latest/block/biovecs.html",
+    "summary": "This document details a significant architectural change in the Linux kernel (as of version 3.13) concerning biovecs (block I/O vectors) and their associated iterators. The core modification makes biovecs immutable once a bio (block I/O request) has been submitted. Instead of modifying the biovec directly for partial completion, a new data structure, `struct bvec_iter`, is introduced. This iterator encapsulates all mutable state, such as `bi_sector`, `bi_size`, `bi_idx`, and a new field `bi_bvec_done` to track bytes completed within the current biovec. This design shift aims to simplify I/O operations, improve driver reliability, enable efficient bio sharing and splitting, and reduce overall code complexity by standardizing how block I/O is iterated and processed.",
+    "key_points": [
+        "**Core Change: Immutable Biovecs**: As of Linux kernel 3.13, `struct biovec` instances must never be modified after a bio has been submitted. This fundamentally changes how partial I/O completion is handled.",
+        "**`struct bvec_iter` Design**: A new iterator data structure, `struct bvec_iter`, was introduced to manage the mutable state associated with partial bio completion. It segregates fields like `bi_sector`, `bi_size`, and `bi_idx` from the `bio` structure and introduces `bi_bvec_done` to track the number of bytes completed in the current biovec, replacing direct modifications to `bv_offset` and `bv_len`.",
+        "**Iterator Implementation and Usage**: Helper macros like `bio_iovec()` and `bio_iter_iovec()` are provided to return literal `struct bio_vec` instances, constructed on-the-fly from raw biovecs while considering `bi_bvec_done` and `bi_size`. `bio_for_each_segment()` has been updated to take a `bvec_iter` argument. Functions such as `bio_advance_iter()`, `bio_advance()`, and `bvec_iter_advance()` are used to advance the iterator.",
+        "**Design Improvements and Benefits**: This new mechanism offers several advantages, including simplified bio iteration patterns (e.g., in `bio_copy_data`), elimination of the need for code to save entire bvec arrays, and a common implementation for bvec iterators across drivers. It enables efficient sharing of biovecs between multiple bios and greatly simplifies bio splitting, as new bios can now share ranges of existing biovecs.",
+        "**Reliable Partial Completion**: Submitting partially completed bios is now perfectly fine and reliable because all drivers are mandated to go through the bvec iterator interface, ensuring consistent behavior.",
+        "**Deprecations and New Paradigms**: Direct usage of `bio->bi_idx` is now largely incorrect; `bvec_iter` and its helper macros should be used instead. The `bi_vcnt` field can no longer be trusted or relied upon by driver code; `bi_size` is the sole determinant for iteration length.",
+        "**Block Layer Flexibility**: The interface allows the block layer to split bios as needed, reducing complexity in stacked drivers and removing the necessity for `merge_bvec_fn()` callbacks.",
+        "**Helper Function Categorization**: The documentation distinguishes between different helper macros: `_all` suffix helpers (`bio_for_each_segment_all`, `bio_first_bvec_all`, etc.) are for non-`BIO_CLONED` bios (typically used by filesystem code), and specific helpers exist for iterating over single-page segments vs. multi-page bvecs.",
+        "**Restriction**: As of kernel 5.12, bvec segments with zero `bv_len` are explicitly not supported."
+    ],
+    "relevant_links": [
+        "../core-api/kernel-api.html#c.bio_advance",
+        "../filesystems/api-summary.html#c.bio_copy_data",
+        "../filesystems/api-summary.html#c.bio_split",
+        "../filesystems/api-summary.html#c.bio_chain"
+    ],
+    "file_name": "linux_kernel_immutable_biovecs.json"
+}
+```

@@ -1,0 +1,23 @@
+📄 Extracted from page: Kyber I/O scheduler tunables — The Linux Kernel documentation
+URL: https://www.kernel.org/doc/html/latest/block/kyber-iosched.html
+
+Extracted content:
+```json
+{
+  "title": "Kyber I/O scheduler tunables — The Linux Kernel documentation",
+  "url": "https://www.kernel.org/doc/html/latest/block/kyber-iosched.html",
+  "summary": "This Linux Kernel documentation page is dedicated to outlining the tunable parameters available for the Kyber I/O scheduler. It explicitly states that Kyber possesses only two configurable options, which are designed to manage target latencies for read and synchronous write operations. The fundamental mechanism described is Kyber's ability to throttle I/O requests to ensure these specified latency targets are met. The page provides definitions for these two tunables but does not delve into the detailed algorithmic principles, internal implementation specifics, or a comprehensive overview of Kyber's target latency mechanism beyond the existence and purpose of these parameters.",
+  "key_points": [
+    "The Kyber I/O scheduler has only two tunable parameters.",
+    "These tunables are `read_lat_nsec` and `write_lat_nsec`.",
+    "Kyber throttles I/O requests to meet the target latencies defined by these tunables.",
+    "`read_lat_nsec` sets the target latency for read operations, measured in nanoseconds.",
+    "`write_lat_nsec` sets the target latency for synchronous write operations, measured in nanoseconds.",
+    "The document does not cover the detailed algorithmic principles of Kyber, its specific implementation details, or a more elaborate explanation of its target latency mechanism beyond the role of these tunables."
+  ],
+  "relevant_links": [
+    "../_sources/block/kyber-iosched.rst.txt"
+  ],
+  "file_name": "kyber_ioscheduler_tunables.json"
+}
+```

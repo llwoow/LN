@@ -1,0 +1,59 @@
+📄 Extracted from page: Userspace block device driver (ublk driver) — The Linux Kernel documentation
+URL: https://www.kernel.org/doc/html/latest/block/ublk.html
+
+Extracted content:
+```json
+{
+    "title": "Userspace block device driver (ublk driver) — The Linux Kernel documentation",
+    "url": "https://www.kernel.org/doc/html/latest/block/ublk.html",
+    "summary": "ublk是Linux内核中一个通用的框架，旨在将虚拟块设备驱动（如loop、NBD和QCOW2）的逻辑迁移到用户空间实现。这种设计带来了多语言支持、使用用户空间库、易于调试、隔离内核崩溃风险以及独立更新等优势。ublk通过在内核中创建/dev/ublkb*块设备，并将所有I/O请求转发给用户空间程序（ublk服务器）来运作，用户空间处理I/O逻辑后再将结果提交回内核。内核与用户空间之间的通信主要依赖io_uring透传命令，这使得ublk成为高性能的用户空间块设备实现。其架构包括一个控制平面（通过/dev/ublk-control和一系列UBLK_CMD_*命令管理设备）和一个数据平面（通过专用的用户空间I/O线程和io_uring进行I/O处理），并支持零拷贝和自动缓冲区注册等高级功能以优化性能和简化开发。此外，ublk还提供了非特权设备管理和用户恢复机制，以增强系统的弹性和安全性。",
+    "key_points": [
+        "**实现原理 (Implementation Principles):**",
+        "ublk是一个将块设备逻辑从内核空间移到用户空间的通用框架，它在内核中创建/dev/ublkb*块设备。任何针对该设备的I/O请求都会被转发到用户空间的ublk服务器程序进行处理。",
+        "I/O处理完成后，结果会提交回内核驱动，完成请求周期。这意味着所有特定的I/O处理逻辑（如loop的I/O处理、NBD的I/O通信或QCOW2的I/O映射）完全由用户空间完成。",
+        "ublk基于blk-mq请求驱动，每个请求通过一个队列范围内的唯一标签标识。ublk服务器也会为每个I/O分配一个唯一标签，与/dev/ublkb*的I/O标签1:1映射。",
+        "I/O请求转发和I/O处理结果提交都通过io_uring透传命令完成，这使得ublk成为一个基于io_uring的高性能用户空间块设备实现。ublk服务器中首选的I/O处理方法也是基于io_uring的。",
+        "**架构设计 (Architectural Design):**",
+        "**控制平面 (Control Plane):** 通过全局的杂项设备节点`/dev/ublk-control`提供接口，用于管理和控制ublk设备。它使用一系列控制命令进行操作。",
+        "**数据平面 (Data Plane):** ublk服务器应创建专用的I/O处理线程，每个线程拥有自己的io_uring实例来接收I/O通知和完成I/O。这些线程专注于I/O处理，不处理控制和管理任务。",
+        "**用户空间/内核交互 (User/Kernel Interaction):**",
+        "**控制命令 (UBLK_CMD_*):**",
+        "  - `UBLK_CMD_ADD_DEV`: 添加ublk字符设备`/dev/ublkc*`，用于与ublk服务器进行I/O命令通信。协商`nr_hw_queues`、`queue_depth`和最大I/O请求缓冲区大小等基本设备信息。",
+        "  - `UBLK_CMD_SET_PARAMS`/`UBLK_CMD_GET_PARAMS`: 设置或获取设备参数，可在`UBLK_CMD_START_DEV`之前使用。",
+        "  - `UBLK_CMD_START_DEV`: 在服务器准备好用户空间资源后，向驱动发送此命令以分配并暴露`/dev/ublkb*`设备。",
+        "  - `UBLK_CMD_STOP_DEV`: 停止`/dev/ublkb*`上的I/O并移除设备，服务器释放资源。",
+        "  - `UBLK_CMD_DEL_DEV`: 移除`/dev/ublkc*`，释放ublk设备号。",
+        "  - `UBLK_CMD_GET_QUEUE_AFFINITY`: 获取队列亲和性信息，用于高效设置每队列上下文（如绑定CPU和分配缓冲区）。",
+        "  - `UBLK_CMD_GET_DEV_INFO`/`UBLK_CMD_GET_DEV_INFO2`: 用于检索设备信息，`GET_DEV_INFO2`支持非特权设备并进行权限检查。",
+        "**用户恢复命令与特性 (User Recovery Commands & Features):**",
+        "  - `UBLK_F_USER_RECOVERY`: 启用此功能时，ublk服务器退出后`/dev/ublkb*`不会被删除，设备ID得以保留。驱动提供`UBLK_CMD_START_USER_RECOVERY`和`UBLK_CMD_END_USER_RECOVERY`命令来协调恢复过程。",
+        "  - `UBLK_F_USER_RECOVERY_REISSUE`: 服务器退出后，已发出的请求会被重新排队并重新发出给新的进程，适用于容忍双写的后端。",
+        "  - `UBLK_F_USER_RECOVERY_FAIL_IO`: 服务器退出后，已发出和后续的I/O请求都会失败。",
+        "**非特权设备 (Unprivileged Devices):** 通过`UBLK_F_UNPRIVILEGED_DEV`标志支持，允许非特权用户发送除`UBLK_CMD_ADD_DEV`外的所有控制命令，通过对`/dev/ublkc*`路径进行权限检查实现，支持容器化场景。",
+        "**数据通信命令 (UBLK_IO_*):** 通过io_uring透传命令进行I/O通信。",
+        "  - `UBLK_IO_FETCH_REQ`: 由服务器I/O线程发送，用于获取未来传入的I/O请求，并注册I/O的守护进程（daemon）。`UBLK_F_PER_IO_DAEMON`标志指示是否支持每I/O独立守护进程。",
+        "  - `UBLK_IO_COMMIT_AND_FETCH_REQ`: 服务器处理完I/O后，发送此命令将结果提交回驱动，并为获取相同I/O标签的未来请求设置环境，实现I/O请求和结果的双向通信。",
+        "  - `UBLK_IO_NEED_GET_DATA`: （当`UBLK_F_NEED_GET_DATA`启用时）对于WRITE请求，首次不带数据发送给服务器，服务器分配缓冲区后，内核再将数据复制到服务器缓冲区，然后再次通知服务器处理。主要为向后兼容性设计。",
+        "**零拷贝 (Zero Copy):**",
+        "  - 依赖io_uring的固定内核缓冲区API。通过`UBLK_IO_REGISTER_IO_BUF`注册客户端请求缓冲区，通过`UBLK_IO_UNREGISTER_IO_BUF`注销。",
+        "  - ublk服务器需要`CAP_SYS_ADMIN`权限，并确保正确填充数据，以避免暴露未初始化的内核缓冲区。",
+        "  - 为达到最佳性能，ublk服务器应将其`struct ublk_param_dma_align`和`struct ublk_param_segment`参数与后端对齐，以避免不必要的I/O拆分。",
+        "**自动缓冲区注册 (Auto Buffer Registration):**",
+        "  - `UBLK_F_AUTO_BUF_REG`特性自动处理I/O请求的缓冲区注册和注销，兼容`UBLK_F_SUPPORT_ZERO_COPY`。",
+        "  - 简化ublk服务器实现，减少开销，并移除对手动注册命令的依赖，从而支持并发I/O处理。",
+        "  - 使用要求包括在与I/O通信命令相同的`io_ring_ctx`上创建稀疏缓冲区表，并使用`ublk_auto_buf_reg`结构体传递注册数据。",
+        "  - 若自动注册失败且启用`UBLK_AUTO_BUF_REG_FALLBACK`，服务器需手动处理；若未启用，I/O请求静默失败。",
+        "**源码细节 (Source Code Details):**",
+        "  - 文档中提及的UAPI结构体，如`ublksrv_ctrl_dev_info`、`ublksrv_io_desc`和`ublk_auto_buf_reg`，定义了用户空间与内核驱动之间的数据交换格式，是驱动接口实现的关键组成部分。",
+        "  - 各种`UBLK_CMD_*`和`UBLK_IO_*`命令是内核和用户空间之间功能调用的API，构成了ublk驱动的编程接口细节。",
+        "  - `ublksrv`项目 (https://github.com/ming1/ubdsrv) 是一个参考实现，其中包含`libublksrv` (https://github.com/ming1/ubdsrv/tree/master/lib) 库，这些是构建用户空间ublk服务器的实际代码基础和实现细节的体现。"
+    ],
+    "relevant_links": [
+        "https://github.com/ming1/ubdsrv",
+        "https://github.com/ming1/ubdsrv/tree/master/lib",
+        "https://gitlab.com/rwmjones/libnbd/-/tree/nbdublk",
+        "https://github.com/ming1/ubdsrv/blob/master/README"
+    ],
+    "file_name": "ublk_userspace_block_driver_details.json"
+}
+```

@@ -1,0 +1,41 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "研究计算机图形学核心概念和基础理论",
+        "details": "包括图形学概述、数学基础（向量、矩阵、坐标变换）、颜色模型、光照模型等基础理论知识",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "研究图形渲染管线和技术",
+        "details": "深入研究几何变换、投影变换、光栅化算法、纹理映射、深度缓冲、渲染管线等核心技术",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "研究高级图形学技术",
+        "details": "包括光照模型（Phong、Blinn-Phong等）、阴影算法、反射模型、曲线曲面、细分曲面等高级技术",
+        "status": "completed",
+        "priority": "high"
+      },
+      "4": {
+        "id": "4",
+        "content": "研究现代图形学和实时渲染",
+        "details": "包括GPU架构、Shader编程、几何着色器、光线追踪、实时渲染优化技术等现代图形学内容",
+        "status": "completed",
+        "priority": "high"
+      },
+      "5": {
+        "id": "5",
+        "content": "整理和编写完整的课程笔记",
+        "details": "将所有研究成果整理成结构清晰的markdown笔记，包含章节划分、公式推导、图表说明等",
+        "status": "completed",
+        "priority": "medium"
+      }
+    }
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "_source_id": 41,
+  "sources": {
+    "多旋翼飞控系统和控制算法研究": {
+      "https://thinkrobotics.com/blogs/learn/px4-vs-ardupilot-complete-comparison-guide-for-drone-developers": {
+        "id": 1,
+        "publisher": "ThinkRobotics",
+        "url": "https://thinkrobotics.com/blogs/learn/px4-vs-ardupilot-complete-comparison-guide-for-drone-developers",
+        "title": "PX4 vs ArduPilot: Complete Comparison Guide for Drone Developers",
+        "info": "PX4飞行控制系统架构详解：采用模块化微内核设计，核心为uORB发布/订阅消息总线，延迟低于10毫秒，支持事件驱动处理和MAVLink通信协议"
+      },
+      "https://stevenferrer.github.io/posts/how-to-build-a-flight-control-using-stm32f411-blackpill/": {
+        "id": 2,
+        "publisher": "Steven Ferrer's Blog",
+        "url": "https://stevenferrer.github.io/posts/how-to-build-a-flight-control-using-stm32f411-blackpill/",
+        "title": "How to Build a Flight Control Using STM32F411 BlackPill",
+        "info": "基于STM32F411CEU6 BlackPill V2.0的飞行控制器设计，包含MPU9250/6500传感器配置、4S LiPo电池系统、RS2205电机和FVT ESC的完整实现方案"
+      },
+      "https://ardupilot.org/copter/docs/flight-modes.html": {
+        "id": 3,
+        "publisher": "ArduPilot",
+        "url": "https://ardupilot.org/copter/docs/flight-modes.html",
+        "title": "Copter Flight Modes Documentation",
+        "info": "ArduPilot Copter无人机系统包含25种内置飞行模式，分为手动控制、有限自稳控制、速率控制、自动控制等不同控制级别，包括Stabilize、Alt Hold、Loiter、RTL等常用模式"
+      },
+      "https://www.mathworks.com/help/slcontrol/ug/pid-controller-tuning-for-a-uav-quadcopter.html": {
+        "id": 4,
+        "publisher": "MathWorks",
+        "url": "https://www.mathworks.com/help/slcontrol/ug/pid-controller-tuning-for-a-uav-quadcopter.html",
+        "title": "PID Controller Tuning for a UAV Quadcopter",
+        "info": "Simulink闭环PID自动调谐器模块调节四旋翼飞行器姿态和位置控制，包含8个PID控制器，采用4个级联控制环，性能提升70%时间减少"
+      },
+      "https://ieeexplore.ieee.org/document/9028333": {
+        "id": 5,
+        "publisher": "IEEE",
+        "url": "https://ieeexplore.ieee.org/document/9028333",
+        "title": "PID Control of Multi‐rotor Unmanned Aerial Vehicles",
+        "info": "多旋翼无人机PID控制案例研究，涵盖动力学建模和控制系统设计，包含姿态控制和位置控制的级联PID结构"
+      },
+      "https://arxiv.org/pdf/1908.07401": {
+        "id": 6,
+        "publisher": "arXiv",
+        "url": "https://arxiv.org/pdf/1908.07401",
+        "title": "State Space System Modelling of a Quad Copter UAV",
+        "info": "四旋翼无人机线性数学模型推导，包含3自由度(3DOF)和6自由度(6DOF)状态空间表示方法"
+      },
+      "https://www.mathworks.com/help/fusion/ug/estimate-orientation-through-inertial-sensor-fusion.html": {
+        "id": 7,
+        "publisher": "MathWorks",
+        "url": "https://www.mathworks.com/help/fusion/ug/estimate-orientation-through-inertial-sensor-fusion.html",
+        "title": "Estimate Orientation Through Inertial Sensor Fusion",
+        "info": "惯性传感器融合估计姿态，包含加速度计、陀螺仪和磁力计三种传感器类型及其融合算法实现"
+      },
+      "https://www.mathworks.com/help/fusion/ug/imu-and-gps-fusion-for-inertial-navigation.html": {
+        "id": 8,
+        "publisher": "MathWorks",
+        "url": "https://www.mathworks.com/help/fusion/ug/imu-and-gps-fusion-for-inertial-navigation.html",
+        "title": "IMU and GPS Fusion for Inertial Navigation",
+        "info": "IMU+GPS融合算法构建，适用于无人机和四旋翼飞行器的惯性导航系统"
+      },
+      "https://ieeexplore.ieee.org/document/9240270": {
+        "id": 9,
+        "publisher": "IEEE",
+        "url": "https://ieeexplore.ieee.org/document/9240270",
+        "title": "Multi-Rotor Attitude Control Using Cascade-LADRC",
+        "info": "多旋翼姿态控制器基于级联PID控制，涵盖姿态控制系统的核心部分和自动调谐过程"
+      },
+      "https://github.com/AlkaMotors/AM32-MultiRotor-ESC-firmware": {
+        "id": 10,
+        "publisher": "GitHub - AlkaMotors",
+        "url": "https://github.com/AlkaMotors/AM32-MultiRotor-ESC-firmware",
+        "title": "AM32 MultiRotor ESC Firmware",
+        "info": "基于STM32 ARM处理器的无刷电机控制固件，支持伺服PWM、Dshot协议、双向Dshot通信和KISS标准ESC遥测数据"
+      }
+    },
+    "多旋翼飞行器结构设计和硬件组成研究": {
+      "https://www.xntyi.com/Carbon-Fiber-vs-Aluminum-Alloy-Material-Choices-in-Drone-Frame-Design": {
+        "id": 11,
+        "publisher": "新泰工业",
+        "url": "https://www.xntyi.com/Carbon-Fiber-vs-Aluminum-Alloy-Material-Choices-in-Drone-Frame-Design",
+        "title": "无人机机架设计：碳纤维与铝合金材料选择对比",
+        "info": "碳纤维拉伸强度3500-6000 MPa，重量效率提升20%，优异的振动阻尼和抗冲击性能"
+      },
+      "https://www.flyeye.io/drone-calculators-center-of-gravity/": {
+        "id": 12,
+        "publisher": "Fly Eye",
+        "url": "https://www.flyeye.io/drone-calculators-center-of-gravity/",
+        "title": "无人机重心计算器",
+        "info": "重心计算公式CG (Axis) = Σ(Position × Weight) ÷ Σ(Weight)，三轴重量分布计算方法"
+      },
+      "https://tooldone.com/other/drone-motor-calculator/": {
+        "id": 13,
+        "publisher": "ToolDone",
+        "url": "https://tooldone.com/other/drone-motor-calculator/",
+        "title": "无人机电机推力计算器",
+        "info": "推重比计算公式，单电机推力=总重量÷电机数量，电机效率以克/瓦为单位"
+      },
+      "https://yungbangpower.com/zh/blog/lipo-battery-discharge-rate-c-rating-explained/": {
+        "id": 14,
+        "publisher": "永邦动力",
+        "url": "https://yungbangpower.com/zh/blog/lipo-battery-discharge-rate-c-rating-explained/",
+        "title": "LiPo电池放电率C值详解",
+        "info": "最大电流(A) ≈ 容量(Ah) × C值，FPV无人机选型案例和电压管理策略"
+      },
+      "https://rcplanes.online/calc_motor.htm": {
+        "id": 15,
+        "publisher": "RC Planes Online",
+        "url": "https://rcplanes.online/calc_motor.htm",
+        "title": "电机和螺旋桨性能计算器",
+        "info": "电机效率计算，螺旋桨性能评估，桨尖速度限制0.92马赫，静推力要求大于全重的1/2"
+      }
+    },
+    "多旋翼飞行器传感器技术和通信系统研究": {
+      "https://dewesoft.com/products/ds-gyro/tech-specs": {
+        "id": 16,
+        "publisher": "Dewesoft",
+        "url": "https://dewesoft.com/products/ds-gyro/tech-specs",
+        "title": "IMU传感器技术规格",
+        "info": "DS-GYRO1和DS-GYRO3两种型号的详细IMU传感器参数，包括三轴加速度计、陀螺仪、磁力计的技术指标和性能参数"
+      },
+      "https://blog.csdn.net/lei_a_gang/article/details/148606350": {
+        "id": 17,
+        "publisher": "CSDN",
+        "url": "https://blog.csdn.net/lei_a_gang/article/details/148606350",
+        "title": "MAVLink协议详解与实战",
+        "info": "MAVLink 2.0协议的完整技术规范，包括消息结构、通信流程、函数库和开发实践指南"
+      },
+      "https://oscarliang.com/rc-protocols/": {
+        "id": 18,
+        "publisher": "Oscar Liang",
+        "url": "https://oscarliang.com/rc-protocols/",
+        "title": "FPV无人机遥控通信协议详解",
+        "info": "全面的遥控通信协议对比分析，包括PWM、PPM、SBUS、CRSF、DSHOT等协议的详细技术参数和特点"
+      },
+      "http://www.360doc.com/content/25/0108/19/23557534_1144079853.shtml": {
+        "id": 19,
+        "publisher": "个人图书馆",
+        "url": "http://www.360doc.com/content/25/0108/19/23557534_1144079853.shtml",
+        "title": "无人机气压计高度感知技术",
+        "info": "气压计在无人机中的工作原理、技术规格和应用案例，包括MS5607-B传感器参数"
+      },
+      "https://blog.csdn.net/qq_43046763/article/details/106629784": {
+        "id": 20,
+        "publisher": "CSDN",
+        "url": "https://blog.csdn.net/qq_43046763/article/details/106629784",
+        "title": "MS5611气压计技术详解",
+        "info": "MS5611气压传感器的完整技术规格、工作原理、校准方法和实现代码"
+      },
+      "https://blog.csdn.net/weixin_38225837/article/details/147407729": {
+        "id": 21,
+        "publisher": "CSDN",
+        "url": "https://blog.csdn.net/weixin_38225837/article/details/147407729",
+        "title": "无人机RTK定位技术",
+        "info": "RTK厘米级定位技术的工作原理、精度参数、多系统GNSS支持和技术规格"
+      },
+      "https://zhuanlan.zhihu.com/p/698833773": {
+        "id": 22,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/698833773",
+        "title": "RTK定位技术解密",
+        "info": "RTK高精度厘米级定位技术的详细原理和在无人机中的应用"
+      },
+      "https://uav.chinaflier.com/thread-29794-1-1.html": {
+        "id": 23,
+        "publisher": "中国飞手网",
+        "url": "https://uav.chinaflier.com/thread-29794-1-1.html",
+        "title": "QGroundControl与MissionPlanner对比",
+        "info": "两大主流地面站软件的功能特性对比和应用场景分析"
+      },
+      "https://zhuanlan.zhihu.com/p/81593963759": {
+        "id": 24,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/81593963759",
+        "title": "自主导航技术综述",
+        "info": "包括SLAM技术、传感器融合、路径规划算法等自主导航技术的综合分析"
+      },
+      "https://zhuanlan.zhihu.com/p/1892937642825462612": {
+        "id": 25,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/1892937642825462612",
+        "title": "高精度气压高度传感器",
+        "info": "气压高度传感器的工作原理、精度参数和在无人机定高中的应用"
+      }
+    },
+    "多旋翼飞行器传感器技术和通信系统深度研究（改进版）": {
+      "https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi088/": {
+        "id": 26,
+        "publisher": "Bosch Sensortec",
+        "url": "https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi088/",
+        "title": "BMI088惯性测量单元官方产品页面",
+        "info": "Bosch BMI088高性能IMU传感器的完整技术规格，包括三轴加速度计和陀螺仪的量程、精度、噪声、带宽等详细参数"
+      },
+      "https://mavlink.io/en/guide/": {
+        "id": 27,
+        "publisher": "MAVLink官方",
+        "url": "https://mavlink.io/en/guide/",
+        "title": "MAVLink开发者指南",
+        "info": "MAVLink协议的完整文档结构，包括版本信息、消息结构、通信流程、API接口等详细技术参数"
+      },
+      "https://docs.qgroundcontrol.com/master/zh/qgc-dev-guide/getting_started/index.html": {
+        "id": 28,
+        "publisher": "QGroundControl官方",
+        "url": "https://docs.qgroundcontrol.com/master/zh/qgc-dev-guide/getting_started/index.html",
+        "title": "从源码开始并构建QGC指南",
+        "info": "QGroundControl官方开发指南的完整技术内容，包括多平台构建方法、软件架构信息、依赖项管理等"
+      },
+      "https://ardupilot.org/planner/": {
+        "id": 29,
+        "publisher": "ArduPilot官方",
+        "url": "https://ardupilot.org/planner/",
+        "title": "Mission Planner官方文档",
+        "info": "Mission Planner官方文档的完整技术内容，包括功能特性、系统架构、使用方法等"
+      },
+      "https://futaba.uk/pages/command-protocols": {
+        "id": 30,
+        "publisher": "Futaba UK",
+        "url": "https://futaba.uk/pages/command-protocols",
+        "title": "Futaba命令协议官方文档",
+        "info": "Futaba S.BUS系统的官方技术规范，包括PWM、S.BUS、S.BUS2三种协议的详细技术参数和应用指南"
+      },
+      "https://content.u-blox.com/sites/default/files/ZED-F9P-04B_DataSheet_UBX-21044850.pdf": {
+        "id": 31,
+        "publisher": "u-blox AG",
+        "url": "https://content.u-blox.com/sites/default/files/ZED-F9P-04B_DataSheet_UBX-21044850.pdf",
+        "title": "ZED-F9P-04B官方数据手册",
+        "info": "u-blox ZED-F9P RTK模块的官方数据手册链接和技术规格信息"
+      },
+      "https://github.com/Mission-Planner": {
+        "id": 32,
+        "publisher": "Mission Planner GitHub",
+        "url": "https://github.com/Mission-Planner",
+        "title": "Mission Planner开源项目",
+        "info": "Mission Planner开源项目的GitHub仓库信息，包括源码结构、技术架构、开发指南"
+      },
+      "https://github.com/bolderflight/sbus": {
+        "id": 33,
+        "publisher": "Bolder Flight Systems",
+        "url": "https://github.com/bolderflight/sbus",
+        "title": "SBUS协议开源实现",
+        "info": "SBUS协议的GitHub开源实现和技术规范，包括协议参数、数据格式、连接方式"
+      }
+    },
+    "多旋翼飞行器传感器技术和通信系统深度研究（最终版）": {
+      "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi088-ds001.pdf": {
+        "id": 34,
+        "publisher": "Bosch Sensortec",
+        "url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi088-ds001.pdf",
+        "title": "Bosch BMI088官方数据手册",
+        "info": "Bosch BMI088 6轴IMU传感器的完整技术规格，包括三轴加速度计和陀螺仪的量程、精度、噪声、带宽等详细参数"
+      },
+      "https://content.u-blox.com/sites/default/files/ZED-F9P-04B_DataSheet_UBX-21044850.pdf": {
+        "id": 35,
+        "publisher": "u-blox AG",
+        "url": "https://content.u-blox.com/sites/default/files/ZED-F9P-04B_DataSheet_UBX-21044850.pdf",
+        "title": "u-blox ZED-F9P官方数据手册",
+        "info": "u-blox ZED-F9P RTK模块的完整技术规格，包括厘米级RTK定位精度、支持的多系统多频段、功耗和接口类型"
+      },
+      "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf": {
+        "id": 36,
+        "publisher": "Bosch Sensortec",
+        "url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf",
+        "title": "Bosch BMP280官方数据手册",
+        "info": "Bosch BMP280气压传感器的完整技术规格，包括气压和温度测量精度、功耗、接口类型等"
+      },
+      "http://file.whycan.com/files/members/466/IMX586-AAJH5-C_0.0.1_Datasheet(1).pdf": {
+        "id": 37,
+        "publisher": "Sony Corporation",
+        "url": "http://file.whycan.com/files/members/466/IMX586-AAJH5-C_0.0.1_Datasheet(1).pdf",
+        "title": "Sony IMX586官方数据手册",
+        "info": "Sony IMX586 4800万像素图像传感器的完整技术规格，包括分辨率、像素尺寸、帧率、功耗等"
+      },
+      "https://www.omnivision-group.com/files/product/files/%E8%A7%84%E6%A0%BC%E4%B9%A6/%E5%9B%BE%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8/%E5%8F%AF%E7%A9%BF%E6%88%B4%E7%B1%BB/OV9281.pdf": {
+        "id": 38,
+        "publisher": "Omnivision Technologies",
+        "url": "https://www.omnivision-group.com/files/product/files/%E8%A7%84%E6%A0%BC%E4%B9%A6/%E5%9B%BE%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8/%E5%8F%AF%E7%A9%BF%E6%88%B4%E7%B1%BB/OV9281.pdf",
+        "title": "Omnivision OV9281官方数据手册",
+        "info": "Omnivision OV9281 100万像素全局快门图像传感器的完整技术规格，包括分辨率、帧率、功耗、全局快门特性"
+      },
+      "https://dlscorp.com/wp-content/uploads/2021/01/IMX477-DS.pdf": {
+        "id": 39,
+        "publisher": "Sony Semiconductor Solutions Corporation",
+        "url": "https://dlscorp.com/wp-content/uploads/2021/01/IMX477-DS.pdf",
+        "title": "Sony IMX477官方数据手册",
+        "info": "Sony IMX477 1230万像素图像传感器的完整技术规格，包括分辨率、像素尺寸、帧率、接口类型等"
+      },
+      "https://www.ericsson.com/en/blog/2020/12/5g-latency-test-rc-hobby": {
+        "id": 40,
+        "publisher": "Ericsson",
+        "url": "https://www.ericsson.com/en/blog/2020/12/5g-latency-test-rc-hobby",
+        "title": "5G与RC延迟测试实测数据",
+        "info": "爱立信D-15实验室的5G与RC系统延迟对比测试数据，包括端到端延迟、视频延迟、控制延迟等实测结果"
+      },
+      "https://www.mdpi.com/1424-8220/22/23/9263": {
+        "id": 41,
+        "publisher": "MDPI Sensors Journal",
+        "url": "https://www.mdpi.com/1424-8220/22/23/9263",
+        "title": "气压高度测量精度分析实测数据",
+        "info": "MDPI期刊发表的气压高度测量精度分析论文，包含在不同环境条件下的误差分析和性能评估实测数据"
+      }
+    }
+  }
+}

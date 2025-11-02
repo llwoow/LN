@@ -1,0 +1,548 @@
+[
+  {
+    "query": "复数的三角形式和极坐标表示图",
+    "image_info": {
+      "url": "https://cdn1.byjus.com/wp-content/uploads/2020/04/polar-form-of-complex-numbers-1.png",
+      "img_format": "PNG",
+      "mode": "P",
+      "file_size": 5191,
+      "width": 750,
+      "height": 544,
+      "total_pixels": 408000,
+      "basic_score": 0.8079783150531511,
+      "file_name": "complex-number-polar-trigonometric-representation-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect textbook illustration for the search query and prompt, clearly showing the relationship between Cartesian (x, y) and polar (r, θ) coordinates for a complex number. It is a high-resolution vector-style graphic with excellent clarity, sharp lines, and legible text. There are no watermarks. The overall quality is professional and ideal for educational purposes.",
+      "file_name": "complex-number-polar-trigonometric-representation-diagram.jpg",
+      "caption": "A diagram illustrating the polar and trigonometric representation of a complex number on the complex plane. The horizontal axis is the Real axis (R), and the vertical axis is the Imaginary axis (i). A point (x, y) in the first quadrant represents the complex number z = x + iy. The distance from the origin (O) to the point is the modulus 'r' (the hypotenuse), and the angle it makes with the positive Real axis is the argument 'θ'. The values 'x' and 'y' form a right-angled triangle, representing the real and imaginary parts of the number, respectively.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "复数的三角形式和极坐标表示图",
+    "image_info": {
+      "url": "https://study.com/cimages/videopreview/videopreview-full/yowzy8xtmw.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 17937,
+      "width": 715,
+      "height": 402,
+      "total_pixels": 287430,
+      "basic_score": 0.7784104666298207,
+      "file_name": "complex_number_polar_form_conversion_example.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 85.0,
+      "watermark_score": 80.0,
+      "overall_score": 88.0,
+      "explanation": "The image is highly relevant as it clearly demonstrates the process of converting a complex number from its standard form to its polar/trigonometric form, which directly addresses the search query. The clarity is good, with both typed text and handwritten calculations being legible. A faint watermark is present but does not significantly detract from the educational value. Overall, it's a high-quality instructional image.",
+      "file_name": "complex_number_polar_form_conversion_example.jpg",
+      "caption": "An educational diagram showing the formulas and a worked example for converting a complex number into its polar form. On the left, the general formulas for converting z = a + bi to its polar form are listed. On the right, the specific example of converting the complex number z = 9 - 5i is solved step-by-step.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "复数的三角形式和极坐标表示图",
+    "image_info": {
+      "url": "https://media.nagwa.com/903140702634/en/thumbnail_l.jpeg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 201774,
+      "width": 1024,
+      "height": 576,
+      "total_pixels": 589824,
+      "basic_score": 0.8898381006576357,
+      "file_name": "complex-number-trigonometric-form-argand-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is perfectly relevant to the search query, providing a clear and well-structured visual explanation of how to represent a complex number in trigonometric (polar) form using an Argand diagram. The handwriting is legible, the resolution is good, and the use of color effectively highlights key components. There are no watermarks, making it a high-quality educational graphic.",
+      "file_name": "complex-number-trigonometric-form-argand-diagram.jpg",
+      "caption": "An educational diagram demonstrating the conversion of a complex number to its trigonometric form. On the left, an Argand diagram plots a complex number 'z' in the fourth quadrant with a modulus (r) of 4 and an argument (θ) of -π/3. On the right, the general formula z = r(cos θ + i sin θ) is given, and the specific solution z = 4(cos(-π/3) + i sin(-π/3)) is derived and highlighted.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "复数的三角形式和极坐标表示图",
+    "image_info": {
+      "url": "https://matherama.com/Tutorials/Chapter%2004%20-%20Complex%20Numbers%20Basics/image-18.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 15523,
+      "width": 455,
+      "height": 439,
+      "total_pixels": 199745,
+      "basic_score": 0.7360096323974844,
+      "file_name": "complex_number_polar_trigonometric_representation.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is a perfect, textbook-quality diagram that clearly and accurately illustrates the polar and trigonometric representation of a complex number, matching the search query exactly. The graphic is clean, sharp, and easy to understand, with no watermarks. Its educational value is extremely high.",
+      "file_name": "complex_number_polar_trigonometric_representation.jpg",
+      "caption": "A diagram of the complex plane showing the polar and trigonometric representation of a complex number. The point z = x + iy is plotted, with a vector from the origin 'O' to the point. The vector's length is the modulus 'r = |z|', and its angle with the positive real axis is the argument 'θ'. The diagram also shows the relationship to Cartesian coordinates with the labels x = r cos θ and y = r sin θ.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "复数的三角形式和极坐标表示图",
+    "image_info": {
+      "url": "https://www.onlinemathlearning.com/image-files/complex-number-polar.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 10697,
+      "width": 414,
+      "height": 427,
+      "total_pixels": 176778,
+      "basic_score": 0.7262408775927479,
+      "file_name": "complex-number-polar-trigonometric-form-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 80.0,
+      "watermark_score": 100.0,
+      "overall_score": 92.0,
+      "explanation": "The image is perfectly relevant to the search query, providing a clear and accurate diagram of a complex number in its polar and trigonometric form. The clarity is good for a web graphic, though it is a raster image with some minor pixelation on text and lines, not a high-resolution vector. There are no watermarks. Overall, it's an excellent and highly effective educational graphic.",
+      "file_name": "complex-number-polar-trigonometric-form-diagram.jpg",
+      "caption": "A diagram titled 'Complex Numbers In Polar Form' illustrating the representation of a complex number on a plane. The plane has a horizontal real axis (x) and a vertical imaginary axis (i). A complex number z is shown as a point, with its modulus 'r' (the distance from the origin) and argument 'θ' (the angle with the positive real axis). The diagram breaks down the point into its trigonometric components, with the real part as 'r cos θ' and the imaginary part as 'r sin θ', corresponding to the formula z = r(cos θ + i sin θ).",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "数学复平面图示，显示复数的实轴和虚轴",
+    "image_info": {
+      "url": "https://graphicmaths.com/img/pure/complex-numbers/argand-diagrams/argand-diagram-addition.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 14144,
+      "width": 400,
+      "height": 400,
+      "total_pixels": 160000,
+      "basic_score": 0.7198696210774644,
+      "file_name": "complex-plane-argand-diagram-illustration.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 80.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a perfect match for the search query, clearly illustrating points on a complex plane (Argand diagram). The clarity is good for its purpose, with all text and lines being legible, though the resolution is not very high. The image is clean, with no watermarks. Overall, it is a high-quality and effective mathematical illustration.",
+      "file_name": "complex-plane-argand-diagram-illustration.jpg",
+      "caption": "A mathematical illustration of a complex plane, also known as an Argand diagram. The horizontal axis represents the real part and the vertical axis represents the imaginary part of complex numbers. Three complex numbers are plotted as points: r = 2 + 3i (green), r = 4 + i (blue), and r = 6 + 4i (orange). Vectors are drawn from the origin to the points 2 + 3i and 4 + i, and another line segment connects the point 4 + i to 6 + 4i.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "数学复平面图示，显示复数的实轴和虚轴",
+    "image_info": {
+      "url": "https://cdn1.byjus.com/wp-content/uploads/2020/10/Argand-Plane-Polar-Representation-Of-Complex-Number-03.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 8070,
+      "width": 750,
+      "height": 377,
+      "total_pixels": 282750,
+      "basic_score": 0.753991148673421,
+      "file_name": "argand-diagram-complex-plane-illustration.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 50.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a perfect and clear illustration of a complex number on an Argand diagram, directly matching the search query and prompt. It has excellent clarity and resolution with sharp lines and legible text. The main drawback is the noticeable copyright watermark in the bottom right corner, which reduces its score for professional, unrestricted use.",
+      "file_name": "argand-diagram-complex-plane-illustration.jpg",
+      "caption": "A mathematical diagram of a complex plane, also known as an Argand diagram. It shows the horizontal real axis (X' to X) and the vertical imaginary axis (Y to Y') intersecting at the origin O (0,0). A complex number z is represented by the point A(z) in the first quadrant, connected to the origin by a purple line whose length 'r = |z|' represents the modulus. The angle between the positive real axis and the line segment represents the argument.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "复积分路径和围道积分示意图",
+    "image_info": {
+      "url": "https://readingfeynman.org/wp-content/uploads/2013/11/curve-examples.gif",
+      "img_format": "GIF",
+      "mode": "P",
+      "file_size": 11428,
+      "width": 520,
+      "height": 362,
+      "total_pixels": 188240,
+      "basic_score": 0.6984675886651246,
+      "file_name": "complex_analysis_curve_types_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 60.0,
+      "watermark_score": 100.0,
+      "overall_score": 75.0,
+      "explanation": "The image is an excellent educational diagram, highly relevant to the query by illustrating the fundamental types of paths (simple, closed, etc.) used in contour integration. Its value is purely informational. However, the technical quality is poor, with low resolution and visible compression artifacts, which brings down the overall score. There are no watermarks.",
+      "file_name": "complex_analysis_curve_types_diagram.jpg",
+      "caption": "A diagram illustrating four types of curves in complex analysis, essential for understanding contour integration paths. Panel (a) shows a simple curve that doesn't intersect itself. Panel (b) shows a simple closed curve, a non-intersecting loop. Panel (c) displays a non-simple, non-closed curve that crosses itself. Panel (d) shows a non-simple closed curve, a loop that intersects itself.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "复积分路径和围道积分示意图",
+    "image_info": {
+      "url": "https://mathworld.wolfram.com/images/socialmedia/share/ogimage_ContourIntegration.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 288614,
+      "width": 1150,
+      "height": 724,
+      "total_pixels": 832600,
+      "basic_score": 0.9281208641414392,
+      "file_name": "contour-integration-path-complex-plane.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 50.0,
+      "overall_score": 85.0,
+      "explanation": "The image is perfectly relevant to the search query, providing a clear title, definition, and diagram for contour integration, which directly addresses the prompt. The clarity of the text and diagram is very high. However, there is a prominent logo/watermark for 'Wolfram MathWorld' at the top, which lowers the watermark score. Overall, it's a high-quality and professionally presented educational graphic.",
+      "file_name": "contour-integration-path-complex-plane.jpg",
+      "caption": "An educational graphic illustrating the concept of contour integration. Sourced from Wolfram MathWorld, the image displays the title 'Contour Integration,' a definition of the process, and a clear diagram of a semi-circular contour path in the upper half of the complex plane, running from -R to R along the real axis.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "复变函数从z平面到w平面的映射示意图",
+    "image_info": {
+      "url": "https://math.libretexts.org/@api/deki/files/47006/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2020-08-14_%25E4%25B8%258B%25E5%258D%25888.55.27.png?revision=1&size=bestfit&width=974&height=466",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 172900,
+      "width": 1864,
+      "height": 894,
+      "total_pixels": 1666416,
+      "basic_score": 0.8061564467382805,
+      "file_name": "complex-exponential-function-mapping-z-plane-to-w-plane.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is a perfect and highly relevant illustration for the search query, showing the mapping of the complex exponential function from the z-plane to the w-plane. The diagram is exceptionally clear, professionally designed for educational purposes, and contains no watermarks. Its quality is outstanding.",
+      "file_name": "complex-exponential-function-mapping-z-plane-to-w-plane.jpg",
+      "caption": "A schematic diagram showing the conformal mapping of the complex exponential function, w = e^z. The left panel represents the complex z-plane, with horizontal colored strips and vertical lines. The right panel represents the complex w-plane, showing how the z-plane is transformed: horizontal lines become rays from the origin, and vertical lines become concentric circles. This visual is a classic example in complex analysis.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "洛朗级数的奇点分类图示：可去奇点、极点、本性奇点",
+    "image_info": {
+      "url": "http://d2vlcm61l7u1fs.cloudfront.net/media%2F907%2F90786f57-bda9-4842-8de1-d4b68c1d78e1%2FphpO27DFy.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 239035,
+      "width": 1024,
+      "height": 483,
+      "total_pixels": 494592,
+      "basic_score": 0.834469525836769,
+      "file_name": "laurent-series-singularity-classification-problems.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is perfectly relevant to the search query and prompt, as it presents a clear problem set on identifying and classifying singularities from Laurent series. The text is crisp and fully legible, though it shows some slight signs of digital compression. There are no watermarks. Overall, it's an excellent, high-quality image for its intended educational purpose.",
+      "file_name": "laurent-series-singularity-classification-problems.jpg",
+      "caption": "A mathematics problem set from a textbook or exam on complex analysis. The question asks to analyze three functions (f(z), g(z), h(z)) given by their Laurent series, and for each, to identify the principal part, the isolated singularity, its classification (removable, pole, or essential), and the residue.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "洛朗级数的奇点分类图示：可去奇点、极点、本性奇点",
+    "image_info": {
+      "url": "https://media.cheggcdn.com/media/e48/e48a346d-4487-44bf-88bc-2f2c7c9fec58/phptCLc2Z",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 234720,
+      "width": 1363,
+      "height": 566,
+      "total_pixels": 771458,
+      "basic_score": 0.8666784117538666,
+      "file_name": "laurent-series-singularity-classification-chart.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect match for the search query and prompt, providing a clear and concise table that classifies singularities (removable, pole, essential) based on their Laurent series expansion. The text is sharp and legible, and there are no watermarks. The overall quality is excellent for an educational diagram.",
+      "file_name": "laurent-series-singularity-classification-chart.jpg",
+      "caption": "An educational diagram from a textbook or presentation on complex analysis, titled 'Poles and Essential Singularity'. The image features a table classifying isolated singularities (Removable singularity, Pole of order n, Simple pole, Essential singularity) by the form of their corresponding Laurent series expansion around a point z=z₀.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "分式线性映射的保角映射示意图",
+    "image_info": {
+      "url": "https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/formula-for-linear-fractional-transformation-1636632808.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 13891,
+      "width": 721,
+      "height": 320,
+      "total_pixels": 230720,
+      "basic_score": 0.7105921467818432,
+      "file_name": "lft-cross-ratio-formula-graphic.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 85.0,
+      "clarity_score": 95.0,
+      "watermark_score": 60.0,
+      "overall_score": 80.0,
+      "explanation": "The image is highly relevant to the search query as it shows the cross-ratio formula, which is a fundamental property of Linear Fractional Transformations (LFTs). However, it is a formula and not a schematic diagram illustrating the conformal mapping aspect visually. The image quality is excellent, with very clear text and high contrast. A noticeable brand logo ('cuemath') is present in the top-right corner, which lowers the watermark score. Overall, it's a professional and clean educational graphic.",
+      "file_name": "lft-cross-ratio-formula-graphic.jpg",
+      "caption": "A clear graphic illustrating the LFT (Linear Fractional Transformation) Cross-Ratio Formula. Set against a black background, the image displays the equation that defines the unique LFT mapping three distinct points (z1, z2, z3) to three other distinct points (w1, w2, w3). This formula is key to understanding the properties of LFTs, also known as Möbius transformations, which are a fundamental example of conformal maps in complex analysis.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Z变换的收敛域和零极点图示",
+    "image_info": {
+      "url": "https://d23s79tivgl8me.cloudfront.net/user/14446/fig.%20a1_18190.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 87083,
+      "width": 700,
+      "height": 733,
+      "total_pixels": 513100,
+      "basic_score": 0.8576115897149394,
+      "file_name": "z-transform-sequences-poles-region-of-convergence-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is perfectly relevant to the search query and prompt, providing a comprehensive and well-structured diagram of Z-transform properties. It clearly illustrates the relationship between time-domain sequences, their Z-transforms, pole locations, and the Region of Convergence (ROC). The graphic is clean, legible, and free of any watermarks, making it an excellent educational tool. The clarity is very good, with only minor compression artifacts visible upon close inspection.",
+      "file_name": "z-transform-sequences-poles-region-of-convergence-diagram.jpg",
+      "caption": "An educational diagram illustrating properties of the Z-transform. It displays three common cases, showing the mathematical form of the sequence x(n) and its transform X(z), a plot of the sequence, and the pole-zero diagram with the shaded Region of Convergence (ROC) in the complex z-plane. The examples cover right-sided, left-sided, and two-sided sequences.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Z变换的收敛域和零极点图示",
+    "image_info": {
+      "url": "https://d23s79tivgl8me.cloudfront.net/user/14446/fig.%20b1_95407.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 39128,
+      "width": 700,
+      "height": 231,
+      "total_pixels": 161700,
+      "basic_score": 0.684376155920447,
+      "file_name": "z-transform-cosine-sequence-pole-roc-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 70.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is perfectly relevant to the query, providing a clear textbook-style illustration of a Z-transform, its poles, and the Region of Convergence (ROC) on the z-plane. While the image is highly educational and well-structured, its clarity is somewhat reduced by low resolution and visible pixelation. There are no watermarks.",
+      "file_name": "z-transform-cosine-sequence-pole-roc-diagram.jpg",
+      "caption": "A diagram illustrating the Z-transform of a causal discrete-time cosine sequence. The image is divided into three sections: the mathematical formulas for the signal x_cos(n) and its Z-transform X_cos(z); a plot of the discrete x_cos(n) sequence over time 'n'; and a pole-zero plot on the complex z-plane showing the poles, the unit circle, and the shaded Region of Convergence (ROC) where |z| > 1.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Z变换的收敛域和零极点图示",
+    "image_info": {
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20240328221303/gfg17.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 60233,
+      "width": 766,
+      "height": 387,
+      "total_pixels": 296442,
+      "basic_score": 0.767330456423985,
+      "file_name": "z-transform-roc-causal-signal-z-plane-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 85.0,
+      "clarity_score": 80.0,
+      "watermark_score": 50.0,
+      "overall_score": 70.0,
+      "explanation": "The image is highly relevant, clearly illustrating the Region of Convergence (ROC) for a causal signal's Z-transform, which is a core concept in the query. However, it does not explicitly show poles or zeros as requested by the prompt. The diagram is clear, but the resolution is average, and it contains noticeable watermarks in the center and at the bottom, which reduce its overall professional quality.",
+      "file_name": "z-transform-roc-causal-signal-z-plane-diagram.jpg",
+      "caption": "An educational diagram illustrating the Z-transform's Region of Convergence (ROC). On the left, it shows a plot of a right-handed or causal discrete-time signal, x(n). On the right, it displays the corresponding ROC in the Z-plane, which is the shaded region outside a circle of radius r1, representing where the transform converges (z > r1).",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "傅里叶变换的频谱分析图示",
+    "image_info": {
+      "url": "https://mriquestions.com/uploads/3/4/5/7/34572113/9600204_orig.gif",
+      "img_format": "GIF",
+      "mode": "P",
+      "file_size": 97953,
+      "width": 708,
+      "height": 570,
+      "total_pixels": 403560,
+      "basic_score": 0.7868302065879842,
+      "file_name": "fourier_transform_signal_frequency_spectrum_examples.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 98.0,
+      "clarity_score": 80.0,
+      "watermark_score": 100.0,
+      "overall_score": 88.0,
+      "explanation": "This image is highly relevant as it directly illustrates the relationship between common signals in the time domain and their corresponding frequency spectrums after a Fourier Transform. The clarity is good for a diagram, with clear text and graphs, though some minor pixelation is visible upon close inspection. There are no watermarks. The overall quality is excellent for educational or explanatory purposes.",
+      "file_name": "fourier_transform_signal_frequency_spectrum_examples.jpg",
+      "caption": "An educational diagram illustrating the concept of the Fourier Transform. It is divided into two columns: 'Signal s(t)' in the time domain on the left, and 'Fourier Transform S(ω)' in the frequency domain on the right. The diagram shows four common signal pairs: a cosine wave transforming into a single frequency spike, a sinc function into a uniform band of frequencies (a rectangular pulse), a Gaussian function into another Gaussian function, and a double exponential function into a Lorentzian function.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "傅里叶变换的频谱分析图示",
+    "image_info": {
+      "url": "https://www.nti-audio.com/portals/0/pic/news/FFT-Time-Frequency-View-540.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 99850,
+      "width": 540,
+      "height": 378,
+      "total_pixels": 204120,
+      "basic_score": 0.7492091624118511,
+      "file_name": "fourier-transform-frequency-spectrum-analysis-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is a perfect and clear visual representation of Fourier transform and frequency spectrum analysis, showing the decomposition of a time-domain signal into its frequency components. The graphic is clean, high-resolution, free of watermarks, and professionally composed for educational purposes.",
+      "file_name": "fourier-transform-frequency-spectrum-analysis-diagram.jpg",
+      "caption": "An educational diagram illustrating the concept of the Fourier transform. On the left, a complex signal (red) is shown in the time domain. This signal is then shown to be composed of several simpler sinusoidal waves (purple/blue). On the right, the frequency spectrum (blue) is displayed, with distinct peaks corresponding to the frequencies and amplitudes of the component waves.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "傅里叶变换的频谱分析图示",
+    "image_info": {
+      "url": "https://dibsmethodsmeetings.github.io/assets/images/2023-03-03-fourier-transforms/2023-03-03-fourier-transforms_15_0.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 66917,
+      "width": 977,
+      "height": 737,
+      "total_pixels": 720049,
+      "basic_score": 0.8932365173171811,
+      "file_name": "fourier-transform-time-frequency-domain-analysis.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "This image is a perfect illustration for the query. It clearly and accurately depicts the concept of Fourier transform by showing how different signals in the time domain correspond to their respective frequency spectra. The image is of excellent clarity, with sharp lines and legible text, and contains no watermarks. Its educational value and professional presentation are outstanding.",
+      "file_name": "fourier-transform-time-frequency-domain-analysis.jpg",
+      "caption": "A scientific diagram illustrating the concept of Fourier transform by comparing signals in the Time Domain (top row) with their representation in the Frequency Domain (bottom row). The first column shows a low-frequency sine wave and its corresponding single peak in the frequency spectrum. The second column shows a high-frequency sine wave and its single peak. The third column demonstrates the principle of superposition, showing a complex wave (the sum of the first two) and its frequency spectrum, which correctly displays two peaks corresponding to the constituent frequencies.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "傅里叶变换的频谱分析图示",
+    "image_info": {
+      "url": "https://ars.els-cdn.com/content/image/3-s2.0-B9780128149768000026-f02-06-9780128149768.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 63734,
+      "width": 489,
+      "height": 679,
+      "total_pixels": 332031,
+      "basic_score": 0.8013477672976472,
+      "file_name": "fourier-transform-signal-spectrum-examples.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect match for the query, providing a classic educational chart that illustrates the Fourier transform of several common signals. It clearly shows the relationship between time-domain signals and their frequency-domain spectra. The image is clear and well-organized, with legible text and clean graphics, although the resolution could be higher. It contains no watermarks and has a professional, textbook-like quality.",
+      "file_name": "fourier-transform-signal-spectrum-examples.jpg",
+      "caption": "An educational chart illustrating the relationship between time-domain signals and their frequency-domain spectra via the Fourier transform. The chart is divided into two columns, showing four examples: (A) a cosine wave and its transform (B), (C) a Gaussian function and its spectrum (D), (E) a delta function and its frequency content (F), and (G) a sampling function and its transform (H).",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "傅里叶变换的频谱分析图示",
+    "image_info": {
+      "url": "https://www.dataq.com/resources/images/article_images/fourier-transform/an11fig1.gif",
+      "img_format": "GIF",
+      "mode": "P",
+      "file_size": 15103,
+      "width": 543,
+      "height": 615,
+      "total_pixels": 333945,
+      "basic_score": 0.7525865550455207,
+      "file_name": "fourier_analysis_time_frequency_domain_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 40.0,
+      "watermark_score": 100.0,
+      "overall_score": 60.0,
+      "explanation": "The image is exceptionally relevant to the query, providing a textbook-style illustration of Fourier analysis and frequency spectrums. Its educational value is high due to the clear, comparative layout. However, the technical quality is very poor, suffering from low resolution, significant pixelation, and compression artifacts. Despite its low clarity, its conceptual value is high, making it useful for understanding the topic.",
+      "file_name": "fourier_analysis_time_frequency_domain_diagram.jpg",
+      "caption": "An educational diagram illustrating the concept of Fourier analysis. It compares four different signals: a single sine wave, the sum of two sine waves, the sum of three sine waves, and a square wave. For each signal, it displays the time series waveform, the mathematical Fourier expansion, and the resulting power spectrum in the frequency domain.",
+      "recommend": true,
+      "error": ""
+    }
+  }
+]

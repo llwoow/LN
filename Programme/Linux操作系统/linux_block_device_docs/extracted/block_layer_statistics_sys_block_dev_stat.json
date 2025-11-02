@@ -1,0 +1,39 @@
+📄 Extracted from page: Block layer statistics in /sys/block/<dev>/stat — The Linux Kernel documentation
+URL: https://www.kernel.org/doc/html/latest/block/stat.html
+
+Extracted content:
+```json
+{
+  "title": "Block layer statistics in /sys/block/<dev>/stat — The Linux Kernel documentation",
+  "url": "https://www.kernel.org/doc/html/latest/block/stat.html",
+  "summary": "The document provides a comprehensive description of the `/sys/block/<dev>/stat` file in the Linux kernel, which exposes detailed statistics for a specific block device. It explains the design choice of presenting all statistics in a single file to guarantee a consistent snapshot of the device's state at a given moment. The file output is a single line containing 17 whitespace-separated decimal values, each representing a specific performance metric or counter for the block device.",
+  "key_points": [
+    "The `/sys/block/<dev>/stat` file provides various statistics about the state of a block device `<dev>`.",
+    "Statistics are presented in a single file to ensure a consistent snapshot, as reading multiple individual files would not guarantee point-in-time accuracy.",
+    "The file's content is a single line of text comprising 17 decimal values, separated by whitespace.",
+    "**Field 1: read I/Os (requests)** - Increments upon completion of a read I/O request.",
+    "**Field 2: read merges (requests)** - Increments when a read I/O request is merged with an already-queued I/O request.",
+    "**Field 3: read sectors (sectors)** - Counts the number of 512-byte sectors read from the device upon I/O completion.",
+    "**Field 4: read ticks (milliseconds)** - Accumulated total wait time for read requests. If multiple requests are waiting, it increases by `sum(request_count * wait_time_per_request)`.",
+    "**Field 5: write I/Os (requests)** - Increments upon completion of a write I/O request.",
+    "**Field 6: write merges (requests)** - Increments when a write I/O request is merged with an already-queued I/O request.",
+    "**Field 7: write sectors (sectors)** - Counts the number of 512-byte sectors written to the device upon I/O completion.",
+    "**Field 8: write ticks (milliseconds)** - Accumulated total wait time for write requests.",
+    "**Field 9: in_flight (requests)** - Counts the number of I/O requests that have been issued to the device driver but have not yet completed (excludes requests in queue but not yet issued).",
+    "**Field 10: io_ticks (milliseconds)** - Counts the total number of milliseconds during which the device has had I/O requests queued (indicating device activity).",
+    "**Field 11: time_in_queue (milliseconds)** - Accumulated total wait time for *all* I/O requests on the block device.",
+    "**Field 12: discard I/Os (requests)** - Increments upon completion of a discard I/O request.",
+    "**Field 13: discard merges (requests)** - Increments when a discard I/O request is merged with an already-queued I/O request.",
+    "**Field 14: discard sectors (sectors)** - Counts the number of 512-byte sectors discarded from the device upon I/O completion.",
+    "**Field 15: discard ticks (milliseconds)** - Accumulated total wait time for discard requests.",
+    "**Field 16: flush I/Os (requests)** - Increments upon completion of a flush I/O request executed by the disk (not tracked for partitions).",
+    "**Field 17: flush ticks (milliseconds)** - Accumulated total wait time for flush requests.",
+    "The 'sectors' mentioned in the statistics refer to standard UNIX 512-byte sectors, not device- or filesystem-specific block sizes."
+  ],
+  "relevant_links": [
+    "../index.html",
+    "index.html"
+  ],
+  "file_name": "block_layer_statistics_sys_block_dev_stat.json"
+}
+```

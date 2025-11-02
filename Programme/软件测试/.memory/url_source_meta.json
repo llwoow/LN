@@ -1,0 +1,198 @@
+{
+  "_source_id": 27,
+  "sources": {
+    "测试工具和自动化研究报告": {
+      "https://cloud.tencent.com/developer/article/2553822": {
+        "id": 1,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2553822",
+        "title": "自动化测试框架选型指南：5大主流工具实战对比",
+        "info": "提供了Selenium、Cypress、Playwright、Appium、Pytest等主流自动化测试框架的详细对比分析，包括选择标准、优劣势和实战场景"
+      },
+      "https://developer.aliyun.com/article/1524314": {
+        "id": 2,
+        "publisher": "阿里云开发者社区",
+        "url": "https://developer.aliyun.com/article/1524314",
+        "title": "探索自动化测试框架的选择标准与实践应用",
+        "info": "深入探讨了自动化测试框架选择的核心标准：性能、可靠性、易用性和可维护性，以及具体实施案例"
+      },
+      "https://cloud.tencent.com/developer/article/2505668": {
+        "id": 3,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2505668",
+        "title": "单元测试框架的选择与使用：从工具到实战",
+        "info": "详细介绍了JUnit、pytest、Mocha、Google Test等单元测试框架的特点、适用场景和选择原则"
+      },
+      "https://cloud.tencent.com/developer/article/2483069": {
+        "id": 4,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2483069",
+        "title": "自动化测试框架之战：Selenium、Cypress 与 Playwright",
+        "info": "深入对比了Selenium、Cypress和Playwright三个主流自动化测试框架的功能特性、优势不足和适用场景"
+      },
+      "https://ones.cn/blog/tools/xing-neng-ce-shi-gong-ju-dui-bi-2025nian-6da-re-men-gong-ju-shen-du-fen-xi": {
+        "id": 5,
+        "publisher": "ONES",
+        "url": "https://ones.cn/blog/tools/xing-neng-ce-shi-gong-ju-dui-bi-2025nian-6da-re-men-gong-ju-shen-du-fen-xi",
+        "title": "性能测试工具对比：2025年6大热门工具深度分析",
+        "info": "全面分析了Apache JMeter、LoadRunner、Gatling、K6、Locust和ONES测试管理等性能测试工具的特点和适用场景"
+      },
+      "https://www.zhihu.com/question/638316249": {
+        "id": 6,
+        "publisher": "知乎",
+        "url": "https://www.zhihu.com/question/638316249",
+        "title": "如何选择合适的自动化测试工具？",
+        "info": "提供了选择自动化测试工具的9个关键标准，包括项目需求分析、技术栈支持、集成能力等全面考虑因素"
+      },
+      "https://blog.csdn.net/m0_68405758/article/details/140587850": {
+        "id": 7,
+        "publisher": "CSDN",
+        "url": "https://blog.csdn.net/m0_68405758/article/details/140587850",
+        "title": "2024年全网最全最细最流行的自动化测试工具有哪些",
+        "info": "全面介绍了2024年流行的自动化测试工具，包括Selenium、Robot Framework、Appium、QTP/UFT等工具的特点和应用"
+      },
+      "https://zhuanlan.zhihu.com/p/692935927": {
+        "id": 8,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/692935927",
+        "title": "Jmeter 压测工具使用手册（完整版）",
+        "info": "详细介绍了JMeter的安装配置、基础使用、接口测试、压力测试等完整使用流程和最佳实践"
+      },
+      "https://www.oryoy.com/news/jie-mi-selenium-zi-dong-hua-ce-shi-shi-zhan-an-li-jie-xi-yu-jing-yan-fen-xiang.html": {
+        "id": 9,
+        "publisher": "云原生实践",
+        "url": "https://www.oryoy.com/news/jie-mi-selenium-zi-dong-hua-ce-shi-shi-zhan-an-li-jie-xi-yu-jing-yan-fen-xiang.html",
+        "title": "揭秘Selenium自动化测试：实战案例解析与经验分享",
+        "info": "提供了Selenium自动化测试的实际项目案例和经验分享，包括实战技巧和最佳实践"
+      },
+      "https://developer.aliyun.com/article/1429608": {
+        "id": 10,
+        "publisher": "阿里云开发者社区",
+        "url": "https://developer.aliyun.com/article/1429608",
+        "title": "自动化测试与持续集成/持续交付（CI/CD）的实践与应用",
+        "info": "介绍了自动化测试与CI/CD结合的实际应用案例和最佳实践"
+      }
+    },
+    "软件测试方法与技术研究": {
+      "https://cloud.tencent.com/developer/article/2095650": {
+        "id": 11,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2095650",
+        "title": "黑盒测试用例设计方法一（等价类划分、边界值分析）",
+        "info": "详细介绍了等价类划分法的原理、设计步骤和边界值分析法的选用原则，包含三角形判断程序实战案例"
+      },
+      "https://cloud.tencent.com/developer/article/2420581": {
+        "id": 12,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2420581",
+        "title": "软考高级：白盒测试用例（语句覆盖、判断覆盖、条件组合覆盖）",
+        "info": "详细解释了白盒测试的各种覆盖方法，包括语句覆盖、判断覆盖、条件组合覆盖等，并提供Java代码示例"
+      },
+      "https://developer.aliyun.com/article/1631009": {
+        "id": 13,
+        "publisher": "阿里云开发者社区",
+        "url": "https://developer.aliyun.com/article/1631009",
+        "title": "软件测试中的'灰盒'方法：一种平衡透明度与效率的策略",
+        "info": "介绍了灰盒测试的定义、特点、优势和应用场景，特别适用于大型复杂软件项目"
+      },
+      "https://cloud.tencent.com/developer/techpedia/1941": {
+        "id": 14,
+        "publisher": "腾讯云",
+        "url": "https://cloud.tencent.com/developer/techpedia/1941",
+        "title": "什么是静态测试_静态测试简介",
+        "info": "详细说明了静态测试的定义、优势、应用场景和主要技术，包括代码审查、静态分析、测试设计等"
+      },
+      "https://zhuanlan.zhihu.com/p/646281651": {
+        "id": 15,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/646281651",
+        "title": "5年经验之谈——功能测试、自动化测试、性能测试的区别",
+        "info": "深入分析了功能测试、自动化测试和性能测试三种测试类型的特点、优缺点和适用场景"
+      },
+      "https://cloud.tencent.com/developer/article/2581488": {
+        "id": 16,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2581488",
+        "title": "测试用例设计的艺术：等价类、边界值与判定表实战",
+        "info": "详细介绍了判定表测试的结构组成、实际应用特点和最佳实践，包含登录功能实战案例"
+      },
+      "https://baike.baidu.com/item/动态测试/1916633": {
+        "id": 17,
+        "publisher": "百度百科",
+        "url": "https://baike.baidu.com/item/动态测试/1916633",
+        "title": "动态测试",
+        "info": "全面介绍了动态测试的定义、核心组成、测试重点和主要类型，包括单元测试、集成测试、系统测试、验收测试和回归测试"
+      },
+      "https://www.istqb.org.cn/istqb/istqbshishenme/": {
+        "id": 18,
+        "publisher": "ISTQB中国官网",
+        "url": "https://www.istqb.org.cn/istqb/istqbshishenme/",
+        "title": "ISTQB国际软件测试资格认证体系",
+        "info": "详细介绍ISTQB认证体系的结构、三级认证体系、全球覆盖范围和权威性，包括CTFL基础级、CTAL高级、CTEL专家级认证"
+      },
+      "https://developer.aliyun.com/article/1313674": {
+        "id": 19,
+        "publisher": "阿里云开发者社区",
+        "url": "https://developer.aliyun.com/article/1313674",
+        "title": "软件测试用例经典方法｜因果图法及案例",
+        "info": "全面介绍因果图法的定义、因果关系类型（恒等、非、或、与）、约束关系类型（互斥、包含、唯一、要求、屏蔽），包含实际应用案例"
+      },
+      "https://zhuanlan.zhihu.com/p/129079070": {
+        "id": 20,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/129079070",
+        "title": "白盒测试之路径覆盖法和基本路径覆盖法",
+        "info": "详细解释路径覆盖法的定义、环路复杂性计算、独立路径定义、控制流图要素，提供了实际应用步骤和案例"
+      },
+      "https://blog.csdn.net/weixin_42885805/article/details/86560451": {
+        "id": 21,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/weixin_42885805/article/details/86560451",
+        "title": "测试方法——场景法",
+        "info": "详细介绍场景法的基本流和备选流概念、适用场景、应用步骤，提供了完整的购物网站测试用例设计案例"
+      },
+      "https://testerhome.com/topics/42028": {
+        "id": 22,
+        "publisher": "测试之家",
+        "url": "https://testerhome.com/topics/42028",
+        "title": "如何评估测试覆盖率？——走出数字迷思，回归质量本质",
+        "info": "深入探讨测试覆盖率的技术本质、科学评估方法、不同层级策略，包括语句覆盖、分支覆盖、条件覆盖、路径覆盖、需求覆盖等维度"
+      },
+      "https://cloud.tencent.com/developer/article/1700229": {
+        "id": 23,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/1700229",
+        "title": "pytest文档57-单元测试代码覆盖率(pytest-cov)",
+        "info": "提供Python pytest-cov插件的完整使用指南，包含安装配置、实际代码示例、测试用例设计和覆盖率报告生成"
+      },
+      "https://blog.csdn.net/haobabiu/article/details/137777823": {
+        "id": 24,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/haobabiu/article/details/137777823",
+        "title": "白盒测试之语句覆盖与分支（判定）覆盖",
+        "info": "详细解释Java白盒测试中的语句覆盖和分支覆盖方法，包含完整的代码示例、测试用例设计和优缺点对比"
+      },
+      "https://blog.csdn.net/2502_91534922/article/details/149536877": {
+        "id": 25,
+        "publisher": "CSDN博客",
+        "url": "https://blog.csdn.net/2502_91534922/article/details/149536877",
+        "title": "分析软件工程领域测试覆盖率的行业标准与规范",
+        "info": "系统分析测试覆盖率的行业标准，包括通用行业标准、航空航天DO-178C、医疗设备IEC 62304、汽车ISO 26262、金融行业等强制要求"
+      },
+      "https://juejin.cn/post/7496346291354828819": {
+        "id": 26,
+        "publisher": "稀土掘金",
+        "url": "https://juejin.cn/post/7496346291354828819",
+        "title": "测试覆盖率及其考核指标分析",
+        "info": "分析测试覆盖率作为考核指标的可行性与局限性，提出改进型评估体系建议，包括多维度指标组合和过程质量评估"
+      },
+      "https://developer.baidu.com/article/details/2771108": {
+        "id": 27,
+        "publisher": "百度开发者中心",
+        "url": "https://developer.baidu.com/article/details/2771108",
+        "title": "软件测试：路径覆盖的探索与实践",
+        "info": "详细解释路径覆盖的实践应用，包括确定测试目标、创建控制流图、确定独立路径基本集、设计测试用例、执行测试等步骤"
+      }
+    }
+  }
+}

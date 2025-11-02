@@ -1,0 +1,91 @@
+{
+  "_source_id": 12,
+  "sources": {
+    "深度学习基础概念和核心算法研究": {
+      "https://cloud.tencent.com/developer/article/2560450": {
+        "id": 1,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2560450",
+        "title": "深度学习优化算法对比：从SGD到Adam再到Lion的演进",
+        "info": "详细介绍了SGD、Adam、Lion三种优化算法的原理、特点、性能对比和应用选择策略，包括数学表达、默认参数、内存效率、计算复杂度等核心信息"
+      },
+      "https://cloud.tencent.com/developer/article/2550029": {
+        "id": 2,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2550029",
+        "title": "一文搞懂卷积神经网络（CNN）的原理",
+        "info": "深入解析CNN的核心组件：卷积层、池化层、激活函数、全连接层，以及CNN的层次化特征学习原理和典型架构发展历程"
+      },
+      "https://zhuanlan.zhihu.com/p/1903398877375210503": {
+        "id": 3,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/1903398877375210503",
+        "title": "循环神经网络---GRU与LSTM",
+        "info": "详细对比了GRU和LSTM的门控机制、参数复杂度、计算效率，以及它们如何解决传统RNN的梯度消失问题"
+      },
+      "https://cloud.tencent.com/developer/article/2400366": {
+        "id": 4,
+        "publisher": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2400366",
+        "title": "一文搞懂Transformer架构的三种注意力机制",
+        "info": "深入分析了Transformer的三种注意力机制：交叉注意力、全局自注意力、因果注意力，以及多头注意力机制和位置编码的实现"
+      },
+      "https://zhuanlan.zhihu.com/p/147029320": {
+        "id": 5,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/147029320",
+        "title": "一文搞透Dropout、L1L2正则化/权重衰减",
+        "info": "详细阐述了深度学习中的正则化概念，包括Dropout的两种实现方式、L1/L2范数的数学定义和几何意义，以及权重衰减的原理"
+      },
+      "https://www.nature.com/articles/323533a0": {
+        "id": 6,
+        "publisher": "Nature",
+        "url": "https://www.nature.com/articles/323533a0",
+        "title": "Learning representations by back-propagating errors",
+        "info": "反向传播算法的经典论文，由Rumelhart、Hinton和Williams于1986年发表，提出了多层神经网络的学习算法，奠定了现代深度学习的基础"
+      },
+      "https://blog.csdn.net/weixin_70325224/article/details/147323665": {
+        "id": 7,
+        "publisher": "CSDN",
+        "url": "https://blog.csdn.net/weixin_70325224/article/details/147323665",
+        "title": "LSTM论文（Hochreiter & Schmidhuber, 1997）精读",
+        "info": "详细解读了LSTM论文的核心概念、门控机制、数学公式和网络结构，介绍了恒定误差流和门控智能的核心原理"
+      },
+      "https://zhuanlan.zhihu.com/p/32698042": {
+        "id": 8,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/32698042",
+        "title": "简单认识Adam优化器",
+        "info": "深入分析了Adam优化算法的数学原理、核心公式、优缺点和实际应用，包括动量机制和自适应学习率"
+      },
+      "https://zhuanlan.zhihu.com/p/565590313": {
+        "id": 9,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/565590313",
+        "title": "Relu激活函数和Sigmoid、Tanh函数对比分析",
+        "info": "详细对比了ReLU、Sigmoid和Tanh激活函数的特性，包括数学定义、优缺点和实际应用效果"
+      },
+      "https://zhuanlan.zhihu.com/p/687832172": {
+        "id": 10,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/687832172",
+        "title": "一文搞懂Transformer架构的三种注意力机制",
+        "info": "深入解析了Transformer的三种注意力机制，包括自注意力、交叉注意力和因果注意力，以及多头注意力机制"
+      },
+      "https://arxiv.org/abs/1412.6980": {
+        "id": 11,
+        "publisher": "arXiv",
+        "url": "https://arxiv.org/abs/1412.6980",
+        "title": "Adam: A Method for Stochastic Optimization",
+        "info": "成功提取了Adam优化算法的原文内容，包括核心贡献、数学原理、实验结果和理论分析"
+      },
+      "https://arxiv.org/abs/1904.13310": {
+        "id": 12,
+        "publisher": "arXiv",
+        "url": "https://arxiv.org/abs/1904.13310",
+        "title": "Survey of Dropout Methods for Deep Neural Networks",
+        "info": "成功提取了Dropout方法综述的原文内容，包括核心概念、变体方法、应用场景和研究进展"
+      }
+    }
+  }
+}

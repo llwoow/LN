@@ -1,0 +1,27 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "研究网络安全课程核心知识点和考试重点",
+        "details": "调研网络安全课程的标准章节体系、核心概念、重要定理和常见考点，确保内容覆盖全面且符合教学要求",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "整理网络安全笔记内容",
+        "details": "按照章节组织知识点，包括：1.网络安全基础概念 2.密码学基础 3.网络攻击与防护 4.系统安全 5.应用安全 6.安全管理等。使用表格整理要点，用HTML details标签包装定理推导，公式使用markdown最新的latex语法格式，必要时配图说明",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "优化笔记格式和可读性",
+        "details": "确保章节分明、条理清晰，重点内容详细说明，符合用户要求的markdown格式",
+        "status": "completed",
+        "priority": "medium"
+      }
+    }
+  }
+}
