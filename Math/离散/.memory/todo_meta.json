@@ -1,0 +1,104 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "创建离散数学笔记的完整章节结构",
+        "details": "包含以下完整章节：\n1.数理逻辑 2.集合论 3.关系与函数 4.图论 5.树 6.组合数学 7.代数结构 8.布尔代数 9.自动机理论 10.算法分析 11.数论基础 12.概率论基础",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "编写数理逻辑章节",
+        "details": "包含命题逻辑、谓词逻辑、推理规则、范式、逻辑电路等知识点，定理推导用details包裹",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "编写集合论章节",
+        "details": "包含集合运算、集合律、幂集、笛卡尔积、集合的基数等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "4": {
+        "id": "4",
+        "content": "编写关系与函数章节",
+        "details": "包含关系的性质、关系的运算、闭包、等价关系、偏序关系、函数类型等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "5": {
+        "id": "5",
+        "content": "编写图论章节",
+        "details": "包含图的定义、图的表示、路径、连通性、欧拉图、哈密顿图、图的着色等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "6": {
+        "id": "6",
+        "content": "编写树章节",
+        "details": "包含树的定义、树的性质、二叉树、遍历算法、最短路径、生成树等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "7": {
+        "id": "7",
+        "content": "编写组合数学章节",
+        "details": "包含排列组合、鸽巢原理、容斥原理、生成函数、递推关系等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "8": {
+        "id": "8",
+        "content": "编写代数结构章节",
+        "details": "包含群、环、域的定义和性质、群的同态、循环群等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "9": {
+        "id": "9",
+        "content": "编写布尔代数章节",
+        "details": "包含布尔运算、布尔函数、卡诺图、逻辑门电路等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "10": {
+        "id": "10",
+        "content": "编写自动机理论章节",
+        "details": "包含有限状态自动机、上下文无关文法、正则表达式、NFA、DFA、下推自动机、图灵机等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "11": {
+        "id": "11",
+        "content": "编写算法分析章节",
+        "details": "包含时间复杂度、空间复杂度、大O表示法、递归算法、分治算法、动态规划等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "12": {
+        "id": "12",
+        "content": "编写数论基础章节",
+        "details": "包含整除性、质数、同余、欧拉定理、费马小定理、最大公约数、最小公倍数等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "13": {
+        "id": "13",
+        "content": "编写概率论基础章节",
+        "details": "包含概率空间、条件概率、贝叶斯定理、随机变量、期望、方差、概率分布等知识点",
+        "status": "completed",
+        "priority": "high"
+      },
+      "14": {
+        "id": "14",
+        "content": "完善格式和公式",
+        "details": "检查所有公式使用LaTeX语法，确保定理推导的details标签正确设置，表格格式规范",
+        "status": "completed",
+        "priority": "medium"
+      }
+    }
+  }
+}

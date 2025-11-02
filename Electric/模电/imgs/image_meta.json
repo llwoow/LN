@@ -1,0 +1,1068 @@
+[
+  {
+    "query": "二极管伏安特性曲线图，显示正向偏置和反向偏置特性",
+    "image_info": {
+      "url": "https://images.wevolver.com/eyJidWNrZXQiOiJ3ZXZvbHZlci1wcm9qZWN0LWltYWdlcyIsImtleSI6ImZyb2FsYS8xNzExMzY2OTc2NDQ1LTE3MTEzNjY5NzY0NDUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo5NTAsImZpdCI6ImNvdmVyIn19fQ==",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 87693,
+      "width": 950,
+      "height": 440,
+      "total_pixels": 418000,
+      "basic_score": 0.7923652624951953,
+      "file_name": "diode_iv_characteristic_curve_graph.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 80.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a perfect match for the search query and prompt, clearly illustrating the I-V characteristic curve of a diode with all relevant regions labeled (Forward Bias, Reverse Bias, Breakdown). The diagram is clean, well-organized, and includes a helpful legend. The clarity is good, but the resolution is not perfect, showing some minor pixelation. There are no watermarks.",
+      "file_name": "diode_iv_characteristic_curve_graph.jpg",
+      "caption": "A diagram of a diode's current-voltage (I-V) characteristic curve. The horizontal x-axis represents the voltage across the diode (VD), and the vertical y-axis represents the current through the diode (ID). The graph clearly labels the Forward Bias Region, Reverse Bias Region, and Breakdown Region, along with key points like the cut-in voltage (Vc) and the reverse breakdown voltage (Vz).",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "二极管伏安特性曲线图，显示正向偏置和反向偏置特性",
+    "image_info": {
+      "url": "https://cdn.sparkfun.com/assets/4/4/a/5/b/5175b518ce395f2d49000000.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 40549,
+      "width": 1000,
+      "height": 1000,
+      "total_pixels": 1000000,
+      "basic_score": 0.9109942420088892,
+      "file_name": "diode_iv_characteristic_curve_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "This image is a perfect, high-quality diagram that accurately and clearly illustrates the I-V characteristic curve of a diode. It perfectly matches the search query by showing the forward bias, reverse bias, and breakdown regions. The image is exceptionally clear, free of watermarks, and well-composed for educational purposes.",
+      "file_name": "diode_iv_characteristic_curve_diagram.jpg",
+      "caption": "A clear, color-coded diagram of a diode's current-voltage (I-V) characteristic curve. The graph plots current (i) on the y-axis against voltage (V) on the x-axis, showing three distinct regions of operation: Forward bias (green), Reverse bias (red), and Breakdown (yellow). Key points like the forward voltage (V_F) for Silicon (0.7V) and Germanium (0.3V) and the breakdown voltage (V_BR) are labeled. A circuit symbol for a diode is also included in the bottom right corner.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "二极管伏安特性曲线图，显示正向偏置和反向偏置特性",
+    "image_info": {
+      "url": "https://cdn1.byjus.com/wp-content/uploads/2022/05/V-I-Characteristics-of-P-N-junction-Diode.png",
+      "img_format": "PNG",
+      "mode": "P",
+      "file_size": 11125,
+      "width": 750,
+      "height": 403,
+      "total_pixels": 302250,
+      "basic_score": 0.7707539650618414,
+      "file_name": "diode_iv_characteristic_curve_graph.jpg_6b"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 20.0,
+      "overall_score": 70.0,
+      "explanation": "The image is a perfect educational diagram for the search query, accurately depicting the I-V characteristic curve for a diode with clear labels for forward and reverse bias regions. The clarity is excellent as it is a clean vector graphic. However, there is a prominent brand logo in the top right corner, which significantly lowers its professional usability score.",
+      "file_name": "diode_iv_characteristic_curve_graph.jpg",
+      "caption": "A graph showing the current-voltage (I-V) characteristic curve of a semiconductor diode. The vertical axis represents current, and the horizontal axis represents voltage. The curve illustrates the diode's behavior under forward bias (Forward region) where current increases exponentially, and reverse bias (Reverse region) where a small reverse leakage current flows until the breakdown voltage is reached.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "二极管伏安特性曲线图，显示正向偏置和反向偏置特性",
+    "image_info": {
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20240119114612/Graph-of-p-n-junction.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 73546,
+      "width": 1000,
+      "height": 906,
+      "total_pixels": 906000,
+      "basic_score": 0.9110059957251326,
+      "file_name": "diode_iv_characteristic_curve_diagram.jpg_66"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image is a perfect match for the search query, providing a clear and detailed diagram of a diode's I-V characteristic curve. It labels all relevant regions like forward bias, reverse bias, and breakdown regions. The image quality is excellent, with sharp text and lines, no watermarks, and a clean, professional design ideal for educational use.",
+      "file_name": "diode_iv_characteristic_curve_diagram.jpg",
+      "caption": "A detailed diagram illustrating the I-V (current-voltage) characteristic curve of a semiconductor diode. The graph plots current (I) in milliamperes (mA) on the y-axis against voltage (V) on the x-axis. It clearly shows the 'Forward Bias' region, where current increases exponentially after the 'knee' voltage, and the 'Reverse Bias' region, with minimal leakage current until the 'Reverse Breakdown Voltage' is reached. Key points like the Zener/Avalanche breakdown region and typical forward voltages for Germanium (0.3V) and Silicon (0.7V) diodes are also labeled. The illustration is presented on a grid background, styled as a piece of paper taped to a surface.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "BJT共射放大电路原理图",
+    "image_info": {
+      "url": "https://www.circuitlab.com/circuit/veqsxr/screenshot/1024x768/",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 79129,
+      "width": 1024,
+      "height": 768,
+      "total_pixels": 786432,
+      "basic_score": 0.904889633002538,
+      "file_name": "bjt-common-emitter-amplifier-circuit-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 40.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a perfectly relevant and high-clarity schematic of a BJT common emitter amplifier, directly matching the search query. The diagram is clean, well-labeled, and professionally drawn. The overall score is reduced due to a prominent watermark/logo bar at the bottom from 'CIRCUIT LAB'.",
+      "file_name": "bjt-common-emitter-amplifier-circuit-diagram.jpg",
+      "caption": "A detailed circuit diagram of a BJT common emitter amplifier. The circuit uses an NPN transistor (Q1 2N3904) and is configured with a 1 kHz sine wave input source, biasing resistors (R6, R4), a collector resistor (R7), an emitter resistor (R5), and coupling/bypass capacitors (C4, C5, C6). The output is taken from the collector across a load resistor (R8).",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "BJT共射放大电路原理图",
+    "image_info": {
+      "url": "https://blog.mbedded.ninja/_astro/common-emitter-amplifier-schematic.CU7QYcts.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 50260,
+      "width": 1063,
+      "height": 945,
+      "total_pixels": 1004535,
+      "basic_score": 0.9115172587810983,
+      "file_name": "common-emitter-bjt-amplifier-circuit-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 70.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a perfect and highly clear schematic of a common-emitter BJT amplifier, directly matching the search query. The diagram is professionally drawn and easy to understand. The only minor drawback is a small, semi-transparent watermark in the bottom-right corner.",
+      "file_name": "common-emitter-bjt-amplifier-circuit-diagram.jpg",
+      "caption": "A clear circuit diagram of a BJT common-emitter amplifier with voltage divider biasing. The schematic shows an NPN transistor (Q1), biasing resistors (R1, R2), a collector resistor (Rc), an emitter resistor (Re) with a bypass capacitor (Ce), input and output coupling capacitors (Cin, Cout), and a load resistor (RL). The input voltage (Vin) is applied to the base and the output voltage (Vout) is taken from the collector.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "BJT共射放大电路原理图",
+    "image_info": {
+      "url": "https://www.electronics-tutorials.ws/wp-content/uploads/2013/07/amp5.gif?fit=377%2C296",
+      "img_format": "WEBP",
+      "mode": "RGBA",
+      "file_size": 4848,
+      "width": 377,
+      "height": 296,
+      "total_pixels": 111592,
+      "basic_score": 0.7140095039042728,
+      "file_name": "common-emitter-bjt-amplifier-circuit-diagram.jpg_f2"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 60.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a perfect match for the search query, showing a standard common-emitter BJT amplifier circuit. While its relevance is excellent, the image clarity is subpar due to low resolution and pixelation, which is common for GIF files of this type. It is free of any watermarks. Overall, it's a highly functional and useful diagram for educational purposes, though a higher resolution version would be preferable for professional use.",
+      "file_name": "common-emitter-bjt-amplifier-circuit-diagram.jpg",
+      "caption": "A schematic circuit diagram of a BJT (Bipolar Junction Transistor) common-emitter amplifier. The circuit features a voltage divider biasing network (resistors R1 and R2), a collector resistor (Rc), an emitter resistor (RE), an input coupling capacitor (C1), and an emitter bypass capacitor (C2). An AC signal source (Vin) is connected to the input, and the amplified output (Vout) is taken from the collector. Key currents (IB, IC, IE) and voltages (VCE) are also labeled.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "PN结结构图，显示P型和N型半导体的结合以及内建电场",
+    "image_info": {
+      "url": "https://www.mks.com/mam/celum/celum_assets/Figure_8-Semiconductor_Handbook_800w.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 86414,
+      "width": 720,
+      "height": 600,
+      "total_pixels": 432000,
+      "basic_score": 0.8316629058925523,
+      "file_name": "pn-junction-semiconductor-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 92.0,
+      "explanation": "The image is a highly relevant and clear diagram of a PN junction, perfectly matching the search query and the concept described in the prompt. While the labels are in English and the prompt is in Chinese, the visual information is an exact match. The diagram is well-structured, easy to understand, has no watermarks, and is of high professional quality for educational purposes.",
+      "file_name": "pn-junction-semiconductor-diagram.jpg",
+      "caption": "A schematic diagram illustrating the structure of a PN junction in a semiconductor. It shows the p-type region (blue) with mobile holes (positive charges) and the n-type region (red) with mobile electrons (negative charges). At the junction, a depletion layer forms, containing fixed ionized acceptors and donors, which creates a built-in electric field. Arrows indicate the direction of electron diffusion, hole diffusion, and the resulting electric field, as well as the electric potential across the junction.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "PN结结构图，显示P型和N型半导体的结合以及内建电场",
+    "image_info": {
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230502123919/Pn-Junction-Diode-2.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 26697,
+      "width": 1000,
+      "height": 500,
+      "total_pixels": 500000,
+      "basic_score": 0.8248708408784415,
+      "file_name": "forward-biased-pn-junction-semiconductor-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 85.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a high-quality, clear diagram that is highly relevant to the search query. It accurately depicts a PN junction, though specifically in a forward-biased state, which slightly narrows its relevance from a general structure diagram which would show the initial built-in field. The illustration is crisp, easy to understand, and free of any watermarks, making it excellent for educational purposes.",
+      "file_name": "forward-biased-pn-junction-semiconductor-diagram.jpg",
+      "caption": "A clear, educational diagram illustrating a forward-biased PN junction in semiconductor physics. The illustration, presented on a projector screen, shows the P-region (positive-type) and N-region (negative-type) of a semiconductor. An external forward biasing voltage is applied, causing the depletion layer to become very small and allowing charge carriers (electrons and holes) to flow across the junction, creating a current.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "差分放大电路原理图，显示基本的差分结构",
+    "image_info": {
+      "url": "https://electricalworkbook.com/wp-content/uploads/2022/11/Differential-Amplifier.png",
+      "img_format": "PNG",
+      "mode": "P",
+      "file_size": 9063,
+      "width": 842,
+      "height": 636,
+      "total_pixels": 535512,
+      "basic_score": 0.8462029309175303,
+      "file_name": "differential_amplifier_op-amp_circuit_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 65.0,
+      "watermark_score": 100.0,
+      "overall_score": 75.0,
+      "explanation": "The image is a perfect match for the search query and prompt, clearly illustrating a standard differential amplifier circuit using an op-amp. However, the image quality is only average, suffering from low resolution and noticeable compression artifacts which make the lines and text slightly blurry. The image is completely free of watermarks.",
+      "file_name": "differential_amplifier_op-amp_circuit_diagram.jpg",
+      "caption": "A schematic diagram of a basic op-amp differential amplifier circuit. The circuit takes two inputs, V1 and V2, connected to the non-inverting (+) and inverting (-) terminals respectively, each through a resistor R1. A feedback loop with resistor R2 connects the output Vo to the inverting input, and another resistor R2 connects the non-inverting input to ground.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "差分放大电路原理图，显示基本的差分结构",
+    "image_info": {
+      "url": "https://electronicscoach.com/wp-content/uploads/2018/05/differential-amplifier-using-op-amp.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 23856,
+      "width": 550,
+      "height": 423,
+      "total_pixels": 232650,
+      "basic_score": 0.7593815112439631,
+      "file_name": "differential-amplifier-op-amp-circuit-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 85.0,
+      "watermark_score": 70.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a perfect match for the query, providing a clear and well-labeled circuit diagram of a differential amplifier using an op-amp. The clarity is good for understanding, though not of the highest resolution. A small watermark is present in the bottom right corner, which slightly detracts from a perfectly clean presentation.",
+      "file_name": "differential-amplifier-op-amp-circuit-diagram.jpg",
+      "caption": "A circuit diagram illustrating a differential amplifier built with an operational amplifier (op-amp). The schematic shows two input voltages, V1 and V2, connected to the inverting (-) and non-inverting (+) inputs through resistors R1 and R2, respectively. A feedback resistor, R3, connects the output Vo to the inverting input, while resistor R4 grounds the non-inverting input. This configuration is designed to amplify the voltage difference between the two input signals.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "差分放大电路原理图，显示基本的差分结构",
+    "image_info": {
+      "url": "https://ecstudiosystems.com/discover/textbooks/basic-electronics/operational-amplifiers/images/simple-differential-amplifier.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 34478,
+      "width": 500,
+      "height": 386,
+      "total_pixels": 193000,
+      "basic_score": 0.7454878806127697,
+      "file_name": "differential_amplifier_op_amp_circuit_diagram.png"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "This is an excellent, highly relevant diagram of a differential amplifier circuit using an operational amplifier (op-amp). The image is exceptionally clear, with sharp lines and legible text. It has no watermarks or distracting elements. The composition is clean and professional, perfectly illustrating the fundamental structure of a differential amplifier, making it ideal for educational or technical purposes.",
+      "file_name": "differential_amplifier_op_amp_circuit_diagram.png",
+      "caption": "A circuit diagram illustrating a differential amplifier using an operational amplifier (op-amp). The circuit shows two input voltages, v1 and v2, with their respective source resistances (Rs1, Rs2) and input resistors (R1). It also includes a common-mode voltage source (vCM). The op-amp is configured with feedback resistors (R2) to produce an output voltage (vout). The core differential amplifier section is highlighted with a dashed red box.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "反馈放大电路框图，显示负反馈系统",
+    "image_info": {
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20240108171215/Feedback-Amplifiers.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 24286,
+      "width": 800,
+      "height": 400,
+      "total_pixels": 320000,
+      "basic_score": 0.7685626008141118,
+      "file_name": "negative-feedback-amplifier-block-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 50.0,
+      "overall_score": 75.0,
+      "explanation": "The image is a perfect block diagram representation of a negative feedback amplifier, making it highly relevant to the search query and prompt. The clarity is excellent, with sharp lines and easily readable text. However, the image is marred by a large, faint watermark in the center and a distinct logo in the bottom right corner, which significantly reduces its professional quality for reuse.",
+      "file_name": "negative-feedback-amplifier-block-diagram.jpg",
+      "caption": "A clear block diagram illustrating a negative feedback amplifier system. It shows an input signal (Vs) feeding into a summing point where a feedback signal (Vf) is subtracted. The resulting signal (Vi) enters an amplifier with gain A, producing an output signal (Vo) across a load resistor (RL). A portion of the output is fed back through a feedback network to generate the feedback signal.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "反馈放大电路框图，显示负反馈系统",
+    "image_info": {
+      "url": "https://electronicscoach.com/wp-content/uploads/2020/01/feedback-system.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 19723,
+      "width": 550,
+      "height": 410,
+      "total_pixels": 225500,
+      "basic_score": 0.7561138721939014,
+      "file_name": "negative-feedback-amplifier-block-diagram.jpg_f6"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 80.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a perfect and clear representation of a feedback amplifier block diagram, directly matching the search query and prompt. The diagram is clean, easy to read, and well-composed. A small, unobtrusive watermark is present in the bottom-right corner.",
+      "file_name": "negative-feedback-amplifier-block-diagram.jpg",
+      "caption": "A clear block diagram illustrating the components of a feedback system, commonly used in feedback amplifiers. The diagram shows an input signal (R), a summing junction producing an error signal (E), an open-loop gain block (G), an output signal (C), and a feedback factor block (H). It visually represents the forward path and the feedback path, and includes the general formula for the closed-loop gain.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "反馈放大电路框图，显示负反馈系统",
+    "image_info": {
+      "url": "https://www.eeeguide.com/wp-content/uploads/2022/11/Block-Diagram-of-an-Amplifier-with-Feedback-01.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 43101,
+      "width": 426,
+      "height": 301,
+      "total_pixels": 128226,
+      "basic_score": 0.7188257713602679,
+      "file_name": "negative-feedback-amplifier-block-diagram.jpg_28"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 60.0,
+      "watermark_score": 100.0,
+      "overall_score": 80.0,
+      "explanation": "The image is a perfect match for the search query, showing a standard block diagram of a negative feedback amplifier. The diagram clearly labels all essential components and signal paths. However, the image resolution is low, with noticeable pixelation and compression artifacts that reduce its clarity and professional appearance. The diagram is free of watermarks. Despite the low technical quality, it is functionally correct and highly relevant.",
+      "file_name": "negative-feedback-amplifier-block-diagram.jpg",
+      "caption": "A black and white block diagram illustrating the principle of a negative feedback amplifier. The diagram shows a signal source connected to a comparator, which then feeds into a basic amplifier. The amplifier's output goes to a sampling network and the final output load (RL). A feedback loop takes a sample of the output voltage (Vout) through a feedback network (with feedback ratio β) to produce a feedback voltage (Vf), which is subtracted from the input signal at the comparator, demonstrating negative feedback.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "反馈放大电路框图，显示负反馈系统",
+    "image_info": {
+      "url": "https://electronicscoach.com/wp-content/uploads/2018/06/block-diagram-of-feedback-amplifier.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 28163,
+      "width": 550,
+      "height": 343,
+      "total_pixels": 188650,
+      "basic_score": 0.7395542837284867,
+      "file_name": "feedback_amplifier_block_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 85.0,
+      "watermark_score": 70.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a perfect match for the query, clearly showing a standard block diagram for a feedback amplifier, which is applicable to negative feedback systems. The diagram is clear and well-organized, though the resolution could be higher, resulting in slight pixelation. A small, unobtrusive watermark is present in the bottom-right corner.",
+      "file_name": "feedback_amplifier_block_diagram.jpg",
+      "caption": "A block diagram illustrating the principle of a feedback amplifier. It shows a signal source providing an input signal (Vs) to a mixer network. The mixer's output is fed into a basic amplifier with gain A. The amplifier's output (Vo) is delivered to a load resistor (RL) and also sampled by a sampling network, which feeds into a feedback network with factor β. The feedback network generates a feedback signal (Vf) that is returned to the mixer network, where it is combined with the input signal (Vs ± Vf).",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "BJT晶体管结构图，显示NPN和PNP型晶体管的结构",
+    "image_info": {
+      "url": "https://cdn.sparkfun.com/assets/learn_tutorials/1/9/3/npn-pnp-symbols.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 15172,
+      "width": 1208,
+      "height": 541,
+      "total_pixels": 653528,
+      "basic_score": 0.8366386572343603,
+      "file_name": "npn-pnp-bjt-transistor-schematic-symbols.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image is a perfectly clear and professional diagram showing the schematic symbols for both NPN and PNP BJT transistors, which is highly relevant to the search query. While the query uses the word 'structure', in an electronics context, the schematic symbol is often what is sought. The image is clean, free of watermarks, and excellently composed for educational purposes.",
+      "file_name": "npn-pnp-bjt-transistor-schematic-symbols.jpg",
+      "caption": "A comparative diagram displaying the standard schematic symbols for NPN and PNP Bipolar Junction Transistors (BJTs). On the left, the NPN transistor symbol has the emitter's arrow pointing away from the base. On the right, the PNP transistor symbol has the emitter's arrow pointing towards the base. All terminals are clearly labeled: B (Base), C (Collector), and E (Emitter).",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "BJT晶体管结构图，显示NPN和PNP型晶体管的结构",
+    "image_info": {
+      "url": "https://media.oemsecrets.com/images/articles/425/4.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 54886,
+      "width": 735,
+      "height": 414,
+      "total_pixels": 304290,
+      "basic_score": 0.7897025722943414,
+      "file_name": "npn-pnp-bjt-transistor-structure-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect match for the search query, providing a clear and simple side-by-side comparison of NPN and PNP BJT transistor structures. The diagram is clean, well-labeled, and easy to understand, making it excellent for educational purposes. The clarity is very good for a diagram, with sharp lines and text, and there are no watermarks.",
+      "file_name": "npn-pnp-bjt-transistor-structure-diagram.jpg",
+      "caption": "An educational diagram illustrating the basic structure of Bipolar Junction Transistors (BJTs). It shows two types side-by-side: an NPN transistor on the left, composed of N-type, P-type, and N-type semiconductor layers, and a PNP transistor on the right, composed of P-type, N-type, and P-type layers. Each structure is labeled with its corresponding terminals: Emitter, Base, and Collector.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "BJT晶体管结构图，显示NPN和PNP型晶体管的结构",
+    "image_info": {
+      "url": "https://cdn1.byjus.com/wp-content/uploads/2020/02/Transistor-2.png",
+      "img_format": "PNG",
+      "mode": "P",
+      "file_size": 14241,
+      "width": 750,
+      "height": 493,
+      "total_pixels": 369750,
+      "basic_score": 0.796879588540564,
+      "file_name": "pnp_and_npn_bjt_transistor_structure_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 10.0,
+      "overall_score": 70.0,
+      "explanation": "The image is perfectly relevant to the search query, providing a clear and well-structured diagram comparing the physical structure and circuit symbols of NPN and PNP BJT transistors. The clarity is excellent as it is a crisp digital graphic. However, the image contains prominent logos/watermarks from 'BYJU'S' in the top-right and bottom-right corners, which significantly detracts from its professional usability.",
+      "file_name": "pnp_and_npn_bjt_transistor_structure_diagram.jpg",
+      "caption": "An educational diagram comparing the structures of PNP and NPN Bipolar Junction Transistors (BJTs). On the left, it shows the PNP transistor's physical structure (P-N-P layers) and its corresponding circuit symbol. On the right, it displays the NPN transistor's structure (N-P-N layers) and its circuit symbol. All terminals (Collector, Base, Emitter) are clearly labeled for both types.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "功率放大器分类电路图，显示A类、B类、AB类、C类放大器",
+    "image_info": {
+      "url": "https://circuitstoday.com/wp-content/uploads/2011/10/class-ab-amplifier-12-v.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 45031,
+      "width": 947,
+      "height": 667,
+      "total_pixels": 631649,
+      "basic_score": 0.8718705033825151,
+      "file_name": "class-ab-audio-power-amplifier-circuit-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 85.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is an excellent, high-clarity circuit diagram of a Class AB power amplifier, making it highly relevant to a significant part of the search query. However, it does not show or compare the other amplifier classes (A, B, C), which prevents a perfect relevance score. The schematic itself is professionally drawn, perfectly clear, and contains no watermarks, resulting in very high scores for clarity and overall quality.",
+      "file_name": "class-ab-audio-power-amplifier-circuit-diagram.jpg",
+      "caption": "A detailed electronic circuit schematic of a complementary symmetry Class AB audio power amplifier. The diagram shows the input stage with a differential pair, a voltage amplification stage (VAS), and a push-pull output stage driving a 30W, 4-ohm speaker. All component values and part numbers for transistors, resistors, and capacitors are clearly labeled.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "运算放大器符号和基本电路图",
+    "image_info": {
+      "url": "https://mrp3.com/op-amp.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 6637,
+      "width": 400,
+      "height": 300,
+      "total_pixels": 120000,
+      "basic_score": 0.7091864279686955,
+      "file_name": "operational-amplifier-symbol-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 65.0,
+      "watermark_score": 100.0,
+      "overall_score": 80.0,
+      "explanation": "The image is a highly relevant diagram of the standard operational amplifier symbol, directly addressing the search query. It is completely free of watermarks. However, the image quality is only average, suffering from low resolution and noticeable aliasing (jagged edges) on the lines and text, which reduces its professional appearance.",
+      "file_name": "operational-amplifier-symbol-diagram.jpg",
+      "caption": "A simple black and white circuit diagram showing the standard symbol for an operational amplifier (op-amp). The symbol is a horizontal triangle with two inputs on the left vertical side: a non-inverting input marked with a '+' sign and an inverting input marked with a '-' sign. A single output line extends from the right point of the triangle, labeled 'Vout'.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "运算放大器符号和基本电路图",
+    "image_info": {
+      "url": "https://media.monolithicpower.com/wysiwyg/1_27.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 59112,
+      "width": 1036,
+      "height": 667,
+      "total_pixels": 691012,
+      "basic_score": 0.8863745370677804,
+      "file_name": "operational-amplifier-equivalent-circuit-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image is a perfect and highly detailed representation of an operational amplifier's symbol and its equivalent circuit model, directly matching the search query. The diagram is exceptionally clear, with sharp vector lines and perfectly legible text. There are no watermarks, and the overall composition is professional and ideal for educational purposes.",
+      "file_name": "operational-amplifier-equivalent-circuit-diagram.jpg",
+      "caption": "A clear circuit diagram illustrating the symbol and equivalent circuit model of an operational amplifier (op-amp). The diagram shows the inverting and non-inverting inputs (V1, V2), the differential input voltage (Vdiff), positive and negative power supply rails (+V, -V), and the output (Vout). Inside the symbol, it details the input impedance (Zin), output impedance (Zout), and the voltage-controlled voltage source.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "运算放大器符号和基本电路图",
+    "image_info": {
+      "url": "https://www.allaboutelectronics.org/wp-content/uploads/2020/08/op-amp.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 11810,
+      "width": 654,
+      "height": 445,
+      "total_pixels": 291030,
+      "basic_score": 0.7690885647476052,
+      "file_name": "operational-amplifier-op-amp-symbol-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image perfectly depicts the standard symbol for an operational amplifier, directly matching the search query and prompt. The diagram is exceptionally clear, with sharp lines and legible text, and is free of any watermarks. Its simple, clean, and accurate presentation makes it ideal for educational and technical use.",
+      "file_name": "operational-amplifier-op-amp-symbol-diagram.jpg",
+      "caption": "A clear circuit diagram of the standard symbol for an operational amplifier (op-amp). The diagram shows the triangular symbol with its five terminals clearly labeled: the inverting input (V1, '-'), the non-inverting input (V2, '+'), the single output (Vout), and the positive (V+) and negative (V-) power supply rails. The labels are in red, and the symbol and connection lines are in dark blue on a clean white background.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "运算放大器符号和基本电路图",
+    "image_info": {
+      "url": "https://pfnicholls.com/Electronics_Resources/Images/OpAmp_Symbol.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 12980,
+      "width": 399,
+      "height": 282,
+      "total_pixels": 112518,
+      "basic_score": 0.6952367733534699,
+      "file_name": "operational-amplifier-op-amp-symbol-diagram.jpg_92"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image is a perfect representation of the standard operational amplifier symbol, directly matching the search query. It is a high-quality, clean vector-style graphic with excellent clarity, sharp lines, and legible text. There are no watermarks or distracting elements, making it ideal for educational or technical use. Its overall professional quality is exceptional.",
+      "file_name": "operational-amplifier-op-amp-symbol-diagram.jpg",
+      "caption": "A clear, black and white circuit diagram illustrating the standard symbol for an operational amplifier (op-amp). The symbol is a triangle with two inputs on the left (non-inverting '+' and inverting '-'), a single output on the right, and two power supply connections (+Ve Supply and -Ve Supply). The body of the amplifier is labeled 'Op-Amp'.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "差分放大电路的传输特性曲线",
+    "image_info": {
+      "url": "https://electronicscoach.com/wp-content/uploads/2018/06/voltage-transfer-curve.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 28770,
+      "width": 550,
+      "height": 489,
+      "total_pixels": 268950,
+      "basic_score": 0.7705537895859099,
+      "file_name": "differential-amplifier-transfer-characteristic-curve.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "This image is a perfect match for the search query, clearly illustrating the transfer characteristic curve of a differential amplifier. The diagram is clean, well-labeled, and uses color effectively to distinguish different regions and parameters. While not ultra-high resolution, the clarity is sufficient for all text to be perfectly legible. There are no watermarks. Overall, it's an excellent educational diagram.",
+      "file_name": "differential-amplifier-transfer-characteristic-curve.jpg",
+      "caption": "A graph showing the ideal transfer characteristic curve for a differential amplifier. The x-axis represents the differential input voltage (Vd), and the y-axis represents the output voltage (Vout). The curve shows a linear region with a slope equal to the gain (A), and two saturation regions (positive and negative) where the output voltage is limited by +Vsat and -Vsat respectively.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "振荡电路的波形图，显示正弦波、方波、三角波等",
+    "image_info": {
+      "url": "https://www.analog.com/en/_/media/analog/en/landing-pages/technical-articles/ltspice-generating-triangular-sawtooth-waveforms/waveformshapes.png?la=en&rev=989da708de8d4532a9998eb638f532ee",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 19264,
+      "width": 1276,
+      "height": 899,
+      "total_pixels": 1147124,
+      "basic_score": 0.9108852268582054,
+      "file_name": "common_oscillator_waveforms_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image is a perfect match for the search query, clearly illustrating sine, square, and triangular waves (plus a sawtooth wave) in a high-resolution diagram. It is exceptionally clear, free of watermarks, and perfectly composed for educational comparison. It fully satisfies the user's request.",
+      "file_name": "common_oscillator_waveforms_diagram.jpg",
+      "caption": "A diagram comparing four common electronic waveforms over a time period of 5 seconds. From top to bottom, the plots show a blue sine wave, a red square wave, a green triangular wave, and a teal sawtooth wave. Each waveform oscillates between 0 and 1 volt and is clearly labeled.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "BJT和MOSFET的输出特性曲线",
+    "image_info": {
+      "url": "https://community.element14.com/resized-image/__size/620x535/__key/communityserver-blogs-components-weblogfiles/00-00-00-00-75/2287.contentimage_5F00_126982.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 80825,
+      "width": 619,
+      "height": 534,
+      "total_pixels": 330546,
+      "basic_score": 0.7869554798883205,
+      "file_name": "mosfet_output_characteristics_graph_id_vs_vds.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 50.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is only partially relevant as it clearly shows the output characteristic curves for a MOSFET but does not include the curves for a BJT, which was also requested in the search query. The clarity of the diagram is excellent, with sharp lines and legible text. It is a professional-quality technical graph with no watermarks.",
+      "file_name": "mosfet_output_characteristics_graph_id_vs_vds.jpg",
+      "caption": "A technical graph showing the output characteristics for a MOSFET, labeled 'Figure 5. Output Characteristics'. The y-axis represents Drain Current (ID) in Amps, and the x-axis represents Drain-to-Source Voltage (VDS) in Volts. Multiple curves illustrate the relationship between ID and VDS for different constant Gate-to-Source Voltages (VGS), ranging from 4.0 V to 10.0 V.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "有源滤波器电路图，显示低通、高通、带通滤波器",
+    "image_info": {
+      "url": "https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/filter-fil33.gif",
+      "img_format": "WEBP",
+      "mode": "RGBA",
+      "file_size": 5830,
+      "width": 546,
+      "height": 267,
+      "total_pixels": 145782,
+      "basic_score": 0.7138232270052883,
+      "file_name": "active_band_pass_filter_circuit_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 70.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a perfect match for the search query, clearly illustrating an active filter circuit composed of high-pass, amplification, and low-pass stages, which together form a band-pass filter. The diagram is well-labeled and easy to understand. Its main weakness is the low resolution, which causes some pixelation, but all elements remain legible. No watermarks are present.",
+      "file_name": "active_band_pass_filter_circuit_diagram.jpg",
+      "caption": "A circuit diagram of an active band-pass filter. The circuit is shown in three distinct stages: a passive high-pass filter stage (C1, R1), an amplification stage using a non-inverting op-amp, and a passive low-pass filter stage (R2, C2). This configuration of cascading high-pass and low-pass filters with an active component creates a complete active band-pass filter.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "有源滤波器电路图，显示低通、高通、带通滤波器",
+    "image_info": {
+      "url": "https://www.electrical4u.com/wp-content/uploads/what-is-a-band-pass-filter.png",
+      "img_format": "WEBP",
+      "mode": "RGB",
+      "file_size": 19700,
+      "width": 700,
+      "height": 375,
+      "total_pixels": 262500,
+      "basic_score": 0.7772684494827862,
+      "file_name": "active_band_pass_filter_circuit_diagram.jpg_27"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 20.0,
+      "overall_score": 75.0,
+      "explanation": "The image is a perfect match for the search query, providing a comprehensive and well-structured educational diagram of an active band-pass filter. It clearly shows the circuit, the block diagram (composed of high-pass and low-pass stages), and the frequency response graphs. The clarity is excellent as it is a sharp digital graphic. However, there is a large and prominent watermark in the bottom-right corner which significantly detracts from its professional usability.",
+      "file_name": "active_band_pass_filter_circuit_diagram.jpg",
+      "caption": "An educational infographic explaining an active band-pass filter. The image contains a block diagram showing a high-pass filter, amplification, and a low-pass filter in series. Below is the corresponding active circuit diagram using an op-amp, with the different stages color-coded and labeled. The image also includes two frequency response graphs, illustrating the characteristics of a wide band-pass filter and a narrow band-pass filter.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "直流稳压电源原理图，显示整流、滤波、稳压过程",
+    "image_info": {
+      "url": "https://www.hackatronic.com/wp-content/uploads/2020/06/5V-DC-Power-Supply-Circuit.webp",
+      "img_format": "WEBP",
+      "mode": "RGB",
+      "file_size": 79954,
+      "width": 2182,
+      "height": 1156,
+      "total_pixels": 2522392,
+      "basic_score": 0.6093043711370933,
+      "file_name": "5v_dc_power_supply_circuit_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "This image is an excellent and highly relevant diagram for the search query and prompt. It clearly illustrates a 5V DC power supply circuit, detailing the stages from transformer to rectifier, filter, and regulator. The diagram also includes a block diagram and corresponding waveforms for each stage, making it an exceptional educational tool. The image is clean, sharp, and free of any watermarks or distracting elements.",
+      "file_name": "5v_dc_power_supply_circuit_diagram.jpg",
+      "caption": "A detailed circuit diagram and block diagram illustrating the stages of a 5V DC power supply. The schematic shows a 230V AC input, a step-down transformer, a full-bridge rectifier (BR1 using 4x 1N4007 diodes), a filter section (C1, C2), and a 5V voltage regulator (LM7805). Below the circuit, a block diagram shows the process flow from AC supply to regulated DC output, with corresponding waveforms for each stage: high voltage AC input, transformer output, rectifier output, filtered DC output, and regulated DC output.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "直流稳压电源原理图，显示整流、滤波、稳压过程",
+    "image_info": {
+      "url": "https://ade2-iitr.vlabs.ac.in/exp/regulated-power-supply/images/ps1.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 25277,
+      "width": 536,
+      "height": 305,
+      "total_pixels": 163480,
+      "basic_score": 0.7313967863780746,
+      "file_name": "dc-power-supply-block-diagram-with-waveforms.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a perfect block diagram for the search query, illustrating all the key stages of a DC power supply: transformer, rectifier, filter, and regulator. It excellently uses waveforms to show the signal transformation at each step. While the concept is clear, the image resolution is somewhat low, leading to slight pixelation and aliasing on the lines and text. There are no watermarks. Overall, it's a highly effective and educational diagram.",
+      "file_name": "dc-power-supply-block-diagram-with-waveforms.jpg",
+      "caption": "A block diagram illustrating the stages of a linear regulated DC power supply. The diagram shows an AC line input connected to a transformer, followed by a rectifier, a filter, a regulator, and finally a load. Waveform graphs are included to show the voltage transformation at each stage: the initial AC sine wave, the pulsating DC after rectification, the smoothed DC with ripple after filtering, and the final stable DC output after regulation.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "直流稳压电源原理图，显示整流、滤波、稳压过程",
+    "image_info": {
+      "url": "https://www.electrical4u.com/wp-content/uploads/What-is-a-Regulated-Power-Supply.png",
+      "img_format": "WEBP",
+      "mode": "RGB",
+      "file_size": 23942,
+      "width": 700,
+      "height": 375,
+      "total_pixels": 262500,
+      "basic_score": 0.7779119249803017,
+      "file_name": "regulated-power-supply-diagrams-rectifier-filter-regulator.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 80.0,
+      "watermark_score": 40.0,
+      "overall_score": 75.0,
+      "explanation": "The image is highly relevant to the query, providing both a high-level block diagram of the rectifier and filter stages and a detailed PCB layout for the regulator stage. The graphics are clear and easy to understand, although the overall image resolution is moderate. A prominent watermark/logo for 'Electrical 4 U' is present in the bottom-right corner, which significantly impacts the watermark score. Overall, it's a very effective educational image for its purpose, despite the branding.",
+      "file_name": "regulated-power-supply-diagrams-rectifier-filter-regulator.jpg",
+      "caption": "An educational illustration explaining the function of a regulated DC power supply. The image features two diagrams side-by-side: on the left, a block diagram shows the process from AC mains through a transformer, a full-bridge rectifier, and a filter circuit. On the right, a detailed PCB layout shows a voltage regulator circuit built around an LM317T IC, complete with component labels and I/O pins.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "功率放大器的效率特性曲线",
+    "image_info": {
+      "url": "https://substackcdn.com/image/fetch/$s_!If0b!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4f983765-ff76-42c0-af82-98ee8b12bde8_761x546.heic",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 89694,
+      "width": 761,
+      "height": 546,
+      "total_pixels": 415506,
+      "basic_score": 0.8305352716008285,
+      "file_name": "power-amplifier-efficiency-curves-class-a-vs-b.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfectly relevant and clear hand-drawn illustration that directly addresses the search query. It effectively compares the efficiency characteristics of Class A and Class B power amplifiers against power back-off. The clarity is excellent, with legible text and distinct lines. There are no watermarks. The overall quality is high for educational or explanatory purposes.",
+      "file_name": "power-amplifier-efficiency-curves-class-a-vs-b.jpg",
+      "caption": "A hand-drawn graph illustrating the efficiency characteristic curves of Class A and Class B power amplifiers. The vertical axis represents Efficiency (%), and the horizontal axis represents Power Back-Off (%). The chart compares the linear efficiency of a Class A amplifier (orange line) with the non-linear efficiency of a Class B amplifier (purple curve), showing the latter is more efficient, reaching a theoretical maximum of 78.5% at full power. Annotations for 3-dB and 6-dB backoff are also included.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "功率放大器的效率特性曲线",
+    "image_info": {
+      "url": "https://www.electronics-tutorials.ws/wp-content/uploads/2013/07/amplifier19.gif",
+      "img_format": "GIF",
+      "mode": "P",
+      "file_size": 10484,
+      "width": 490,
+      "height": 293,
+      "total_pixels": 143570,
+      "basic_score": 0.677163871189942,
+      "file_name": "power_amplifier_classes_efficiency_chart.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 40.0,
+      "watermark_score": 100.0,
+      "overall_score": 65.0,
+      "explanation": "The image is perfectly relevant to the search query, accurately depicting the relationship between different power amplifier classes, their conduction angles, and corresponding efficiencies. However, the image quality is poor, with low resolution, pixelation, and artifacts that make the text and lines appear jagged. There are no watermarks. Despite the excellent informational content, the low clarity reduces its overall professional quality.",
+      "file_name": "power_amplifier_classes_efficiency_chart.jpg",
+      "caption": "A technical diagram illustrating the characteristics of different power amplifier classes. The chart plots output signal waveforms against the conduction angle on the x-axis (from 0° to 360°) and efficiency on the y-axis (from 0% to 100%). It shows that Class A has a 360° conduction angle and the lowest efficiency, while efficiency increases through Class AB, Class B, Class C, and switching amplifiers like Class D to T, which approach 100% efficiency.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "波形发生器电路图，显示多谐振荡器等",
+    "image_info": {
+      "url": "https://ecstudiosystems.com/discover/textbooks/basic-electronics/waveform-generators/images/astable-transistor-multivibrator.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 25217,
+      "width": 524,
+      "height": 293,
+      "total_pixels": 153532,
+      "basic_score": 0.7273060528950033,
+      "file_name": "astable_multivibrator_circuit_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image is a perfect, high-resolution schematic of an astable multivibrator, which is a type of waveform generator. It directly matches the search query and prompt. The diagram is exceptionally clear, professionally drawn, well-labeled, and free of any watermarks, making it ideal for technical and educational purposes.",
+      "file_name": "astable_multivibrator_circuit_diagram.jpg",
+      "caption": "A clear schematic diagram of a classic BJT (Bipolar Junction Transistor) astable multivibrator circuit. The circuit consists of two cross-coupled NPN transistors (Q1, Q2), four resistors (R1, R2, R3, R4), and two capacitors (C1, C2). This configuration is a free-running oscillator used to generate a square wave, making it a fundamental waveform generator. The diagram indicates the power supply (Vcc), ground, and two distinct outputs.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "波形发生器电路图，显示多谐振荡器等",
+    "image_info": {
+      "url": "https://www.watelectronics.com/wp-content/uploads/Square-Wave-Generator-Circuit.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 28942,
+      "width": 654,
+      "height": 474,
+      "total_pixels": 309996,
+      "basic_score": 0.7882178998518128,
+      "file_name": "square-triangle-wave-generator-circuit-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect match for the search query, showing a clear and well-labeled circuit diagram for a waveform generator using a multivibrator principle. The schematic is of high clarity, free of watermarks, and professionally composed, making it excellent for educational or hobbyist purposes.",
+      "file_name": "square-triangle-wave-generator-circuit-diagram.jpg",
+      "caption": "A circuit diagram of a simple waveform generator capable of producing both square and triangle waves. The circuit uses a CD40106 Schmitt trigger inverter as an astable multivibrator to generate the square wave, and a BC547 transistor as an integrator to convert the square wave into a triangle wave. A switch allows for selecting between high (1kHz-10kHz) and low (10Hz-100Hz) frequency ranges.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "波形发生器电路图，显示多谐振荡器等",
+    "image_info": {
+      "url": "https://www.electronics-tutorials.ws/wp-content/uploads/2013/09/tim27.gif?fit=441%2C206",
+      "img_format": "GIF",
+      "mode": "P",
+      "file_size": 9000,
+      "width": 441,
+      "height": 206,
+      "total_pixels": 90846,
+      "basic_score": 0.6298616970282543,
+      "file_name": "astable-multivibrator-waveform-generator-circuit.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 70.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a perfect match for the query, clearly showing an astable multivibrator circuit used as a waveform generator. The diagram is well-structured and easy to understand for educational purposes. Its only significant drawback is the low resolution, which results in some pixelation and lack of sharpness, but all elements remain legible. There are no watermarks.",
+      "file_name": "astable-multivibrator-waveform-generator-circuit.jpg",
+      "caption": "A circuit diagram of a simple astable multivibrator using a single Schmitt trigger inverter from a 74LS14 IC. The circuit generates a non-symmetrical square wave output by repeatedly charging and discharging a capacitor (CT) through a resistor (RT). The diagram illustrates the capacitor's triangular waveform input to the inverter and the resulting digital pulse output, showing the 'mark' and 'space' periods.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "运算放大器的内部结构框图",
+    "image_info": {
+      "url": "https://images.wondershare.com/edrawmax/article2023/op-amp-block-diagram/block-diagram-for-an-op-amp.JPG",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 24956,
+      "width": 709,
+      "height": 479,
+      "total_pixels": 339611,
+      "basic_score": 0.798249317167377,
+      "file_name": "operational-amplifier-internal-structure-block-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 80.0,
+      "explanation": "The image is a highly relevant block diagram illustrating the internal structure of an operational amplifier, perfectly matching the search query. It clearly shows the differential, voltage, and output amplifier stages. The clarity is good, although the resolution is not extremely high, leading to some minor pixelation and aliasing on the lines and text. There are no watermarks. Overall, it's a very good and informative diagram for educational purposes.",
+      "file_name": "operational-amplifier-internal-structure-block-diagram.jpg",
+      "caption": "A block diagram illustrating the internal structure of an operational amplifier (op-amp). It shows a weak and irregular signal entering the inverting input and how the op-amp, consisting of a differential amplifier, voltage amplifier, and output amplifier, processes it to produce a strong and clear output signal.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "运算放大器的内部结构框图",
+    "image_info": {
+      "url": "https://ecstudiosystems.com/discover/textbooks/basic-electronics/operational-amplifiers/images/opamp-block-diagram.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 32131,
+      "width": 650,
+      "height": 433,
+      "total_pixels": 281450,
+      "basic_score": 0.7787660012519506,
+      "file_name": "operational-amplifier-internal-structure-block-diagram.jpg_2b"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image is a perfect representation of the search query, providing a clear, high-resolution, and professionally made block diagram of an operational amplifier's internal structure. It is an ideal educational illustration with no watermarks or quality issues.",
+      "file_name": "operational-amplifier-internal-structure-block-diagram.jpg",
+      "caption": "A clear and informative block diagram illustrating the internal structure of an operational amplifier (op-amp). The diagram shows the standard triangular symbol for an op-amp, with inputs labeled as 'Inverting input' (-) and 'Non-inverting input' (+), and a single 'Output'. The power supply connections, +Vcc and -Vee, are also indicated. Inside the symbol, the three main internal stages are shown as blocks: a Differential amplifier at the input, followed by a Voltage amplifier for gain, and an Output amplifier to provide low output impedance.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "运算放大器的内部结构框图",
+    "image_info": {
+      "url": "https://media.monolithicpower.com/wysiwyg/1_27.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 59112,
+      "width": 1036,
+      "height": 667,
+      "total_pixels": 691012,
+      "basic_score": 0.8863745370677804,
+      "file_name": "operational_amplifier_equivalent_circuit_diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is a highly relevant and professionally created diagram showing the equivalent circuit model of an operational amplifier. It perfectly illustrates the internal characteristics like input/output impedance and gain, which directly relates to the query about internal structure. The clarity is excellent with sharp lines and readable text, and there are no watermarks. This makes it an ideal educational resource.",
+      "file_name": "operational_amplifier_equivalent_circuit_diagram.jpg",
+      "caption": "A circuit diagram illustrating the internal equivalent model of an operational amplifier (op-amp). The diagram shows the inverting input (V1), non-inverting input (V2), and the output (Vout). It represents the op-amp's internal characteristics, including the differential input voltage (Vdiff), input impedance (Zin), output impedance (Zout), and the open-loop voltage gain represented by the voltage source -A(V2 - V1). Power supply connections +V and -V are also shown.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "运算放大器的内部结构框图",
+    "image_info": {
+      "url": "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/semiconductor/knowledge/e-learning/basics-of-op-amps/chap1-3-1_en.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 17377,
+      "width": 500,
+      "height": 281,
+      "total_pixels": 140500,
+      "basic_score": 0.7202050414827541,
+      "file_name": "two-stage-operational-amplifier-schematic-diagram.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 90.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is highly relevant as it shows the internal transistor-level structure of a two-stage operational amplifier. While it's a schematic rather than a block diagram, the color-coded sections effectively identify the functional blocks, fulfilling the user's intent. The clarity is decent, but the image has a relatively low resolution, causing some text and lines to be slightly pixelated. There are no watermarks. Overall, it's a very useful and well-structured educational diagram.",
+      "file_name": "two-stage-operational-amplifier-schematic-diagram.jpg",
+      "caption": "A schematic circuit diagram of a two-stage CMOS operational amplifier. The diagram is color-coded to highlight the functional blocks: a PMOS differential input pair (Qp1, Qp2), an NMOS current mirror active load (Qn1, Qn2), a PMOS current source (Qp3, Qp4), and an NMOS common-source amplifier output stage (Qn3). The diagram also shows the inputs VIN+ and VIN-, the output VOUT, and a compensation capacitor C1.",
+      "recommend": true,
+      "error": ""
+    }
+  }
+]
