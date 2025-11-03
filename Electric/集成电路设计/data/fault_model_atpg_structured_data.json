@@ -1,0 +1,267 @@
+{
+  "document_info": {
+    "title": "VLSI Test Principles and Architectures Chapter 4 - Test Generation",
+    "author": "LT Wang",
+    "source": "UBC ECE 578 Course Materials",
+    "total_pages": 133,
+    "extraction_date": "2025-11-02",
+    "url": "http://courses.ece.ubc.ca/578/notes4.pdf"
+  },
+  "fault_models": {
+    "stuck_at_fault": {
+      "description": "电路节点固定为逻辑0或逻辑1的故障模型",
+      "characteristics": [
+        "最基础和广泛使用的故障模型",
+        "建模简单，计算复杂度低",
+        "能够有效检测结构性缺陷"
+      ],
+      "applications": "基础故障检测，结构性缺陷识别"
+    },
+    "bridging_fault": {
+      "description": "电路中两个节点之间发生短路的故障模型",
+      "types": {
+        "and_bridge": "故障值为两个节点值的AND操作",
+        "or_bridge": "故障值为两个节点值的OR操作", 
+        "x_dominates_y": "x的值主导y的值",
+        "x_dom1_y": "x=1时主导y",
+        "x_dom0_y": "x=0时主导y"
+      },
+      "excitation_condition": "只有当两个节点具有相反逻辑值时才能激发故障"
+    },
+    "delay_fault": {
+      "description": "影响电路时序功能的故障，仅在高速运行时显现",
+      "subtypes": {
+        "path_delay_fault": "考虑路径上延迟的累积效应",
+        "segment_delay_fault": "针对特定路径段的延迟",
+        "transition_fault": "假设电路节点存在大幅/整体延迟"
+      }
+    },
+    "transition_fault": {
+      "description": "假设电路节点存在大幅延迟的故障模型",
+      "characteristics": [
+        "工业界最常用的模型",
+        "故障数量与电路规模呈线性关系",
+        "每个转换故障可建模为两个固定型故障"
+      ],
+      "types": {
+        "slow_to_rise": "慢上升故障(STR): 第一帧激发x/1，第二帧激发x/0",
+        "slow_to_fall": "慢下降故障(STF): 第一帧激发x/0，第二帧激发x/1"
+      }
+    }
+  },
+  "atpg_algorithms": {
+    "d_algorithm": {
+      "description": "处理任意组合电路的分支限界算法",
+      "value_system": {
+        "domain": ["0", "1", "X", "D", "D-bar"],
+        "D": "1/0 (正常1/故障0)",
+        "D-bar": "0/1 (正常0/故障1)",
+        "X": "未知/未指定"
+      },
+      "key_concepts": {
+        "d_frontier": "输出为X但输入包含D或D̄的门的集合",
+        "j_frontier": "输出已指定但输入未完全确定的门的集合"
+      },
+      "workflow": [
+        "初始化故障点放置D或D̄",
+        "维护D-前沿和J-前沿", 
+        "通过分支限界搜索解决J-前沿",
+        "冲突时回溯"
+      ]
+    },
+    "podem": {
+      "description": "仅在主输入上做决策的ATPG算法",
+      "characteristics": [
+        "无需J-前沿",
+        "无内部冲突",
+        "通过回溯从当前目标选择决策"
+      ],
+      "key_concepts": {
+        "x_path": "从D/D̄到主输出的X值路径",
+        "objective": "需要指定的信号值",
+        "backtrace": "从目标回溯到主输入选择决策"
+      }
+    },
+    "fan": {
+      "description": "扩展PODEM的改进ATPG算法",
+      "improvements": [
+        "头条线概念减少决策数量",
+        "多目标减少后续冲突",
+        "逻辑蕴含帮助更好决策"
+      ],
+      "key_concepts": {
+        "headlines": "无扇出锥的输出信号",
+        "multiple_objectives": "同时考虑多个目标",
+        "logic_implications": "静态和动态逻辑蕴含"
+      }
+    }
+  },
+  "test_generation_methods": {
+    "random_testing": {
+      "basic_random": {
+        "principle": "生成N个随机测试向量",
+        "quality_metric": "测试集T检测所有固定型故障的概率",
+        "limitations": [
+          "质量高度依赖于底层电路结构",
+          "某些电路具有大量随机抗性故障"
+        ]
+      },
+      "weighted_random": {
+        "principle": "通过偏置输入概率来针对随机抗性故障",
+        "example": {
+          "8_input_and_gate": {
+            "no_bias": "输出1概率 = (0.5)^8 = 0.004",
+            "with_bias_0.75": "输出1概率 = (0.75)^8 = 0.100"
+          }
+        }
+      }
+    },
+    "deterministic_atpg": {
+      "boolean_difference": {
+        "objective": "找到使f XOR f' = 1的向量",
+        "definition": "∂f/∂x = f(x) XOR f(x=0)",
+        "detection_condition": "任何满足f XOR f' = 1的向量都能检测故障"
+      },
+      "five_valued_algebra": {
+        "values": ["0", "1", "X", "D", "D-bar"],
+        "advantage": "在单个电路上同时处理正常和故障情况"
+      }
+    },
+    "simulation_based": {
+      "genetic_algorithm": {
+        "components": [
+          "个体群体(候选解)",
+          "适应度函数(质量评估)",
+          "遗传操作(选择、交叉、变异)"
+        ],
+        "operators": {
+          "selection": ["轮盘赌选择", "锦标赛选择"],
+          "crossover": ["单点交叉", "双点交叉", "均匀交叉"],
+          "mutation": "随机翻转位位置"
+        }
+      }
+    }
+  },
+  "delay_testing": {
+    "launch_on_capture": {
+      "description": "V1任意，V2由V1通过电路功能导出",
+      "advantages": [
+        "真正的速度测试",
+        "检测域内和域间结构/延迟故障",
+        "便于物理实现",
+        "避免一些功能不可行路径",
+        "便于与ATPG集成"
+      ]
+    },
+    "launch_on_shift": {
+      "description": "V1任意，V2由V1的1位移位导出",
+      "subtypes": {
+        "one_hot_skewed_load": "一次测试一个时钟域",
+        "aligned_skewed_load": "解决长时间测试问题",
+        "staggered_skewed_load": "处理时钟对齐问题"
+      }
+    },
+    "enhanced_scan": {
+      "description": "V1和V2不相关的测试方法",
+      "requirements": "需要增强扫描单元",
+      "advantage": "可实现最高覆盖率"
+    }
+  },
+  "path_delay_faults": {
+    "classification": {
+      "robustly_testable": {
+        "description": "测试可验证路径正确性，不受其他延迟影响",
+        "criteria": "当路径相应输入有控制到非控制转换时，第一向量中非控制输入可为X，第二向量中非控制输入必须为稳定非控制值"
+      },
+      "non_robustly_testable": {
+        "description": "仅在无其他延迟故障时有效",
+        "criteria": "无论输入转换如何，第一向量中非控制输入可为X，第二向量中非控制输入必须为非控制值"
+      },
+      "untestable": {
+        "false_path": "转换无法从路径起点传播到终点",
+        "statically_unsensitizable": "无法同时设置所有必要的非控制输入值"
+      }
+    }
+  },
+  "coverage_calculations": {
+    "fault_coverage": {
+      "definition": "测试集检测到的故障数与总故障数的比率",
+      "formula": "故障覆盖率 = (检测到的故障数 / 总故障数) × 100%"
+    },
+    "detection_probability": {
+      "single_fault": "P_detect(f) = |Tf| / 2^n",
+      "n_attempts": "1 - (1 - P_detect(f))^N",
+      "minimum_detection": "2^(-nmax)，其中nmax为最大主输出锥的主输入数"
+    }
+  },
+  "optimization_techniques": {
+    "test_compaction": {
+      "combinational": {
+        "objective": "找到能检测每个故障的最小向量集合",
+        "essential_vector": "某些故障只能被特定向量检测的向量",
+        "algorithm": "集合覆盖算法"
+      },
+      "sequential": {
+        "complexity": "由于存储元件，比组合测试集压缩复杂得多",
+        "method": "移除检测故障不必要的子序列"
+      }
+    },
+    "n_detect_atpg": {
+      "objective": "每个故障至少被检测N次",
+      "requirement": "检测故障的N个向量必须不同",
+      "advantage": "虽然故障覆盖率相同，但能显著增强缺陷覆盖率"
+    }
+  },
+  "untestable_fault_identification": {
+    "fire_algorithm": {
+      "principle": "基于冲突分析",
+      "sets": {
+        "S0": "信号s=0时不可测试的故障集合",
+        "S1": "信号s=1时不可测试的故障集合",
+        "intersection": "S0∩S1确实不可测试的故障"
+      }
+    },
+    "conflict_types": {
+      "single_line": "s=0 AND s=1",
+      "multi_line": "多信号值的非法组合"
+    }
+  },
+  "key_performance_metrics": {
+    "extraction_statistics": {
+      "total_pages": 133,
+      "fault_model_sections": 49,
+      "atpg_method_sections": 185,
+      "coverage_sections": 5,
+      "formulas_found": 0
+    }
+  },
+  "industrial_applications": {
+    "transition_fault_advantages": [
+      "线性复杂度：故障数与电路规模成正比",
+      "简单建模：转换为固定型故障",
+      "广泛支持：工业界标准"
+    ],
+    "hybrid_atpg_benefits": [
+      "结合全局搜索和精确求解",
+      "GA和确定性ATPG交替执行",
+      "种子技术加速收敛"
+    ]
+  },
+  "future_directions": {
+    "technical_challenges": [
+      "计算复杂度：指数级增长",
+      "电路规模：持续增大",
+      "时序要求：更高频率测试"
+    ],
+    "optimization_goals": [
+      "高故障覆盖率：>99%",
+      "低计算成本：快速生成",
+      "小测试集：减少存储和传输"
+    ],
+    "emerging_technologies": [
+      "机器学习：智能测试生成",
+      "形式化方法：数学验证",
+      "高层测试：FSM级别验证"
+    ]
+  }
+}

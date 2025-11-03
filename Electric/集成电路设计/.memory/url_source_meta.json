@@ -1,0 +1,223 @@
+{
+  "_source_id": 30,
+  "sources": {
+    "数字集成电路设计深度研究": {
+      "https://www.elecfans.com/article/83/2023/202306052098568.html": {
+        "id": 1,
+        "publisher": "电子发烧友网",
+        "url": "https://www.elecfans.com/article/83/2023/202306052098568.html",
+        "title": "低功耗技术（一）动态功耗与静态功耗",
+        "info": "详细介绍了动态功耗（翻转功耗和短路功耗）和静态功耗的计算公式，包括功耗优化策略"
+      },
+      "https://zhuanlan.zhihu.com/p/646394098": {
+        "id": 2,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/646394098",
+        "title": "触发器（The Flip-Flops）",
+        "info": "详细介绍了D触发器、JK触发器、T触发器、SR触发器的设计原理和时序特性，包括边沿触发和电平触发的区别"
+      },
+      "https://siliconvlsi.com/explain-working-of-6-t-sram-cell/": {
+        "id": 3,
+        "publisher": "Silicon VLSI",
+        "url": "https://siliconvlsi.com/explain-working-of-6-t-sram-cell/",
+        "title": "Explain working of 6-T SRAM cell",
+        "info": "深入分析了6T SRAM单元的结构、读写操作原理、晶体管尺寸设计要求和应用场景"
+      },
+      "https://zhuanlan.zhihu.com/p/678263890": {
+        "id": 4,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/678263890",
+        "title": "一个IP的Multi-Voltage+Clock Gating的物理实现",
+        "info": "详细介绍了多电压域和时钟门控低功耗设计的完整实现流程，包括布局规划、电源网络设计、时钟树综合等关键技术"
+      }
+    },
+    "集成电路测试和验证方法研究": {
+      "https://www.zhihu.com/tardis/bd/art/159273941": {
+        "id": 5,
+        "publisher": "知乎",
+        "url": "https://www.zhihu.com/tardis/bd/art/159273941",
+        "title": "可能是DFT最全面的介绍--入门篇",
+        "info": "DFT可测试性设计的详细介绍，包括扫描路径设计、内建自测试(BIST)、JTAG标准、ATPG自动测试向量生成等技术原理和应用"
+      },
+      "https://zhuanlan.zhihu.com/p/671532099": {
+        "id": 6,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/671532099",
+        "title": "DFT专用术语解释系列（四）：IEEE 1149.1",
+        "info": "IEEE 1149.1边界扫描和JTAG技术的详细技术内容，包括边界扫描原理、测试覆盖率和实现方法"
+      },
+      "https://blog.csdn.net/u011808788/article/details/139241317": {
+        "id": 7,
+        "publisher": "CSDN",
+        "url": "https://blog.csdn.net/u011808788/article/details/139241317",
+        "title": "【IC】良率模型-yield model",
+        "info": "IC良率模型和缺陷密度计算方法，包括Murphy模型、Poisson模型、Bose-Einstein模型等核心数学公式和应用场景"
+      },
+      "https://zhuanlan.zhihu.com/p/86489731": {
+        "id": 8,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/86489731",
+        "title": "测试良品率的估算",
+        "info": "ATE测试工程师的良率估算方法和yield Roadmap开发技能，包含完整的良率计算公式和影响因素分析"
+      },
+      "https://zhuanlan.zhihu.com/p/573638990": {
+        "id": 9,
+        "publisher": "知乎",
+        "url": "https://zhuanlan.zhihu.com/p/573638990",
+        "title": "SystemVerilog实用知识点：覆盖率之Function",
+        "info": "SystemVerilog功能覆盖率的详细技术内容，包括covergroup、coverpoint和交叉覆盖率的完整实现方法和代码示例"
+      },
+      "https://www.viksnewsletter.com/p/how-foundries-calculate-die-yield": {
+        "id": 10,
+        "publisher": "Viks Newsletter",
+        "url": "https://www.viksnewsletter.com/p/how-foundries-calculate-die-yield",
+        "title": "How Foundries Calculate Die Yield",
+        "info": "晶圆厂芯片良率计算方法，包括多种良率模型、缺陷密度计算公式和预测方法，Intel使用D0<0.4作为关键指标"
+      }
+    },
+    "集成电路版图设计和物理实现": {
+      "https://zhuanlan.zhihu.com/p/50171091": {
+        "id": 11,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/50171091",
+        "title": "数字IC设计后端实现前期预防IR Drop方法汇总",
+        "info": "详细介绍了IR Drop分析方法（静态/动态、Vectorless/VCD模式）和6种预防措施，包括MTCMOS加密、时钟错位法、decap插入等技术"
+      },
+      "https://analoghub.ie/category/Layout/article/layoutMatching": {
+        "id": 12,
+        "publisher": "AnalogHub",
+        "url": "https://analoghub.ie/category/Layout/article/layoutMatching",
+        "title": "版图匹配技术",
+        "info": "详细介绍了版图匹配技术，包括交叉指状结构、共心结构、虚拟器件等方法，以及系统失配和随机失配的处理"
+      },
+      "https://siliconvlsi.com/layout-interconnect-parasitics/": {
+        "id": 13,
+        "publisher": "Silicon VLSI",
+        "url": "https://siliconvlsi.com/layout-interconnect-parasitics/",
+        "title": "版图互连寄生效应",
+        "info": "介绍了互连寄生参数类型（线路电阻R、线路电感L、绝缘体电容C、绝缘体电导G）及其对电路性能的影响和缓解策略"
+      },
+      "https://zhuanlan.zhihu.com/p/652665087": {
+        "id": 14,
+        "publisher": "知乎专栏",
+        "url": "https://zhuanlan.zhihu.com/p/652665087",
+        "title": "信号完整性：串扰延迟和串扰噪声",
+        "info": "详细介绍了信号完整性的概念、串扰分析方法和计算公式，包括耦合电容和电感的计算"
+      },
+      "https://www.kingfordpcb.cn/pcb-manufacturing/2597.html": {
+        "id": 15,
+        "publisher": "鑫景福科技",
+        "url": "https://www.kingfordpcb.cn/pcb-manufacturing/2597.html",
+        "title": "PCB版图中的寄生电容介绍",
+        "info": "介绍了寄生电容的基本概念、计算公式C=q/v，以及在PCB设计中的应用"
+      },
+      "https://www.protoexpress.com/blog/decoupling-capacitor-placement-guidelines-pcb-design/": {
+        "id": 16,
+        "publisher": "Sierra Circuits",
+        "url": "https://www.protoexpress.com/blog/decoupling-capacitor-placement-guidelines-pcb-design/",
+        "title": "去耦电容放置指南",
+        "info": "详细介绍了去耦电容的放置原则、计算方法和优化策略"
+      },
+      "https://www.edn.com/decreasing-parasitic-capacitance-in-ic-layouts/": {
+        "id": 17,
+        "publisher": "EDN",
+        "url": "https://www.edn.com/decreasing-parasitic-capacitance-in-ic-layouts/",
+        "title": "减少IC版图中的寄生电容",
+        "info": "介绍了减少寄生电容的设计策略和计算方法"
+      },
+      "https://www.andwinpcb.com/calculation-of-parasitic-capacitance-and-inductance-in-pcb-design/": {
+        "id": 18,
+        "publisher": "Andwin PCB",
+        "url": "https://www.andwinpcb.com/calculation-of-parasitic-capacitance-and-inductance-in-pcb-design/",
+        "title": "PCB设计中寄生电容和电感的计算",
+        "info": "提供了寄生参数的理论基础、计算方法和实际应用考虑"
+      }
+    },
+    "集成电路版图设计和物理实现（改进版）": {
+      "https://people.engr.tamu.edu/spalermo/ecen474/Lab2.pdf": {
+        "id": 19,
+        "publisher": "德州农工大学",
+        "url": "https://people.engr.tamu.edu/spalermo/ecen474/Lab2.pdf",
+        "title": "ECEN474/704实验2：版图设计",
+        "info": "详细介绍了集成电路版图设计技术，包括设计规则、器件匹配技术、几何约束和工艺参数"
+      },
+      "https://numbda.cs.tsinghua.edu.cn/papers/aspdac212.pdf": {
+        "id": 20,
+        "publisher": "清华大学",
+        "url": "https://numbda.cs.tsinghua.edu.cn/papers/aspdac212.pdf",
+        "title": "先进工艺技术寄生参数提取的进展和挑战",
+        "info": "详细介绍了浮动随机行走方法、机器学习应用和最新技术进展，包括完整的数学公式和性能数据"
+      },
+      "https://www.keysight.com.cn/cn/zh/assets/3119-1097/application-notes/5992-4272.pdf": {
+        "id": 21,
+        "publisher": "Keysight Technologies",
+        "url": "https://www.keysight.com.cn/cn/zh/assets/3119-1097/application-notes/5992-4272.pdf",
+        "title": "优化电源分配网络实现平坦阻抗",
+        "info": "提供了完整的电源完整性设计方法论，包括IR drop分析、去耦电容设计和电源网络优化"
+      },
+      "https://download.tek.com/document/SIGI1203.pdf": {
+        "id": 22,
+        "publisher": "Tektronix",
+        "url": "https://download.tek.com/document/SIGI1203.pdf",
+        "title": "信号完整性完整方法论",
+        "info": "详细介绍了串扰分析、反射控制、阻抗匹配和计算公式，包括耦合传输线建模技术"
+      },
+      "https://www.sciencedirect.com/science/article/pii/S0167926024001032": {
+        "id": 23,
+        "publisher": "ScienceDirect - Integration期刊",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0167926024001032",
+        "title": "模拟集成电路布局器件匹配约束提取",
+        "info": "介绍了基于机器学习的器件匹配约束提取方法，包括异构多关系图表示和对称性分析"
+      },
+      "https://www.ewh.ieee.org/r5/denver/rockymountainemc/archive/2004/June/SI_101.pdf": {
+        "id": 24,
+        "publisher": "IEEE Rocky Mountain EMC",
+        "url": "https://www.ewh.ieee.org/r5/denver/rockymountainemc/archive/2004/June/SI_101.pdf",
+        "title": "信号完整性基础理论",
+        "info": "提供了信号完整性的完整理论基础，包括传输线理论、反射控制、串扰分析和建模方法"
+      },
+      "https://www.ewh.ieee.org/r5/denver/sscs/References/2001_05_Achar.pdf": {
+        "id": 25,
+        "publisher": "IEEE Proceedings",
+        "url": "https://www.ewh.ieee.org/r5/denver/sscs/References/2001_05_Achar.pdf",
+        "title": "高速互连仿真技术",
+        "info": "详细介绍了传输线建模、模型降阶技术、矩匹配算法和性能分析，包括AWE、CFH、Arnoldi和PRIMA算法"
+      },
+      "http://www.jos.ac.cn/article/doi/10.1088/1674-4926/37/8/085003": {
+        "id": 26,
+        "publisher": "Journal of Semiconductors",
+        "url": "http://www.jos.ac.cn/article/doi/10.1088/1674-4926/37/8/085003",
+        "title": "IC互连寄生电容对工艺变化的敏感度分析",
+        "info": "介绍了双离散几何方法(DGMs)在寄生电容敏感度分析中的应用，包括数学推导和验证结果"
+      },
+      "https://www3.nd.edu/~kogge/courses/cse40462-VLSI-fa18/www/Public/Lectures/Design_Rules.pdf": {
+        "id": 27,
+        "publisher": "圣母大学",
+        "url": "https://www3.nd.edu/~kogge/courses/cse40462-VLSI-fa18/www/Public/Lectures/Design_Rules.pdf",
+        "title": "VLSI设计规则",
+        "info": "详细介绍了VLSI设计中的几何约束和最小尺寸要求，包括Lambda规则系统和工艺相关设计规则"
+      },
+      "https://picture.iczhiku.com/resource/eetop/WHIfpIKOkSZFpmcC.pdf": {
+        "id": 28,
+        "publisher": "电子技术应用网",
+        "url": "https://picture.iczhiku.com/resource/eetop/WHIfpIKOkSZFpmcC.pdf",
+        "title": "模拟版图设计考虑",
+        "info": "全面介绍了模拟版图设计中的器件匹配技术、精度计算方法和失效机制分析"
+      },
+      "https://cseweb.ucsd.edu/classes/fa12/cse291-c/slides/L5extract.pdf": {
+        "id": 29,
+        "publisher": "加州大学圣地亚哥分校",
+        "url": "https://cseweb.ucsd.edu/classes/fa12/cse291-c/slides/L5extract.pdf",
+        "title": "互连寄生参数提取",
+        "info": "详细介绍了RLC寄生参数的计算方法，包括电阻、电容和电感的提取技术和数值方法"
+      },
+      "https://cmrft.sjtu.edu.cn/RFHI/Kindeditor/Upload/file/20240529/202405291409148140988.pdf": {
+        "id": 30,
+        "publisher": "上海交通大学",
+        "url": "https://cmrft.sjtu.edu.cn/RFHI/Kindeditor/Upload/file/20240529/202405291409148140988.pdf",
+        "title": "多层电源分配网络的DC IR-Drop分析",
+        "info": "介绍了不连续Galerkin方法在电源网络IR drop分析中的应用，包括电-热耦合模型和优化策略"
+      }
+    }
+  }
+}

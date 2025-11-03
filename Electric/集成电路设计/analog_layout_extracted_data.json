@@ -1,0 +1,163 @@
+{
+  "title": "模拟版图设计技术文档",
+  "source": "https://picture.iczhiku.com/resource/eetop/WHIfpIKOkSZFpmcC.pdf",
+  "extraction_date": "2025-11-02",
+  "total_pages": 65,
+  "chapters": [
+    {
+      "page": 1,
+      "title": "1\nHong-Yi Huang 黃弘一Chapter 3  Analog Layout Consideration\n-Failure Mechanism\n-Matching Issues\n-Desig..."
+    }
+  ],
+  "matching_content": [
+    {
+      "page": 1,
+      "keyword": "matching",
+      "content": "1\nHong-Yi Huang 黃弘一Chapter 3  Analog Layout Consideration\n-Failure Mechanism\n-Matching Issues\n-Design for Low Offset and Drift\n-Matching Capacitors\n-Matching Resistors"
+    },
+    {
+      "page": 3,
+      "keyword": "matching",
+      "content": "3\nHong-Yi Huang 黃弘一Matching Issues\nlateral diffusion\netching under protection\nboundary dependent etching\nthree dimensional effects\nerrors and limitations associated with mask production \nand mask alignment\nthe effects must be avoided or compensated"
+    },
+    {
+      "page": 4,
+      "keyword": "matching",
+      "content": "4\nHong-Yi Huang 黃弘一Matching Issues\n(a) Lateral diffusion; (b) etching under th e protection; (c) boundary depende nt etching."
+    },
+    {
+      "page": 5,
+      "keyword": "matching",
+      "content": "5\nHong-Yi Huang 黃弘一Matching Issues\nVarious  two-dimensional effects causing sizes of realized microcir cuit compone nts to \ndiffer from sizes of  layout masks.\nError in the pattern size due  to tri-dimensiona l effects."
+    },
+    {
+      "page": 6,
+      "keyword": "matching",
+      "content": "6\nHong-Yi Huang 黃弘一Design for Low Offset and Drift\nglobal performance of analog circuit is strongly dependent on absolute\nand relative accuracy of basic component\naccuracy depends on relevant properties of materials and geometry\nof components\nabsolute accuracy can be controlled at technology level\nrelative inaccuracy, due to gradients and local variation, controlled at\ntechnology level, can be compensated with suitable layout techniques\nparameters depend on different technology steps, assum..."
+    },
+    {
+      "page": 7,
+      "keyword": "matching",
+      "content": "7\nHong-Yi Huang 黃弘一Design for Low Offset and Drift\ncompensate gradient effects with interdigitized and common centroid layout\nmatched devices operated at same temperature, realign to same isothermal\nincreasing sizes of devices for better matching\nminimum distance from each other\nlayout devices with same orientation with respect to silicon crystal,\nputting them in parallel, current tack same direction (MOS has different\nmobility in different orientation)\nsame area to perimeter ration\neasie..."
+    },
+    {
+      "page": 11,
+      "keyword": "dummy",
+      "content": "11\nHong-Yi Huang 黃弘一Boundary Condition\nBoundary dependent etching.\nCompensation of B oundary dependent etching with dummy elements."
+    },
+    {
+      "page": 13,
+      "keyword": "dummy",
+      "content": "13\nHong-Yi Huang 黃弘一Dummy Layout for Capacitor\n"
+    },
+    {
+      "page": 18,
+      "keyword": "symmetry",
+      "content": "18\nHong-Yi Huang 黃弘一Sample interdigitation patterns for arrays having one \naxis of symmetry.\n"
+    },
+    {
+      "page": 20,
+      "keyword": "common centroid",
+      "content": "20\nHong-Yi Huang 黃弘一Examples of two dimensional common centroid arrays.\n"
+    },
+    {
+      "page": 42,
+      "keyword": "guard ring",
+      "content": "42\nHong-Yi Huang 黃弘一Electron-Collecting Minority-Carrier Guard Ring\nSample electron-collecting minority-carrier guard ring (T 3) \nimplemented in a standard bipolar process ."
+    },
+    {
+      "page": 43,
+      "keyword": "guard ring",
+      "content": "43\nHong-Yi Huang 黃弘一Electron-Collecting Guard Ring\nCross sections of two representative electron-collecting guard \nrings: (a) standard bipolar and (b) CMOS."
+    },
+    {
+      "page": 44,
+      "keyword": "guard ring",
+      "content": "44\nHong-Yi Huang 黃弘一Improved Minority-Carrier Guard Ring\nCross sections of an improved minority-carrier guard ring for \ncollecting electrons injected into the substrate."
+    },
+    {
+      "page": 45,
+      "keyword": "guard ring",
+      "content": "45\nHong-Yi Huang 黃弘一Collecting Holes into a Tank\nCross sections of a minority-carrier guard ring for collecting \nholes injected into a tank."
+    },
+    {
+      "page": 46,
+      "keyword": "matching",
+      "content": "46\nHong-Yi Huang 黃弘一Matching capacitors using identical area-to-\nperiphery ratios.\nEffects of epitaxy on surface discontinuities (a) pattern \nshift, (b) pattern distortion,and (c)  pattern washout.\n"
+    },
+    {
+      "page": 48,
+      "keyword": "dummy",
+      "content": "48\nHong-Yi Huang 黃弘一Variations in etch rate in an array of supposedly matched \nresistors. The exposed outer edges of the resistors \nexperience overetching relative to the protected inner edges.\nExamples of (a) unconnected dummy resistors and (b) \nconnected dummy resistors.\n"
+    },
+    {
+      "page": 54,
+      "keyword": "common centroid",
+      "content": "54\nHong-Yi Huang 黃弘一Locations for placing common centroid arrays on (100) \nand (111) dice, in the latter case assuming an axis of \ndistribution around the <211> axis.\n"
+    },
+    {
+      "page": 55,
+      "keyword": "symmetry",
+      "content": "55\nHong-Yi Huang 黃弘一Typical thermal impedances for several common \ntypes of packages.\nIsothermal contour plot of a die having only one major \nheat source. The axis of symmetry of the thermal \ndistribution is marked by a dotted line.\n"
+    },
+    {
+      "page": 56,
+      "keyword": "matching",
+      "content": "56\nHong-Yi Huang 黃弘一Various arrangements of one, two, and four power devices \nfor optimal thermal matching. The power devices are shown \nas dark gray rectangles, and the axes of symmetry created by \ntheir placement are shown as dotted lines. \n"
+    },
+    {
+      "page": 60,
+      "keyword": "interdigitated",
+      "content": "60\nHong-Yi Huang 黃弘一Portion of an interdigitated HSR array implemented in \na single-level metal process showing the placement \nof a jumper between segments.\n"
+    }
+  ],
+  "precision_content": [
+    {
+      "page": 1,
+      "keyword": "offset",
+      "content": "1\nHong-Yi Huang 黃弘一Chapter 3  Analog Layout Consideration\n-Failure Mechanism\n-Matching Issues\n-Design for Low Offset and Drift\n-Matching Capacitors\n-Matching Resistors"
+    },
+    {
+      "page": 2,
+      "keyword": "mismatch",
+      "content": "2\nHong-Yi Huang 黃弘一Histogram of the mismatch, δ, of 30 units, \nshowing mean, m δ, and standard deviation, s δ.\n"
+    },
+    {
+      "page": 6,
+      "keyword": "accuracy",
+      "content": "6\nHong-Yi Huang 黃弘一Design for Low Offset and Drift\nglobal performance of analog circuit is strongly dependent on absolute\nand relative accuracy of basic component\naccuracy depends on relevant properties of materials and geometry\nof components\nabsolute accuracy can be controlled at technology level\nrelative inaccuracy, due to gradients and local variation, controlled at\ntechnology level, can be compensated with suitable layout techniques\nparameters depend on different technology steps, assum..."
+    },
+    {
+      "page": 7,
+      "keyword": "offset",
+      "content": "7\nHong-Yi Huang 黃弘一Design for Low Offset and Drift\ncompensate gradient effects with interdigitized and common centroid layout\nmatched devices operated at same temperature, realign to same isothermal\nincreasing sizes of devices for better matching\nminimum distance from each other\nlayout devices with same orientation with respect to silicon crystal,\nputting them in parallel, current tack same direction (MOS has different\nmobility in different orientation)\nsame area to perimeter ration\neasie..."
+    },
+    {
+      "page": 15,
+      "keyword": "mismatch",
+      "content": "15\nHong-Yi Huang 黃弘一Random Mismatches due to Microscopic Variations\n"
+    },
+    {
+      "page": 26,
+      "keyword": "drift",
+      "content": "26\nHong-Yi Huang 黃弘一Surface Effects\nHot carrier Injection\nA weak electric field causes an overall drift of carriers but \ndoes not materially affect their instantaneous velocity (a), \nwhile a strong electric field actually increases the \ninstantaneous velocity of the carriers."
+    },
+    {
+      "page": 48,
+      "keyword": "variation",
+      "content": "48\nHong-Yi Huang 黃弘一Variations in etch rate in an array of supposedly matched \nresistors. The exposed outer edges of the resistors \nexperience overetching relative to the protected inner edges.\nExamples of (a) unconnected dummy resistors and (b) \nconnected dummy resistors.\n"
+    },
+    {
+      "page": 58,
+      "keyword": "offset",
+      "content": "58\nHong-Yi Huang 黃弘一An HSR resistor with widely separated contacts (a) is \nprone to thermoelectric-induced offsets. Placing the \ncontacts close together (b) minimizes thermoelectrics, \nbut may increase variation due to misalignment. \nPlacing the contacts close together and oriented in \nopposite directions (c) fixes both problems .\n"
+    }
+  ],
+  "full_text": "\n--- 第 1 页 ---\n1\nHong-Yi Huang 黃弘一Chapter 3  Analog Layout Consideration\n-Failure Mechanism\n-Matching Issues\n-Design for Low Offset and Drift\n-Matching Capacitors\n-Matching Resistors\n\n--- 第 2 页 ---\n2\nHong-Yi Huang 黃弘一Histogram of the mismatch, δ, of 30 units, \nshowing mean, m δ, and standard deviation, s δ.\n\n\n--- 第 3 页 ---\n3\nHong-Yi Huang 黃弘一Matching Issues\nlateral diffusion\netching under protection\nboundary dependent etching\nthree dimensional effects\nerrors and limitations associated with mask production \nand mask alignment\nthe effects must be avoided or compensated\n\n--- 第 4 页 ---\n4\nHong-Yi Huang 黃弘一Matching Issues\n(a) Lateral diffusion; (b) etching under th e protection; (c) boundary depende nt etching.\n\n--- 第 5 页 ---\n5\nHong-Yi Huang 黃弘一Matching Issues\nVarious  two-dimensional effects causing sizes of realized microcir cuit compone nts to \ndiffer from sizes of  layout masks.\nError in the pattern size due  to tri-dimensiona l effects.\n\n--- 第 6 页 ---\n6\nHong-Yi Huang 黃弘一Design for Low Offset and Drift\nglobal performance of analog circuit is strongly dependent on absolute\nand relative accuracy of basic component\naccuracy depends on relevant properties of materials and geometry\nof components\nabsolute accuracy can be controlled at technology level\nrelative inaccuracy, due to gradients and local variation, controlled at\ntechnology level, can be compensated with suitable layout techniques\nparameters depend on different technology steps, assume to be\nstatistically independent, by summing up various error contribution\nuse dimensions larger than ones indicated to have inaccuracy not\ndominated by geometry parameters\ndistance of matched elements increases matching accuracy worsens\n\n--- 第 7 页 ---\n7\nHong-Yi Huang 黃弘一Design for Low Offset and Drift\ncompensate gradient effects with interdigitized and common centroid layout\nmatched devices operated at same temperature, realign to same isothermal\nincreasing sizes of devices for better matching\nminimum distance from each other\nlayout devices with same orientation with respect to silicon crystal,\nputting them in parallel, current tack same direction (MOS has different\nmobility in different orientation)\nsame area to perimeter ration\neasier to match round devices than square devices, the number of bends\nand corners in the connection between pairs must be the same\n\n--- 第 8 页 ---\n8\nHong-Yi Huang 黃弘一Identification of directions on (100) and (111) wafers.\n\n\n--- 第 9 页 ---\n9\nHong-Yi Huang 黃弘一Coefficients of thermal expansion (CTE) for several \nmaterials used in packaging integrated circuits.\n\n\n--- 第 10 页 ---\n10\nHong-Yi Huang 黃弘一Chip Layout with Isotherms\n\n\n--- 第 11 页 ---\n11\nHong-Yi Huang 黃弘一Boundary Condition\nBoundary dependent etching.\nCompensation of B oundary dependent etching with dummy elements.\n\n--- 第 12 页 ---\n12\nHong-Yi Huang 黃弘一Current Oriented Match\n\n\n--- 第 13 页 ---\n13\nHong-Yi Huang 黃弘一Dummy Layout for Capacitor\n\n\n--- 第 14 页 ---\n14\nHong-Yi Huang 黃弘一Contact\nMany contacts, with minimum spacing, l ead to reduced curvature of the   \nsurface of the metal, thus reducing the risk of micro-fractures (potential \nsource of failure) in the body of the metal connections.\n\n--- 第 15 页 ---\n15\nHong-Yi Huang 黃弘一Random Mismatches due to Microscopic Variations\n\n\n--- 第 16 页 ---\n16\nHong-Yi Huang 黃弘一Weight Current Cell Layout\nThe same boundary condition\n\n\n--- 第 17 页 ---\n17\nHong-Yi Huang 黃弘一Locating (a) the centroids of a rectangle and (b) \ndogbone resistor.\nExamples of one-dimensional common-centroid arrays.\n\n\n--- 第 18 页 ---\n18\nHong-Yi Huang 黃弘一Sample interdigitation patterns for arrays having one \naxis of symmetry.\n\n\n--- 第 19 页 ---\n19\nHong-Yi Huang 黃弘一The four rules of common-centroid layout.\n\n\n--- 第 20 页 ---\n20\nHong-Yi Huang 黃弘一Examples of two dimensional common centroid arrays.\n\n\n--- 第 21 页 ---\n21\nHong-Yi Huang 黃弘一Sample interdigitation patterns for two-dimensional \ncommon- centroid arrays.\n\n\n--- 第 22 页 ---\n22\nHong-Yi Huang 黃弘一Failure Mechanisms\nESD –electrostatic discharge\nRepresentative ESD tests: 2kV human body model (a) and 200V \nmachine model (b) In both circuits, DUT stands for device under test.\n\n--- 第 23 页 ---\n23\nHong-Yi Huang 黃弘一Electromigration\nThe antenna Effect\nA layout susceptible to the antenna effect (a) can be \nmade immune by the addition of a metal jumper (b)\n\n--- 第 24 页 ---\n24\nHong-Yi Huang 黃弘一Contamination\nDryCorrosion\nMobile Ion Contamination\nBehavior of mobile ions un der bias: ions that were \nrandomly distributed through the oxide (a) shift in \nunison in response to a positive gate bias (b)\n\n--- 第 25 页 ---\n25\nHong-Yi Huang 黃弘一Scribe Seals\nScribe seals for single- and double-level-metal variants of a \nCMOS or BiCMOS process. Depending on the manufacturer, \nvarious diffusions may also be placed over the scribe street.\n\n--- 第 26 页 ---\n26\nHong-Yi Huang 黃弘一Surface Effects\nHot carrier Injection\nA weak electric field causes an overall drift of carriers but \ndoes not materially affect their instantaneous velocity (a), \nwhile a strong electric field actually increases the \ninstantaneous velocity of the carriers.\n\n--- 第 27 页 ---\n27\nHong-Yi Huang 黃弘一Hot Carrier Injection\nSimplified diagram showing the mechanism responsible for \nhot electron injection in an NMOS transistor.\n\n--- 第 28 页 ---\n28\nHong-Yi Huang 黃弘一Zener Walkout Mechanism\nSimplified diagram showing Zener walkout mechanism: (a) \ninitial condition of junction, in which hot carrier production \noccurs near the surface; (b) condition of junction after \nextended period of operation.\n\n--- 第 29 页 ---\n29\nHong-Yi Huang 黃弘一Parasitic Channels and Charge Spreading\nParasitic PMOS in a standard bipolar process (a) and parasitic \nNMOS in an N-well CMOS process (b).\n\n--- 第 30 页 ---\n30\nHong-Yi Huang 黃弘一Charge Spreading\nCross section of a standard bipolar structure susceptible to \ncharge spreading: (a) before and (b) after an extended period \nof operation under bias.\n\n--- 第 31 页 ---\n31\nHong-Yi Huang 黃弘一Parasitic PMOS Channel Formation\nExample of a circuit susceptible to parasitic PMOS channel \nformation.\n\n--- 第 32 页 ---\n32\nHong-Yi Huang 黃弘一Preventing PMOS Channels\nTwo methods for preventing parasitic PMOS channels: (a) \nchannel stops prevent channel formation beneath leads but do \nnot stop charge spreading and (b) field plates provide \nrelatively complete coverage, except possibly in the gap \nbetween the plates.\n\n--- 第 33 页 ---\n33\nHong-Yi Huang 黃弘一Improved Field Plating Schemes\nImproved field plating schemes: (a) flanged field plates and (b) \ncombination of field plates and channel stops.\n\n--- 第 34 页 ---\n34\nHong-Yi Huang 黃弘一Partial Field Plate\nExample of partial field plating.\n\n--- 第 35 页 ---\n35\nHong-Yi Huang 黃弘一Elimination of Parasitic PMOS Channel\nThe parasitic PMOS channel beneath a poly lead (a) can be \neliminated by pulling poly inside the well (b).\n\n--- 第 36 页 ---\n36\nHong-Yi Huang 黃弘一Prevention of NMOS Channels\nSample layout showing the use of PSD rings to prevent NMOS \nchannels.\n\n--- 第 37 页 ---\n37\nHong-Yi Huang 黃弘一Parasitics\nSubstrate Debiasing\nCross section of a standard bipolar die showing potential \nsubstrate debiasing caused by substrate resistance Rs.\n\n--- 第 38 页 ---\n38\nHong-Yi Huang 黃弘一Forward Voltages of Typical \nCollector-Substrate Junction\nForward voltages for a typical collector-substrate junction of a \nminimum NPN transistor in standard bipolar, as a function of \ntemperature and current.\n\n--- 第 39 页 ---\n39\nHong-Yi Huang 黃弘一\nSimplified model of substrate debiasing in a standard bipolar \nprocess.\n\n--- 第 40 页 ---\n40\nHong-Yi Huang 黃弘一Minority-Carrier Injection\nExample of minority-carrier injection into the substrate of a \nstandard bipolar process. Lateral NPN transistor Q P models \nthe transit of minority-carries across the isolation.\n\n--- 第 41 页 ---\n41\nHong-Yi Huang 黃弘一Parasitic BJTs of CMOS\n(a) Cross section of a CMOS die showing diffusions that form \nthe two parasitic bipolar transistors Q Pand Q N;(b) equivalent \nschematic showing these transistors along with well \nresistance R 1and substrate resistance R 2.\n\n--- 第 42 页 ---\n42\nHong-Yi Huang 黃弘一Electron-Collecting Minority-Carrier Guard Ring\nSample electron-collecting minority-carrier guard ring (T 3) \nimplemented in a standard bipolar process .\n\n--- 第 43 页 ---\n43\nHong-Yi Huang 黃弘一Electron-Collecting Guard Ring\nCross sections of two representative electron-collecting guard \nrings: (a) standard bipolar and (b) CMOS.\n\n--- 第 44 页 ---\n44\nHong-Yi Huang 黃弘一Improved Minority-Carrier Guard Ring\nCross sections of an improved minority-carrier guard ring for \ncollecting electrons injected into the substrate.\n\n--- 第 45 页 ---\n45\nHong-Yi Huang 黃弘一Collecting Holes into a Tank\nCross sections of a minority-carrier guard ring for collecting \nholes injected into a tank.\n\n--- 第 46 页 ---\n46\nHong-Yi Huang 黃弘一Matching capacitors using identical area-to-\nperiphery ratios.\nEffects of epitaxy on surface discontinuities (a) pattern \nshift, (b) pattern distortion,and (c)  pattern washout.\n\n\n--- 第 47 页 ---\n47\nHong-Yi Huang 黃弘一Layout showing an intersection of the NBL \nshadow with the leftmost base resistor.\n\n\n--- 第 48 页 ---\n48\nHong-Yi Huang 黃弘一Variations in etch rate in an array of supposedly matched \nresistors. The exposed outer edges of the resistors \nexperience overetching relative to the protected inner edges.\nExamples of (a) unconnected dummy resistors and (b) \nconnected dummy resistors.\n\n\n--- 第 49 页 ---\n49\nHong-Yi Huang 黃弘一Matched capacitor array employing grounded \ndummies. The metal-2 electrostatic shield covering \nthis array has been omitted for clarity.\n\n\n--- 第 50 页 ---\n50\nHong-Yi Huang 黃弘一Matched array of diffused base resistors including \ngrounded dummies.\n\n\n--- 第 51 页 ---\n51\nHong-Yi Huang 黃弘一Examples of additional opportunities for reducing \ndiffusion interactions (a) poor serpentine resistor \nlayout and (b) improved layout;  (c) poor placement of \ndeep-N+ sinker and (d) improved placement.\n\n\n--- 第 52 页 ---\n52\nHong-Yi Huang 黃弘一Isobaric contour plot of the stress distribution across \nthe surface of a typical epoxy-mounted plastic-\npackaged(100) silicon die, together with two graphs \nshowing the stress along section lines A-A and B-B.\n\n\n--- 第 53 页 ---\n53\nHong-Yi Huang 黃弘一Isobaric contour plot showing regions of highest and \nlowest stress gradient.\n\n\n--- 第 54 页 ---\n54\nHong-Yi Huang 黃弘一Locations for placing common centroid arrays on (100) \nand (111) dice, in the latter case assuming an axis of \ndistribution around the <211> axis.\n\n\n--- 第 55 页 ---\n55\nHong-Yi Huang 黃弘一Typical thermal impedances for several common \ntypes of packages.\nIsothermal contour plot of a die having only one major \nheat source. The axis of symmetry of the thermal \ndistribution is marked by a dotted line.\n\n\n--- 第 56 页 ---\n56\nHong-Yi Huang 黃弘一Various arrangements of one, two, and four power devices \nfor optimal thermal matching. The power devices are shown \nas dark gray rectangles, and the axes of symmetry created by \ntheir placement are shown as dotted lines. \n\n\n--- 第 57 页 ---\n57\nHong-Yi Huang 黃弘一(a) Improper connection of resistor segments causes \ntheir thermoelectric potentials to add, while (b) proper \nconnection of the segments cancels the thermoelectrics.\n\n\n--- 第 58 页 ---\n58\nHong-Yi Huang 黃弘一An HSR resistor with widely separated contacts (a) is \nprone to thermoelectric-induced offsets. Placing the \ncontacts close together (b) minimizes thermoelectrics, \nbut may increase variation due to misalignment. \nPlacing the contacts close together and oriented in \nopposite directions (c) fixes both problems .\n\n\n--- 第 59 页 ---\n59\nHong-Yi Huang 黃弘一Two HSR resistors connected in order to cancel both \nthermoelectrics and tank modulation effects.\n\n\n--- 第 60 页 ---\n60\nHong-Yi Huang 黃弘一Portion of an interdigitated HSR array implemented in \na single-level metal process showing the placement \nof a jumper between segments.\n\n\n--- 第 61 页 ---\n61\nHong-Yi Huang 黃弘一The concept of an electrostatic shield: (a) cross \nsection and (b) equivalent circuit.\n\n\n--- 第 62 页 ---\n62\nHong-Yi Huang 黃弘一Example of electrostatic shielding applied to a \nmatched poly resistor array.\n\n\n--- 第 63 页 ---\n63\nHong-Yi Huang 黃弘一HSR resistor array, field-plated to minimize charge \nspreading. With the exception of its metallization \npattern, this array matches the one in page 52.\n\n\n--- 第 64 页 ---\n64\nHong-Yi Huang 黃弘一HSR resistor array, field-plated to minimize dielectric \npolarization as well as to charge spreading and \nthermoelectrics (compare with page 56).\n\n\n--- 第 65 页 ---\n65\nHong-Yi Huang 黃弘一Cross section of a poly-poly capacitor incorporating \nan electrostatic shield plate. Note the overlap of the \nelectrostatic plate over the upper electrode.\n\n",
+  "key_topics": [
+    {
+      "page": 1,
+      "content": "1\nHong-Yi Huang 黃弘一Chapter 3  Analog Layout Consideration\n-Failure Mechanism\n-Matching Issues\n-Design for Low Offset and Drift\n-Matching Capacitors\n-Matching Resistors"
+    }
+  ]
+}

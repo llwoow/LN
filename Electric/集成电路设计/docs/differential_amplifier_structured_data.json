@@ -1,0 +1,379 @@
+{
+  "title": "差分放大器设计技术数据",
+  "version": "1.0",
+  "date": "2025-11-02",
+  "basic_principles": {
+    "circuit_structure": {
+      "description": "对称的双晶体管对（BJT/MOSFET）+ 恒流源 + 负载电阻的经典拓扑",
+      "components": [
+        "对称双晶体管对",
+        "恒流源偏置",
+        "负载电阻",
+        "差分输出"
+      ]
+    },
+    "signal_definition": {
+      "differential_mode": {
+        "definition": "Vid = Vin1 - Vin2",
+        "characteristics": "两个输入端信号大小相等，相位相反",
+        "purpose": "差分放大器的主要放大对象"
+      },
+      "common_mode": {
+        "definition": "Vic = (Vin1 + Vin2) / 2",
+        "characteristics": "两个输入端信号大小相等，相位相同",
+        "purpose": "需要被抑制的共模干扰"
+      },
+      "output_signals": {
+        "differential_output": "Vod = Vout1 - Vout2",
+        "common_output": "Voc = (Vout1 + Vout2) / 2"
+      }
+    }
+  },
+  "mathematical_analysis": {
+    "differential_gain": {
+      "formula": "Ad = Vod / Vid ≈ -gm × Rc",
+      "variables": {
+        "Ad": "差模增益",
+        "gm": "晶体管跨导",
+        "Rc": "集电极电阻"
+      },
+      "derivation": "差模信号作用下，两个晶体管电流变化相反，总电流保持恒定，输出电压变化为ΔVout = -gm × Vid × Rc"
+    },
+    "common_mode_gain": {
+      "formula": "Ac = Voc / Vic ≈ -Rc / (2 × ro)",
+      "variables": {
+        "Ac": "共模增益",
+        "ro": "晶体管输出电阻"
+      },
+      "derivation": "共模信号作用下，两个晶体管电流变化相同，恒流源抑制电流变化，输出电压变化主要由晶体管输出电阻决定"
+    },
+    "cmrr": {
+      "formula": "CMRR = |Ad| / |Ac|",
+      "ideal_case": "Ad → ∞, Ac → 0, CMRR → ∞",
+      "practical_calculation": "CMRR = gm × ro"
+    }
+  },
+  "performance_specifications": {
+    "differential_mode_performance": {
+      "differential_gain": {
+        "definition": "放大差模信号的能力",
+        "calculation": "Ad = -gm × Rc",
+        "design_requirement": "根据应用需求确定合适的增益"
+      },
+      "input_impedance": {
+        "bjt_formula": "Rid ≈ 2 × β × rπ",
+        "mosfet_formula": "Rid ≈ 2 / gm",
+        "requirement": "高输入阻抗以减少信号源负载"
+      },
+      "bandwidth": {
+        "definition": "差模增益下降3dB的频率",
+        "factors": ["晶体管fT", "负载电容", "Miller效应"]
+      }
+    },
+    "common_mode_performance": {
+      "common_mode_gain": {
+        "definition": "对共模信号的放大倍数",
+        "ideal_value": "Ac ≈ 0",
+        "practical_value": "Ac = -Rc/(2 × ro)"
+      },
+      "cmrr": {
+        "definition": "CMRR = |Ad|/|Ac|",
+        "ideal_value": "∞",
+        "practical_requirement": ">80dB（精密应用）"
+      }
+    },
+    "other_indicators": {
+      "psrr": {
+        "definition": "输出对电源噪声的抑制能力",
+        "calculation": "PSRR = Ad / A_ps",
+        "requirement": ">60dB"
+      },
+      "offset_voltage": {
+        "definition": "零输入时的输出电压",
+        "sources": ["晶体管参数失配", "电阻失配"],
+        "requirement": "<1mV（精密应用）"
+      },
+      "offset_current": {
+        "definition": "零输入时的基极/栅极电流差",
+        "sources": "晶体管β失配",
+        "requirement": "<1nA"
+      }
+    }
+  },
+  "error_sources": {
+    "component_mismatch": {
+      "resistor_mismatch": {
+        "impact": "降低CMRR",
+        "calculation": "ΔR/R对CMRR的影响",
+        "control": "使用精密匹配电阻（0.1%精度）"
+      },
+      "transistor_parameter_mismatch": {
+        "vbe_mismatch": "导致失调电压",
+        "beta_mismatch": "导致失调电流",
+        "gm_mismatch": "影响增益精度"
+      }
+    },
+    "current_source_nonideality": {
+      "finite_output_resistance": {
+        "impact": "增加共模增益",
+        "improvement": "使用级联电流源、威尔逊电流源"
+      },
+      "temperature_coefficient": {
+        "impact": "温度漂移",
+        "control": "使用温度补偿技术"
+      }
+    },
+    "frequency_response_limitations": {
+      "pole_frequencies": {
+        "main_pole": "由负载电容决定",
+        "secondary_pole": "由晶体管结电容决定"
+      },
+      "miller_effect": {
+        "impact": "降低高频增益",
+        "control": "Miller补偿技术"
+      }
+    }
+  },
+  "optimization_strategies": {
+    "precision_resistor_matching": {
+      "selection_criteria": {
+        "accuracy": "0.1%或更好",
+        "temperature_coefficient": "<50ppm/°C",
+        "layout": "对称布局，最小化寄生效应"
+      },
+      "laser_trimming": {
+        "principle": "通过激光调整电阻值",
+        "accuracy": "可达0.01%",
+        "application": "高精度差分放大器"
+      }
+    },
+    "improved_current_sources": {
+      "wilson_current_source": {
+        "structure": "三级晶体管结构",
+        "advantages": "高输出电阻，低温度系数",
+        "application": "精密差分放大器"
+      },
+      "cascode_current_source": {
+        "structure": "共源-共栅结构",
+        "advantages": "极高的输出电阻",
+        "application": "超精密应用"
+      }
+    },
+    "input_stage_matching": {
+      "bjt_differential_pair": {
+        "process": "同一芯片上的匹配晶体管",
+        "matching_parameters": ["VBE", "β", "gm"],
+        "technology": "版图对称设计"
+      },
+      "mosfet_differential_pair": {
+        "process": "同一芯片上的匹配MOSFET",
+        "matching_parameters": ["阈值电压", "跨导"],
+        "technology": "版图对称、栅极面积优化"
+      }
+    },
+    "temperature_compensation": {
+      "temperature_coefficient_matching": {
+        "principle": "使所有器件的温度系数相同",
+        "implementation": "使用相同类型的器件",
+        "effect": "减小温度漂移"
+      },
+      "active_temperature_compensation": {
+        "principle": "使用温度传感器补偿",
+        "implementation": "数字或模拟补偿电路",
+        "accuracy": "可达到ppm级别"
+      }
+    }
+  },
+  "ltspice_simulation": {
+    "basic_circuit_model": "完整的LTspice网表模型",
+    "static_analysis": {
+      "command": ".op",
+      "checks": ["晶体管工作状态", "偏置电流", "直流电压"]
+    },
+    "differential_mode_simulation": {
+      "command": ".ac dec 100 1 1meg",
+      "measurements": ["低频差模增益", "-3dB带宽", "频率响应"]
+    },
+    "common_mode_simulation": {
+      "setup": "共模输入测试",
+      "measurements": ["共模增益", "CMRR频率响应"]
+    },
+    "transient_simulation": {
+      "command": ".tran 0 1ms 0 1us",
+      "measurements": ["建立时间", "过冲", "稳定时间"]
+    }
+  },
+  "application_scenarios": {
+    "bioelectric_signal_acquisition": {
+      "ecg_application": {
+        "signal_characteristics": "0.5-4mV，0.05-100Hz",
+        "requirements": "高CMRR（>80dB）、低噪声",
+        "design_points": [
+          "高输入阻抗（>10MΩ）",
+          "低失调电压（<100μV）",
+          "良好的温度稳定性"
+        ]
+      },
+      "eeg_application": {
+        "signal_characteristics": "10-100μV，0.5-70Hz",
+        "requirements": "超低噪声、超高CMRR（>100dB）",
+        "design_points": [
+          "极低噪声设计",
+          "多级差分放大",
+          "精密匹配技术"
+        ]
+      }
+    },
+    "precision_sensor_signal_conditioning": {
+      "pressure_sensor": {
+        "signal_characteristics": "4-20mA电流信号",
+        "requirements": "高精度、高线性度",
+        "design_points": [
+          "电流-电压转换",
+          "温度补偿",
+          "长期稳定性"
+        ]
+      },
+      "temperature_sensor": {
+        "signal_characteristics": "毫伏级电压信号",
+        "requirements": "低漂移、高精度",
+        "design_points": [
+          "斩波稳零技术",
+          "数字校准",
+          "温度系数匹配"
+        ]
+      }
+    },
+    "high_speed_communication": {
+      "receiver_preamplifier": {
+        "signal_characteristics": "差分高速信号",
+        "requirements": "宽带宽、低抖动",
+        "design_points": [
+          "宽带设计（>1GHz）",
+          "低噪声系数",
+          "良好的匹配"
+        ]
+      },
+      "adc_frontend": {
+        "signal_characteristics": "高精度模拟信号",
+        "requirements": "低失真、高采样保持能力",
+        "design_points": [
+          "采样保持电路",
+          "抗混叠滤波",
+          "驱动能力设计"
+        ]
+      }
+    },
+    "operational_amplifier_input_stage": {
+      "differential_input_stage": {
+        "function": "提供高输入阻抗和差模放大",
+        "requirements": "高CMRR、低失调",
+        "technologies": [
+          "BJT输入级：高β、低噪声",
+          "MOSFET输入级：超高输入阻抗",
+          "JFET输入级：中等阻抗、低噪声"
+        ]
+      },
+      "chopper_stabilized_amplifier": {
+        "principle": "斩波调制技术",
+        "advantages": "极低失调、低漂移",
+        "applications": "精密测量、仪表放大"
+      }
+    }
+  },
+  "design_examples": {
+    "precision_instrumentation_amplifier": {
+      "specifications": {
+        "differential_gain": "1000（60dB）",
+        "cmrr": ">100dB",
+        "offset_voltage": "<50μV",
+        "bandwidth": "DC-10kHz",
+        "power_supply": "±5V"
+      },
+      "design_calculation": {
+        "current_source_current": "I = 1mA",
+        "load_resistance": "Rc = 5kΩ",
+        "differential_gain": "Ad = -gm × Rc = 1000",
+        "transconductance": "gm = I / VT = 1mA / 26mV ≈ 38.5mS",
+        "gain_verification": "Ad = -38.5mS × 5kΩ ≈ -192.5（需要级联放大器达到1000倍）"
+      }
+    },
+    "high_speed_differential_amplifier": {
+      "specifications": {
+        "bandwidth": ">100MHz",
+        "gain": "10（20dB）",
+        "noise_figure": "<3dB",
+        "power_supply": "3.3V"
+      },
+      "design_strategy": {
+        "technologies": [
+          "MOSFET差分对",
+          "电流模式逻辑（CML）",
+          "差分传输线匹配",
+          "片上终端匹配"
+        ],
+        "key_parameters": {
+          "transconductance": "gm = 50mS",
+          "load_resistance": "Rc = 200Ω",
+          "gain": "Ad = -50mS × 200Ω = -10"
+        }
+      }
+    }
+  },
+  "troubleshooting": {
+    "common_problems": {
+      "insufficient_cmrr": {
+        "causes": ["电阻失配", "晶体管参数不匹配"],
+        "diagnosis": "分别测量差模和共模增益",
+        "solutions": "使用精密匹配元件、优化版图"
+      },
+      "excessive_offset_voltage": {
+        "causes": ["VBE失配", "版图不对称"],
+        "diagnosis": "测量零输入时的输出电压",
+        "solutions": "激光修调、有源失调消除"
+      },
+      "insufficient_bandwidth": {
+        "causes": ["负载电容过大", "Miller效应"],
+        "diagnosis": "频率响应测试",
+        "solutions": "Miller补偿、优化负载"
+      }
+    },
+    "testing_methods": {
+      "dc_testing": [
+        "失调电压测量",
+        "偏置电流测量",
+        "电源电流测量"
+      ],
+      "ac_testing": [
+        "增益频率响应",
+        "相位频率响应",
+        "CMRR频率响应"
+      ],
+      "dynamic_testing": [
+        "瞬态响应",
+        "建立时间",
+        "过冲测量"
+      ]
+    }
+  },
+  "reference_formulas": {
+    "basic_formulas": {
+      "differential_gain": "Ad = -gm × Rc",
+      "common_mode_gain": "Ac = -Rc/(2 × ro)",
+      "cmrr": "CMRR = |Ad|/|Ac| = gm × ro",
+      "input_impedance": "Rid ≈ 2/gm（MOSFET）"
+    },
+    "performance_calculation": {
+      "noise_voltage": "Vn = √(4kTRB)",
+      "offset_voltage": "Vos = ΔVBE + ΔRc/Rc × VBE",
+      "power_supply_rejection": "PSRR = Ad / A_ps"
+    },
+    "design_formulas": {
+      "transconductance_bjt": "gm = IC/VT",
+      "transconductance_mosfet": "gm = 2ID/(VGS-VTH)",
+      "output_resistance_bjt": "ro = VA/IC",
+      "output_resistance_mosfet": "ro = λID",
+      "bandwidth": "f-3dB = 1/(2π × RC × CL)"
+    }
+  }
+}
