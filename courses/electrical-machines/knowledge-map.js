@@ -1,5 +1,10 @@
 // 节点对应现有正文；章内实线表示阅读顺序，跨节点虚线表示注明含义的知识联系。
 window.LN_ELECTRICAL_MACHINES_MAP = {
+  chapters: [
+    { group: '第1章 磁路', description: '基础：从磁场定律到磁路模型' },
+    { group: '第2章 变压器', description: '静止设备：建模、试验与运行' },
+    { group: '第3章 直流电机', description: '旋转设备：机电转换与控制' }
+  ],
   nodes: [
     { section: 'magnetic-sec11', title: '磁路基本定律', note: '安匝、磁通与磁阻' },
     { section: 'magnetic-sec12', title: '铁磁材料与饱和', note: '非线性、磁滞与损耗' },

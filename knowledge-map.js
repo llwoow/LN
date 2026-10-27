@@ -22,7 +22,6 @@
 
     release() {
       if (this.nodes && this.mountedCourseId) snapshots.set(this.mountedCourseId, {
-        positions: Object.fromEntries(this.nodes.map((n) => [n.id, { x: n.x, y: n.y }])),
         view: { ...this.view }, group: this.group, width: this.width, height: this.height
       });
       this.controller?.abort();
@@ -42,7 +41,11 @@
       const counters = new Map();
       this.nodes.forEach((node) => {
         const row = counters.get(node.group) || 0;
-        node.x = 48 + node.group * 350; node.y = 82 + row * 108;
+        // Diagram coordinates are authored by the layout; gestures only change the viewport.
+        Object.defineProperties(node, {
+          x: { value: 48 + node.group * 400, enumerable: true },
+          y: { value: 222 + row * 94, enumerable: true }
+        });
         node.order = row + 1;
         counters.set(node.group, row + 1);
       });
@@ -56,21 +59,21 @@
         if (this.byNode.has(edge.from) && this.byNode.has(edge.to)) this.edges.push({ ...edge, type: 'relation' });
       });
       const saved = snapshots.get(course.id);
-      if (saved) this.nodes.forEach((node) => { const point = saved.positions[node.id]; if (point) Object.assign(node, point); });
       this.group = saved?.group ?? (matchMedia('(max-width: 720px)').matches ? 0 : -1);
       this.view = saved?.view ? { ...saved.view } : { x: 0, y: 0, k: 1 };
       this.width = saved?.width || 0; this.height = saved?.height || 0;
-      this.pointers = new Map(); this.gesture = null; this.query = ''; this.selected = null;
+      this.pointers = new Map(); this.gesture = null; this.query = ''; this.selected = null; this.showRelations = false;
+      this.classList.remove('show-all-relations');
       this.uid = 'ln-map-' + (++sequence);
       this.controller = new AbortController();
       const signal = this.controller.signal;
       const link = (section, text) => '<a href="#course/' + escape(course.id) + '/' + escape(section.id) + '">' + escape(text || section.title) + '</a>';
       this.innerHTML = '<section class="knowledge-map" aria-label="' + escape(course.title) + '知识图谱">' +
         '<div class="map-toolbar"><div class="map-groups" role="group" aria-label="图谱章节"><button data-map-group="-1">全部</button>' + this.groups.map((group, i) => '<button data-map-group="' + i + '">' + escape(group.replace(/^第\d+章\s*/, '')) + '</button>').join('') + '</div>' +
-        '<label class="map-search"><span class="map-search-label">查找节点</span><input type="search" aria-label="查找图谱知识点" placeholder="查找知识点…"></label></div>' +
+        '<label class="map-relation-toggle"><input type="checkbox" aria-label="显示全部知识联系">全部联系</label><label class="map-search"><span class="map-search-label">查找节点</span><input type="search" aria-label="查找图谱知识点" placeholder="查找知识点…"></label></div>' +
         '<div class="map-canvas-wrap"><svg class="map-canvas" tabindex="0" role="group" aria-label="可交互知识图谱，拖动画布移动，滚轮或双指缩放，点击节点阅读。方向键移动，加减号缩放，Home 适应全图。"></svg>' +
-        '<div class="map-zoom" role="group" aria-label="图谱缩放"><button data-map-action="out" aria-label="缩小图谱" title="缩小">−</button><output aria-label="缩放比例">100%</output><button data-map-action="in" aria-label="放大图谱" title="放大">+</button><button data-map-action="fit" class="map-fit">适应全图</button><button data-map-action="reset" title="恢复节点位置">重置</button></div></div>' +
-        '<div class="map-footer"><p>拖动画布或节点 · 滚轮 / 双指缩放 · 点击进入正文</p><div class="map-legend"><span class="map-order-key">阅读顺序</span><span class="map-relation-key">知识联系</span></div></div>' +
+        '<div class="map-zoom" role="group" aria-label="图谱缩放"><button data-map-action="out" aria-label="缩小图谱" title="缩小">−</button><output aria-label="缩放比例">100%</output><button data-map-action="in" aria-label="放大图谱" title="放大">+</button><button data-map-action="fit" class="map-fit">适应全图</button><button data-map-action="reset" title="回到当前章节起点">归位</button></div></div>' +
+        '<div class="map-footer"><p>拖动平移 · 滚轮 / 双指缩放 · 点击进入正文</p><div class="map-legend"><span class="map-order-key">阅读顺序</span><span class="map-relation-key">知识联系</span></div></div>' +
         '<p class="map-status" role="status" aria-live="polite"></p><div class="map-node-context" aria-live="polite"><span>指向或聚焦节点，查看它与其他知识的联系。</span></div>' +
         '<details class="map-connections"><summary>跨知识联系 <span>' + (metadata?.links?.length || 0) + '</span></summary><ul>' + (metadata?.links || []).map((edge) => '<li><div>' + link(byId.get(edge.from), this.byNode.get(edge.from).title) + '<span aria-hidden="true"> → </span>' + link(byId.get(edge.to), this.byNode.get(edge.to).title) + '</div><p>' + escape(edge.description) + '</p></li>').join('') + '</ul></details>' +
         '<details class="map-directory"><summary>全部章节与资料 <span>' + course.sections.length + '</span></summary><div class="map-directory-groups">' + this.groups.map((group) => '<section><h3>' + escape(group) + '</h3><ul>' + course.sections.filter((section) => section.group === group).map((section) => '<li>' + link(section) + '</li>').join('') + '</ul></section>').join('') + '</div></details></section>';
@@ -83,10 +86,22 @@
         marker.append(svg('path', { d: 'M 1 1 L 9 5 L 1 9 Z', class: 'map-arrow-' + type })); defs.append(marker);
       });
       this.canvas.append(defs, this.layer);
+      this.rootElement = svg('g', { class: 'map-course-root' });
+      const rootX = 48 + (this.groups.length - 1) * 200;
+      const rootCenter = rootX + 139;
+      const tree = svg('path', { class: 'map-hierarchy-edge', d: 'M' + rootCenter + ' 70 V90' + this.groups.map((_, index) => ' M' + rootCenter + ' 90 H' + (187 + index * 400) + ' V112').join('') });
+      this.rootElement.append(tree, svg('rect', { x: rootX, y: 12, width: 278, height: 58, rx: 10 }));
+      this.rootElement.append(svg('text', { x: rootCenter, y: 37, 'text-anchor': 'middle', class: 'map-root-title' }, course.title));
+      this.rootElement.append(svg('text', { x: rootCenter, y: 56, 'text-anchor': 'middle', class: 'map-root-note' }, this.groups.length + ' 章 · ' + this.nodes.length + ' 个知识点'));
+      this.layer.append(this.rootElement);
       this.groupElements = this.groups.map((title, index) => {
         const heading = svg('g', { class: 'map-group-heading' });
-        heading.append(svg('text', { x: 48 + index * 350, y: 41 }, title));
-        heading.append(svg('text', { x: 48 + index * 350, y: 63, class: 'map-group-count' }, this.nodes.filter((node) => node.group === index).length + ' 个知识点'));
+        const x = 48 + index * 400;
+        const description = metadata?.chapters?.find((chapter) => chapter.group === title)?.description || this.nodes.filter((node) => node.group === index).length + ' 个知识点 · 按章节阅读';
+        heading.append(svg('path', { class: 'map-hierarchy-edge', d: 'M' + (x + 139) + ' 184 V222', 'marker-end': 'url(#' + this.uid + '-order)' }));
+        heading.append(svg('rect', { x, y: 112, width: 278, height: 72, rx: 10 }));
+        heading.append(svg('text', { x: x + 16, y: 140 }, title));
+        heading.append(svg('text', { x: x + 16, y: 164, class: 'map-group-count' }, short(description, 21)));
         this.layer.append(heading); return heading;
       });
       this.edges.forEach((edge) => {
@@ -97,7 +112,7 @@
       });
       this.nodes.forEach((node) => {
         const anchor = svg('a', { href: '#course/' + course.id + '/' + node.id, class: 'map-node', 'data-node': node.id, tabindex: 0, 'aria-label': node.title + '，打开' + node.section.title });
-        anchor.append(svg('title', {}, node.title + '：' + (node.note || node.section.title) + '。点击阅读，拖动调整位置。'));
+        anchor.append(svg('title', {}, node.title + '：' + (node.note || node.section.title) + '。点击阅读；拖动平移整张图，节点位置固定。'));
         anchor.append(svg('rect', { width: 278, height: 78, rx: 11 }));
         anchor.append(svg('text', { x: 16, y: 22, class: 'map-node-number' }, String(node.order).padStart(2, '0')));
         anchor.append(svg('text', { x: 44, y: 30, class: 'map-node-title' }, short(node.title, 11)));
@@ -113,10 +128,11 @@
         if (action === 'in') this.zoomAt(this.view.k * 1.25);
         if (action === 'out') this.zoomAt(this.view.k / 1.25);
         if (action === 'fit') this.fit(false);
-        if (action === 'reset') {
-          this.nodes.forEach((node) => { node.x = 48 + node.group * 350; node.y = 82 + (node.order - 1) * 108; });
-          this.updateGeometry(); this.fit(true);
-        }
+        if (action === 'reset') this.fit(true);
+      }, { signal });
+      this.querySelector('.map-relation-toggle input').addEventListener('change', (event) => {
+        this.showRelations = event.target.checked;
+        this.classList.toggle('show-all-relations', this.showRelations);
       }, { signal });
       this.querySelector('.map-search input').addEventListener('input', (event) => {
         this.query = event.target.value.trim().toLowerCase();
@@ -168,6 +184,7 @@
         node.element.classList.toggle('is-search-dim', !!this.query && !matches.includes(node));
       });
       this.edges.forEach((edge) => { edge.element.style.display = visibleIds.has(edge.from) && visibleIds.has(edge.to) ? '' : 'none'; });
+      this.rootElement.style.display = this.group < 0 ? '' : 'none';
       this.groupElements.forEach((element, i) => { element.style.display = this.group < 0 || this.group === i ? '' : 'none'; });
       this.querySelectorAll('[data-map-group]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.mapGroup) === this.group)));
       this.querySelector('.map-status').textContent = this.query ? (matches.length ? matches.length + ' 个匹配知识点' : '当前章节没有匹配的知识点，可切换“全部”查找。') : visible.length + ' 个知识点 · ' + this.edges.filter((edge) => visibleIds.has(edge.from) && visibleIds.has(edge.to)).length + ' 条连接';
@@ -187,12 +204,31 @@
           const right = b.x >= a.x;
           x1 = a.x + (right ? 278 : 0); y1 = a.y + 39;
           x2 = b.x + (right ? 0 : 278); y2 = b.y + 39;
-          const curve = Math.max(45, Math.abs(x2 - x1) / 2);
-          d = `M${x1} ${y1} C${x1 + (right ? curve : -curve)} ${y1},${x2 - (right ? curve : -curve)} ${y2},${x2} ${y2}`;
+          if (a.group === b.group) {
+            const gutter = a.x + 306 + this.edges.indexOf(edge) % 3 * 12;
+            x1 = a.x + 278; x2 = b.x + 278;
+            d = `M${x1} ${y1} H${gutter} V${y2} H${x2}`;
+            edge.label.setAttribute('x', gutter + 8);
+            edge.label.setAttribute('y', (y1 + y2) / 2);
+          } else if (Math.abs(a.group - b.group) === 1) {
+            const gutter = (x1 + x2) / 2;
+            d = `M${x1} ${y1} H${gutter} V${y2} H${x2}`;
+            edge.label.setAttribute('x', gutter);
+            edge.label.setAttribute('y', (y1 + y2) / 2 - 8);
+          } else {
+            const startGutter = x1 + (right ? 42 : -42);
+            const endGutter = x2 - (right ? 42 : -42);
+            const rail = 198 + this.edges.indexOf(edge) % 3 * 5;
+            d = `M${x1} ${y1} H${startGutter} V${rail} H${endGutter} V${y2} H${x2}`;
+            edge.label.setAttribute('x', (startGutter + endGutter) / 2);
+            edge.label.setAttribute('y', rail - 8);
+          }
         }
         edge.path.setAttribute('d', d);
-        edge.label.setAttribute('x', (x1 + x2) / 2);
-        edge.label.setAttribute('y', (y1 + y2) / 2 - 8);
+        if (edge.type === 'order') {
+          edge.label.setAttribute('x', (x1 + x2) / 2);
+          edge.label.setAttribute('y', (y1 + y2) / 2 - 8);
+        }
       });
     }
 
@@ -211,7 +247,7 @@
       if (!nodes.length || !this.width) return;
       const left = Math.min(...nodes.map((node) => node.x)) - 22;
       const right = Math.max(...nodes.map((node) => node.x + 278)) + 22;
-      const top = Math.min(...nodes.map((node) => node.y)) - 66;
+      const top = this.query ? Math.min(...nodes.map((node) => node.y)) - 22 : (this.group < 0 ? 0 : 96);
       const bottom = Math.max(...nodes.map((node) => node.y + 78)) + 32;
       const widthScale = (this.width - 24) / (right - left);
       const heightScale = (this.height - 65) / (bottom - top);
@@ -256,8 +292,7 @@
       this.canvas.setPointerCapture(event.pointerId);
       if (this.pointers.size === 2) { this.beginPinch(); return; }
       const id = event.target.closest('[data-node]')?.dataset.node;
-      const node = id && this.byNode.get(id);
-      this.gesture = { id, start: this.point(event), view: { ...this.view }, node: node && { x: node.x, y: node.y }, moved: false };
+      this.gesture = { id, start: this.point(event), view: { ...this.view }, moved: false };
       this.canvas.classList.add('is-dragging');
       if (id) this.highlight(id);
     }
@@ -282,13 +317,9 @@
       const dx = event.clientX - gesture.start.x, dy = event.clientY - gesture.start.y;
       if (Math.hypot(dx, dy) > 5) gesture.moved = true;
       if (!gesture.moved) return;
-      if (gesture.id) {
-        const node = this.byNode.get(gesture.id);
-        node.x = gesture.node.x + dx / this.view.k; node.y = gesture.node.y + dy / this.view.k;
-        this.updateGeometry();
-      } else {
-        this.view.x = gesture.view.x + dx; this.view.y = gesture.view.y + dy; this.transform();
-      }
+      this.view.x = gesture.view.x + dx;
+      this.view.y = gesture.view.y + dy;
+      this.transform();
     }
     pointerEnd(event, cancelled = false) {
       if (!this.pointers.has(event.pointerId)) return;
