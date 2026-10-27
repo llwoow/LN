@@ -1,0 +1,25 @@
+{
+  "symbolic_checks": [
+    "two conductor force vectors give matching torque direction",
+    "electromagnetic energy identity",
+    "eliminated-current torque-speed relation",
+    "zero-speed RL ODE and initial condition"
+  ],
+  "numerical_checks": {
+    "E_V": 206.0,
+    "n_rpm": 1030.0,
+    "K_SI": 1.909859317102744,
+    "Te_Nm": 76.39437268410975,
+    "P_em_W": 8240.0,
+    "P_out_W": 7920,
+    "P_in_W": 9020,
+    "efficiency": 0.8780487804878049,
+    "shaft_torque_Nm": 73.42760092938705,
+    "weak_field_current_A": 50,
+    "weak_field_speed_rpm": 1268.75,
+    "starting_resistance_ohm": 3.3333333333333335,
+    "braking_current_A": 39.61165048543689,
+    "braking_torque_Nm": -75.65267974542908
+  },
+  "scope": "Checks of stated average models, not validation of an actual product."
+}

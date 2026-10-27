@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-27",
+  "archive": {
+    "name": "电机学_整个项目_含全部音频.zip",
+    "sha256": "6d89b3b2378caf958029cc6eaadcd65d32c5f0b1e421dbdfe68ae4fa9613f6e4"
+  },
+  "homework": {
+    "name": "Transformer_Chapter2_13_Dots_Fixed-1.pdf",
+    "source_sha256": "c0772a647444c484ca5ed8c25cd76a24b8780dfcaf3fad2cb6284ae12c77984c",
+    "imported_sha256": "c0772a647444c484ca5ed8c25cd76a24b8780dfcaf3fad2cb6284ae12c77984c",
+    "unchanged": true,
+    "pages": 13,
+    "questions": 13
+  },
+  "chapters": 3,
+  "reading_units": 39,
+  "rendered_transformer_math_expressions": 446,
+  "audio_files_imported": 0
+}

@@ -1,0 +1,44 @@
+{
+  "checks": [
+    "N-squared chain",
+    "coupled-inductance energy determinant",
+    "nonlinear energy plus coenergy identity",
+    "monotone inverse solution and residual",
+    "linear field energy vs circuit energy",
+    "differential inductance by independent perturbation",
+    "branch node and both loops",
+    "non-sinusoidal RMS by integration"
+  ],
+  "results": {
+    "linear": {
+      "Rcore_A_per_Wb": 497359.19716217293,
+      "Rgap_A_per_Wb": 1989436.7886486915,
+      "L_H": 0.1005309649148734,
+      "current_A": 1.9894367886486914,
+      "energy_J": 0.19894367886486916,
+      "gap_energy_J": 0.15915494309189535,
+      "X_50Hz_ohm": 31.582734083485953,
+      "voltage_rms_V": 44.42882938158366,
+      "current_rms_A": 1.406744243995478,
+      "L_gap_doubled_H": 0.055850536063818554
+    },
+    "nonlinear": {
+      "direct_current_B1T_A": 1.7415494309189534,
+      "inverse_B_T": 1.1152999641748216,
+      "inverse_flux_Wb": 0.00044611998566992863,
+      "point_B1_1T_current_A": 1.9657043740108489,
+      "secant_L_H": 0.11191916898018044,
+      "differential_L_H": 0.08922399713398571,
+      "finite_difference_L_H": 0.08922399713373608,
+      "no_gap_peak_A": 1.8,
+      "no_gap_rms_A": 0.8491744795798131
+    },
+    "branch": {
+      "phi0_Wb": 0.0005,
+      "phi1_Wb": 0.0003,
+      "phi2_Wb": 0.0002
+    },
+    "hysteresis_example_W": 1.6
+  },
+  "scope": "Stated teaching models only; no claim of measured material data."
+}

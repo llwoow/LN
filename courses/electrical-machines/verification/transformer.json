@@ -1,0 +1,18 @@
+{
+  "phasor_drop_algebra": "verified symbolically",
+  "maximum_efficiency": "verified symbolically",
+  "Yd_phase_shift_deg": {
+    "Yd1": -29.999999999999986,
+    "Yd11": 29.999999999999996
+  },
+  "exact_T": {
+    "U2_abs_V": 209.81283754808757,
+    "input_power_W": 7649.940600097239,
+    "output_power_W": 7276.26889255871,
+    "total_loss_W": 373.6717075385297,
+    "power_balance_error_W": -1.7053025658242404e-13
+  },
+  "per_unit_invariance": "verified",
+  "fault_transient_ODE_and_initial_condition": "verified symbolically",
+  "floating_neutral_KCL_residual_A": 1.9860273225978185e-15
+}

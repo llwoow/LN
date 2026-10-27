@@ -1,5 +1,6 @@
-// 示例课程，收到材料后替换。
+// 已接入的课程与占位示例。
 window.LN_COURSES = Object.freeze([
+  window.LN_ELECTRICAL_MACHINES,
   { id: 'mathematics', title: '数学基础', category: '理学', topics: ['微积分', '线性代数', '概率统计'] },
   { id: 'computer-science', title: '计算机科学', category: '计算机', topics: ['数据结构', '算法', '计算机系统'] },
   { id: 'electrical-engineering', title: '电气工程', category: '工学', topics: ['电路原理', '电机学', '电磁场'] },
