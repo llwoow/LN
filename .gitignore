@@ -1,0 +1,3 @@
+# Local browser verification and generated previews
+.preview/
+__pycache__/
