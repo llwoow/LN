@@ -115,6 +115,16 @@
 
   function updateFavoritesCount() {
     $('#favorite-count').textContent = favorites.size || '';
+    renderSidebarCourses();
+  }
+
+  function renderSidebarCourses() {
+    const selectedId = location.hash.split('/')[1];
+    const row = (course) => '<a class="sidebar-course-link" href="#course/' + course.id + '"' + (currentView === 'course' && selectedId === course.id ? ' aria-current="page"' : '') + '>' + icon('book') + '<span class="sidebar-course-name">' + escapeHTML(course.title) + '</span>' + (course.sections ? '' : '<span class="sidebar-course-status">示例</span>') + '</a>';
+    $('#sidebar-course-list').innerHTML = courses.map(row).join('');
+    const saved = courses.filter((course) => favorites.has(course.id));
+    $('#sidebar-favorites').hidden = !saved.length;
+    $('#sidebar-favorite-list').innerHTML = saved.map(row).join('');
   }
 
   function favoriteButton(course, detail = false) {
@@ -249,6 +259,7 @@
     if (currentView === 'course') {
       $$('[data-category]').forEach((link) => { link.classList.remove('active'); link.removeAttribute('aria-current'); });
     }
+    renderSidebarCourses();
     mobileOpen = false;
     updateSidebar();
   }

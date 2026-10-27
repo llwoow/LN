@@ -43,15 +43,30 @@
   <a class="skip-link" href="#main">跳到主要内容</a>
   <button class="sidebar-backdrop" id="sidebar-backdrop" aria-label="收起导航" hidden></button>
   <aside class="sidebar" id="sidebar" aria-label="导航">
-    <div class="sidebar-header"><a class="brand" href="#overview" aria-label="LN 首页">LN</a><button class="icon-button" id="collapse-sidebar" aria-label="收起侧栏" aria-controls="sidebar" aria-expanded="true" title="收起侧栏"><svg class="icon"><use href="#i-panel"/></svg></button></div>
-    <button class="nav-link search-link" id="search-shortcut"><svg class="icon"><use href="#i-search"/></svg><span>搜索</span><kbd>/</kbd></button>
-    <nav class="primary-nav" aria-label="主导航">
-      <a class="nav-link" href="#overview" data-nav="overview"><svg class="icon"><use href="#i-grid"/></svg>课程</a>
-      <a class="nav-link" href="#favorites" data-nav="favorites"><svg class="icon"><use href="#i-star"/></svg>收藏<span class="nav-count" id="favorite-count"></span></a>
-    </nav>
-    <details class="subject-group" open><summary>学科<svg class="icon"><use href="#i-chevron"/></svg></summary><nav id="subject-nav" aria-label="学科"></nav></details>
-    <div class="sidebar-bottom">
-      <button class="nav-link" id="open-settings"><svg class="icon"><use href="#i-sliders"/></svg>外观</button>
+    <div class="sidebar-header">
+      <a class="brand" href="#overview" aria-label="LN 首页">LN</a>
+      <div class="sidebar-header-actions">
+        <button class="icon-button" id="search-shortcut" aria-label="搜索课程" title="搜索课程 /"><svg class="icon"><use href="#i-search"/></svg></button>
+        <button class="icon-button" id="collapse-sidebar" aria-label="收起侧栏" aria-controls="sidebar" aria-expanded="true" title="收起侧栏"><svg class="icon"><use href="#i-panel"/></svg></button>
+      </div>
+    </div>
+    <div class="sidebar-content">
+      <nav class="primary-nav" aria-label="主导航">
+        <a class="nav-link" href="#overview" data-nav="overview"><svg class="icon"><use href="#i-grid"/></svg>全部课程</a>
+        <a class="nav-link" href="#favorites" data-nav="favorites"><svg class="icon"><use href="#i-star"/></svg>收藏<span class="nav-count" id="favorite-count"></span></a>
+      </nav>
+      <section class="sidebar-section" id="sidebar-favorites" aria-labelledby="sidebar-favorites-title" hidden>
+        <h2 class="sidebar-section-title" id="sidebar-favorites-title">收藏</h2>
+        <nav class="sidebar-course-list" id="sidebar-favorite-list" aria-label="收藏的课程"></nav>
+      </section>
+      <details class="sidebar-section sidebar-courses" open>
+        <summary>课程<svg class="icon"><use href="#i-chevron"/></svg></summary>
+        <nav class="sidebar-course-list" id="sidebar-course-list" aria-label="课程快捷入口"></nav>
+      </details>
+      <details class="subject-group" open><summary>学科<svg class="icon"><use href="#i-chevron"/></svg></summary><nav id="subject-nav" aria-label="学科"></nav></details>
+      <div class="sidebar-bottom">
+        <button class="nav-link" id="open-settings"><svg class="icon"><use href="#i-sliders"/></svg>外观</button>
+      </div>
     </div>
   </aside>
 
