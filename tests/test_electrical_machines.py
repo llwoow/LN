@@ -70,6 +70,13 @@ class CourseIntegrity(unittest.TestCase):
             self.assertFalse(set(document.tags) & {'script', 'audio', 'iframe', 'object', 'embed', 'form'}, key)
             self.assertFalse(document.handlers, key)
 
+    def test_imported_reading_units_are_not_hidden(self):
+        for key, payload in self.payloads.items():
+            if payload.get('html'):
+                root_tag = re.search(r'<[a-zA-Z][^>]*>', payload['html']).group()
+                self.assertNotRegex(root_tag, r'\bhidden(?:\s|=|>)', key)
+
+
     def test_homework_is_complete(self):
         payload = self.payloads['transformer-homework']
         self.assertEqual(len(payload['questions']), 13)

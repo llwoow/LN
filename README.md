@@ -11,10 +11,11 @@ python -m http.server 4173 --bind 127.0.0.1
 浏览器访问 http://127.0.0.1:4173 。
 
 - 可折叠侧栏、课程搜索、学科筛选、收藏。
+- 每门课程默认进入知识图谱：可拖动节点/画布、缩放、章节筛选与搜索，点击节点进入正文；实线表示阅读顺序，虚线表示附说明的知识联系。
 - 五套配色，日间 / 夜间 / 跟随系统。
 - 原生 HTML、CSS、JavaScript，无需安装依赖。
 - 已整合电机学：磁路、变压器、直流电机、第二章作业及绕组交互模型。不含音频。
-- 课程正文、公式字体和模型按需加载；保留原讲义 PDF。其余课程为占位示例。
+- 课程正文、公式字体和模型按需加载；保留原讲义 PDF。仅展示已有真实材料的课程。
 
 `/` 或 `Ctrl/Cmd + K` 搜索，`Esc` 关闭设置或手机侧栏。
 
@@ -25,4 +26,5 @@ python -m http.server 4173 --bind 127.0.0.1
 ```sh
 python -m unittest discover -s tests -v
 node tests/motor-winding.test.cjs
+node tests/knowledge-map.test.cjs
 ```

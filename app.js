@@ -6,7 +6,7 @@
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const icon = (name) => '<svg class="icon" aria-hidden="true"><use href="#i-' + name + '"/></svg>';
   const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
-  const categories = { science: '理学', engineering: '工学', computing: '计算机' };
+  const categories = Object.fromEntries(Object.entries({ science: '理学', engineering: '工学', computing: '计算机' }).filter(([, name]) => courses.some((course) => course.category === name)));
   const palettes = [
     { id: 'ink', name: '黑白', color: '#414141' },
     { id: 'sage', name: '鼠尾草', color: '#65876b' },
@@ -120,7 +120,7 @@
 
   function renderSidebarCourses() {
     const selectedId = location.hash.split('/')[1];
-    const row = (course) => '<a class="sidebar-course-link" href="#course/' + course.id + '"' + (currentView === 'course' && selectedId === course.id ? ' aria-current="page"' : '') + '>' + icon('book') + '<span class="sidebar-course-name">' + escapeHTML(course.title) + '</span>' + (course.sections ? '' : '<span class="sidebar-course-status">示例</span>') + '</a>';
+    const row = (course) => '<a class="sidebar-course-link" href="#course/' + course.id + '"' + (currentView === 'course' && selectedId === course.id ? ' aria-current="page"' : '') + '>' + icon('book') + '<span class="sidebar-course-name">' + escapeHTML(course.title) + '</span>' + '</a>';
     $('#sidebar-course-list').innerHTML = courses.map(row).join('');
     const saved = courses.filter((course) => favorites.has(course.id));
     $('#sidebar-favorites').hidden = !saved.length;
@@ -133,7 +133,7 @@
   }
 
   function courseRow(course) {
-    return '<li class="course-row"><a class="course-link" href="#course/' + course.id + '"><span class="course-symbol">' + icon('book') + '</span><div class="course-text"><h2>' + escapeHTML(course.title) + (course.sections ? '' : '<span class="course-status">示例</span>') + '</h2><p>' + course.topics.map(escapeHTML).join(' · ') + '</p></div><span class="course-category">' + escapeHTML(course.category) + '</span></a>' + favoriteButton(course) + '</li>';
+    return '<li class="course-row"><a class="course-link" href="#course/' + course.id + '"><span class="course-symbol">' + icon('book') + '</span><div class="course-text"><h2>' + escapeHTML(course.title) + '</h2><p>' + course.topics.map(escapeHTML).join(' · ') + '</p></div><span class="course-category">' + escapeHTML(course.category) + '</span></a><a class="course-map-shortcut" href="#course/' + course.id + '/map" aria-label="打开' + escapeHTML(course.title) + '知识图谱">' + icon('network') + '<span>图谱</span></a>' + favoriteButton(course) + '</li>';
   }
 
   function renderRows() {
@@ -152,7 +152,7 @@
 
   function renderOverview() {
     const title = currentView === 'favorites' ? '收藏' : '课程';
-    main.innerHTML = '<section aria-labelledby="page-title"><div class="page-heading"><div><h1 id="page-title">' + title + '</h1><p class="page-meta" id="result-count"></p></div><label class="course-search">' + icon('search') + '<input id="course-search" type="search" aria-label="搜索课程或知识点" placeholder="搜索课程…" value="' + escapeHTML(query) + '" autocomplete="off"></label></div><div class="filter-row" aria-label="筛选学科">' + ['全部', ...Object.values(categories)].map((name) => '<button class="filter-button" data-filter="' + name + '" aria-pressed="' + (name === category) + '">' + name + '</button>').join('') + '</div><ul class="course-list" id="course-list" aria-live="polite" aria-label="课程列表"></ul></section>';
+    main.innerHTML = '<section aria-labelledby="page-title"><div class="page-heading"><div><h1 id="page-title">' + title + '</h1><p class="page-meta" id="result-count"></p></div><label class="course-search">' + icon('search') + '<input id="course-search" type="search" aria-label="搜索课程或知识点" placeholder="搜索课程…" value="' + escapeHTML(query) + '" autocomplete="off"></label></div><div class="filter-row"' + (Object.keys(categories).length < 2 ? ' hidden' : '') + ' aria-label="筛选学科">' + ['全部', ...Object.values(categories)].map((name) => '<button class="filter-button" data-filter="' + name + '" aria-pressed="' + (name === category) + '">' + name + '</button>').join('') + '</div><ul class="course-list" id="course-list" aria-live="polite" aria-label="课程列表"></ul></section>';
     renderRows();
     $('#course-search').addEventListener('input', (event) => { query = event.target.value; renderRows(); });
   }
@@ -163,12 +163,20 @@
       main.innerHTML = '<div class="empty-state"><h2>课程不存在</h2><a class="secondary-button" href="#overview">返回课程</a></div>';
       return '课程';
     }
-    if (course.sections) {
-      renderReader(course, sectionId, anchor);
-      return course.title;
-    }
-    main.innerHTML = '<a class="back-link" href="#overview">' + icon('back') + '课程</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · 示例</p></div>' + favoriteButton(course, true) + '</section><div class="detail-content"><aside class="course-outline" aria-label="目录"><h2>目录</h2><p>暂无章节</p></aside><section class="empty-state detail-empty">' + icon('file') + '<h2>待添加材料</h2></section></div>';
+    if (!sectionId || sectionId === 'map') renderKnowledgeMap(course);
+    else renderReader(course, sectionId, anchor);
     return course.title;
+  }
+
+  function courseViewNav(course, active) {
+    const first = course.sections[0];
+    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' ? ' aria-current="page"' : '') + '>' + icon('book') + '章节阅读</a></nav>';
+  }
+
+  function renderKnowledgeMap(course) {
+    main.classList.add('course-main', 'map-main');
+    main.innerHTML = '<a class="back-link" href="#overview">' + icon('back') + '课程</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.map((section) => section.group)).size + '章</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'map') + '<ln-knowledge-map></ln-knowledge-map>';
+    $('ln-knowledge-map', main).course = course;
   }
 
   function renderReader(course, sectionId, anchor) {
@@ -176,7 +184,7 @@
     const groups = [...new Set(course.sections.map((section) => section.group))];
     main.classList.add('course-main');
     const outline = groups.map((group) => '<details class="outline-group"' + (selected?.group === group ? ' open' : '') + '><summary>' + escapeHTML(group) + '</summary><nav aria-label="' + escapeHTML(group) + '">' + course.sections.filter((section) => section.group === group).map((section) => '<a href="#course/' + course.id + '/' + section.id + '"' + (selected?.id === section.id ? ' aria-current="page"' : '') + '>' + escapeHTML(section.title) + '</a>').join('') + '</nav></details>').join('');
-    main.innerHTML = '<a class="back-link" href="#overview">' + icon('back') + '课程</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + groups.length + '章</p></div>' + favoriteButton(course, true) + '</section><div class="reader-layout"><details class="reader-outline" id="reader-outline"' + (matchMedia('(min-width: 961px)').matches ? ' open' : '') + '><summary>目录</summary>' + outline + '</details><section class="lesson-column"><div class="lesson-tools" id="lesson-tools"></div><article class="lesson" id="lesson-body" data-lesson-key="' + (selected ? course.id + '/' + selected.id : '') + '" aria-busy="true">' + (selected ? '<p class="loading-state" role="status">加载中…</p>' : '<h2>章节不存在</h2>') + '</article><nav class="lesson-pagination" id="lesson-pagination" aria-label="章节翻页"></nav></section></div>';
+    main.innerHTML = '<a class="back-link" href="#overview">' + icon('back') + '课程</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + groups.length + '章</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'reader') + '<div class="reader-layout"><details class="reader-outline" id="reader-outline"' + (matchMedia('(min-width: 961px)').matches ? ' open' : '') + '><summary>目录</summary>' + outline + '</details><section class="lesson-column"><div class="lesson-tools" id="lesson-tools"></div><article class="lesson" id="lesson-body" data-lesson-key="' + (selected ? course.id + '/' + selected.id : '') + '" aria-busy="true">' + (selected ? '<p class="loading-state" role="status">加载中…</p>' : '<h2>章节不存在</h2>') + '</article><nav class="lesson-pagination" id="lesson-pagination" aria-label="章节翻页"></nav></section></div>';
     if (selected) void loadLesson(course, selected, anchor);
     else $('#lesson-body').setAttribute('aria-busy', 'false');
   }
@@ -244,7 +252,7 @@
     const [view, id, sectionId, rawAnchor] = location.hash.slice(1).split('/');
     let anchor = rawAnchor;
     try { anchor = rawAnchor ? decodeURIComponent(rawAnchor) : ''; } catch { anchor = ''; }
-    main.classList.remove('course-main');
+    main.classList.remove('course-main', 'map-main');
     currentView = ['favorites', 'course'].includes(view) ? view : 'overview';
     category = view === 'category' ? (categories[id] || '全部') : '全部';
     let title = currentView === 'favorites' ? '收藏' : (category === '全部' ? '课程' : category);
