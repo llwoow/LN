@@ -124,7 +124,7 @@ h1 { font-size: 28px; line-height: 1.4; font-weight: 750; letter-spacing: -.5px;
 .course-outline h2 { font-size: 13px; font-weight: 500; margin: 0 0 16px; }
 .course-outline p { font-size: 12px; color: var(--muted); }
 .lesson { max-width: 72ch; font-size: 17px; line-height: 1.85; }
-.lesson svg { max-width: 100%; height: auto; color: var(--art); }
+.lesson figure > svg { max-width: 100%; height: auto; color: var(--art); }
 .course-main { max-width: 1320px; padding: 32px 36px 64px; }
 .reader-layout { display: grid; grid-template-columns: 202px minmax(0, 1fr); gap: 34px; padding-top: 25px; align-items: start; }
 .reader-outline { position: sticky; top: 24px; max-height: calc(100dvh - 48px); overflow-y: auto; font-size: 13px; padding-right: 10px; }
@@ -154,9 +154,7 @@ h1 { font-size: 28px; line-height: 1.4; font-weight: 750; letter-spacing: -.5px;
 .lesson blockquote > p:last-child { margin-bottom: 0; }
 .lesson .eyebrow { color: var(--muted); font-size: 12px; }
 .lesson .katex { font-size: 1.04em; }
-.lesson .math-block, .lesson .math.display { display: block; position: relative; max-width: 100%; overflow-x: auto; margin: 23px 0; padding: 4px 0 16px; }
 .lesson .katex-display { overflow-x: auto; overflow-y: hidden; max-width: 100%; padding: 3px 2px 12px; }
-.lesson .math.display[data-equation]:after { content: '(' attr(data-equation) ')'; display: block; text-align: right; font-size: 12px; color: var(--muted); }
 .lesson .math-inline, .lesson .math.inline { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding-right: 2px; vertical-align: middle; scrollbar-width: none; }
 .lesson .math-inline::-webkit-scrollbar, .lesson .math.inline::-webkit-scrollbar { display: none; }
 .equation-anchor { scroll-margin-top: 24px; }
@@ -402,3 +400,64 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
   .topbar { position: static; }
   .is-reading .course-main { padding-bottom: 0; }
 }
+
+/* Single-column scholarly reading, shared by all HTML course material. */
+:root { --reading-font: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Songti SC', 'STSong', 'SimSun', Georgia, serif; }
+.publication-body { max-width: 68ch; font-family: var(--reading-font); font-size: 18px; font-weight: 500; line-height: 1.85; text-rendering: optimizeLegibility; }
+.publication-body p { margin: .85em 0; text-align: justify; text-justify: inter-ideograph; hanging-punctuation: allow-end; }
+.publication-body h2, .publication-body h3, .publication-body h4, .publication-body h5 { font-family: var(--font); text-wrap: pretty; }
+.publication-body h2 { font-size: 24px; line-height: 1.45; margin: 1.5em 0 .8em; }
+.publication-body h3 { font-size: 20px; line-height: 1.55; margin: 1.4em 0 .65em; }
+.publication-body h4, .publication-body h5 { font-size: 18px; margin: 1.25em 0 .6em; }
+.publication-body li { margin: .45em 0; }
+.publication-body .question, .publication-body blockquote { padding: 12px 16px; font-size: 16px; line-height: 1.8; }
+.lesson .paper-equation { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; column-gap: 12px; position: relative; width: 100%; max-width: 100%; margin: 1.15em 0; padding: .25em 0; overflow: visible; }
+.lesson .paper-equation.is-numbered { grid-template-columns: minmax(0, 1fr) max-content; }
+.lesson .paper-equation[data-equation]:after { display: none; }
+.paper-equation-scroll { display: block; min-width: 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 6px 2px 9px; scrollbar-width: thin; }
+.lesson .paper-equation .katex-display { display: block; min-width: max-content; margin: 0; padding: 0; overflow: visible; }
+.lesson .paper-equation .katex { font-size: 1.02em; }
+.lesson .equation-number { align-self: center; justify-self: end; display: inline-flex; align-items: center; justify-content: flex-end; min-height: 36px; color: var(--text); font-family: var(--reading-font); font-size: 15px; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; text-decoration: none; }
+.lesson .paper-target-label { color: var(--text); text-decoration: none; font-variant-numeric: tabular-nums; }
+.lesson .paper-target-label:hover, .lesson .paper-target-label.is-reference-return { text-decoration: underline; text-underline-offset: 4px; }
+.lesson .paper-figure { margin: 1.5em 0; }
+.publication-body figcaption { margin-top: 12px; font-size: 14px; line-height: 1.75; color: var(--text); text-align: left; }
+.publication-body figcaption .paper-target-label, .publication-body caption .paper-target-label { font-family: var(--font); font-weight: 700; }
+.publication-body .paper-table { width: 100%; border-top: 2px solid var(--text); border-bottom: 2px solid var(--text); font-size: 14px; line-height: 1.75; }
+.publication-body .paper-table caption { caption-side: top; margin-bottom: 10px; text-align: left; font-size: 14px; line-height: 1.7; color: var(--text); }
+.publication-body .paper-table th { border-bottom: 1.5px solid var(--text); background: transparent; font-weight: 700; }
+.publication-body .paper-table td { border-bottom: 1px solid var(--border); }
+.publication-body .paper-table tr:last-child td { border-bottom: none; }
+.publication-body .paper-reference { font: inherit; color: var(--accent); text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.publication-body .paper-reference:hover { text-decoration-style: solid; }
+.reference-target { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 4px; }
+.paper-reference.reference-origin { background: var(--accent-soft); border-radius: 3px; }
+.reference-return { position: fixed; z-index: 3; right: 24px; bottom: calc(84px + env(safe-area-inset-bottom, 0px)); min-height: 40px; padding: 8px 13px; color: var(--accent); background: var(--surface); border: var(--line-width) solid var(--border); border-radius: 8px; box-shadow: 0 3px 14px #0002; font-size: 13px; font-weight: 600; }
+.reference-return[hidden] { display: none; }
+.reference-return:hover { background: var(--accent-soft); }
+@media (max-width: 720px) { .publication-body { font-size: 17px; } .reference-return { right: 10px; } }
+@media (max-width: 480px) {
+  .publication-body h2 { font-size: 22px; }
+  .publication-body h3 { font-size: 19px; }
+  .publication-body h4, .publication-body h5 { font-size: 17px; }
+  .lesson .paper-equation { column-gap: 8px; }
+  .lesson .equation-number { font-size: 14px; }
+  .publication-body figcaption, .publication-body .paper-table, .publication-body .paper-table caption { font-size: 13px; }
+}
+@media print {
+  .reference-return { display: none !important; }
+  .publication-body { max-width: none; color: #111; font-size: 11pt; line-height: 1.65; }
+  .publication-body h2, .publication-body h3, .publication-body h4 { break-after: avoid; }
+  .paper-equation, .paper-figure { break-inside: avoid; }
+  .reference-target { outline: none; }
+  .publication-body .paper-reference { color: #111; text-decoration: none; }
+}
+@media print {
+  :root[data-theme][data-palette] { color-scheme: light; --canvas: #fff; --surface: #fff; --subtle: #fff; --text: #111; --muted: #333; --border: #aaa; --accent: #111; --art: #444; --art-soft: #fff; --on-accent: #fff; --accent-soft: #fff; }
+  .reader-outline, .lesson-tools, .lesson-pagination { display: none !important; }
+  .reader-layout { display: block; }
+}
+/* Keep the accessible MathML layer from enlarging the page's scrollable bounds. */
+.publication-body .katex-mathml { contain: strict; }
+
+.publication-body .table-scroll { contain: paint; }

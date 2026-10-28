@@ -256,6 +256,7 @@
       else if (selected.kind === 'document') {
         body.innerHTML = '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
       } else body.innerHTML = payload.html;
+      if (selected.kind === 'html') window.LNPublication.prepare(body, course, selected);
       body.setAttribute('aria-busy', 'false');
       body.classList.toggle('model-lesson', selected.kind === 'model');
       body.classList.toggle('pdf-lesson', selected.kind === 'pdf' || selected.kind === 'document');
@@ -263,7 +264,7 @@
       $('#lesson-tools').innerHTML = '<span>' + escapeHTML(selected.group) + '</span><a href="courses/electrical-machines/files/' + resource.guide + '" target="_blank" rel="noopener">讲义 PDF</a><a href="courses/electrical-machines/files/' + resource.quickref + '" target="_blank" rel="noopener">速查 PDF</a>';
       const index = course.sections.indexOf(selected);
       $('#lesson-pagination').innerHTML = (index > 0 ? '<a href="#course/' + course.id + '/' + course.sections[index - 1].id + '">' + icon('back') + '上一节</a>' : '<span></span>') + (index < course.sections.length - 1 ? '<a href="#course/' + course.id + '/' + course.sections[index + 1].id + '">下一节' + icon('chevron') + '</a>' : '');
-      if (anchor && !anchor.startsWith('page-')) requestAnimationFrame(() => document.getElementById(anchor)?.scrollIntoView({block: 'start'}));
+      window.LNPublication.settle(body, anchor);
     } catch (error) {
       const body = $('#lesson-body');
       if (body?.dataset.lessonKey === key) {
@@ -275,6 +276,7 @@
   }
 
   function renderRoute() {
+    window.LNPublication.onRoute();
     const [view, id, sectionId, rawAnchor] = location.hash.slice(1).split('/');
     let anchor = rawAnchor;
     try { anchor = rawAnchor ? decodeURIComponent(rawAnchor) : ''; } catch { anchor = ''; }
