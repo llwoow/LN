@@ -475,3 +475,41 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .inline-model-slot { min-width: 0; font: 14px/1.65 var(--font); }
 .inline-model-slot motor-winding-viewer { display: block; width: 100%; }
 @media (max-width: 480px) { .course-view-nav { gap: 5px; } .course-view-nav a { padding: 7px 8px; gap: 5px; font-size: 12px; } }
+
+/* Source-backed definitions: anchored, non-modal and local to the current reading context. */
+.lesson .definition-term { color: inherit; text-decoration: underline dotted; text-decoration-color: var(--muted); text-underline-offset: 3px; text-decoration-thickness: 1px; cursor: help; }
+.definition-symbol, .definition-expression { cursor: help; }
+.definition-symbol { text-decoration: underline dotted; text-decoration-color: var(--muted); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+.definition-symbol:hover, .definition-expression:hover, .definition-term:hover { background: var(--accent-soft); border-radius: 2px; }
+.definition-symbol:focus-visible, .definition-expression:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.definition-formula-tool { position: absolute; right: 0; bottom: -17px; min-height: 24px; padding: 1px 5px; border-radius: 4px; color: var(--muted); background: var(--surface); font: 11px/1.5 var(--font); opacity: 0; }
+.paper-equation:hover .definition-formula-tool, .paper-equation:focus-within .definition-formula-tool, .definition-formula-tool:focus-visible { opacity: 1; }
+.definition-formula-tool:hover { color: var(--accent); background: var(--accent-soft); }
+.definition-popover { position: fixed; inset: auto; margin: 0; width: min(380px, calc(100vw - 24px)); max-width: calc(100vw - 24px); max-height: min(65dvh, 500px); padding: 0; color: var(--text); background: var(--surface); border: var(--line-width) solid var(--border); border-radius: 12px; box-shadow: 0 8px 40px #0003; font: 14px/1.7 var(--font); overflow: hidden; }
+.definition-popover::backdrop { background: transparent; pointer-events: none; }
+.definition-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 9px 16px; border-bottom: 1px solid var(--border); }
+.definition-header h2 { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.5; }
+.definition-close { flex-shrink: 0; width: 32px; height: 32px; border-radius: 6px; font-size: 24px; line-height: 1; }
+.definition-close:hover { background: var(--hover); }
+.definition-content { max-height: min(calc(65dvh - 112px), 370px); padding: 12px 16px; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; }
+.definition-symbol-title { margin-bottom: 8px; font-size: 17px; }
+.definition-label { margin: 10px 0 4px; font-size: 12px; font-weight: 650; color: var(--muted); }
+.definition-copy { margin: 0; overflow-wrap: break-word; }
+.definition-english { margin: 0 0 8px; font-size: 13px; color: var(--muted); overflow-wrap: break-word; }
+.definition-context { margin: 12px 0 0; font-size: 12px; color: var(--muted); }
+.definition-excerpt { margin-top: 10px; font-size: 13px; }
+.definition-excerpt > summary { cursor: pointer; color: var(--muted); font-weight: 600; }
+.definition-excerpt .definition-copy { padding-top: 7px; }
+.definition-popover .math-inline, .definition-popover .math.inline { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 1px 2px; vertical-align: middle; }
+.definition-popover .math.display, .definition-popover .math-block { display: block; overflow-x: auto; max-width: 100%; }
+.definition-popover .katex { font-size: 1.05em; }
+.definition-popover .katex-mathml { contain: strict; }
+.definition-footer { padding: 10px 16px; border-top: 1px solid var(--border); }
+.definition-source-link { color: var(--accent); font-size: 13px; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.definition-choice { display: block; width: 100%; padding: 9px 10px; border-radius: 7px; text-align: left; }
+.definition-choice + .definition-choice { margin-top: 3px; }
+.definition-choice:hover { background: var(--hover); }
+.definition-choice strong { display: block; font-size: 14px; }
+.definition-choice span { display: block; margin-top: 2px; font-size: 12px; color: var(--muted); }
+@media (max-width: 720px) { .definition-formula-tool { opacity: 1; } }
+@media print { .definition-popover, .definition-formula-tool { display: none !important; } .definition-symbol, .lesson .definition-term { text-decoration: none; background: none; } }

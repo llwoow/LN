@@ -291,6 +291,7 @@
       } else body.innerHTML = payload.html;
       if (selected.kind === 'html') {
         window.LNPublication.prepare(body, course, selected);
+        window.LNGlossary.prepare(body, course, selected);
         bindInlineModels(body);
       }
       body.setAttribute('aria-busy', 'false');
@@ -313,6 +314,7 @@
 
   function renderRoute() {
     window.LNPublication.onRoute();
+    window.LNGlossary.onRoute();
     const [view, id, sectionId, rawAnchor] = location.hash.slice(1).split('/');
     let anchor = rawAnchor;
     try { anchor = rawAnchor ? decodeURIComponent(rawAnchor) : ''; } catch { anchor = ''; }

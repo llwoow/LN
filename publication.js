@@ -113,6 +113,7 @@
       const next = element.nextElementSibling;
       if (next?.classList.contains('paper-equation')) return next;
     }
+    if (element.hasAttribute('data-definition-source')) return element;
     return element.closest('.paper-equation, figure, table') || element;
   }
 
@@ -172,6 +173,12 @@
     else if (!equalHash(location.hash, frame.source)) location.hash = frame.source;
     else { pendingRestore = null; restorePosition(document.querySelector('#lesson-body'), frame); }
   }
+  function followReference(destination, origin) {
+    const frame = { id: ++sequence, source: location.hash, destination, focus: origin.id, offset: origin.getBoundingClientRect().top, x: scrollX, y: scrollY, changed: !equalHash(location.hash, destination) };
+    stack.push(frame); updateReturn();
+    if (frame.changed) location.hash = destination;
+    else markTarget(document.querySelector('#lesson-body'), canonical(destination.split('/').slice(3).join('/')));
+  }
   returnButton.addEventListener('click', goBack);
   document.addEventListener('click', (event) => {
     if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
@@ -182,10 +189,7 @@
     const destination = link.getAttribute('href');
     if (!destination?.startsWith('#course/') || destination.split('/').length < 4) return;
     event.preventDefault();
-    const frame = { id: ++sequence, source: location.hash, destination, focus: link.id, offset: link.getBoundingClientRect().top, x: scrollX, y: scrollY, changed: !equalHash(location.hash, destination) };
-    stack.push(frame); updateReturn();
-    if (frame.changed) location.hash = destination;
-    else markTarget(document.querySelector('#lesson-body'), canonical(destination.split('/').slice(3).join('/')));
+    followReference(destination, link);
   });
-  window.LNPublication = { prepare, settle, onRoute, resolve };
+  window.LNPublication = { prepare, settle, onRoute, resolve, followReference };
 })();

@@ -13,6 +13,7 @@ python -m http.server 4173 --bind 127.0.0.1
 - 可折叠侧栏、课程搜索、学科筛选、收藏。
 - 每门课程默认进入知识图谱：节点结构固定，支持拖动平移、缩放、章节筛选与搜索，点击节点进入正文；实线表示阅读顺序，虚线表示附说明的知识联系。
 - 教材与论文式单栏阅读：公式编号靠右，图表统一编号；公式、图表引用可点击跳转，再点击目标编号或“返回引用处”回到原阅读位置。
+- 物理符号、重要缩写与英文术语支持释义小窗：查看原定义、单位或英文全称；跳转原文后可返回阅读位置。
 - 五套配色，日间 / 夜间 / 跟随系统。
 - 原生 HTML、CSS、JavaScript，无需安装依赖。
 - 已整合电机学：磁路、变压器、直流电机、第二章作业及直流电机 3D 交互模型。不含音频。
@@ -29,10 +30,14 @@ python -m unittest discover -s tests -v
 node tests/motor-winding.test.cjs
 node tests/knowledge-map.test.cjs
 python scripts/build-reference-index.py --check
+python scripts/build-glossary.py --check
 ```
 
 网页引用与编号布局的浏览器回归检查（需已安装 Playwright 和 Chromium，先启动上面的本地 HTTP 服务）：
 
 ```sh
 python tests/publication.browser.py
+python tests/glossary.browser.py
 ```
+
+定义索引配置见 `courses/electrical-machines/glossary.json`。新增材料时指定原符号表或真实定义段落，核对术语释义，再运行 `python scripts/build-glossary.py`；同名符号按材料分组解析。

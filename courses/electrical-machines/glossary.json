@@ -1,0 +1,433 @@
+{
+  "symbolTables": [
+    {
+      "section": "magnetic-overview",
+      "table": 0
+    },
+    {
+      "section": "transformer-symbols",
+      "table": 0
+    },
+    {
+      "section": "dc-overview",
+      "table": 0
+    }
+  ],
+  "terms": [
+    {
+      "id": "rms",
+      "aliases": [
+        "RMS",
+        "root mean square",
+        "有效值"
+      ],
+      "title": "有效值",
+      "english": "Root Mean Square (RMS)",
+      "description": "与交流在同一电阻上产生相同平均热量的直流量。正弦量的有效值为峰值除以 √2；非正弦波须按周期平方平均后开方。",
+      "section": "transformer-1",
+      "match": "与交流产生相同平均热量"
+    },
+    {
+      "id": "phasor",
+      "aliases": [
+        "phasor",
+        "相量"
+      ],
+      "title": "相量",
+      "english": "Phasor",
+      "description": "在同频正弦稳态下表示幅值与相位的复数量。本讲义采用有效值相量，顶上的点不表示时间导数。",
+      "section": "transformer-1",
+      "match": "相量模为有效值"
+    },
+    {
+      "id": "ct",
+      "aliases": [
+        "CT",
+        "current transformer",
+        "电流互感器"
+      ],
+      "title": "电流互感器",
+      "english": "Current Transformer (CT)",
+      "description": "一次串联测流，二次在规定负担下提供比例电流。一次有电流时，二次不应开路。",
+      "section": "transformer-9",
+      "match": "CT一次串联"
+    },
+    {
+      "id": "vt",
+      "aliases": [
+        "VT",
+        "PT",
+        "voltage transformer",
+        "potential transformer",
+        "电压互感器"
+      ],
+      "title": "电压互感器",
+      "english": "Voltage Transformer (VT) / Potential Transformer (PT)",
+      "description": "一次并联测压，二次向高阻抗测量负担提供比例电压。二次不应短路。",
+      "section": "transformer-9",
+      "match": "VT/PT一次并联"
+    },
+    {
+      "id": "pu",
+      "aliases": [
+        "per unit",
+        "per-unit",
+        "p.u.",
+        "标幺值"
+      ],
+      "title": "标幺值",
+      "english": "Per Unit (p.u.)",
+      "description": "实际量除以同类量的基准值。容量、电压、电流与阻抗基准应相互一致，换基准时必须说明容量和电压基准。",
+      "section": "transformer-4",
+      "match": "实际量除以自身基准即标幺值"
+    },
+    {
+      "id": "oc",
+      "aliases": [
+        "open-circuit test",
+        "空载试验"
+      ],
+      "title": "空载试验",
+      "english": "Open-circuit Test",
+      "description": "利用二次开路时的工况识别励磁支路和铁耗相关参数；参数折算侧与试验条件必须明确。",
+      "section": "transformer-4",
+      "match": "空载试验识别并联支路"
+    },
+    {
+      "id": "sc",
+      "aliases": [
+        "short-circuit test",
+        "短路试验"
+      ],
+      "title": "短路试验",
+      "english": "Short-circuit Test",
+      "description": "在降低施加电压、控制电流的试验工况下识别总串联阻抗。它与实际事故短路不是同一工况。",
+      "section": "transformer-4",
+      "match": "短路试验识别串联支路"
+    },
+    {
+      "id": "armature",
+      "aliases": [
+        "armature",
+        "电枢"
+      ],
+      "title": "电枢",
+      "english": "Armature",
+      "description": "直流电机中装有电枢绕组、参与感应电势与电磁转矩转换的部分。须结合铁心、绕组、换向器和电刷理解其电路连接。",
+      "section": "dc-sec31",
+      "match": "电枢"
+    },
+    {
+      "id": "armature-reaction",
+      "aliases": [
+        "armature reaction",
+        "电枢反应"
+      ],
+      "title": "电枢反应",
+      "english": "Armature Reaction",
+      "description": "电枢电流产生的磁场对主磁场的影响。负载时须同时考虑主极场与电枢场，不能直接套用空载磁场。",
+      "section": "dc-sec33",
+      "match": "电枢反应"
+    },
+    {
+      "id": "commutation",
+      "aliases": [
+        "commutation",
+        "换向"
+      ],
+      "title": "换向",
+      "english": "Commutation",
+      "description": "线圈从一条电刷间支路转入另一条支路时，其电流需要改变方向。电刷跨接相邻换向片会暂时短接该线圈；这不是电源两端的短路。",
+      "section": "dc-sec39",
+      "match": "电刷固定，换向片旋转"
+    },
+    {
+      "id": "emf",
+      "aliases": [
+        "EMF",
+        "electromotive force",
+        "感应电动势"
+      ],
+      "title": "感应电动势",
+      "english": "Electromotive Force (EMF)",
+      "description": "与电磁感应有关的电势。本课程分别从变化磁通和运动导体说明感应电压；正负号必须与参考方向一致。",
+      "section": "dc-sec34",
+      "match": "电势公式：先数一根导体"
+    },
+    {
+      "id": "torque",
+      "aliases": [
+        "torque",
+        "电磁转矩"
+      ],
+      "title": "电磁转矩",
+      "english": "Electromagnetic Torque",
+      "description": "电磁力对转轴形成的转矩。应区分电磁转矩、机械负载转矩和损耗转矩，并按定义与单位使用转矩系数。",
+      "section": "dc-sec34",
+      "match": "转矩公式：从一根导体"
+    },
+    {
+      "id": "magnetic-circuit",
+      "aliases": [
+        "magnetic circuit",
+        "磁路"
+      ],
+      "title": "磁路",
+      "english": "Magnetic Circuit",
+      "description": "用磁通、磁动势和磁阻等量描述磁场约束的集中参数模型。磁路与电路有形式类比，但不能把磁通当作物质电流。",
+      "section": "magnetic-sec11",
+      "match": "类比"
+    },
+    {
+      "id": "equivalent-circuit",
+      "aliases": [
+        "equivalent circuit",
+        "等效电路"
+      ],
+      "title": "等效电路",
+      "english": "Equivalent Circuit",
+      "description": "在指定工况与近似条件下，用电路元件表示原设备的端口关系。励磁、漏磁、绕组压降和损耗的对应关系不能混用。",
+      "section": "transformer-3",
+      "match": "T型电路的位置由节点方程决定"
+    },
+    {
+      "id": "saturation",
+      "aliases": [
+        "saturation",
+        "磁饱和"
+      ],
+      "title": "磁饱和",
+      "english": "Magnetic Saturation",
+      "description": "铁磁材料的磁化关系呈非线性，较高磁密区需要显著增加磁场强度；计算须采用相应磁化关系，不能无限沿用常磁导率近似。",
+      "section": "magnetic-sec12",
+      "match": "饱和"
+    },
+    {
+      "id": "hysteresis",
+      "aliases": [
+        "hysteresis",
+        "磁滞"
+      ],
+      "title": "磁滞",
+      "english": "Magnetic Hysteresis",
+      "description": "铁磁材料的磁化状态与此前的磁化过程有关。磁滞耗散与可逆储能、磁共能应分开讨论。",
+      "section": "magnetic-sec12",
+      "match": "磁滞"
+    },
+    {
+      "id": "efficiency",
+      "aliases": [
+        "efficiency",
+        "效率"
+      ],
+      "title": "效率",
+      "english": "Efficiency",
+      "description": "按明确端口和工况定义的输出功率与输入功率之比；全天效率按能量加权，不能与某一时刻的效率混为一谈。",
+      "section": "transformer-5",
+      "match": "从功率平衡写出效率"
+    },
+    {
+      "id": "regulation",
+      "aliases": [
+        "voltage regulation",
+        "电压变化率"
+      ],
+      "title": "电压变化率",
+      "english": "Voltage Regulation",
+      "description": "比较规定条件下空载与负载电压变化的相对量。必须先明确分母、参考方向和所采用的精确或近似模型。",
+      "section": "transformer-5",
+      "match": "先定义电压变化率的分母"
+    },
+    {
+      "id": "dc",
+      "aliases": [
+        "DC",
+        "direct current",
+        "直流"
+      ],
+      "title": "直流",
+      "english": "Direct Current (DC)",
+      "description": "方向不随时间反向的电流。直流电机的稳态平均量与瞬时量仍须区分，直流稳态量不使用相量点号。",
+      "section": "dc-overview",
+      "match": "直流稳态量不加相量点号"
+    },
+    {
+      "id": "ac",
+      "aliases": [
+        "AC",
+        "alternating current",
+        "交流"
+      ],
+      "title": "交流",
+      "english": "Alternating Current (AC)",
+      "description": "方向随时间交替变化的电流。相量方法在本材料中用于同频正弦稳态；非正弦量不能不加说明地套用单一相量。",
+      "section": "transformer-1",
+      "match": "有效值、相量与功率"
+    },
+    {
+      "id": "transformer",
+      "aliases": [
+        "transformer",
+        "transformers",
+        "变压器"
+      ],
+      "title": "变压器",
+      "english": "Transformer",
+      "description": "利用电磁感应和绕组安匝关系，在相应条件下变换交流电压、电流与阻抗。实际设备还须考虑励磁、漏磁和损耗。",
+      "section": "transformer-2",
+      "match": "理想模型的三个变换关系"
+    },
+    {
+      "id": "flux",
+      "aliases": [
+        "magnetic flux",
+        "flux",
+        "磁通"
+      ],
+      "title": "磁通",
+      "english": "Magnetic Flux",
+      "description": "磁感应强度穿过选定曲面的通量。需要明确曲面与法向；仅在适用条件下可近似写成 B 与面积的乘积。",
+      "section": "magnetic-sec11",
+      "match": "磁通是穿过一个选定曲面"
+    },
+    {
+      "id": "inductance",
+      "aliases": [
+        "inductance",
+        "电感"
+      ],
+      "title": "电感",
+      "english": "Inductance",
+      "description": "与绕组磁链和电流关系有关的参数。在线性与非线性工况中，应区分自感、割线电感和微分电感。",
+      "section": "magnetic-sec14",
+      "match": "非线性时，为什么两种"
+    },
+    {
+      "id": "armature-windings",
+      "aliases": [
+        "armature windings",
+        "armature winding",
+        "电枢绕组"
+      ],
+      "title": "电枢绕组",
+      "english": "Armature Winding",
+      "description": "将有效导体按照规定的槽层和换向片连接成线圈及并联支路。叠绕、波绕的接线与支路规则不能混用。",
+      "section": "dc-sec32",
+      "match": "先从线圈连成支路"
+    },
+    {
+      "id": "symmetrical-components",
+      "aliases": [
+        "symmetrical components",
+        "对称分量"
+      ],
+      "title": "对称分量",
+      "english": "Symmetrical Components",
+      "description": "把三相量转换为正序、负序和零序量的一种可逆坐标变换，用于组织不对称工况分析。",
+      "section": "transformer-7",
+      "match": "对称分量是一种可逆坐标变换"
+    },
+    {
+      "id": "autotransformer",
+      "aliases": [
+        "autotransformer",
+        "自耦变压器"
+      ],
+      "title": "自耦变压器",
+      "english": "Autotransformer",
+      "description": "绕组具有电气连接的变压器结构。公共段电流由节点关系确定，输出容量与绕组电磁容量须区分。",
+      "section": "transformer-9",
+      "match": "自耦：公共段电流"
+    },
+    {
+      "id": "kcl",
+      "aliases": [
+        "KCL",
+        "Kirchhoff current law",
+        "Kirchhoff’s current law"
+      ],
+      "title": "基尔霍夫电流定律",
+      "english": "Kirchhoff’s Current Law (KCL)",
+      "description": "在规定参考方向下，节点处支路电流的代数和为零。磁路中的磁通连续性可以作形式类比，但不是物质电流积累的同一叙述。",
+      "section": "transformer-3",
+      "match": "节点电流关系"
+    },
+    {
+      "id": "kvl",
+      "aliases": [
+        "KVL",
+        "Kirchhoff voltage law",
+        "Kirchhoff’s voltage law"
+      ],
+      "title": "基尔霍夫电压定律",
+      "english": "Kirchhoff’s Voltage Law (KVL)",
+      "description": "按选定回路与参考方向列出电势及压降的代数关系。直流电机的反电势、绕组压降和端电压必须在同一方向约定下使用。",
+      "section": "dc-sec35",
+      "match": "先固定参考方向"
+    },
+    {
+      "id": "weber",
+      "aliases": [
+        "Wb",
+        "weber"
+      ],
+      "title": "韦伯",
+      "english": "Weber (Wb)",
+      "description": "磁通的 SI 单位。1 Wb = 1 V·s；磁链也常以 Wb·turn 表述，需要区分是否已经计入匝数。",
+      "section": "magnetic-overview",
+      "match": "Wb；大写"
+    },
+    {
+      "id": "hertz",
+      "aliases": [
+        "Hz",
+        "hertz"
+      ],
+      "title": "赫兹",
+      "english": "Hertz (Hz)",
+      "description": "频率单位，1 Hz 表示每秒一个周期。频率 f 与角频率 ω 的单位及数值关系不同。",
+      "section": "magnetic-overview",
+      "match": "rad/s、Hz"
+    },
+    {
+      "id": "va",
+      "aliases": [
+        "VA",
+        "volt-ampere"
+      ],
+      "title": "伏安",
+      "english": "Volt-ampere (VA)",
+      "description": "视在功率的单位。正弦稳态下与电压、电流有效值有关，应与有功功率 W 和无功功率 var 区分。",
+      "section": "transformer-4",
+      "match": "容量基准"
+    },
+    {
+      "id": "kva",
+      "aliases": [
+        "kVA",
+        "kilovolt-ampere"
+      ],
+      "title": "千伏安",
+      "english": "Kilovolt-ampere (kVA)",
+      "description": "1 kVA = 1000 VA，常用于变压器的额定容量。它不直接等于千瓦，转换到有功功率还需考虑相应功率因数与工况。",
+      "section": "transformer-4",
+      "match": "容量基准"
+    }
+  ],
+  "symbolDefinitions": [
+    {
+      "id": "magnetization",
+      "title": "磁化强度 M",
+      "symbolHtml": "<span>磁化强度 M</span>",
+      "keys": [
+        "bold:M",
+        "bold:M_mag",
+        "M_mag"
+      ],
+      "description": "磁化强度，须与互感 M 区分。",
+      "unitHtml": "A/m",
+      "section": "magnetic-sec11",
+      "match": "为磁化强度"
+    }
+  ]
+}
