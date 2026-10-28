@@ -85,7 +85,7 @@ def build():
             nodes=[n for n in document(spec['section']).walk() if n.tag in {'p','h2','h3','h4','li','td'}]
             i,node=next((i,n) for i,n in enumerate(nodes) if spec['match'] in clean(n.text()))
             source={'section':spec['section'],'anchor':node.attrs.get('id') or 'definition-passage-'+str(i),'passage':i}
-            entries.append({**spec,'kind':'symbol','definitionHtml':inner(node),'source':source,'group':sections[spec['section']]['group']})
+            entries.append({**spec,'kind':'symbol','symbolHtml':spec.get('symbolHtml','<span>'+html.escape(spec['title'])+'</span>'),'definitionHtml':inner(node),'source':source,'group':sections[spec['section']]['group']})
         for term in config.get('terms',[]):
             nodes=[n for n in document(term['section']).walk() if n.tag in {'p','h2','h3','h4','li','td'}]
             matching=[(i,n) for i,n in enumerate(nodes) if term['match'] in clean(n.text())]
@@ -96,6 +96,12 @@ def build():
                 if following:i,node=following
             source={'section':term['section'],'anchor':node.attrs.get('id') or 'definition-passage-'+str(i),'passage':i}
             entries.append({**term,'kind':'term','source':source,'definitionHtml':inner(node),'group':sections[term['section']]['group']})
+        ids=set()
+        for entry in entries:
+            if entry['id'] in ids:raise ValueError('Duplicate definition id: '+entry['id'])
+            ids.add(entry['id'])
+            for section_id in entry.get('sections',[]):
+                if section_id not in sections:raise ValueError('Unknown definition scope: '+section_id)
         result[course['id']]={'entries':entries}
     return result
 

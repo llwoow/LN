@@ -479,6 +479,8 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 /* Source-backed definitions: anchored, non-modal and local to the current reading context. */
 .lesson .definition-term { color: inherit; text-decoration: underline dotted; text-decoration-color: var(--muted); text-underline-offset: 3px; text-decoration-thickness: 1px; cursor: help; }
 .definition-symbol, .definition-expression { cursor: help; }
+/* KaTeX's empty depth-measuring row must not intercept the visible symbol above it. */
+.publication-body .katex-html .vlist-r:has(> .vlist > span:only-child:empty) { pointer-events: none; }
 .definition-symbol { text-decoration: underline dotted; text-decoration-color: var(--muted); text-underline-offset: .18em; text-decoration-thickness: 1px; }
 .definition-symbol:hover, .definition-expression:hover, .definition-term:hover { background: var(--accent-soft); border-radius: 2px; }
 .definition-symbol:focus-visible, .definition-expression:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

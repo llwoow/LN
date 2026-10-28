@@ -38,6 +38,9 @@ python scripts/build-glossary.py --check
 ```sh
 python tests/publication.browser.py
 python tests/glossary.browser.py
+python tests/glossary-coverage.browser.py
 ```
 
 定义索引配置见 `courses/electrical-machines/glossary.json`。新增材料时指定原符号表或真实定义段落，核对术语释义，再运行 `python scripts/build-glossary.py`；同名符号按材料分组解析。
+
+局部符号或术语可用 `sections` 限定适用阅读单元；范围内定义优先，未覆盖的小节不套用，避免将空载量与零序量等混淆。

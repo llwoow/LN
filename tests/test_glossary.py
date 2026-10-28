@@ -60,6 +60,23 @@ class DefinitionIndex(unittest.TestCase):
             self.assertTrue(term['english'])
             self.assertTrue(term['description'])
 
+    def test_local_quantities_have_explicit_lesson_scopes(self):
+        by_id = {e['id']: e for e in self.entries}
+        for name in ['dc-commutation-current', 'dc-commutation-time', 'dc-commutation-inductance', 'dc-reactance-emf']:
+            self.assertEqual(by_id[name]['sections'], ['dc-sec39'])
+        self.assertNotIn('transformer-7', by_id['transformer-open-test']['sections'])
+        self.assertNotIn('transformer-7', by_id['transformer-excitation-current']['sections'])
+        self.assertEqual(by_id['magnetic-coupling']['sections'], ['magnetic-sec14'])
+        self.assertIn('dot:I_1', by_id['transformer-current-ports']['keys'])
+        self.assertIn("dot:I_2'", by_id['transformer-referred-current']['keys'])
+
+    def test_every_scope_is_a_real_lesson(self):
+        for entry in self.entries:
+            for section in entry.get('sections', []):
+                self.assertIn(section, self.sections)
+            if entry['kind'] == 'symbol':
+                self.assertTrue(entry['symbolHtml'])
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -412,6 +412,243 @@
       "description": "1 kVA = 1000 VA，常用于变压器的额定容量。它不直接等于千瓦，转换到有功功率还需考虑相应功率因数与工况。",
       "section": "transformer-4",
       "match": "容量基准"
+    },
+    {
+      "id": "permeance",
+      "title": "磁导",
+      "aliases": [
+        "permeance",
+        "磁导"
+      ],
+      "english": "Magnetic permeance",
+      "description": "给定磁路支路的磁通与磁动势之比；在线性模型中是磁阻的倒数，须与电导及磁链区分。",
+      "section": "magnetic-sec11",
+      "match": "这里 Λ 是磁导"
+    },
+    {
+      "id": "reluctance",
+      "title": "磁阻",
+      "aliases": [
+        "reluctance",
+        "磁阻"
+      ],
+      "english": "Magnetic reluctance",
+      "description": "集中磁路模型中磁动势与磁通的比值。非线性时随工作点变化，不能当作任意叠加的常数。",
+      "section": "magnetic-sec11",
+      "match": "这里 Λ 是磁导"
+    },
+    {
+      "id": "eddy-current",
+      "title": "涡流",
+      "aliases": [
+        "eddy current",
+        "eddy currents",
+        "涡流"
+      ],
+      "english": "Eddy current",
+      "description": "交变磁通产生感应电场，在导电材料中驱动闭合电流并产生热耗。绝缘叠片可减轻相应损耗。",
+      "section": "magnetic-sec12",
+      "match": "铁心可导电，交变磁通"
+    },
+    {
+      "id": "remanence",
+      "title": "剩磁",
+      "aliases": [
+        "remanence",
+        "remnant magnetism",
+        "剩磁",
+        "剩余磁密"
+      ],
+      "english": "Remanence",
+      "description": "外加磁场降低后保留的磁化状态，取决于磁化历史；剩余磁密 B_r 需结合指定磁滞回线解释。",
+      "section": "magnetic-sec12",
+      "match": "把磁场从较强正向逐步减小"
+    },
+    {
+      "id": "coercivity",
+      "title": "矫顽力",
+      "aliases": [
+        "coercivity",
+        "coercive field",
+        "矫顽力"
+      ],
+      "english": "Coercivity / coercive field strength",
+      "description": "按规定磁化回线，使磁密降到零所需反向磁场强度的大小；不同回线与测量定义应区分。",
+      "section": "magnetic-sec12",
+      "match": "把磁场从较强正向逐步减小"
+    },
+    {
+      "id": "coenergy",
+      "title": "磁共能",
+      "aliases": [
+        "coenergy",
+        "co-energy",
+        "磁共能"
+      ],
+      "english": "Magnetic coenergy",
+      "description": "可逆单值磁化模型中对磁链关于电流积分的量；一般非线性情况下不同于磁场储能，线性时才相等。",
+      "section": "magnetic-sec14",
+      "match": "第二个积分称磁共能"
+    },
+    {
+      "id": "leakage-flux",
+      "title": "漏磁通",
+      "aliases": [
+        "leakage flux",
+        "漏磁通",
+        "漏磁"
+      ],
+      "english": "Leakage flux",
+      "description": "绕过所选主磁路或不同时链过关注绕组的磁通；定义与所观察的绕组及有效磁路有关。",
+      "section": "magnetic-sec13",
+      "match": "边缘磁通可以仍然连接同一主磁路"
+    },
+    {
+      "id": "excitation",
+      "title": "励磁",
+      "aliases": [
+        "excitation",
+        "magnetizing current",
+        "magnetising current",
+        "励磁"
+      ],
+      "english": "Excitation / magnetization",
+      "description": "建立所需主磁场的作用。变压器基波等效模型中的励磁无功分量，应与补充铁耗的有功分量区分。",
+      "section": "transformer-3",
+      "match": "有限磁导率需要励磁电流"
+    },
+    {
+      "id": "lap-winding",
+      "title": "单叠绕组",
+      "aliases": [
+        "simplex lap winding",
+        "lap winding",
+        "单叠绕组",
+        "单叠"
+      ],
+      "english": "Simplex lap winding",
+      "description": "相邻线圈接相邻换向片；正常对称单叠绕组总并联支路数等于总极数。该结论不能直接套用复叠绕组。",
+      "section": "dc-sec32",
+      "match": "单叠绕组相邻线圈接到相邻换向片"
+    },
+    {
+      "id": "wave-winding",
+      "title": "单波绕组",
+      "aliases": [
+        "simplex wave winding",
+        "wave winding",
+        "单波绕组",
+        "单波"
+      ],
+      "english": "Simplex wave winding",
+      "description": "沿各磁极依次串联的绕组；正常对称单波绕组有两条并联支路，并须满足正确闭合与构造条件。",
+      "section": "dc-sec32",
+      "match": "单波绕组把不同磁极下同极性的有效电势"
+    },
+    {
+      "id": "equalizer",
+      "title": "均压连接线",
+      "aliases": [
+        "equalizer connection",
+        "equaliser connection",
+        "均压连接线",
+        "均压线"
+      ],
+      "english": "Equalizer connection",
+      "description": "连接绕组中理论等电位的位置，使部分不均衡环流在内部流通、减轻电刷负担。",
+      "section": "dc-sec32",
+      "match": "均压连接线连接理论上等电位的位置"
+    },
+    {
+      "id": "interpole",
+      "title": "换向极",
+      "aliases": [
+        "interpole",
+        "interpoles",
+        "commutating pole",
+        "换向极"
+      ],
+      "english": "Interpole / commutating pole",
+      "description": "位于主极之间、通常与电枢串联的辅助磁极，改善换向区磁场并帮助电流反转，极性必须按目标反转方向确定。",
+      "section": "dc-sec39",
+      "match": "换向极设置在主极之间"
+    },
+    {
+      "id": "compensating-winding",
+      "title": "补偿绕组",
+      "aliases": [
+        "compensating winding",
+        "compensation winding",
+        "补偿绕组"
+      ],
+      "english": "Compensating winding",
+      "description": "主要补偿主极下电枢反应的绕组，与主要改善换向区的换向极作用范围不同。",
+      "section": "dc-sec39",
+      "match": "主极补偿绕组主要处理主极下磁场畸变"
+    },
+    {
+      "id": "copper-loss",
+      "title": "铜耗",
+      "aliases": [
+        "copper loss",
+        "copper losses",
+        "铜耗"
+      ],
+      "english": "Copper loss",
+      "description": "电流流经绕组电阻产生的有功损耗；须使用对应绕组电流与电阻，并核对是否包括其他负载损耗。",
+      "section": "transformer-3",
+      "match": "电阻对应"
+    },
+    {
+      "id": "permeability",
+      "title": "磁导率",
+      "aliases": [
+        "permeability",
+        "magnetic permeability",
+        "磁导率"
+      ],
+      "english": "Magnetic permeability",
+      "description": "表征材料在指定条件下磁密与磁场强度关系的量。非线性时须区分割线与微分定义；它不是整个磁路支路的磁导。",
+      "section": "magnetic-sec12",
+      "match": "在某工作点可定义割线磁导率"
+    },
+    {
+      "id": "commutator",
+      "title": "换向器",
+      "aliases": [
+        "commutator",
+        "换向器",
+        "换向片"
+      ],
+      "english": "Commutator",
+      "description": "由相互绝缘的导电换向片组成，与固定电刷配合，在旋转过程中切换线圈与外电路的连接，帮助维持规定的端口电势和转矩方向。",
+      "section": "dc-sec31",
+      "match": "解决办法是把线圈两端接到两个绝缘的换向片"
+    },
+    {
+      "id": "brush",
+      "title": "电刷",
+      "aliases": [
+        "brush",
+        "brushes",
+        "电刷"
+      ],
+      "english": "Brush",
+      "description": "与旋转换向片接触、连接外电路的固定导电部件。跨片时会暂时短接局部换向线圈，接触状态会影响换向。",
+      "section": "dc-sec31",
+      "match": "解决办法是把线圈两端接到两个绝缘的换向片"
+    },
+    {
+      "id": "power-factor",
+      "title": "功率因数",
+      "aliases": [
+        "power factor",
+        "功率因数"
+      ],
+      "english": "Power factor",
+      "description": "有功功率与视在功率之比。正弦稳态时为电压、电流相位差的余弦；存在畸变时还要考虑波形因素。",
+      "section": "transformer-1",
+      "match": "变压器容量用VA表示"
     }
   ],
   "symbolDefinitions": [
@@ -428,6 +665,439 @@
       "unitHtml": "A/m",
       "section": "magnetic-sec11",
       "match": "为磁化强度"
+    },
+    {
+      "id": "transformer-voltage-ports",
+      "title": "绕组端电压 U₁、U₂",
+      "keys": [
+        "U_1",
+        "U_2",
+        "u_1",
+        "u_2",
+        "dot:U_1",
+        "dot:U_2"
+      ],
+      "section": "transformer-symbols",
+      "match": "两绕组上端均标同名端",
+      "description": "下标 1、2 分别表示一次、二次绕组；小写为瞬时值、大写为有效值、顶点为有效值相量。两侧电压均以上端对下端为正。",
+      "unitHtml": "V"
+    },
+    {
+      "id": "transformer-current-ports",
+      "title": "一次、二次电流 I₁、I₂",
+      "keys": [
+        "I_1",
+        "I_2",
+        "i_1",
+        "i_2",
+        "dot:I_1",
+        "dot:I_2"
+      ],
+      "section": "transformer-symbols",
+      "match": "两绕组上端均标同名端",
+      "description": "一次电流流入同名端，二次输出电流流出同名端；大小写及顶点分别区分瞬时值、有效值和相量。",
+      "unitHtml": "A"
+    },
+    {
+      "id": "transformer-induced-voltage",
+      "title": "内部感应电压 E₁、E₂",
+      "keys": [
+        "E_1",
+        "E_2",
+        "dot:E_1",
+        "dot:E_2"
+      ],
+      "section": "transformer-symbols",
+      "match": "法拉第回路电动势沿选定回路方向",
+      "description": "内部感应电压与端电压采用同一参考极性；须与法拉第回路电动势的反向参考约定区分。",
+      "unitHtml": "V"
+    },
+    {
+      "id": "transformer-series-impedance",
+      "title": "绕组串联阻抗 Z₁、Z₂",
+      "keys": [
+        "Z_1",
+        "Z_2"
+      ],
+      "section": "transformer-3",
+      "match": "将共同主磁通与绕组自身漏磁分开",
+      "description": "每侧绕组电阻与漏抗组成的串联复阻抗；下标标明所属侧。",
+      "unitHtml": "Ω"
+    },
+    {
+      "id": "transformer-excitation-current",
+      "title": "空载、铁耗与励磁电流",
+      "keys": [
+        "I_0",
+        "dot:I_0",
+        "I_c",
+        "I_m",
+        "dot:I_c",
+        "dot:I_m",
+        "i_m"
+      ],
+      "section": "transformer-3",
+      "match": "有限磁导率需要励磁电流",
+      "description": "I₀ 为空载电流；其基波模型含铁耗有功分量 I_c 与励磁无功分量 I_m，不能将两者的模直接相加。",
+      "unitHtml": "A",
+      "sections": [
+        "transformer-symbols",
+        "transformer-1",
+        "transformer-2",
+        "transformer-3",
+        "transformer-4",
+        "transformer-5",
+        "transformer-6",
+        "transformer-8",
+        "transformer-9",
+        "transformer-10",
+        "transformer-answers",
+        "transformer-homework",
+        "transformer-quickref",
+        "transformer-sources"
+      ]
+    },
+    {
+      "id": "transformer-referred-current",
+      "title": "二次折算电流 I₂′",
+      "keys": [
+        "I_2'",
+        "dot:I_2'"
+      ],
+      "section": "transformer-3",
+      "match": "定义二次量折算到一次侧",
+      "description": "折到一次侧的二次电流为原二次电流除以匝数比 a；不是原实物端口的二次电流。",
+      "unitHtml": "A"
+    },
+    {
+      "id": "transformer-referred-voltage",
+      "title": "二次折算电压 U₂′、E₂′",
+      "keys": [
+        "U_2'",
+        "dot:U_2'",
+        "E_2'",
+        "dot:E_2'"
+      ],
+      "section": "transformer-3",
+      "match": "定义二次量折算到一次侧",
+      "description": "二次电压折到一次侧须乘匝数比 a，与折算电流的方向相反。",
+      "unitHtml": "V"
+    },
+    {
+      "id": "transformer-referred-impedance",
+      "title": "二次折算阻抗",
+      "keys": [
+        "R_2'",
+        "X_σ2'",
+        "Z_2'",
+        "Z_L'"
+      ],
+      "section": "transformer-3",
+      "match": "二次电压方程（3.3）整体乘以",
+      "description": "二次阻抗折到一次侧须乘匝数比的平方；折算前后功率保持不变。",
+      "unitHtml": "Ω"
+    },
+    {
+      "id": "transformer-admittance",
+      "title": "空载支路导纳 Y₀",
+      "keys": [
+        "Y_0"
+      ],
+      "section": "transformer-3",
+      "match": "有限磁导率需要励磁电流",
+      "description": "线性基波空载支路的复导纳，由铁耗电导与励磁电纳组成。",
+      "unitHtml": "S"
+    },
+    {
+      "id": "transformer-open-test",
+      "title": "空载试验读数 U₀、I₀、P₀",
+      "keys": [
+        "U_0",
+        "P_0"
+      ],
+      "section": "transformer-4",
+      "match": "二次开路，在测量侧加额定频率",
+      "description": "U₀ 为空载试验测量侧电压，P₀ 为所测有功功率；P₀ 近似铁耗需要忽略空载铜耗等条件。",
+      "unitHtml": "V、W",
+      "sections": [
+        "transformer-4",
+        "transformer-10"
+      ]
+    },
+    {
+      "id": "transformer-short-test",
+      "title": "短路试验读数 Uₖ、Iₖ、Pₖ",
+      "keys": [
+        "U_k",
+        "I_k",
+        "P_k"
+      ],
+      "section": "transformer-4",
+      "match": "一侧短接，另一侧从零升压",
+      "description": "受控低压短路试验的测量侧电压、电流与有功功率。参数必须注明测量侧与试验电流。",
+      "unitHtml": "V、A、W"
+    },
+    {
+      "id": "transformer-bases",
+      "title": "标幺值的容量、电压、电流与阻抗基准",
+      "keys": [
+        "S_B",
+        "U_B",
+        "I_B",
+        "Z_base",
+        "Z_base,1",
+        "Z_base,2"
+      ],
+      "section": "transformer-4",
+      "match": "单相选容量基准",
+      "description": "容量与电压基准选定后，电流和阻抗基准由相应功率、阻抗关系确定；三相线量与每相量需另行区分。",
+      "unitHtml": "VA、V、A、Ω"
+    },
+    {
+      "id": "transformer-pu-impedance",
+      "title": "短路阻抗的标幺值 rₖ、xₖ、zₖ",
+      "keys": [
+        "r_k",
+        "x_k",
+        "z_k",
+        "dot:z_k"
+      ],
+      "section": "transformer-4",
+      "match": "实际量除以自身基准即标幺值",
+      "description": "电阻、电抗及阻抗模分别除以选定阻抗基准得到标幺值；复标幺阻抗的点号是本文采用的记号。",
+      "unitHtml": "无量纲"
+    },
+    {
+      "id": "transformer-active-power",
+      "title": "有功功率 P",
+      "keys": [
+        "P"
+      ],
+      "section": "transformer-symbols",
+      "match": "为避免字母冲突",
+      "description": "有功功率是复功率的实部，须与无功、视在功率区分。",
+      "unitHtml": "W"
+    },
+    {
+      "id": "transformer-reactive-power",
+      "title": "无功功率 Q",
+      "keys": [
+        "Q"
+      ],
+      "section": "transformer-symbols",
+      "match": "为避免字母冲突",
+      "description": "复功率的虚部；符号与参考方向及感性、容性约定有关。",
+      "unitHtml": "var"
+    },
+    {
+      "id": "transformer-apparent-power",
+      "title": "视在功率 S",
+      "keys": [
+        "S"
+      ],
+      "section": "transformer-symbols",
+      "match": "为避免字母冲突",
+      "description": "视在功率与有效值电压、电流有关；本文用无顶点 S 表示视在功率，复功率另依原文记法。",
+      "unitHtml": "VA"
+    },
+    {
+      "id": "magnetic-remanence",
+      "title": "剩余磁密 Bᵣ",
+      "keys": [
+        "B_r"
+      ],
+      "section": "magnetic-sec12",
+      "match": "把磁场从较强正向逐步减小",
+      "description": "沿规定磁化回线减小外加磁场到 H=0 时仍可保有的磁密；不是任意磁化状态下的固定值。",
+      "unitHtml": "T"
+    },
+    {
+      "id": "magnetic-coercivity",
+      "title": "矫顽力 H꜀",
+      "keys": [
+        "H_c"
+      ],
+      "section": "magnetic-sec12",
+      "match": "把磁场从较强正向逐步减小",
+      "description": "沿规定回线使磁密降至零所需反向磁场强度的大小；须说明回线与测量定义。",
+      "unitHtml": "A/m"
+    },
+    {
+      "id": "magnetic-permeability",
+      "title": "割线与微分磁导率",
+      "keys": [
+        "μ_sec",
+        "μ_diff"
+      ],
+      "section": "magnetic-sec12",
+      "match": "在某工作点可定义割线磁导率与局部微分磁导率",
+      "description": "μ_sec 为 B/H，μ_diff 为局部斜率 dB/dH；有磁滞时需说明所沿磁化支路。",
+      "unitHtml": "H/m"
+    },
+    {
+      "id": "magnetic-core-field",
+      "title": "铁心磁场强度 H_core",
+      "keys": [
+        "H_core"
+      ],
+      "section": "magnetic-sec13",
+      "match": "铁心的",
+      "description": "从指定材料磁化曲线求得的铁心磁场强度；core 下标用于避免与矫顽力 H_c 混淆。",
+      "unitHtml": "A/m"
+    },
+    {
+      "id": "magnetic-effective-area",
+      "title": "气隙有效通磁面积 A_eff",
+      "keys": [
+        "A_eff"
+      ],
+      "section": "magnetic-sec13",
+      "match": "气隙边缘处磁场会向周围扩展",
+      "description": "考虑边缘扩散后估计的气隙通磁面积，不能当作适用于所有结构的固定修正倍数。",
+      "unitHtml": "m²"
+    },
+    {
+      "id": "magnetic-main-permeance",
+      "title": "两绕组共同主磁导 Λₘ",
+      "keys": [
+        "Λ_m"
+      ],
+      "section": "magnetic-sec14",
+      "match": "设两绕组链同一主磁通",
+      "description": "两绕组线性共同主磁路的磁导；其与匝数一起决定主自感和互感。",
+      "unitHtml": "H"
+    },
+    {
+      "id": "magnetic-coupling",
+      "title": "耦合系数 k",
+      "keys": [
+        "k"
+      ],
+      "section": "magnetic-sec14",
+      "match": "反转一个绕组的电流或电压参考时",
+      "description": "线性、互易无源模型中，k=|M|/√(L₁L₂)，取值不大于 1；不能由同一铁心直接断言无漏磁。",
+      "unitHtml": "无量纲",
+      "sections": [
+        "magnetic-sec14"
+      ]
+    },
+    {
+      "id": "magnetic-resistivity",
+      "title": "铁心材料电阻率 ρ",
+      "keys": [
+        "ρ"
+      ],
+      "section": "magnetic-sec12",
+      "match": "其中t为片厚",
+      "description": "经典薄片涡流损耗模型中的材料电阻率，使用时须核对温度与模型条件。",
+      "unitHtml": "Ω·m"
+    },
+    {
+      "id": "dc-coil-count",
+      "title": "电枢线圈数 N꜀",
+      "keys": [
+        "N_c"
+      ],
+      "section": "dc-sec32",
+      "match": "一匝有两个有效导体边",
+      "description": "电枢线圈的总数，须与有效导体数 Z、槽数及绕组匝数区分。",
+      "unitHtml": "个"
+    },
+    {
+      "id": "dc-coil-turns",
+      "title": "每线圈匝数 w꜀",
+      "keys": [
+        "w_c"
+      ],
+      "section": "dc-sec32",
+      "match": "一匝有两个有效导体边",
+      "description": "每只线圈的匝数；每匝有两个有效导体边，因此 Z=2N_c w_c。",
+      "unitHtml": "匝"
+    },
+    {
+      "id": "dc-commutation-current",
+      "title": "换向线圈电流 i꜀ 与正常支路电流 I꜀",
+      "keys": [
+        "I_c",
+        "i_c"
+      ],
+      "section": "dc-sec39",
+      "match": "某线圈从一条电刷间支路转入另一条支路时",
+      "description": "I_c=I_a/A 是正常支路电流大小，i_c 是换向过程中的线圈瞬时电流，目标由 +I_c 反转到 −I_c。",
+      "unitHtml": "A",
+      "sections": [
+        "dc-sec39"
+      ]
+    },
+    {
+      "id": "dc-commutation-time",
+      "title": "换向时间 T꜀",
+      "keys": [
+        "T_c"
+      ],
+      "section": "dc-sec39",
+      "match": "换向时间",
+      "description": "线圈由电刷跨片短接而完成电流反转所经历的时间，取决于有效覆盖宽度、绝缘间隙与圆周速度。",
+      "unitHtml": "s",
+      "sections": [
+        "dc-sec39"
+      ]
+    },
+    {
+      "id": "dc-brush-coverage",
+      "title": "电刷有效覆盖宽度 b_eff",
+      "keys": [
+        "b_eff"
+      ],
+      "section": "dc-sec39",
+      "match": "换向时间",
+      "description": "估计换向时间时采用的有效覆盖宽度，须明确其定义，不能直接用任意电刷外形宽度代替。",
+      "unitHtml": "m",
+      "sections": [
+        "dc-sec39"
+      ]
+    },
+    {
+      "id": "dc-commutator-speed",
+      "title": "换向器圆周速度 v꜀",
+      "keys": [
+        "v_c"
+      ],
+      "section": "dc-sec39",
+      "match": "换向时间",
+      "description": "换向器表面的圆周线速度，与有效覆盖宽度一起决定简化换向时间。",
+      "unitHtml": "m/s",
+      "sections": [
+        "dc-sec39"
+      ]
+    },
+    {
+      "id": "dc-commutation-inductance",
+      "title": "等效换向电感 L꜀",
+      "keys": [
+        "L_c"
+      ],
+      "section": "dc-sec39",
+      "match": "线圈有电感",
+      "description": "简化模型中包含相关耦合影响的等效换向电感；若仅用自感，互感电势需另计且避免重复。",
+      "unitHtml": "H",
+      "sections": [
+        "dc-sec39"
+      ]
+    },
+    {
+      "id": "dc-reactance-emf",
+      "title": "电抗电势 eᵣ",
+      "keys": [
+        "e_r"
+      ],
+      "section": "dc-sec39",
+      "match": "线圈有电感",
+      "description": "简化换向模型中阻碍线圈电流反转的感应电势量级；它是局部换向电势，不是整机电枢电势。",
+      "unitHtml": "V",
+      "sections": [
+        "dc-sec39"
+      ]
     }
   ]
 }

@@ -15,7 +15,9 @@
   const shared = new Set(['B','H','bold:B','bold:H','μ','μ_0','μ_r','λ','cal:R','cal:F','Λ','L_sec','L_diff','M','ω','f']);
 
   function resolveSymbol(course, section, key, kind = 'symbol') {
-    const entries = entriesFor(course).filter((e) => e.kind === kind && e.keys.includes(key));
+    const entries = entriesFor(course).filter((e) => e.kind === kind && e.keys.includes(key) && (!e.sections || e.sections.includes(section.id)));
+    const scoped = entries.filter((e) => e.sections?.includes(section.id));
+    if (scoped.length) return scoped.length === 1 ? scoped[0] : null;
     const local = entries.filter((e) => e.group === section.group);
     if (local.length === 1) return local[0];
     if (!local.length && shared.has(key)) return entries.find((e) => e.source.section === 'magnetic-overview') || null;
@@ -103,7 +105,7 @@
           if (element.closest('[data-definition]') || element.querySelector('[data-definition]')) return false;
           if (displayKey(element.textContent) !== item.visible) return false;
           if (!item.key.startsWith('subscript:') && /^[A-Za-z]$/.test(item.visible) && (element.classList.contains('mathrm') || element.querySelector('.mathrm'))) return false;
-          const accent = element.classList.contains('accent');
+          const accent = element.classList.contains('accent') || !!element.querySelector('.accent');
           if (item.key.startsWith('dot:') !== accent) return false;
           const script = element.classList.contains('mathcal') || !!element.querySelector('.mathcal');
           if (item.key.startsWith('cal:') !== script) return false;
@@ -125,8 +127,9 @@
         tool.setAttribute('aria-label','查看本公式的物理符号定义'); tool.setAttribute('aria-haspopup','dialog'); identity(tool); equation.append(tool);
       }
     });
-    const terms = entries.filter((e) => e.kind === 'term');
+    const terms = entries.filter((e) => e.kind === 'term' && (!e.sections || e.sections.includes(section.id)));
     const aliases = terms.flatMap((entry) => entry.aliases.map((text) => ({ text, entry }))).sort((a,b) => b.text.length - a.text.length);
+    if (!aliases.length) return;
     const regexEscape = (value) => value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
     const regex = new RegExp(aliases.map((alias) => regexEscape(alias.text)).join('|'),'gi');
     const walker = document.createTreeWalker(body,NodeFilter.SHOW_TEXT,{acceptNode(node){
@@ -180,19 +183,27 @@
     if(!opened())popup.showPopover();position();popup.querySelector('.definition-close').focus({preventScroll:true});
   }
   function entryById(id){return entriesFor(context.course).find((entry)=>entry.id===id);}
+  function sourceExcerpt(entry, label) {
+    const excerpt=make('details','definition-excerpt');excerpt.append(make('summary','',label));
+    const copy=make('div','definition-copy');copy.append(safeHtml(entry.definitionHtml));excerpt.append(copy);
+    excerpt.addEventListener('toggle',position);return excerpt;
+  }
   function showEntry(entry) {
     if(!entry)return;
     const content=shell(entry.kind==='term'?entry.title:'符号定义');
     if(entry.kind!=='term') {
       const symbol=make('div','definition-symbol-title');symbol.append(safeHtml(entry.symbolHtml));content.append(symbol);
-      content.append(make('p','definition-label','原文定义'));
-      const text=make('div','definition-copy');text.append(safeHtml(entry.definitionHtml));content.append(text);
+      if (entry.source.passage !== undefined && entry.description) {
+        content.append(make('p','definition-copy',entry.description));
+        content.append(sourceExcerpt(entry,'原文定义'));
+      } else {
+        content.append(make('p','definition-label','原文定义'));
+        const text=make('div','definition-copy');text.append(safeHtml(entry.definitionHtml));content.append(text);
+      }
       if(entry.unitHtml){content.append(make('p','definition-label','单位与约定'));const unit=make('div','definition-copy');unit.append(safeHtml(entry.unitHtml));content.append(unit);}
     } else {
       content.append(make('p','definition-english',entry.english));content.append(make('p','definition-copy',entry.description));
-      const excerpt=make('details','definition-excerpt');excerpt.append(make('summary','','相关原文'));
-      const copy=make('div','definition-copy');copy.append(safeHtml(entry.definitionHtml));excerpt.append(copy);content.append(excerpt);
-      excerpt.addEventListener('toggle',position);
+      content.append(sourceExcerpt(entry,'相关原文'));
     }
     content.append(make('p','definition-context',entry.group));popup.append(content);
     const footer=make('div','definition-footer'),source=make('a','definition-source-link',entry.kind==='term'?'查看原文位置 ↗':'查看原定义 ↗');
