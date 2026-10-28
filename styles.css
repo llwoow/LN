@@ -3,6 +3,7 @@
   --canvas: #fdfdfc; --sidebar: #f9f9f8; --surface: #fff; --subtle: #f6f6f3; --hover: #e7e7e2;
   --text: #222320; --muted: #61635d; --border: #d2d3cc;
   --line-width: 1.5px;
+  --topbar-height: 64px;
   --accent: #292929; --on-accent: #fff; --accent-soft: #eaeaea; --art: #707070; --art-soft: #f1f1f1;
   --sidebar-width: 260px;
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
@@ -362,4 +363,42 @@ ln-knowledge-map { display: block; min-width: 0; }
 @media (max-width: 720px) {
   .map-toolbar { gap: 8px; }
   .map-relation-toggle { min-height: 30px; margin-left: 0; }
+}
+
+/* Reading actions remain available throughout long lessons. */
+html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bottom: 104px; }
+.topbar { position: sticky; top: 0; z-index: 3; background: var(--canvas); }
+.topbar-left { min-width: 0; }
+#breadcrumb-current { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.reader-outline { top: calc(var(--topbar-height) + 16px); max-height: calc(100dvh - var(--topbar-height) - 124px); }
+.is-reading .course-main { padding-bottom: calc(116px + env(safe-area-inset-bottom, 0px)); }
+.reader-dock { position: fixed; z-index: 3; left: calc(var(--sidebar-width) + 20px); right: 20px; bottom: max(12px, env(safe-area-inset-bottom, 0px)); max-width: 680px; margin-inline: auto; padding: 5px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 3px; background: var(--surface); border: var(--line-width) solid var(--border); border-radius: 13px; box-shadow: 0 5px 26px #0002; }
+.reader-dock[hidden] { display: none; }
+:root[data-sidebar='collapsed'] .reader-dock { left: 20px; }
+.reader-dock-item { display: flex; align-items: center; justify-content: center; gap: 7px; min-width: 0; min-height: 44px; padding: 7px 5px; border-radius: 8px; font-size: 13px; font-weight: 600; line-height: 1.25; white-space: nowrap; }
+.reader-dock-item .icon { width: 18px; height: 18px; }
+.reader-dock-item:hover:not(:disabled) { color: var(--accent); background: var(--accent-soft); }
+.reader-dock-item:disabled { color: var(--muted); opacity: .4; cursor: default; }
+.is-reading .toast { bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+.directory-open { overflow: hidden; }
+.reader-directory { width: min(520px, calc(100% - 24px)); max-height: min(76dvh, 700px); padding: 0; overflow: hidden; color: var(--text); background: var(--surface); border: var(--line-width) solid var(--border); border-radius: 14px; box-shadow: 0 20px 70px #0003; }
+.reader-directory[open] { display: flex; flex-direction: column; }
+.reader-directory::backdrop { background: #0005; }
+.reader-directory-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-shrink: 0; padding: 12px 14px 12px 18px; border-bottom: 1px solid var(--border); }
+.reader-directory-heading h2 { min-width: 0; margin: 0; font-size: 16px; font-weight: 700; }
+.reader-directory-content { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 12px 14px; }
+.reader-directory-content .outline-group { margin-bottom: 10px; }
+.reader-directory-content .outline-group > summary { padding: 9px 4px; font-size: 14px; }
+.reader-directory-content .outline-group a { min-height: 40px; font-size: 14px; }
+@media (max-width: 960px) { .reader-outline { position: static; max-height: none; } }
+@media (max-width: 720px) {
+  :root { --topbar-height: 58px; }
+  .reader-dock, :root[data-sidebar='collapsed'] .reader-dock { left: 10px; right: 10px; bottom: max(10px, env(safe-area-inset-bottom, 0px)); gap: 1px; }
+  .reader-dock-item { flex-direction: column; gap: 4px; min-height: 48px; font-size: 11px; }
+  .reader-directory { max-height: 80dvh; }
+}
+@media print {
+  .reader-dock, .reader-directory { display: none !important; }
+  .topbar { position: static; }
+  .is-reading .course-main { padding-bottom: 0; }
 }

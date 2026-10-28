@@ -34,6 +34,8 @@
   const main = $('#main');
   const sidebar = $('#sidebar');
   const dialog = $('#settings-dialog');
+  const readerDock = $('#reader-dock');
+  const readerDirectory = $('#reader-directory');
   let collapsed = document.documentElement.dataset.sidebar === 'collapsed';
   let mobileOpen = false;
   let currentView = 'overview';
@@ -185,8 +187,32 @@
     main.classList.add('course-main');
     const outline = groups.map((group) => '<details class="outline-group"' + (selected?.group === group ? ' open' : '') + '><summary>' + escapeHTML(group) + '</summary><nav aria-label="' + escapeHTML(group) + '">' + course.sections.filter((section) => section.group === group).map((section) => '<a href="#course/' + course.id + '/' + section.id + '"' + (selected?.id === section.id ? ' aria-current="page"' : '') + '>' + escapeHTML(section.title) + '</a>').join('') + '</nav></details>').join('');
     main.innerHTML = '<a class="back-link" href="#overview">' + icon('back') + '课程</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + groups.length + '章</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'reader') + '<div class="reader-layout"><details class="reader-outline" id="reader-outline"' + (matchMedia('(min-width: 961px)').matches ? ' open' : '') + '><summary>目录</summary>' + outline + '</details><section class="lesson-column"><div class="lesson-tools" id="lesson-tools"></div><article class="lesson" id="lesson-body" data-lesson-key="' + (selected ? course.id + '/' + selected.id : '') + '" aria-busy="true">' + (selected ? '<p class="loading-state" role="status">加载中…</p>' : '<h2>章节不存在</h2>') + '</article><nav class="lesson-pagination" id="lesson-pagination" aria-label="章节翻页"></nav></section></div>';
-    if (selected) void loadLesson(course, selected, anchor);
+    if (selected) {
+      renderReaderDock(course, selected, outline);
+      void loadLesson(course, selected, anchor);
+    }
     else $('#lesson-body').setAttribute('aria-busy', 'false');
+  }
+
+  function renderReaderDock(course, selected, outline) {
+    const index = course.sections.indexOf(selected);
+    const step = (section, label, symbol) => section ? '<a class="reader-dock-item" href="#course/' + course.id + '/' + section.id + '" aria-label="' + label + '：' + escapeHTML(section.title) + '" title="' + escapeHTML(section.title) + '">' + icon(symbol) + '<span>' + label + '</span></a>' : '<button class="reader-dock-item" disabled aria-label="' + label + '，已到课程边界">' + icon(symbol) + '<span>' + label + '</span></button>';
+    readerDock.innerHTML = '<button class="reader-dock-item" data-reader-directory aria-haspopup="dialog" aria-controls="reader-directory">' + icon('list') + '<span>目录</span></button><a class="reader-dock-item" href="#course/' + course.id + '/map">' + icon('network') + '<span>图谱</span></a>' + step(course.sections[index - 1], '上一节', 'back') + step(course.sections[index + 1], '下一节', 'chevron') + '<button class="reader-dock-item" data-reader-top>' + icon('up') + '<span>顶部</span></button>';
+    readerDock.hidden = false;
+    document.body.classList.add('is-reading');
+    $('#reader-directory-title').textContent = course.title + ' · 目录';
+    $('#reader-directory-content').innerHTML = outline;
+  }
+
+  function openReaderDirectory() {
+    if (!readerDirectory.open) readerDirectory.showModal();
+    document.body.classList.add('directory-open');
+    const content = $('#reader-directory-content');
+    const current = $('[aria-current="page"]', content);
+    if (current) {
+      content.scrollTop += current.getBoundingClientRect().top - content.getBoundingClientRect().top - content.clientHeight / 2;
+      current.focus({ preventScroll: true });
+    }
   }
 
   function renderPdf(payload, body, anchor) {
@@ -252,6 +278,10 @@
     const [view, id, sectionId, rawAnchor] = location.hash.slice(1).split('/');
     let anchor = rawAnchor;
     try { anchor = rawAnchor ? decodeURIComponent(rawAnchor) : ''; } catch { anchor = ''; }
+    if (readerDirectory.open) readerDirectory.close();
+    readerDock.hidden = true;
+    readerDock.innerHTML = '';
+    document.body.classList.remove('is-reading', 'directory-open');
     main.classList.remove('course-main', 'map-main');
     currentView = ['favorites', 'course'].includes(view) ? view : 'overview';
     category = view === 'category' ? (categories[id] || '全部') : '全部';
@@ -287,6 +317,21 @@
     }
   }
 
+  readerDock.addEventListener('click', (event) => {
+    if (event.target.closest('[data-reader-directory]')) openReaderDirectory();
+    if (event.target.closest('[data-reader-top]')) {
+      window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+      main.focus({ preventScroll: true });
+    }
+  });
+  $('#close-reader-directory').addEventListener('click', () => readerDirectory.close());
+  readerDirectory.addEventListener('close', () => document.body.classList.remove('directory-open'));
+  readerDirectory.addEventListener('click', (event) => {
+    if (event.target.closest('a')) { readerDirectory.close(); return; }
+    if (event.target !== readerDirectory) return;
+    const box = readerDirectory.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) readerDirectory.close();
+  });
   $('#subject-nav').innerHTML = Object.entries(categories).map(([id, name]) => '<a class="nav-link subject-nav-link" href="#category/' + id + '" data-category="' + name + '"><span class="subject-dot" aria-hidden="true"></span>' + name + '</a>').join('');
   $('#palette-options').innerHTML = palettes.map((palette) => '<button class="palette-choice" data-palette-choice="' + palette.id + '" aria-pressed="false"><span class="palette-swatch" style="--swatch:' + palette.color + '">' + icon('check') + '</span>' + palette.name + '</button>').join('');
   $('#collapse-sidebar').addEventListener('click', () => setSidebar(false));
@@ -356,7 +401,7 @@
     }
   });
   document.addEventListener('keydown', (event) => {
-    if (dialog.open) return;
+    if (dialog.open || readerDirectory.open) return;
     if (event.key === 'Escape' && mobileOpen) { setSidebar(false); return; }
     if (event.target.closest('input, textarea, select, [contenteditable]')) return;
     if (event.key === '/' || ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k')) {
