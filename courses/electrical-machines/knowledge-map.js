@@ -30,7 +30,7 @@ window.LN_ELECTRICAL_MACHINES_MAP = {
     { section: 'dc-sec37', title: '电动机运行特性', note: '转矩、转速与机械特性' },
     { section: 'dc-sec38', title: '起动、调速与制动', note: '从电枢方程选择控制量' },
     { section: 'dc-sec39', title: '换向', note: '换向电流与火花问题' },
-    { section: 'winding-model', title: '绕组交互模型', note: '接线、运动、电势与转矩' }
+    { section: 'winding-model', title: '直流电机3D模型', note: '立体装配、拆解、绕组与换向' }
   ],
   links: [
     { from: 'magnetic-sec11', to: 'transformer-2', label: '电磁感应', description: '变化的磁通产生感应电压，是理解变压器电压关系的基础。' },

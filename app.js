@@ -123,7 +123,8 @@
   function renderSidebarCourses() {
     const selectedId = location.hash.split('/')[1];
     const row = (course) => '<a class="sidebar-course-link" href="#course/' + course.id + '"' + (currentView === 'course' && selectedId === course.id ? ' aria-current="page"' : '') + '>' + icon('book') + '<span class="sidebar-course-name">' + escapeHTML(course.title) + '</span>' + '</a>';
-    $('#sidebar-course-list').innerHTML = courses.map(row).join('');
+    const models = (course) => course.sections.filter((section) => section.kind === 'model').map((section) => '<a class="sidebar-model-link" href="#course/' + course.id + '/' + section.id + '"' + (selectedId === course.id && location.hash.split('/')[2] === section.id ? ' aria-current="page"' : '') + '>' + icon('cube') + '<span>' + escapeHTML(section.title) + '</span></a>').join('');
+    $('#sidebar-course-list').innerHTML = courses.map((course) => row(course) + models(course)).join('');
     const saved = courses.filter((course) => favorites.has(course.id));
     $('#sidebar-favorites').hidden = !saved.length;
     $('#sidebar-favorite-list').innerHTML = saved.map(row).join('');
@@ -139,7 +140,7 @@
   }
 
   function renderRows() {
-    const matching = courses.filter((course) => (currentView !== 'favorites' || favorites.has(course.id)) && (category === '全部' || course.category === category) && [course.title, course.category, ...course.topics, ...(course.sections || []).map((section) => section.title)].join(' ').toLowerCase().includes(query.toLowerCase().trim()));
+    const matching = courses.filter((course) => (currentView !== 'favorites' || favorites.has(course.id)) && (category === '全部' || course.category === category) && [course.title, course.category, ...course.topics, ...(course.sections || []).flatMap((section) => [section.title, ...(section.keywords || [])])].join(' ').toLowerCase().includes(query.toLowerCase().trim()));
     $('#result-count').textContent = matching.length + ' 门';
     const emptyFavorites = currentView === 'favorites' && !favorites.size;
     $('#course-list').innerHTML = matching.length ? matching.map(courseRow).join('') : '<li class="empty-state">' + icon(emptyFavorites ? 'star' : 'search') + '<h2>' + (emptyFavorites ? '暂无收藏' : '没有匹配的课程') + '</h2>' + (emptyFavorites ? '<a class="secondary-button" href="#overview">浏览课程</a>' : '<button class="secondary-button" data-clear-search>清除筛选</button>') + '</li>';
@@ -172,7 +173,10 @@
 
   function courseViewNav(course, active) {
     const first = course.sections[0];
-    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' ? ' aria-current="page"' : '') + '>' + icon('book') + '章节阅读</a></nav>';
+    const model = course.sections.find((section) => section.kind === 'model');
+    const modelActive = model && location.hash.split('/')[2] === model.id;
+    const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
+    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + '章节阅读</a>' + modelLink + '</nav>';
   }
 
   function renderKnowledgeMap(course) {
@@ -241,14 +245,43 @@
     update(page);
   }
 
+  async function loadWindingAssets() {
+    await loadScript('courses/electrical-machines/model/motor-winding-model.js');
+    await loadScript('courses/electrical-machines/model/motor-winding-viewer.js');
+  }
+
+  function bindInlineModels(body) {
+    $$('[data-inline-model]', body).forEach((details) => {
+      const slot = $('.inline-model-slot', details);
+      let revision = 0;
+      const update = async () => {
+        const current = ++revision;
+        slot.replaceChildren();
+        if (!details.open) return;
+        const loading = document.createElement('p'); loading.setAttribute('role', 'status'); loading.textContent = '加载模型…';
+        slot.append(loading);
+        try {
+          await loadWindingAssets();
+          if (current !== revision || !details.open || !details.isConnected) return;
+          const viewer = document.createElement('motor-winding-viewer');
+          viewer.setAttribute('compact', '');
+          slot.replaceChildren(viewer);
+        } catch {
+          if (current !== revision || !details.isConnected) return;
+          slot.textContent = '模型加载失败。';
+          const retry = document.createElement('button'); retry.className = 'secondary-button'; retry.textContent = '重试';
+          retry.addEventListener('click', update); slot.append(retry);
+        }
+      };
+      details.addEventListener('toggle', update);
+    });
+  }
+
   async function loadLesson(course, selected, anchor) {
     const key = course.id + '/' + selected.id;
     try {
       await Promise.all([loadScript(selected.src), selected.kind === 'html' ? loadStyle('assets/katex/katex.min.css') : Promise.resolve()]);
-      if (selected.kind === 'model') {
-        await loadScript('courses/electrical-machines/model/motor-winding-model.js');
-        await loadScript('courses/electrical-machines/model/motor-winding-viewer.js');
-      }
+      if (selected.kind === 'model') await loadWindingAssets();
       const body = $('#lesson-body');
       if (!body || body.dataset.lessonKey !== key) return;
       const payload = window.LN_LESSONS[key];
@@ -256,7 +289,10 @@
       else if (selected.kind === 'document') {
         body.innerHTML = '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
       } else body.innerHTML = payload.html;
-      if (selected.kind === 'html') window.LNPublication.prepare(body, course, selected);
+      if (selected.kind === 'html') {
+        window.LNPublication.prepare(body, course, selected);
+        bindInlineModels(body);
+      }
       body.setAttribute('aria-busy', 'false');
       body.classList.toggle('model-lesson', selected.kind === 'model');
       body.classList.toggle('pdf-lesson', selected.kind === 'pdf' || selected.kind === 'document');

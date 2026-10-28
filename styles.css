@@ -461,3 +461,17 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .publication-body .katex-mathml { contain: strict; }
 
 .publication-body .table-scroll { contain: paint; }
+
+/* Direct access to the imported 3D teaching model. */
+.sidebar-model-link { display: flex; align-items: center; gap: 9px; margin: 0 0 3px 12px; padding: 7px 10px; min-height: 36px; border-radius: 7px; font-size: 13px; color: var(--muted); }
+.sidebar-model-link .icon { width: 17px; height: 17px; }
+.sidebar-model-link span { min-width: 0; }
+.sidebar-model-link:hover { color: var(--text); background: var(--hover); }
+.sidebar-model-link[aria-current='page'] { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+.course-view-nav { flex-wrap: wrap; }
+.inline-model { margin: 18px 0; border-top: 1px solid var(--border); padding-top: 12px; }
+.inline-model > summary { cursor: pointer; font: 600 15px var(--font); color: var(--accent); }
+.inline-model .local-note { font: 13px/1.7 var(--font); color: var(--muted); text-align: left; }
+.inline-model-slot { min-width: 0; font: 14px/1.65 var(--font); }
+.inline-model-slot motor-winding-viewer { display: block; width: 100%; }
+@media (max-width: 480px) { .course-view-nav { gap: 5px; } .course-view-nav a { padding: 7px 8px; gap: 5px; font-size: 12px; } }
