@@ -875,7 +875,12 @@
       "section": "wl-01-k01",
       "sections": [
         "wl-01-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "位移",
+        "displacement"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-01-k02-wl-01-k02-term",
@@ -890,7 +895,12 @@
       "section": "wl-01-k02",
       "sections": [
         "wl-01-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "匀变速直线运动",
+        "uniformly accelerated motion"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-01-k03-wl-01-k03-term",
@@ -905,7 +915,12 @@
       "section": "wl-01-k03",
       "sections": [
         "wl-01-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "静摩擦力",
+        "static friction"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-01-k04-wl-01-k04-term",
@@ -920,7 +935,12 @@
       "section": "wl-01-k04",
       "sections": [
         "wl-01-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "惯性参考系",
+        "inertial frame"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-02-k01-wl-02-k01-term",
@@ -936,7 +956,13 @@
       "section": "wl-02-k01",
       "sections": [
         "wl-02-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "运动分解",
+        "运动的合成与分解",
+        "resolution of motion"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-02-k02-wl-02-k02-term",
@@ -951,7 +977,12 @@
       "section": "wl-02-k02",
       "sections": [
         "wl-02-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "向心力",
+        "centripetal force"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-02-k03-wl-02-k03-term",
@@ -981,7 +1012,12 @@
       "section": "wl-02-k04",
       "sections": [
         "wl-02-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "机械能守恒",
+        "conservation of mechanical energy"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-03-k01-wl-03-k01-term",
@@ -996,7 +1032,12 @@
       "section": "wl-03-k01",
       "sections": [
         "wl-03-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "电场强度",
+        "electric field strength"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-03-k02-wl-03-k02-term",
@@ -1011,7 +1052,12 @@
       "section": "wl-03-k02",
       "sections": [
         "wl-03-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "电势差",
+        "potential difference"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-03-k03-wl-03-k03-term",
@@ -1026,7 +1072,12 @@
       "section": "wl-03-k03",
       "sections": [
         "wl-03-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "欧姆定律",
+        "Ohm’s law"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-03-k04-wl-03-k04-term",
@@ -1042,7 +1093,13 @@
       "section": "wl-03-k04",
       "sections": [
         "wl-03-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "电动势",
+        "electromotive force",
+        "EMF"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-03-k05-wl-03-k05-term",
@@ -1057,7 +1114,12 @@
       "section": "wl-03-k05",
       "sections": [
         "wl-03-k05"
-      ]
+      ],
+      "reuseAliases": [
+        "磁通",
+        "magnetic flux"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-04-k01-wl-04-k01-term",
@@ -1072,7 +1134,12 @@
       "section": "wl-04-k01",
       "sections": [
         "wl-04-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "冲量",
+        "impulse"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-04-k02-wl-04-k02-term",
@@ -1088,7 +1155,13 @@
       "section": "wl-04-k02",
       "sections": [
         "wl-04-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "简谐运动",
+        "simple harmonic motion",
+        "SHM"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-04-k03-wl-04-k03-term",
@@ -1103,7 +1176,12 @@
       "section": "wl-04-k03",
       "sections": [
         "wl-04-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "波长",
+        "wavelength"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-04-k04-wl-04-k04-term",
@@ -1119,7 +1197,13 @@
       "section": "wl-04-k04",
       "sections": [
         "wl-04-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "全反射",
+        "total internal reflection",
+        "TIR"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-05-k01-wl-05-k01-term",
@@ -1134,7 +1218,12 @@
       "section": "wl-05-k01",
       "sections": [
         "wl-05-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "洛伦兹力",
+        "Lorentz force"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-05-k02-wl-05-k02-term",
@@ -1149,7 +1238,12 @@
       "section": "wl-05-k02",
       "sections": [
         "wl-05-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "楞次定律",
+        "Lenz’s law"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-05-k03-wl-05-k03-term",
@@ -1165,7 +1259,13 @@
       "section": "wl-05-k03",
       "sections": [
         "wl-05-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "有效值",
+        "root mean square",
+        "RMS"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-05-k04-wl-05-k04-term",
@@ -1225,7 +1325,12 @@
       "section": "wl-06-k02",
       "sections": [
         "wl-06-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "理想气体",
+        "ideal gas"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-06-k03-wl-06-k03-term",
@@ -1240,7 +1345,12 @@
       "section": "wl-06-k03",
       "sections": [
         "wl-06-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "热力学第一定律",
+        "first law of thermodynamics"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-06-k04-wl-06-k04-term",
@@ -1255,7 +1365,12 @@
       "section": "wl-06-k04",
       "sections": [
         "wl-06-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "逸出功",
+        "work function"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "wl-06-k05-wl-06-k05-term",
@@ -1270,7 +1385,12 @@
       "section": "wl-06-k05",
       "sections": [
         "wl-06-k05"
-      ]
+      ],
+      "reuseAliases": [
+        "半衰期",
+        "half-life"
+      ],
+      "caseSensitiveAliases": []
     }
   ]
 }

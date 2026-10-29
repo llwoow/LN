@@ -69,7 +69,9 @@
       this.controller = new AbortController();
       const signal = this.controller.signal;
       const link = (section, text) => '<a href="#course/' + escape(course.id) + '/' + escape(section.id) + '">' + escape(text || section.title) + '</a>';
+      const paths=(metadata?.paths||[]).map(path=>'<section><h3>'+escape(path.title)+'</h3><p>'+escape(path.summary)+'</p><ol>'+path.steps.map(step=>'<li>'+link(byId.get(step.section))+'<span>'+escape(step.focus)+'</span></li>').join('')+'</ol></section>').join('');
       this.innerHTML = '<section class="knowledge-map" aria-label="' + escape(course.title) + '知识图谱">' +
+        (paths?'<details class="map-study-paths"><summary>学习主线 <span>'+metadata.paths.length+'条</span></summary><div class="map-path-list">'+paths+'</div></details>':'')+
         '<div class="map-toolbar"><div class="map-groups" role="group" aria-label="图谱章节"><button data-map-group="-1">全部</button>' + this.groups.map((group, i) => '<button title="' + escape(group) + '" data-map-group="' + i + '">' + escape(group.replace(/^第\d+章\s*/, '')) + '</button>').join('') + '</div>' +
         '<label class="map-relation-toggle"><input type="checkbox" aria-label="显示全部知识联系">全部联系</label><label class="map-search"><span class="map-search-label">查找节点</span><input type="search" aria-label="查找图谱知识点" placeholder="查找知识点…"></label></div>' +
         '<div class="map-canvas-wrap"><svg class="map-canvas" tabindex="0" role="group" aria-label="可交互知识图谱，拖动画布移动，滚轮或双指缩放，点击节点阅读。方向键移动，加减号缩放，Home 适应全图。"></svg>' +

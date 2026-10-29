@@ -59,7 +59,13 @@
       "section": "sw-01-k01",
       "sections": [
         "sw-01-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "prokaryote",
+        "prokaryotic cell",
+        "原核细胞"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-01-k02-dna",
@@ -74,7 +80,12 @@
       "section": "sw-01-k02",
       "sections": [
         "sw-01-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "DNA",
+        "deoxyribonucleic acid"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-01-k02-rna",
@@ -89,7 +100,12 @@
       "section": "sw-01-k02",
       "sections": [
         "sw-01-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "RNA",
+        "ribonucleic acid"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-01-k03-selective-permeability",
@@ -119,7 +135,12 @@
       "section": "sw-01-k04",
       "sections": [
         "sw-01-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "osmosis",
+        "渗透作用"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-01-k05-atp",
@@ -134,7 +155,12 @@
       "section": "sw-01-k05",
       "sections": [
         "sw-01-k05"
-      ]
+      ],
+      "reuseAliases": [
+        "ATP",
+        "adenosine triphosphate"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-01-k05-enzyme",
@@ -149,7 +175,12 @@
       "section": "sw-01-k05",
       "sections": [
         "sw-01-k05"
-      ]
+      ],
+      "reuseAliases": [
+        "enzyme",
+        "酶"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-01-k06-apoptosis",
@@ -164,7 +195,12 @@
       "section": "sw-01-k06",
       "sections": [
         "sw-01-k06"
-      ]
+      ],
+      "reuseAliases": [
+        "apoptosis",
+        "细胞凋亡"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-02-k01-segregation",
@@ -209,7 +245,12 @@
       "section": "sw-02-k03",
       "sections": [
         "sw-02-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "semiconservative replication",
+        "半保留复制"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-02-k04-transcription",
@@ -224,7 +265,12 @@
       "section": "sw-02-k04",
       "sections": [
         "sw-02-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "transcription",
+        "转录"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-02-k04-translation",
@@ -239,7 +285,12 @@
       "section": "sw-02-k04",
       "sections": [
         "sw-02-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "translation",
+        "翻译"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-02-k04-mrna",
@@ -253,6 +304,12 @@
       "section": "sw-02-k04",
       "sections": [
         "sw-02-k04"
+      ],
+      "reuseAliases": [
+        "mRNA"
+      ],
+      "caseSensitiveAliases": [
+        "mRNA"
       ]
     },
     {
@@ -267,6 +324,12 @@
       "section": "sw-02-k04",
       "sections": [
         "sw-02-k04"
+      ],
+      "reuseAliases": [
+        "tRNA"
+      ],
+      "caseSensitiveAliases": [
+        "tRNA"
       ]
     },
     {
@@ -281,6 +344,12 @@
       "section": "sw-02-k04",
       "sections": [
         "sw-02-k04"
+      ],
+      "reuseAliases": [
+        "rRNA"
+      ],
+      "caseSensitiveAliases": [
+        "rRNA"
       ]
     },
     {
@@ -297,7 +366,13 @@
       "section": "sw-02-k05",
       "sections": [
         "sw-02-k05"
-      ]
+      ],
+      "reuseAliases": [
+        "gene mutation",
+        "mutation",
+        "基因突变"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-02-k06-natural-selection",
@@ -312,7 +387,12 @@
       "section": "sw-02-k06",
       "sections": [
         "sw-02-k06"
-      ]
+      ],
+      "reuseAliases": [
+        "natural selection",
+        "自然选择"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-03-k01-homeostasis",
@@ -327,7 +407,12 @@
       "section": "sw-03-k01",
       "sections": [
         "sw-03-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "homeostasis",
+        "稳态"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-03-k02-action-potential",
@@ -357,7 +442,12 @@
       "section": "sw-03-k03",
       "sections": [
         "sw-03-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "negative feedback",
+        "负反馈"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-03-k04-antibody",
@@ -373,7 +463,13 @@
       "section": "sw-03-k04",
       "sections": [
         "sw-03-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "antibody",
+        "antibodies",
+        "抗体"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-03-k05-auxin",
@@ -388,7 +484,12 @@
       "section": "sw-03-k05",
       "sections": [
         "sw-03-k05"
-      ]
+      ],
+      "reuseAliases": [
+        "auxin",
+        "生长素"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-04-k01-carrying-capacity",
@@ -403,7 +504,12 @@
       "section": "sw-04-k01",
       "sections": [
         "sw-04-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "carrying capacity",
+        "环境容纳量"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-04-k02-niche",
@@ -450,7 +556,12 @@
       "section": "sw-04-k04",
       "sections": [
         "sw-04-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "biodiversity",
+        "生物多样性"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-05-k01-cfu",
@@ -465,7 +576,12 @@
       "section": "sw-05-k01",
       "sections": [
         "sw-05-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "CFU",
+        "colony-forming unit"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-05-k02-totipotency",
@@ -480,7 +596,12 @@
       "section": "sw-05-k02",
       "sections": [
         "sw-05-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "totipotency",
+        "全能性"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-05-k03-pcr",
@@ -495,7 +616,12 @@
       "section": "sw-05-k03",
       "sections": [
         "sw-05-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "PCR",
+        "polymerase chain reaction"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sw-05-k03-vector",

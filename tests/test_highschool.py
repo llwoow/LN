@@ -97,5 +97,45 @@ class HighSchoolIntegrity(unittest.TestCase):
             self.assertIn((relation['from']['course'],relation['from']['section']),self.documents)
             self.assertIn((relation['to']['course'],relation['to']['section']),self.documents)
 
+    def test_learning_paths_use_real_nodes_and_explain_each_step(self):
+        self.assertEqual(sum(len(c['knowledgeMap']['paths']) for c in self.courses),17)
+        for course in self.courses:
+            paths=course['knowledgeMap']['paths'];ids={s['id'] for s in course['sections']}
+            self.assertTrue(paths)
+            self.assertEqual(len(paths),len({p['id'] for p in paths}))
+            for path in paths:
+                self.assertTrue(path['title']);self.assertTrue(path['summary'])
+                self.assertGreaterEqual(len(path['steps']),2)
+                self.assertEqual(len(path['steps']),len({s['section'] for s in path['steps']}))
+                for step in path['steps']:
+                    self.assertIn(step['section'],ids)
+                    self.assertGreater(len(step['focus']),8)
+
+    def test_reused_terms_keep_one_reviewed_source_and_never_share_symbols(self):
+        data=GLOSSARY['build']()
+        for course in self.courses:
+            for entry in data[course['id']]['entries']:
+                if entry.get('reuseAliases'):
+                    self.assertEqual(entry['kind'],'term')
+                    self.assertTrue(set(entry['reuseAliases'])<=set(entry['aliases']))
+                    self.assertTrue(set(entry.get('caseSensitiveAliases',[]))<=set(entry['reuseAliases']))
+        dna=next(e for e in data['hs-biology']['entries'] if e['id']=='sw-01-k02-dna')
+        self.assertIn('DNA',dna['reuseAliases'])
+        self.assertEqual(dna['source']['section'],'sw-01-k02')
+
+    def test_worked_examples_have_steps_checks_and_variation_answers(self):
+        count=0
+        for slug in ['math','physics','chemistry','biology']:
+            authored=json.loads((ROOT/'courses'/('hs-'+slug)/'content.json').read_text())
+            examples=[e for l in authored['lessons'] for e in l.get('workedExamples',[])]
+            self.assertEqual(len(examples),4,slug)
+            for e in examples:
+                self.assertGreaterEqual(len(e['steps']),2)
+                self.assertTrue(all(step['title'] and step['html'] for step in e['steps']))
+                self.assertTrue(e['question']);self.assertTrue(e['conclusion']);self.assertTrue(e['pitfall'])
+                self.assertTrue(e['selfTest']['question']);self.assertTrue(e['selfTest']['answer'])
+            count+=len(examples)
+        self.assertEqual(count,16)
+
 
 if __name__=='__main__':unittest.main()

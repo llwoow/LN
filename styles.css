@@ -414,7 +414,7 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .lesson .paper-equation { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; column-gap: 12px; position: relative; width: 100%; max-width: 100%; margin: 1.15em 0; padding: .25em 0; overflow: visible; }
 .lesson .paper-equation.is-numbered { grid-template-columns: minmax(0, 1fr) max-content; }
 .lesson .paper-equation[data-equation]:after { display: none; }
-.paper-equation-scroll { display: block; min-width: 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 6px 2px 9px; scrollbar-width: thin; }
+.paper-equation-scroll { display: block; min-width: 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 6px 2px 9px; scrollbar-width: thin; contain: paint; }
 .lesson .paper-equation .katex-display { display: block; min-width: max-content; margin: 0; padding: 0; overflow: visible; }
 .lesson .paper-equation .katex { font-size: 1.02em; }
 .lesson .equation-number { align-self: center; justify-self: end; display: inline-flex; align-items: center; justify-content: flex-end; min-height: 36px; color: var(--text); font-family: var(--reading-font); font-size: 15px; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; text-decoration: none; }
@@ -532,9 +532,32 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .resource-links { padding-left: 20px; }
 .resource-links > li { margin: 14px 0; }
 .resource-links p { margin: 3px 0; font-size: 13px; color: var(--muted); }
-.study-answer, .study-sources, .study-symbols { margin: 20px 0; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.study-answer > summary, .study-sources > summary, .study-symbols > summary { cursor: pointer; font: 650 14px/1.6 var(--font); color: var(--text); }
-.study-answer[open] > summary, .study-sources[open] > summary, .study-symbols[open] > summary { margin-bottom: 12px; }
+.study-answer, .study-sources, .study-symbols, .study-pathways { margin: 20px 0; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.study-answer > summary, .study-sources > summary, .study-symbols > summary, .study-pathways > summary { cursor: pointer; font: 650 14px/1.6 var(--font); color: var(--text); }
+.study-answer[open] > summary, .study-sources[open] > summary, .study-symbols[open] > summary, .study-pathways[open] > summary { margin-bottom: 12px; }
+.worked-example { margin: 26px 0; padding-top: 8px; border-top: 1.5px solid var(--border); }
+.worked-solution { margin-top: 14px; }
+.worked-solution > summary { cursor: pointer; font: 650 15px/1.6 var(--font); color: var(--text); }
+.worked-steps { padding-left: 24px; margin: 16px 0; }
+.worked-steps > li { padding-left: 4px; margin: 16px 0; }
+.worked-steps > li::marker { font: 700 15px var(--font); }
+.worked-steps h4 { margin-top: 0; }
+.study-pathways { font: 14px/1.75 var(--font); }
+.study-pathways h4 { font-size: 15px; }
+.study-pathways p { margin: 5px 0; text-align: left; }
+.study-pathways a { text-decoration: underline; text-underline-offset: 3px; }
+.study-pathways a[aria-current='page'] { font-weight: 750; }
+.study-pathways li > p { color: var(--muted); font-size: 13px; }
+.map-study-paths { margin: 0 0 12px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.map-study-paths > summary { cursor: pointer; font-weight: 650; }
+.map-study-paths > summary > span { margin-left: 8px; color: var(--muted); font-weight: 500; }
+.map-path-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); gap: 20px; }
+.map-path-list h3 { margin: 15px 0 5px; font-size: 15px; }
+.map-path-list p { margin: 5px 0; color: var(--muted); }
+.map-path-list ol { padding-left: 21px; }
+.map-path-list li { margin: 9px 0; }
+.map-path-list li a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.map-path-list li span { display: block; margin-top: 2px; color: var(--muted); }
 .study-connections { margin-top: 28px; }
 .lesson .study-sources { font: 13px/1.8 var(--font); }
 .lesson .study-sources p { text-align: left; }

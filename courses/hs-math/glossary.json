@@ -282,7 +282,12 @@
       "section": "sx-01-k01",
       "sections": [
         "sx-01-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "充分条件",
+        "sufficient condition"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-01-k02-sx-01-k02-term",
@@ -297,7 +302,12 @@
       "section": "sx-01-k02",
       "sections": [
         "sx-01-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "判别式",
+        "discriminant"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-01-k03-sx-01-k03-term",
@@ -312,7 +322,12 @@
       "section": "sx-01-k03",
       "sections": [
         "sx-01-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "定义域",
+        "domain"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-01-k04-sx-01-k04-term",
@@ -327,7 +342,12 @@
       "section": "sx-01-k04",
       "sections": [
         "sx-01-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "对数",
+        "logarithm"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-01-k05-sx-01-k05-term",
@@ -357,7 +377,12 @@
       "section": "sx-02-k01",
       "sections": [
         "sx-02-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "数量积",
+        "dot product"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-02-k02-sx-02-k02-term",
@@ -372,7 +397,12 @@
       "section": "sx-02-k02",
       "sections": [
         "sx-02-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "共轭复数",
+        "complex conjugate"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-02-k03-sx-02-k03-term",
@@ -387,7 +417,12 @@
       "section": "sx-02-k03",
       "sections": [
         "sx-02-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "异面直线",
+        "skew lines"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-02-k04-sx-02-k04-term",
@@ -402,7 +437,12 @@
       "section": "sx-02-k04",
       "sections": [
         "sx-02-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "分层抽样",
+        "stratified sampling"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-02-k05-sx-02-k05-term",
@@ -417,7 +457,12 @@
       "section": "sx-02-k05",
       "sections": [
         "sx-02-k05"
-      ]
+      ],
+      "reuseAliases": [
+        "独立事件",
+        "independent events"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-03-k01-sx-03-k01-term",
@@ -432,7 +477,12 @@
       "section": "sx-03-k01",
       "sections": [
         "sx-03-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "法向量",
+        "normal vector"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-03-k02-sx-03-k02-term",
@@ -447,7 +497,12 @@
       "section": "sx-03-k02",
       "sections": [
         "sx-03-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "点到直线距离",
+        "distance to a line"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-03-k03-sx-03-k03-term",
@@ -462,7 +517,12 @@
       "section": "sx-03-k03",
       "sections": [
         "sx-03-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "离心率",
+        "eccentricity"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-04-k01-sx-04-k01-term",
@@ -477,7 +537,12 @@
       "section": "sx-04-k01",
       "sections": [
         "sx-04-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "递推关系",
+        "recurrence relation"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-04-k02-sx-04-k02-term",
@@ -492,7 +557,12 @@
       "section": "sx-04-k02",
       "sections": [
         "sx-04-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "导数",
+        "derivative"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-05-k01-sx-05-k01-term",
@@ -522,7 +592,12 @@
       "section": "sx-05-k02",
       "sections": [
         "sx-05-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "条件概率",
+        "conditional probability"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "sx-05-k03-sx-05-k03-term",
@@ -537,7 +612,12 @@
       "section": "sx-05-k03",
       "sections": [
         "sx-05-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "残差",
+        "residual"
+      ],
+      "caseSensitiveAliases": []
     }
   ]
 }

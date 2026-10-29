@@ -38,9 +38,23 @@ def render(markup, prefix):
     return MATH.sub(substitute, markup)
 
 
+def worked_examples(lesson):
+    output=[];used=set()
+    for example in lesson.get('workedExamples',[]):
+        identifier=example['id']
+        if not re.fullmatch(r'[a-z][a-z0-9-]*',identifier) or identifier in used:raise ValueError('Invalid worked example id: '+identifier)
+        used.add(identifier)
+        if len(example['steps'])<2:raise ValueError('Worked example needs a reasoning sequence: '+identifier)
+        steps=''.join('<li><h4>'+html.escape(step['title'])+'</h4>'+step['html']+'</li>' for step in example['steps'])
+        output.append('<section class="worked-example" id="worked-'+identifier+'" data-worked-example="'+identifier+'"><h3>典型题 · '+html.escape(example['title'])+'</h3>'+example['question']+'<details class="worked-solution"><summary>分步解析</summary><ol class="worked-steps">'+steps+'</ol><h4>结果与核查</h4>'+example['conclusion']+'<h4>易错点</h4>'+example['pitfall']+'</details><details class="study-answer"><summary>变式自测与答案</summary>'+example['selfTest']['question']+'<details><summary>查看答案</summary>'+example['selfTest']['answer']+'</details></details></section>')
+    return ''.join(output)
+
+
 def build(partial=False):
     courses = []
     cross_links = json.loads((ROOT/'courses/highschool/cross-links.json').read_text())
+    reused_terms = json.loads((ROOT/'courses/highschool/shared-terms.json').read_text())
+    learning_paths = json.loads((ROOT/'courses/highschool/learning-paths.json').read_text())
     for slug in ORDER:
         folder = ROOT/'courses'/('hs-'+slug)
         data = json.loads((folder/'source-index.json').read_text())
@@ -60,7 +74,16 @@ def build(partial=False):
         manifest = {'id':course_id,'title':data['subject'],'level':'highschool','category':'高中','track':'复习主线' if slug in MAIN else '合格考与拓展','topics':[authored['summary']],'summary':authored['summary'],'versionNote':data['overview'][0]['地区核验状态'],'sections':[],'resources':{},'knowledgeMap':{'nodes':[],'links':[],'chapters':[]}}
         manifest['glossary'] = 'courses/'+course_id+'/glossary-index.js'
         glossary = {'lazy':True,'symbolDefinitions':[],'terms':[]}
+        reuse = {(e['section'],e['term']):e for e in reused_terms.get(course_id,[])}
         graph = manifest['knowledgeMap']; edges=set(); targets={n:n.lower() for n in expected}
+        graph['paths']=learning_paths.get(course_id,[])
+        path_ids=set()
+        for path in graph['paths']:
+            if path['id'] in path_ids or len(path['steps'])<2:raise ValueError('Invalid learning path: '+path['id'])
+            path_ids.add(path['id'])
+            if len({s['section'] for s in path['steps']})!=len(path['steps']):raise ValueError('Repeated learning path step: '+path['id'])
+            for step in path['steps']:
+                if step['section'] not in targets.values() or not step['focus']:raise ValueError('Invalid learning path target: '+path['id'])
         for book in books.values():
             group = book['册次']
             manifest['resources'][group] = {'links':[{'label':'教材入口','href':'https://jc.pep.com.cn/'},{'label':'版本与来源','href':'#highschool/resources'}]}
@@ -71,7 +94,17 @@ def build(partial=False):
             book_id = '-'.join(identifier.split('-')[:2]); book = books[book_id]
             # These are LN's own equation labels, never presented as original textbook numbers.
             prefix = str(list(books).index(book_id)+1)+'.'+str(int(identifier.rsplit('K',1)[1]))
-            body = '<h2>'+html.escape(node['模块或主题'])+'</h2>'+render(lesson['body'],prefix)
+            body = '<h2>'+html.escape(node['模块或主题'])+'</h2>'+render(lesson['body']+worked_examples(lesson),prefix)
+            paths=[p for p in graph['paths'] if any(s['section']==section for s in p['steps'])]
+            if paths:
+                path_body=[]
+                for path in paths:
+                    steps=[]
+                    for step in path['steps']:
+                        target=next(n for n in data['nodes'] if n['知识节点编号'].lower()==step['section'])
+                        steps.append('<li><a href="#course/'+course_id+'/'+step['section']+'"'+(' aria-current="page"' if step['section']==section else '')+'>'+html.escape(target['模块或主题'])+'</a><p>'+html.escape(step['focus'])+'</p></li>')
+                    path_body.append('<section><h4>'+html.escape(path['title'])+'</h4><p>'+html.escape(path['summary'])+'</p><ol>'+''.join(steps)+'</ol></section>')
+                body+='<details class="study-pathways"><summary>所在学习主线</summary>'+''.join(path_body)+'</details>'
             related=[]
             for edge in lesson.get('related',[]):
                 other = edge['to']
@@ -108,7 +141,14 @@ def build(partial=False):
             for kind,key in [('terms','terms'),('symbols','symbolDefinitions')]:
                 for entry in lesson.get(kind,[]):
                     definition={**entry,'id':section+'-'+entry['id'],'section':section,'sections':[section]}
+                    shared = reuse.get((identifier,entry['id'])) if kind=='terms' else None
+                    if shared:
+                        if not set(shared['aliases']) <= set(entry['aliases']):raise ValueError('Unreviewed shared alias: '+entry['id'])
+                        definition['reuseAliases']=shared['aliases']
+                        definition['caseSensitiveAliases']=shared.get('caseSensitiveAliases',[])
                     glossary[key].append(definition)
+        if set(reuse) != {(l['id'],t['id']) for l in authored['lessons'] for t in l['terms'] if (l['id'],t['id']) in reuse}:
+            raise ValueError('Unknown shared definition in '+course_id)
         (folder/'manifest.js').write_text('window.LN_HS_'+slug.upper()+'='+dump(manifest)+';\n')
         (folder/'glossary.json').write_text(json.dumps(glossary,ensure_ascii=False,indent=2)+'\n')
         courses.append(manifest)

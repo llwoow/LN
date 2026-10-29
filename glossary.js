@@ -23,6 +23,22 @@
     if (!local.length && shared.has(key)) return entries.find((e) => e.source.section === 'magnetic-overview') || null;
     return null;
   }
+  function termAliases(course, section) {
+    const choices=new Map();
+    entriesFor(course).filter(e=>e.kind==='term').forEach(entry=>{
+      const local=!entry.sections || entry.sections.includes(section.id);
+      const aliases=local?entry.aliases:entry.reuseAliases||[];
+      const rank=entry.source.section===section.id?0:local?1:2;
+      aliases.forEach(text=>{
+        const key=text.toLowerCase(),options=choices.get(key)||[];
+        options.push({text,entry,rank,caseSensitive:entry.caseSensitiveAliases?.includes(text)});choices.set(key,options);
+      });
+    });
+    return [...choices.values()].flatMap(options=>{
+      const best=options.filter(a=>a.rank===Math.min(...options.map(a=>a.rank)));
+      return new Set(best.map(a=>a.entry.id)).size===1?[best[0]]:[];
+    }).sort((a,b)=>b.text.length-a.text.length);
+  }
   function plain(node) { return node.textContent; }
   function atom(node) {
     const c = [...node.children], name = node.localName;
@@ -139,8 +155,7 @@
         tool.setAttribute('aria-label','查看本公式的物理符号定义'); tool.setAttribute('aria-haspopup','dialog'); identity(tool); equation.append(tool);
       }
     });
-    const terms = entries.filter((e) => e.kind === 'term' && (!e.sections || e.sections.includes(section.id)));
-    const aliases = terms.flatMap((entry) => entry.aliases.map((text) => ({ text, entry }))).sort((a,b) => b.text.length - a.text.length);
+    const aliases = termAliases(course, section);
     if (!aliases.length) return;
     const regexEscape = (value) => value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
     const regex = new RegExp(aliases.map((alias) => regexEscape(alias.text)).join('|'),'gi');
@@ -151,7 +166,7 @@
     texts.forEach((node)=>{
       const text=node.textContent,fragment=document.createDocumentFragment();let cursor=0,changed=false;
       for(const match of text.matchAll(regex)){
-        const alias=aliases.find((candidate)=>candidate.text.toLowerCase()===match[0].toLowerCase());
+        const alias=aliases.find((candidate)=>candidate.text.toLowerCase()===match[0].toLowerCase()&&(!candidate.caseSensitive||candidate.text===match[0]));
         if(!alias)continue;
         if(/^[A-Za-z]/.test(match[0]) && (/[A-Za-z]/.test(text[match.index-1]||'') || /[A-Za-z]/.test(text[match.index+match[0].length]||'')))continue;
         fragment.append(document.createTextNode(text.slice(cursor,match.index)));
@@ -252,5 +267,5 @@
     if(!opened()||popup.contains(event.target))return;
     const rect=origin?.getBoundingClientRect();if(!rect||rect.bottom<58||rect.top>innerHeight-60)close();else position();
   },true);
-  window.LNGlossary={prepare,onRoute:()=>{close();origin=null;context=null;},resolveSymbol};
+  window.LNGlossary={prepare,onRoute:()=>{close();origin=null;context=null;},resolveSymbol,termAliases};
 })();

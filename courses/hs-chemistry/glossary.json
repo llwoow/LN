@@ -101,7 +101,13 @@
       "section": "hx-01-k01",
       "sections": [
         "hx-01-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "redox",
+        "oxidation–reduction",
+        "氧化还原反应"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-01-k02-amount",
@@ -116,7 +122,12 @@
       "section": "hx-01-k02",
       "sections": [
         "hx-01-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "amount of substance",
+        "物质的量"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-01-k02-molarity",
@@ -131,7 +142,12 @@
       "section": "hx-01-k02",
       "sections": [
         "hx-01-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "molar concentration",
+        "物质的量浓度"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-01-k03-alloy",
@@ -162,7 +178,13 @@
       "section": "hx-01-k04",
       "sections": [
         "hx-01-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "isotope",
+        "isotopes",
+        "同位素"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-02-k01-ammonium",
@@ -192,7 +214,12 @@
       "section": "hx-02-k02",
       "sections": [
         "hx-02-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "catalyst",
+        "催化剂"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-02-k03-functional-group",
@@ -207,7 +234,12 @@
       "section": "hx-02-k03",
       "sections": [
         "hx-02-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "functional group",
+        "官能团"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-02-k04-green-chemistry",
@@ -238,7 +270,13 @@
       "section": "hx-03-k01",
       "sections": [
         "hx-03-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "Hess law",
+        "Hess’s law",
+        "盖斯定律"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-03-k02-equilibrium",
@@ -253,7 +291,12 @@
       "section": "hx-03-k02",
       "sections": [
         "hx-03-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "chemical equilibrium",
+        "化学平衡"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-03-k03-ph",
@@ -267,6 +310,12 @@
       "section": "hx-03-k03",
       "sections": [
         "hx-03-k03"
+      ],
+      "reuseAliases": [
+        "pH"
+      ],
+      "caseSensitiveAliases": [
+        "pH"
       ]
     },
     {
@@ -282,7 +331,12 @@
       "section": "hx-03-k03",
       "sections": [
         "hx-03-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "solubility product",
+        "溶度积"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-03-k04-anode",
@@ -297,7 +351,12 @@
       "section": "hx-03-k04",
       "sections": [
         "hx-03-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "anode",
+        "阳极"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-03-k04-cathode",
@@ -312,7 +371,12 @@
       "section": "hx-03-k04",
       "sections": [
         "hx-03-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "cathode",
+        "阴极"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-04-k01-orbital",
@@ -343,7 +407,12 @@
       "section": "hx-04-k02",
       "sections": [
         "hx-04-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "VSEPR",
+        "价层电子对互斥"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-04-k02-hydrogen-bond",
@@ -358,7 +427,12 @@
       "section": "hx-04-k02",
       "sections": [
         "hx-04-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "hydrogen bond",
+        "氢键"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-04-k03-unit-cell",
@@ -373,7 +447,12 @@
       "section": "hx-04-k03",
       "sections": [
         "hx-04-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "unit cell",
+        "晶胞"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-05-k01-isomer",
@@ -389,7 +468,13 @@
       "section": "hx-05-k01",
       "sections": [
         "hx-05-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "isomer",
+        "isomers",
+        "同分异构体"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-05-k01-nmr",
@@ -405,7 +490,13 @@
       "section": "hx-05-k01",
       "sections": [
         "hx-05-k01"
-      ]
+      ],
+      "reuseAliases": [
+        "NMR",
+        "nuclear magnetic resonance",
+        "核磁共振"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-05-k02-addition",
@@ -420,7 +511,12 @@
       "section": "hx-05-k02",
       "sections": [
         "hx-05-k02"
-      ]
+      ],
+      "reuseAliases": [
+        "addition reaction",
+        "加成反应"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-05-k03-esterification",
@@ -435,7 +531,12 @@
       "section": "hx-05-k03",
       "sections": [
         "hx-05-k03"
-      ]
+      ],
+      "reuseAliases": [
+        "esterification",
+        "酯化"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-05-k04-peptide",
@@ -450,7 +551,12 @@
       "section": "hx-05-k04",
       "sections": [
         "hx-05-k04"
-      ]
+      ],
+      "reuseAliases": [
+        "peptide bond",
+        "肽键"
+      ],
+      "caseSensitiveAliases": []
     },
     {
       "id": "hx-05-k05-polymerization",

@@ -58,3 +58,7 @@ python tests/highschool.browser.py
 ```
 
 数学公式以本地KaTeX 0.16.11预渲染（MIT许可见 `scripts/vendor/KATEX-LICENSE`）。高中释义按科加载，原首页无需加载全部九科定义；静态打包会从已提交的内容重新生成。
+
+学习主线在 `courses/highschool/learning-paths.json`，可复用的术语别名在 `shared-terms.json`；局部符号继续按阅读单元消歧。典型题使用节点的 `workedExamples` 字段，构建器统一生成分步解析、变式答案及连续公式编号。
+
+新增内容的针对性检查：`node tests/definition-reuse.test.cjs`；`python tests/highschool-deepening.browser.py` 检查17条主线、十六道分步题、跨节原定义返回与窄屏展开排版。
