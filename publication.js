@@ -120,6 +120,7 @@
   function markTarget(body, anchor, scroll = true) {
     const element = rootTarget(body, anchor);
     if (!element) return;
+    reveal(element);
     body.querySelectorAll('.reference-target, .is-reference-return').forEach((node) => node.classList.remove('reference-target', 'is-reference-return'));
     element.classList.add('reference-target');
     if (!element.hasAttribute('tabindex')) element.tabIndex = -1;
@@ -134,9 +135,16 @@
   function restorePosition(body, frame) {
     const origin = byId(body, frame.focus);
     if (origin) {
+      reveal(origin);
       window.scrollBy({ left: 0, top: origin.getBoundingClientRect().top - frame.offset, behavior: 'instant' });
       origin.focus({ preventScroll: true }); origin.classList.add('reference-origin');
     } else window.scrollTo({ left: frame.x, top: frame.y, behavior: 'instant' });
+  }
+
+  function reveal(element) {
+    for (let parent=element.parentElement;parent;parent=parent.parentElement) {
+      if (parent.tagName==='DETAILS') parent.open=true;
+    }
   }
 
   function settle(body, anchor) {

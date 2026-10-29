@@ -44,3 +44,17 @@ python tests/glossary-coverage.browser.py
 定义索引配置见 `courses/electrical-machines/glossary.json`。新增材料时指定原符号表或真实定义段落，核对术语释义，再运行 `python scripts/build-glossary.py`；同名符号按材料分组解析。
 
 局部符号或术语可用 `sections` 限定适用阅读单元；范围内定义优先，未覆盖的小节不套用，避免将空载量与零序量等混淆。
+
+高中入口为 `#highschool`，九科课程与专业课程分开。结构底本是所附海南2027届核验报告（50册主索引、235节点），候选版本与未确认事项见“教材与来源”；讲解与例题为原创整理，参考资源保留实际核验范围。
+
+高中内容保存在 `courses/hs-*/content.json`，节点和册次底本为同目录的 `source-index.json`。修改后运行：
+
+```sh
+python scripts/build-highschool.py
+python scripts/build-reference-index.py
+python scripts/build-glossary.py
+python -m unittest discover -s tests -v
+python tests/highschool.browser.py
+```
+
+数学公式以本地KaTeX 0.16.11预渲染（MIT许可见 `scripts/vendor/KATEX-LICENSE`）。高中释义按科加载，原首页无需加载全部九科定义；静态打包会从已提交的内容重新生成。

@@ -3,6 +3,7 @@ from pathlib import Path
 import collections
 import runpy
 import unittest
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 BUILDER = runpy.run_path(str(ROOT / 'scripts/build-reference-index.py'))
@@ -42,5 +43,11 @@ class PublicationReferences(unittest.TestCase):
         self.assertEqual(label('(2-3-1)'), '2.3.1')
         self.assertEqual(label('图 S.2'), 'S.2')
         self.assertIsNone(label('2026'))
+
+    def test_formula_text_does_not_confuse_data_assignment(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'lesson.js'
+            path.write_text('window.LN_LESSONS=window.LN_LESSONS||{};\nwindow.LN_LESSONS["a/b"]={"html":"[x]=y"};\n')
+            self.assertEqual(BUILDER['assignment'](path),{'html':'[x]=y'})
 
 if __name__ == '__main__': unittest.main()

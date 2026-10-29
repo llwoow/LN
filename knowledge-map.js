@@ -31,6 +31,7 @@
     mount() {
       this.release();
       const course = this.course;
+      this.classList.toggle('school-map', course.level === 'highschool');
       this.mountedCourseId = course.id;
       const byId = new Map(course.sections.map((section) => [section.id, section]));
       this.groups = [...new Set(course.sections.map((section) => section.group))];
@@ -59,7 +60,7 @@
         if (this.byNode.has(edge.from) && this.byNode.has(edge.to)) this.edges.push({ ...edge, type: 'relation' });
       });
       const saved = snapshots.get(course.id);
-      this.group = saved?.group ?? (matchMedia('(max-width: 720px)').matches ? 0 : -1);
+      this.group = saved?.group ?? (course.level === 'highschool' || matchMedia('(max-width: 720px)').matches ? 0 : -1);
       this.view = saved?.view ? { ...saved.view } : { x: 0, y: 0, k: 1 };
       this.width = saved?.width || 0; this.height = saved?.height || 0;
       this.pointers = new Map(); this.gesture = null; this.query = ''; this.selected = null; this.showRelations = false;
@@ -69,7 +70,7 @@
       const signal = this.controller.signal;
       const link = (section, text) => '<a href="#course/' + escape(course.id) + '/' + escape(section.id) + '">' + escape(text || section.title) + '</a>';
       this.innerHTML = '<section class="knowledge-map" aria-label="' + escape(course.title) + '知识图谱">' +
-        '<div class="map-toolbar"><div class="map-groups" role="group" aria-label="图谱章节"><button data-map-group="-1">全部</button>' + this.groups.map((group, i) => '<button data-map-group="' + i + '">' + escape(group.replace(/^第\d+章\s*/, '')) + '</button>').join('') + '</div>' +
+        '<div class="map-toolbar"><div class="map-groups" role="group" aria-label="图谱章节"><button data-map-group="-1">全部</button>' + this.groups.map((group, i) => '<button title="' + escape(group) + '" data-map-group="' + i + '">' + escape(group.replace(/^第\d+章\s*/, '')) + '</button>').join('') + '</div>' +
         '<label class="map-relation-toggle"><input type="checkbox" aria-label="显示全部知识联系">全部联系</label><label class="map-search"><span class="map-search-label">查找节点</span><input type="search" aria-label="查找图谱知识点" placeholder="查找知识点…"></label></div>' +
         '<div class="map-canvas-wrap"><svg class="map-canvas" tabindex="0" role="group" aria-label="可交互知识图谱，拖动画布移动，滚轮或双指缩放，点击节点阅读。方向键移动，加减号缩放，Home 适应全图。"></svg>' +
         '<div class="map-zoom" role="group" aria-label="图谱缩放"><button data-map-action="out" aria-label="缩小图谱" title="缩小">−</button><output aria-label="缩放比例">100%</output><button data-map-action="in" aria-label="放大图谱" title="放大">+</button><button data-map-action="fit" class="map-fit">适应全图</button><button data-map-action="reset" title="回到当前章节起点">归位</button></div></div>' +
@@ -92,7 +93,7 @@
       const tree = svg('path', { class: 'map-hierarchy-edge', d: 'M' + rootCenter + ' 70 V90' + this.groups.map((_, index) => ' M' + rootCenter + ' 90 H' + (187 + index * 400) + ' V112').join('') });
       this.rootElement.append(tree, svg('rect', { x: rootX, y: 12, width: 278, height: 58, rx: 10 }));
       this.rootElement.append(svg('text', { x: rootCenter, y: 37, 'text-anchor': 'middle', class: 'map-root-title' }, course.title));
-      this.rootElement.append(svg('text', { x: rootCenter, y: 56, 'text-anchor': 'middle', class: 'map-root-note' }, this.groups.length + ' 章 · ' + this.nodes.length + ' 个知识点'));
+      this.rootElement.append(svg('text', { x: rootCenter, y: 56, 'text-anchor': 'middle', class: 'map-root-note' }, this.groups.length + (course.level === 'highschool' ? ' 册 · ' : ' 章 · ') + this.nodes.length + ' 个知识点'));
       this.layer.append(this.rootElement);
       this.groupElements = this.groups.map((title, index) => {
         const heading = svg('g', { class: 'map-group-heading' });
@@ -176,7 +177,7 @@
     visibleNodes() { return this.nodes.filter((node) => this.group < 0 || node.group === this.group); }
     updateVisibility() {
       const visible = this.visibleNodes();
-      const matches = visible.filter((node) => [node.title, node.note, node.section.title].join(' ').toLowerCase().includes(this.query));
+      const matches = visible.filter((node) => [node.title, node.note, node.section.title, ...(node.keywords || [])].join(' ').toLowerCase().includes(this.query));
       this.matches = matches;
       const visibleIds = new Set(visible.map((node) => node.id));
       this.nodes.forEach((node) => {

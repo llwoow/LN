@@ -41,7 +41,12 @@ class Document(HTMLParser):
 
 def assignment(path):
     source = path.read_text('utf-8-sig').strip()
-    return json.loads(source[source.rfind(']=') + 2:-1]) if ']=' in source else json.loads(source.split('=', 1)[1][:-1])
+    # Match the actual assignment, not a closing bracket/equal sign inside a formula.
+    match = re.search(r'window\.\w+(?:\[(?:"[^"\n]*"|\'[^\'\n]*\')\])?\s*=\s*(?=[{\[])',source)
+    if not match:raise ValueError('Expected a JSON data assignment: '+str(path))
+    result,end=json.JSONDecoder().raw_decode(source,match.end())
+    if source[end:].strip()!=';':raise ValueError('Unexpected text after JSON data: '+str(path))
+    return result
 def normalize(value): return re.sub(r'[‐‑–—－-]', '.', value.strip())
 def label(value):
     match = re.fullmatch(r'(?:公式|式|图|表)?\s*[（(]?\s*(' + NUMBER + r')\s*[)）]?', value.strip())

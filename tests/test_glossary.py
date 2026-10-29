@@ -77,6 +77,13 @@ class DefinitionIndex(unittest.TestCase):
             if entry['kind'] == 'symbol':
                 self.assertTrue(entry['symbolHtml'])
 
+    def test_average_and_phasor_marks_are_not_plain_scalars(self):
+        document=BUILDER['Document']('<math><mover><mi>v</mi><mo>¯</mo></mover></math>').root
+        mover=next(n for n in document.walk() if n.tag=='mover')
+        self.assertEqual(BUILDER['atom'](mover),'bar:v')
+        document=BUILDER['Document']('<math><mover><mi>U</mi><mo>˙</mo></mover></math>').root
+        self.assertEqual(BUILDER['atom'](next(n for n in document.walk() if n.tag=='mover')),'dot:U')
+
 
 if __name__ == '__main__':
     unittest.main()

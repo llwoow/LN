@@ -1,0 +1,531 @@
+{
+  "lazy": true,
+  "symbolDefinitions": [
+    {
+      "id": "sw-02-k06-allele-frequency",
+      "title": "等位基因频率 p",
+      "keys": [
+        "p"
+      ],
+      "description": "本课种群中等位基因A的频率，按该等位基因份数除以该位点全部等位基因份数计算。",
+      "unitHtml": "无量纲",
+      "match": "表示种群中等位基因A的频率",
+      "section": "sw-02-k06",
+      "sections": [
+        "sw-02-k06"
+      ]
+    },
+    {
+      "id": "sw-04-k01-carrying-k",
+      "title": "环境容纳量 K",
+      "keys": [
+        "K"
+      ],
+      "description": "特定条件下模型所用的种群支持水平，不是固定不变的物种属性。",
+      "unitHtml": "个体数",
+      "match": "是一定条件下环境可支持的种群数量水平",
+      "section": "sw-04-k01",
+      "sections": [
+        "sw-04-k01"
+      ]
+    },
+    {
+      "id": "sw-04-k01-population-n",
+      "title": "估计种群数量 N",
+      "keys": [
+        "N"
+      ],
+      "description": "适用标志重捕假设时对研究区域内种群个体数的估计，不代表单次捕获数量。",
+      "unitHtml": "个体数",
+      "match": "估计的种群数量记为",
+      "section": "sw-04-k01",
+      "sections": [
+        "sw-04-k01"
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "id": "sw-01-k01-prokaryote",
+      "title": "原核细胞",
+      "aliases": [
+        "prokaryote",
+        "prokaryotic cell",
+        "原核细胞"
+      ],
+      "english": "Prokaryotic cell",
+      "description": "没有以核膜为界限细胞核的细胞，仍有遗传物质和细胞结构。",
+      "match": "原核细胞与真核细胞最关键的结构区别是有无以核膜为界限的细胞核",
+      "section": "sw-01-k01",
+      "sections": [
+        "sw-01-k01"
+      ]
+    },
+    {
+      "id": "sw-01-k02-dna",
+      "title": "DNA",
+      "aliases": [
+        "DNA",
+        "deoxyribonucleic acid"
+      ],
+      "english": "Deoxyribonucleic acid",
+      "description": "脱氧核糖核酸，是细胞生物的遗传物质；部分病毒的遗传物质另为RNA。",
+      "match": "DNA是脱氧核糖核酸",
+      "section": "sw-01-k02",
+      "sections": [
+        "sw-01-k02"
+      ]
+    },
+    {
+      "id": "sw-01-k02-rna",
+      "title": "RNA",
+      "aliases": [
+        "RNA",
+        "ribonucleic acid"
+      ],
+      "english": "Ribonucleic acid",
+      "description": "核糖核酸，在遗传信息表达和部分调控等过程中起作用，不能一概当作细胞的遗传物质。",
+      "match": "RNA是核糖核酸",
+      "section": "sw-01-k02",
+      "sections": [
+        "sw-01-k02"
+      ]
+    },
+    {
+      "id": "sw-01-k03-selective-permeability",
+      "title": "选择透过性",
+      "aliases": [
+        "selective permeability",
+        "选择透过性"
+      ],
+      "english": "Selective permeability",
+      "description": "膜允许不同物质以不同方式和程度通过的功能特点，不能直接等同于膜流动性。",
+      "match": "选择透过性描述物质通过的功能特点",
+      "section": "sw-01-k03",
+      "sections": [
+        "sw-01-k03"
+      ]
+    },
+    {
+      "id": "sw-01-k04-osmosis",
+      "title": "渗透作用",
+      "aliases": [
+        "osmosis",
+        "渗透作用"
+      ],
+      "english": "Osmosis",
+      "description": "水通过选择性屏障发生净迁移的过程，方向由两侧相关溶液状态与通透条件决定。",
+      "match": "渗透作用涉及水跨过选择性屏障的净移动",
+      "section": "sw-01-k04",
+      "sections": [
+        "sw-01-k04"
+      ]
+    },
+    {
+      "id": "sw-01-k05-atp",
+      "title": "ATP",
+      "aliases": [
+        "ATP",
+        "adenosine triphosphate"
+      ],
+      "english": "Adenosine triphosphate",
+      "description": "腺苷三磷酸，是细胞中常用的能量耦联分子，不是唯一含能物质。",
+      "match": "ATP是腺苷三磷酸",
+      "section": "sw-01-k05",
+      "sections": [
+        "sw-01-k05"
+      ]
+    },
+    {
+      "id": "sw-01-k05-enzyme",
+      "title": "酶",
+      "aliases": [
+        "enzyme",
+        "酶"
+      ],
+      "english": "Enzyme",
+      "description": "催化特定生化反应的生物催化剂，多数为蛋白质，少数为RNA。",
+      "match": "酶是能够催化特定生化反应的生物催化剂",
+      "section": "sw-01-k05",
+      "sections": [
+        "sw-01-k05"
+      ]
+    },
+    {
+      "id": "sw-01-k06-apoptosis",
+      "title": "细胞凋亡",
+      "aliases": [
+        "apoptosis",
+        "细胞凋亡"
+      ],
+      "english": "Apoptosis",
+      "description": "受遗传及信号调控的细胞死亡过程，应与坏死区分。",
+      "match": "细胞凋亡是受调控的细胞死亡",
+      "section": "sw-01-k06",
+      "sections": [
+        "sw-01-k06"
+      ]
+    },
+    {
+      "id": "sw-02-k01-segregation",
+      "title": "分离定律",
+      "aliases": [
+        "law of segregation",
+        "分离定律"
+      ],
+      "english": "Law of segregation",
+      "description": "等位基因在形成配子过程中分离，典型单基因模型中每个配子只含其中一个。",
+      "match": "分离定律描述等位基因在配子形成时分离",
+      "section": "sw-02-k01",
+      "sections": [
+        "sw-02-k01"
+      ]
+    },
+    {
+      "id": "sw-02-k02-linkage",
+      "title": "连锁",
+      "aliases": [
+        "genetic linkage",
+        "连锁"
+      ],
+      "english": "Genetic linkage",
+      "description": "位于同一染色体上的基因倾向共同传递，具体重组关系须结合交换及位置。",
+      "match": "同一条染色体上的基因可能表现连锁",
+      "section": "sw-02-k02",
+      "sections": [
+        "sw-02-k02"
+      ]
+    },
+    {
+      "id": "sw-02-k03-semiconservative",
+      "title": "半保留复制",
+      "aliases": [
+        "semiconservative replication",
+        "半保留复制"
+      ],
+      "english": "Semiconservative replication",
+      "description": "每个子代DNA双链保留一条亲代链并含一条新合成链的复制方式。",
+      "match": "半保留复制指每个子代双链DNA保留一条亲代链并含一条新合成链",
+      "section": "sw-02-k03",
+      "sections": [
+        "sw-02-k03"
+      ]
+    },
+    {
+      "id": "sw-02-k04-transcription",
+      "title": "转录",
+      "aliases": [
+        "transcription",
+        "转录"
+      ],
+      "english": "Transcription",
+      "description": "以DNA一条链为模板合成RNA的过程，需区分模板方向与编码链。",
+      "match": "转录以DNA的一条链为模板合成RNA",
+      "section": "sw-02-k04",
+      "sections": [
+        "sw-02-k04"
+      ]
+    },
+    {
+      "id": "sw-02-k04-translation",
+      "title": "翻译",
+      "aliases": [
+        "translation",
+        "翻译"
+      ],
+      "english": "Translation",
+      "description": "以mRNA为模板依据密码子信息合成多肽的过程。",
+      "match": "翻译以mRNA为模板按密码子信息合成多肽",
+      "section": "sw-02-k04",
+      "sections": [
+        "sw-02-k04"
+      ]
+    },
+    {
+      "id": "sw-02-k04-mrna",
+      "title": "mRNA",
+      "aliases": [
+        "mRNA"
+      ],
+      "english": "Messenger RNA",
+      "description": "信使RNA，在翻译中提供编码模板。",
+      "match": "mRNA是信使RNA，提供翻译模板",
+      "section": "sw-02-k04",
+      "sections": [
+        "sw-02-k04"
+      ]
+    },
+    {
+      "id": "sw-02-k04-trna",
+      "title": "tRNA",
+      "aliases": [
+        "tRNA"
+      ],
+      "english": "Transfer RNA",
+      "description": "转运RNA，在翻译过程中参与相应氨基酸的转运。",
+      "match": "tRNA是转运RNA，将相应氨基酸带入翻译过程",
+      "section": "sw-02-k04",
+      "sections": [
+        "sw-02-k04"
+      ]
+    },
+    {
+      "id": "sw-02-k04-rrna",
+      "title": "rRNA",
+      "aliases": [
+        "rRNA"
+      ],
+      "english": "Ribosomal RNA",
+      "description": "核糖体RNA，参与核糖体的结构与功能。",
+      "match": "rRNA是核糖体RNA，参与核糖体的结构与功能",
+      "section": "sw-02-k04",
+      "sections": [
+        "sw-02-k04"
+      ]
+    },
+    {
+      "id": "sw-02-k05-mutation",
+      "title": "基因突变",
+      "aliases": [
+        "gene mutation",
+        "mutation",
+        "基因突变"
+      ],
+      "english": "Gene mutation",
+      "description": "遗传物质中相关DNA序列改变，可有不同表型与功能结果。",
+      "match": "基因突变涉及DNA序列改变",
+      "section": "sw-02-k05",
+      "sections": [
+        "sw-02-k05"
+      ]
+    },
+    {
+      "id": "sw-02-k06-natural-selection",
+      "title": "自然选择",
+      "aliases": [
+        "natural selection",
+        "自然选择"
+      ],
+      "english": "Natural selection",
+      "description": "环境条件下可遗传变体在生存与繁殖上的差异影响其后代贡献的过程。",
+      "match": "自然选择通过不同个体生存与繁殖成功差异",
+      "section": "sw-02-k06",
+      "sections": [
+        "sw-02-k06"
+      ]
+    },
+    {
+      "id": "sw-03-k01-homeostasis",
+      "title": "稳态",
+      "aliases": [
+        "homeostasis",
+        "稳态"
+      ],
+      "english": "Homeostasis",
+      "description": "生命系统经调节使相关变量在适宜范围内相对稳定的动态状态。",
+      "match": "稳态是内环境理化性质及相关组成在调节下保持相对稳定的状态",
+      "section": "sw-03-k01",
+      "sections": [
+        "sw-03-k01"
+      ]
+    },
+    {
+      "id": "sw-03-k02-action-potential",
+      "title": "动作电位",
+      "aliases": [
+        "action potential",
+        "动作电位"
+      ],
+      "english": "Action potential",
+      "description": "兴奋细胞膜电位快速、可传播的变化过程，涉及离子通道及电化学条件。",
+      "match": "动作电位是细胞膜电位快速变化的过程",
+      "section": "sw-03-k02",
+      "sections": [
+        "sw-03-k02"
+      ]
+    },
+    {
+      "id": "sw-03-k03-negative-feedback",
+      "title": "负反馈",
+      "aliases": [
+        "negative feedback",
+        "负反馈"
+      ],
+      "english": "Negative feedback",
+      "description": "调节结果反过来减少原有偏离、帮助变量恢复适宜范围的反馈方式。",
+      "match": "负反馈调节使系统偏离适宜范围时出现减少偏离的作用",
+      "section": "sw-03-k03",
+      "sections": [
+        "sw-03-k03"
+      ]
+    },
+    {
+      "id": "sw-03-k04-antibody",
+      "title": "抗体",
+      "aliases": [
+        "antibody",
+        "antibodies",
+        "抗体"
+      ],
+      "english": "Antibody",
+      "description": "可特异结合相应抗原结构的免疫球蛋白，与抗原和免疫记忆细胞不同。",
+      "match": "抗体则是由相应浆细胞等分泌、具有特异结合能力的免疫球蛋白",
+      "section": "sw-03-k04",
+      "sections": [
+        "sw-03-k04"
+      ]
+    },
+    {
+      "id": "sw-03-k05-auxin",
+      "title": "生长素",
+      "aliases": [
+        "auxin",
+        "生长素"
+      ],
+      "english": "Auxin",
+      "description": "参与伸长、向性和发育等过程的植物激素，其效果受浓度、器官和阶段等影响。",
+      "match": "生长素可参与伸长生长、向性和器官发育",
+      "section": "sw-03-k05",
+      "sections": [
+        "sw-03-k05"
+      ]
+    },
+    {
+      "id": "sw-04-k01-carrying-capacity",
+      "title": "环境容纳量",
+      "aliases": [
+        "carrying capacity",
+        "环境容纳量"
+      ],
+      "english": "Carrying capacity",
+      "description": "一定环境条件下可支持的种群数量水平，受资源与相互作用等影响。",
+      "match": "是一定条件下环境可支持的种群数量水平",
+      "section": "sw-04-k01",
+      "sections": [
+        "sw-04-k01"
+      ]
+    },
+    {
+      "id": "sw-04-k02-niche",
+      "title": "生态位",
+      "aliases": [
+        "ecological niche",
+        "niche",
+        "生态位"
+      ],
+      "english": "Ecological niche",
+      "description": "生物在环境与群落中的资源利用方式、作用和位置，不等同于栖息地点。",
+      "match": "生态位描述一种生物在群落和环境中的资源利用、作用及位置",
+      "section": "sw-04-k02",
+      "sections": [
+        "sw-04-k02"
+      ]
+    },
+    {
+      "id": "sw-04-k03-assimilation",
+      "title": "同化量",
+      "aliases": [
+        "assimilated energy",
+        "assimilation",
+        "同化量"
+      ],
+      "english": "Assimilated energy",
+      "description": "摄入能量扣除未被消化吸收、随粪便排出的部分后进入消费者可利用体系的能量。",
+      "match": "粪便中未同化部分不能计为该消费者已同化的能量",
+      "section": "sw-04-k03",
+      "sections": [
+        "sw-04-k03"
+      ]
+    },
+    {
+      "id": "sw-04-k04-biodiversity",
+      "title": "生物多样性",
+      "aliases": [
+        "biodiversity",
+        "生物多样性"
+      ],
+      "english": "Biodiversity",
+      "description": "包括遗传、物种和生态系统等层次的多样性，不只是物种数量。",
+      "match": "生物多样性包括遗传、物种和生态系统等层次",
+      "section": "sw-04-k04",
+      "sections": [
+        "sw-04-k04"
+      ]
+    },
+    {
+      "id": "sw-05-k01-cfu",
+      "title": "CFU",
+      "aliases": [
+        "CFU",
+        "colony-forming unit"
+      ],
+      "english": "Colony-forming unit",
+      "description": "菌落形成单位，表示规定培养条件下可形成菌落的计数单位，不必等同于单个细胞。",
+      "match": "平板菌落计数估算的是在规定培养条件下形成菌落的可培养单位",
+      "section": "sw-05-k01",
+      "sections": [
+        "sw-05-k01"
+      ]
+    },
+    {
+      "id": "sw-05-k02-totipotency",
+      "title": "全能性",
+      "aliases": [
+        "totipotency",
+        "全能性"
+      ],
+      "english": "Totipotency",
+      "description": "在适当条件下形成完整个体的潜能，须区分理论潜能与实验实际表现。",
+      "match": "讨论全能性时区分细胞具有潜能与实验中已表现出来",
+      "section": "sw-05-k02",
+      "sections": [
+        "sw-05-k02"
+      ]
+    },
+    {
+      "id": "sw-05-k03-pcr",
+      "title": "PCR",
+      "aliases": [
+        "PCR",
+        "polymerase chain reaction"
+      ],
+      "english": "Polymerase chain reaction",
+      "description": "聚合酶链式反应，是体外扩增由引物界定DNA区段的技术。",
+      "match": "PCR是聚合酶链式反应",
+      "section": "sw-05-k03",
+      "sections": [
+        "sw-05-k03"
+      ]
+    },
+    {
+      "id": "sw-05-k03-vector",
+      "title": "表达载体",
+      "aliases": [
+        "expression vector",
+        "表达载体"
+      ],
+      "english": "Expression vector",
+      "description": "用于将目的基因带入受体并支持相应表达的构建体系，组成要素分工不同。",
+      "match": "表达载体中的目的基因、启动子、终止相关序列和筛选标记各有作用",
+      "section": "sw-05-k03",
+      "sections": [
+        "sw-05-k03"
+      ]
+    },
+    {
+      "id": "sw-05-k04-biosafety",
+      "title": "生物安全",
+      "aliases": [
+        "biosafety",
+        "生物安全"
+      ],
+      "english": "Biosafety",
+      "description": "识别、评估和控制生物相关活动对健康、生态等系统风险的原则与措施。",
+      "match": "生物安全涉及对人类健康、生态和相关系统的风险识别与控制",
+      "section": "sw-05-k04",
+      "sections": [
+        "sw-05-k04"
+      ]
+    }
+  ]
+}

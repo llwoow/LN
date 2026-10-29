@@ -6,7 +6,7 @@
   let context = null, origin = null, serial = 0;
   const make = (tag, className, text) => { const e = document.createElement(tag); e.className = className; if (text) e.textContent = text; return e; };
   const clean = (text) => text.replace(/[\u200b\u200c\u200d\ufeff\s]/g, '').replace(/ϕ/g, 'φ').replace(/µ/g, 'μ');
-  const displayKey = (text) => { const value = clean(text).replace(/′/g, "'"); const primes = (value.match(/'/g) || []).length; return value.replace(/[˙̇⋅']/g, '') + "'".repeat(primes); };
+  const displayKey = (text) => { const value = clean(text).replace(/′/g, "'"); const primes = (value.match(/'/g) || []).length; return value.replace(/[˙̇⋅¯ˉ‾→⃗']/g, '') + "'".repeat(primes); };
   const popup = make('div', 'definition-popover');
   popup.id = 'definition-popover'; popup.setAttribute('popover', 'auto'); popup.setAttribute('role', 'dialog'); popup.setAttribute('aria-labelledby', 'definition-title');
   document.querySelector('.workspace').append(popup);
@@ -38,7 +38,7 @@
     if (name === 'msub' && c.length >= 2) return atom(c[0]) + '_' + clean(plain(c[1]));
     if (name === 'msubsup' && c.length >= 3) return atom(c[0]) + '_' + clean(plain(c[1])) + (/[′']/.test(plain(c[2])) ? "'" : '');
     if (name === 'msup' && c.length >= 2) return atom(c[0]) + (/[′']/.test(plain(c[1])) ? "'" : '');
-    if (name === 'mover' && c.length >= 2) return (/[˙̇⋅.]/.test(plain(c[1])) ? 'dot:' : '') + atom(c[0]);
+    if (name === 'mover' && c.length >= 2) return (/[˙̇⋅.]/.test(plain(c[1])) ? 'dot:' : /[¯ˉ‾]/.test(plain(c[1])) ? 'bar:' : '') + atom(c[0]);
     if (c.length === 1 && ['mrow','mstyle','mpadded','semantics','math'].includes(name)) return atom(c[0]);
     return '';
   }
@@ -58,7 +58,16 @@
         }
         return;
       }
-      [...node.children].filter((child) => child.localName !== 'annotation').forEach(visit);
+      const children=[...node.children].filter((child)=>child.localName!=='annotation');
+      for(let i=0;i<children.length;i++) {
+        const child=children[i],next=children[i+1];
+        if(plain(child)==='Δ' && next && ['mi','mtext','msub','msup','msubsup','mover'].includes(next.localName)) {
+          const key='delta:'+atom(next),entry=resolveSymbol(course,section,key);
+          if(entry)list.push({key,entry,visible:displayKey(plain(next))});
+          i++;continue;
+        }
+        visit(child);
+      }
     }
     visit(math); return list;
   }
@@ -75,7 +84,7 @@
   }
   function compositeParent(element, root) {
     for (let parent = element.parentElement; parent && parent !== root; parent = parent.parentElement) {
-      if (parent.classList.contains('accent') || (parent.classList.contains('mord') && parent.querySelector(':scope > .msupsub'))) return parent;
+      if (parent.classList.contains('accent') || parent.classList.contains('overline') || (parent.classList.contains('mord') && parent.querySelector(':scope > .msupsub'))) return parent;
     }
     return null;
   }
@@ -106,11 +115,14 @@
           if (displayKey(element.textContent) !== item.visible) return false;
           if (!item.key.startsWith('subscript:') && /^[A-Za-z]$/.test(item.visible) && (element.classList.contains('mathrm') || element.querySelector('.mathrm'))) return false;
           const accent = element.classList.contains('accent') || !!element.querySelector('.accent');
-          if (item.key.startsWith('dot:') !== accent) return false;
+          const overline = element.classList.contains('overline') || !!element.querySelector('.overline') || [...element.querySelectorAll('.accent-body')].some(n=>/[¯ˉ‾]/.test(n.textContent));
+          const dot = accent && [...element.querySelectorAll('.accent-body')].some(n=>/[˙̇⋅]/.test(n.textContent));
+          if (item.key.startsWith('bar:') ? !overline : item.key.startsWith('dot:') ? !dot || overline : dot || overline) return false;
+          const baseKey = item.key.replace(/^(?:delta:)?(?:bar:|dot:)?/, '');
           const script = element.classList.contains('mathcal') || !!element.querySelector('.mathcal');
-          if (item.key.startsWith('cal:') !== script) return false;
+          if (baseKey.startsWith('cal:') !== script) return false;
           const bold = element.classList.contains('boldsymbol') || element.classList.contains('mathbf') || !!element.querySelector('.boldsymbol,.mathbf');
-          if (item.key.startsWith('bold:') !== bold) return false;
+          if (baseKey.startsWith('bold:') !== bold) return false;
           if (item.key.startsWith('subscript:')) return !!element.closest('.msupsub');
           return !compositeParent(element, visual);
         });

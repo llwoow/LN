@@ -41,6 +41,10 @@
   let currentView = 'overview';
   let category = '全部';
   let query = '';
+  let lastLibrary = 'overview';
+  const isHighSchool = (course) => course.level === 'highschool';
+  const courseHome = (course) => isHighSchool(course) ? '#highschool' : '#overview';
+  const inHighSchool = () => currentView === 'highschool' || (currentView === 'course' && isHighSchool(courses.find(c => c.id === location.hash.split('/')[1]) || {}));
   let toastTimer;
   const scriptLoads = new Map();
   const styleLoads = new Map();
@@ -124,7 +128,8 @@
     const selectedId = location.hash.split('/')[1];
     const row = (course) => '<a class="sidebar-course-link" href="#course/' + course.id + '"' + (currentView === 'course' && selectedId === course.id ? ' aria-current="page"' : '') + '>' + icon('book') + '<span class="sidebar-course-name">' + escapeHTML(course.title) + '</span>' + '</a>';
     const models = (course) => course.sections.filter((section) => section.kind === 'model').map((section) => '<a class="sidebar-model-link" href="#course/' + course.id + '/' + section.id + '"' + (selectedId === course.id && location.hash.split('/')[2] === section.id ? ' aria-current="page"' : '') + '>' + icon('cube') + '<span>' + escapeHTML(section.title) + '</span></a>').join('');
-    $('#sidebar-course-list').innerHTML = courses.map((course) => row(course) + models(course)).join('');
+    $('#sidebar-course-list').innerHTML = courses.filter(course => isHighSchool(course) === inHighSchool()).map((course) => row(course) + models(course)).join('');
+    $('#subject-nav').closest('.subject-group').hidden = inHighSchool();
     const saved = courses.filter((course) => favorites.has(course.id));
     $('#sidebar-favorites').hidden = !saved.length;
     $('#sidebar-favorite-list').innerHTML = saved.map(row).join('');
@@ -136,12 +141,12 @@
   }
 
   function courseRow(course) {
-    return '<li class="course-row"><a class="course-link" href="#course/' + course.id + '"><span class="course-symbol">' + icon('book') + '</span><div class="course-text"><h2>' + escapeHTML(course.title) + '</h2><p>' + course.topics.map(escapeHTML).join(' · ') + '</p></div><span class="course-category">' + escapeHTML(course.category) + '</span></a><a class="course-map-shortcut" href="#course/' + course.id + '/map" aria-label="打开' + escapeHTML(course.title) + '知识图谱">' + icon('network') + '<span>图谱</span></a>' + favoriteButton(course) + '</li>';
+    return '<li class="course-row"><a class="course-link" href="#course/' + course.id + '"><span class="course-symbol">' + icon('book') + '</span><div class="course-text"><h2>' + escapeHTML(course.title) + '</h2><p>' + course.topics.map(escapeHTML).join(' · ') + '</p></div><span class="course-category">' + escapeHTML(isHighSchool(course) ? course.track : course.category) + '</span></a><a class="course-map-shortcut" href="#course/' + course.id + '/map" aria-label="打开' + escapeHTML(course.title) + '知识图谱">' + icon('network') + '<span>图谱</span></a>' + favoriteButton(course) + '</li>';
   }
 
   function renderRows() {
-    const matching = courses.filter((course) => (currentView !== 'favorites' || favorites.has(course.id)) && (category === '全部' || course.category === category) && [course.title, course.category, ...course.topics, ...(course.sections || []).flatMap((section) => [section.title, ...(section.keywords || [])])].join(' ').toLowerCase().includes(query.toLowerCase().trim()));
-    $('#result-count').textContent = matching.length + ' 门';
+    const matching = courses.filter((course) => (currentView === 'favorites' || isHighSchool(course) === (currentView === 'highschool')) && (currentView !== 'favorites' || favorites.has(course.id)) && (category === '全部' || (currentView === 'highschool' ? course.track : course.category) === category) && [course.title, course.category, ...course.topics, ...(course.sections || []).flatMap((section) => [section.title, ...(section.keywords || [])])].join(' ').toLowerCase().includes(query.toLowerCase().trim()));
+    $('#result-count').textContent = matching.length + ' 门' + (currentView === 'highschool' ? ' · 海南2027届' : '');
     const emptyFavorites = currentView === 'favorites' && !favorites.size;
     $('#course-list').innerHTML = matching.length ? matching.map(courseRow).join('') : '<li class="empty-state">' + icon(emptyFavorites ? 'star' : 'search') + '<h2>' + (emptyFavorites ? '暂无收藏' : '没有匹配的课程') + '</h2>' + (emptyFavorites ? '<a class="secondary-button" href="#overview">浏览课程</a>' : '<button class="secondary-button" data-clear-search>清除筛选</button>') + '</li>';
     $$('.filter-button').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
@@ -154,8 +159,10 @@
   }
 
   function renderOverview() {
-    const title = currentView === 'favorites' ? '收藏' : '课程';
-    main.innerHTML = '<section aria-labelledby="page-title"><div class="page-heading"><div><h1 id="page-title">' + title + '</h1><p class="page-meta" id="result-count"></p></div><label class="course-search">' + icon('search') + '<input id="course-search" type="search" aria-label="搜索课程或知识点" placeholder="搜索课程…" value="' + escapeHTML(query) + '" autocomplete="off"></label></div><div class="filter-row"' + (Object.keys(categories).length < 2 ? ' hidden' : '') + ' aria-label="筛选学科">' + ['全部', ...Object.values(categories)].map((name) => '<button class="filter-button" data-filter="' + name + '" aria-pressed="' + (name === category) + '">' + name + '</button>').join('') + '</div><ul class="course-list" id="course-list" aria-live="polite" aria-label="课程列表"></ul></section>';
+    const title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : '课程';
+    const filters = currentView === 'highschool' ? ['全部', '复习主线', '合格考与拓展'] : ['全部', ...Object.values(categories)];
+    const libraryLink = currentView === 'highschool' ? '<a class="library-link" href="#highschool/resources">教材与来源</a>' : '';
+    main.innerHTML = '<section aria-labelledby="page-title"><div class="page-heading"><div><h1 id="page-title">' + title + '</h1><p class="page-meta" id="result-count"></p></div>' + libraryLink + '<label class="course-search">' + icon('search') + '<input id="course-search" type="search" aria-label="搜索课程或知识点" placeholder="搜索课程…" value="' + escapeHTML(query) + '" autocomplete="off"></label></div><div class="filter-row"' + (filters.length < 3 ? ' hidden' : '') + ' aria-label="筛选学科">' + filters.map((name) => '<button class="filter-button" data-filter="' + name + '" aria-pressed="' + (name === category) + '">' + name + '</button>').join('') + '</div><ul class="course-list" id="course-list" aria-live="polite" aria-label="课程列表"></ul></section>';
     renderRows();
     $('#course-search').addEventListener('input', (event) => { query = event.target.value; renderRows(); });
   }
@@ -181,7 +188,7 @@
 
   function renderKnowledgeMap(course) {
     main.classList.add('course-main', 'map-main');
-    main.innerHTML = '<a class="back-link" href="#overview">' + icon('back') + '课程</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.map((section) => section.group)).size + '章</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'map') + '<ln-knowledge-map></ln-knowledge-map>';
+    main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.map((section) => section.group)).size + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'map') + '<ln-knowledge-map></ln-knowledge-map>';
     $('ln-knowledge-map', main).course = course;
   }
 
@@ -190,7 +197,7 @@
     const groups = [...new Set(course.sections.map((section) => section.group))];
     main.classList.add('course-main');
     const outline = groups.map((group) => '<details class="outline-group"' + (selected?.group === group ? ' open' : '') + '><summary>' + escapeHTML(group) + '</summary><nav aria-label="' + escapeHTML(group) + '">' + course.sections.filter((section) => section.group === group).map((section) => '<a href="#course/' + course.id + '/' + section.id + '"' + (selected?.id === section.id ? ' aria-current="page"' : '') + '>' + escapeHTML(section.title) + '</a>').join('') + '</nav></details>').join('');
-    main.innerHTML = '<a class="back-link" href="#overview">' + icon('back') + '课程</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + groups.length + '章</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'reader') + '<div class="reader-layout"><details class="reader-outline" id="reader-outline"' + (matchMedia('(min-width: 961px)').matches ? ' open' : '') + '><summary>目录</summary>' + outline + '</details><section class="lesson-column"><div class="lesson-tools" id="lesson-tools"></div><article class="lesson" id="lesson-body" data-lesson-key="' + (selected ? course.id + '/' + selected.id : '') + '" aria-busy="true">' + (selected ? '<p class="loading-state" role="status">加载中…</p>' : '<h2>章节不存在</h2>') + '</article><nav class="lesson-pagination" id="lesson-pagination" aria-label="章节翻页"></nav></section></div>';
+    main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + groups.length + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'reader') + '<div class="reader-layout"><details class="reader-outline" id="reader-outline"' + (matchMedia('(min-width: 961px)').matches ? ' open' : '') + '><summary>目录</summary>' + outline + '</details><section class="lesson-column"><div class="lesson-tools" id="lesson-tools"></div><article class="lesson" id="lesson-body" data-lesson-key="' + (selected ? course.id + '/' + selected.id : '') + '" aria-busy="true">' + (selected ? '<p class="loading-state" role="status">加载中…</p>' : '<h2>章节不存在</h2>') + '</article><nav class="lesson-pagination" id="lesson-pagination" aria-label="章节翻页"></nav></section></div>';
     if (selected) {
       renderReaderDock(course, selected, outline);
       void loadLesson(course, selected, anchor);
@@ -280,7 +287,7 @@
   async function loadLesson(course, selected, anchor) {
     const key = course.id + '/' + selected.id;
     try {
-      await Promise.all([loadScript(selected.src), selected.kind === 'html' ? loadStyle('assets/katex/katex.min.css') : Promise.resolve()]);
+      await Promise.all([loadScript(selected.src), selected.kind === 'html' ? loadStyle('assets/katex/katex.min.css') : Promise.resolve(), course.glossary ? loadScript(course.glossary) : Promise.resolve()]);
       if (selected.kind === 'model') await loadWindingAssets();
       const body = $('#lesson-body');
       if (!body || body.dataset.lessonKey !== key) return;
@@ -298,7 +305,7 @@
       body.classList.toggle('model-lesson', selected.kind === 'model');
       body.classList.toggle('pdf-lesson', selected.kind === 'pdf' || selected.kind === 'document');
       const resource = course.resources[selected.group];
-      $('#lesson-tools').innerHTML = '<span>' + escapeHTML(selected.group) + '</span><a href="courses/electrical-machines/files/' + resource.guide + '" target="_blank" rel="noopener">讲义 PDF</a><a href="courses/electrical-machines/files/' + resource.quickref + '" target="_blank" rel="noopener">速查 PDF</a>';
+      $('#lesson-tools').innerHTML = resource.links ? '<span>' + escapeHTML(selected.group) + '</span>' + resource.links.map(link => '<a href="' + escapeHTML(link.href) + '"' + (link.href.startsWith('https:') ? ' target="_blank" rel="noopener"' : '') + '>' + escapeHTML(link.label) + '</a>').join('') : '<span>' + escapeHTML(selected.group) + '</span><a href="courses/electrical-machines/files/' + resource.guide + '" target="_blank" rel="noopener">讲义 PDF</a><a href="courses/electrical-machines/files/' + resource.quickref + '" target="_blank" rel="noopener">速查 PDF</a>';
       const index = course.sections.indexOf(selected);
       $('#lesson-pagination').innerHTML = (index > 0 ? '<a href="#course/' + course.id + '/' + course.sections[index - 1].id + '">' + icon('back') + '上一节</a>' : '<span></span>') + (index < course.sections.length - 1 ? '<a href="#course/' + course.id + '/' + course.sections[index + 1].id + '">下一节' + icon('chevron') + '</a>' : '');
       window.LNPublication.settle(body, anchor);
@@ -323,15 +330,20 @@
     readerDock.innerHTML = '';
     document.body.classList.remove('is-reading', 'directory-open');
     main.classList.remove('course-main', 'map-main');
-    currentView = ['favorites', 'course'].includes(view) ? view : 'overview';
+    currentView = ['favorites', 'course', 'highschool'].includes(view) ? view : 'overview';
+    if (currentView !== 'course' && currentView !== 'favorites') {
+      if (lastLibrary !== currentView) query = '';
+      lastLibrary = currentView;
+    }
     category = view === 'category' ? (categories[id] || '全部') : '全部';
-    let title = currentView === 'favorites' ? '收藏' : (category === '全部' ? '课程' : category);
+    let title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : (category === '全部' ? '课程' : category);
     if (currentView === 'course') title = renderCourse(id, sectionId, anchor);
+    else if (currentView === 'highschool' && id === 'resources') { main.innerHTML = window.LNHighSchool.resourcesHtml(); title = '教材与来源'; }
     else renderOverview();
     $('#breadcrumb-current').textContent = title;
     document.title = title === '课程' ? 'LN' : title + ' · LN';
     $$('[data-nav]').forEach((link) => {
-      if (link.dataset.nav === currentView && category === '全部') link.setAttribute('aria-current', 'page');
+      if ((link.dataset.nav === currentView || (link.dataset.nav === 'highschool' && inHighSchool())) && category === '全部') link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
     });
     if (currentView === 'course') {
@@ -348,12 +360,12 @@
   }
 
   function focusSearch() {
-    if (['overview', 'favorites'].includes(currentView)) {
+    if (['overview', 'favorites', 'highschool'].includes(currentView) && $('#course-search')) {
       if (mobile.matches && mobileOpen) setSidebar(false);
       $('#course-search').focus();
     } else {
       addEventListener('hashchange', () => $('#course-search')?.focus(), { once: true });
-      location.hash = 'overview';
+      location.hash = inHighSchool() ? 'highschool' : 'overview';
     }
   }
 
