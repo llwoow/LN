@@ -9,11 +9,12 @@ subprocess.run([sys.executable, str(root / 'scripts/build-electrical-understandi
 subprocess.run([sys.executable, str(root / 'scripts/build-highschool.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/check-teaching.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-resource-library.py')], check=True)
+subprocess.run([sys.executable, str(root / 'scripts/build-practice.py')], check=True)
 out = root / 'dist'
 if out.exists():
     shutil.rmtree(out)
 out.mkdir()
-for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.js', 'publication.js', 'glossary.js', 'highschool-library.js', 'resource-library.js'):
+for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.js', 'publication.js', 'glossary.js', 'highschool-library.js', 'resource-library.js', 'practice.js'):
     shutil.copy2(root / name, out / name)
 for name in ('assets', 'courses'):
     shutil.copytree(root / name, out / name,

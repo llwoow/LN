@@ -1,5 +1,7 @@
 # LN
 
+练习入口 `#practice`，课程顶部及固定目录也可打开。默认先展示有出处的精选来源，链接原题、解析/评分与知识点，候选和原创补充分开。64道补充题采用单选、多选、计算和问答，支持错题/收藏再做；记录仅当前浏览器，首答与辅助后结果分开。规范和覆盖限制见 [PRACTICE.md](PRACTICE.md)，来源核查见 [PRACTICE-REVIEW.md](PRACTICE-REVIEW.md)，构建 `python scripts/build-practice.py`。
+
 按学科分类的轻量学习网页。
 
 教学以理解系统、独立推导和迁移为目标，统一标准见 [TEACHING.md](TEACHING.md)。每节先呈现问题、模型或证据、推理、完整分步例子、边界、检验和迁移；原讲义、原计算和练习后置保留。逐节审查记录见 [TEACHING-REVIEW.md](TEACHING-REVIEW.md)。

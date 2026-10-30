@@ -25,6 +25,8 @@
   <script src="courses.js" defer></script>
   <script src="courses/resources/catalog.js" defer></script>
   <script src="resource-library.js" defer></script>
+  <script src="courses/practice/bank.js" defer></script>
+  <script src="practice.js" defer></script>
   <script src="highschool-library.js" defer></script>
   <script src="knowledge-map.js" defer></script>
   <script src="reference-index.js" defer></script>
@@ -71,6 +73,7 @@
         <a class="nav-link" href="#favorites" data-nav="favorites"><svg class="icon"><use href="#i-star"/></svg>收藏<span class="nav-count" id="favorite-count"></span></a>
         <a class="nav-link highschool-entry" href="#highschool" data-nav="highschool"><svg class="icon"><use href="#i-book"/></svg>高中</a>
         <a class="nav-link" href="#resources" data-nav="resources"><svg class="icon"><use href="#i-file"/></svg>实作与资料</a>
+        <a class="nav-link" href="#practice" data-nav="practice"><svg class="icon"><use href="#i-book"/></svg>练习</a>
       </nav>
       <section class="sidebar-section" id="sidebar-favorites" aria-labelledby="sidebar-favorites-title" hidden>
         <h2 class="sidebar-section-title" id="sidebar-favorites-title">收藏</h2>
@@ -105,6 +108,11 @@
   <dialog class="resource-dialog" id="resource-dialog" aria-labelledby="resource-dialog-title">
     <div class="dialog-heading"><h2 id="resource-dialog-title">实作与资料</h2><button class="icon-button" data-close-resources aria-label="关闭实作资料">×</button></div>
     <div id="resource-dialog-content"></div>
+  </dialog>
+
+  <dialog class="practice-dialog" id="practice-dialog" aria-labelledby="practice-dialog-title">
+    <div class="dialog-heading"><h2 id="practice-dialog-title">练习</h2><button class="icon-button" data-close-practice aria-label="关闭练习">×</button></div>
+    <div id="practice-dialog-content"></div>
   </dialog>
 
   <dialog class="settings-dialog" id="settings-dialog" aria-labelledby="settings-title">

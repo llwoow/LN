@@ -44,7 +44,7 @@
   let lastLibrary = 'overview';
   const isHighSchool = (course) => course.level === 'highschool';
   const courseHome = (course) => isHighSchool(course) ? '#highschool' : '#overview';
-  const inHighSchool = () => currentView === 'highschool' || (['course','resources'].includes(currentView) && isHighSchool(courses.find(c => c.id === location.hash.split('/')[1]) || {}));
+  const inHighSchool = () => currentView === 'highschool' || (['course','resources','practice'].includes(currentView) && isHighSchool(courses.find(c => c.id === location.hash.split('/')[1]) || {}));
   let toastTimer;
   const scriptLoads = new Map();
   const styleLoads = new Map();
@@ -183,7 +183,7 @@
     const model = course.sections.find((section) => section.kind === 'model');
     const modelActive = model && location.hash.split('/')[2] === model.id;
     const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
-    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + '章节阅读</a>' + modelLink + window.LNResources.button(course) + '</nav>';
+    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + '章节阅读</a>' + modelLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
   }
 
   function renderKnowledgeMap(course) {
@@ -213,7 +213,7 @@
     document.body.classList.add('is-reading');
     $('#reader-directory-title').textContent = course.title + ' · 目录';
     $('#reader-directory-content').innerHTML = outline;
-    $('#reader-directory-resource').innerHTML = window.LNResources.button(course, selected, '本节实作与资料');
+    $('#reader-directory-resource').innerHTML = window.LNResources.button(course, selected, '本节实作与资料') + window.LNPractice.button(course, selected, '本节练习');
   }
 
   function openReaderDirectory() {
@@ -322,6 +322,7 @@
   }
 
   function renderRoute() {
+    window.LNPractice.onRoute();
     window.LNResources.onRoute();
     window.LNPublication.onRoute();
     window.LNGlossary.onRoute();
@@ -333,7 +334,7 @@
     readerDock.innerHTML = '';
     document.body.classList.remove('is-reading', 'directory-open');
     main.classList.remove('course-main', 'map-main');
-    currentView = ['favorites', 'course', 'highschool', 'resources'].includes(view) ? view : 'overview';
+    currentView = ['favorites', 'course', 'highschool', 'resources', 'practice'].includes(view) ? view : 'overview';
     if (currentView !== 'course' && currentView !== 'favorites') {
       if (lastLibrary !== currentView) query = '';
       lastLibrary = currentView;
@@ -341,6 +342,7 @@
     category = view === 'category' ? (categories[id] || '全部') : '全部';
     let title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : (category === '全部' ? '课程' : category);
     if (currentView === 'course') title = renderCourse(id, sectionId, anchor);
+    else if (currentView === 'practice') { main.innerHTML = window.LNPractice.pageHtml(id); window.LNPractice.mount(main, id, sectionId); title = '练习'; }
     else if (currentView === 'resources') { main.innerHTML = window.LNResources.pageHtml(id); window.LNResources.bindPage(main, id, sectionId); title = '实作与资料'; }
     else if (currentView === 'highschool' && id === 'resources') { main.innerHTML = window.LNHighSchool.resourcesHtml(); title = '教材与来源'; }
     else renderOverview();
@@ -457,7 +459,7 @@
     }
   });
   document.addEventListener('keydown', (event) => {
-    if (dialog.open || readerDirectory.open || $('#resource-dialog').open) return;
+    if (dialog.open || readerDirectory.open || $('#resource-dialog').open || $('#practice-dialog').open) return;
     if (event.key === 'Escape' && mobileOpen) { setSidebar(false); return; }
     if (event.target.closest('input, textarea, select, [contenteditable]')) return;
     if (event.key === '/' || ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k')) {
