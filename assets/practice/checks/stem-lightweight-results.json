@@ -1,0 +1,25 @@
+{
+  "dataset_rows": 344,
+  "complete_flipper_mass_pairs": 342,
+  "pooled_r": 0.8712017673060114,
+  "by_species": {
+    "Adelie": {
+      "n": 151,
+      "r": 0.46820169421793933
+    },
+    "Chinstrap": {
+      "n": 68,
+      "r": 0.6415594129316967
+    },
+    "Gentoo": {
+      "n": 123,
+      "r": 0.7026665243575185
+    }
+  },
+  "sympy": {
+    "version": "1.14.0",
+    "difference_quotient": "h + 2*x",
+    "limit": "2*x",
+    "linearization_error_at_3_h_002": "1/2500"
+  }
+}

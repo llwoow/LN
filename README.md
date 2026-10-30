@@ -68,3 +68,5 @@ python tests/highschool.browser.py
 主教学正文保存在每科的 `understanding.json`，包含七个具体教学字段与逐节 `review`，不得以通用提示填充。电机学运行 `python scripts/build-electrical-understanding.py` 后再重建引用和释义；原材料保留，新增公式以 `U.` 独立编号。`python tests/learning.browser.py` 在桌面和390／320px检查全部274个阅读单元，包含原PDF与3D模型的原创讲解。
 
 静态发布会运行 `scripts/check-teaching.py`，缺少主讲解或逐节审查的已注册课程不能打包。`definition-anchors.json` 保留已发布释义链接的稳定锚点；增补正文时不要按段落位置重新生成这份映射。
+
+实作入口为 `#resources`，课程顶部与固定目录也可就地打开，关闭后保留阅读位置。逐项来源、任务、许可与复算范围在 `courses/resources/catalog.json`，构建命令为 `python scripts/build-resource-library.py`；核验记录见 [RESOURCE-REVIEW.md](RESOURCE-REVIEW.md)。复算代码与结果保存在 `assets/practice/`，公开规格、真实观测和仿真分开标注，原始日志访问失败不计为已经复算。

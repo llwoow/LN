@@ -1,0 +1,41 @@
+{
+  "fact_type": "manufacturer_published_specification_not_raw_measurement",
+  "control_version": "0.10.2",
+  "nominal_catalogue": {
+    "rpm": 8430,
+    "current_A": 1.5
+  },
+  "constant_friction_baseline_prediction": {
+    "rpm": 9066.732001304794,
+    "current_A": 1.4943664335664335,
+    "effective_offset_V": 0.0,
+    "b_Nm_s_per_rad": 0.0,
+    "constant_loss_Nm": 0.00086944
+  },
+  "baseline_speed_error_percent": 7.55316727526445,
+  "offset_calibrated_at_no_load_prediction": {
+    "rpm": 8748.639678405372,
+    "current_A": 1.4943664335664335,
+    "effective_offset_V": 0.47634086728043634,
+    "b_Nm_s_per_rad": 0.0,
+    "constant_loss_Nm": 0.00086944
+  },
+  "calibrated_speed_error_percent": 3.7798301115702593,
+  "interpretation": "Offset is fitted to no-load data, not independently validated or identified as physical brush drop. Different loss partitions can fit one no-load point.",
+  "assumptions": [
+    "constant SI Ke=Kt",
+    "positive rotation",
+    "fixed resistance and excitation",
+    "no PWM, commutation, thermal state or current limit"
+  ],
+  "dynamic_viscous_candidate": {
+    "description": "Simulation only, not measured. 15 V step; load becomes 0.0205 Nm at 0.05 s; no hardware current limit.",
+    "last_rpm": 9069.09637169559,
+    "last_current_A": 1.4906472876200407,
+    "peak_current_A": 14.841129406208804,
+    "input_energy_J": 3.314921526987555,
+    "loss_and_load_energy_J": 2.8458118166471187,
+    "stored_energy_J": 0.46911502274738764,
+    "energy_residual_J": -5.312406951396564e-06
+  }
+}

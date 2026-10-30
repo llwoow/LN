@@ -568,6 +568,41 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .learning-sequence [data-learning-step="example"] > ol > li { margin: 1em 0; padding-left: .2em; }
 .learning-sequence [data-learning-step="example"] > ol > li::marker { font-weight: 750; }
 .publication-body .source-material-heading { margin-top: 2.2em; padding-top: 1.2em; border-top: 1.5px solid var(--border); font: 700 15px/1.7 var(--font); }
+.resource-nav-button { display: inline-flex; align-items: center; gap: 7px; padding: 7px 11px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); font: 600 13px/1.6 var(--font); text-align: left; cursor: pointer; }
+.resource-nav-button:hover { background: var(--hover); }
+.directory-resource-shortcut { flex-shrink: 0; padding: 6px 12px; border-bottom: 1px solid var(--border); }
+.resource-dialog { width: min(820px, calc(100% - 24px)); max-height: 85dvh; padding: 18px; overflow: auto; color: var(--text); background: var(--surface); border: 1.5px solid var(--border); border-radius: 12px; }
+.resource-dialog::backdrop { background: #0005; }
+.resource-dialog .dialog-heading { position: sticky; top: -18px; z-index: 1; gap: 12px; padding: 14px 0; background: var(--surface); margin-bottom: 8px; }
+body.resource-open { overflow: hidden; }
+.resource-library { max-width: 920px; }
+.resource-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 12px 18px; margin: 18px 0; }
+.resource-controls label { min-width: 0; color: var(--text); font: 600 14px/1.7 var(--font); }
+.resource-controls input, .resource-controls select { display: block; width: 100%; min-width: 0; padding: 8px; color: var(--text); background: var(--surface); border: 1.5px solid var(--border); border-radius: 6px; font: 500 15px var(--font); }
+.resource-checkbox, .resource-controls .resource-checkbox { display: flex; align-items: flex-start; gap: 8px; font: 500 14px/1.7 var(--font); }
+.resource-checkbox input, .resource-controls .resource-checkbox input { width: auto; flex-shrink: 0; margin-top: 4px; accent-color: var(--accent); }
+.resource-entry { border-top: 1px solid var(--border); padding: 15px 0; font: 500 15px/1.8 var(--font); overflow-wrap: anywhere; }
+.resource-entry > summary { cursor: pointer; color: var(--text); }
+.resource-entry > summary strong { font-size: 16px; font-weight: 750; }
+.resource-question { display: block; margin-top: 5px; }
+.resource-verification, .resource-kind, .resource-scope-note { display: block; color: var(--muted); font: 600 13px/1.7 var(--font); }
+.resource-entry-body { padding-top: 10px; }
+.resource-entry h3 { margin: 16px 0 7px; font-size: 15px; }
+.resource-entry ol, .resource-entry ul { padding-left: 22px; }
+.resource-entry li { margin-bottom: 8px; }
+.resource-entry a, .resource-downloads a, .dc-data-lab a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.resource-links-inline, .resource-downloads { line-height: 2; }
+.resource-evidence { margin-top: 14px; }
+.resource-evidence > summary { cursor: pointer; font-weight: 650; }
+.dc-data-lab { border-top: 1.5px solid var(--border); padding-top: 12px; margin-top: 24px; max-width: 100%; }
+.dc-data-lab output { float: right; font-variant-numeric: tabular-nums; }
+.dc-data-lab input[type=range] { padding: 0; accent-color: var(--accent); }
+.dc-lab-results { font-weight: 650; padding: 12px 0; font-variant-numeric: tabular-nums; }
+.dc-data-lab svg { display: block; width: 100%; height: auto; color: var(--text); }
+.dc-data-lab svg text { fill: currentColor; font: 19px var(--font); }
+.dc-lab-legend { font: 500 13px/1.7 var(--font); }
+@media (max-width: 480px) { .resource-nav-button { padding: 7px 8px; gap: 5px; font-size: 12px; } .resource-dialog { padding: 12px; } .resource-dialog .dialog-heading { top: -12px; } }
+@media print { .resource-dialog, .resource-controls, [data-dc-controls] { display: none !important; } }
 .school-map .map-groups { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; }
 .school-map .map-groups button { flex-shrink: 0; max-width: 200px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 @media (max-width: 720px) {

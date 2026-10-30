@@ -1,0 +1,17 @@
+{
+  "biopython_version": "1.88",
+  "real_fasta_records": 94,
+  "first_record": {
+    "id": "gi|2765658|emb|Z78533.1|CIZ78533",
+    "length": 740,
+    "gc_fraction": 0.595945945945946
+  },
+  "synthetic_coding_example": {
+    "sequence": "ATGGCCATTGTA",
+    "translation": "MAIV",
+    "first_base_shift_full_triplets": "WPL",
+    "one_substitution": "MTIV",
+    "reverse_complement": "TACAATGGCCAT"
+  },
+  "limits": "FASTA parsing does not identify an expressed gene; synthetic translation uses the standard code and is not evidence of actual expression."
+}
