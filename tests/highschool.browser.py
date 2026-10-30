@@ -20,8 +20,9 @@ with sync_playwright() as p:
     page.screenshot(path='.preview/highschool-home-final.png')
     page.locator('.highschool-entry').click();page.locator('#page-title',has_text='高中').wait_for()
     assert page.locator('#course-list .course-row').count()==9
-    page.get_by_role('button',name='复习主线',exact=True).click();assert page.locator('#course-list .course-row').count()==6
-    page.get_by_role('button',name='合格考与拓展',exact=True).click();assert page.locator('#course-list .course-row').count()==3
+    page.get_by_role('button',name='语言',exact=True).click();assert page.locator('#course-list .course-row').count()==2
+    page.get_by_role('button',name='数理化生',exact=True).click();assert page.locator('#course-list .course-row').count()==4
+    page.get_by_role('button',name='政史地',exact=True).click();assert page.locator('#course-list .course-row').count()==3
     page.get_by_role('button',name='全部',exact=True).click()
     page.locator('#course-search').fill('海水');assert page.locator('#course-list a[href="#course/hs-chemistry"]').count()==1
     page.locator('#course-search').fill('');page.screenshot(path='.preview/highschool-library-desktop-final.png')

@@ -8,10 +8,11 @@ import html
 import json
 import re
 import subprocess
+from learning_content import load as load_understanding, render as render_understanding
 
 ROOT = Path(__file__).resolve().parents[1]
 ORDER = ['chinese','math','english','physics','chemistry','biology','politics','history','geography']
-MAIN = {'chinese','math','english','physics','chemistry','biology'}
+TRACKS = {'chinese':'语言','english':'语言','math':'数理化生','physics':'数理化生','chemistry':'数理化生','biology':'数理化生','politics':'政史地','history':'政史地','geography':'政史地'}
 MATH = re.compile(r'\\\[(.*?)\\\]|\\\((.*?)\\\)', re.S)
 
 
@@ -65,13 +66,14 @@ def build(partial=False):
         authored = json.loads(authored_file.read_text())
         lessons = {l['id']: l for l in authored['lessons']}
         expected = {n['知识节点编号'] for n in data['nodes']}
+        understanding = load_understanding(folder/'understanding.json', expected)
         if set(lessons) != expected or len(lessons) != len(authored['lessons']):
             raise ValueError('Node coverage mismatch: '+slug+' '+str(expected-set(lessons)))
         books = {b['教材编号']: b for b in data['books'] if b['索引层级'] == '主索引'}
         source_map = {s['来源编号']: {'id':s['来源编号'],'title':s['标题'],'url':s['网址'],'scope':s['支持的结论']} for s in data['sources']}
         source_map.update({s['id']:s for s in authored.get('sources',[])})
         course_id = 'hs-'+slug
-        manifest = {'id':course_id,'title':data['subject'],'level':'highschool','category':'高中','track':'复习主线' if slug in MAIN else '合格考与拓展','topics':[authored['summary']],'summary':authored['summary'],'versionNote':data['overview'][0]['地区核验状态'],'sections':[],'resources':{},'knowledgeMap':{'nodes':[],'links':[],'chapters':[]}}
+        manifest = {'id':course_id,'title':data['subject'],'level':'highschool','category':'高中','track':TRACKS[slug],'topics':[authored['summary']],'summary':authored['summary'],'versionNote':data['overview'][0]['地区核验状态'],'sections':[],'resources':{},'knowledgeMap':{'nodes':[],'links':[],'chapters':[]}}
         manifest['glossary'] = 'courses/'+course_id+'/glossary-index.js'
         glossary = {'lazy':True,'symbolDefinitions':[],'terms':[]}
         reuse = {(e['section'],e['term']):e for e in reused_terms.get(course_id,[])}
@@ -94,7 +96,8 @@ def build(partial=False):
             book_id = '-'.join(identifier.split('-')[:2]); book = books[book_id]
             # These are LN's own equation labels, never presented as original textbook numbers.
             prefix = str(list(books).index(book_id)+1)+'.'+str(int(identifier.rsplit('K',1)[1]))
-            body = '<h2>'+html.escape(node['模块或主题'])+'</h2>'+render(lesson['body']+worked_examples(lesson),prefix)
+            main = render_understanding(understanding[identifier], 'U.'+prefix, render, course_id)
+            body = '<h2>'+html.escape(node['模块或主题'])+'</h2>'+main+'<h3 class="source-material-heading">补充说明与计算核查</h3>'+render(lesson['body']+worked_examples(lesson),prefix)
             paths=[p for p in graph['paths'] if any(s['section']==section for s in p['steps'])]
             if paths:
                 path_body=[]

@@ -18,7 +18,7 @@
       ['https://www.ictr.edu.cn/download_center/fangan.html','课标与课程方案','2020底本保留历史标签；2025日常修订的存在不等于已完成逐条差分。']
     ];
     return '<a class="back-link" href="#highschool">← 高中</a><section class="highschool-resources publication-body"><h1>教材与来源</h1><p class="page-meta">海南 · 2027届 · 本次整理 '+escape(data.checked)+'</p>'+
-      '<p>按所附核验报告的九科、50册主索引与235个知识节点组织。语数英、物化生为报告中的复习主线；政史地必修用于课程与合格考，选择性必修保留为拓展。50册是资料索引，不能理解为新增购书或全部重学任务。</p>'+
+      '<p>按所附核验报告的九科、50册主索引与235个知识节点组织。课程先建立问题、模型或证据，展开推理与完整例子，再检验边界并尝试迁移。原报告中的选科和课程类别仅作为来源事实保留；50册是资料索引，不能理解为新增购书或全部重学任务。</p>'+
       '<p>海南采用六科自主选三的3＋3框架。'+link('https://www.eol.cn/kaoshi/gaokao/gkzc/202610/t20261026_2786604.shtml','2027报名通知转载')+'支持选科规则，不据此预测卷型、题量或新增考点。非统编六科的个人实际版本、教材印次和学校进度仍需与实书核对。</p>'+
       '<div class="source-downloads">'+link('courses/highschool/assets/hainan-2027-report.pdf','原核验报告 PDF')+link('courses/highschool/assets/hainan-2027-index.xlsx','原知识与交叉核验表 XLSX')+'</div>'+
       '<h2>九科与册次</h2>'+table(['学科','主索引册数','范围与版本'],courses.map(c=>['<a href="#course/'+escape(c.id)+'">'+escape(c.title)+'</a>',String(new Set(c.sections.map(s=>s.group)).size),escape(c.versionNote)]))+

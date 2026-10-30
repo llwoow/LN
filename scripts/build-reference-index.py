@@ -86,6 +86,7 @@ def build_index():
                 if anchor in used: anchor += '-' + str(index + 1)
                 target = {'kind': kind, 'number': number, 'anchor': anchor, 'section': section['id'], 'group': section['group'], 'aliases': list(aliases)}
                 current[{'equation':'equations','figure':'figures','table':'tables'}[kind]].append(target); output['targets'].append(target)
+            source_equation_index = 0
             for i, node in enumerate(displays):
                 tags = [n for n in node.walk() if 'katex-tag' in n.classes or 'tag' in n.classes]
                 number = label(node.attrs.get('data-equation', '')) or (label(tags[0].text()) if tags else None)
@@ -93,7 +94,12 @@ def build_index():
                 siblings = [n for n in node.parent.children if isinstance(n,Element)]
                 position = siblings.index(node)
                 if position and 'equation-anchor' in siblings[position-1].classes and siblings[position-1].attrs.get('id'): aliases.append(siblings[position-1].attrs['id'])
-                append('equation', node, number, i, aliases)
+                # New teaching equations are separately numbered. Keep the original
+                # positional anchors of unnumbered source equations unchanged.
+                original_index = source_equation_index
+                if not (number or '').startswith('U.'):
+                    source_equation_index += 1
+                append('equation', node, number, original_index, aliases)
             for kind, tag in [('figure', 'figure'), ('table', 'table')]:
                 for i, node in enumerate(n for n in nodes if n.tag == tag):
                     aliases = []

@@ -20,7 +20,7 @@ with sync_playwright() as p:
    page.evaluate('document.fonts.ready')
    assert page.locator('.paper-equation.is-numbered').evaluate_all('(els)=>els.every(e=>Math.abs(e.getBoundingClientRect().right-e.querySelector(".equation-number").getBoundingClientRect().right)<1)'),section
   opened('magnetic-sec11')
-  assert page.locator('.equation-number').all_text_contents()==['(1.1)','(1.2)','(1.3)','(1.4)']
+  assert page.locator('.paper-equation:not(.learning-sequence .paper-equation) .equation-number').all_text_contents()==['(1.1)','(1.2)','(1.3)','(1.4)']
   assert page.locator('#lesson-body .katex-tag').count()==0
   # Every numbered equation aligns with the reading-column right edge at all viewport sizes.
   geometry=page.locator('.paper-equation.is-numbered').evaluate_all('''els=>els.map(e=>{

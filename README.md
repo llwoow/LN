@@ -2,6 +2,8 @@
 
 按学科分类的轻量学习网页。
 
+教学以理解系统、独立推导和迁移为目标，统一标准见 [TEACHING.md](TEACHING.md)。每节先呈现问题、模型或证据、推理、完整分步例子、边界、检验和迁移；原讲义、原计算和练习后置保留。逐节审查记录见 [TEACHING-REVIEW.md](TEACHING-REVIEW.md)。
+
 直接打开 `index.html`，或运行：
 
 ```sh
@@ -62,3 +64,7 @@ python tests/highschool.browser.py
 学习主线在 `courses/highschool/learning-paths.json`，可复用的术语别名在 `shared-terms.json`；局部符号继续按阅读单元消歧。典型题使用节点的 `workedExamples` 字段，构建器统一生成分步解析、变式答案及连续公式编号。
 
 新增内容的针对性检查：`node tests/definition-reuse.test.cjs`；`python tests/highschool-deepening.browser.py` 检查17条主线、十六道分步题、跨节原定义返回与窄屏展开排版，并回归斜拉力符号消歧、交变电流定义及GIS释义与返回。
+
+主教学正文保存在每科的 `understanding.json`，包含七个具体教学字段与逐节 `review`，不得以通用提示填充。电机学运行 `python scripts/build-electrical-understanding.py` 后再重建引用和释义；原材料保留，新增公式以 `U.` 独立编号。`python tests/learning.browser.py` 在桌面和390／320px检查全部274个阅读单元，包含原PDF与3D模型的原创讲解。
+
+静态发布会运行 `scripts/check-teaching.py`，缺少主讲解或逐节审查的已注册课程不能打包。`definition-anchors.json` 保留已发布释义链接的稳定锚点；增补正文时不要按段落位置重新生成这份映射。

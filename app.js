@@ -160,7 +160,7 @@
 
   function renderOverview() {
     const title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : '课程';
-    const filters = currentView === 'highschool' ? ['全部', '复习主线', '合格考与拓展'] : ['全部', ...Object.values(categories)];
+    const filters = currentView === 'highschool' ? ['全部', '语言', '数理化生', '政史地'] : ['全部', ...Object.values(categories)];
     const libraryLink = currentView === 'highschool' ? '<a class="library-link" href="#highschool/resources">教材与来源</a>' : '';
     main.innerHTML = '<section aria-labelledby="page-title"><div class="page-heading"><div><h1 id="page-title">' + title + '</h1><p class="page-meta" id="result-count"></p></div>' + libraryLink + '<label class="course-search">' + icon('search') + '<input id="course-search" type="search" aria-label="搜索课程或知识点" placeholder="搜索课程…" value="' + escapeHTML(query) + '" autocomplete="off"></label></div><div class="filter-row"' + (filters.length < 3 ? ' hidden' : '') + ' aria-label="筛选学科">' + filters.map((name) => '<button class="filter-button" data-filter="' + name + '" aria-pressed="' + (name === category) + '">' + name + '</button>').join('') + '</div><ul class="course-list" id="course-list" aria-live="polite" aria-label="课程列表"></ul></section>';
     renderRows();
@@ -229,7 +229,7 @@
   function renderPdf(payload, body, anchor) {
     const initial = /^page-\d+$/.test(anchor || '') ? Number(anchor.slice(5)) - 1 : 0;
     let page = Math.max(0, Math.min(payload.pages.length - 1, initial));
-    body.innerHTML = '<h2>第二章作业</h2><div class="pdf-toolbar"><button class="secondary-button" data-pdf-prev aria-label="上一页">' + icon('back') + '</button><label>页码 <select id="pdf-page">' + payload.pages.map((_, i) => '<option value="' + i + '">' + (i + 1) + ' / ' + payload.pages.length + '</option>').join('') + '</select></label><button class="secondary-button" data-pdf-next aria-label="下一页">' + icon('chevron') + '</button><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a><a class="secondary-button" href="' + payload.pdf + '" download>下载</a></div><label class="question-jump">按题定位 <select id="homework-question">' + payload.questions.map((question) => '<option value="' + question.number + '">' + question.number + ' ' + escapeHTML(question.title) + '</option>').join('') + '</select></label><figure class="pdf-page"><a id="pdf-zoom" target="_blank" rel="noopener" aria-label="打开原尺寸作业页面" title="打开原尺寸"><img id="pdf-image" alt="第二章变压器作业" decoding="async"></a></figure><details class="review-notes"><summary>核查说明</summary><p>保留原题、原图和解答。第2-22题采用串联励磁支路参数，不能与并联铁耗、磁化参数混用；4.12% 是舍入结果。</p><p>第2-25题按题面和同阻抗角假设复算约70.10 A，原件也列出了教材68.79 A的差异。未取得教材详细解法，保留该差异。</p><p>第2-4题的励磁电流指净安匝对应的等效电流，不专指并联电抗支路的无功分量。负载时不能无条件用空载电流代替。</p></details>';
+    body.innerHTML = (payload.html || '') + '<h2>第二章作业</h2><div class="pdf-toolbar"><button class="secondary-button" data-pdf-prev aria-label="上一页">' + icon('back') + '</button><label>页码 <select id="pdf-page">' + payload.pages.map((_, i) => '<option value="' + i + '">' + (i + 1) + ' / ' + payload.pages.length + '</option>').join('') + '</select></label><button class="secondary-button" data-pdf-next aria-label="下一页">' + icon('chevron') + '</button><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a><a class="secondary-button" href="' + payload.pdf + '" download>下载</a></div><label class="question-jump">按题定位 <select id="homework-question">' + payload.questions.map((question) => '<option value="' + question.number + '">' + question.number + ' ' + escapeHTML(question.title) + '</option>').join('') + '</select></label><figure class="pdf-page"><a id="pdf-zoom" target="_blank" rel="noopener" aria-label="打开原尺寸作业页面" title="打开原尺寸"><img id="pdf-image" alt="第二章变压器作业" decoding="async"></a></figure><details class="review-notes"><summary>核查说明</summary><p>保留原题、原图和解答。第2-22题采用串联励磁支路参数，不能与并联铁耗、磁化参数混用；4.12% 是舍入结果。</p><p>第2-25题按题面和同阻抗角假设复算约70.10 A，原件也列出了教材68.79 A的差异。未取得教材详细解法，保留该差异。</p><p>第2-4题的励磁电流指净安匝对应的等效电流，不专指并联电抗支路的无功分量。负载时不能无条件用空载电流代替。</p></details>';
     const update = (requested, questionNumber) => {
       page = Math.max(0, Math.min(payload.pages.length - 1, requested));
       const image = $('#pdf-image', body), resource = payload.pages[page];
@@ -287,16 +287,16 @@
   async function loadLesson(course, selected, anchor) {
     const key = course.id + '/' + selected.id;
     try {
-      await Promise.all([loadScript(selected.src), selected.kind === 'html' ? loadStyle('assets/katex/katex.min.css') : Promise.resolve(), course.glossary ? loadScript(course.glossary) : Promise.resolve()]);
+      await Promise.all([loadScript(selected.src), loadStyle('assets/katex/katex.min.css'), course.glossary ? loadScript(course.glossary) : Promise.resolve()]);
       if (selected.kind === 'model') await loadWindingAssets();
       const body = $('#lesson-body');
       if (!body || body.dataset.lessonKey !== key) return;
       const payload = window.LN_LESSONS[key];
       if (selected.kind === 'pdf') renderPdf(payload, body, anchor);
       else if (selected.kind === 'document') {
-        body.innerHTML = '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
+        body.innerHTML = (payload.html || '') + '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
       } else body.innerHTML = payload.html;
-      if (selected.kind === 'html') {
+      if (payload.html) {
         window.LNPublication.prepare(body, course, selected);
         window.LNGlossary.prepare(body, course, selected);
         bindInlineModels(body);

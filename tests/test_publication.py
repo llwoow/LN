@@ -24,10 +24,17 @@ class PublicationReferences(unittest.TestCase):
 
     def test_original_numbering_is_preserved(self):
         sections = self.index['electrical-machines']['sections']
-        self.assertEqual([e['number'] for e in sections['magnetic-sec11']['equations'] if e['number']], ['1.1', '1.2', '1.3', '1.4'])
-        self.assertEqual(sections['transformer-3']['equations'][0]['number'], '3.1')
-        self.assertEqual([f['number'] for f in sections['transformer-symbols']['figures']], ['S.1', 'S.2'])
-        self.assertEqual(sections['dc-sec35']['equations'][0]['number'], '3.9')
+        original = lambda entries: [e for e in entries if not (e['number'] or '').startswith('U.')]
+        self.assertEqual([e['number'] for e in original(sections['magnetic-sec11']['equations']) if e['number']], ['1.1', '1.2', '1.3', '1.4'])
+        self.assertEqual(original(sections['transformer-3']['equations'])[0]['number'], '3.1')
+        self.assertEqual([f['number'] for f in original(sections['transformer-symbols']['figures'])], ['S.1', 'S.2'])
+        self.assertEqual(original(sections['dc-sec35']['equations'])[0]['number'], '3.9')
+        for section, anchors in {
+            'magnetic-sec11':['equation-unnumbered-3','equation-unnumbered-5','equation-unnumbered-7','equation-unnumbered-8'],
+            'dc-sec34':['equation-unnumbered-1','equation-unnumbered-3','equation-unnumbered-7','equation-unnumbered-8','equation-unnumbered-9'],
+            'dc-sec35':['equation-unnumbered-3']
+        }.items():
+            self.assertEqual([e['anchor'] for e in sections[section]['equations'] if not e['number']], anchors)
 
     def test_imported_aliases_still_reach_their_targets(self):
         targets = self.index['electrical-machines']['targets']

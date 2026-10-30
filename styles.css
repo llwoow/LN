@@ -562,6 +562,12 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .lesson .study-sources { font: 13px/1.8 var(--font); }
 .lesson .study-sources p { text-align: left; }
 .lesson figure svg { display: block; width: 100%; max-width: 680px; height: auto; margin: 0 auto; color: var(--text); }
+.learning-sequence { max-width: 68ch; }
+.publication-body.model-lesson, .publication-body.pdf-lesson { max-width: 100%; }
+.learning-sequence [data-learning-step="example"] > ol { padding-left: 1.6em; }
+.learning-sequence [data-learning-step="example"] > ol > li { margin: 1em 0; padding-left: .2em; }
+.learning-sequence [data-learning-step="example"] > ol > li::marker { font-weight: 750; }
+.publication-body .source-material-heading { margin-top: 2.2em; padding-top: 1.2em; border-top: 1.5px solid var(--border); font: 700 15px/1.7 var(--font); }
 .school-map .map-groups { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; }
 .school-map .map-groups button { flex-shrink: 0; max-width: 200px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 @media (max-width: 720px) {

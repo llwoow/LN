@@ -63,6 +63,8 @@ def build():
         course=assignment(manifest);config_path=manifest.parent/'glossary.json'
         if not config_path.exists():continue
         config=json.loads(config_path.read_text());sections={s['id']:s for s in course['sections']};documents={}
+        anchors_path=manifest.parent/'definition-anchors.json'
+        anchors=json.loads(anchors_path.read_text()) if anchors_path.exists() else {}
         def document(section):
             if section not in documents:documents[section]=Document(assignment(ROOT/sections[section]['src']).get('html','')).root
             return documents[section]
@@ -80,12 +82,12 @@ def build():
                 if '\\phantom' in raw(cells[0]):continue
                 if not keys:continue
                 identifier='symbol-'+section['id']+'-'+str(row_index)
-                source={'section':section['id'],'anchor':'definition-'+identifier,'table':spec['table'],'row':row_index}
+                source={'section':section['id'],'anchor':anchors.get(identifier,'definition-'+identifier),'table':spec['table'],'row':row_index}
                 entries.append({'id':identifier,'kind':kind,'title':clean(cells[0].text()),'symbolHtml':inner(cells[0]),'keys':list(dict.fromkeys(keys)),'description':description,'definitionHtml':inner(cells[1]),'unitHtml':inner(cells[2]) if len(cells)>2 else '', 'group':section['group'],'source':source})
         for spec in config.get('symbolDefinitions',[]):
             nodes=[n for n in document(spec['section']).walk() if n.tag in {'p','h2','h3','h4','li','td'}]
             i,node=next((i,n) for i,n in enumerate(nodes) if spec['match'] in clean(n.text()))
-            source={'section':spec['section'],'anchor':node.attrs.get('id') or 'definition-passage-'+str(i),'passage':i}
+            source={'section':spec['section'],'anchor':anchors.get(spec['id']) or node.attrs.get('id') or 'definition-passage-'+str(i),'passage':i}
             entries.append({**spec,'kind':'symbol','symbolHtml':spec.get('symbolHtml','<span>'+html.escape(spec['title'])+'</span>'),'definitionHtml':inner(node),'source':source,'group':sections[spec['section']]['group']})
         for term in config.get('terms',[]):
             nodes=[n for n in document(term['section']).walk() if n.tag in {'p','h2','h3','h4','li','td'}]
@@ -95,7 +97,7 @@ def build():
             if node.tag in {'h2','h3','h4'}:
                 following=next(((j,n) for j,n in enumerate(nodes[i+1:],i+1) if n.tag=='p'),None)
                 if following:i,node=following
-            source={'section':term['section'],'anchor':node.attrs.get('id') or 'definition-passage-'+str(i),'passage':i}
+            source={'section':term['section'],'anchor':anchors.get(term['id']) or node.attrs.get('id') or 'definition-passage-'+str(i),'passage':i}
             entries.append({**term,'kind':'term','source':source,'definitionHtml':inner(node),'group':sections[term['section']]['group']})
         ids=set()
         for entry in entries:

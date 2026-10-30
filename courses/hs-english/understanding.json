@@ -1,0 +1,614 @@
+{
+  "YY-01-K01": {
+    "question": "<p>第一次给新同学发英语消息，怎样让对方真正知道你需要什么？假设你刚进学校，不知道科学社团何时活动。目标不是展示会用多少形容词，而是让收信人读完后能回答一个具体问题。判断一句话是否有用，应看它怎样推进这次交流。</p>",
+    "model": "<p>把交流看成有受众的行动：发信人掌握自己的经历，收信人掌握校园安排，消息要跨过这道信息差。先明确人物、时间、事实与请求，再选择句子。英语限定动词承载时间和人称等信息；找到它和主语，才知道谁在什么时间做什么。</p>",
+    "reasoning": "<p>从意思建立句子，而不是先拼句型。I am new here. 表达当前状态；I joined the science club yesterday. 报告已发生的加入；I am meeting the members on Friday. 在明确安排的语境下表达将来的会面。时间关系不同，动词形式跟着变。</p><p>随后检查信息的衔接。若写 The science club looks friendly. I would like to attend its next meeting，its 可回指单数社团；如果前句同时出现 school 和 club，且读者可能弄错，就直接重复 club。重复必要名词比制造歧义更好。最后把笼统愿望变成可回答的问题。</p>",
+    "example": "<ol><li>先拟中文交际目标：“我是新生，想参加科学社团，但不知道活动地点。”可写 Hi Mei, I am new to the school and interested in the science club。and 连接两个当前相关的信息，没有凭空说自己擅长科学。</li><li>补上已有依据：I saw a notice about a meeting on Friday。saw 对应已经看过通知；about 后的名词短语说明通知内容。读者知道你不是毫无背景地询问所有事情。</li><li>定位缺失信息：Could you tell me where the meeting will be held? 这里请求的是地点，不能改成 when 而仍声称问题解决。嵌入问句 where 后采用陈述式顺序，不写 where will the meeting be held。</li><li>模拟收信人作答：若对方只需回复 In Room 204，说明请求清楚。再删去一句看影响：去掉十个自我赞美词不影响回答，去掉 Friday 却可能造成场次混淆。这就是基于交流效果的修改。</li>  </ol>",
+    "boundaries": "<p>这个分析适合有明确对象的日常邮件，不意味着所有文章都要按同一顺序写。自我介绍是否提年龄、家乡或困难取决于场景；不要为填满模板虚构经历。礼貌表达的强度还要结合关系、当地使用习惯和请求大小。</p>",
+    "checks": "<p>把消息交给不了解情境的人，请他复述“谁、要做什么、缺哪条信息”。如果他能给出两种不同解释，先改指代和时间线，再查语法。另把每个限定动词对应的时间写在旁边，检查时间改变后是否仍自洽。</p>",
+    "transfer": "<p>换成给图书管理员询问一本书：先说明书名和已经查过的目录，再问能否预约，不能照搬活动地点问题。可写 I found the title in the catalogue, but no copies are available. Could I reserve one? 方法保留，具体信息随任务重新组织。</p>",
+    "review": {
+      "issues": [
+        "原稿有句子主语与简短信件建议，但未示范从信息差到完整消息的逐步构造。"
+      ],
+      "changes": [
+        "增加真实交际目标、时间与指代推理及逐句修改的完整例子。"
+      ]
+    }
+  },
+  "YY-01-K02": {
+    "question": "<p>朋友说“我总想把小组任务都做完，最后却赶不上期限”，怎样用英语提出能执行的建议，同时不替他作决定？成长主题真正可分析的，是人在限制条件下怎样调整行动，不是背 brave、responsible 之类评价词。</p>",
+    "model": "<p>用“目标—障碍—可选行动—后果”理解人物。动作是文本证据，评价是根据动作作出的解释。建议也有信息边界：你知道朋友遇到期限问题，却未必知道其他成员是否有时间，因此要把肯定事实与待确认条件分开。情态动词表达的强度服务这种关系。</p>",
+    "reasoning": "<p>先把情绪和行动分开。I feel overwhelmed 报告状态；I have taken on every task 解释负担来源。若只回复 Be confident，既没有处理工作量，也无法观察效果。You could divide the work 提出一个选项；You must divide it 强度更大，需要更充分的义务背景。</p><p>分析成长叙事时，同样不能由结果倒填动机。He asked for help 直接支持“开始合作”，但不能证明“已经不在乎领导角色”。较可靠的推断只比证据多走一步，并保留其他可能解释。</p>",
+    "example": "<ol><li>原始情境：Kai writes, “I promised to finish the poster alone, but I still need three interviews.” 先圈出 promised、finish、need：已有承诺与剩余工作之间存在冲突，不是单纯“懒惰”。</li><li>先回应具体处境：It sounds difficult to finish the poster and all three interviews alone。这里复述困难，确认理解对象；不添加“所有人都在欺负你”这类无证据判断。</li><li>提出有理由的选择：You could ask two teammates to do one interview each, so you can focus on the poster。分工后每人的任务可检查，so 解释方案怎样减少瓶颈；还应问 Are they available today?，而非假设他人一定有空。</li><li>安排反馈：If they agree, set a time to share your notes tonight。条件句承认方案可能不成立。若无成员可帮忙，就与负责人商量缩小范围或延后，而不是用更强的命令重复同一建议。</li>  </ol>",
+    "boundaries": "<p>人物分析依据叙述中的信息，不等于对真实人的完整心理诊断。一个合作动作不能证明性格永久改变；建议中的 should、could 也没有脱离语境的固定礼貌排序，语调、关系与后文都会改变听感。</p>",
+    "checks": "<p>检查建议能否回答“谁在何时做哪件事、为什么有帮助、什么情况下失效”。再把推断逐条标为原文明说或自己补出；对后者尝试找反解释。若两种解释都可能，就写 suggests、may 或 ask，而不是把猜测写成事实。</p>",
+    "transfer": "<p>把问题换成自己准备演讲而非小组海报：仍然识别目标、瓶颈和反馈，但不能再靠分工解决全部问题。可建议录音、找同伴指出最难理解的一段、再重录；理由是缩短反馈周期，而非“多练就会好”的空泛保证。</p>",
+    "review": {
+      "issues": [
+        "原稿指出成长是行为变化，但例子只给结论，缺少建议如何从约束推出来。"
+      ],
+      "changes": [
+        "增加行动证据与推断强度区分，并完整构造带条件和反馈的建议。"
+      ]
+    }
+  },
+  "YY-01-K03": {
+    "question": "<p>看到一份英语行程，怎样判断它真的可执行，而不是只读懂几个景点名？设两个人周末到一座陌生城市，一个要赶末班车，另一个想在海边散步。你需要恢复的是相互制约的行动计划，不是机械圈出所有将来时。</p>",
+    "model": "<p>把行程看成由时间节点、地点和交通连成的网络。每段移动消耗时间，预约有截止点，天气可能使某条路径失效。句子在网络中承担不同作用：已安排的活动、时刻表、临时决定、附条件的备用方案，不能只用一个“未来”标签抹平。</p>",
+    "reasoning": "<p>先确定不可移动的节点，再安排可调整活动。The train leaves at six 常用来报告既定时刻表；We are taking the six o’clock train 表达说话人的安排；I’ll call the hotel now 是此时作出的决定。它们可能指同一天，却从不同角度组织信息。</p><p>接着读条件：If the path is closed, we will visit the museum。前半不是已发生的事实，后半也不是无条件首选。只有把条件和结果绑定，才不会将备用方案与主行程排在同一时间。</p>",
+    "example": "<ol><li>以下时间均为原创假设：We are meeting at the station at 8:00. The train leaves at 8:20。先区分集合时间和发车时间，20分钟是缓冲，不能把两个时刻混成“八点二十到站”。</li><li>再读 We will reach the town at 9:10, and the walk to the museum takes 25 minutes。到城镇不等于进入博物馆；不计其他等待也要到9:35才到门口。这个计算来自地点转换，而不是某种时态口诀。</li><li>加入 The tour starts at 9:30, so we have booked the 10:30 tour instead。9:30场次在上述假设下赶不上，因此 instead 指向被替换的场次。完成时 have booked 告诉伙伴预约已完成，不是建议以后再订。</li><li>最后写备用句 If the train is delayed, we will phone the museum before 10:00。确认电话任务由谁负责，并检查延误时仍有联系渠道。计划质量来自约束是否闭合，而非每句话都写 will。</li>  </ol>",
+    "boundaries": "<p>实际开放时间、交通与预约规则必须向当前官方渠道核实，课堂时间只是练习数据。将来表达不由孤立时间词唯一决定；不同说法有重叠，重点是说话人是否在报告安排、预测或当场决定。</p>",
+    "checks": "<p>自己画一条时间线，把每个地点转换计入，再问“这句话是事实、已订安排，还是条件分支”。若两项活动冲突，用文本证据解释改哪一个。将 if 去掉重新读一遍，能看出条件是否被错误省略。</p>",
+    "transfer": "<p>迁移到在线小组会议：固定节点变成不同时区的开始时间和提交期限，移动时间变成文件上传与设备测试时间。写 We are testing the link at 19:45; the meeting starts at 20:00，仍用安排与公共时间表的区分来避免误会。</p>",
+    "review": {
+      "issues": [
+        "原稿解释将来表达，但没有把语言选择与多约束计划的形成连接。"
+      ],
+      "changes": [
+        "加入可计算的完整行程、替代选择及条件分支，说明各语法形式的交际用途。"
+      ]
+    }
+  },
+  "YY-01-K04": {
+    "question": "<p>两个人比较训练进步，一个跑得更快，另一个终于能持续跑完，谁“更好了”？用英语读体育与健康材料时，先拆开指标，才知道 better、stronger 或 healthier 到底比较什么；词义不是脱离观察对象的奖牌。</p>",
+    "model": "<p>把陈述分成比较对象、测量指标和时间范围。A is faster than B 比较两个人同一指标；A lasts longer than before 比较同一个人不同时期。速度、耐力、情绪体验和健康状态彼此有关却不等同，结论只能覆盖实际给出的证据。</p>",
+    "reasoning": "<p>读比较句时先还原省略的信息。Lena runs more slowly than her brother 隐含的是 than her brother runs，比较速度；She stops less often than before 比较停止次数。若原文说 yet，就要问作者为何认为两句形成值得说明的对照，而不是把 yet 直接译成一个没有逻辑作用的“但是”。</p><p>写训练反思可采取“基线—行动—观察—调整”。这样即使没有获胜，也能解释学到了什么；个人观察应写 for me、during these sessions 等范围，不能变成人人适用的健康处方。</p>",
+    "example": "<ol><li>原创训练记录：Last month I stopped twice on the hill. Today I completed it without stopping, although my time was one minute longer。先记录同一路线、两次观察，避免把不同距离的成绩混比。</li><li>把指标分开：停止次数由2降到0，耗时增加1分钟。因此“耐力表现改善、这次用时更长”都与记录相容；写 I became faster 会违反第二条证据。</li><li>组织表达：I focused on keeping a steady pace rather than finishing quickly。rather than 解释这次策略优先级，不代表速度在所有训练里都不重要。接写 This helped me finish without a break，把动作与观察连接。</li><li>检验解释：天气、路线和身体状态也可能影响结果，所以写 The steadier pace may have helped，比宣称唯一原因更稳妥。下次在相近条件下重复记录，才更能判断是否稳定进步。</li>  </ol>",
+    "boundaries": "<p>一次记录不能诊断健康，体育报道或英语练习也不是个人医疗建议。比较级的语法正确不保证比较合理；若样本、项目或时间跨度不同，先交代差异。对他人体型和能力的评价也不能由单一成绩推出。</p>",
+    "checks": "<p>把每个比较词旁边写上“谁与谁、用什么量、在什么范围”。若写 more successful 却没有可观察标准，就补标准或换成更具体的动词。检查 although、yet、rather than 前后究竟对比哪两个维度，防止偷换指标。</p>",
+    "transfer": "<p>迁移到学习一门乐器：演奏更快可能伴随错误更多，能完整弹完与能保持准确也是不同指标。写 I played more slowly but made fewer errors，并解释此次练习目标，是把比较框架用于自我调整，而非寻找一个统一排名。</p>",
+    "review": {
+      "issues": [
+        "原稿已提醒耐力与速度不同，但未完整示范如何用数据组织反思及控制因果强度。"
+      ],
+      "changes": [
+        "增加多指标记录、反思段落构造与替代解释核查。"
+      ]
+    }
+  },
+  "YY-01-K05": {
+    "question": "<p>灾害报道写 Two bridges were closed for inspection，能否改成“两座桥已被毁坏”？不能。快速阅读最重要的能力是把事件、时间、信息来源和不确定性恢复出来，尤其不能为了摘要简短而把尚待确认的事情写成既定事实。</p>",
+    "model": "<p>用“事件时间线＋证据等级”理解报道。过去时记录某个过去时段的事件，过去完成时把一个事件放到另一过去参照点之前；被动语态把承受动作的对象放在主语位置，但不自动告诉你施动者和原因。estimated、reported、confirmed 对信息状态作不同限制。</p>",
+    "reasoning": "<p>先找动词和时间关系，再判断报道强调什么。By the time the river reached the road, residents had moved to higher ground 中，reached 是参照点，had moved 说明迁移此前已完成。它不证明所有居民都绝对安全，也不说明谁组织迁移。</p><p>摘要需要保留会改变判断的限制信息。for inspection 是关闭目的而非损坏结论；about 200 是估计数量而非精确名单；according to local officials 标出来源而非作者亲眼所见。省略这些信息会提高结论强度。</p>",
+    "example": "<ol><li>原创报道：At 7 a.m., officials reported that about 80 homes had lost power. A school was opened as a temporary shelter。先列明确事实：报告发生在七点，断电在此之前，学校被用作临时安置点；不要把三件事同时发生。</li><li>识别范围：about 修饰80，不是精确户数；reported 告诉我们谁公布信息，后续仍可能修订。were destroyed 从未出现，不能由断电推断房屋毁坏。</li><li>拟摘要：Officials reported power cuts affecting about 80 homes, and a school was being used as a temporary shelter。保留估计与功能，删除无关修饰；若只知道 was opened，不确定持续使用状态，则保守保留原表达 a school was opened。</li><li>检验一条错误改写：Eighty families became homeless。它把 homes 换成 families、about 换成精确80、断电换成无家可归，三处都超出证据。摘要不是把语气变强的改写。</li>  </ol>",
+    "boundaries": "<p>英语材料中的避险措施不能自行推广为面对真实险情的完整操作程序；实际行动以当地预警和救援安排为准。时态比较也需要明确参照点，单看“较早发生”并不意味着每一句都必须用过去完成时。</p>",
+    "checks": "<p>给摘要中的每个数字、原因和结果画出回指原文的连线。没有依据的内容删去或标为待核实；检查地点、时间、来源与估计词是否仍在。再让别人只依据摘要复述事件，看是否多产生了原文没有的损害判断。</p>",
+    "transfer": "<p>迁移到科学或校园新闻：实验室 temporarily closed for maintenance 不等于发生事故；estimated attendance 不等于实到名册。仍用时间线和证据等级改写，保持读者得到的信息强度与来源一致。</p>",
+    "review": {
+      "issues": [
+        "原稿指出估计与确认不同，但摘要操作和被动句信息缺口讲得不够展开。"
+      ],
+      "changes": [
+        "新增完整报道拆解与逐项比较错误改写，建立时间线和来源核查方法。"
+      ]
+    }
+  },
+  "YY-01-K06": {
+    "question": "<p>有人没听懂你的英语，你应该换一个“更高级”的词，还是先确定对方卡在哪里？语言的目的包含表达身份、建立关系与交换信息。理解世界语言时，要研究一个表达在什么语境中起作用，而不是把口音、词汇难度和交流能力排成单一等级。</p>",
+    "model": "<p>把意义看成词语、搭配、前后文、受众经验共同约束的结果。一个词可能有多个常见义，但当前上下文会排除部分解释。猜词因此是提出假设并回代，不是发现一个中文对应词就停止；解释策略也要让对方有机会确认理解。</p>",
+    "reasoning": "<p>先用句法判断缺的是哪类信息，再用语义与篇章限制选择。The guide used plain language 中，plain 修饰 language；后文若说 so that newcomers could follow each step，就支持“清楚易懂”，而非“平原”。这种推断来自搭配和目的，不来自单个词形。</p><p>交流修复同样是循环：发现困惑→换一种表达或举例→让对方复述→进一步调整。Could you tell me which part was unclear? 比连续提高音量更能定位问题。简化不意味着删掉改变含义的条件，如 only、unless 或时间限制。</p>",
+    "example": "<ol><li>原创对话：A: “Please submit a hard copy.” B: “Do you mean the file on my phone?” 先定位误解：双方谈的是提交形式，B 把 hard copy 理解成电子文件；不是先评价谁英语差。</li><li>A 改说 “I mean a printed version on paper.” printed 与 on paper 共同排除电子版。这里重复解释是有功能的，并不因词汇简单而不专业。</li><li>B 核对：“So I should print the document and bring it tomorrow?” 复述保留动作与时间，让A可以纠正。若 tomorrow 原来未确定，A应明确确认或改日期。</li><li>记录词汇时保存 hard copy of a report、printed version 与对比项 electronic copy。之后遇到“硬盘拷贝”的场景仍需重新判断，不能把某次说明当成所有技术语境的定义。</li>  </ol>",
+    "boundaries": "<p>语境推断有时不足以唯一确定词义，尤其专业词和讽刺语气；此时应查可靠词典、原说明或询问说话人。标准语体在某些正式任务中重要，但一个人的口音不能单独证明其知识、智力或沟通水平。</p>",
+    "checks": "<p>为词义假设找两条独立线索，如词性和结果从句；再用该义回读全文，看看有没有冲突。交流时请对方用自己的话复述下一步行动，验证理解的是意思而不是仅能重复原句。</p>",
+    "transfer": "<p>迁移到解释一个科学概念：先问对方知道什么，再用一个可观察的例子，最后保留必要术语并说明条件。例如解释 current 时区分日常“目前的”与电路中的“电流”；清楚交流靠语境和对象，不能只靠词表。</p>",
+    "review": {
+      "issues": [
+        "原稿给出猜词提示，但缺少真实误解及修复闭环。"
+      ],
+      "changes": [
+        "加入可检验的词义推断和四步交际修复示例，避免口音与难词崇拜。"
+      ]
+    }
+  },
+  "YY-02-K01": {
+    "question": "<p>为什么同一座老房子既要修缮又不能随便“修得更新”？读文化遗产文章，需要理解保护对象、损坏机制与方案代价的关系。定语从句也参与这个分析：它决定究竟是哪一批房屋、哪一种措施，而不只是提供一个可替换的关系词空格。</p>",
+    "model": "<p>先画“对象—价值—威胁—行动—结果”关系链。建筑材料、使用活动和文化记忆可以是不同层面的保护对象。语言中名词短语给对象命名，修饰成分缩小或补充对象范围；只有先确定指称，后面的证据和措施才会作用在正确对象上。</p>",
+    "reasoning": "<p>比较 The houses that survived the storm need repairs 与 The houses, which survived the storm, need repairs。第一句可用从句挑出幸存的那一部分房屋；第二句在语境已确定所指房屋后补充其幸存情况。逗号不是纯装饰，它提示信息如何加入；不过真实文本仍要结合已知范围判断。</p><p>保护论证也要区分目的与效果。Photographs will help builders compare cracks 说明照片的用途，不证明拍照已经阻止开裂。每个措施都要能回答“针对什么风险，产生效果的过程是什么，如何知道有效”。</p>",
+    "example": "<ol><li>原创场景：海边街区有十座木屋，其中六座风暴后仍完整。先写 Students are recording the six houses that remain intact，将数字和限制从句共同用于选定对象，不能概括成全街区都完好。</li><li>学生为每座房屋同一位置拍照、记录裂缝宽度。用 These records provide a baseline for later comparisons 解释记录的功能；baseline 不是修复本身，而是使以后变化可比较。</li><li>讨论两种方案：A replace all old wood；B replace only parts shown to be unsafe。若文章重视原材料证据，B可能更好保留证据，但不能因此不检查安全。论证要写条件，而不是宣布“越旧越好”。</li><li>拟建议段：Before replacing a beam, document its condition and explain why repair is insufficient。before 给出行动顺序；why 要求可说明理由。再问 who checks the structure，把缺失的专业判断明确列为待解决问题。</li>  </ol>",
+    "boundaries": "<p>不同材料、保护目标和法律要求会改变修缮方案；课堂分析不替代结构安全鉴定。英语关系从句的语义不能只由“有没有逗号”孤立决定，还要看所指对象是否已经确定。文化价值也不能单由年龄或旅游收入排序。</p>",
+    "checks": "<p>删去每个修饰成分，观察对象集合是否改变；如果改变，就在摘要中保留必要限制。再把保护主张接成“因为哪一风险，所以哪一行动，靠哪一观测判断”，若中间只有 valuable、important，说明机制仍未解释。</p>",
+    "transfer": "<p>迁移到数字文化资料：The recordings that include speakers’ permission can be shared 只允许符合许可条件的录音公开。保护媒介换了，但对象范围、价值与风险仍要分别说明，不能把“保存”与“任何人都可下载”当作同一件事。</p>",
+    "review": {
+      "issues": [
+        "原稿有定语从句限制范围说明，但保护行动的机制、代价和验证未展开。"
+      ],
+      "changes": [
+        "增加十座木屋的完整对象筛选与修缮论证，使语法选择服务实际指称。"
+      ]
+    }
+  },
+  "YY-02-K02": {
+    "question": "<p>一条动物通道建成了，报道就能宣布保护成功吗？从英语材料读懂野生动物保护，要把愿望、正在实施的行动和已经观察到的效果分开。这样既能读懂时态，也能判断一段保护倡议是否真的解释了问题。</p>",
+    "model": "<p>采用“威胁机制—措施—可观察结果”的因果链。道路可能阻隔动物移动，通道意在恢复穿越，但是否被使用还受物种、位置和干扰影响。语言把这些不同状态编码为 is being built、has been built、is used 等；形式差别对应现实信息差别。</p>",
+    "reasoning": "<p>A passage is being built 表示工程正在进行，A passage has been built 强调已建成的结果；两者都不自动等于 Animals are using it。so that animals can cross safely 陈述目的和可能能力，而非实测使用率。先把句子放到过程链上，读者就能解释为什么不能越级下结论。</p><p>写保护方案时，先说明障碍怎样产生影响，再说明措施改变哪一环节，最后提出监测办法。减少撞击、增加通行和恢复繁殖联系是不同指标，不能以一个替代全部。</p>",
+    "example": "<ol><li>原创观察设计：A road separates two patches of forest。先画两个林地与道路，标出动物要从一侧到另一侧取食的路径。问题是连通性，不是林地总面积必然减少。</li><li>设计措施：A passage is being built beneath the road。用被动把注意力放在通道上；若不知道具体施工主体，不凭空添加 villagers。再写 It is intended to reduce road crossings on the surface，清楚标出目的。</li><li>给出假设监测记录：相机首次记录到一种小动物使用通道。可写 Cameras have recorded one species using the passage，但不能写 All local wildlife has returned。物种、次数、时间范围都必须与数据一致。</li><li>进一步询问：拍摄时间是否相同，附近道路交通量有无变化，是否有动物绕行？据此写 Further monitoring is needed before population recovery can be assessed。结尾并非否认措施，而是指出下一步证据需求。</li>  </ol>",
+    "boundaries": "<p>不同物种对通道尺寸、光照和植被要求不同，某一通道被一种动物使用不能推广到全部动物。以上只是原创材料分析，不提供进入野外干扰动物或布置设备的行动要求。现在完成时也不自动表示“永久完成”。</p>",
+    "checks": "<p>给每句话标记目的、行动、结果或判断。检查结果是否具有样本、观察时间与指标；若读到 successful，追问成功指什么。把原文 can、may 改成 does 再读，能看出哪些改写在悄悄提高证据强度。</p>",
+    "transfer": "<p>迁移到校园节能：Installing sensors 只是行动，lower electricity use 是待验证结果；节电还要比较相同使用条件。仍以目的、过程、观察分层组织英文报告，让技术方案成为可以检验的主张。</p>",
+    "review": {
+      "issues": [
+        "原稿区分通道目的与效果，但没有展示如何形成证据与监测问题。"
+      ],
+      "changes": [
+        "用道路阻隔模型逐步推演措施、语态与效果判断，并设置反解释。"
+      ]
+    }
+  },
+  "YY-02-K03": {
+    "question": "<p>共享文件“已经上传”是否意味着“所有人都能编辑”？互联网文本里最容易丢失的并非生词，而是权限、同意和条件。理解一个数字工具，要研究它让哪些人执行哪些动作，以及谁承担由此产生的代价。</p>",
+    "model": "<p>把服务画成“用户—操作—对象—权限—后果”。view、download、edit 是不同操作，only 限定的部分必须定位。完成时可以强调过去操作带来的当前状态，但它不会额外授予权限；隐私和可用性也不能因工具方便就被省略。</p>",
+    "reasoning": "<p>读 The class has created an archive, but only members can edit it，先确定 only 修饰 members，限制的是编辑者范围；它没有回答谁能浏览。has created 则把建档与当前可用的档案联系起来，而不是说明每个成员何时上传。</p><p>评估网络信息可沿发布者、时间、证据、独立确认四个方向提问。点赞量是传播反应，不是论据可靠性的直接测量。写工具评价应给出特定任务中的收益与限制，而不是“互联网有好有坏”的两栏套话。</p>",
+    "example": "<ol><li>原创产品说明：Anyone with the link can view the document. Only the project team can edit it。先列两个权限集合：有链接的人、项目成员；不假定两者完全相同，也不把 view 译成修改。</li><li>同学提出把采访照片放进文档。查条件 Before uploading an image, ask the people in it for permission；before 建立行动先后，ask for permission 不是仅通知。没有同意时不能因为技术上能上传就视为被允许。</li><li>写给小组的说明：We have created a shared document for notes. Please add text only if you are a team member。先交代当前结果，再说规则；如还需公众反馈，可另给评论渠道，不能偷偷扩大编辑权限。</li><li>检验传播来的“原始采访”截图：先找完整采访和发布日期，再检查截去的前后文是否包含否定或条件。若找不到，只能写 an unverified screenshot，而不是通过漂亮排版把它变成 confirmed evidence。</li>  </ol>",
+    "boundaries": "<p>具体平台权限随设置和版本变化，课堂例子不代表任何现实产品默认规则。公开可见不必然等于可自由转载，已经同意某次用途也不等于同意所有用途。语言分析帮助识别规则，仍需查实际授权。</p>",
+    "checks": "<p>把说明改写成一张操作表，请另一人尝试指出谁能查看、编辑和分享。任一空白都应标为未说明，而不是擅自补全。对信息主张保存其出处和日期，再检查是否可在原上下文复现。</p>",
+    "transfer": "<p>迁移到开源项目：read the code、submit an issue、merge a change 也是不同能力。英语说明应将观察、建议和执行权限写清楚；这种区分同时帮助理解组织协作，而非只记几个网络词汇。</p>",
+    "review": {
+      "issues": [
+        "原稿列权限与隐私提醒，但没有完整展开读权限集合及核实网络证据的过程。"
+      ],
+      "changes": [
+        "增加共享文档的逐步权限推理和来源核查，避免把功能等同授权。"
+      ]
+    }
+  },
+  "YY-02-K04": {
+    "question": "<p>一座会堂烧毁后重建，每年聚会仍在继续，传统到底变了还是没变？英语历史与传统文章往往把物质载体、活动与意义放在同一段。读懂它，需要允许不同层面的变化同时发生，而不急着给整篇贴“保守”或“现代”的标签。</p>",
+    "model": "<p>先建立分层时间线：建筑实体的变化、社区活动的延续、作者评价分别记录。句法上还要区分承载主句断言的限定动词与补充背景的分词结构；否则容易把 rebuilt、preserved 等 -ed 形式都错当成新的主句事件。</p>",
+    "reasoning": "<p>The hall, rebuilt after the fire, now hosts meetings 的主干是 The hall hosts meetings；rebuilt after the fire 补充 hall 的经历，可以理解为 which was rebuilt after the fire 所表达的关系。主句谈现在用途，补充结构讲重建背景，两层信息不能合并成“现在正在重建”。</p><p>比较 restore、rebuild、preserve 时先看对象与动作：修复已有物、重建失去的物、保存某种材料或活动，不是三个可随意互换的高级同义词。文本若强调 although，通常要求读者跨层比较，找出为什么“变化”不妨碍某种延续。</p>",
+    "example": "<ol><li>原创段落：The market was moved to a new square in 2010. Stalls made by local carpenters are still used each spring。先画时间线：2010搬迁，当前每年春季仍用某些摊位；没有证据说这些摊位也在2010年制造。</li><li>拆第二句：Stalls 是主语，are used 是限定谓语，made by local carpenters 修饰摊位。by 短语说明制造者，不是市场的所有者，不能把角色混换。</li><li>组织解释：Although the location has changed, the market retains a link with local craft。location 是变的层面，craft 是延续线索。retains a link 比 nothing has changed 更符合这两条有限证据。</li><li>提出检验问题：活动名称相同是否就等于功能相同？再看谁参与、交易什么、组织方式如何变化。如果这些信息未给，就明确说 the passage does not tell us，而非填入对某个民族的想象。</li>  </ol>",
+    "boundaries": "<p>历史文化陈述的范围取决于所述社区和资料，不能由一次节庆推广为整个群体永恒习惯。省略关系从句与分词结构的对应也有语义、时态限制，不能把所有 -ed 形式机械展开成同一种结构。</p>",
+    "checks": "<p>把每段分别用“什么变了、什么延续、证据何在”概括；若两项看似矛盾，先检查是否比较了同一层面。句法检查时遮住分词补充语，看主句是否仍有完整主谓，再将它补回并解释其功能。</p>",
+    "transfer": "<p>迁移到家族照片数字化：照片从纸张变成文件，但记录家庭经历的功能可能延续；也可能因新的传播方式改变隐私边界。用 changed medium、continued practice 等具体对象组织英语比较，比套用“科技破坏传统”更有解释力。</p>",
+    "review": {
+      "issues": [
+        "原稿有重建会堂的提示，但分层时间线和非谓语结构的意义重建不足。"
+      ],
+      "changes": [
+        "增加市场迁移案例、主句拆解和跨层比较，避免把传统写成静止标签。"
+      ]
+    }
+  },
+  "YY-02-K05": {
+    "question": "<p>独自练熟的旋律，为什么加入合唱后仍可能跟不上？音乐主题让我们研究个人行动怎样进入共同系统。英语阅读中的情绪、动作和语法结构都应服务这条解释链，而不把 inspiring、moving 当成不需要证据的结论。</p>",
+    "model": "<p>以“个人节奏—他人信号—反馈调整”理解协作。文章中谁先做了什么、谁在听谁、调整后观察到什么，是解释效果的基础。非谓语结构可能压缩一个动作或背景，但仍有逻辑主语和时间关系，不是随意附加的装饰。</p>",
+    "reasoning": "<p>Having practised alone for weeks, Jun found it hard to follow the choir 中，先前练习者与主句中的 Jun 对应；having practised 将先行经历压缩为背景。Listening to the others helped him adjust 则把一个完整行为当作主语，谓语是 helped；the others 只是 listening 的对象。</p><p>还要避免错误因果：加入团队之后进步，不证明“只要加入就会进步”。若文本写他听节拍、观察指挥并调整，就有更具体的中间机制。写活动介绍应将这些动作说出来，读者才能复用方法。</p>",
+    "example": "<ol><li>原创情境：A student sings each line accurately alone but starts too early with the group。先区分音高准确与进入时机，不能笼统说 he cannot sing；两项技能不同，问题定位决定练法。</li><li>描述第一次反馈：After watching the conductor’s hand, he waited for the cue。after 标明动作顺序；cue 指可观察的进入信号。解释是共享信号减少个人计时偏差，而非“指挥让他勇敢”。</li><li>组织句子：Watching the conductor helped him enter at the right moment。把 watching 短语整体当行为主语，he 是 helped 后的受影响者。再写 Having missed the first cue, he paid closer attention，不要让前置结构误挂到并非错过信号的其他人身上。</li><li>提出替代检验：在一段新旋律中仍看同样信号，若进入更稳定，支持他学到协调方法，而非只记住某一次的时间。评价可以写 He became more responsive to the group，并用该观察解释 responsive。</li>  </ol>",
+    "boundaries": "<p>艺术体验可能带来愉悦或归属感，但个人故事不是治疗效果的证据。动作关系不同，非谓语形式也会不同；若逻辑主语与主句主语不一致，需要明说，不能为了“高级句式”制造歧义。</p>",
+    "checks": "<p>为每个分词结构补上“谁做、相对主句何时做、起什么信息作用”。对每个情绪评价找一个行为或话语依据。把“参加活动”换成具体调整动作，若解释更清楚，就说明原稿的机制被补全。</p>",
+    "transfer": "<p>迁移到两人演讲或共同实验：每个人单独正确，不代表交接顺畅。先明确共同信号、倾听反馈和轮次，再描述调整。英语中用 After checking my partner’s signal, I began the next section，便把协作机制表达出来。</p>",
+    "review": {
+      "issues": [
+        "原稿有合唱故事，但没有从协调机制解释行为变化，也未完整示范逻辑主语核查。"
+      ],
+      "changes": [
+        "增加节奏反馈模型、四步实例及句法与机制的同步分析。"
+      ]
+    }
+  },
+  "YY-03-K01": {
+    "question": "<p>怎样向一个从未参加过的人介绍节日，让他知道活动在做什么、参与者为什么看重它，而不是只得到菜名和日期？同一个仪式对回乡学生、常住居民和游客也可能意义不同。解释文化活动，要从可见行为走向参与者赋予的意义。</p>",
+    "model": "<p>把节庆作为“参与者—共同活动—共享或不同的意义”来分析。物件本身不天然携带唯一象征；意义来自使用情境和参与者解释。介绍中的 many、some、in our family 限定经验范围，语言上的修饰关系又决定究竟是哪一张桌子、哪一群人。</p>",
+    "reasoning": "<p>先描述别人能观察到的动作，再加入有出处的理解。Families prepare a meal together 是活动；For some returning students, it is a way to reconnect with home 是限定群体的解释。第二句不能反过来证明所有参与者都离家求学，也不能推广为每个人都感到幸福。</p><p>检查句法所组织的层次。Tables decorated with flowers 描写被装饰的桌子，decorated 对应被动关系；Preparing the meal takes time 把准备这件事当主语，不是某个食物在“花时间”。理解这些关系，才能自己组合有意义的介绍而非背范文。</p>",
+    "example": "<ol><li>原创介绍对象是一次社区灯会：At dusk, neighbours carry handmade lanterns to the square。先给时间、参与者、动作与地点。handmade 说明制作方式，不证明每盏灯都由携带者本人制作。</li><li>加入意义来源：One resident says, “Making a lantern with my daughter gives us time to talk.” 这里具体说明共同制作如何形成相处机会，而非直接宣布灯在所有文化里都代表亲情。</li><li>把引语整合为解释：For this family, preparing the lantern matters as much as watching the display。for this family 控制范围；as much as 比较两项活动的重要性，不是比较耗时相同。</li><li>为陌生访客补需求：Visitors can watch the display, but should ask before photographing families。介绍不止赞美，也交代参与规则。再用提问核查读者是否分清“常见活动、某家庭意义、访客注意事项”三层。</li>  </ol>",
+    "boundaries": "<p>节庆做法会随地区、家庭、代际和时间变化；一个故事不能证明统一起源或所有人的感受。相似食物也不能单独证明两个节日有同样历史。真实活动日期、开放与拍摄规则应向举办方确认。</p>",
+    "checks": "<p>给介绍每一段写上“观察、参与者解释或我的判断”。对每个 all、always 检查资料是否真的覆盖全部对象。把抽象形容词换成一个活动细节，若读者更容易理解意义，说明解释更有根基。</p>",
+    "transfer": "<p>迁移到解释毕业仪式：先描述谁给谁递交什么、在何时做，再问不同参与者重视的是认可、告别还是共同记忆。仍以行为和有范围的解释连接文化意义，不把任何一种体验写成强制感受。</p>",
+    "review": {
+      "issues": [
+        "原稿提示文化范围词，但没有从活动细节到意义解释再到受众需求的完整组织。"
+      ],
+      "changes": [
+        "增加灯会的四步介绍及观察与解释区分，语法服务具体指称。"
+      ]
+    }
+  },
+  "YY-03-K02": {
+    "question": "<p>人物归还多找的零钱却错过公交，我们为什么说这是一个选择，而不是只记住“要诚实”？道德叙事让读者理解行动者当时知道什么、能够做什么、愿意承担什么代价。若用后来的好结局代替这些条件，就失去理解选择的方法。</p>",
+    "model": "<p>在决定时点画出两条可能路径，列出已知信息、即时收益、风险和义务。叙述者可能知道后续结果，人物当时未必知道。情态表达也要按该时点理解：could 可指可选机会，must 可指义务或有依据的推测，不能只背一个中文标签。</p>",
+    "reasoning": "<p>比较 Nora could keep the change 和 Nora had to keep the change。前者留下行动空间，后者引入不得不如此的约束，两种故事的道德结构不同。But she returned to the shop 才说明实际选择，错过公交是可见代价；没有依据时不能补“她早知有奖赏”。</p><p>评价时分别写动作和理由。returned 是事实，valued honesty over convenience 是基于对照作出的解释。解释可以合理，但不等于完整掌握人物内心，更不能由一次行为推出永远完美。叙事中的心理变化应由犹豫、对话和动作连接。</p>",
+    "example": "<ol><li>原创情境：Leo notices that a shared report contains an error just before a presentation。先确定知道的信息：错误已发现，展示即将开始；他不知道错误是否会被别人察觉，不能写成“注定不会被发现”。</li><li>列选项：保持沉默可免去即时尴尬；告知小组可能需要更改图表并推迟开场。两条路都有可解释后果，冲突由此具体化，不是抽象的 good 与 bad 二选一。</li><li>写动作：He asked the group to pause and explained which figure needed checking。pause 与 checking 显示他提出的是可操作核查，而不是笼统承认“一切都错了”。接写 They corrected the label but kept the main finding，保留问题尺度。</li><li>评价可写 He chose accuracy despite the delay。despite 将代价接到选择上。若续写为 everyone immediately admired him，就需额外证据；更可信的后续可以是有人不满延迟，团队仍约定以后复核数据。</li>  </ol>",
+    "boundaries": "<p>课堂叙事评价不能替代对复杂真实伦理问题的完整调查。行为后果与人物预见不同，善意也不能自动保证行动正确。情态动词的义务、许可和推测意义依场景而定，须根据上下文判断。</p>",
+    "checks": "<p>暂停在人物作决定之前，遮住结局，再问可选行动和已知理由。若自己的解释只有看过结局才成立，应降低确定性。检查续写新增的奖励、能力和动机是否有前文铺垫，避免靠偶然奇迹消除冲突。</p>",
+    "transfer": "<p>迁移到朋友托你保密但信息可能涉及他人权益的情境：先澄清事实、承诺范围和受影响者，而不是套用“保密永远好”或“公开永远好”。英语表达可说 I need to understand what was agreed before deciding whom to tell，展现调查与权衡。</p>",
+    "review": {
+      "issues": [
+        "原稿提及选项和代价，但未演示在决定时点重建信息、区分后见之明。"
+      ],
+      "changes": [
+        "增加报告纠错决策树和有铺垫的叙事推理。"
+      ]
+    }
+  },
+  "YY-03-K03": {
+    "question": "<p>第一次参加一场多语言聚会，你听到别人频繁切换语言，怎样描述它而不把不熟悉写成“不正常”？跨文化理解从承认自己只看到局部开始，再通过询问和后续观察修正解释。英文中的范围词和视角标记，就是这种思考的工具。</p>",
+    "model": "<p>将观察、解释和群体概括分成三个层次。观察是可回指的动作，如三个人在对话中换了语言；解释需要证据，如为了让新加入者理解；对整个文化的概括则要求远多于一次聚会的材料。人物自己的理解也会随信息变化。</p>",
+    "reasoning": "<p>在 Sam first felt excluded, then learned that the speakers were translating for a newcomer 中，felt 是他的体验，不证明其他人的排斥意图；learned 引入后续修正。first、then 不只是排序词，也提示认识发生变化。</p><p>表达差异可以用 In this group、some participants、often in this setting，不是为了语气软弱，而是精确标定证据范围。尊重差异也不意味着不再判断具体行动；可以询问谁能参与、谁被遗漏，用事实检验所谓包容是否真的发生。</p>",
+    "example": "<ol><li>原创场景：一位新生听见室友在通话时切换两种语言。先描述 She switched languages when her grandmother joined the call，不写 She refused to speak clearly，后者已经加入敌意解释。</li><li>提出多个假设：她可能照顾长者习惯，也可能在引用一句固定表达，或因话题变化寻找更准确的词。先保留这些可能性，避免第一次印象锁死后续观察。</li><li>礼貌求证：I noticed you changed languages. Was that to help everyone follow the conversation? 对方回答 Grandmother understands this one more easily，提供了此次行为的具体理由，不能推广到所有同类家庭。</li><li>写反思：I had read the switch as a barrier, but in this conversation it helped another person take part。把我的旧解释、证据和新认识连接起来；保留 in this conversation，说明观点修正的范围。</li>  </ol>",
+    "boundaries": "<p>一个参与者的解释也可能不完整，跨文化理解不要求立即得到唯一答案。国家、族群或语言标签内部存在多样性，不能让少数例子承担统计结论。对行为的伦理评价仍需看具体影响，不能仅用“这是文化”终止讨论。</p>",
+    "checks": "<p>为自己的句子标出哪些是看见的、哪些是猜到的、哪些是概括。把某个群体标签换成具体人物后，如果陈述才准确，就保留具体范围。尝试写出一个与初始解释不同而同样符合观察的假设，再设计可尊重地求证的问题。</p>",
+    "transfer": "<p>迁移到网上国际合作：迟回复可能与时区、工作安排或技术问题有关，不能立刻归为不尊重。先确认截止时间和沟通渠道，再解释行为；可写 Could we agree on a reply window that works across our time zones?，把误会转成可协调的规则。</p>",
+    "review": {
+      "issues": [
+        "原稿强调不贴标签，但解释修正和开放求证过程不够具体。"
+      ],
+      "changes": [
+        "增加语言切换的多假设分析及礼貌核查，展示视角变化如何形成。"
+      ]
+    }
+  },
+  "YY-03-K04": {
+    "question": "<p>“设计了一个在轨种植箱”为什么不等于“解决了太空供粮”？读探索报道，需要知道研究问题如何被缩小成可检验任务，语言又怎样区分目标、手段和结果。不定式常参与说明目的，但理解目的不是背出 to do 的名称就结束。</p>",
+    "model": "<p>以“问题—装置功能—观察量—比较条件—结论边界”理解研究。让种子存活、观察根的方向、收获足量食物是不同任务。to grow plants 可说明容器用途，to test a prediction 可说明项目目的；has grown、was measured 等才可能报告已发生的结果。</p>",
+    "reasoning": "<p>The team built a chamber to observe roots 中，built 是主句动作，to observe 说明为何建造；它不独立断言观察成功。We need a method to measure water use 中，不定式修饰 method，解释所需方法的功能。两者形式相近，但和主句名词、动词的关系不同。</p><p>科学论证还要问比较标准：若两组种子温度、光照或供水都不同，不能将全部差异归于重力条件。读者可以不掌握全部工程细节，但应能指出结论依赖的控制条件和缺失证据。</p>",
+    "example": "<ol><li>原创项目：Researchers plan to compare root growth in two chambers。先确定 compare 对象是两组根的生长，不是两种宇航员食谱；plan 标记尚待实施，不能改写成 have proved。</li><li>补装置描述：Each chamber has a camera to record root direction every hour。to record 把相机与测量任务连接。根的方向与生长长度是不同指标，摄像并不自动测得水分吸收量。</li><li>提出检验：如果只改变目标条件，并保持光照、种类和记录间隔可比，就更容易解释差异；若条件无法控制，报告中应说明限制，而不是删去它让成果显得更完整。</li><li>拟摘要：The planned study aims to test how root direction changes under specified conditions. It does not yet establish a system for producing food。aims to test 与 does not yet 清楚区分研究目标和更大的应用愿景。</li>  </ol>",
+    "boundaries": "<p>太空研究的真实结论需要具体实验和工程资料，原创案例只训练论证阅读。could 与 may 指可能性，不定式表达的目的不保证实现。实验验证一个局部机制，也不能自动证明长期资源、营养和可靠性问题都已解决。</p>",
+    "checks": "<p>给每个技术主张写出“完成了什么动作、测了什么、还没有证明什么”。将表示目的的不定式改写为一句 The purpose is…，再问有无相应结果。若摘要把 plan、aim、could 全部删掉，检查是否把设想误报为事实。</p>",
+    "transfer": "<p>迁移到学校自制温室：先选“记录温度变化”而非“解决所有种植问题”作为任务，再说明传感器如何产生数据。用 We built the box to compare… 表达问题导向，之后让结论由实际比较决定，不让装置名称代替证据。</p>",
+    "review": {
+      "issues": [
+        "原稿指出研究目的不等于结果，但缺少装置、变量和测量标准的连接。"
+      ],
+      "changes": [
+        "增加根生长项目的完整问题缩小与语言分析流程。"
+      ]
+    }
+  },
+  "YY-03-K05": {
+    "question": "<p>同样一块旧表，有人愿意修，有人选择更换，能否只凭价格判断谁更理性？金钱主题要求分清市场价格、用途、支付约束与情感价值。英语里的 must、may、worth 等词，应由这些关系得到解释，而不是靠故事气氛猜结论。</p>",
+    "model": "<p>把选择表示为“目标—可用资源—候选方案—评价标准”。价格是交易条件，价值是对某个主体和目标的评价；两者不必相等。证据支持推测的强度：must 表推测时需要很强依据，may 表示可能，但添加 may 也不能让毫无关系的猜测自动有价值。</p>",
+    "reasoning": "<p>The watch cost less than a new one, yet he repaired it carefully 把低价格与认真投入并置，后文若说明是祖父遗物，便提供另一评价维度。不能由“愿意修理”推断 rich，因为收入与财富还有许多可能情况。</p><p>比较搭配时，It is worth repairing 讨论修理是否有价值；The repair costs fifty pounds 报告费用。即使两句语法都正确，仍需说明对谁、为实现什么目的值得，不能用 worth 替代个人判断过程。</p>",
+    "example": "<ol><li>原创场景：一名学生有60单位预算，修旧耳机需20，买新耳机需50，旧耳机若修好仍可用于上课。先列用途与预算，不用 expensive 或 cheap 代替数值关系。</li><li>若目标只是在本学期正常听课，且修复可靠，Repairing it may be worth considering，因为保留40预算用于其他需要。may 反映可靠性尚待确认，不是宣告所有旧物都应修。</li><li>若店员说故障可能反复，选择又不同。可问 What does the repair include, and how long is it guaranteed? 信息更新改变方案评价，而非人物突然“不珍惜物品”。</li><li>加入情感条件：如果耳机无特殊纪念意义，不应照搬旧表故事的动机；若有，则明确写 It also matters to me because…，把情感价值作为自己的标准，不能以此强迫所有人同样选择。</li>  </ol>",
+    "boundaries": "<p>原创金额只是比较工具，不是消费建议。相同选择可能来自不同原因，一次支出不能证明财富、品格或长期习惯。must、cannot 的推测力度在真实语言中还受说话人的信心和已知信息影响，不能脱离证据孤立判定。</p>",
+    "checks": "<p>把价值判断中的主体、目标和条件补出来，检查成本与收益是否属于同一时间范围。为人物动机找直接线索，再尝试至少一个替代解释；如果替代解释仍成立，就不要用唯一原因的语气。</p>",
+    "transfer": "<p>迁移到选择付费学习工具：比较真正要完成的任务、可替代方式、持续费用和退出条件，再写自己的理由。I chose the free version because it meets my current needs 比 The paid one is bad 更精确，方法能够用于各种资源选择。</p>",
+    "review": {
+      "issues": [
+        "原稿区分价格与情感价值，但决策条件与情态推测缺少逐步实例。"
+      ],
+      "changes": [
+        "增加有预算与可靠性条件的方案比较，解释价值判断如何随信息改变。"
+      ]
+    }
+  },
+  "YY-04-K01": {
+    "question": "<p>一篇传记列了许多奖项，我们怎样知道人物真正做了什么、用了什么方法？理解成就不是把 praised、outstanding 背成赞美词，而是重建问题、选择、合作与证据之间的关系，同时看见叙述者选择了哪些材料。</p>",
+    "model": "<p>用双层结构读传记：时间线帮助定位，作用链解释影响。个人行动、团队条件、成果与后续使用不能混为同一贡献。非限制性定语从句往往补人物背景，主句承担当前叙述重心；背景经历与后来行动相邻，不自动构成已证实的心理因果。</p>",
+    "reasoning": "<p>Dr Lin, who had once struggled to enter the field, opened her lab to students 的主句断言是开放实验室，who 从句补入早年困难。这种安排可能引导读者联想两者关系，但若没有自述等依据，应写 may have shaped her concerns，而不是知道她全部动机。</p><p>总结贡献时使用准确动作：designed、tested、organised、funded、made available 分别指不同作用。把“提供研究条件”改成“独自完成所有项目”既不尊重证据，也遮蔽了可复用的方法。</p>",
+    "example": "<ol><li>原创传记片段：In 2014, engineer Chen noticed that repair workers could not read the old diagrams. With two technicians, she designed clearer labels。先记录具体问题和合作人员，暂不宣布“发明了一种全新机器”。</li><li>接着读 During a small trial, workers made fewer wiring errors。这是试验结果，但未给样本和对照细节。可以说试验提示标签可能改善理解，不能量化成“错误减少90%”。</li><li>组织贡献句：Chen, who worked with two technicians, helped redesign the labels to make maintenance instructions easier to follow。helped 保留合作，to make 表示设计目标；主句不让早年困难取代实际工作。</li><li>解释可复用方法：先观察使用者遇到的障碍，再把信息重画给他们，最后用实际操作反馈检验。若另一团队要借鉴，能照此调查；“她非常聪明”本身则没有提供可执行方法。</li>  </ol>",
+    "boundaries": "<p>传记是经过资料选择的叙事，未提到某人不代表其没有参与。奖项可证明某机构授予认可，不独立证明每一技术主张正确。对真实人物的因果和动机判断需要可靠材料；这里的工程师为原创情境。</p>",
+    "checks": "<p>把段落中的每个贡献动词与其对象、合作者和证据连线。若摘要中出现 alone、all、first，检查原文有没有相应依据。再遮住赞美词，用剩下的行动和结果说明贡献；若无法说明，就需要更多资料。</p>",
+    "transfer": "<p>迁移到自己的项目说明：不要写 I was an excellent leader，而写 I collected the team’s questions, redesigned the checklist and tested it with two new users。它把能力变成可观察过程，也让别人知道你的贡献与团队工作怎样相接。</p>",
+    "review": {
+      "issues": [
+        "原稿提醒保留合作，但没有展示如何从具体工作恢复方法与贡献边界。"
+      ],
+      "changes": [
+        "增加工程标签项目的分步传记分析，区分背景、行动、合作和效果证据。"
+      ]
+    }
+  },
+  "YY-04-K02": {
+    "question": "<p>写“未来的教室会自动节能”时，你究竟在报告现有功能、提出计划，还是预测效果？技术愿景容易把这些层次混在一起。学习未来生活的英语，应能把一个想法改写成可测试、可维护、可失败并改进的方案。</p>",
+    "model": "<p>将技术情境拆为输入、处理、行动、受益者与失败方式。传感器读数属于输入，自动开关属于行动，节能是需要比较的结果。未来表达标明时间和承诺程度：will be testing 可把观察点放在未来进行中的活动，may install 则保留条件性可能。</p>",
+    "reasoning": "<p>At this time next year, we will be testing a monitor 并不说测试已成功，也不保证它会无限持续。If the readings are reliable, the school may install more units 将扩大安装置于可靠性条件之后。改成 will certainly install 会删除尚未验证的前提。</p><p>技术评价还要指出谁维护、错误怎样被发现、能否人工接管。自动化移走某些重复工作，却可能增加校准、隐私与责任问题。英语表达可以审慎支持某一任务中的工具，不必在“必定拯救一切”和“完全拒绝”之间选边。</p>",
+    "example": "<ol><li>原创设计：教室显示屏将显示过去一小时用电量。先写 The display will show recent electricity use，不写 It will save half the energy，因为显示功能不等于行为和总量结果。</li><li>安排测试：At noon on Monday, we will be comparing its readings with the existing meter。指定观察时点与比较对象，使将来进行时有真实作用；不是为了凑一个语法结构。</li><li>设置判断：If the readings agree within an agreed tolerance, we may test the display in another room。容许差异要由实际设备要求确定，课堂不虚构真实标准。若不一致，先查单位、记录时间和校准。</li><li>形成解释：The aim is to help users notice patterns, while savings will depend on what they change。while 把功能和效果的依赖关系并列，读者知道还需要行动与后续比较，不会把监控当作节能已实现。</li>  </ol>",
+    "boundaries": "<p>未来情境以假设为前提，不能作为真实产品可靠性或政策承诺。读到 will 时也要看它是预测、计划还是某人的保证；语法形式不使预言自动成为事实。真实设备测试应遵循专业安装和安全要求。</p>",
+    "checks": "<p>给每个未来句标记功能、计划、条件或预测，再写出支持该句需要哪类证据。尝试让设备失败一次，看看文案是否说明谁发现、谁处理和后果是什么；没有这些内容，系统理解还不完整。</p>",
+    "transfer": "<p>迁移到学习软件：区分能显示练习记录、计划安排提醒、是否真的改善理解。可写 We will be checking whether the reminders fit our schedules，而不是把“有提醒功能”直接写成“保证学会”。用同一框架评估自己的新点子。</p>",
+    "review": {
+      "issues": [
+        "原稿解释将来进行时与条件，但技术系统的输入、效果和责任未形成完整模型。"
+      ],
+      "changes": [
+        "增加用电显示测试案例，逐步连接表达时点、验证和维护问题。"
+      ]
+    }
+  },
+  "YY-04-K03": {
+    "question": "<p>给想安静参观的朋友和带孩子寻找互动活动的家庭，为什么不能发同一份“最好玩景点”推荐？介绍景观是一种面向需求的信息选择。读懂广告与介绍，也要把宣传措辞拆成可核事实与个人体验。</p>",
+    "model": "<p>先确定受众约束，再把地点特征映射到需求。距离、开放时间、噪声、无障碍设施属于不同维度；“刺激”对某人是优点，对另一人可能是负担。文本的主语选择还决定评价对象：Walking through the village 是活动整体，不是进入村庄的所有人。</p>",
+    "reasoning": "<p>Walking through the model village gives visitors a view of old building styles 中，主语是整个 walking 短语，gives 与单项活动对应，visitors 是获得体验的人。只有恢复语义角色，才能理解为何不因 visitors 为复数而改成 give。</p><p>推荐论证要建立“需求—特征—适合的理由”。The quiet morning tour suits visitors who prefer fewer crowds：who 从句限定人群，不是宣布早场对所有人最好。最高级若没有比较范围与指标，只是劝说用语，不能当作已核排名。</p>",
+    "example": "<ol><li>原创资料：A offers guided talks every hour in a small room；B offers outdoor activities throughout the afternoon。先区分活动内容和环境，不能仅因 throughout 时间长就判断B一定更有知识性。</li><li>朋友说 I want to understand local building methods and avoid loud crowds。把两个需要分别记下：解释建筑、较安静。A的guided talks可能回应前一项，但“小房间”不保证安静，仍需问人数和扩音情况。</li><li>写有条件的建议：The guided talk may suit you because it explains how the houses were built. I would check the group size before booking。because 给具体理由，may 和 would check 保留缺失信息。</li><li>检验错误推荐：B is better because it is more exciting。它既未回应建筑信息，也把受众不一定想要的刺激当成共同目标。改写不是换一个更高级的形容词，而是重做需求映射。</li>  </ol>",
+    "boundaries": "<p>原创场所并非真实购票资料；实际开放、无障碍与安全信息要核实。并非所有动名词结构都用同一谓语形式，多个并列活动的组织方式可能改变一致关系，需理解主语实际指一件还是多件事。</p>",
+    "checks": "<p>让被推荐者复述“为什么适合我”，若他只能说“因为很好”，就补具体特征。检查每条事实是否来自材料，每条评价是否标明视角。再删去广告形容词，看是否仍有足够信息支持选择。</p>",
+    "transfer": "<p>迁移到推荐一本书或一个学习工具：先问对方想建立直觉、查资料还是练表达，再匹配结构与难度。解释 Reading one worked example helps… 时也先确定谈的是哪项活动，而非只背主谓一致规则。</p>",
+    "review": {
+      "issues": [
+        "原稿涉及受众和动名词，却没有展开不充分资料下如何做条件推荐。"
+      ],
+      "changes": [
+        "增加双场所需求比较、信息缺口与句法角色分析。"
+      ]
+    }
+  },
+  "YY-04-K04": {
+    "question": "<p>听众向前倾身，是不耐烦、威胁，还是听不清？身体语言不能像密码表一样一一对应情绪。用英语分析动作，关键是生成多个合理解释，再用情境和后续回应筛选，而不是把自信猜测写成读心术。</p>",
+    "model": "<p>把交流事件分为环境、可观察动作、说话内容、回应与解释。leaned forward 是观察；was angry 是解释，需要额外证据。不同个人和场合可能使用相似动作表达不同需要，因此 may suggest、could mean 可以标明推断仍有不确定性。</p>",
+    "reasoning": "<p>When the room grew noisy, Amir leaned forward and watched the speaker 提供一个可解释的触发条件：噪声妨碍听辨。若后面 he asked her to repeat the date，这条后续证据更支持听清需要。它仍不能证明他从未感到焦虑，只是让“单凭姿势判断敌意”的推断不成立。</p><p>写人物情绪时也应让动作处于有意义的连续场景。可以写 She kept checking the clock while waiting for the results，但不能宣称看表永远表示不耐烦；也可能担心错过接人时间。</p>",
+    "example": "<ol><li>原创场景：A group member folds her arms during a discussion。先仅记录动作，不把 crossed arms 自动译成“拒绝合作”。列三种假设：觉得冷、习惯姿势、对提案持保留意见。</li><li>加入环境：The air conditioner was blowing directly towards her。这个信息提高“觉得冷”的合理性，但还不足以排除其他解释；同一个人可以同时冷且不同意提案。</li><li>观察回应：她随后说 I like the plan, but could we move away from the vent? 这把支持提案和环境需要分开，说明姿势不是对方案态度的可靠替代指标。</li><li>用中性询问检验：Would you be more comfortable in another seat? 比 Why are you refusing to cooperate? 更少预设。英语提问本身会影响对方回应，所以验证解释时还要避免把自己的结论塞进问题。</li>  </ol>",
+    "boundaries": "<p>身体动作不用于独立诊断人格、精神状态或真实性。文化知识可提供可能解释，却不赋予对每个人的确定预测。非言语与言语证据冲突时应进一步了解，而不是任意选自己喜欢的那一条。</p>",
+    "checks": "<p>把解释语句改写成可观察描述，再写出至少两个替代解释和一条能区分它们的信息。检查提问是否预设了结论。若没有足够证据，使用表明范围与可能性的表达，并说明仍需了解什么。</p>",
+    "transfer": "<p>迁移到视频会议：关摄像头可能来自网络、空间隐私、设备或注意力问题，不要自动等同于缺乏兴趣。先确认技术和参与方式，再提出 clear audio 或 text updates 等可执行需求，避免把表情当作唯一参与证据。</p>",
+    "review": {
+      "issues": [
+        "原稿指出动作情境性，但未完整示范多假设筛选及不带预设的求证。"
+      ],
+      "changes": [
+        "增加抱臂、空调和发言的连续案例，让推断强度随证据更新。"
+      ]
+    }
+  },
+  "YY-04-K05": {
+    "question": "<p>传感器让农田“更聪明”，究竟是测了什么、改变了哪个决定、带来了什么效果？农业主题读不懂时，问题常不是缺一个科技名词，而是没有把土壤、水、作物需求和操作反馈连起来。英语说明应把这个过程讲清楚。</p>",
+    "model": "<p>将农业干预看作“状态—测量—决定—行动—结果”的循环。土壤含水状态不是天气预报，测得较干也不直接决定所有作物同样灌水；作物阶段与土壤条件限制判断。主语从句能把一个完整需求作为讨论对象，用来重新界定问题。</p>",
+    "reasoning": "<p>What the farmers need is better timing 中，what the farmers need 是整体主语，is 后说明其内容；不能因 farmers 为复数就机械改变主句谓语。not simply more water, but better timing 对比数量与时机，重点是怎样重新定义解决办法。</p><p>The sensors helped them irrigate only when the soil was dry 中，only when 限定行动条件，但“有传感器”与“节水”之间还要有决定改变和结果比较。一个试验田的观察也不能覆盖所有土壤、作物和年份。</p>",
+    "example": "<ol><li>原创纸面试验：两块相近田地种同类作物，甲固定每周灌溉，乙先看土壤读数再决定。先列要比较的结果：灌水总量、作物状态和产出，而不是仅比较设备数量。</li><li>若某周降雨充足，乙根据读数暂不灌溉，就能解释水量为何可能减少：信息改变行动。可写 The reading helped the farmer postpone irrigation；helped 而非 automatically saved 保留人的决定环节。</li><li>假设一个阶段乙用水较少且作物状态相近，只能报告该条件下的比较。还需问两地降雨、土壤、面积是否可比，不凭此宣布所有季节产量都会上升。</li><li>组织说明：What matters is whether the information leads to better decisions under local conditions。先说明评价问题，再给过程证据。若传感器没有改变任何行动，即使读数很多，也不能把数据量当成实际收益。</li>  </ol>",
+    "boundaries": "<p>该例为方法分析，不是田间灌溉处方。真实农业阈值需根据作物、土壤和专业资料确定；传感器也可能有误差。节水、增产和改善可获得性是不同目标，不能由其中一项改进推出全部粮食问题解决。</p>",
+    "checks": "<p>把科技说明补成五环，检查每一箭头是否有解释。对统计写出单位、面积、时间、对照和样本条件。最后把主语从句换成 The important question is…，看看是否仍能说清真正要评价的命题。</p>",
+    "transfer": "<p>迁移到自己的学习记录：记录做了多少页是测量，决定改变哪种分析方法是行动，能否独立解释新例子是结果。用 What I need is a clearer way to check my reasoning 重新定义需求，避免把更多输入直接等于理解。</p>",
+    "review": {
+      "issues": [
+        "原稿把需求从水量转向时机，但科技作用链和主语从句信息组织未充分展开。"
+      ],
+      "changes": [
+        "新增灌溉反馈循环与有对照的纸面案例，区分数据、决策和实际结果。"
+      ]
+    }
+  },
+  "YY-05-K01": {
+    "question": "<p>一个实验结果和原先解释不一致，为什么这可能是研究进展而不是“做错了”？科学主题的英语应帮助我们恢复问题、预测、测量与解释修正的过程；人物故事若只有“发现答案—获得成功”，就遮住了真正可学习的方法。</p>",
+    "model": "<p>把研究表示成循环：观察提出问题，假说给出机制，机制导出预测，比较结果决定保留或修订解释。观察与解释分开记录，才可能发现同一结果有多种成因。句子中的 whether 从句常用于命名尚未解决的问题，不等于作者正在直接提问或已知道答案。</p>",
+    "reasoning": "<p>The question was whether the container affected the result 的主干是 The question was…，whether 后给出问题内容，使用陈述式语序。若改成 The result proved that…，信息状态便从待检验问题变成确定结论，需要额外证据。</p><p>重复实验也不是把同一动作多做几遍就自动可靠。要说明改变哪个变量、控制什么、怎样测量、如何识别仪器偏差。若换容器同时换了光照，结果差异就不能唯一归因于容器。研究者修正解释应与这些条件相连。</p>",
+    "example": "<ol><li>原创纸面研究：两个容器中的幼苗高度不同。先写 The seedlings in the dark container were shorter，而不是 The container stopped growth。前句报告比较，后句已经指定原因并夸大为停止。</li><li>列假说：可能与透光、温度或初始幼苗差异有关。写 One possibility is that less light reached the plants，把其中一种解释标为假说，避免只用“显然”跳过竞争解释。</li><li>设计后续比较：使用相同初始条件，记录光照与温度，再在明确方案下改变一个目标条件；若无法完全控制，就记录差异并限制结论。The aim is to distinguish between these explanations 表明实验目的。</li><li>报告修正：若进一步记录显示温度差异与原解释未考虑的条件相关，可写 The team revised its explanation after checking the measurements。revision 是根据证据更新，不是承认研究没有价值；仍不能说其他可能原因已全部排除。</li>  </ol>",
+    "boundaries": "<p>以上为原创研究阅读情境，不代替某项真实实验的设计规范。科学结论可以有很强支持，但强度来自证据链，不来自 proved 一词本身。人物传记常压缩团队和失败过程，读者应意识到这种叙述选择。</p>",
+    "checks": "<p>为每句标注观察、假说、预测或结论，并给结论找到相应比较。尝试提出另一个也能解释原现象的原因，问现有资料能否区分。分析表语从句时先找系动词和主句，再解释从句给主语补了什么内容。</p>",
+    "transfer": "<p>迁移到排查手机耗电：先观察何时耗电、提出亮度或后台任务等假设，再设计可比记录。英语可写 The question is whether the background app changes power use，不因为一个晚上电量少了就断言某应用必然有问题。</p>",
+    "review": {
+      "issues": [
+        "原稿列科学循环，但未示范竞争解释和控制条件如何决定结论强度。"
+      ],
+      "changes": [
+        "增加幼苗比较的完整研究重建，连接whether内容从句和证据状态。"
+      ]
+    }
+  },
+  "YY-05-K02": {
+    "question": "<p>同事说 Could we discuss this after lunch?，为什么有人听成拒绝，有人听成调整时间？跨文化交流不要求背“某国人总是委婉”的性格表，而要研究字面形式、当时任务和双方已知信息如何共同产生理解。</p>",
+    "model": "<p>把一次交流拆成发言者意图、实际表达、听者解释和后续反馈。英语疑问形式可以执行请求，而不只是询问能力；礼貌也取决于关系、语调、负担和可选空间。误解需要靠补充信息或确认来修正，不能由旁观者猜测代替。</p>",
+    "reasoning": "<p>Could we discuss this after lunch? 的字面内容涉及是否能延后，交际上可能是在请求改时间。若听者不知道对方还要核对数字，可能误读为不喜欢提案；后来得知核对需求，解释就应更新。这里 after lunch 仍应具体化为双方可用时段，不能自动理解为某个唯一钟点。</p><p>良好的请求通常交代目的、理由、可选安排和回应方式。Can、could、would 并非无需语境的礼貌等级表；过长而含糊的句子也可能让对方无法判断要做什么。清晰与尊重需要一起设计。</p>",
+    "example": "<ol><li>原创对话：Mina asks, “Could you look at the draft when you have a moment?” 接收者答应，却三天未看。先记录原请求没有截止时间，不立即推断对方不愿帮忙。</li><li>澄清需要：I realised I did not mention the deadline. Would you be able to read the introduction by Thursday? 新句具体说明阅读范围与期限，承认自己先前信息不足，不把责任全推给对方。</li><li>对方说 Thursday is difficult, but I can comment on Friday morning。这是有替代方案的协商，不是简单拒绝。若提交在周五下午，就还有可行空间；若周四截止，就需另找支持。</li><li>确认共同理解：Friday morning works. Please focus on whether the main question is clear。works 确认时间，focus 限定反馈目标。双方现在可验证是否完成同一任务，误解修复形成闭环。</li>  </ol>",
+    "boundaries": "<p>相同表达可能在不同关系中听起来亲近、疏远或讽刺，不能靠一个句型保证效果。个人一次行为不能代表整个文化；遇到重要安排，应确认具体时间、范围和责任，而不是依靠文化标签作预测。</p>",
+    "checks": "<p>从对话双方分别复述任务：谁需要什么、何时完成、为何需要、是否已同意。如果两边复述不同，先补信息。核查解释时区分“我感到被拒绝”和“对方明确拒绝”，两者可以有关但并不相同。</p>",
+    "transfer": "<p>迁移到国际线上项目：时区、节假日和任务习惯可能不同。直接写日期、时区和文件部分，再提供替代方式；例如 Could you comment on section 2 by 16:00 UTC on Friday? 让协作依赖可确认约定，而不是猜测。</p>",
+    "review": {
+      "issues": [
+        "原稿说明语用意义，但请求协商如何逐轮形成共同理解未展开。"
+      ],
+      "changes": [
+        "增加有截止时间缺口的四轮对话，分析礼貌、任务范围和反馈闭环。"
+      ]
+    }
+  },
+  "YY-05-K03": {
+    "question": "<p>一道家乡菜在迁居后换了配料，为什么做菜的人仍说“这是家的味道”？食物与文化不是固定配料表，而是做法、环境、记忆和关系共同形成的实践。读这样的英语故事，要让时间关系和人物经验支撑解释。</p>",
+    "model": "<p>使用两条线：事件先后线记录学习配方、迁居、替换配料；意义线记录人物为何保留或调整做法。过去完成时把某事件放到一个过去参照点之前，不能仅凭“发生很久以前”来选择。文化意义则依人物经验，不由食物名称自动决定。</p>",
+    "reasoning": "<p>Before she moved away, Ana had learned the recipe from her aunt 中，moved 是过去参照点，had learned 说明学习此前完成。若随后写 She now uses a local vegetable，now 引入当下变化，不能把全段强行统一为过去完成时。</p><p>解释时区分延续内容：配料可能改变，制作顺序、家庭一起准备或节庆使用可能延续。说 the dish connects her with home 需要这些行为或人物自述作证，不等于该食物对每个同乡都有相同意义。</p>",
+    "example": "<ol><li>原创材料：Before moving to a colder town, Jo had learned to make soup with her father。先列两个事件，学习在迁居前；父亲是学习来源，不代表父亲发明了整道汤。</li><li>新情境写 Fresh leaves were hard to find, so she used dried ones。so 引出适应材料条件的改变。只根据这句不能认定她“不尊重传统”，因为它说明的是供应限制。</li><li>再读 She still followed the same order, adding the leaves last, as her father had shown her。still 与相同顺序提供延续线索，had shown 相对后来做汤的动作更早；adding 的执行者与 she 对应。</li><li>写解释：Although the ingredients changed, the method kept a connection with her father。范围落在此人此事；若要讨论味道是否相同，需要感官比较或人物话语，而不能从做法相似自动推出。</li>  </ol>",
+    "boundaries": "<p>食物记忆是个人与群体经验的一部分，不代表统一身份标准。替换配料可能受可得性、健康、价格或喜好影响，不能只选一个道德解释。过去完成时和 before 的配合并不意味着所有包含 before 的句子都必须用该时态。</p>",
+    "checks": "<p>画三格时间线并标出每个时态所参照的时点；再列“哪些改变、哪些保留、为什么有意义”的文本依据。对没有证据的起源、风味和群体喜好写清未知，不用故事感染力替代核查。</p>",
+    "transfer": "<p>迁移到迁居后的语言或音乐习惯：形式可随新环境调整，某种关系或使用目的仍延续。用 Although… , …still… 组织具体对照，先分析对象再选句式，避免把“保留文化”简化为任何细节都不许改变。</p>",
+    "review": {
+      "issues": [
+        "原稿有迁居与配方时间线，但文化延续和形式变化的关系缺少逐步证据。"
+      ],
+      "changes": [
+        "增加配料替换与方法保留的完整实例，连接过去参照点和有范围的文化解释。"
+      ]
+    }
+  },
+  "YY-05-K04": {
+    "question": "<p>地图上很近的村庄，到了现场却难以找到入口；怎样把这种旅行经历写成认识变化，而不是只堆 beautiful、amazing？旅行叙事里的景物、天气和路线可以改变人物判断，必须解释它们怎样触发新的行动。</p>",
+    "model": "<p>同时画路线轴与认识轴。路线轴记录地点和移动，认识轴记录预期、现场线索、修正与选择。seemed、looked 等词可能报告观察者印象，而非客观尺寸变化。非谓语结构的逻辑主语决定谁被雾笼罩、谁感到疲惫，错配会直接改变场景。</p>",
+    "reasoning": "<p>Surrounded by low clouds, the village seemed smaller than it had on the map 中，被云包围的是 village。若改成 Surrounded by low clouds, we thought…，被包围的语义对象随主句变成 we；是否合适取决于作者要描写什么，而不是哪个形式更复杂。</p><p>叙事推进要有可见桥梁：地图预期与现场视线不一致，人物减速，寻找路标，再询问当地人。感受可以从这些行动生出；突然写“我顿悟人生”而没有过程，就让场景失去解释作用。</p>",
+    "example": "<ol><li>原创场景：On the map, the guesthouse stood beside the river. At dusk, the path behind the trees was hard to see。先分清地图位置与入口可见性；没有证据说明旅馆“移动了”。</li><li>描述约束：Tired after the long ride, we stopped near a lit shop。tired 指 we，原因背景与主句主体一致；若写 Tired after the ride, the shop… 就把疲惫错误地归给商店。</li><li>恢复行动：Instead of following the river blindly, we asked the shopkeeper to mark the entrance。instead of 对照被放弃的策略与新策略，表明旅行者开始用现场信息修正路径，不只是“风景很美”。</li><li>形成有依据的反思：The short distance on the map had hidden a problem of access。距离短与进入方便不是同一指标。结尾可强调核查入口和时段，而不是把一次经历推广成所有地图都不可信。</li>  </ol>",
+    "boundaries": "<p>旅行记的个人视角有选择性，seemed smaller 不证明地理尺寸改变。真实路线与天气可能影响安全，练习情境不作为出行指令。分词结构有不同类型，逻辑主语核查应依据实际语义，不把一个还原公式套到所有句子。</p>",
+    "checks": "<p>为每段写“看见什么、原来怎么想、因此做什么”。如果景物删去不影响任何判断，可考虑其作用是气氛还是冗余；如果决定因它而变，就把联系说清。把每个前置分词与主句主语连线，检查动作与状态归属。</p>",
+    "transfer": "<p>迁移到参观实验室或线上平台：布局图与实际入口、功能说明与真正操作都可能有差距。用现场反馈改进自己的路径，再解释哪个假设失效；这让叙事也能成为一种独立分析记录，而非景点清单。</p>",
+    "review": {
+      "issues": [
+        "原稿提醒路线与感受双轴，但缺少预期失效、信息补充和行动调整的完整过程。"
+      ],
+      "changes": [
+        "增加河边旅馆定位案例及逻辑主语对照，说明景物怎样推动认识。"
+      ]
+    }
+  },
+  "YY-05-K05": {
+    "question": "<p>紧急信息中，为什么少一个 not、until 或地点细节，意思就可能完全不同？本节训练的是准确理解与传递有条件的指令，不把若干英语片段当成完整急救技能。语言上能复述行动边界，本身就是重要能力。</p>",
+    "model": "<p>将指令读成“执行者—动作—对象—条件—顺序—信息反馈”。祈使句常省略 you，但执行者仍然存在；when calling 可在合适语境中还原为 when you are calling。否定词、时间界限和例外条件是动作逻辑的一部分，不能为简短而删掉。</p>",
+    "reasoning": "<p>When calling for help, state your location clearly and follow the operator’s instructions 中，call、state、follow 的执行者都是正在求助的人；operator 是提供指导者，不是省略结构的主语。两项动作并列，但并列不意味着可以任意用其他动作替代。</p><p>读 until 时，要问哪个状态持续到何时；读 unless 时，要问哪种条件例外；读 do not 时，要完整保留否定。复述应尽量保留来源的对象与条件，而不是凭常识补一套伤病处理。真实现场应及时联系当地急救服务并遵循专业人员指导。</p>",
+    "example": "<ol><li>原创通信情境只涉及报地点：接线员问 Where are you? 先提供可定位地点，如学校名称、楼栋和楼层，而不是只说 Here。here 的参照点只有说话人知道，远端听者无法使用。</li><li>若自己不确定入口名称，明确说 I am not sure which entrance this is. I can see a sign reading “North Hall”。把不确定与可观察标识分开，不能为了显得镇定编造门号。</li><li>对方复述地点时逐项确认；若听错 South Hall，及时说 North Hall, not South Hall。not 保留关键对照，也可逐字母核对；信息核查不是无意义重复。</li><li>最后按接线员问题报告观察到的变化，并说明 I can only report what I see。此例没有给出针对伤病的操作次序；重点是让听者得到准确、有限且可确认的信息。</li>  </ol>",
+    "boundaries": "<p>语言学习不替代专业急救培训，原创对话不构成特定伤病的处置方案。不同地区联系方式、场所称呼与指令可能不同，真实紧急情况按当地服务和专业人员指导处理。不要把未确认的诊断写成观察事实。</p>",
+    "checks": "<p>复述一条指令后，对照执行者、动作、否定、先后和条件五项，确认没有遗漏。让听者反向复述地点，检查你所说的 here、there、this one 是否有共同参照。记录不知道的信息，比补出一个错误答案更可靠。</p>",
+    "transfer": "<p>迁移到任何远程故障报告：说清设备、位置、已观察现象和已完成动作，保留对方指令的条件。I see a red light 可以核查，The machine is definitely broken 则是解释；先可靠描述，再由有依据的人判断。</p>",
+    "review": {
+      "issues": [
+        "原稿说要保留指令条件，但例子不足以展示远端信息差和纠错闭环。"
+      ],
+      "changes": [
+        "增加不涉及医疗操作的求助地点确认实例，逐步解释否定、指代和信息边界。"
+      ]
+    }
+  },
+  "YY-06-K01": {
+    "question": "<p>画里一只杯子比椅子还大，为什么这会让日常物品显得陌生？欣赏艺术不是认出一个修辞名称就结束，也不是觉得“特别”便可以任意解释。要把可见细节、它打破的预期和由此产生的观看体验连成论证。</p>",
+    "model": "<p>区分三层：画面能指认的特征、这些特征之间的关系、观者提出的解释。尺寸错置是可观察关系，“让熟悉物变陌生”是有该关系支持的解释；“作者讨厌家庭”则需要其他背景。多种解释可以并存，但各自必须回应相同可见证据。</p>",
+    "reasoning": "<p>The artist’s aim was to make ordinary objects seem unfamiliar 的主干将 aim 与一个目的内容相接；make 后的 objects 是受到作用的对象，seem 说明所引发的表象。阅读时若只记“不定式作表语”，还没有回答画面怎样实现该目的。</p><p>赏析可按“指出细节—说明它改变什么惯常关系—提出有限解释—考虑其他读法”展开。用 To me 标记自己的感受，用 The enlarged cup suggests… 连接证据与解释，不把 suggest 写成 prove a private intention。</p>",
+    "example": "<ol><li>原创画面：房间中一只杯子占据前景，椅子被压得很小，窗外仍是正常尺度。先只描述尺寸和位置，不立即宣布它“象征孤独”。</li><li>建立比较背景：日常经验里杯子通常小于椅子；画面颠倒关系，使人重新注意本来习以为常的物品。陌生感由比例冲突产生，不是仅由颜色鲜艳推出。</li><li>写解释：By enlarging the cup, the painting interrupts an ordinary view of the room。by 说明手段，interrupts 说明感知效果。若另有人认为杯子像记忆中被放大的细节，可以继续问还有哪些画面线索支持。</li><li>写目的句：The effect is to make a familiar object demand attention。此处讨论作品效果，避免无来源地断言作者真实动机。若有可靠创作说明，才可将它作为另一种证据，与画面分析相互核查。</li>  </ol>",
+    "boundaries": "<p>同一画面可能支持不止一种情感解释，但不能与明显特征冲突。艺术史、作者生平和观者感受是不同资料层面，不应互相冒充。虚构画面用来演示方法，不用于认定某位真实艺术家的意图。</p>",
+    "checks": "<p>给每个解释标出它依赖的细节；删去“独特、震撼”等评价词，论证是否仍成立？尝试提出另一种读法，再指出两种读法共享和分歧的证据。分析句法时复述谁通过什么手段让什么对象发生怎样的感知变化。</p>",
+    "transfer": "<p>迁移到海报、摄影和界面：标题放大、留白与位置同样改变注意力。可以用 The larger heading directs attention to… 解释功能，再看读者是否真的先看到它；艺术分析由此成为可复用的观察与表达方法。</p>",
+    "review": {
+      "issues": [
+        "原稿给尺度例子，但未展开从观察到解释再到竞争读法的论证。"
+      ],
+      "changes": [
+        "增加完整画面分析，区分效果、作者意图与观者感受，解释不定式如何服务意义。"
+      ]
+    }
+  },
+  "YY-06-K02": {
+    "question": "<p>为什么“每天坚持”常写在计划里，却未必变成行为？健康生活方式的英语不应把意志当万能解释。先研究行动发生的环境、触发点、阻力和反馈，才能读懂一条建议为何可能有用，又在什么条件下会失效。</p>",
+    "model": "<p>把习惯当成可调整过程：某个线索使行动开始，环境决定阻力，结果和反馈影响下次选择。这里讨论日常阅读休息等行为，不提出医疗处方。句子中的 it 可能是形式主语，真正被评价的行动在后面的不定式或从句里，需要找回来。</p>",
+    "reasoning": "<p>It is useful to prepare a short reading list 中，it 不是指前文手机或某个物品，而是让较长内容后置；被评为 useful 的是 prepare a short reading list。还原为 To prepare a short reading list is useful，有助于理解信息结构，但不意味着原句只是为了炫耀句型。</p><p>建议必须有机制：提前选书可以减少开始时的选择成本，把手机放远可以减少立即查看的机会；两者可能帮助行动启动，却不保证解决疲劳、时间冲突和其他问题。用 can help 而非 will solve everything 更符合证据边界。</p>",
+    "example": "<ol><li>原创目标：晚饭后想读十分钟，却常在找书时打开手机。先描述真实序列，问题可能是启动环节被其他行为替代，不急着给自己贴“没有自律”的标签。</li><li>改变一个环节：午后把选好的书放在餐桌附近，写好起始页。It may be easier to begin when the next step is visible。解释是减少临时选择，并非书的摆放能改变所有兴趣和能力。</li><li>观察一周：记录计划出现了几次、实际开始几次、何时被打断。若周三因家庭安排没有空，要把时间约束单独记下，不把它当作摆书无效或人格失败。</li><li>调整计划：如果开始容易但难以专注，可缩短范围或换合适时段，再问是否更容易理解内容。比较的是具体行动与反馈，成功不只是“打卡次数”，更不是读得越多就必定越健康。</li>  </ol>",
+    "boundaries": "<p>生活方式材料中的建议适用性因人而异，真实健康问题应寻求适当专业支持。自我记录可能受新鲜感和同时改变的条件影响，不能当严格医学实验。形式主语 it 也不同于明确回指前文事物的普通代词，要在句中判断。</p>",
+    "checks": "<p>把一句 useful、important 的评价还原成“哪个行动、对谁、为何有帮助”。检查计划是否有触发点、可执行动作和反馈，而非只有结果愿望。对失败记录寻找具体约束，再决定改哪一环，不用抽象责备替代分析。</p>",
+    "transfer": "<p>迁移到每天整理学习问题：先准备固定记录入口，一次只写一个尚未理解的因果关系，再用下一次解释是否更清楚检验。可写 It helps to record the question before searching for an answer，说明行动如何改善后续思考。</p>",
+    "review": {
+      "issues": [
+        "原稿提触发和环境，但没有展开行动序列与反馈调整，也缺少形式主语的语义还原。"
+      ],
+      "changes": [
+        "新增阅读启动案例，连接机制、记录、调整和it真正评价的内容。"
+      ]
+    }
+  },
+  "YY-06-K03": {
+    "question": "<p>一座城人均用水减少，总用水却增加，英文报告是不是自相矛盾？环境议论文常用数字劝说，理解关键在指标之间的结构。先明确分母、基期和范围，才能判断 because、however 连接的到底是哪种变化。</p>",
+    "model": "<p>把总量与强度拆开：总用水可由人数与人均量相乘表达，但统计边界必须一致。per resident 描述每人的平均水平，total 描述全体相加。主张、数据、对数据的解释和政策选择是不同层次；即使指标都正确，也可能支持不同目标。</p>",
+    "reasoning": "<p>原创数字例中，100名使用者平均每日用10单位，总量1000；后来120名使用者平均9单位，总量1080。人均下降10%，总量却上升8%，两者完全相容。这不是背公式，而是看见总量同时受人数和平均行为影响。</p><p>转述报告还应保留来源、时期和条件。The report says that… 不意味着转述者独立核实；人称和 yesterday 等指示词需要按叙述位置调整，时态是否后移要看内容是否仍适用和具体语境，不是所有转述都执行同一机械替换。</p>",
+    "example": "<ol><li>先按原口径列一张小表：人数100→120，人均量10→9，总量1000→1080，均为假设单位、同一天统计范围。若人数指常住人口而用水含大量游客，乘法解释就需要改边界。</li><li>分别写两个事实：Water use per resident fell, but total use rose。but 表明指标的对照，不在说其中一个数字是假；不要改成 People became more wasteful，因为平均记录恰好相反。</li><li>解释总量：The increase in the number of users outweighed the reduction in average use。outweighed 在这里说明两种变化对总量的综合效果；该解释依赖同口径数据，不靠形容词推动。</li><li>提出可评估行动：如果目标是降低总量，应同时考虑效率、人数和服务需求，再比较措施成本。若报告只说人均改进，就诚实报告该进展，不能用 saved water in every sense 抹去总量问题。</li>  </ol>",
+    "boundaries": "<p>真实环境统计还包括产业用水、流动人口和测量误差；简单乘法仅适用于定义一致的示范模型。人均平均值会掩盖分布，某地减排也可能把生产转移到别处，不能自动代表更大范围净减少。</p>",
+    "checks": "<p>见到百分比先写分子、分母、时间和基数；把两项变化换回绝对量核算。对议论段追问“要改善哪个指标，证据是否测了它”。转述时检查说话者位置变化是否使 here、tomorrow 等失去明确参照。</p>",
+    "transfer": "<p>迁移到垃圾、能耗或学习效率：每件产品耗能下降而产品数增加，总耗能仍可能上升。英语表达先分指标，再解释共同作用；这种方法能帮助自己评估新方案，而不被“增长”或“下降”的单一箭头牵着走。</p>",
+    "review": {
+      "issues": [
+        "原稿指出人均与总量不同，却没有用可复算数字揭示结构，也未展开转述范围。"
+      ],
+      "changes": [
+        "增加100至120人的具体计算、语言改写与措施目标核查。"
+      ]
+    }
+  },
+  "YY-06-K04": {
+    "question": "<p>人物害怕却仍能作出可靠决定，为什么同样可以表现勇气？逆境故事不应把勇气写成“没有恐惧”或“突然获得新能力”。读写这类英语，需要追踪资源、障碍和选择怎样一步步改变，而让转折由已有线索支持。</p>",
+    "model": "<p>把情节看作受约束的行动系统：原目标、已掌握资源、新障碍、备选策略和后果。心理变化由对信息与行动结果的认识推动。过去完成进行时可突出某个过去参照点前持续的活动，帮助读者理解人物的疲劳或准备背景，但不自动说明活动后来永远停止。</p>",
+    "reasoning": "<p>The team had been searching for hours when the radio failed 中，had been searching 把持续寻找放在无线电故障之前的时间背景里；when 引入新事件。真正解释后续行为的还包括剩余设备、人员状态和共同目标，不能只靠时态名称概括整段。</p><p>续写时先问前文已有哪种能力、物品或关系能支持改变。人物标记位置、分享信息、调整目标等动作可以构成认识变化的桥梁；凭空出现一架直升机只能终止冲突，并未展示他们学会什么。</p>",
+    "example": "<ol><li>原创虚构情境：一组学生为展览整理了数小时资料，临近开场时主屏幕坏了。先列现有资源：纸质草图、每人的记录、仍可用的小桌；不要突然加入此前没有的备用大屏。</li><li>识别目标：最初目标是播放动画，更深目标是让访客理解模型。屏幕故障破坏一种手段，却未必破坏全部解释可能。把目标与手段分开，才能找到新策略。</li><li>组织行动：They arranged the sketches in sequence and took turns explaining each stage。sequence 对应过程，took turns 对应协作。可写 Having checked the order together, they invited the first visitor，交代行动为何不再混乱。</li><li>安排反馈：访客在第二步提问，他们发现遗漏了连接原因，于是补画箭头。结尾可以写 They were still nervous, but now had a way to respond。勇气表现为在不确定中继续核查与调整，而不是保证所有人立刻满意。</li>  </ol>",
+    "boundaries": "<p>虚构情节要内部自洽，真实险境中的行动需遵循相应专业与安全指导，不能照搬故事。过去完成进行时关注相对时间和持续过程；动词语义与上下文决定是否合适，不是有 hours 就一定使用。</p>",
+    "checks": "<p>把每个转折连回前文线索：某件物、某项能力或某个人际关系。若找不到，先补铺垫而非增加感叹词。检验人物变化是否有行动和反馈支撑；把“变勇敢了”换成具体能做什么，看解释是否更清晰。</p>",
+    "transfer": "<p>迁移到自己的项目记录：遇到技术失败，写清目标未变的部分、手段失效的环节和可用替代。英语可用 We had been relying on…, but… 引出原依赖，再说明新策略为何仍满足目标，把逆境写成方法更新的过程。</p>",
+    "review": {
+      "issues": [
+        "原稿有团队困难场景，但未展开目标与手段分离以及由反馈形成的变化。"
+      ],
+      "changes": [
+        "增加展览屏幕故障的完整重建，让持续背景、资源和转折彼此连接。"
+      ]
+    }
+  },
+  "YY-06-K05": {
+    "question": "<p>为什么把街灯写成“耐心的眼睛”，比说“路上有一盏灯”多出一种被照看的感觉？读诗不是找出拟人、押韵等术语就结束，而是解释声音、形象和词语之间的关系怎样组织体验，同时允许有证据的多种读法。</p>",
+    "model": "<p>先确定诗中说话者、字面场景和可听见的结构，再研究联想。诗中的 I 不自动等于现实作者；一个拟人动作能改变环境与人的关系，却不直接揭露作者完整生平。节奏和重复可以不靠押韵形成，译意则难以保留全部声音。</p>",
+    "reasoning": "<p>原创两行 The streetlight keeps a patient eye; / My hurried shadow passes by 用 patient 与 hurried 对照稳定和匆忙，eye 与 by 的末尾音相呼应。灯不真的有眼睛；把照明写成注视，让环境似乎在等待行人。读者可能感到关怀，也可能在另一语境中感到被监视，需要更多词语来区分。</p><p>赏析应从短引文走到效果，而非只写“用了拟人，生动形象”。把 patient 换成 watchful 或 cold，场景情绪可能改变；这样的最小替换能检验究竟是哪一处语言在起作用。</p>",
+    "example": "<ol><li>先慢读两行并画出场景：固定的街灯、移动的影子、匆忙的人。不要一开始推断战争、失恋或作者孤独一生，因为诗句没有给这些故事。</li><li>圈 patient 与 hurried。前者给灯人的耐性，后者给影子人的匆忙；二者不仅修饰不同对象，还形成环境与行人的速度、情绪差异。解释由词语关系产生。</li><li>作替换实验：The streetlight keeps a cold eye。场景事实近似不变，关怀感却可能减弱甚至转为疏离。这说明情绪不是“只要有灯就温暖”，而由具体用词选择塑造。</li><li>写一个有边界的理解：The contrast makes the light seem steady beside the speaker’s haste; to me, it suggests a moment of quiet company。后半标记个人感受，并以 contrast 为依据；如果主张监视感，也应指出 eye 等词如何支持并承认 patient 的牵制。</li>  </ol>",
+    "boundaries": "<p>多义性不等于没有约束；解释不能无视字面关系与反证。押韵是否严格还涉及发音，不能只看拼写相同；eye 与 by 的例子需朗读体会。翻译可帮助理解内容，却不能取代原语言的节奏与声音观察。</p>",
+    "checks": "<p>为每个情感判断引用一个短词或结构，并说明替换它会发生什么。再朗读一遍，检查停顿、重复和末音是否与解释有关。若只剩修辞名称而无法说出效果，就回到具体词语关系。</p>",
+    "transfer": "<p>迁移到自己的两行创作：先选一个真实场景，再决定想突出怎样的关系，例如窗外雨声与室内等待。写出两种用词版本并比较读者感受，而不是先规定“必须用拟人”。这样修辞成为表达选择，不是必须凑齐的清单。</p>",
+    "review": {
+      "issues": [
+        "原稿有诗句与术语说明，但未示范如何通过替换和竞争解释验证赏析。"
+      ],
+      "changes": [
+        "增加逐词、声音、最小改写和有范围解读的四步诗歌分析。"
+      ]
+    }
+  },
+  "YY-07-K01": {
+    "question": "<p>读到一篇机器人故事时，怎样判断它是遵守指令、误解指令，还是获得了新权限？先建立故事的规则，再跟踪人物掌握的信息。这样，句法分析才服务于理解选择，而不是让你记一组被动语态名称。</p>",
+    "model": "<p>把三个问题分开：能力can、许可be allowed to、义务be required to。它们可能指向同一动作，却不是同一种关系。原创设定：<span lang=\"en\">The robot can unlock the gate, but it is only allowed to do so after the owner confirms the visitor.</span>它有开门能力，许可则受确认这一条件限制。owner是确认者，robot是执行者，visitor是被核实的对象。</p>",
+    "reasoning": "<p>先找主句can unlock，再读but后的权限限制；after从句说明许可发生的前提时序。若后文说门开了，只能确定动作发生，不能倒推出主人已经确认，因为还可能有违规、误判或其他开门机制。故事解释要同时满足已给规则与情节证据。<span lang=\"en\">It was told to report the sound.</span>交代它收到指令，不保证报告一定成功；从意图到结果还需要后续事实。</p>",
+    "example": "<p>用原创短场景走完分析：<span lang=\"en\">A voice outside claimed to be the owner. The robot recorded the message and requested confirmation through a separate channel. The gate remained locked.</span></p><ol><li><strong>先还原事件。</strong>外面出现自称主人的声音，机器人记录、请求确认，门保持锁定。把claimed to be译为“声称是”，保留来源与事实的区别。</li><li><strong>匹配权限。</strong>记录和请求确认均未超出规则；仅凭声音自称身份并不满足独立确认。理解原因后，才看出separate channel为何是关键细节。</li><li><strong>区分结果与动机。</strong>门未开证明当前没有开门，不能单凭这一结果断定机器人怀疑或敌视来访者；文本并未给心理状态。</li><li><strong>写一致续篇。</strong><span lang=\"en\">Once the owner confirmed the visitor, the robot unlocked the gate.</span>用once明确前提已发生。若想写机器人自行开门，必须交代规则变更、故障或冲突，而不能悄悄取消设定。</li></ol>",
+    "boundaries": "<p>科幻中的技术规则可以是假设，现实产品的可靠性却必须另找测试证据。情态动词也会受语境影响，例如can可能用于请求；判断时要看说话人、目的与回应，不以一个词永久绑定唯一意思。</p>",
+    "checks": "<p>把can、must、may或be allowed to互换一次，说明人物选择会怎样改变，再看原文证据支持哪个版本。对每个推断标明它是明确陈述、规则推论还是猜测；如果规则允许两个结果，就不要假装只有一个。</p>",
+    "transfer": "<p>换成图书馆自动借阅系统，先分别写出能做、被准许做和必须做的动作，再设计一个信息不完整的场景。你可以用英语比较两种规则并解释代价，把语言当作准确表达自己设计的方法，而非背诵科技赞美句。</p>",
+    "review": {
+      "issues": [
+        "原稿解释机器人权限后给结论，缺少读者按设定、主体与情态重建冲突的过程。"
+      ],
+      "changes": [
+        "用原创门禁故事逐项拆解指令、许可、能力与证据，并让故事变式保持规则一致。"
+      ]
+    }
+  },
+  "YY-07-K02": {
+    "question": "<p>介绍一座塔，怎样让没去过的人理解它为什么重要，而不是只听到beautiful、famous和must-see？关键是给出能解释意义的具体细节，并把历史记录、传说与自己的感受分开。</p>",
+    "model": "<p>建立地点、物理特征、使用者与时间四条线。原创材料：<span lang=\"en\">Built to guide fishing boats, the tower later became a meeting place. Families still gather there, although a modern beacon now guides the boats.</span>塔、旧导航功能、新导航设施和家庭聚会是不同对象与事件，不能把功能变化写成物体凭空更换。</p>",
+    "reasoning": "<p>Built短语把原始建造用途作为背景，later把主句推进到后来的变化；although连接仍存在的聚会与已改变的导航条件。语篇的连贯来自对象持续和时间关系。若改写为<span lang=\"en\">Local families turned the tower into a meeting place.</span>，则增加了明确行动者和主动改造这一信息；原材料没有证明“主动改造”时，不能只为语法漂亮而加上它。</p>",
+    "example": "<p>下面逐步写一段原创介绍，不描述真实景点。</p><ol><li><strong>提取有用事实。</strong>塔曾引导船只，现在家庭仍聚集于此；现代航标承担导航。先列这些可支持的事实，不添加“最古老”等未经证实的最高级。</li><li><strong>选择中心。</strong>给关心社区的读者，可写“用途会变化，公共记忆仍延续”；给航海技术读者，则突出旧塔与现代航标的分工。中心不同，细节权重不同。</li><li><strong>组织因果与时间。</strong><span lang=\"en\">The tower no longer serves as the main navigation aid, yet it remains part of local family life.</span>yet突出改变与延续，并未声称旧功能在所有情况下完全消失。</li><li><strong>检查证据。</strong>若想写“象征所有居民的身份”，先问是否有访谈或公共活动支持；少数家庭的行为不足以代表所有人。可收窄为<span lang=\"en\">For the families who gather there, ...</span>。</li></ol>",
+    "boundaries": "<p>地标意义可能有争议，不同群体对同一建筑有不同记忆。真实位置、开放时间和历史年代需要可靠来源；本课塔楼为原创，不能把练习文字转为旅游事实。过去分词通常还要检查它逻辑上修饰谁，避免悬垂修饰。</p>",
+    "checks": "<p>删除所有famous、beautiful再读一遍：如果仍能理解地点为何有意义，说明具体证据在发挥作用。把每个背景短语连接回主语，检查谁被建造、谁在使用；让另一位读者复述时间线，可发现指代或时间跳跃。</p>",
+    "transfer": "<p>选择你熟悉的一处普通场所，记录一项物理变化和一项使用习惯，分别为新生与老居民写介绍。用同样事实做不同组织，再说明选择理由；语言表达的迁移来自受众与证据，而不是套同一篇景点模板。</p>",
+    "review": {
+      "issues": [
+        "原稿识别过去分词和功能变化，但没有完整示范从细节组织一段有依据的地标介绍。"
+      ],
+      "changes": [
+        "以原创港口塔楼材料重建时间、用途和群体意义，再比较语法视角与受众选择。"
+      ]
+    }
+  },
+  "YY-07-K03": {
+    "question": "<p>新闻说研究者“希望了解”深海生物怎样生存，为什么不能改写成“研究者已证明其生存机制”？英语中的时态、情态和非谓语形式不仅是结构，它们决定一句话承诺了多少证据。</p>",
+    "model": "<p>用研究问题、采样地点、观测结果与解释假设四栏做笔记。原创报告：<span lang=\"en\">Three samples were collected from one site. They are to be examined on shore. The team hopes to learn how the organisms survive with little light.</span>已完成采样、计划检验和研究愿望处于不同证据阶段。</p>",
+    "reasoning": "<p>were collected报告过去完成的动作；are to be examined说明待执行安排，不代表检验成功；hopes to learn承认机制尚待研究。how从句提供要回答的问题，而不是已知答案。即使后续在样本里发现某物质，也要进一步区分它与生存能力的相关性、机制作用及是否足够解释全部现象。语法让这些不同程度的主张可被准确表达。</p>",
+    "example": "<ol><li><strong>先做忠实摘要。</strong><span lang=\"en\">The team has collected three samples, but their survival mechanism remains under investigation.</span>前半只报告采样，后半保留未知；不把little light擅自改成完全没有光。</li><li><strong>检查代表范围。</strong>一个地点的三个样本最多直接支持这些样本的观察，不足以推出所有深海生物都如此。把all改成these sampled organisms，是缩小主张而非降低表达水平。</li><li><strong>增加新证据。</strong>假设后续检验发现一种色素，可写<span lang=\"en\">The pigment may play a role.</span>若要改成causes，就需能区分替代解释的实验或机制证据，单靠may变成does并不会增加证据。</li><li><strong>形成可复核问题。</strong>追问是否在不同地点取样、检测如何进行、是否有对照，再决定能否讨论推广性；探索、保护与开发的价值判断还须另外列理由。</li></ol>",
+    "boundaries": "<p>教学报告为原创，不构成真实海洋发现。被动结构可以突出对象，但不能因此推断研究者故意隐藏责任；必须结合上下文。样本代表性取决于设计与对象差异，不是样本数越大就自动无偏。</p>",
+    "checks": "<p>逐句用“已观察、计划、假设、价值主张”标记，再核查时态和情态是否匹配。摘要时若certainty提高或范围扩大，回到原句找依据；让同伴指出一项材料没有回答的问题，可检验自己是否把未知读成已知。</p>",
+    "transfer": "<p>把方法用于阅读人工智能或健康研究报道：保留样本、比较对象和主张程度，用英语写一段区分结果与未解决问题的评论。你可以提出新的验证设计，但要清楚标为建议，而不是把自己的设想写成原研究结论。</p>",
+    "review": {
+      "issues": [
+        "原稿区分研究目标与结果，但缺少整段研究报道的证据等级、动作时序与推断范围分析。"
+      ],
+      "changes": [
+        "以虚构深海采样报告逐步限制主张，比较计划、愿望、样本发现与机制证据。"
+      ]
+    }
+  },
+  "YY-07-K04": {
+    "question": "<p>如果你准备的服务活动与参与者想要的不一样，怎样用英语协商，而不是替他们决定后再写一篇感动自己的总结？交流目标是理解需求并共同调整行动，正确语法只是让这个过程更清楚。</p>",
+    "model": "<p>分开提供者的计划、参与者的表达、资源限制与共同决定。原创情境：志愿者拟建读书角，孩子们想讲自己的故事。<span lang=\"en\">Would you prefer to read, to tell stories, or to do both?</span>提供选择并允许组合，优于带有预设的<span lang=\"en\">You want our reading corner, don’t you?</span>。</p>",
+    "reasoning": "<p>先用开放问题收集需求，再用复述核对理解，接着说明资源和限制，最后形成可调整方案。<span lang=\"en\">If we set aside twenty minutes for your stories, would that leave enough time for reading?</span>用if明确方案条件；对方同意这次安排不意味着永远接受所有后续活动。总结中的changed、asked、reported等动词应对应可核实行动，而不是凭活动照片写“改变了每个人的人生”。</p>",
+    "example": "<ol><li><strong>复述而不代言。</strong><span lang=\"en\">So you would like a place to tell your own stories. Have I understood correctly?</span>让参与者有机会纠正“他们不喜欢阅读”等过度推断。</li><li><strong>共同提出方案。</strong>团队说明只有一小时和一间房，比较轮流讲述、配对分享与阅读结合；说出限制，才能讨论可行选择，而非承诺无限服务。</li><li><strong>收集具体反馈。</strong>询问<span lang=\"en\">Which part would you keep, and what would you change?</span>记录是否有足够发言时间、是否愿意继续；不要把礼貌的thank you自动当作所有需求已满足。</li><li><strong>写准确总结。</strong><span lang=\"en\">Several participants asked for more speaking time, so we shortened the opening presentation.</span>限定反馈范围并连接修改原因，避免把几个人的意见写成everyone。</li></ol>",
+    "boundaries": "<p>服务对象可以拒绝参与，反馈也会受到权力差异和礼貌影响。记录与报道须尊重同意和隐私；原创对话只示范交流方法，不是某项目真实成效。短期参与度和长期影响必须分别核查。</p>",
+    "checks": "<p>把总结中的每个情感判断换成“依据是什么”的问题，确认有谁明确表达、记录是否完整、有没有不同意见。再请读者根据文章复原方案修改过程；若只能读出赞美而读不出变化，就需补事实。</p>",
+    "transfer": "<p>把活动换成给同学设计学习工具：先访谈任务与困难，再示范原型、复述反馈并修改。用英语写清决定依据和尚待验证的问题；共同探索的方法可以迁移，服务者自我赞美的模板没有这种能力。</p>",
+    "review": {
+      "issues": [
+        "原稿从听取反馈直接给评价，缺少如何提出需求、修改活动并核查效果的语言全过程。"
+      ],
+      "changes": [
+        "以原创读书角协作对话展示倾听、澄清、条件协商和基于证据的总结。"
+      ]
+    }
+  },
+  "YY-07-K05": {
+    "question": "<p>“我适合工程”究竟是一个已经证明的事实、一个偏好，还是需要验证的假设？职业规划的语言要帮助你设计下一步探索，而不是为未来编造确定性和漂亮的身份标签。</p>",
+    "model": "<p>把岗位任务、目前经历、个人价值和外部约束分开。原创句子：<span lang=\"en\">What attracts Tao to engineering is the chance to solve practical problems. He has arranged a visit to learn what the work involves.</span>第一个what结构整体作主语，第二个作learn的内容；两处均需把完整信息单元读完，不能见到长句就逐词猜。</p>",
+    "reasoning": "<p>先找限定动词is和has arranged，确定两句主要陈述：吸引点是什么，探索安排是什么。to learn说明参访目的，并不证明参访已完成或陶已掌握岗位。接着把“喜欢解决问题”细化为可观察任务：设计、计算、沟通、维护和反复修正都可能属于不同岗位。偏好是一项输入，是否愿意承担日常限制还需经历与反馈。</p>",
+    "example": "<ol><li><strong>列证据。</strong>设陶完成过一次小装置设计，喜欢排查故障。可写<span lang=\"en\">I enjoyed tracing a fault in our prototype.</span>这比I am excellent提供更具体线索，却仍不足以代表整个职业适配。</li><li><strong>形成待检验问题。</strong>陶还不知道是否喜欢长期文档和团队沟通，于是参访前准备问<span lang=\"en\">How much of a typical day is spent documenting or discussing changes?</span>问题直接针对未知。</li><li><strong>区分观察与推广。</strong>一次参访只反映一个工作环境，应再比较其他岗位或从业者经历；不能把一位工程师的日常当作整个行业。</li><li><strong>写可修正计划。</strong><span lang=\"en\">If I still enjoy the process after a longer project, I will explore related courses.</span>用条件和下一步行动表达诚实的不确定性，而不是保证自己必定成功。</li></ol>",
+    "boundaries": "<p>测评和兴趣问卷只提供有限信息，不是录取、就业或幸福的保证。规划也受到经济、健康与家庭条件约束，不能把一切结果归为个人态度。申请文书的具体经历必须真实，本课人物与项目为原创示范。</p>",
+    "checks": "<p>用事实、解释、偏好、计划四种颜色标记自己的说明，每句检查证据与主张是否相称。长句先找限定动词和从句边界，再用短句复述；若简化后失去条件或不确定性，应补回来。</p>",
+    "transfer": "<p>选择另一个尚不熟悉的领域，先列一个吸引点、一个未知任务和一个低成本探索办法，再给出会改变原看法的观察结果。能说明何种反馈会让自己修正方向，才是在独立规划，而非为固定答案寻找理由。</p>",
+    "review": {
+      "issues": [
+        "原稿职业规划停在观点与长句识别，缺少把自我判断转成可验证探索的具体路线。"
+      ],
+      "changes": [
+        "用原创工程兴趣案例区分事实、解释、偏好和下一步试验，并重建长句的信息结构。"
+      ]
+    }
+  }
+}

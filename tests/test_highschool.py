@@ -24,7 +24,7 @@ class HighSchoolIntegrity(unittest.TestCase):
         self.assertEqual(len(self.courses),9)
         self.assertEqual(sum(len(c['sections']) for c in self.courses),235)
         self.assertEqual(sum(len({s['group'] for s in c['sections']}) for c in self.courses),50)
-        self.assertEqual(collections.Counter(c['track'] for c in self.courses),{'复习主线':6,'合格考与拓展':3})
+        self.assertEqual(collections.Counter(c['track'] for c in self.courses),{'语言':2,'数理化生':4,'政史地':3})
         for course in self.courses:
             source=json.loads((ROOT/'courses'/course['id']/'source-index.json').read_text())
             self.assertEqual({s['id'] for s in course['sections']},{n['知识节点编号'].lower() for n in source['nodes']})

@@ -296,7 +296,7 @@
       ],
       "english": "Necessary and sufficient conditions",
       "description": "必要条件是结果成立所不可缺少的条件，充分条件是成立时足以推出结果的条件，二者不能随意互换。",
-      "match": "必要与充分条件是",
+      "match": "必要条件是结果成立所不可缺少的条件",
       "section": "yw-03-k04",
       "sections": [
         "yw-03-k04"
