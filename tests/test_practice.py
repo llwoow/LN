@@ -1,5 +1,6 @@
 """Check diagnostic scope and independently calculated answer keys."""
 import json
+import math
 from fractions import Fraction
 from pathlib import Path
 import unittest
@@ -19,7 +20,11 @@ class PracticeContent(unittest.TestCase):
             'ph-collision':Fraction(1,2)*2*3**2-Fraction(1,2)*3*Fraction(2*3,3)**2,
             'ch-limiting':min(Fraction(30,100)/2,Fraction(10,100))*2,
             'bi-mendel':Fraction(3,4)*160,'ge-water':1200-700-100,
-            'po-real-income':(Fraction(110,105)-1)*100}
+            'po-real-income':(Fraction(110,105)-1)*100,
+            'tr-calc-test':math.sqrt(2100),'tr-calc-line':10000/math.sqrt(3)/10,
+            'tr-calc-base':Fraction(1,10),'tr-calc-eff':Fraction(800,830)*100,
+            'tr-calc-parallel':math.sqrt(Fraction(105,10)**2+1),
+            'tr-calc-auto':198*Fraction(1000,22),'tr-calc-burden':25*Fraction(18,100)}
         numeric={q['id'] for q in self.questions if q['type']=='numeric'}
         self.assertEqual(numeric,set(expected))
         for identifier,value in expected.items():

@@ -1,0 +1,341 @@
+{
+  "book": {
+    "author": "汤蕴璆",
+    "title": "电机学",
+    "edition": 5,
+    "isbn": "9787111447092",
+    "publisher": "机械工业出版社",
+    "firstPublication": "2014-03-21",
+    "latestPrintingOnPublisherPage": "5-24，2026-06-23",
+    "url": "https://www.cmpedu.com/books/book/2027021.htm",
+    "verified": "已核读出版社书目、ISBN、日期和第二章2.1—2.14目录。现站transformer-sources也已明确引用此版本。",
+    "notVerified": "未取得教材第二章完整正文、逐页图表及全部原习题。样章试读链接本次只返回PDF查看器外壳，不能称已核读样章。教师配套习题解答由出版社要求选用教材教师另行申请，未申请或获取。",
+    "sampleUrl": "https://www.cmpedu.com/books/pdf.htm?CHAPTERMODEL=2027021"
+  },
+  "sections": [
+    {
+      "number": "2.1",
+      "title": "变压器的工作原理和基本结构",
+      "lesson": "transformer-sec21",
+      "publisherPage": 33,
+      "previousSources": [
+        "transformer-1",
+        "transformer-2"
+      ],
+      "reviewedGap": "已有交流量、磁路和理想关系，结构与额定值没有成为完整独立单元。",
+      "requirements": [
+        "把铁心、两绕组、绝缘、磁路与两个电端口画在同一模型中",
+        "芯式/壳式、叠片为何减涡流、绕组配置为何影响漏磁与绝缘",
+        "由法拉第与安培关系说明变压变流而非背匝比",
+        "额定容量为视在功率，单相S=UI与三相S=√3U线I线的对象不同",
+        "额定电压/频率、V/f与磁通约束，容量/温升/绝缘约束不互相替代",
+        "区分变压器与变频/稳压装置，直流长期运行失效原因"
+      ],
+      "sources": [
+        "nptel-construction",
+        "nptel-ideal",
+        "nptel-practical"
+      ]
+    },
+    {
+      "number": "2.2",
+      "title": "变压器的空载运行",
+      "lesson": "transformer-sec22",
+      "publisherPage": 36,
+      "previousSources": [
+        "transformer-2",
+        "transformer-3",
+        "transformer-4"
+      ],
+      "reviewedGap": "已有4.44与励磁支路，缺非线性波形、基波等效与真实电流的充分区分。",
+      "requirements": [
+        "二次开路不等于没有磁通、电流与损耗",
+        "电压积分确定近似磁通波形，B-H/磁滞回线决定励磁电流",
+        "4.44只适用于正弦磁通的峰值和电压有效值约定",
+        "正弦电压下空载电流可含尖峰及奇次谐波",
+        "Rc与Xm为指定工况的正弦/基波等效，不是全周期非线性材料常数",
+        "空载有功、无功、总有效电流与波形失真的测量关系；三次谐波回路留到三相联结"
+      ],
+      "sources": [
+        "nptel-practical",
+        "nptel-harmonics"
+      ]
+    },
+    {
+      "number": "2.3",
+      "title": "变压器的负载运行和基本方程",
+      "lesson": "transformer-sec23",
+      "publisherPage": 40,
+      "previousSources": [
+        "transformer-2",
+        "transformer-3",
+        "transformer-symbols"
+      ],
+      "reviewedGap": "主体机制已有，需教材对应后明确瞬时/相量、一次流入二次流出约定。",
+      "requirements": [
+        "端口同名端、电压和电流方向先固定",
+        "从磁链分解共同主磁通与漏磁通导出两侧电压方程",
+        "由净安匝说明负载反作用与一次电流调整，不声称瞬时无延迟平衡",
+        "负载分量和励磁分量相量相加，不能把电流模相减",
+        "近似主磁通不变需要固定U/f且压降较小",
+        "用功率账与开路/理想极限检查符号"
+      ],
+      "sources": [
+        "nptel-ideal",
+        "nptel-practical",
+        "nptel-phasor"
+      ]
+    },
+    {
+      "number": "2.4",
+      "title": "变压器的等效电路",
+      "lesson": "transformer-sec24",
+      "publisherPage": 43,
+      "previousSources": [
+        "transformer-3",
+        "transformer-10"
+      ],
+      "reviewedGap": "T型和折算已有较完整内容；需独立成节并说明参数可识别范围。",
+      "requirements": [
+        "折算同时保持电压方程、电流关系与复功率",
+        "阻抗平方来自电压电流两个尺度，不直接背a²",
+        "T型励磁支路位置由内部电势节点确定",
+        "Γ型/纯串联近似删去什么电压项，在轻载或大励磁时何时失效",
+        "输入功率=负载功率+铜耗+铁耗，励磁无功不计成有功铁耗",
+        "给同一负载的完整复数计算与模型残差比较"
+      ],
+      "sources": [
+        "nptel-practical",
+        "nptel-phasor"
+      ]
+    },
+    {
+      "number": "2.5",
+      "title": "等效电路参数的测定",
+      "lesson": "transformer-sec25",
+      "publisherPage": 47,
+      "previousSources": [
+        "transformer-4",
+        "transformer-9",
+        "transformer-homework"
+      ],
+      "reviewedGap": "空载、短路与对拖已有，需区分串/并励磁参数、温度和三相读数。",
+      "requirements": [
+        "空载试验隔离励磁支路，短路试验低电压隔离漏阻抗，分别列近似",
+        "U/I/P如何反推R、X，反三角根号前检查P≤UI",
+        "试验量属于哪侧、单相还是三相总功率、相/线联结",
+        "短路电阻与温度、附加负载损耗及额定温度修正边界",
+        "两次试验不能唯一给出两侧分摊的精确T型参数",
+        "原题不同参数口径与未解教材差异保留，不能为统一答案而消去"
+      ],
+      "sources": [
+        "nptel-testing"
+      ]
+    },
+    {
+      "number": "2.6",
+      "title": "三相变压器",
+      "lesson": "transformer-sec26",
+      "publisherPage": 50,
+      "previousSources": [
+        "transformer-6"
+      ],
+      "reviewedGap": "线相、组别、谐波已有，结构对零序磁路的影响仍需衔接。",
+      "requirements": [
+        "三台单相组与三相铁心的共同磁路结构差别",
+        "星/三角的线相电压电流由相量和节点推导",
+        "匝比是绕组相电压比而非任何联结的线电压比",
+        "同名端+接线图推时钟组别，不只记Yd1/Yd11",
+        "三次谐波同相，三角形内部环流与外部线电流分开",
+        "三柱/五柱/壳式对同相磁通返回路径不同；不把一个零序阻抗推广到所有结构"
+      ],
+      "sources": [
+        "nptel-polyphase",
+        "nptel-harmonics",
+        "nptel-sequence"
+      ]
+    },
+    {
+      "number": "2.7",
+      "title": "标幺值",
+      "lesson": "transformer-sec27",
+      "publisherPage": 56,
+      "previousSources": [
+        "transformer-4"
+      ],
+      "reviewedGap": "已有跨侧不变与容量换基，需拆出三相基准的完整分析。",
+      "requirements": [
+        "选额定/公共容量基准和各侧相互一致电压基准",
+        "三相总容量配线电压时Zb=U线²/S三相，避免再多乘3",
+        "Ib=S/(√3U线)，欧姆、安培与标幺相互还原",
+        "跨侧基准按匝比配套才可消去理想变压器",
+        "阻抗换基同时包含容量与电压的平方尺度",
+        "多台/三绕组试验若容量基准不同，先统一再做代数"
+      ],
+      "sources": [
+        "nptel-testing",
+        "nptel-sequence"
+      ]
+    },
+    {
+      "number": "2.8",
+      "title": "变压器的运行特性",
+      "lesson": "transformer-sec28",
+      "publisherPage": 59,
+      "previousSources": [
+        "transformer-5",
+        "transformer-10"
+      ],
+      "reviewedGap": "相量压降、效率极值与全天效率已有较完整推导。",
+      "requirements": [
+        "电压变化率的分母口径先定义",
+        "由复数压降分解纵向和横向项，比较精确模与一阶近似",
+        "超前负载可升压，不能强行给所有负载同一正压降",
+        "P输出、铁耗、铜耗与效率，不混有功和视在功率",
+        "最大效率条件需固定电压频率、功率因数和损耗模型",
+        "日负荷能量积分与瞬时最高效率不是同一优化目标"
+      ],
+      "sources": [
+        "nptel-regulation"
+      ]
+    },
+    {
+      "number": "2.9",
+      "title": "变压器的并联运行",
+      "lesson": "transformer-sec29",
+      "publisherPage": 63,
+      "previousSources": [
+        "transformer-7"
+      ],
+      "reviewedGap": "分流与环流已有；需要拆出可执行案例并联结基准。",
+      "requirements": [
+        "由两支路电源、阻抗和公共母线联立求电流",
+        "将负载分担与变比/相位差引起的环流分开",
+        "同相序/组别/近似变比等条件分别避免什么现象",
+        "按容量分担需要共同基准上阻抗与阻抗角条件，不只等阻抗模",
+        "无外负载仍可有内部铜耗和过载",
+        "某台先到额定时总容量不能直接相加"
+      ],
+      "sources": [
+        "nptel-parallel"
+      ]
+    },
+    {
+      "number": "2.10",
+      "title": "变压器的不对称运行",
+      "lesson": "transformer-sec210",
+      "publisherPage": 67,
+      "previousSources": [
+        "transformer-7",
+        "transformer-6"
+      ],
+      "reviewedGap": "有对称分量变换、中性点漂移；缺各联结的正负零序网络与磁路条件。",
+      "requirements": [
+        "对称分量是可逆坐标变换，先从三相量计算再重构核查",
+        "静止对称线性设备正负序漏阻抗通常相等；联结相移方向对负序反向",
+        "零序三相同相，In=3I0，未接地星形不能凭空流零序线电流",
+        "三角绕组可有内部零序环流而线端零序为零",
+        "接地中性点阻抗在零序每相网络中为3Zn",
+        "铁心返回磁路与接线共同决定零序；空载磁化支路可能重要，不能一律Z0=Z1",
+        "用接地/不接地Y-Δ两个案例说明阻断与补偿，和浮置星形负载的节点漂移区分"
+      ],
+      "sources": [
+        "nptel-sequence",
+        "nptel-ygdelta",
+        "nptel-harmonics"
+      ]
+    },
+    {
+      "number": "2.11",
+      "title": "三绕组变压器",
+      "lesson": "transformer-sec211",
+      "publisherPage": 74,
+      "previousSources": [
+        "transformer-9"
+      ],
+      "reviewedGap": "现有仅三组成对试验反推星形参数，缺多端口运行与容量约束。",
+      "requirements": [
+        "三个端口共同磁通与安匝平衡，不是两台独立变压器简单叠加",
+        "各绕组额定容量/电流可能不同，逐绕组检查限制",
+        "三组成对短路试验第三侧开路，统一侧别和容量基准后才能解星形等值",
+        "由Z12=z1+z2等联立，分别拆R、X并核查复数及损耗",
+        "负等值漏抗支路是端口等值拟合，不等于物理负储能线圈或有源元件",
+        "两负载同时变化对内部节点与端压互相影响；给KCL与功率核查",
+        "几何/漏场详细模型与三支路简化的适用范围"
+      ],
+      "sources": [
+        "mit-threewinding",
+        "nptel-week6"
+      ]
+    },
+    {
+      "number": "2.12",
+      "title": "自耦变压器",
+      "lesson": "transformer-sec212",
+      "publisherPage": 78,
+      "previousSources": [
+        "transformer-9"
+      ],
+      "reviewedGap": "已有公共绕组电流和容量优势，需完整升/降压接法与两种功率通路。",
+      "requirements": [
+        "明确串联段、公共段及每一端子，输入输出电流不能当绕组电流",
+        "由电压、安匝和节点分别推出各段电流",
+        "区分通过容量与电磁容量，传导与感应分担不是产生额外功率",
+        "同一双绕组改接时各段各自限流，逐项找先达到额定的绕组",
+        "升压/降压、串联相助/相反改变接线后重新列约束",
+        "不隔离、短路电流与绝缘条件不能被kVA优势掩盖"
+      ],
+      "sources": [
+        "nptel-auto",
+        "nptel-week6"
+      ]
+    },
+    {
+      "number": "2.13",
+      "title": "变压器的瞬态分析",
+      "lesson": "transformer-sec213",
+      "publisherPage": 83,
+      "previousSources": [
+        "transformer-8"
+      ],
+      "reviewedGap": "已有合闸磁通与故障RL电流公式，需展开初值、模型区别与可验证数例。",
+      "requirements": [
+        "相量稳态不包含初值，恢复电压磁链微分方程",
+        "合闸相角与剩磁作为积分常数进入磁通偏置",
+        "电压过零合闸可使磁通偏置大，涌流幅值需非线性B-H和源/绕组阻抗，不能线性电感硬算",
+        "突发短路按电流连续导出周期/非周期分量，时间常数L/R与相角影响峰值",
+        "短路试验与电网故障是不同输入条件",
+        "对数值积分结果检查初值、微分方程残差和最终稳态，不把仿真当实测"
+      ],
+      "sources": [
+        "ipst-inrush",
+        "nptel-practical"
+      ]
+    },
+    {
+      "number": "2.14",
+      "title": "仪用互感器",
+      "lesson": "transformer-sec214",
+      "publisherPage": 87,
+      "previousSources": [
+        "transformer-9"
+      ],
+      "reviewedGap": "已有串联测流/并联测压与基本禁忌，缺负载、误差、测量和保护任务的分离。",
+      "requirements": [
+        "CT串联受一次电流约束，VT并联受一次电压约束",
+        "把绕组与励磁支路画出来，说明CT励磁电流导致比差与相角误差",
+        "二次负载含仪表和导线，CT的I²Z和VT的U²/Z影响VA及精度",
+        "CT开路时一次电流并未消失，失去二次安匝补偿，非线性磁化和高尖峰电压必须结合解释",
+        "VT二次短路为何相当于小阻抗负载，不能把CT短接条件套过来",
+        "计量准确与保护故障范围、饱和、剩磁、暂态偏置及额定负载不能互换",
+        "原厂指南的IEEE/60Hz负载等级不直接套作中国50Hz/IEC通用表；给理想比例与小励磁误差两个数例"
+      ],
+      "sources": [
+        "abb-instrument",
+        "nptel-ct",
+        "nptel-week6"
+      ]
+    }
+  ],
+  "evidenceScope": "教材14节的目录覆盖与原创讲解；未核读全书正文、全部原图和全部教材习题。"
+}

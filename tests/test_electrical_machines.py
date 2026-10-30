@@ -44,7 +44,7 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 39)
+        self.assertEqual(len(self.sections), 53)
         self.assertEqual(len({section['group'] for section in self.sections.values()}), 3)
         self.assertIn('transformer-homework', self.sections)
         self.assertIn('winding-model', self.sections)
@@ -54,7 +54,7 @@ class CourseIntegrity(unittest.TestCase):
             for url in document.urls:
                 if url.startswith('https://'):
                     self.assertNotIn('chatgpt.site', url)
-                elif url.startswith('#course/'):
+                elif url.startswith(('#course/', '#practice/')):
                     parts = unquote(url).split('/')
                     self.assertEqual(parts[1], 'electrical-machines')
                     self.assertTrue(parts[2] in self.sections, (key, url))

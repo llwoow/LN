@@ -1,6 +1,8 @@
 # LN
 
-练习入口 `#practice`，课程顶部及固定目录也可打开。默认先展示有出处的精选来源，链接原题、解析/评分与知识点，候选和原创补充分开。64道补充题采用单选、多选、计算和问答，支持错题/收藏再做；记录仅当前浏览器，首答与辅助后结果分开。规范和覆盖限制见 [PRACTICE.md](PRACTICE.md)，来源核查见 [PRACTICE-REVIEW.md](PRACTICE-REVIEW.md)，构建 `python scripts/build-practice.py`。
+变压器新增汤蕴璆《电机学》第5版2.1—2.14原创讲解主线，旧专题与原作业保留。新增24道诊断题及NPTEL原题/图解入口；目录依据、逐节修改与全文未取得的边界见 [TRANSFORMER-REVIEW.md](TRANSFORMER-REVIEW.md)。算例可用 `python assets/practice/transformer/reproduce.py` 独立复算。
+
+练习入口 `#practice`，课程顶部及固定目录也可打开。默认先展示有出处的精选来源，链接原题、解析/评分与知识点，候选和原创补充分开。88道补充题采用单选、多选、计算和问答，支持错题/收藏再做；记录仅当前浏览器，首答与辅助后结果分开。规范和覆盖限制见 [PRACTICE.md](PRACTICE.md)，来源核查见 [PRACTICE-REVIEW.md](PRACTICE-REVIEW.md)，构建 `python scripts/build-practice.py`。
 
 按学科分类的轻量学习网页。
 

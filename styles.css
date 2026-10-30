@@ -591,6 +591,8 @@ body.practice-open { overflow: hidden; }
 .practice-controls { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); gap: 10px; margin: 18px 0; }
 .practice-controls label, .practice-picker, .practice-value, .practice-reason, .practice-confidence { display: block; min-width: 0; font-weight: 650; }
 .practice-controls label[hidden] { display: none; }
+.outline-references { margin: 8px 0; border-top: 1px solid var(--border); }
+.outline-references > summary { padding: 10px 8px; font-size: 13px; color: var(--muted); }
 .practice-panel select, .practice-panel textarea, .practice-value input { display: block; width: 100%; min-width: 0; padding: 9px; border: 1.5px solid var(--border); border-radius: 6px; color: var(--text); background: var(--surface); font: 500 16px/1.6 var(--font); }
 .practice-panel textarea { resize: vertical; min-height: 84px; }
 .practice-question { scroll-margin-top: 90px; padding-top: 12px; line-height: 1.85; overflow-wrap: anywhere; }

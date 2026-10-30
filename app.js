@@ -196,7 +196,11 @@
     const selected = course.sections.find((section) => section.id === sectionId) || (!sectionId ? course.sections[0] : null);
     const groups = [...new Set(course.sections.map((section) => section.group))];
     main.classList.add('course-main');
-    const outline = groups.map((group) => '<details class="outline-group"' + (selected?.group === group ? ' open' : '') + '><summary>' + escapeHTML(group) + '</summary><nav aria-label="' + escapeHTML(group) + '">' + course.sections.filter((section) => section.group === group).map((section) => '<a href="#course/' + course.id + '/' + section.id + '"' + (selected?.id === section.id ? ' aria-current="page"' : '') + '>' + escapeHTML(section.title) + '</a>').join('') + '</nav></details>').join('');
+    const sectionLink = section => '<a href="#course/' + course.id + '/' + section.id + '"' + (selected?.id === section.id ? ' aria-current="page"' : '') + '>' + escapeHTML(section.title) + '</a>';
+    const outline = groups.map(group => {
+      const items=course.sections.filter(s=>s.group===group),references=items.filter(s=>s.referenceOnly);
+      return '<details class="outline-group"'+(selected?.group===group?' open':'')+'><summary>'+escapeHTML(group)+'</summary><nav aria-label="'+escapeHTML(group)+'">'+items.filter(s=>!s.referenceOnly).map(sectionLink).join('')+'</nav>'+(references.length?'<details class="outline-references"'+(selected?.group===group&&selected.referenceOnly?' open':'')+'><summary>专题、原题与资料</summary><nav aria-label="专题与资料">'+references.map(sectionLink).join('')+'</nav></details>':'')+'</details>';
+    }).join('');
     main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + groups.length + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'reader') + '<div class="reader-layout"><details class="reader-outline" id="reader-outline"' + (matchMedia('(min-width: 961px)').matches ? ' open' : '') + '><summary>目录</summary>' + outline + '</details><section class="lesson-column"><div class="lesson-tools" id="lesson-tools"></div><article class="lesson" id="lesson-body" data-lesson-key="' + (selected ? course.id + '/' + selected.id : '') + '" aria-busy="true">' + (selected ? '<p class="loading-state" role="status">加载中…</p>' : '<h2>章节不存在</h2>') + '</article><nav class="lesson-pagination" id="lesson-pagination" aria-label="章节翻页"></nav></section></div>';
     if (selected) {
       renderReaderDock(course, selected, outline);
@@ -205,10 +209,12 @@
     else $('#lesson-body').setAttribute('aria-busy', 'false');
   }
 
+  function readingSections(course, selected) { return selected.referenceOnly ? course.sections : course.sections.filter(s=>!s.referenceOnly); }
+
   function renderReaderDock(course, selected, outline) {
-    const index = course.sections.indexOf(selected);
+    const sequence=readingSections(course,selected),index = sequence.indexOf(selected);
     const step = (section, label, symbol) => section ? '<a class="reader-dock-item" href="#course/' + course.id + '/' + section.id + '" aria-label="' + label + '：' + escapeHTML(section.title) + '" title="' + escapeHTML(section.title) + '">' + icon(symbol) + '<span>' + label + '</span></a>' : '<button class="reader-dock-item" disabled aria-label="' + label + '，已到课程边界">' + icon(symbol) + '<span>' + label + '</span></button>';
-    readerDock.innerHTML = '<button class="reader-dock-item" data-reader-directory aria-haspopup="dialog" aria-controls="reader-directory">' + icon('list') + '<span>目录</span></button><a class="reader-dock-item" href="#course/' + course.id + '/map">' + icon('network') + '<span>图谱</span></a>' + step(course.sections[index - 1], '上一节', 'back') + step(course.sections[index + 1], '下一节', 'chevron') + '<button class="reader-dock-item" data-reader-top>' + icon('up') + '<span>顶部</span></button>';
+    readerDock.innerHTML = '<button class="reader-dock-item" data-reader-directory aria-haspopup="dialog" aria-controls="reader-directory">' + icon('list') + '<span>目录</span></button><a class="reader-dock-item" href="#course/' + course.id + '/map">' + icon('network') + '<span>图谱</span></a>' + step(sequence[index - 1], '上一节', 'back') + step(sequence[index + 1], '下一节', 'chevron') + '<button class="reader-dock-item" data-reader-top>' + icon('up') + '<span>顶部</span></button>';
     readerDock.hidden = false;
     document.body.classList.add('is-reading');
     $('#reader-directory-title').textContent = course.title + ' · 目录';
@@ -307,9 +313,9 @@
       body.classList.toggle('model-lesson', selected.kind === 'model');
       body.classList.toggle('pdf-lesson', selected.kind === 'pdf' || selected.kind === 'document');
       const resource = course.resources[selected.group];
-      $('#lesson-tools').innerHTML = resource.links ? '<span>' + escapeHTML(selected.group) + '</span>' + resource.links.map(link => '<a href="' + escapeHTML(link.href) + '"' + (link.href.startsWith('https:') ? ' target="_blank" rel="noopener"' : '') + '>' + escapeHTML(link.label) + '</a>').join('') : '<span>' + escapeHTML(selected.group) + '</span><a href="courses/electrical-machines/files/' + resource.guide + '" target="_blank" rel="noopener">讲义 PDF</a><a href="courses/electrical-machines/files/' + resource.quickref + '" target="_blank" rel="noopener">速查 PDF</a>';
-      const index = course.sections.indexOf(selected);
-      $('#lesson-pagination').innerHTML = (index > 0 ? '<a href="#course/' + course.id + '/' + course.sections[index - 1].id + '">' + icon('back') + '上一节</a>' : '<span></span>') + (index < course.sections.length - 1 ? '<a href="#course/' + course.id + '/' + course.sections[index + 1].id + '">下一节' + icon('chevron') + '</a>' : '');
+      $('#lesson-tools').innerHTML = resource.links ? '<span>' + escapeHTML(selected.group) + '</span>' + resource.links.map(link => '<a href="' + escapeHTML(link.href) + '"' + (link.href.startsWith('https:') ? ' target="_blank" rel="noopener"' : '') + '>' + escapeHTML(link.label) + '</a>').join('') : '<span>' + escapeHTML(selected.group) + '</span><a href="courses/electrical-machines/files/' + resource.guide + '" target="_blank" rel="noopener">' + escapeHTML(resource.guideLabel || '讲义 PDF') + '</a><a href="courses/electrical-machines/files/' + resource.quickref + '" target="_blank" rel="noopener">速查 PDF</a>';
+      const sequence=readingSections(course,selected),index = sequence.indexOf(selected);
+      $('#lesson-pagination').innerHTML = (index > 0 ? '<a href="#course/' + course.id + '/' + sequence[index - 1].id + '">' + icon('back') + '上一节</a>' : '<span></span>') + (index < sequence.length - 1 ? '<a href="#course/' + course.id + '/' + sequence[index + 1].id + '">下一节' + icon('chevron') + '</a>' : '');
       window.LNPublication.settle(body, anchor);
     } catch (error) {
       const body = $('#lesson-body');

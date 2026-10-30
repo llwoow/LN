@@ -1,0 +1,100 @@
+{
+  "scope": "hypothetical model checks, not measurements or hardware validation",
+  "T_resistive": {
+    "E_V": 89.197224975223,
+    "I2_A": 9.910802775024777,
+    "I1_A": 10.802775024777008,
+    "U2_V": 79.28642220019822,
+    "power_residual_W": 2.2737367544323206e-13
+  },
+  "test_parameters": {
+    "Rc_LV_ohm": 1000,
+    "Xm_LV_ohm": 577.3502691896257,
+    "Zk_HV_ohm": 50,
+    "Rk_HV_ohm": 20,
+    "Xk_HV_ohm": 45.8257569495584
+  },
+  "regulation": {
+    "A_V": 4.349545416973505,
+    "B_V": 2.466060555964672,
+    "approx_U2_V": 95.6504545830265,
+    "series_U2_V": 95.62004268528045,
+    "leading_approx_percent": -1.1495454169735035
+  },
+  "efficiency": {
+    "rated": 0.963855421686747,
+    "beta_best": 0.7071067811865476
+  },
+  "parallel": {
+    "I1_re_im_A": [
+      9.5,
+      1.0
+    ],
+    "I2_re_im_A": [
+      10.5,
+      -1.0
+    ],
+    "I1_abs_A": 9.5524865872714,
+    "I2_abs_A": 10.547511554864494,
+    "kcl_abs_A": 0.0,
+    "bus_match_V": 0.0
+  },
+  "neutral": {
+    "equal_R_load_V": 199.18584287042088,
+    "larger_R_load_V": 358.5345171667576
+  },
+  "three_winding": {
+    "pair_x_pu": [
+      0.1,
+      0.04,
+      0.02
+    ],
+    "star_x_pu": [
+      0.06,
+      0.04,
+      -0.02
+    ],
+    "restricted_matrix": [
+      [
+        0.04,
+        -0.02
+      ],
+      [
+        -0.02,
+        0.02
+      ]
+    ],
+    "determinant": 0.0004,
+    "example_quadratic": 0.06499999999999999
+  },
+  "three_winding_loaded": {
+    "E_V": 86.12440191387559,
+    "I2_A": 9.56937799043062,
+    "I3_A": 4.30622009569378,
+    "U2_V": 76.55502392344496,
+    "U3_V": 77.51196172248804,
+    "power_residual_W": 2.2737367544323206e-13
+  },
+  "autotransformer": {
+    "original_I_H_A": 4.545454545454546,
+    "original_I_L_A": 45.45454545454545,
+    "add_S_VA": 11000.0,
+    "subtract_S_VA": 9000.0,
+    "add_common_A": 4.545454545454547,
+    "subtract_common_A": -4.545454545454547
+  },
+  "transients": {
+    "inrush_flux_half_cycle_Wb": 0.023,
+    "short_tau_s": 0.03183098861837907,
+    "first_peak_s": 0.009447135980909543,
+    "first_peak_A": 4912.336377203456,
+    "half_cycle_A": 4870.028339266068,
+    "initial_A": 0.0
+  },
+  "burden": {
+    "CT_VA": 4.5,
+    "CT_longer_VA": 7.5,
+    "VT_I_A": 0.05,
+    "VT_ohm": 2000.0
+  }
+}

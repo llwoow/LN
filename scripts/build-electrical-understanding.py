@@ -23,7 +23,7 @@ def build():
         original = re.sub(re.escape(BEGIN) + r'.*?' + re.escape(END), '', prior, flags=re.S)
         if '<table' in ''.join(records[section['id']][key] for key in ('question','model','reasoning','example','boundaries','checks','transfer')):
             raise ValueError('Original symbol-table positions must remain stable: ' + section['id'])
-        explanation = render(records[section['id']], 'U.'+str(index), math_renderer, course['id'])
+        explanation = render(records[section['id']], 'U.'+str(section.get('teachingIndex', index)), math_renderer, course['id'])
         insert = BEGIN + explanation + '<h3 class="source-material-heading">补充说明与原材料</h3>' + END
         heading = re.search(r'<h2\b[^>]*>.*?</h2>', original, re.S)
         if heading:

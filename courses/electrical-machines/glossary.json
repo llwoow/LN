@@ -649,6 +649,51 @@
       "description": "有功功率与视在功率之比。正弦稳态时为电压、电流相位差的余弦；存在畸变时还要考虑波形因素。",
       "section": "transformer-1",
       "match": "变压器容量用VA表示"
+    },
+    {
+      "id": "tang5-burden",
+      "aliases": [
+        "burden",
+        "负荷"
+      ],
+      "title": "互感器负荷",
+      "english": "Burden",
+      "description": "互感器二次所接仪表、继电器与完整导线回路构成的负担，通常用指定电流/电压及功率因数下的VA表示；负荷满足并不单独保证所有准确性。",
+      "section": "transformer-sec214",
+      "sections": [
+        "transformer-sec214"
+      ],
+      "match": "负荷burden包括仪表"
+    },
+    {
+      "id": "tang5-zero-sequence",
+      "aliases": [
+        "零序",
+        "zero sequence"
+      ],
+      "title": "零序分量",
+      "english": "Zero-sequence component",
+      "description": "三相同幅同相的对称分量，电流等于三相电流之和的三分之一；外线和内部三角形环流的通路须分别判断。",
+      "section": "transformer-sec210",
+      "sections": [
+        "transformer-sec210"
+      ],
+      "match": "零序三相同相"
+    },
+    {
+      "id": "tang5-virtual-star",
+      "aliases": [
+        "虚拟星形",
+        "star equivalent"
+      ],
+      "title": "三绕组虚拟星形等值",
+      "english": "Star equivalent",
+      "description": "由同基准成对短路阻抗恢复的端口等值，单个支路不直接代表独立物理漏感，可能出现负漏抗而完整受约束端口仍无源。",
+      "section": "transformer-sec211",
+      "sections": [
+        "transformer-sec211"
+      ],
+      "match": "此星形是端口关系的虚拟等值"
     }
   ],
   "symbolDefinitions": [
@@ -1098,6 +1143,489 @@
       "sections": [
         "dc-sec39"
       ]
+    },
+    {
+      "id": "tang5-1-turns",
+      "keys": [
+        "N_1",
+        "N_2"
+      ],
+      "title": "N₁、N₂",
+      "description": "N₁、N₂分别是一次、二次绕组匝数，均以匝计；a=N₁/N₂为本章绕组匝比，未自动包含三相线相换算。",
+      "section": "transformer-sec21",
+      "sections": [
+        "transformer-sec21"
+      ],
+      "match": "N₁、N₂分别是一次、二次绕组匝数，"
+    },
+    {
+      "id": "tang5-1-ports",
+      "keys": [
+        "u_1",
+        "u_2",
+        "i_1",
+        "i_2"
+      ],
+      "title": "u₁、u₂、i₁、i₂",
+      "description": "本节u₁、u₂为从同名端到非同名端的瞬时电压，单位V；i₁、i₂均流入同名端为正，单位A。",
+      "section": "transformer-sec21",
+      "sections": [
+        "transformer-sec21"
+      ],
+      "match": "本节u₁、u₂为从同名端到非同名端的"
+    },
+    {
+      "id": "tang5-1-flux",
+      "keys": [
+        "Φ",
+        "F"
+      ],
+      "title": "Φ、F",
+      "description": "Φ为共同主磁通，单位Wb；F为磁路净磁势，单位安匝，等于本节两绕组流入同名端电流的安匝代数和。",
+      "section": "transformer-sec21",
+      "sections": [
+        "transformer-sec21"
+      ],
+      "match": "Φ为共同主磁通，单位Wb；F为磁路净"
+    },
+    {
+      "id": "tang5-2-peak",
+      "keys": [
+        "Φ_m",
+        "E",
+        "f",
+        "N"
+      ],
+      "title": "Φₘ、E、f、N",
+      "description": "Φₘ是正弦主磁通峰值(Wb)，E为对应绕组电压有效值(V)，f为频率(Hz)，N为匝数；4.44公式使用这组幅值约定。",
+      "section": "transformer-sec22",
+      "sections": [
+        "transformer-sec22"
+      ],
+      "match": "Φₘ是正弦主磁通峰值(Wb)，E为对"
+    },
+    {
+      "id": "tang5-2-excitation",
+      "keys": [
+        "I_c",
+        "I_m",
+        "R_c",
+        "X_m"
+      ],
+      "title": "I꜀、Iₘ、R꜀、Xₘ",
+      "description": "I꜀是与正弦电压同相的有功电流(A)，Iₘ为本节正弦/基波近似的磁化电流(A)，R꜀和Xₘ分别为并联铁耗电阻和磁化电抗(Ω)。",
+      "section": "transformer-sec22",
+      "sections": [
+        "transformer-sec22"
+      ],
+      "match": "I꜀是与正弦电压同相的有功电流(A)"
+    },
+    {
+      "id": "tang5-2-noload",
+      "keys": [
+        "P_0",
+        "U_0",
+        "I_0",
+        "I_0,1",
+        "φ_1"
+      ],
+      "title": "P₀、U₀、I₀",
+      "description": "P₀为空载输入有功(W)，U₀为施加电压有效值(V)，I₀为总电流有效值(A)；I₀,₁为其基波有效值，φ₁为基波电流相对正弦电压的位移角。",
+      "section": "transformer-sec22",
+      "sections": [
+        "transformer-sec22"
+      ],
+      "match": "P₀为空载输入有功(W)，U₀为施加"
+    },
+    {
+      "id": "tang5-3-directions",
+      "keys": [
+        "u_1",
+        "u_2",
+        "i_1",
+        "i_2",
+        "U_1",
+        "U_2",
+        "I_1",
+        "I_2"
+      ],
+      "title": "负载端口方向",
+      "description": "本节小写u、i是瞬时量，大写U、I为有效值相量；一次电流流入同名端，二次流出同名端，电压均从同名端到非同名端。",
+      "section": "transformer-sec23",
+      "sections": [
+        "transformer-sec23"
+      ],
+      "match": "本节小写u、i是瞬时量，大写U、I为"
+    },
+    {
+      "id": "tang5-3-leakage",
+      "keys": [
+        "R_1",
+        "R_2",
+        "L_σ1",
+        "L_σ2",
+        "Z_1",
+        "Z_2"
+      ],
+      "title": "绕组串联参数",
+      "description": "R₁、R₂为各侧电阻(Ω)，Lσ₁、Lσ₂为各侧线性漏感(H)，Z₁、Z₂为各侧正弦稳态串联阻抗(Ω)。",
+      "section": "transformer-sec23",
+      "sections": [
+        "transformer-sec23"
+      ],
+      "match": "R₁、R₂为各侧电阻(Ω)，Lσ₁、"
+    },
+    {
+      "id": "tang5-3-main",
+      "keys": [
+        "E_1",
+        "E_2",
+        "I_0",
+        "a"
+      ],
+      "title": "主电势与励磁分量",
+      "description": "E₁、E₂为按主磁链电压平衡方向定义的相量(V)，I₀为一次侧励磁相量(A)，a=N₁/N₂。二次负载电流折到一次后与I₀作相量和。",
+      "section": "transformer-sec23",
+      "sections": [
+        "transformer-sec23"
+      ],
+      "match": "E₁、E₂为按主磁链电压平衡方向定义"
+    },
+    {
+      "id": "tang5-4-nodes",
+      "keys": [
+        "E_1",
+        "U_1",
+        "I_0",
+        "I_1",
+        "U_2'",
+        "I_2'"
+      ],
+      "title": "T型节点量",
+      "description": "E₁是T型内部励磁节点电压(V)，U₁是输入端电压；I₀流入励磁支路，I₁为输入电流，带撇号U₂′、I₂′是二次折到一次的量。",
+      "section": "transformer-sec24",
+      "sections": [
+        "transformer-sec24"
+      ],
+      "match": "E₁是T型内部励磁节点电压(V)，U"
+    },
+    {
+      "id": "tang5-4-impedances",
+      "keys": [
+        "Z_1",
+        "Z_2'",
+        "Z_L'",
+        "Y_0",
+        "a"
+      ],
+      "title": "T型支路参数",
+      "description": "Z₁是一次串联阻抗，Z₂′、Zᴸ′为折到一次的二次串联及负载阻抗，单位Ω；Y₀为励磁导纳(S)，a为绕组匝比。",
+      "section": "transformer-sec24",
+      "sections": [
+        "transformer-sec24"
+      ],
+      "match": "Z₁是一次串联阻抗，Z₂′、Zᴸ′为"
+    },
+    {
+      "id": "tang5-5-open",
+      "keys": [
+        "U_0",
+        "I_0",
+        "P_0",
+        "I_m",
+        "R_c",
+        "X_m"
+      ],
+      "title": "空载试验读数",
+      "description": "U₀、I₀为励磁侧空载电压/总电流有效值(V、A)，P₀为输入有功(W)，本节R꜀、Xₘ、Iₘ以正弦近似按该试验侧识别。",
+      "section": "transformer-sec25",
+      "sections": [
+        "transformer-sec25"
+      ],
+      "match": "U₀、I₀为励磁侧空载电压/总电流有"
+    },
+    {
+      "id": "tang5-5-short",
+      "keys": [
+        "U_k",
+        "I_k",
+        "P_k",
+        "Z_k",
+        "R_k",
+        "X_k"
+      ],
+      "title": "短路试验读数",
+      "description": "Uₖ、Iₖ是受控短路试验励磁侧有效值，Pₖ是该试验输入有功；Zₖ、Rₖ、Xₖ为同侧总串联阻抗、电阻、电抗，单位Ω。",
+      "section": "transformer-sec25",
+      "sections": [
+        "transformer-sec25"
+      ],
+      "match": "Uₖ、Iₖ是受控短路试验励磁侧有效值"
+    },
+    {
+      "id": "tang5-6-line",
+      "keys": [
+        "U_AB",
+        "E_A",
+        "E_B",
+        "E_C"
+      ],
+      "title": "三相电压相量",
+      "description": "Eᴬ、Eᴮ、Eᶜ为正序三相绕组电压，UAB为相线A到B的线电压；本节均为有效值相量，UAB=Eᴬ−Eᴮ。",
+      "section": "transformer-sec26",
+      "sections": [
+        "transformer-sec26"
+      ],
+      "match": "Eᴬ、Eᴮ、Eᶜ为正序三相绕组电压，"
+    },
+    {
+      "id": "tang5-7-base",
+      "keys": [
+        "S_B",
+        "U_B",
+        "Z_B",
+        "I_B"
+      ],
+      "title": "标幺基准",
+      "description": "Sᵦ为容量基准(VA)，Uᵦ为电压基准(V)，Zᵦ为阻抗基准(Ω)，Iᵦ为电流基准(A)；三相总容量配线电压时必须使用相应三相基准关系。",
+      "section": "transformer-sec27",
+      "sections": [
+        "transformer-sec27"
+      ],
+      "match": "Sᵦ为容量基准(VA)，Uᵦ为电压基"
+    },
+    {
+      "id": "tang5-7-z",
+      "keys": [
+        "z",
+        "Z",
+        "z_new",
+        "z_old"
+      ],
+      "title": "实际与标幺阻抗",
+      "description": "Z为实际复阻抗(Ω)，z为实际阻抗除对应基准后的无量纲标幺值；new与old分别标记新、旧基准，不能省去基准定义。",
+      "section": "transformer-sec27",
+      "sections": [
+        "transformer-sec27"
+      ],
+      "match": "Z为实际复阻抗(Ω)，z为实际阻抗除"
+    },
+    {
+      "id": "tang5-8-drop",
+      "keys": [
+        "R_k",
+        "X_k",
+        "I",
+        "φ",
+        "A",
+        "B",
+        "E",
+        "U_2"
+      ],
+      "title": "压降相量约定",
+      "description": "Rₖ、Xₖ为折到二次的总串联电阻和电抗(Ω)，I为电流有效值(A)，φ以滞后为正；A、B分别为沿U₂实轴和正交方向的压降分量(V)，E为内部电压模。",
+      "section": "transformer-sec28",
+      "sections": [
+        "transformer-sec28"
+      ],
+      "match": "Rₖ、Xₖ为折到二次的总串联电阻和电"
+    },
+    {
+      "id": "tang5-8-efficiency",
+      "keys": [
+        "η",
+        "β",
+        "S_N",
+        "P_0",
+        "P_kN",
+        "P_2",
+        "P_Fe",
+        "P_Cu"
+      ],
+      "title": "效率与损耗",
+      "description": "η为有功效率，β为相对于额定电流的负载率，Sₙ为额定视在容量；P₂为输出有功，P₀近似固定空载损耗，Pₖₙ为额定电流铜耗近似，PFe与PCu为铁耗与铜耗，功率单位W。",
+      "section": "transformer-sec28",
+      "sections": [
+        "transformer-sec28"
+      ],
+      "match": "η为有功效率，β为相对于额定电流的负"
+    },
+    {
+      "id": "tang5-9-parallel",
+      "keys": [
+        "E_1",
+        "E_2",
+        "Z_1",
+        "Z_2",
+        "I_1",
+        "I_2",
+        "I_L"
+      ],
+      "title": "并联支路量",
+      "description": "本节下标1、2分别表示两台已折到同侧的设备，而非同一台的一二次；E为内部电压(V)，Z为串联阻抗(Ω)，I₁、I₂为流向母线的支路电流(A)，Iᴸ为总负载电流。",
+      "section": "transformer-sec29",
+      "sections": [
+        "transformer-sec29"
+      ],
+      "match": "本节下标1、2分别表示两台已折到同侧"
+    },
+    {
+      "id": "tang5-10-sequences",
+      "keys": [
+        "I_0",
+        "I_1",
+        "I_2",
+        "α"
+      ],
+      "title": "对称分量定义",
+      "description": "本节I₀、I₁、I₂分别是零序、正序、负序电流相量(A)，不是空载和一二次电流；α=eʲ¹²⁰°为无量纲旋转算子。",
+      "section": "transformer-sec210",
+      "sections": [
+        "transformer-sec210"
+      ],
+      "match": "本节I₀、I₁、I₂分别是零序、正序"
+    },
+    {
+      "id": "tang5-10-phase",
+      "keys": [
+        "I_A",
+        "I_B",
+        "I_C",
+        "E_A",
+        "E_B",
+        "E_C"
+      ],
+      "title": "三相原坐标",
+      "description": "Iᴬ、Iᴮ、Iᶜ为原三相电流(A)，Eᴬ、Eᴮ、Eᶜ为相对电源中性点的源相电压(V)。",
+      "section": "transformer-sec210",
+      "sections": [
+        "transformer-sec210"
+      ],
+      "match": "Iᴬ、Iᴮ、Iᶜ为原三相电流(A)，"
+    },
+    {
+      "id": "tang5-10-neutral",
+      "keys": [
+        "V_n",
+        "U_An",
+        "Y_A",
+        "Y_B",
+        "Y_C"
+      ],
+      "title": "浮置中性点模型",
+      "description": "Vₙ为负载星点相对源中性点的电位(V)，Uᴬₙ为A负载支路电压(V)，Yᴬ、Yᴮ、Yᶜ为对应相负载导纳(S)；本式假设理想源且没有中性线。",
+      "section": "transformer-sec210",
+      "sections": [
+        "transformer-sec210"
+      ],
+      "match": "Vₙ为负载星点相对源中性点的电位(V"
+    },
+    {
+      "id": "tang5-11-pairs",
+      "keys": [
+        "Z_12",
+        "Z_13",
+        "Z_23"
+      ],
+      "title": "成对短路阻抗",
+      "description": "Z₁₂、Z₁₃、Z₂₃为三组成对短路试验的复阻抗，已统一电压侧与容量基准；各次第三绕组开路，不把阻抗模当复数直接相减。",
+      "section": "transformer-sec211",
+      "sections": [
+        "transformer-sec211"
+      ],
+      "match": "Z₁₂、Z₁₃、Z₂₃为三组成对短路"
+    },
+    {
+      "id": "tang5-11-star",
+      "keys": [
+        "Z_1",
+        "Z_2",
+        "Z_3"
+      ],
+      "title": "虚拟星形支路",
+      "description": "本节Z₁、Z₂、Z₃为由成对端口试验恢复的虚拟星形阻抗，不是每个绕组独立可拆的物理漏感；负虚拟漏抗需在完整受约束端口模型中判断。",
+      "section": "transformer-sec211",
+      "sections": [
+        "transformer-sec211"
+      ],
+      "match": "本节Z₁、Z₂、Z₃为由成对端口试验"
+    },
+    {
+      "id": "tang5-12-auto",
+      "keys": [
+        "U_s",
+        "U_c",
+        "I_c",
+        "I_o",
+        "S_em",
+        "S_through"
+      ],
+      "title": "助磁自耦约定",
+      "description": "U꜀为公共段电压、Uₛ为串联段电压(V)，Iₒ为输出电流、I꜀为输入减输出的公共段电流(A)；S_em为电磁容量、S_through为端口通过容量(VA)，适用于本节指定助磁接法。",
+      "section": "transformer-sec212",
+      "sections": [
+        "transformer-sec212"
+      ],
+      "match": "U꜀为公共段电压、Uₛ为串联段电压("
+    },
+    {
+      "id": "tang5-13-flux",
+      "keys": [
+        "Φ",
+        "Φ_r",
+        "U_m",
+        "N",
+        "ω",
+        "θ",
+        "t"
+      ],
+      "title": "合闸积分量",
+      "description": "Φ为瞬时主磁通、Φᵣ为接通初值剩磁(Wb)，Uₘ为电压峰值(V)，N为匝数，ω为角频率(rad/s)，θ为接入相角，t为接通后的时间(s)。",
+      "section": "transformer-sec213",
+      "sections": [
+        "transformer-sec213"
+      ],
+      "match": "Φ为瞬时主磁通、Φᵣ为接通初值剩磁("
+    },
+    {
+      "id": "tang5-13-fault",
+      "keys": [
+        "L",
+        "R",
+        "i",
+        "i_i",
+        "ψ",
+        "τ"
+      ],
+      "title": "线性短路暂态量",
+      "description": "L、R为本节线性短路回路等值电感(H)与电阻(Ω)，i为瞬时电流、iᵢ为初值(A)，ψ为阻抗角，τ=L/R为时间常数(s)，不与磁化涌流模型混用。",
+      "section": "transformer-sec213",
+      "sections": [
+        "transformer-sec213"
+      ],
+      "match": "L、R为本节线性短路回路等值电感(H"
+    },
+    {
+      "id": "tang5-14-ct",
+      "keys": [
+        "I_1",
+        "I_2",
+        "I_0",
+        "N_1",
+        "N_2",
+        "E_2",
+        "Z_b",
+        "Z_w2",
+        "S_b",
+        "I_2N"
+      ],
+      "title": "传统CT负荷量",
+      "description": "本节I₁为一次流入电流，I₂为二次流出电流，I₀为折到一次的励磁电流(A)；N₁、N₂为匝数，E₂为二次内部感应电压(V)，Zᵦ为完整外接负荷，Zw2为二次绕组阻抗(Ω)，Sᵦ为额定二次电流I₂ₙ下的外接负荷VA。",
+      "section": "transformer-sec214",
+      "sections": [
+        "transformer-sec214"
+      ],
+      "match": "本节I₁为一次流入电流，I₂为二次流"
     }
   ]
 }

@@ -74,6 +74,10 @@
         {
           "course": "electrical-machines",
           "section": "dc-sec34"
+        },
+        {
+          "course": "electrical-machines",
+          "section": "transformer-sec24"
         }
       ],
       "links": [
@@ -827,6 +831,48 @@
         "再对照官方评分检查是否把结论、对照数据和理由连起来；这是给定模型内的探究，不代表完整独立建模。"
       ],
       "ready": false
+    },
+    {
+      "id": "nptel-transformer-week6",
+      "title": "NPTEL Electrical Machines：自耦与互感器原题及图解",
+      "targets": [
+        {
+          "course": "electrical-machines",
+          "section": "transformer-sec212"
+        },
+        {
+          "course": "electrical-machines",
+          "section": "transformer-sec214"
+        }
+      ],
+      "links": [
+        {
+          "label": "原题及官方详细图解（同PDF）",
+          "url": "https://archive.nptel.ac.in/content/storage2/courses/downloads_new/108105017/Assignment-6question%20and%20solution.pdf"
+        }
+      ],
+      "focus": "单选 / 绕组限流 / 容量 / CT物理约束",
+      "selection": "优先Q1、Q2、Q4及Q8、Q9。先画接法和电流，再对照PDF后部图解；Q3选项重复，不列为单一答案选择练习，Q10题面缺失且口径有疑点，排除。",
+      "answers": "10页课程归档含原题和后部详细解答。自耦题按绕组限流与功率路径解释，互感器题有比值及开路机制说明。核读不代表已重算全部选项。",
+      "evidenceLevel": "正式课程题与教师图解",
+      "evidence": "NPTEL/IIT原课程Assignment6归档，存在具体题干、选项和解答；未找到本题组单独测量学验证，保留发现的质量缺陷。",
+      "evidenceLinks": [
+        {
+          "label": "官方题目与解答归档",
+          "url": "https://archive.nptel.ac.in/content/storage2/courses/downloads_new/108105017/Assignment-6question%20and%20solution.pdf"
+        }
+      ],
+      "access": "公开英文PDF，无需本站或教师账号；本轮核读所选题与解答，未操作硬件。",
+      "license": "只外链官方文件，不搬运原题图或把未获许可材料直接改为本站题库。",
+      "limit": "原题接线、功率因数、绕组额定与输入节点是结论条件，不能记一个自耦容量因子适配全部接法；传统CT与电子传感器规则分开。",
+      "readScope": "本轮实际核读10页题目/解答；已标出重复选项、缺失题面和解答口径问题，不整套盲收。",
+      "checked": "2026-10-30",
+      "guide": [
+        "把原双绕组的每侧额定电流写出，并按原题图明确公共段、串联段及输入输出节点。",
+        "通过节点电流与端口功率求每段电流，再按原绕组限值确定通过容量；对照图解，不只记答案字母。",
+        "CT题先说明一次电流被外部系统约束，再解释二次安匝、励磁与开路电压；重做时改变负荷或接法，检查原结论的前提。"
+      ],
+      "ready": true
     }
   ],
   "excluded": [

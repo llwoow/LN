@@ -46,7 +46,7 @@ class TeachingContract(unittest.TestCase):
                     self.assertNotIn(r'\(', sequence.text())
                     self.assertLess(payload['html'].index('learning-sequence'), payload['html'].index('source-material-heading'))
                     total += 1
-        self.assertEqual(total, 274)
+        self.assertEqual(total, 288)
 
     def test_new_math_keeps_a_separate_numbering_namespace(self):
         targets = REF['build_index']()

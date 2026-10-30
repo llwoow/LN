@@ -33,7 +33,7 @@ with sync_playwright() as p:
                 if key in ['electrical-machines/transformer-1','electrical-machines/dc-sec34','hs-math/sx-04-k02','hs-english/yy-07-k04']:
                     page.screenshot(path='.preview/understanding-'+section['id']+'-'+str(width)+'.png')
                 count+=1
-        assert count==274,count
+        assert count==288,count
         assert not errors,errors
         assert not bad,bad
         results.append({'width':width,'lessons':count});context.close()
