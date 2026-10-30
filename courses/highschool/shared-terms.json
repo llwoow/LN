@@ -691,5 +691,16 @@
         "residual"
       ]
     }
+  ],
+  "hs-geography": [
+    {
+      "section": "DL-01-K06",
+      "term": "gis",
+      "aliases": [
+        "GIS",
+        "地理信息系统",
+        "Geographic Information System"
+      ]
+    }
   ]
 }

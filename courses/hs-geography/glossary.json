@@ -123,6 +123,28 @@
       ]
     },
     {
+      "id": "dl-01-k06-gis",
+      "title": "GIS",
+      "aliases": [
+        "GIS",
+        "地理信息系统",
+        "Geographic Information System"
+      ],
+      "english": "Geographic Information System (GIS)",
+      "description": "地理信息系统（GIS，Geographic Information System）是对带有地理位置参考的信息进行分析与显示的计算机系统。它可组织不同专题图层并进行空间叠加与查询，它不同于侧重远距离感知地表信息的遥感，也不同于提供定位服务的卫星定位系统。",
+      "match": "地理信息系统（GIS，Geographic Information System）是对带有地理位置参考的信息进行分析与显示的计算机系统。它可组织不同专题图层并进行空间叠加与查询，它不同于侧重远距离感知地表信息的遥感，也不同于提供定位服务的卫星定位系统。",
+      "section": "dl-01-k06",
+      "sections": [
+        "dl-01-k06"
+      ],
+      "reuseAliases": [
+        "GIS",
+        "地理信息系统",
+        "Geographic Information System"
+      ],
+      "caseSensitiveAliases": []
+    },
+    {
       "id": "dl-02-k01-dl-02-k01-term",
       "title": "人口自然增长率",
       "aliases": [

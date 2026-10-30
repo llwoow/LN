@@ -38,7 +38,9 @@ with sync_playwright() as p:
             ('hs-biology','sw-02-k04','sw-01-k02','DNA'),
             ('hs-biology','sw-01-k04','sw-01-k05','ATP'),
             ('hs-chemistry','hx-05-k01','hx-02-k03','官能团'),
-            ('hs-math','sx-02-k05','sx-05-k02','条件概率')]:
+            ('hs-math','sx-02-k05','sx-05-k02','条件概率'),
+            ('hs-geography','dl-01-k06','dl-01-k06','GIS'),
+            ('hs-geography','dl-02-k04','dl-01-k06','GIS')]:
             lesson(course,section)
             entry=page.evaluate('([course,title])=>LN_GLOSSARY[course].entries.find(e=>e.kind==="term"&&e.title===title)',[course,title])
             if not page.locator('a.definition-term[data-definition="'+entry['id']+'"]:visible').count():
@@ -47,6 +49,9 @@ with sync_playwright() as p:
             assert trigger.count(),(course,title)
             trigger.scroll_into_view_if_needed();origin_id=trigger.get_attribute('id');y=trigger.bounding_box()['y'];trigger.click()
             popup=page.locator('#definition-popover:popover-open');popup.wait_for();assert title in popup.inner_text()
+            if title=='GIS':
+                assert 'Geographic Information System' in popup.inner_text()
+                assert '地理信息系统' in popup.inner_text()
             assert page.evaluate('scrollY')>=0
             page.locator('.definition-source-link').click();page.locator('.reference-target[data-definition-source]').wait_for()
             assert '/'+source+'/' in page.url
@@ -55,6 +60,13 @@ with sync_playwright() as p:
             page.wait_for_function('(id)=>document.activeElement?.id===id',arg=origin_id)
             assert '/'+section in page.url
             assert abs(page.locator('[id="'+origin_id+'"]').bounding_box()['y']-y)<3,(course,title)
+        lesson('hs-physics','wl-05-k03')
+        assert '方向随时间周期性反向' in page.locator('#lesson-body').inner_text()
+        assert '方向或大小随时间作周期变化' not in page.locator('#lesson-body').inner_text()
+        page.locator('a.definition-term',has_text='有效值').first.click()
+        page.locator('#definition-popover .definition-excerpt > summary').click()
+        assert '脉动直流' in page.locator('#definition-popover .definition-copy').last.inner_text()
+        page.locator('.definition-close').click()
         for course,section,example in targets:
             lesson(course,section)
             block=page.locator('[data-worked-example="'+example['id']+'"]')
@@ -62,6 +74,19 @@ with sync_playwright() as p:
             assert block.locator('.worked-solution').get_attribute('open') is None
             block.locator('.worked-solution > summary').click()
             assert block.locator('.worked-steps > li').count()==len(example['steps'])
+            if example['id']=='oblique-pull-two-stages':
+                pull=block.locator('.worked-solution [data-definition="wl-01-k04-applied-pull"]').first
+                pull.scroll_into_view_if_needed();pull_id=pull.get_attribute('id');offset=pull.bounding_box()['y'];pull.click()
+                popup=page.locator('#definition-popover:popover-open')
+                assert '外加拉力的大小，给定为8.0 N' in popup.inner_text()
+                assert 'Fpull' in popup.locator('.definition-symbol-title').inner_text()
+                page.locator('.definition-source-link').click()
+                page.locator('.reference-target[data-definition-source]').wait_for()
+                page.locator('.reference-return').click()
+                # A visual KaTeX glyph is a pointer target, not a keyboard tab stop.
+                page.locator('[id="'+pull_id+'"].reference-origin').wait_for()
+                assert abs(page.locator('[id="'+pull_id+'"]').bounding_box()['y']-offset)<3
+                assert block.locator('.worked-solution').get_attribute('open') is not None
             assert block.locator('.worked-solution h4',has_text='结果与核查').is_visible()
             assert block.locator('.worked-solution h4',has_text='易错点').is_visible()
             assert '\\(' not in block.inner_text() and '\\[' not in block.inner_text()

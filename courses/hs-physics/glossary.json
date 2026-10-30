@@ -143,14 +143,14 @@
     },
     {
       "id": "wl-01-k04-wl-01-k04-symbol-0",
-      "title": "合力 F",
+      "title": "外力 F",
       "keys": [
         "F",
         "bold:F"
       ],
-      "description": "作用在同一研究对象上的各外力的向量和。",
+      "description": "作用在所选研究对象上的一个外力；各外力的向量和才是合力。",
       "unitHtml": "N",
-      "match": "合力 F：作用在同一研究对象上的各外力的向量和。单位：N。",
+      "match": "外力 F：作用在所选研究对象上的一个外力；各外力的向量和才是合力。单位：N。",
       "section": "wl-01-k04",
       "sections": [
         "wl-01-k04"
@@ -165,6 +165,21 @@
       "description": "本节质点模型中保持不变的惯性质量。",
       "unitHtml": "kg",
       "match": "质量 m：本节质点模型中保持不变的惯性质量。单位：kg。",
+      "section": "wl-01-k04",
+      "sections": [
+        "wl-01-k04"
+      ]
+    },
+    {
+      "id": "wl-01-k04-applied-pull",
+      "title": "拉力 F_pull",
+      "symbolHtml": "<span>F<sub>pull</sub></span>",
+      "keys": [
+        "F_pull"
+      ],
+      "description": "斜拉例题中外加拉力的大小，给定为8.0 N；不是物块所受合力。",
+      "unitHtml": "N",
+      "match": "拉力 F_pull：斜拉例题中外加拉力的大小，给定为8.0 N；不是物块所受合力。单位：N。",
       "section": "wl-01-k04",
       "sections": [
         "wl-01-k04"
@@ -1255,7 +1270,7 @@
       ],
       "english": "Root mean square (RMS)",
       "description": "按相同时间、相同电阻发热量等效定义的直流电流或电压；正弦时才等于峰值除以√2。",
-      "match": "交变电流的方向或大小随时间作周期变化，有效值则用相同时间内产生相同热量的直流量定义",
+      "match": "有效值用在同一电阻、相同时间内产生相同热量的直流量定义",
       "section": "wl-05-k03",
       "sections": [
         "wl-05-k03"
