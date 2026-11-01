@@ -1,0 +1,4 @@
+control==0.10.2
+numpy>=1.23
+scipy>=1.8
+matplotlib>=3.6

@@ -2,7 +2,7 @@
 window.LN_MOUNT_TRANSFORMER_MODELS=function(){
 
 (()=>{
-'use strict';const root=document.getElementById('t3d-widget');if(!root||root.dataset.ready==='true')return;
+'use strict';const root=document.getElementById('t3d-widget');if(!root||root.dataset.ready)return;
 const canvas=root.querySelector('#t3d-canvas'),ctx=canvas.getContext('2d');if(!ctx)return;
 const nameEl=root.querySelector('#t3d-part-name'),desc=root.querySelector('#t3d-part-desc'),msg=root.querySelector('#t3d-viewport-msg');
 const info={core:['三相铁心','三根心柱和上下铁轭构成共同磁路；铁心中存在磁滞及涡流损耗。'],coilA:['A 相绕组（内低压、外高压）','A 相绕组套在 A 相心柱上，采用同心圆筒式教学示意：低压绕组靠近铁心，高压绕组位于外侧，中间留有绝缘与油道空间。'],coilB:['B 相绕组（内低压、外高压）','B 相与 A、C 相相同：每柱一相，同柱同轴布置高低压绕组。可在“绕组拆解”视图中观察内外层分离。'],coilC:['C 相绕组（内低压、外高压）','C 相绕组与铁心共同构成电磁系统。绕组中电流产生铜耗，负荷升高时热点温度通常先出现在绕组区域。'],tank:['主油箱 / 顶盖 / 绝缘油','主油箱包围铁心和绕组，顶盖上布置套管、压力释放等附件；绝缘油兼具绝缘与传热作用。箱壁和顶盖只是外部表面，不能把它们当成绕组热点位置。'],bushing:['高低压套管组','工程化示意为：顶部前侧 3 只较高的高压套管，后侧另有较矮的低压套管组（含中性点简化示意）。它们把绕组引线可靠引出油箱外。'],conservator:['储油柜','储油柜为油体热胀冷缩提供缓冲容积，通常高置于主油箱上方，通过联管与主油箱连通。'],relay:['气体继电器','位于主油箱到储油柜的联通管上，对故障产气及异常油流等作出响应，用于保护。'],breather:['吸湿器','对储油柜呼吸气路中的空气进行除湿；不同储油柜有不同的油气隔离设计。'],radiator:['片式散热器组','片式散热器通过上下集油管与主油箱连接，增大换热面积；自然油循环时热油上升流入散热器，冷却后再回流主油箱。'],relief:['压力释放装置','当内部故障导致油箱压力异常升高时，压力释放装置会迅速动作泄压。'],oilflow:['油流路径','热油上升、进入散热器后冷却下降、再流回油箱；这里只显示定性运动方向。']};
@@ -42,16 +42,16 @@ cube('tankcover','tank',[0,1.76,0],[7.36,.14,3.84],C.top,.98); // 实际顶盖�
 for(let z of [-1.90,1.90])path([[-3.63,1.78,z],[3.63,1.78,z]],'tankframe','tank',C.dark,.055);
 for(let x of [-3.63,3.63])path([[x,1.78,-1.90],[x,1.78,1.90]],'tankframe','tank',C.dark,.055);
 // cover bolts along long sides
-for(let x of [-3.0,-2.2,-1.4,-.6,.2,1.0,1.8,2.6,3.2]){cyl('tankframe','tank',[x,1.82,1.74],[x,1.92,1.74],.035,C.dark);cyl('tankframe','tank',[x,1.82,-1.74],[x,1.92,-1.74],.035,C.dark);} 
+for(let x of [-3.0,-2.2,-1.4,-.6,.2,1.0,1.8,2.6,3.2]){cyl('tankframe','tank',[x,1.82,1.74],[x,1.92,1.74],.035,C.dark);cyl('tankframe','tank',[x,1.82,-1.74],[x,1.92,-1.74],.035,C.dark);}
 // lifting lugs
-for(let x of [-2.9,2.9]){path([[x,1.88,1.30],[x,2.18,1.30],[x+.24,2.18,1.30],[x+.24,1.88,1.30]],'tankframe','tank',C.dark,.05);path([[x,1.88,-1.30],[x,2.18,-1.30],[x+.24,2.18,-1.30],[x+.24,1.88,-1.30]],'tankframe','tank',C.dark,.05);} 
+for(let x of [-2.9,2.9]){path([[x,1.88,1.30],[x,2.18,1.30],[x+.24,2.18,1.30],[x+.24,1.88,1.30]],'tankframe','tank',C.dark,.05);path([[x,1.88,-1.30],[x,2.18,-1.30],[x+.24,2.18,-1.30],[x+.24,1.88,-1.30]],'tankframe','tank',C.dark,.05);}
 // front reinforcing ribs
 for(let x of [-2.7,-1.35,0,1.35,2.7])cube('tankframe','tank',[x,-.05,1.89],[.10,2.85,.08],C.dark,.96);
 for(let x of [-2.55,2.55])cube('tankframe','tank',[x,-2.02,0],[.76,.30,2.48],C.dark);
 // High-voltage bushings: taller porcelain on front side.
-for(let x of [-2,0,2]){cyl('bushing','bushing',[x,1.79,.88],[x,3.12,.88],.100,C.dark);for(let k=0;k<7;k++){let y=2.00+k*.132;cyl('bushing','bushing',[x,y-.034,.88],[x,y+.034,.88],.29-(k*.01),C.ivory,1,14)}cyl('bushing','bushing',[x,3.05,.88],[x,3.26,.88],.060,C.gold);path([[x,1.70,.79],[x,1.45,.52],[x+.18,1.22,.20]],'bushing','bushing',C.gold,.05);} 
+for(let x of [-2,0,2]){cyl('bushing','bushing',[x,1.79,.88],[x,3.12,.88],.100,C.dark);for(let k=0;k<7;k++){let y=2.00+k*.132;cyl('bushing','bushing',[x,y-.034,.88],[x,y+.034,.88],.29-(k*.01),C.ivory,1,14)}cyl('bushing','bushing',[x,3.05,.88],[x,3.26,.88],.060,C.gold);path([[x,1.70,.79],[x,1.45,.52],[x+.18,1.22,.20]],'bushing','bushing',C.gold,.05);}
 // Low-voltage bushings: shorter set on rear side, include neutral as simplified engineering cue.
-for(let x of [-2.55,-.85,.85,2.55]){cyl('bushing','bushing',[x,1.80,-.70],[x,2.46,-.70],.090,C.dark);for(let k=0;k<4;k++){let y=1.98+k*.120;cyl('bushing','bushing',[x,y-.028,-.70],[x,y+.028,-.70],.23-(k*.008),C.ivory,1,12)}cyl('bushing','bushing',[x,2.42,-.70],[x,2.58,-.70],.05,C.gold);} 
+for(let x of [-2.55,-.85,.85,2.55]){cyl('bushing','bushing',[x,1.80,-.70],[x,2.46,-.70],.090,C.dark);for(let k=0;k<4;k++){let y=1.98+k*.120;cyl('bushing','bushing',[x,y-.028,-.70],[x,y+.028,-.70],.23-(k*.008),C.ivory,1,12)}cyl('bushing','bushing',[x,2.42,-.70],[x,2.58,-.70],.05,C.gold);}
 // conservator and protection equipment.
 cyl('conservator','conservator',[-3.72,3.66,-2.18],[-1.14,3.66,-2.18],.46,C.top,1,26);
 for(let x of [-3.66,-1.20])cyl('conservator','conservator',[x,3.66,-2.18],[x+.08,3.66,-2.18],.47,C.dark,1,26);
@@ -64,7 +64,7 @@ cyl('breather','breather',[-4.18,1.62,-2.18],[-4.18,2.28,-2.18],.20,C.ivory,1,17
 cyl('relief','relief',[2.78,1.80,-.98],[2.78,2.21,-.98],.14,C.pipe);cyl('relief','relief',[2.78,2.18,-.98],[2.78,2.30,-.98],.36,C.gold);
 path([[1.72,1.82,1.20],[1.72,2.28,1.20]],'tankframe','tank',C.pipe,.05);
 // radiator bank with headers and many thin plates.
-for(let i=0;i<12;i++){let z=-1.66+i*.30;cube('radiator','radiator',[4.52,-.13,z],[.74,2.86,.09],C.top);cube('radiator','radiator',[4.55,-.13,z],[.56,2.52,.022],'#b9d8e3',.72);} 
+for(let i=0;i<12;i++){let z=-1.66+i*.30;cube('radiator','radiator',[4.52,-.13,z],[.74,2.86,.09],C.top);cube('radiator','radiator',[4.55,-.13,z],[.56,2.52,.022],'#b9d8e3',.72);}
 cyl('radiator','radiator',[3.70,1.18,-.05],[4.88,1.18,-.05],.17,C.pipe,1,22);
 cyl('radiator','radiator',[3.70,-1.48,-.05],[4.88,-1.48,-.05],.17,C.pipe,1,22);
 for(let z of [-1.55,-.35,.85])path([[3.67,1.18,z],[4.18,1.18,z]],'radiator','radiator',C.dark,.07);
@@ -81,8 +81,8 @@ const f=root.querySelector('#t3d-flow'),l=root.querySelector('#t3d-labels');f.on
 root.querySelector('#t3d-zoom-in').onclick=()=>state.dist=Math.max(7,state.dist*.82);root.querySelector('#t3d-zoom-out').onclick=()=>state.dist=Math.min(30,state.dist*1.21);
 root.querySelector('#t3d-reset').onclick=()=>{state.yaw=.68;state.pitch=.27;state.dist=15.1;state.target=[.1,.65,0];mode('cut');state.flow=f.checked=false;state.labels=l.checked=true;select('core')};
 let project,sceneVisible=true;
-if('IntersectionObserver' in window)new IntersectionObserver(e=>{sceneVisible=e[0].isIntersecting},{rootMargin:'150px'}).observe(root);
-function render(t){if(!sceneVisible||document.hidden){setTimeout(()=>requestAnimationFrame(render),450);return;}let rect=canvas.getBoundingClientRect(),dpr=Math.min(2,devicePixelRatio||1);let W=Math.max(1,Math.round(rect.width*dpr)),H=Math.max(1,Math.round(rect.height*dpr));if(canvas.width!==W||canvas.height!==H){canvas.width=W;canvas.height=H;}ctx.clearRect(0,0,W,H);
+let sceneObserver;if('IntersectionObserver' in window){sceneObserver=new IntersectionObserver(e=>{sceneVisible=e[0].isIntersecting},{rootMargin:'150px'});sceneObserver.observe(root);}
+function render(t){if(!root.isConnected){sceneObserver?.disconnect();return;}if(!sceneVisible||document.hidden){setTimeout(()=>requestAnimationFrame(render),450);return;}let rect=canvas.getBoundingClientRect(),dpr=Math.min(2,devicePixelRatio||1);let W=Math.max(1,Math.round(rect.width*dpr)),H=Math.max(1,Math.round(rect.height*dpr));if(canvas.width!==W||canvas.height!==H){canvas.width=W;canvas.height=H;}ctx.clearRect(0,0,W,H);
  const v=norm([Math.sin(state.yaw)*Math.cos(state.pitch),Math.sin(state.pitch),Math.cos(state.yaw)*Math.cos(state.pitch)]),right=norm(cross([0,1,0],v)),up=norm(cross(v,right));const eye=add(state.target,scale(v,state.dist)),focal=H*.5/Math.tan(47*Math.PI/360);
  root.dataset.projDebug=JSON.stringify({v,right,up,eye,focal,W,H});project=point=>{let d=sub(point,eye),depth=-dot(d,v);if(depth<.12)return null;return [W/2+dot(d,right)*focal/depth,H/2-dot(d,up)*focal/depth,depth];};
  let faces=[];for(let s of shapes){if(!visible(s))continue;let pts=s.v.map(x=>project(add(x,shift(s.group))));if(pts.some(x=>!x))continue;let depth=pts.reduce((a,b)=>a+b[2],0)/pts.length;faces.push({pts,depth,s});}

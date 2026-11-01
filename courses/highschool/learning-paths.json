@@ -1,0 +1,451 @@
+{
+  "hs-physics": [
+    {
+      "id": "force-energy-momentum",
+      "title": "受力、能量与动量",
+      "summary": "同一运动过程可以换不同观察量；先核对对象、过程与守恒条件，再选方程。",
+      "steps": [
+        {
+          "section": "wl-01-k03",
+          "focus": "只画研究对象所受的力，分清静摩擦和滑动摩擦。"
+        },
+        {
+          "section": "wl-01-k04",
+          "focus": "由合力求加速度，说明模型与参考系。"
+        },
+        {
+          "section": "wl-02-k04",
+          "focus": "用做功和系统边界连接初末状态。"
+        },
+        {
+          "section": "wl-04-k01",
+          "focus": "对短时碰撞检查系统外力冲量。"
+        }
+      ]
+    },
+    {
+      "id": "field-circuit-induction",
+      "title": "从场到电路，再到电磁感应",
+      "summary": "先区分力、能量和电势差，再把感应回路放回电路及能量模型。",
+      "steps": [
+        {
+          "section": "wl-03-k01",
+          "focus": "用场强描述电荷受力，保留方向。"
+        },
+        {
+          "section": "wl-03-k02",
+          "focus": "区分电势能与电势差，核对符号。"
+        },
+        {
+          "section": "wl-03-k03",
+          "focus": "按回路约束求电流，先检查元件适用范围。"
+        },
+        {
+          "section": "wl-05-k02",
+          "focus": "方向靠楞次定律，大小靠磁通变化率。"
+        },
+        {
+          "section": "wl-05-k03",
+          "focus": "把波形与有效值条件带回功率计算。"
+        }
+      ]
+    },
+    {
+      "id": "microscopic-energy",
+      "title": "微观模型与能量守恒",
+      "summary": "跨尺度使用能量观点时，必须保留模型、符号约定和统计意义。",
+      "steps": [
+        {
+          "section": "wl-06-k01",
+          "focus": "用粒子运动与统计解释宏观现象。"
+        },
+        {
+          "section": "wl-06-k02",
+          "focus": "检查理想气体模型及状态量。"
+        },
+        {
+          "section": "wl-06-k03",
+          "focus": "统一做功和吸放热的正负约定。"
+        },
+        {
+          "section": "wl-06-k04",
+          "focus": "用能级与光子能量分析跃迁。"
+        },
+        {
+          "section": "wl-06-k05",
+          "focus": "区分单核随机性与大量核的统计规律。"
+        }
+      ]
+    }
+  ],
+  "hs-math": [
+    {
+      "id": "function-derivative",
+      "title": "从函数图像到导数论证",
+      "summary": "定义域约束先行；用图像形成判断，再用代数和导数证明。",
+      "steps": [
+        {
+          "section": "sx-01-k03",
+          "focus": "先把定义域、单调性与对称性说清。"
+        },
+        {
+          "section": "sx-01-k04",
+          "focus": "指数、对数运算时先限制底数和真数。"
+        },
+        {
+          "section": "sx-04-k02",
+          "focus": "由导数符号证明单调与极值，核对端点。"
+        }
+      ]
+    },
+    {
+      "id": "geometry-coordinates",
+      "title": "几何条件如何变成代数",
+      "summary": "先选坐标与向量表达，再从代数解返回几何条件。",
+      "steps": [
+        {
+          "section": "sx-02-k01",
+          "focus": "把方向、长度与夹角转成向量关系。"
+        },
+        {
+          "section": "sx-03-k01",
+          "focus": "选择空间坐标系并确定法向量。"
+        },
+        {
+          "section": "sx-03-k02",
+          "focus": "用点、线、圆的距离关系建立方程。"
+        },
+        {
+          "section": "sx-03-k03",
+          "focus": "联立圆锥曲线与直线，并检查几何限制。"
+        }
+      ]
+    },
+    {
+      "id": "data-probability",
+      "title": "从计数到概率，再到数据解释",
+      "summary": "明确样本空间和抽样机制，避免把独立、互斥与因果混为一谈。",
+      "steps": [
+        {
+          "section": "sx-02-k04",
+          "focus": "先问样本如何产生，避免选择偏差。"
+        },
+        {
+          "section": "sx-02-k05",
+          "focus": "用事件关系确定概率运算。"
+        },
+        {
+          "section": "sx-05-k01",
+          "focus": "按分类、分步及是否计顺序选计数方法。"
+        },
+        {
+          "section": "sx-05-k02",
+          "focus": "用条件概率和分布描述不确定性。"
+        },
+        {
+          "section": "sx-05-k03",
+          "focus": "回归用于合适范围的趋势解释，相关不等于因果。"
+        }
+      ]
+    }
+  ],
+  "hs-chemistry": [
+    {
+      "id": "species-quantities",
+      "title": "真实物种、守恒与定量",
+      "summary": "先确定实际存在的粒子，再做物料、电荷和电子的核查。",
+      "steps": [
+        {
+          "section": "hx-01-k01",
+          "focus": "离子方程按真实粒子书写，检查电荷与电子。"
+        },
+        {
+          "section": "hx-01-k02",
+          "focus": "建立物质的量、体积和浓度之间的计量链。"
+        },
+        {
+          "section": "hx-03-k03",
+          "focus": "电离、水解与沉淀均需联系平衡条件。"
+        },
+        {
+          "section": "hx-03-k04",
+          "focus": "按电子转移和电极反应连接电量与物质的量。"
+        }
+      ]
+    },
+    {
+      "id": "energy-rate-equilibrium",
+      "title": "能量、速率与平衡分开判断",
+      "summary": "反应是否吸放热、进行多快、平衡偏向哪侧，是三个相关但不同的问题。",
+      "steps": [
+        {
+          "section": "hx-02-k02",
+          "focus": "区分催化、反应趋势与能量转换。"
+        },
+        {
+          "section": "hx-03-k01",
+          "focus": "用规定计量基准和状态核算焓变。"
+        },
+        {
+          "section": "hx-03-k02",
+          "focus": "先比较反应商与平衡常数，再讨论移动。"
+        },
+        {
+          "section": "hx-03-k03",
+          "focus": "把平衡分析用于水溶液中的真实物种。"
+        }
+      ]
+    },
+    {
+      "id": "structure-synthesis",
+      "title": "从结构到有机转化",
+      "summary": "把结构约束、官能团和反应条件带入每一步，不能只背箭头。",
+      "steps": [
+        {
+          "section": "hx-04-k01",
+          "focus": "电子排布提供价层与周期趋势的依据。"
+        },
+        {
+          "section": "hx-04-k02",
+          "focus": "区分键、空间构型与分子间作用。"
+        },
+        {
+          "section": "hx-05-k01",
+          "focus": "先识别官能团和同分异构约束。"
+        },
+        {
+          "section": "hx-05-k02",
+          "focus": "根据不饱和键判断可行变键。"
+        },
+        {
+          "section": "hx-05-k03",
+          "focus": "用条件与产物核查衍生物转化。"
+        }
+      ]
+    }
+  ],
+  "hs-biology": [
+    {
+      "id": "information-inheritance",
+      "title": "遗传信息：从分子到性状",
+      "summary": "分子机制和遗传概率互相支持，但必须说明染色体行为与模型条件。",
+      "steps": [
+        {
+          "section": "sw-01-k02",
+          "focus": "分清 DNA、RNA 与蛋白质的组成和功能。"
+        },
+        {
+          "section": "sw-02-k01",
+          "focus": "先说明遗传模型，再进行概率推断。"
+        },
+        {
+          "section": "sw-02-k02",
+          "focus": "将基因分离和组合落实到染色体行为。"
+        },
+        {
+          "section": "sw-02-k03",
+          "focus": "用证据说明遗传物质与复制机制。"
+        },
+        {
+          "section": "sw-02-k04",
+          "focus": "区分转录、翻译及信息流向。"
+        },
+        {
+          "section": "sw-05-k03",
+          "focus": "用扩增、构建与验证的证据判断工程结果。"
+        }
+      ]
+    },
+    {
+      "id": "metabolism-regulation",
+      "title": "物质运输、代谢与稳态",
+      "summary": "结构与功能联系起来看，实验比较必须控制变量和取样尺度。",
+      "steps": [
+        {
+          "section": "sw-01-k03",
+          "focus": "先确定细胞结构与功能位置。"
+        },
+        {
+          "section": "sw-01-k04",
+          "focus": "区分运输方向、能量需求与膜特性。"
+        },
+        {
+          "section": "sw-01-k05",
+          "focus": "区分总量、净量与能量耦联。"
+        },
+        {
+          "section": "sw-03-k01",
+          "focus": "用内环境及调节过程说明稳态。"
+        },
+        {
+          "section": "sw-03-k03",
+          "focus": "反馈需要沿刺激、反应和回调完整追踪。"
+        }
+      ]
+    },
+    {
+      "id": "population-ecosystem",
+      "title": "从种群数量到生态系统",
+      "summary": "先界定调查对象，再分别核对能量流、物质循环和空间尺度。",
+      "steps": [
+        {
+          "section": "sw-04-k01",
+          "focus": "选调查方法并检查数量模型条件。"
+        },
+        {
+          "section": "sw-04-k02",
+          "focus": "区分种群变化与群落结构、演替。"
+        },
+        {
+          "section": "sw-04-k03",
+          "focus": "能量传递效率必须使用同化量口径。"
+        },
+        {
+          "section": "sw-04-k04",
+          "focus": "把生态过程与保护措施的证据联系起来。"
+        }
+      ]
+    }
+  ],
+  "hs-chinese": [
+    {
+      "id": "evidence-expression",
+      "title": "从文本证据到论证表达",
+      "summary": "先读懂具体语句，再提出可被文本证据支持的解释。",
+      "steps": [
+        {
+          "section": "yw-01-k08",
+          "focus": "在语境和语体中判断词义。"
+        },
+        {
+          "section": "yw-02-k03",
+          "focus": "区分事实、因果解释和推测。"
+        },
+        {
+          "section": "yw-03-k04",
+          "focus": "核查概念与推理条件。"
+        },
+        {
+          "section": "yw-04-k01",
+          "focus": "让观点、理由与证据形成层级。"
+        },
+        {
+          "section": "yw-05-k05",
+          "focus": "通过比较阅读修正单一材料的判断。"
+        }
+      ]
+    }
+  ],
+  "hs-english": [
+    {
+      "id": "sentence-discourse",
+      "title": "从句子主干到语篇表达",
+      "summary": "识别句法是为了理解语篇中的指代、因果和态度，并服务于表达。",
+      "steps": [
+        {
+          "section": "yy-01-k01",
+          "focus": "确认主语、限定动词及交际对象。"
+        },
+        {
+          "section": "yy-02-k01",
+          "focus": "把定语从句还原到被修饰对象。"
+        },
+        {
+          "section": "yy-05-k04",
+          "focus": "核对非谓语的逻辑主语与语义关系。"
+        },
+        {
+          "section": "yy-06-k03",
+          "focus": "用具体证据支撑环境主题中的主张。"
+        },
+        {
+          "section": "yy-07-k05",
+          "focus": "将信息转为合目的、合受众的表达。"
+        }
+      ]
+    }
+  ],
+  "hs-history": [
+    {
+      "id": "timeline-evidence",
+      "title": "时间轴、制度与史料解释",
+      "summary": "先建立时空坐标，再结合证据的来源和解释限度。",
+      "steps": [
+        {
+          "section": "ls-01-k02",
+          "focus": "从通史框架识别制度变化。"
+        },
+        {
+          "section": "ls-03-k01",
+          "focus": "在历史条件中比较制度。"
+        },
+        {
+          "section": "ls-04-k05",
+          "focus": "将交通技术与社会条件共同纳入解释。"
+        },
+        {
+          "section": "ls-05-k06",
+          "focus": "结合原件、记录与情境保护历史信息。"
+        }
+      ]
+    }
+  ],
+  "hs-politics": [
+    {
+      "id": "concept-evidence-argument",
+      "title": "概念、材料与推理论证",
+      "summary": "从概念范围出发分析具体材料，再核查结论的依据和适用边界。",
+      "steps": [
+        {
+          "section": "zz-02-k02",
+          "focus": "区分市场机制与宏观治理的作用。"
+        },
+        {
+          "section": "zz-03-k03",
+          "focus": "结合法律规范与事实分析治理问题。"
+        },
+        {
+          "section": "zz-07-k02",
+          "focus": "判断论证形式是否成立。"
+        },
+        {
+          "section": "zz-07-k03",
+          "focus": "在关系与条件变化中比较方案。"
+        },
+        {
+          "section": "zz-07-k04",
+          "focus": "将新方案放回实践检验。"
+        }
+      ]
+    }
+  ],
+  "hs-geography": [
+    {
+      "id": "process-region-action",
+      "title": "自然过程、区域联系与行动",
+      "summary": "把机制放入尺度与区域条件，再讨论发展、风险和行动选择。",
+      "steps": [
+        {
+          "section": "dl-01-k02",
+          "focus": "解释受热、运动和水汽的物理过程。"
+        },
+        {
+          "section": "dl-03-k05",
+          "focus": "把多个自然要素作为整体分析。"
+        },
+        {
+          "section": "dl-02-k03",
+          "focus": "结合资源、交通、市场等条件判断区位。"
+        },
+        {
+          "section": "dl-04-k04",
+          "focus": "分析跨区域流动带来的联系与影响。"
+        },
+        {
+          "section": "dl-05-k04",
+          "focus": "给资源环境行动说明目标与权衡。"
+        }
+      ]
+    }
+  ]
+}

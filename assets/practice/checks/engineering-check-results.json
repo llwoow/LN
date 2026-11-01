@@ -1,0 +1,63 @@
+{
+  "control_version": "0.10.2",
+  "magpylib_version": "5.2.2",
+  "dc_model": {
+    "assumed_parameters": {
+      "R_ohm": 1.0,
+      "L_H": 0.02,
+      "k_SI": 0.5,
+      "J_kg_m2": 0.02,
+      "b_Nm_s_per_rad": 0.01,
+      "V_V": 24,
+      "load_torque_Nm": 2
+    },
+    "state_order": [
+      "armature_current_A",
+      "angular_velocity_rad_s"
+    ],
+    "final_state": [
+      4.769230769228712,
+      38.46153846154267
+    ],
+    "analytic_steady_state": [
+      4.76923076923077,
+      38.46153846153846
+    ],
+    "max_steady_error": 4.213518423057394e-12,
+    "input_energy_J": 493.26104108861017,
+    "loss_plus_load_J": 478.2407102257562,
+    "stored_energy_J": 15.020355029588844,
+    "energy_balance_residual_J": -2.4166734847952398e-05
+  },
+  "field_model": {
+    "circle_current_A": 2.0,
+    "radius_m": 0.03,
+    "axis_z_m": [
+      0.0,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "computed_Bz_T": [
+      4.188790204233334e-05,
+      3.576451775214387e-05,
+      1.4809609791905867e-05,
+      9.938311994869007e-07
+    ],
+    "closed_form_Bz_T": [
+      4.188790204786391e-05,
+      3.576451775686596e-05,
+      1.4809609793861219e-05,
+      9.938311996181186e-07
+    ],
+    "max_abs_error_T": 5.530569491957182e-15,
+    "current_reversal_max_error_T": 0.0,
+    "double_current_max_error_T": 0.0
+  },
+  "limits": [
+    "Both datasets are generated from declared mathematical models, not measured hardware.",
+    "The linear motor omits saturation, brush switching, current limit and heating.",
+    "The current loop is a prescribed free-space source; no nonlinear iron response was solved.",
+    "No FEMM, OpenModelica or SysId executable was run."
+  ]
+}

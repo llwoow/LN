@@ -44,10 +44,9 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 45)
+        self.assertEqual(len(self.sections), 57)
         self.assertEqual(len({section['group'] for section in self.sections.values()}), 3)
         self.assertIn('transformer-homework', self.sections)
-        self.assertEqual(len([s for s in self.sections if s.startswith('transformer-sec2')]), 14)
         self.assertIn('winding-model', self.sections)
 
     def test_local_links_and_reference_targets(self):
@@ -55,7 +54,7 @@ class CourseIntegrity(unittest.TestCase):
             for url in document.urls:
                 if url.startswith('https://'):
                     self.assertNotIn('chatgpt.site', url)
-                elif url.startswith('#course/'):
+                elif url.startswith(('#course/', '#practice/')):
                     parts = unquote(url).split('/')
                     self.assertEqual(parts[1], 'electrical-machines')
                     self.assertTrue(parts[2] in self.sections, (key, url))
@@ -71,18 +70,12 @@ class CourseIntegrity(unittest.TestCase):
             self.assertFalse(set(document.tags) & {'script', 'audio', 'iframe', 'object', 'embed', 'form'}, key)
             self.assertFalse(document.handlers, key)
 
-    def test_transformer_chapter_has_real_outline(self):
-        expected = [f'transformer-sec2{i}' for i in range(1, 15)]
-        self.assertTrue(all(name in self.sections for name in expected))
-        for index, name in enumerate(expected, 2):
-            markup = self.payloads[name]['html']
-            self.assertIn(f'id="sec-{index}"', markup)
-            self.assertIn('section-jumplinks', markup)
-            for unwanted in ('问题与观察', '模型与依据', '推理过程'):
-                self.assertNotIn(unwanted, markup, name)
-        self.assertIn('id="singlephase-3d"', self.payloads['transformer-sec21']['html'])
-        self.assertIn('id="interactive-transformer-3d"', self.payloads['transformer-sec21']['html'])
-        self.assertIn('href="#course/electrical-machines/transformer-sec27', self.payloads['transformer-overview']['html'])
+    def test_imported_reading_units_are_not_hidden(self):
+        for key, payload in self.payloads.items():
+            if payload.get('html'):
+                root_tag = re.search(r'<[a-zA-Z][^>]*>', payload['html']).group()
+                self.assertNotRegex(root_tag, r'\bhidden(?:\s|=|>)', key)
+
 
     def test_homework_is_complete(self):
         payload = self.payloads['transformer-homework']

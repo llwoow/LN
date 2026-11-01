@@ -19,11 +19,28 @@
   </script>
   <link rel="stylesheet" href="styles.css">
   <script src="courses/electrical-machines/manifest.js" defer></script>
+  <script src="courses/electrical-machines/knowledge-map.js" defer></script>
+  <script src="courses/highschool/courses.js" defer></script>
+  <script src="courses/highschool/catalog.js" defer></script>
   <script src="courses.js" defer></script>
+  <script src="courses/resources/catalog.js" defer></script>
+  <script src="resource-library.js" defer></script>
+  <script src="courses/practice/bank.js" defer></script>
+  <script src="practice.js" defer></script>
+  <script src="highschool-library.js" defer></script>
+  <script src="knowledge-map.js" defer></script>
+  <script src="reference-index.js" defer></script>
+  <script src="publication.js" defer></script>
+  <script src="glossary-index.js" defer></script>
+  <script src="glossary.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7Zm0 10L3 7m9 5 9-5m-9 5v10M7.5 4.5l9 5"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 5h13M8 12h13M8 19h13"/><circle cx="3" cy="5" r=".8"/><circle cx="3" cy="12" r=".8"/><circle cx="3" cy="19" r=".8"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></symbol>
     <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="6" height="6" rx="1.3"/><rect x="14.5" y="3.5" width="6" height="6" rx="1.3"/><rect x="3.5" y="14.5" width="6" height="6" rx="1.3"/><rect x="14.5" y="14.5" width="6" height="6" rx="1.3"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5.5C9 3.5 5 3.5 3 4.5v15c3-1 6-1 9 1 3-2 6-2 9-1v-15c-2-1-6-1-9 1Z"/><path d="M12 5.5v15"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.3.9-4.5 4.4 1.1 6.2-5.7-3-5.7 3 1.1-6.2-4.5-4.4 6.3-.9Z"/></symbol>
@@ -43,15 +60,33 @@
   <a class="skip-link" href="#main">跳到主要内容</a>
   <button class="sidebar-backdrop" id="sidebar-backdrop" aria-label="收起导航" hidden></button>
   <aside class="sidebar" id="sidebar" aria-label="导航">
-    <div class="sidebar-header"><a class="brand" href="#overview" aria-label="LN 首页">LN</a><button class="icon-button" id="collapse-sidebar" aria-label="收起侧栏" aria-controls="sidebar" aria-expanded="true" title="收起侧栏"><svg class="icon"><use href="#i-panel"/></svg></button></div>
-    <button class="nav-link search-link" id="search-shortcut"><svg class="icon"><use href="#i-search"/></svg><span>搜索</span><kbd>/</kbd></button>
-    <nav class="primary-nav" aria-label="主导航">
-      <a class="nav-link" href="#overview" data-nav="overview"><svg class="icon"><use href="#i-grid"/></svg>课程</a>
-      <a class="nav-link" href="#favorites" data-nav="favorites"><svg class="icon"><use href="#i-star"/></svg>收藏<span class="nav-count" id="favorite-count"></span></a>
-    </nav>
-    <details class="subject-group" open><summary>学科<svg class="icon"><use href="#i-chevron"/></svg></summary><nav id="subject-nav" aria-label="学科"></nav></details>
-    <div class="sidebar-bottom">
-      <button class="nav-link" id="open-settings"><svg class="icon"><use href="#i-sliders"/></svg>外观</button>
+    <div class="sidebar-header">
+      <a class="brand" href="#overview" aria-label="LN 首页">LN</a>
+      <div class="sidebar-header-actions">
+        <button class="icon-button" id="search-shortcut" aria-label="搜索课程" title="搜索课程 /"><svg class="icon"><use href="#i-search"/></svg></button>
+        <button class="icon-button" id="collapse-sidebar" aria-label="收起侧栏" aria-controls="sidebar" aria-expanded="true" title="收起侧栏"><svg class="icon"><use href="#i-panel"/></svg></button>
+      </div>
+    </div>
+    <div class="sidebar-content">
+      <nav class="primary-nav" aria-label="主导航">
+        <a class="nav-link" href="#overview" data-nav="overview"><svg class="icon"><use href="#i-grid"/></svg>全部课程</a>
+        <a class="nav-link" href="#favorites" data-nav="favorites"><svg class="icon"><use href="#i-star"/></svg>收藏<span class="nav-count" id="favorite-count"></span></a>
+        <a class="nav-link highschool-entry" href="#highschool" data-nav="highschool"><svg class="icon"><use href="#i-book"/></svg>高中</a>
+        <a class="nav-link" href="#resources" data-nav="resources"><svg class="icon"><use href="#i-file"/></svg>实作与资料</a>
+        <a class="nav-link" href="#practice" data-nav="practice"><svg class="icon"><use href="#i-book"/></svg>练习</a>
+      </nav>
+      <section class="sidebar-section" id="sidebar-favorites" aria-labelledby="sidebar-favorites-title" hidden>
+        <h2 class="sidebar-section-title" id="sidebar-favorites-title">收藏</h2>
+        <nav class="sidebar-course-list" id="sidebar-favorite-list" aria-label="收藏的课程"></nav>
+      </section>
+      <details class="sidebar-section sidebar-courses" open>
+        <summary>课程<svg class="icon"><use href="#i-chevron"/></svg></summary>
+        <nav class="sidebar-course-list" id="sidebar-course-list" aria-label="课程快捷入口"></nav>
+      </details>
+      <details class="subject-group" open><summary>学科<svg class="icon"><use href="#i-chevron"/></svg></summary><nav id="subject-nav" aria-label="学科"></nav></details>
+      <div class="sidebar-bottom">
+        <button class="nav-link" id="open-settings"><svg class="icon"><use href="#i-sliders"/></svg>外观</button>
+      </div>
     </div>
   </aside>
 
@@ -61,7 +96,24 @@
       <div class="topbar-actions"><button class="icon-button" id="quick-theme" aria-label="切换到夜间模式" title="切换日间 / 夜间"><svg class="icon"><use href="#i-moon"/></svg></button><button class="icon-button" id="top-settings" aria-label="外观设置" title="外观"><svg class="icon"><use href="#i-sliders"/></svg></button></div>
     </header>
     <main id="main" tabindex="-1"></main>
+    <nav class="reader-dock" id="reader-dock" aria-label="阅读快捷操作" hidden></nav>
   </div>
+
+  <dialog class="reader-directory" id="reader-directory" aria-labelledby="reader-directory-title">
+    <div class="reader-directory-heading"><h2 id="reader-directory-title">目录</h2><button class="icon-button" id="close-reader-directory" aria-label="关闭目录" title="关闭目录"><svg class="icon"><use href="#i-close"/></svg></button></div>
+    <div id="reader-directory-resource" class="directory-resource-shortcut"></div>
+    <div class="reader-directory-content" id="reader-directory-content"></div>
+  </dialog>
+
+  <dialog class="resource-dialog" id="resource-dialog" aria-labelledby="resource-dialog-title">
+    <div class="dialog-heading"><h2 id="resource-dialog-title">实作与资料</h2><button class="icon-button" data-close-resources aria-label="关闭实作资料">×</button></div>
+    <div id="resource-dialog-content"></div>
+  </dialog>
+
+  <dialog class="practice-dialog" id="practice-dialog" aria-labelledby="practice-dialog-title">
+    <div class="dialog-heading"><h2 id="practice-dialog-title">练习</h2><button class="icon-button" data-close-practice aria-label="关闭练习">×</button></div>
+    <div id="practice-dialog-content"></div>
+  </dialog>
 
   <dialog class="settings-dialog" id="settings-dialog" aria-labelledby="settings-title">
     <div class="dialog-heading"><h2 id="settings-title">外观</h2><button class="icon-button" id="close-settings" aria-label="关闭设置"><svg class="icon"><use href="#i-close"/></svg></button></div>

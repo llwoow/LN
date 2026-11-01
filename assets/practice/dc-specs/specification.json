@@ -1,0 +1,21 @@
+{
+  "sourceType": "manufacturer_published_specification_not_raw_measurement",
+  "manufacturer": "maxon",
+  "part": "118750, RE 25, graphite brushes, 20 W",
+  "checked": "2026-10-30",
+  "url": "https://www.maxongroup.co.uk/maxon/view/product/motor/dcmotor/re/re25/118750",
+  "methodUrl": "https://support.maxongroup.com/hc/en-us/articles/360013761160-Motor-data-and-simulation",
+  "status": "NRND on source page; historical learning example, not a purchasing recommendation",
+  "voltage_V": 15,
+  "no_load_rpm": 9660,
+  "no_load_current_A": 0.0608,
+  "nominal_rpm": 8430,
+  "nominal_torque_Nm": 0.0205,
+  "nominal_current_A": 1.5,
+  "terminal_resistance_ohm": 0.952,
+  "terminal_inductance_H": 0.0000882,
+  "torque_constant_Nm_per_A": 0.0143,
+  "speed_constant_rpm_per_V": 670,
+  "rotor_inertia_kg_m2": 0.00000104,
+  "scope": "Selected factual specifications. No raw test time series or device measurement was obtained. Operating temperatures and the split of loss mechanisms are not identified from these values."
+}

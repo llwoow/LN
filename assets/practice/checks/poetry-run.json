@@ -1,0 +1,21 @@
+{
+  "status": "已读取实际JSON并运行字符检索，未运行外部GUI",
+  "sha": "6bf7e34b40b86e14edb21ae26c28d13b6c59a0a8",
+  "records": 1000,
+  "containsMoon": 123,
+  "exampleTitles": [
+    {
+      "title": "帝京篇十首 三",
+      "author": "太宗皇帝"
+    },
+    {
+      "title": "帝京篇十首 七",
+      "author": "太宗皇帝"
+    },
+    {
+      "title": "帝京篇十首 九",
+      "author": "太宗皇帝"
+    }
+  ],
+  "limitation": "单个分片，非随机样本；字符月也可能表月份，不可直接推断月亮意象或全唐诗频率。"
+}

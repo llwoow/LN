@@ -1,0 +1,7 @@
+control==0.10.2
+magpylib==5.2.2
+sympy==1.14.0
+biopython==1.88
+numpy>=1.23
+scipy>=1.8
+matplotlib>=3.6

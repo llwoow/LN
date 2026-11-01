@@ -1,3 +1,6 @@
 # Local browser verification and generated previews
 .preview/
 __pycache__/
+
+# Generated static deployment output
+dist/

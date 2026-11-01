@@ -93,3 +93,5 @@
 .supplement-pair-textonly{display:block!important}.supplement-pair-textonly .supplement-summary{max-width:none!important}.supplement-summary-inline{border-left:3px solid #5599a7;padding:12px 17px;background:rgba(84,153,167,.07);margin:15px 0 23px;font-size:13px;line-height:1.8}
 
 :root[data-theme=dark] .t3d-view,:root[data-theme=dark] .p3d-stage{background:var(--subtle)}
+/* Shared publication labels align to the reading column, outside formula scrolling. */
+.publication-body .math-display.paper-equation{padding:0;border:0;border-radius:0;background:none;overflow:visible}
