@@ -71,6 +71,19 @@ class CourseIntegrity(unittest.TestCase):
             self.assertFalse(set(document.tags) & {'script', 'audio', 'iframe', 'object', 'embed', 'form'}, key)
             self.assertFalse(document.handlers, key)
 
+    def test_transformer_chapter_has_real_outline(self):
+        expected = [f'transformer-sec2{i}' for i in range(1, 15)]
+        self.assertTrue(all(name in self.sections for name in expected))
+        for index, name in enumerate(expected, 2):
+            markup = self.payloads[name]['html']
+            self.assertIn(f'id="sec-{index}"', markup)
+            self.assertIn('section-jumplinks', markup)
+            for unwanted in ('问题与观察', '模型与依据', '推理过程'):
+                self.assertNotIn(unwanted, markup, name)
+        self.assertIn('id="singlephase-3d"', self.payloads['transformer-sec21']['html'])
+        self.assertIn('id="interactive-transformer-3d"', self.payloads['transformer-sec21']['html'])
+        self.assertIn('href="#course/electrical-machines/transformer-sec27', self.payloads['transformer-overview']['html'])
+
     def test_homework_is_complete(self):
         payload = self.payloads['transformer-homework']
         self.assertEqual(len(payload['questions']), 13)
