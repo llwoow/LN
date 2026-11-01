@@ -213,6 +213,7 @@
       else if (selected.kind === 'document') {
         body.innerHTML = '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
       } else body.innerHTML = payload.html;
+      body.querySelectorAll(':scope > [role="tabpanel"][hidden]').forEach(panel => { panel.hidden = false; });
       if (selected.id === 'transformer-sec21' || selected.id === 'transformer-sec28') {
         await loadScript('courses/electrical-machines/model/transformer-structure.js');
         if (selected.id === 'transformer-sec21') window.LN_MOUNT_TRANSFORMER_MODELS?.();
