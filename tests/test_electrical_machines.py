@@ -44,9 +44,10 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 39)
+        self.assertEqual(len(self.sections), 45)
         self.assertEqual(len({section['group'] for section in self.sections.values()}), 3)
         self.assertIn('transformer-homework', self.sections)
+        self.assertEqual(len([s for s in self.sections if s.startswith('transformer-sec2')]), 14)
         self.assertIn('winding-model', self.sections)
 
     def test_local_links_and_reference_targets(self):

@@ -205,6 +205,7 @@
         await loadScript('courses/electrical-machines/model/motor-winding-model.js');
         await loadScript('courses/electrical-machines/model/motor-winding-viewer.js');
       }
+      if (selected.group === '第2章 变压器' && (selected.id === 'transformer-overview' || selected.id.startsWith('transformer-sec2') || ['transformer-formulas','transformer-pitfalls','transformer-study'].includes(selected.id))) await loadStyle('courses/electrical-machines/model/transformer-lesson.css');
       const body = $('#lesson-body');
       if (!body || body.dataset.lessonKey !== key) return;
       const payload = window.LN_LESSONS[key];
@@ -212,6 +213,11 @@
       else if (selected.kind === 'document') {
         body.innerHTML = '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
       } else body.innerHTML = payload.html;
+      if (selected.id === 'transformer-sec21' || selected.id === 'transformer-sec28') {
+        await loadScript('courses/electrical-machines/model/transformer-structure.js');
+        if (selected.id === 'transformer-sec21') window.LN_MOUNT_TRANSFORMER_MODELS?.();
+        if (selected.id === 'transformer-sec28') window.LN_MOUNT_TRANSFORMER_QUIZ?.();
+      }
       body.setAttribute('aria-busy', 'false');
       body.classList.toggle('model-lesson', selected.kind === 'model');
       body.classList.toggle('pdf-lesson', selected.kind === 'pdf' || selected.kind === 'document');
