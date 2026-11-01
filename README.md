@@ -18,7 +18,7 @@ python -m http.server 4173 --bind 127.0.0.1
 
 `/` 或 `Ctrl/Cmd + K` 搜索，`Esc` 关闭设置或手机侧栏。
 
-界面规范见 `DESIGN.md`。外观、收藏与侧栏状态保存在当前浏览器；本地 HTTP 预览的存储行为通常更稳定。
+项目要求见 [REQUIREMENTS.md](REQUIREMENTS.md)，约束内容质量、实际阅读验收、完成声明及版本合并；执行入口见 [AGENTS.md](AGENTS.md)。界面规范见 `DESIGN.md`。外观、收藏与侧栏状态保存在当前浏览器；本地 HTTP 预览的存储行为通常更稳定。
 
 材料核查及转换说明见 `courses/electrical-machines/REVIEW.md`。检查命令：
 
