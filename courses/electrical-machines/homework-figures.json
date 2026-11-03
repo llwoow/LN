@@ -1,0 +1,89 @@
+{
+  "pdfSHA256": "c0772a647444c484ca5ed8c25cd76a24b8780dfcaf3fad2cb6284ae12c77984c",
+  "figures": [
+    {
+      "file": "q217-connection.svg",
+      "pdfPage": 5,
+      "clipPoints": [
+        64,
+        61,
+        530,
+        209
+      ],
+      "kind": "original PDF vector crop; scientific wiring preserved; text paths retained",
+      "sha256": "8c98e2210781921c3622ddb04aea22625f2c92040f9a271ddb2ecad97158ab77"
+    },
+    {
+      "file": "q219-t-circuit.svg",
+      "pdfPage": 6,
+      "clipPoints": [
+        64,
+        283,
+        531,
+        468
+      ],
+      "kind": "original PDF vector crop; scientific wiring preserved; text paths retained",
+      "sha256": "4f70159471e6d2a22f2002ffba77c32efd6f10307f6af4fed834b2ba72775708"
+    },
+    {
+      "file": "q220-a.svg",
+      "pdfPage": 8,
+      "clipPoints": [
+        65,
+        96,
+        531,
+        309
+      ],
+      "kind": "original PDF vector crop; scientific wiring preserved; text paths retained",
+      "sha256": "f999741c169a42d61e9b0a64200abfb96beb3ebc60c975375190c37b3f069aa8"
+    },
+    {
+      "file": "q220-b.svg",
+      "pdfPage": 8,
+      "clipPoints": [
+        65,
+        380,
+        531,
+        591
+      ],
+      "kind": "original PDF vector crop; scientific wiring preserved; text paths retained",
+      "sha256": "0a8dc21698308c144e636c987866ebb0cea6889bd8e8bc7b1f566a7a45c132a8"
+    },
+    {
+      "file": "q222-open.svg",
+      "pdfPage": 9,
+      "clipPoints": [
+        66,
+        415,
+        528,
+        550
+      ],
+      "kind": "original PDF vector crop; scientific wiring preserved; text paths retained",
+      "sha256": "05d857c12415925831da55967d9e5479a682c78b577ddc3b99317913a456fddb"
+    },
+    {
+      "file": "q222-short.svg",
+      "pdfPage": 9,
+      "clipPoints": [
+        66,
+        584,
+        528,
+        727
+      ],
+      "kind": "original PDF vector crop; scientific wiring preserved; text paths retained",
+      "sha256": "c9b08268a96bd429a0b18a143050bb714c2529c8313df2940b258818beea8b43"
+    },
+    {
+      "file": "q226-load-sharing.svg",
+      "pdfPage": 12,
+      "clipPoints": [
+        64,
+        685,
+        524,
+        768
+      ],
+      "kind": "original PDF vector crop; scientific wiring preserved; text paths retained",
+      "sha256": "728d0082bbbec93b3f54d2c894470021edaf88337ad99e22d5a97ef506ab743c"
+    }
+  ]
+}

@@ -6,15 +6,14 @@ import cmath
 import json
 import math
 import re
+import runpy
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 COURSE = ROOT / 'courses/electrical-machines'
 
 
-def assignment(path):
-    source = path.read_text('utf-8-sig').strip()
-    return json.loads(source[source.rfind(']=') + 2:-1]) if ']=' in source else json.loads(source.split('=', 1)[1][:-1])
+assignment = runpy.run_path(str(ROOT / 'scripts/build-reference-index.py'))['assignment']
 
 
 class Elements(HTMLParser):

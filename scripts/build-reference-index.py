@@ -120,6 +120,12 @@ def build_index():
                     if not number:
                         counters[counter_key] += 1; number = prefix + '.' + str(counters[counter_key])
                     append(kind, node, number, i, aliases)
+                    # Normalize for resolution while keeping the source's printed label.
+                    printed_captions=[n for n in node.walk() if n.tag in {'figcaption','caption'}]
+                    printed=re.match(r'\s*(?:图|表)\s*(' + NUMBER + ')',printed_captions[0].text()) if printed_captions else None
+                    if printed and normalize(printed[1])==number and printed[1]!=number:
+                        output['targets'][-1]['displayNumber']=printed[1]
+
             output['sections'][section['id']] = current
         result[course_id] = output
     return result

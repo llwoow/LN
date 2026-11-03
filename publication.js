@@ -6,7 +6,7 @@
   let pendingRestore = null, activeTarget = null, sequence = 0;
   const canonical = (value) => { try { return decodeURIComponent(value); } catch { return value; } };
   const equalHash = (a, b) => canonical(a) === canonical(b);
-  const normalize = (value) => value.replace(/[‐‑–—－-．]/g, '.');
+  const normalize = (value) => value.replace(/[‐‑–—－．-]/g, '.');
   const route = (course, section, anchor) => '#course/' + course + '/' + section + '/' + encodeURIComponent(anchor);
   const byId = (body, id) => [...body.querySelectorAll('[id]')].find((element) => element.id === id);
   const make = (tag, className, text) => { const element = document.createElement(tag); element.className = className; if (text) element.textContent = text; return element; };
@@ -25,10 +25,10 @@
   }
 
   function targetLabel(body, target, course, prefix) {
-    const label = make('a', 'paper-target-label', prefix + target.number);
+    const label = make('a', 'paper-target-label', prefix + (target.displayNumber || target.number));
     label.href = route(course.id, target.section, target.anchor);
-    label.title = '定位' + prefix + target.number;
-    label.setAttribute('aria-label', prefix + target.number);
+    label.title = '定位' + prefix + (target.displayNumber || target.number);
+    label.setAttribute('aria-label', prefix + (target.displayNumber || target.number));
     return label;
   }
 
@@ -157,7 +157,7 @@
         pendingRestore = null;
         if (anchor) markTarget(body, anchor, false);
         restorePosition(body, restore);
-      } else if (anchor && !anchor.startsWith('page-')) markTarget(body, anchor);
+      } else if (anchor && (!anchor.startsWith('page-') || !body.querySelector('#pdf-image'))) markTarget(body, anchor);
       updateReturn();
     })));
   }

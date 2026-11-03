@@ -1914,6 +1914,290 @@
         "transformer-sec214"
       ],
       "match": "本页其他符号与量纲：U：端电压，单位V；U_1：一次端电压，单位V；U_2：二次端电压，单位V；I：电流，单位A；N：绕组匝数。大写交流电量依本页约定使用有效值或有效值相量；参考方向以所在方程和图中箭头为准。"
+    },
+    {
+      "id": "homework-ratio",
+      "keys": [
+        "k",
+        "N_1",
+        "N_2"
+      ],
+      "title": "匝数与变比",
+      "description": "N₁、N₂分别为一次、二次绕组匝数；k=N₁/N₂是绕组匝比。三相题须先由接法确定绕组相电压，不能直接拿线电压比代替匝比。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "匝数与变比：N₁、N₂分别为一次、二次绕组匝数；k=N₁/N₂是绕组匝比。三相题须先由接法确定绕组相电压，不能直接拿线电压比代替匝比。"
+    },
+    {
+      "id": "homework-ports",
+      "keys": [
+        "U_1",
+        "U_2",
+        "U_1N",
+        "U_2N",
+        "U_20",
+        "bar:U_1",
+        "bar:U_2",
+        "under:U_1",
+        "under:U_2"
+      ],
+      "title": "端电压与额定量",
+      "description": "U₁、U₂为一次、二次端电压，单位V；下标N为额定值，U₂₀为空载二次电压。三相题题给额定电压通常为线电压，计算绕组量需按Y/Δ接法换算。下划线表示按题目参考方向的相量。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "端电压与额定量：U₁、U₂为一次、二次端电压，单位V；下标N为额定值，U₂₀为空载二次电压。三相题题给额定电压通常为线电压，计算绕组量需按Y/Δ接法换算。下划线表示按题目参考方向的相量。"
+    },
+    {
+      "id": "homework-emf",
+      "keys": [
+        "E",
+        "E_1",
+        "E_2",
+        "bar:E_1",
+        "bar:E_2",
+        "e",
+        "e_1",
+        "e_2",
+        "under:E_1",
+        "under:E_2"
+      ],
+      "title": "感应电动势",
+      "description": "e为瞬时感应电动势，E为正弦稳态有效值；带下划线者为相量，单位V。法拉第负号与端口方程的符号须随参考方向统一，不能在同一题中任意换向。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "感应电动势：e为瞬时感应电动势，E为正弦稳态有效值；带下划线者为相量，单位V。法拉第负号与端口方程的符号须随参考方向统一，不能在同一题中任意换向。"
+    },
+    {
+      "id": "homework-current",
+      "keys": [
+        "I_1",
+        "I_2",
+        "I_2L",
+        "bar:I_1",
+        "bar:I_2",
+        "bar:I_2L",
+        "under:I_1",
+        "under:I_2",
+        "under:I_2L"
+      ],
+      "title": "绕组与负载电流",
+      "description": "I₁、I₂为题中明确的一次、二次电流，单位A；第2-19题I₂L特指由二次端流向负载的电流。下划线表示相量；三相题须区分线路电流和每相绕组电流。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "绕组与负载电流：I₁、I₂为题中明确的一次、二次电流，单位A；第2-19题I₂L特指由二次端流向负载的电流。下划线表示相量；三相题须区分线路电流和每相绕组电流。"
+    },
+    {
+      "id": "homework-excitation",
+      "keys": [
+        "I_0",
+        "i_0",
+        "I_m",
+        "i_m"
+      ],
+      "title": "空载电流与净励磁电流",
+      "description": "I₀或i₀为空载工况电流；第2-4题iₘ是负载时净励磁安匝所对应的等效电流，不专指并联磁化支路的无功分量。忽略串联压降等条件下才可近似用空载电流代替。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "空载电流与净励磁电流：I₀或i₀为空载工况电流；第2-4题iₘ是负载时净励磁安匝所对应的等效电流，不专指并联磁化支路的无功分量。忽略串联压降等条件下才可近似用空载电流代替。"
+    },
+    {
+      "id": "homework-loss",
+      "keys": [
+        "P_0",
+        "P_k",
+        "P_kN",
+        "P_Fe",
+        "P_Cu",
+        "P_1",
+        "P_2"
+      ],
+      "title": "功率与损耗",
+      "description": "P₀为空载输入有功，近似代表固定铁耗；Pₖ或P_kN为额定短路损耗，近似代表额定可变铜耗。P_Fe为铁耗、P_Cu为铜耗，P₁与P₂为输入与输出有功，单位W；kW须先统一单位。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "功率与损耗：P₀为空载输入有功，近似代表固定铁耗；Pₖ或P_kN为额定短路损耗，近似代表额定可变铜耗。P_Fe为铁耗、P_Cu为铜耗，P₁与P₂为输入与输出有功，单位W；kW须先统一单位。"
+    },
+    {
+      "id": "homework-series",
+      "keys": [
+        "R_m",
+        "X_m",
+        "Z_m",
+        "Z_m,LV"
+      ],
+      "title": "串联励磁参数",
+      "description": "第2-19与2-22题使用Zₘ=Rₘ+jXₘ这一串联励磁表示，Rₘ、Xₘ单位Ω；不能将其原数值直接接成并联铁耗、磁化支路。带LV的量表示折到低压侧。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "串联励磁参数：第2-19与2-22题使用Zₘ=Rₘ+jXₘ这一串联励磁表示，Rₘ、Xₘ单位Ω；不能将其原数值直接接成并联铁耗、磁化支路。带LV的量表示折到低压侧。"
+    },
+    {
+      "id": "homework-parallel",
+      "keys": [
+        "R_Fe",
+        "X_μ"
+      ],
+      "title": "并联励磁支路",
+      "description": "R_Fe为并联铁耗电阻，X_μ为并联磁化电抗，单位Ω。它们与串联形式的Rₘ、Xₘ是不同参数；第2-22题R_Fe约20408 Ω，串联Rₘ却为196 Ω。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "并联励磁支路：R_Fe为并联铁耗电阻，X_μ为并联磁化电抗，单位Ω。它们与串联形式的Rₘ、Xₘ是不同参数；第2-22题R_Fe约20408 Ω，串联Rₘ却为196 Ω。"
+    },
+    {
+      "id": "homework-leakage",
+      "keys": [
+        "R_1",
+        "R_2",
+        "X_1σ",
+        "X_2σ",
+        "X_σ",
+        "L_σ",
+        "Z_1"
+      ],
+      "title": "电阻与漏磁参数",
+      "description": "R₁、R₂是各侧绕组电阻，X₁σ、X₂σ为漏抗，单位Ω；Lσ为漏感，单位H，Xσ=2πfLσ。各侧量相加前必须先折到同一物理侧。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "电阻与漏磁参数：R₁、R₂是各侧绕组电阻，X₁σ、X₂σ为漏抗，单位Ω；Lσ为漏感，单位H，Xσ=2πfLσ。各侧量相加前必须先折到同一物理侧。"
+    },
+    {
+      "id": "homework-short",
+      "keys": [
+        "U_k",
+        "I_k",
+        "Z_k",
+        "R_k",
+        "X_k",
+        "r_k",
+        "x_k",
+        "Z_B"
+      ],
+      "title": "短路参数和基准",
+      "description": "Uₖ、Iₖ为短路试验侧电压和电流；Zₖ=Rₖ+jXₖ为同侧等效串联阻抗，单位Ω。Z_B为阻抗基准，除以基准得到标幺值。参数后的星号在这里是标幺记号，电流相量后的共轭星号须由功率公式语境区分。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "短路参数和基准：Uₖ、Iₖ为短路试验侧电压和电流；Zₖ=Rₖ+jXₖ为同侧等效串联阻抗，单位Ω。Z_B为阻抗基准，除以基准得到标幺值。参数后的星号在这里是标幺记号，电流相量后的共轭星号须由功率公式语境区分。"
+    },
+    {
+      "id": "homework-referred",
+      "keys": [
+        "U_2'",
+        "E_2'",
+        "I_2'",
+        "R_2'",
+        "Z_2'",
+        "bar:U_2'",
+        "bar:I_2'",
+        "under:U_2'",
+        "under:I_2'"
+      ],
+      "title": "归算量与撇号",
+      "description": "第2-6、2-7与2-19题的撇号表示二次折到一次：电压乘k，电流除k，阻抗乘k²。传递复功率与对应铜耗保持不变；真实二次端口量须反向还原。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "归算量与撇号：第2-6、2-7与2-19题的撇号表示二次折到一次：电压乘k，电流除k，阻抗乘k²。传递复功率与对应铜耗保持不变；真实二次端口量须反向还原。"
+    },
+    {
+      "id": "homework-flux",
+      "keys": [
+        "Φ_m",
+        "Φ",
+        "f",
+        "ω"
+      ],
+      "title": "主磁通与频率",
+      "description": "Φ为主磁通，Φₘ为正弦主磁通峰值，单位Wb；f为频率，单位Hz，ω=2πf为电角频率，单位rad/s。4.44公式把磁通峰值与感应电势有效值联系起来。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "主磁通与频率：Φ为主磁通，Φₘ为正弦主磁通峰值，单位Wb；f为频率，单位Hz，ω=2πf为电角频率，单位rad/s。4.44公式把磁通峰值与感应电势有效值联系起来。"
+    },
+    {
+      "id": "homework-efficiency",
+      "keys": [
+        "η",
+        "η_N",
+        "η_max",
+        "β",
+        "β_max",
+        "A"
+      ],
+      "title": "效率与负载率",
+      "description": "η是输出有功除输入有功；下标N为额定工况、max为最大效率工况。β为负载电流相对额定值的比例。第2-13题A专指S_Ncosφ₂这一固定有功功率系数，单位W，不是铁心截面积或电流单位。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "效率与负载率：η是输出有功除输入有功；下标N为额定工况、max为最大效率工况。β为负载电流相对额定值的比例。第2-13题A专指S_Ncosφ₂这一固定有功功率系数，单位W，不是铁心截面积或电流单位。"
+    },
+    {
+      "id": "homework-capacity",
+      "keys": [
+        "S_N",
+        "S_N1",
+        "S_N2",
+        "S_1",
+        "S_2",
+        "S_total"
+      ],
+      "title": "容量与功率因数",
+      "description": "S_N为额定视在容量；三相题为三相总容量。第2-26题下标1、2区分两台设备的分担容量S₁、S₂与各自额定容量，单位VA或kVA。复功率在第2-7题另用带下划线的S表示。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "容量与功率因数：S_N为额定视在容量；三相题为三相总容量。第2-26题下标1、2区分两台设备的分担容量S₁、S₂与各自额定容量，单位VA或kVA。复功率在第2-7题另用带下划线的S表示。"
+    },
+    {
+      "id": "homework-angle",
+      "keys": [
+        "φ",
+        "φ_2"
+      ],
+      "title": "功率因数角",
+      "description": "φ或φ₂为题中电流相对电压的功率因数角，滞后通常取正、超前取负。电压调整率中的sinφ因此可正可负；三相量下标φ则是“每相”的标记，二者不能混用。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "功率因数角：φ或φ₂为题中电流相对电压的功率因数角，滞后通常取正、超前取负。电压调整率中的sinφ因此可正可负；三相量下标φ则是“每相”的标记，二者不能混用。"
+    },
+    {
+      "id": "homework-complex-power",
+      "keys": [
+        "under:S_2",
+        "under:S_2'"
+      ],
+      "title": "复功率",
+      "description": "第2-7题带下划线的S₂为复功率，定义为端电压相量乘以电流相量的共轭，单位VA；它与视在功率幅值U₂I₂的标记分开，归算保持对应复功率不变。",
+      "section": "transformer-homework",
+      "sections": [
+        "transformer-homework"
+      ],
+      "match": "复功率：第2-7题带下划线的S₂为复功率，定义为端电压相量乘以电流相量的共轭，单位VA；它与视在功率幅值U₂I₂的标记分开，归算保持对应复功率不变。"
     }
   ]
 }

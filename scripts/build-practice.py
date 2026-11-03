@@ -1,4 +1,4 @@
-"""Validate authored diagnostic exercises and compile their browser data."""
+"""Validate exercise records and original/source provenance and compile their browser data."""
 import json
 import math
 from pathlib import Path
@@ -25,6 +25,11 @@ skills={'建模','因果与证据','推导计算','边界与反例','迁移设�
 for q in data['questions']:
     assert q['id'] not in seen,q['id'];seen.add(q['id'])
     assert q['course'] in courses and q['sections'] and set(q['sections'])<=courses[q['course']],q['id']
+    if q.get('readingAnchor'):
+        assert q['course']=='electrical-machines' and 'transformer-homework' in q['sections'],q['id']
+        payload=assignment(ROOT/'courses/electrical-machines/lessons/transformer-homework.js')
+        document=runpy.run_path(str(ROOT/'scripts/build-reference-index.py'))['Document'](payload['html']).root
+        assert any(n.attrs.get('id')==q['readingAnchor'] for n in document.walk()),q['id']
     coverage.add(q['course'])
     assert q['title'] and q['prompt'] and q['origin'] and q['hint'] and q['transfer'],q['id']
     assert len(q['steps'])>=3 and q['skills'] and set(q['skills'])<=skills,q['id']
@@ -42,4 +47,4 @@ for q in data['questions']:
 assert coverage==set(courses),'Exercise courses differ from registered courses'
 assert sum(q['type'] in {'single','multi'} for q in data['questions'])>len(seen)/2,'Choices should be the majority'
 (ROOT/'courses/practice/bank.js').write_text('window.LN_PRACTICE_BANK='+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\n')
-print('Built',len(seen),'authored diagnostic questions across',len(coverage),'courses; coverage is not a claim of full lesson assessment.')
+print('Built',len(seen),'exercise records across',len(coverage),'courses; coverage is not a claim of full lesson assessment.')

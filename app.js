@@ -310,6 +310,12 @@
         if (selected.id === 'transformer-sec21') window.LN_MOUNT_TRANSFORMER_MODELS?.();
         if (selected.id === 'transformer-sec28') window.LN_MOUNT_TRANSFORMER_QUIZ?.();
       }
+      const questionJump=body.querySelector('[data-homework-jump]');
+      if (questionJump && anchor?.startsWith('question-')) questionJump.value=anchor.slice(9);
+      questionJump?.addEventListener('change', event => {
+        const question=payload.questions?.find(q=>q.number===event.target.value);
+        if (question) window.LNPublication.followReference('#course/'+course.id+'/'+selected.id+'/'+question.anchor,body);
+      });
       if (payload.html) {
         window.LNPublication.prepare(body, course, selected);
         window.LNGlossary.prepare(body, course, selected);

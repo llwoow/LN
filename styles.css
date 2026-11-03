@@ -665,3 +665,22 @@ body.resource-open { overflow: hidden; }
 /* SVG glyphs include holes: the full symbol box must respond to touch and click. */
 mjx-container .definition-symbol{pointer-events:bounding-box;cursor:pointer}
 mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* Solved exercises use the reading column; only formulas and wide tables scroll. */
+.homework-navigation{position:sticky;top:66px;z-index:3;background:var(--surface);padding:8px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:1em 0 1.6em}
+.homework-navigation label{font-family:var(--font);font-weight:700}
+.homework-navigation select{min-width:0;max-width:100%;flex:1 1 230px;padding:9px 12px;border:1.5px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);font:inherit}
+.homework-problem{margin:2.4em 0;scroll-margin-top:85px}
+.homework-problem>h3{font-size:1.2em;border-bottom:1.5px solid var(--border);padding-bottom:.55em}
+.lesson .homework-prompt{font-size:inherit;line-height:inherit}
+.lesson .homework-problem p{text-align:start}
+.homework-prompt>h4{margin-top:0}
+.homework-review{border-left:2px solid var(--border);padding-left:1em}
+.homework-diagram{display:block;width:100%;height:auto;max-width:100%;background:#fff;border:1px solid var(--border);border-radius:4px}
+.homework-connection+.homework-connection{margin-top:1.4em}
+.homework-connection h4{margin-bottom:.4em}
+.diagram-legend{font:600 14px/1.5 var(--font);color:var(--text)}
+.homework-knowledge{display:flex;gap:8px 16px;flex-wrap:wrap;margin:1em 0;font:600 14px/1.6 var(--font)}
+@media print{.homework-navigation,.homework-problem>p:has([data-open-practice]){display:none}.homework-problem{break-before:auto}}
+
+.homework-diagram-link{display:block;cursor:zoom-in;text-decoration:none!important}

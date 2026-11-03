@@ -1,0 +1,114 @@
+{
+  "scope": "Arithmetic and consistency checks for the declared idealized exercise models, not real equipment validation.",
+  "q2_2": {
+    "flux_ratio": 1.2,
+    "leakage_reactance_ratio": 0.8333333333333334,
+    "empirical_iron_loss_ratio": 1.1361269771988887
+  },
+  "q2_17": {
+    "primary_line_A": 288.6751345948129,
+    "secondary_line_A": 458.21449935684586,
+    "primary_phase_V": 5773.502691896258,
+    "secondary_phase_A": 264.55026455026456,
+    "primary_three_phase_VA": 5000000.0,
+    "secondary_three_phase_VA": 5000000.0
+  },
+  "q2_19": {
+    "ratio": 3.3692307692307693,
+    "ratio_squared": 11.351715976331361,
+    "secondary_impedance_on_HV_ohm": {
+      "real": 1.702757396449704,
+      "imag": 10.94305420118343,
+      "magnitude": 11.074737829908322,
+      "angle_deg": 81.15560629150879
+    },
+    "E2_V": {
+      "real": 6125.712,
+      "imag": 122.61599999999999,
+      "magnitude": 6126.939055548048,
+      "angle_deg": 1.1467142517172773
+    },
+    "magnetizing_current_on_LV_A": {
+      "real": 0.6515594738638955,
+      "imag": -5.45419789162499,
+      "magnitude": 5.492977734252004,
+      "angle_deg": -83.1877187543732
+    },
+    "I1_A": {
+      "real": 42.933111259365994,
+      "imag": -33.673620378792805,
+      "magnitude": 54.5634012120226,
+      "angle_deg": -38.10806597201162
+    },
+    "U1_V": {
+      "real": 21251.534621337574,
+      "imag": 1000.5462847646801,
+      "magnitude": 21275.07500879529,
+      "angle_deg": 2.695559586377519
+    },
+    "I1_series_only_A": {
+      "real": 42.73972602739726,
+      "imag": -32.054794520547944,
+      "magnitude": 53.42465753424658,
+      "angle_deg": -36.86989764584402
+    },
+    "U1_series_only_V": {
+      "real": 21226.181189462593,
+      "imag": 1001.1133808219179,
+      "magnitude": 21249.776372685814,
+      "angle_deg": 2.7003018827394247
+    },
+    "input_W": 878702.4845655771,
+    "output_W": 864000.0,
+    "primary_copper_W": 6519.990806494886,
+    "secondary_copper_W": 4860.0,
+    "core_W": 3322.493759082261,
+    "power_balance_residual_W": -2.637534635141492e-11,
+    "magnetizing_node_residual_A": 3.128879526812945e-15
+  },
+  "q2_20": {
+    "HV_line_angle_deg": 30,
+    "LV_line_angle_a_deg": 180,
+    "LV_line_angle_b_deg": 180,
+    "LV_lag_mod360_deg": 210,
+    "clock_group": 7.0
+  },
+  "q2_22": {
+    "series_Rm_ohm": 196.0,
+    "series_Xm_ohm": 1990.372829396543,
+    "parallel_Rfe_ohm": 20408.163265306124,
+    "Rk_ohm": 1.4,
+    "Xk_ohm": 5.007993610219566,
+    "each_referred_R_ohm": 0.7,
+    "each_referred_X_ohm": 2.503996805109783,
+    "base_ohm": 100,
+    "regulation_percent": 4.124796166131739,
+    "rated_efficiency_percent": 97.69202588838687,
+    "beta_max": 0.5916079783099616,
+    "load_at_max_efficiency_VA": 591607.9783099616,
+    "secondary_current_at_max_efficiency_A": 93.90602830316851,
+    "max_output_W": 473286.3826479693,
+    "max_efficiency_percent": 97.97137730393419,
+    "loss_equality_residual_W": 0.0
+  },
+  "q2_25": {
+    "secondary_phase_Z1_ohm": 0.24917410714285712,
+    "secondary_phase_Z2_ohm": 0.4640625,
+    "secondary_phase_current_A": 70.10296372797546,
+    "machine1_primary_phase_A": 61.722796593489235,
+    "machine2_primary_phase_A": 60.71094746900581,
+    "loop_voltage_residual_V": -7.105427357601002e-15,
+    "book_secondary_phase_current_A": 68.79,
+    "loop_impedance_required_by_book_ohm": 0.7268498328245384
+  },
+  "q2_26": {
+    "machine1_kVA": 137.24340175953077,
+    "machine2_kVA": 262.7565982404692,
+    "machine1_load_ratio": 0.7624633431085043,
+    "machine2_load_ratio": 0.8211143695014662,
+    "machine1_at_limit_kVA": 167.1428571428571,
+    "maximum_total_kVA": 487.1428571428571,
+    "primary_of_distribution_sum_residual_kVA": 0.0,
+    "machine1_secondary_rated_line_A": 259.8076211353316
+  }
+}

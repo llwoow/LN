@@ -55,13 +55,14 @@
     if (name === 'msubsup' && c.length >= 3) return atom(c[0]) + '_' + clean(plain(c[1])) + (/[′']/.test(plain(c[2])) ? "'" : '');
     if (name === 'msup' && c.length >= 2) return atom(c[0]) + (/[′']/.test(plain(c[1])) ? "'" : '');
     if (name === 'mover' && c.length >= 2) return (/[˙̇⋅.]/.test(plain(c[1])) ? 'dot:' : /[¯ˉ‾]/.test(plain(c[1])) ? 'bar:' : '') + atom(c[0]);
+    if (name === 'munder' && c.length >= 2 && /[¯ˉ‾_]/.test(plain(c[1]))) return 'under:' + atom(c[0]);
     if (c.length === 1 && ['mrow','mstyle','mpadded','semantics','math'].includes(name)) return atom(c[0]);
     return '';
   }
   function symbols(math, course, section) {
     const list = [];
     function visit(node) {
-      if (['mi','mtext','msub','msup','msubsup','mover'].includes(node.localName)) {
+      if (['mi','mtext','msub','msup','msubsup','mover','munder'].includes(node.localName)) {
         const key = atom(node);
         const next = node.nextElementSibling;
         if (/^[fgh]$/.test(key) && next?.localName === 'mo' && next.textContent === '(') return;
@@ -77,7 +78,7 @@
       const children=[...node.children].filter((child)=>child.localName!=='annotation');
       for(let i=0;i<children.length;i++) {
         const child=children[i],next=children[i+1];
-        if(plain(child)==='Δ' && next && ['mi','mtext','msub','msup','msubsup','mover'].includes(next.localName)) {
+        if(plain(child)==='Δ' && next && ['mi','mtext','msub','msup','msubsup','mover','munder'].includes(next.localName)) {
           const key='delta:'+atom(next),entry=resolveSymbol(course,section,key);
           if(entry)list.push({key,entry,visible:displayKey(plain(next))});
           i++;continue;
@@ -100,7 +101,7 @@
   }
   function compositeParent(element, root) {
     for (let parent = element.parentElement; parent && parent !== root; parent = parent.parentElement) {
-      if (parent.classList.contains('accent') || parent.classList.contains('overline') || (parent.classList.contains('mord') && parent.querySelector(':scope > .msupsub'))) return parent;
+      if (parent.classList.contains('accent') || parent.classList.contains('overline') || parent.classList.contains('underline') || (parent.classList.contains('mord') && parent.querySelector(':scope > .msupsub'))) return parent;
     }
     return null;
   }
@@ -177,9 +178,11 @@
           if (!item.key.startsWith('subscript:') && /^[A-Za-z]$/.test(item.visible) && (element.classList.contains('mathrm') || element.querySelector('.mathrm'))) return false;
           const accent = element.classList.contains('accent') || !!element.querySelector('.accent');
           const overline = element.classList.contains('overline') || !!element.querySelector('.overline') || [...element.querySelectorAll('.accent-body')].some(n=>/[¯ˉ‾]/.test(n.textContent));
+          const underline = element.classList.contains('underline') || !!element.querySelector('.underline');
+          if (item.key.startsWith('under:') ? !underline : underline) return false;
           const dot = accent && [...element.querySelectorAll('.accent-body')].some(n=>/[˙̇⋅]/.test(n.textContent));
           if (item.key.startsWith('bar:') ? !overline : item.key.startsWith('dot:') ? !dot || overline : dot || overline) return false;
-          const baseKey = item.key.replace(/^(?:delta:)?(?:bar:|dot:)?/, '');
+          const baseKey = item.key.replace(/^(?:delta:)?(?:bar:|dot:|under:)?/, '');
           const script = element.classList.contains('mathcal') || !!element.querySelector('.mathcal');
           if (baseKey.startsWith('cal:') !== script) return false;
           const bold = element.classList.contains('boldsymbol') || element.classList.contains('mathbf') || !!element.querySelector('.boldsymbol,.mathbf');
