@@ -36,6 +36,8 @@
   const dialog = $('#settings-dialog');
   const readerDock = $('#reader-dock');
   const readerDirectory = $('#reader-directory');
+  const wideReader = matchMedia('(min-width: 1100px)');
+  let questionNavigation = null;
   let collapsed = document.documentElement.dataset.sidebar === 'collapsed';
   let mobileOpen = false;
   let currentView = 'overview';
@@ -214,13 +216,22 @@
   function renderReaderDock(course, selected, outline) {
     const sequence=readingSections(course,selected),index = sequence.indexOf(selected);
     const step = (section, label, symbol) => section ? '<a class="reader-dock-item" href="#course/' + course.id + '/' + section.id + '" aria-label="' + label + '：' + escapeHTML(section.title) + '" title="' + escapeHTML(section.title) + '">' + icon(symbol) + '<span>' + label + '</span></a>' : '<button class="reader-dock-item" disabled aria-label="' + label + '，已到课程边界">' + icon(symbol) + '<span>' + label + '</span></button>';
-    readerDock.innerHTML = '<button class="reader-dock-item" data-reader-directory aria-haspopup="dialog" aria-controls="reader-directory">' + icon('list') + '<span>目录</span></button><a class="reader-dock-item" href="#course/' + course.id + '/map">' + icon('network') + '<span>图谱</span></a>' + step(sequence[index - 1], '上一节', 'back') + step(sequence[index + 1], '下一节', 'chevron') + '<button class="reader-dock-item" data-reader-top>' + icon('up') + '<span>顶部</span></button>';
+    readerDock.innerHTML = '<button class="reader-dock-item" data-reader-directory aria-label="目录与选题" title="目录与选题" aria-haspopup="dialog" aria-controls="reader-directory">' + icon('list') + '<span>目录</span></button><a class="reader-dock-item" href="#course/' + course.id + '/map" aria-label="知识图谱" title="知识图谱">' + icon('network') + '<span>图谱</span></a>' + step(sequence[index - 1], '上一节', 'back') + step(sequence[index + 1], '下一节', 'chevron') + '<button class="reader-dock-item" data-reader-top aria-label="回到顶部" title="回到顶部">' + icon('up') + '<span>顶部</span></button>';
     readerDock.hidden = false;
     document.body.classList.add('is-reading');
     $('#reader-directory-title').textContent = course.title + ' · 目录';
     $('#reader-directory-content').innerHTML = outline;
     $('#reader-directory-resource').innerHTML = window.LNResources.button(course, selected, '本节实作与资料') + window.LNPractice.button(course, selected, '本节练习');
   }
+
+  function placeQuestionNavigation() {
+    if (!questionNavigation) return;
+    const header = $('#reader-question-slot'), directory = $('#reader-directory-question');
+    (wideReader.matches ? header : directory).append(questionNavigation);
+    header.hidden = !wideReader.matches;
+    directory.hidden = wideReader.matches;
+  }
+  wideReader.addEventListener('change', placeQuestionNavigation);
 
   function openReaderDirectory() {
     if (!readerDirectory.open) readerDirectory.showModal();
@@ -314,8 +325,13 @@
       if (questionJump && anchor?.startsWith('question-')) questionJump.value=anchor.slice(9);
       questionJump?.addEventListener('change', event => {
         const question=payload.questions?.find(q=>q.number===event.target.value);
-        if (question) window.LNPublication.followReference('#course/'+course.id+'/'+selected.id+'/'+question.anchor,body);
+        if (question) {
+          if (readerDirectory.open) readerDirectory.close();
+          window.LNPublication.followReference('#course/'+course.id+'/'+selected.id+'/'+question.anchor,body);
+        }
       });
+      questionNavigation = questionJump?.closest('.homework-navigation') || null;
+      placeQuestionNavigation();
       if (payload.html) {
         window.LNPublication.prepare(body, course, selected);
         window.LNGlossary.prepare(body, course, selected);
@@ -351,6 +367,10 @@
     if (readerDirectory.open) readerDirectory.close();
     readerDock.hidden = true;
     readerDock.innerHTML = '';
+    questionNavigation = null;
+    for (const slot of [$('#reader-question-slot'), $('#reader-directory-question')]) {
+      slot.replaceChildren(); slot.hidden = true;
+    }
     document.body.classList.remove('is-reading', 'directory-open');
     main.classList.remove('course-main', 'map-main');
     currentView = ['favorites', 'course', 'highschool', 'resources', 'practice'].includes(view) ? view : 'overview';

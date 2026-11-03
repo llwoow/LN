@@ -29,13 +29,16 @@ with sync_playwright() as p:
   assert not page.evaluate('document.documentElement.scrollWidth>innerWidth')
   assert page.locator('#reader-dock').is_visible()
   assert page.locator('.paper-equation.is-numbered').evaluate_all('(ns)=>ns.every(e=>Math.abs(e.getBoundingClientRect().right-e.querySelector(".equation-number").getBoundingClientRect().right)<2)')
-  # Sticky navigation must choose the title, rather than the middle of a long solution.
+  # Header/directory selection reaches the title without a second floating toolbar.
   page.locator('#question-2-19').scroll_into_view_if_needed();page.mouse.wheel(0,200);page.wait_for_timeout(100);origin=page.evaluate('scrollY')
-  assert 60<=page.locator('.homework-navigation').bounding_box()['y']<=72
+  assert not page.locator('#lesson-body .homework-navigation').count()
+  assert page.locator('#reader-dock').bounding_box()['y']<64
+  if width<1100:page.locator('[data-reader-directory]').click()
   page.locator('#homework-question').select_option('2-25')
   page.wait_for_function('location.hash.endsWith("question-2-25")&&document.querySelector("#lesson-body").getAttribute("aria-busy")==="false"')
   page.locator('#question-2-25.reference-target').wait_for()
   assert page.locator('#homework-question').input_value()=='2-25'
+  assert not page.locator('#reader-directory').is_visible()
   page.locator('.reference-return').click();page.wait_for_function('document.querySelector(".reference-return").hidden');page.wait_for_timeout(100)
   assert abs(page.evaluate('scrollY')-origin)<4
   # An underlined current is a phasor and retains its source-backed definition.

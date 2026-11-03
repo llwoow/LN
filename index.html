@@ -93,14 +93,16 @@
   <div class="workspace">
     <header class="topbar">
       <div class="topbar-left"><button class="icon-button sidebar-toggle" id="sidebar-toggle" aria-label="展开侧栏" aria-controls="sidebar" aria-expanded="true" title="展开侧栏"><svg class="icon"><use href="#i-panel"/></svg></button><span id="breadcrumb-current">课程</span></div>
+      <div id="reader-question-slot" hidden></div>
+      <nav class="reader-dock" id="reader-dock" aria-label="阅读快捷操作" hidden></nav>
       <div class="topbar-actions"><button class="icon-button" id="quick-theme" aria-label="切换到夜间模式" title="切换日间 / 夜间"><svg class="icon"><use href="#i-moon"/></svg></button><button class="icon-button" id="top-settings" aria-label="外观设置" title="外观"><svg class="icon"><use href="#i-sliders"/></svg></button></div>
     </header>
     <main id="main" tabindex="-1"></main>
-    <nav class="reader-dock" id="reader-dock" aria-label="阅读快捷操作" hidden></nav>
   </div>
 
   <dialog class="reader-directory" id="reader-directory" aria-labelledby="reader-directory-title">
     <div class="reader-directory-heading"><h2 id="reader-directory-title">目录</h2><button class="icon-button" id="close-reader-directory" aria-label="关闭目录" title="关闭目录"><svg class="icon"><use href="#i-close"/></svg></button></div>
+    <div id="reader-directory-question" hidden></div>
     <div id="reader-directory-resource" class="directory-resource-shortcut"></div>
     <div class="reader-directory-content" id="reader-directory-content"></div>
   </dialog>

@@ -239,9 +239,10 @@
     const rect=origin.getBoundingClientRect(),width=innerWidth,height=innerHeight;
     const box=popup.getBoundingClientRect();
     const left=Math.max(12,Math.min(rect.left,width-box.width-12));
-    const bottomLimit=height-84;
+    const topLimit=(document.querySelector('.topbar')?.getBoundingClientRect().bottom || 0)+8;
+    const bottomLimit=height-12;
     const below=rect.bottom+8;
-    const top=below+box.height<=bottomLimit?below:Math.max(12,Math.min(rect.top-box.height-8,bottomLimit-box.height));
+    const top=below+box.height<=bottomLimit?Math.max(topLimit,below):Math.max(topLimit,Math.min(rect.top-box.height-8,bottomLimit-box.height));
     popup.style.left=left+'px';popup.style.top=top+'px';
   }
   function close(restore=false) {
@@ -314,7 +315,8 @@
   addEventListener('resize',position);
   addEventListener('scroll',(event)=>{
     if(!opened()||popup.contains(event.target))return;
-    const rect=origin?.getBoundingClientRect();if(!rect||rect.bottom<58||rect.top>innerHeight-60)close();else position();
+    const rect=origin?.getBoundingClientRect(),top=document.querySelector('.topbar')?.getBoundingClientRect().bottom || 0;
+    if(!rect||rect.bottom<top||rect.top>innerHeight-12)close();else position();
   },true);
   window.LNGlossary={prepare,onRoute:()=>{close();origin=null;context=null;},resolveSymbol,termAliases};
 })();
