@@ -338,6 +338,11 @@
         window.LNPublication.prepare(body, course, selected);
         window.LNGlossary.prepare(body, course, selected);
         window.LNResources.mountLesson(body);
+        if (course.id === 'automatic-control' && ['ac-3-3', 'ac-3-5', 'ac-3-6'].includes(selected.id)) {
+          await Promise.all([loadScript('courses/automatic-control/control-lab.js'), loadStyle('courses/automatic-control/control-lab.css')]);
+          if (body.dataset.lessonKey !== key) return;
+          window.LN_MOUNT_CONTROL_LABS?.(body);
+        }
         bindInlineModels(body);
       }
       body.setAttribute('aria-busy', 'false');
