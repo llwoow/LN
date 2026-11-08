@@ -12,7 +12,16 @@ for (const file of ['courses/electrical-machines/manifest.js', 'courses/electric
 for (const course of context.window.LN_COURSES) {
   assert(course.sections?.length, `${course.id} must have real material`);
   const sections = new Map(course.sections.map(section => [section.id, section]));
-  for (const section of sections.values()) assert(fs.existsSync(path.join(root, section.src)), `Missing lesson: ${section.id}`);
+  for (const section of sections.values()) {
+    if (section.kind === 'outline') {
+      assert.equal(course.outlineOnly, true, `Outline section must belong to an outline course: ${section.id}`);
+      assert(section.title && section.group, `Outline section needs a title and book: ${section.id}`);
+      assert(!section.src, `Outline section must not load removed content: ${section.id}`);
+    } else {
+      assert.equal(typeof section.src, 'string', `Missing lesson source: ${section.id}`);
+      assert(fs.existsSync(path.join(root, section.src)), `Missing lesson: ${section.id}`);
+    }
+  }
   const nodes = course.knowledgeMap?.nodes || [];
   const ids = new Set();
   for (const node of nodes) {
