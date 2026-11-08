@@ -1711,5 +1711,6 @@ window.LN_AUTO_CONTROL={
         ]
       ]
     }
-  }
+  },
+  "glossary": "courses/automatic-control/glossary-index.js"
 };
