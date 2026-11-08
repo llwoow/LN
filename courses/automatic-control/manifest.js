@@ -272,13 +272,37 @@ window.LN_AUTO_CONTROL={
       "teachingIndex": 32
     },
     {
+      "id": "ac-2-7-1",
+      "title": "2.7.1 MATLAB中数学模型的表示",
+      "group": "第2章 自动控制系统的数学模型",
+      "kind": "outline",
+      "textbookSection": "2.7.1",
+      "teachingIndex": 33
+    },
+    {
+      "id": "ac-2-7-2",
+      "title": "2.7.2 用MATLAB求解线性微分方程",
+      "group": "第2章 自动控制系统的数学模型",
+      "kind": "outline",
+      "textbookSection": "2.7.2",
+      "teachingIndex": 34
+    },
+    {
+      "id": "ac-2-7-3",
+      "title": "2.7.3 MATLAB在系统方框图化简中的应用",
+      "group": "第2章 自动控制系统的数学模型",
+      "kind": "outline",
+      "textbookSection": "2.7.3",
+      "teachingIndex": 35
+    },
+    {
       "id": "ac-3-1",
       "title": "3.1 自动控制系统的时域指标",
       "group": "第3章 自动控制系统的时域分析",
       "kind": "html",
       "src": "courses/automatic-control/lessons/ac-3-1.js",
       "textbookSection": "3.1",
-      "teachingIndex": 33
+      "teachingIndex": 36
     },
     {
       "id": "ac-3-2",
@@ -287,7 +311,7 @@ window.LN_AUTO_CONTROL={
       "kind": "html",
       "src": "courses/automatic-control/lessons/ac-3-2.js",
       "textbookSection": "3.2",
-      "teachingIndex": 34
+      "teachingIndex": 37
     },
     {
       "id": "ac-3-3",
@@ -296,7 +320,7 @@ window.LN_AUTO_CONTROL={
       "kind": "html",
       "src": "courses/automatic-control/lessons/ac-3-3.js",
       "textbookSection": "3.3",
-      "teachingIndex": 35
+      "teachingIndex": 38
     },
     {
       "id": "ac-3-4",
@@ -305,7 +329,7 @@ window.LN_AUTO_CONTROL={
       "kind": "html",
       "src": "courses/automatic-control/lessons/ac-3-4.js",
       "textbookSection": "3.4",
-      "teachingIndex": 36
+      "teachingIndex": 39
     },
     {
       "id": "ac-3-5",
@@ -314,7 +338,7 @@ window.LN_AUTO_CONTROL={
       "kind": "html",
       "src": "courses/automatic-control/lessons/ac-3-5.js",
       "textbookSection": "3.5",
-      "teachingIndex": 37
+      "teachingIndex": 40
     },
     {
       "id": "ac-3-6",
@@ -323,7 +347,7 @@ window.LN_AUTO_CONTROL={
       "kind": "html",
       "src": "courses/automatic-control/lessons/ac-3-6.js",
       "textbookSection": "3.6",
-      "teachingIndex": 38
+      "teachingIndex": 41
     },
     {
       "id": "ac-3-7",
@@ -332,7 +356,7 @@ window.LN_AUTO_CONTROL={
       "kind": "html",
       "src": "courses/automatic-control/lessons/ac-3-7.js",
       "textbookSection": "3.7",
-      "teachingIndex": 39
+      "teachingIndex": 42
     },
     {
       "id": "ac-homework3",
@@ -340,7 +364,7 @@ window.LN_AUTO_CONTROL={
       "group": "第3章 自动控制系统的时域分析",
       "kind": "html",
       "src": "courses/automatic-control/lessons/ac-homework3.js",
-      "teachingIndex": 40
+      "teachingIndex": 43
     },
     {
       "id": "ac-4-1",
@@ -348,7 +372,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.1",
-      "teachingIndex": 41
+      "teachingIndex": 44
     },
     {
       "id": "ac-4-2",
@@ -356,7 +380,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2",
-      "teachingIndex": 42
+      "teachingIndex": 45
     },
     {
       "id": "ac-4-2-1",
@@ -364,7 +388,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2.1",
-      "teachingIndex": 43
+      "teachingIndex": 46
     },
     {
       "id": "ac-4-2-2",
@@ -372,7 +396,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2.2",
-      "teachingIndex": 44
+      "teachingIndex": 47
     },
     {
       "id": "ac-4-2-3",
@@ -380,7 +404,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2.3",
-      "teachingIndex": 45
+      "teachingIndex": 48
     },
     {
       "id": "ac-4-2-4",
@@ -388,7 +412,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2.4",
-      "teachingIndex": 46
+      "teachingIndex": 49
     },
     {
       "id": "ac-4-3",
@@ -396,7 +420,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3",
-      "teachingIndex": 47
+      "teachingIndex": 50
     },
     {
       "id": "ac-4-3-1",
@@ -404,7 +428,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.1",
-      "teachingIndex": 48
+      "teachingIndex": 51
     },
     {
       "id": "ac-4-3-2",
@@ -412,7 +436,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.2",
-      "teachingIndex": 49
+      "teachingIndex": 52
     },
     {
       "id": "ac-4-3-3",
@@ -420,7 +444,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.3",
-      "teachingIndex": 50
+      "teachingIndex": 53
     },
     {
       "id": "ac-4-3-4",
@@ -428,7 +452,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.4",
-      "teachingIndex": 51
+      "teachingIndex": 54
     },
     {
       "id": "ac-4-3-5",
@@ -436,7 +460,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.5",
-      "teachingIndex": 52
+      "teachingIndex": 55
     },
     {
       "id": "ac-4-4",
@@ -444,7 +468,31 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.4",
-      "teachingIndex": 53
+      "teachingIndex": 56
+    },
+    {
+      "id": "ac-4-4-1",
+      "title": "4.4.1 根轨迹分析的MATLAB实现的函数指令格式",
+      "group": "第4章 根轨迹法",
+      "kind": "outline",
+      "textbookSection": "4.4.1",
+      "teachingIndex": 57
+    },
+    {
+      "id": "ac-4-4-2",
+      "title": "4.4.2 零度根轨迹的MATLAB绘制",
+      "group": "第4章 根轨迹法",
+      "kind": "outline",
+      "textbookSection": "4.4.2",
+      "teachingIndex": 58
+    },
+    {
+      "id": "ac-4-4-3",
+      "title": "4.4.3 参数根轨迹的MATLAB绘制",
+      "group": "第4章 根轨迹法",
+      "kind": "outline",
+      "textbookSection": "4.4.3",
+      "teachingIndex": 59
     },
     {
       "id": "ac-5-1",
@@ -452,7 +500,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.1",
-      "teachingIndex": 54
+      "teachingIndex": 60
     },
     {
       "id": "ac-5-2",
@@ -460,7 +508,23 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.2",
-      "teachingIndex": 55
+      "teachingIndex": 61
+    },
+    {
+      "id": "ac-5-2-1",
+      "title": "5.2.1 周期函数的傅氏级数分解",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.2.1",
+      "teachingIndex": 62
+    },
+    {
+      "id": "ac-5-2-2",
+      "title": "5.2.2 非周期函数的频谱",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.2.2",
+      "teachingIndex": 63
     },
     {
       "id": "ac-5-3",
@@ -468,7 +532,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.3",
-      "teachingIndex": 56
+      "teachingIndex": 64
     },
     {
       "id": "ac-5-3-1",
@@ -476,7 +540,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.3.1",
-      "teachingIndex": 57
+      "teachingIndex": 65
     },
     {
       "id": "ac-5-3-2",
@@ -484,7 +548,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.3.2",
-      "teachingIndex": 58
+      "teachingIndex": 66
     },
     {
       "id": "ac-5-3-3",
@@ -492,7 +556,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.3.3",
-      "teachingIndex": 59
+      "teachingIndex": 67
     },
     {
       "id": "ac-5-4",
@@ -500,7 +564,63 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.4",
-      "teachingIndex": 60
+      "teachingIndex": 68
+    },
+    {
+      "id": "ac-5-4-1",
+      "title": "5.4.1 比例环节",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.4.1",
+      "teachingIndex": 69
+    },
+    {
+      "id": "ac-5-4-2",
+      "title": "5.4.2 惯性环节",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.4.2",
+      "teachingIndex": 70
+    },
+    {
+      "id": "ac-5-4-3",
+      "title": "5.4.3 积分环节",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.4.3",
+      "teachingIndex": 71
+    },
+    {
+      "id": "ac-5-4-4",
+      "title": "5.4.4 微分环节",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.4.4",
+      "teachingIndex": 72
+    },
+    {
+      "id": "ac-5-4-5",
+      "title": "5.4.5 振荡环节",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.4.5",
+      "teachingIndex": 73
+    },
+    {
+      "id": "ac-5-4-6",
+      "title": "5.4.6 时滞环节",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.4.6",
+      "teachingIndex": 74
+    },
+    {
+      "id": "ac-5-4-7",
+      "title": "5.4.7 最小相位环节",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.4.7",
+      "teachingIndex": 75
     },
     {
       "id": "ac-5-5",
@@ -508,7 +628,23 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.5",
-      "teachingIndex": 61
+      "teachingIndex": 76
+    },
+    {
+      "id": "ac-5-5-1",
+      "title": "5.5.1 系统的开环幅相频率特性",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.5.1",
+      "teachingIndex": 77
+    },
+    {
+      "id": "ac-5-5-2",
+      "title": "5.5.2 系统的开环对数频率特性",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.5.2",
+      "teachingIndex": 78
     },
     {
       "id": "ac-5-6",
@@ -516,7 +652,63 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.6",
-      "teachingIndex": 62
+      "teachingIndex": 79
+    },
+    {
+      "id": "ac-5-6-1",
+      "title": "5.6.1 控制系统的稳定判据",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.6.1",
+      "teachingIndex": 80
+    },
+    {
+      "id": "ac-5-6-2",
+      "title": "5.6.2 奈氏稳定判据的基本原理",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.6.2",
+      "teachingIndex": 81
+    },
+    {
+      "id": "ac-5-6-3",
+      "title": "5.6.3 映射定理",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.6.3",
+      "teachingIndex": 82
+    },
+    {
+      "id": "ac-5-6-4",
+      "title": "5.6.4 奈氏路径及其映射",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.6.4",
+      "teachingIndex": 83
+    },
+    {
+      "id": "ac-5-6-6",
+      "title": "5.6.6 开环有串联积分环节的系统",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.6.6",
+      "teachingIndex": 84
+    },
+    {
+      "id": "ac-5-6-7",
+      "title": "5.6.7 用系统开环对数频率特性判断闭环系统稳定性",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.6.7",
+      "teachingIndex": 85
+    },
+    {
+      "id": "ac-5-6-8",
+      "title": "5.6.8 应用奈氏稳定判据判断闭环系统稳定性举例",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.6.8",
+      "teachingIndex": 86
     },
     {
       "id": "ac-5-6-5",
@@ -524,7 +716,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.6.5",
-      "teachingIndex": 63
+      "teachingIndex": 87
     },
     {
       "id": "ac-5-6-9",
@@ -532,7 +724,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.6.9",
-      "teachingIndex": 64
+      "teachingIndex": 88
     },
     {
       "id": "ac-5-7",
@@ -540,7 +732,23 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.7",
-      "teachingIndex": 65
+      "teachingIndex": 89
+    },
+    {
+      "id": "ac-5-7-1",
+      "title": "5.7.1 开环对数频率特性的基本性质",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.7.1",
+      "teachingIndex": 90
+    },
+    {
+      "id": "ac-5-7-2",
+      "title": "5.7.2 系统动态特性和开环频率特性的关系",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.7.2",
+      "teachingIndex": 91
     },
     {
       "id": "ac-5-8",
@@ -548,7 +756,31 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.8",
-      "teachingIndex": 66
+      "teachingIndex": 92
+    },
+    {
+      "id": "ac-5-8-1",
+      "title": "5.8.1 闭环系统频率特性与开环系统频率特性的关系",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.8.1",
+      "teachingIndex": 93
+    },
+    {
+      "id": "ac-5-8-2",
+      "title": "5.8.2 闭环系统等M圆、等θ圆及尼氏图",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.8.2",
+      "teachingIndex": 94
+    },
+    {
+      "id": "ac-5-8-3",
+      "title": "5.8.3 非单位反馈系统的闭环频率特性",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.8.3",
+      "teachingIndex": 95
     },
     {
       "id": "ac-5-9",
@@ -556,7 +788,31 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.9",
-      "teachingIndex": 67
+      "teachingIndex": 96
+    },
+    {
+      "id": "ac-5-9-1",
+      "title": "5.9.1 谐振峰值Mp和超调量σ%之间的关系",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.9.1",
+      "teachingIndex": 97
+    },
+    {
+      "id": "ac-5-9-2",
+      "title": "5.9.2 谐振峰值Mp和调节时间ts的关系",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.9.2",
+      "teachingIndex": 98
+    },
+    {
+      "id": "ac-5-9-3",
+      "title": "5.9.3 频带宽BW和ξ之间的关系",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.9.3",
+      "teachingIndex": 99
     },
     {
       "id": "ac-5-10",
@@ -564,7 +820,31 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.10",
-      "teachingIndex": 68
+      "teachingIndex": 100
+    },
+    {
+      "id": "ac-5-10-1",
+      "title": "5.10.1 用MATLAB绘制系统开环对数频率特性（伯德图）",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.10.1",
+      "teachingIndex": 101
+    },
+    {
+      "id": "ac-5-10-2",
+      "title": "5.10.2 用MATLAB绘制系统开环幅相频率特性（奈氏曲线）",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.10.2",
+      "teachingIndex": 102
+    },
+    {
+      "id": "ac-5-10-3",
+      "title": "5.10.3 稳定裕度求解",
+      "group": "第5章 频率法",
+      "kind": "outline",
+      "textbookSection": "5.10.3",
+      "teachingIndex": 103
     },
     {
       "id": "ac-6-1",
@@ -572,7 +852,23 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.1",
-      "teachingIndex": 69
+      "teachingIndex": 104
+    },
+    {
+      "id": "ac-6-1-1",
+      "title": "6.1.1 基本校正方法",
+      "group": "第6章 控制系统的校正及综合",
+      "kind": "outline",
+      "textbookSection": "6.1.1",
+      "teachingIndex": 105
+    },
+    {
+      "id": "ac-6-1-2",
+      "title": "6.1.2 用频率法校正的特点",
+      "group": "第6章 控制系统的校正及综合",
+      "kind": "outline",
+      "textbookSection": "6.1.2",
+      "teachingIndex": 106
     },
     {
       "id": "ac-6-2",
@@ -580,7 +876,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.2",
-      "teachingIndex": 70
+      "teachingIndex": 107
     },
     {
       "id": "ac-6-2-1",
@@ -588,7 +884,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.2.1",
-      "teachingIndex": 71
+      "teachingIndex": 108
     },
     {
       "id": "ac-6-2-2",
@@ -596,7 +892,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.2.2",
-      "teachingIndex": 72
+      "teachingIndex": 109
     },
     {
       "id": "ac-6-2-3",
@@ -604,7 +900,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.2.3",
-      "teachingIndex": 73
+      "teachingIndex": 110
     },
     {
       "id": "ac-6-3",
@@ -612,7 +908,23 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.3",
-      "teachingIndex": 74
+      "teachingIndex": 111
+    },
+    {
+      "id": "ac-6-3-1",
+      "title": "6.3.1 反馈校正的功能",
+      "group": "第6章 控制系统的校正及综合",
+      "kind": "outline",
+      "textbookSection": "6.3.1",
+      "teachingIndex": 112
+    },
+    {
+      "id": "ac-6-3-2",
+      "title": "6.3.2 反馈校正装置的设计",
+      "group": "第6章 控制系统的校正及综合",
+      "kind": "outline",
+      "textbookSection": "6.3.2",
+      "teachingIndex": 113
     },
     {
       "id": "ac-6-4",
@@ -620,7 +932,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.4",
-      "teachingIndex": 75
+      "teachingIndex": 114
     },
     {
       "id": "ac-6-4-1",
@@ -628,7 +940,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.4.1",
-      "teachingIndex": 76
+      "teachingIndex": 115
     },
     {
       "id": "ac-6-4-2",
@@ -636,7 +948,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.4.2",
-      "teachingIndex": 77
+      "teachingIndex": 116
     },
     {
       "id": "ac-6-5",
@@ -644,7 +956,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5",
-      "teachingIndex": 78
+      "teachingIndex": 117
     },
     {
       "id": "ac-6-5-1",
@@ -652,7 +964,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.1",
-      "teachingIndex": 79
+      "teachingIndex": 118
     },
     {
       "id": "ac-6-5-2",
@@ -660,7 +972,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.2",
-      "teachingIndex": 80
+      "teachingIndex": 119
     },
     {
       "id": "ac-6-5-3",
@@ -668,7 +980,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.3",
-      "teachingIndex": 81
+      "teachingIndex": 120
     },
     {
       "id": "ac-6-5-4",
@@ -676,7 +988,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.4",
-      "teachingIndex": 82
+      "teachingIndex": 121
     },
     {
       "id": "ac-6-5-5",
@@ -684,7 +996,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.5",
-      "teachingIndex": 83
+      "teachingIndex": 122
     },
     {
       "id": "ac-6-5-6",
@@ -692,7 +1004,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.6",
-      "teachingIndex": 84
+      "teachingIndex": 123
     },
     {
       "id": "ac-6-6",
@@ -700,7 +1012,31 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.6",
-      "teachingIndex": 85
+      "teachingIndex": 124
+    },
+    {
+      "id": "ac-6-6-1",
+      "title": "6.6.1 串联超前校正设计",
+      "group": "第6章 控制系统的校正及综合",
+      "kind": "outline",
+      "textbookSection": "6.6.1",
+      "teachingIndex": 125
+    },
+    {
+      "id": "ac-6-6-2",
+      "title": "6.6.2 串联滞后校正设计",
+      "group": "第6章 控制系统的校正及综合",
+      "kind": "outline",
+      "textbookSection": "6.6.2",
+      "teachingIndex": 126
+    },
+    {
+      "id": "ac-6-6-3",
+      "title": "6.6.3 串联滞后—超前校正设计",
+      "group": "第6章 控制系统的校正及综合",
+      "kind": "outline",
+      "textbookSection": "6.6.3",
+      "teachingIndex": 127
     },
     {
       "id": "ac-7-1",
@@ -708,7 +1044,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.1",
-      "teachingIndex": 86
+      "teachingIndex": 128
     },
     {
       "id": "ac-7-2",
@@ -716,7 +1052,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2",
-      "teachingIndex": 87
+      "teachingIndex": 129
     },
     {
       "id": "ac-7-2-1",
@@ -724,7 +1060,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.1",
-      "teachingIndex": 88
+      "teachingIndex": 130
     },
     {
       "id": "ac-7-2-2",
@@ -732,7 +1068,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.2",
-      "teachingIndex": 89
+      "teachingIndex": 131
     },
     {
       "id": "ac-7-2-3",
@@ -740,7 +1076,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.3",
-      "teachingIndex": 90
+      "teachingIndex": 132
     },
     {
       "id": "ac-7-2-4",
@@ -748,7 +1084,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.4",
-      "teachingIndex": 91
+      "teachingIndex": 133
     },
     {
       "id": "ac-7-2-5",
@@ -756,7 +1092,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.5",
-      "teachingIndex": 92
+      "teachingIndex": 134
     },
     {
       "id": "ac-7-3",
@@ -764,7 +1100,31 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.3",
-      "teachingIndex": 93
+      "teachingIndex": 135
+    },
+    {
+      "id": "ac-7-3-1",
+      "title": "7.3.1 谐波线性化",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.3.1",
+      "teachingIndex": 136
+    },
+    {
+      "id": "ac-7-3-2",
+      "title": "7.3.2 非线性特性的描述函数",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.3.2",
+      "teachingIndex": 137
+    },
+    {
+      "id": "ac-7-3-3",
+      "title": "7.3.3 典型非线性特性的描述函数",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.3.3",
+      "teachingIndex": 138
     },
     {
       "id": "ac-7-4",
@@ -772,7 +1132,47 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.4",
-      "teachingIndex": 94
+      "teachingIndex": 139
+    },
+    {
+      "id": "ac-7-4-1",
+      "title": "7.4.1 非线性系统的典型结构及基本条件",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.4.1",
+      "teachingIndex": 140
+    },
+    {
+      "id": "ac-7-4-2",
+      "title": "7.4.2 非线性系统的稳定性分析",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.4.2",
+      "teachingIndex": 141
+    },
+    {
+      "id": "ac-7-4-3",
+      "title": "7.4.3 自振分析",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.4.3",
+      "teachingIndex": 142
+    },
+    {
+      "id": "ac-7-4-4",
+      "title": "7.4.4 应用描述函数法分析非线性系统",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.4.4",
+      "teachingIndex": 143
+    },
+    {
+      "id": "ac-7-4-5",
+      "title": "7.4.5 非线性系统结构图的简化",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.4.5",
+      "teachingIndex": 144
     },
     {
       "id": "ac-7-5",
@@ -780,7 +1180,39 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.5",
-      "teachingIndex": 95
+      "teachingIndex": 145
+    },
+    {
+      "id": "ac-7-5-1",
+      "title": "7.5.1 改变线性部分的参数或对线性部分进行校正",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.5.1",
+      "teachingIndex": 146
+    },
+    {
+      "id": "ac-7-5-2",
+      "title": "7.5.2 改变非线性特性",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.5.2",
+      "teachingIndex": 147
+    },
+    {
+      "id": "ac-7-5-3",
+      "title": "7.5.3 非线性特性的应用",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.5.3",
+      "teachingIndex": 148
+    },
+    {
+      "id": "ac-7-5-4",
+      "title": "7.5.4 用振荡线性化改善系统性能",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.5.4",
+      "teachingIndex": 149
     },
     {
       "id": "ac-7-6",
@@ -788,7 +1220,31 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.6",
-      "teachingIndex": 96
+      "teachingIndex": 150
+    },
+    {
+      "id": "ac-7-6-1",
+      "title": "7.6.1 相轨迹的特征",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.6.1",
+      "teachingIndex": 151
+    },
+    {
+      "id": "ac-7-6-2",
+      "title": "7.6.2 相轨迹的绘制方法",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.6.2",
+      "teachingIndex": 152
+    },
+    {
+      "id": "ac-7-6-3",
+      "title": "7.6.3 用相平面法分析非线性系统",
+      "group": "第7章 非线性系统分析",
+      "kind": "outline",
+      "textbookSection": "7.6.3",
+      "teachingIndex": 153
     },
     {
       "id": "ac-8-1",
@@ -796,7 +1252,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.1",
-      "teachingIndex": 97
+      "teachingIndex": 154
     },
     {
       "id": "ac-8-2",
@@ -804,7 +1260,31 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.2",
-      "teachingIndex": 98
+      "teachingIndex": 155
+    },
+    {
+      "id": "ac-8-2-1",
+      "title": "8.2.1 离散时间函数的数学表达式",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.2.1",
+      "teachingIndex": 156
+    },
+    {
+      "id": "ac-8-2-2",
+      "title": "8.2.2 采样函数f*(t)的频谱分析",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.2.2",
+      "teachingIndex": 157
+    },
+    {
+      "id": "ac-8-2-4",
+      "title": "8.2.4 信号的复现",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.2.4",
+      "teachingIndex": 158
     },
     {
       "id": "ac-8-2-3",
@@ -812,7 +1292,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.2.3",
-      "teachingIndex": 99
+      "teachingIndex": 159
     },
     {
       "id": "ac-8-3",
@@ -820,7 +1300,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3",
-      "teachingIndex": 100
+      "teachingIndex": 160
     },
     {
       "id": "ac-8-3-1",
@@ -828,7 +1308,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3.1",
-      "teachingIndex": 101
+      "teachingIndex": 161
     },
     {
       "id": "ac-8-3-2",
@@ -836,7 +1316,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3.2",
-      "teachingIndex": 102
+      "teachingIndex": 162
     },
     {
       "id": "ac-8-3-3",
@@ -844,7 +1324,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3.3",
-      "teachingIndex": 103
+      "teachingIndex": 163
     },
     {
       "id": "ac-8-3-4",
@@ -852,7 +1332,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3.4",
-      "teachingIndex": 104
+      "teachingIndex": 164
     },
     {
       "id": "ac-8-4",
@@ -860,7 +1340,23 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.4",
-      "teachingIndex": 105
+      "teachingIndex": 165
+    },
+    {
+      "id": "ac-8-4-1",
+      "title": "8.4.1 差分方程的定义",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.4.1",
+      "teachingIndex": 166
+    },
+    {
+      "id": "ac-8-4-2",
+      "title": "8.4.2 差分方程的解法",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.4.2",
+      "teachingIndex": 167
     },
     {
       "id": "ac-8-5",
@@ -868,7 +1364,39 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.5",
-      "teachingIndex": 106
+      "teachingIndex": 168
+    },
+    {
+      "id": "ac-8-5-1",
+      "title": "8.5.1 脉冲传递函数的定义",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.5.1",
+      "teachingIndex": 169
+    },
+    {
+      "id": "ac-8-5-2",
+      "title": "8.5.2 脉冲传递函数的推导",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.5.2",
+      "teachingIndex": 170
+    },
+    {
+      "id": "ac-8-5-3",
+      "title": "8.5.3 开环系统脉冲传递函数",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.5.3",
+      "teachingIndex": 171
+    },
+    {
+      "id": "ac-8-5-4",
+      "title": "8.5.4 闭环系统脉冲传递函数",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.5.4",
+      "teachingIndex": 172
     },
     {
       "id": "ac-8-6",
@@ -876,7 +1404,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.6",
-      "teachingIndex": 107
+      "teachingIndex": 173
     },
     {
       "id": "ac-8-6-2",
@@ -884,7 +1412,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.6.2",
-      "teachingIndex": 108
+      "teachingIndex": 174
     },
     {
       "id": "ac-8-6-3",
@@ -892,7 +1420,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.6.3",
-      "teachingIndex": 109
+      "teachingIndex": 175
     },
     {
       "id": "ac-8-7",
@@ -900,7 +1428,23 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.7",
-      "teachingIndex": 110
+      "teachingIndex": 176
+    },
+    {
+      "id": "ac-8-7-1",
+      "title": "8.7.1 双线性变换",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.7.1",
+      "teachingIndex": 177
+    },
+    {
+      "id": "ac-8-7-2",
+      "title": "8.7.2 伯德图",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.7.2",
+      "teachingIndex": 178
     },
     {
       "id": "ac-8-8",
@@ -908,7 +1452,23 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.8",
-      "teachingIndex": 111
+      "teachingIndex": 179
+    },
+    {
+      "id": "ac-8-8-1",
+      "title": "8.8.1 用根轨迹法综合数字校正装置",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.8.1",
+      "teachingIndex": 180
+    },
+    {
+      "id": "ac-8-8-2",
+      "title": "8.8.2 数字校正装置的实现",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.8.2",
+      "teachingIndex": 181
     },
     {
       "id": "ac-8-9",
@@ -916,7 +1476,23 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.9",
-      "teachingIndex": 112
+      "teachingIndex": 182
+    },
+    {
+      "id": "ac-8-9-1",
+      "title": "8.9.1 最少拍系统的闭环脉冲传递函数",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.9.1",
+      "teachingIndex": 183
+    },
+    {
+      "id": "ac-8-9-2",
+      "title": "8.9.2 最少拍系统的设计",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.9.2",
+      "teachingIndex": 184
     },
     {
       "id": "ac-8-10",
@@ -924,7 +1500,39 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.10",
-      "teachingIndex": 113
+      "teachingIndex": 185
+    },
+    {
+      "id": "ac-8-10-1",
+      "title": "8.10.1 z变换和z反变换",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.10.1",
+      "teachingIndex": 186
+    },
+    {
+      "id": "ac-8-10-2",
+      "title": "8.10.2 连续系统的离散化",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.10.2",
+      "teachingIndex": 187
+    },
+    {
+      "id": "ac-8-10-3",
+      "title": "8.10.3 采样控制系统的时域分析",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.10.3",
+      "teachingIndex": 188
+    },
+    {
+      "id": "ac-8-10-4",
+      "title": "8.10.4 采样控制系统的频域分析",
+      "group": "第8章 线性离散系统的理论基础",
+      "kind": "outline",
+      "textbookSection": "8.10.4",
+      "teachingIndex": 189
     }
   ],
   "resources": {
@@ -932,7 +1540,7 @@ window.LN_AUTO_CONTROL={
       "links": [
         {
           "label": "教材目录（清华大学出版社）",
-          "href": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08941901"
+          "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
         }
       ]
     },
@@ -940,7 +1548,7 @@ window.LN_AUTO_CONTROL={
       "links": [
         {
           "label": "教材目录（清华大学出版社）",
-          "href": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08941901"
+          "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
         }
       ]
     },
@@ -948,7 +1556,7 @@ window.LN_AUTO_CONTROL={
       "links": [
         {
           "label": "教材目录（清华大学出版社）",
-          "href": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08941901"
+          "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
         }
       ]
     },
@@ -956,7 +1564,7 @@ window.LN_AUTO_CONTROL={
       "links": [
         {
           "label": "教材目录（清华大学出版社）",
-          "href": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08941901"
+          "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
         }
       ]
     },
@@ -964,7 +1572,7 @@ window.LN_AUTO_CONTROL={
       "links": [
         {
           "label": "教材目录（清华大学出版社）",
-          "href": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08941901"
+          "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
         }
       ]
     },
@@ -972,7 +1580,7 @@ window.LN_AUTO_CONTROL={
       "links": [
         {
           "label": "教材目录（清华大学出版社）",
-          "href": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08941901"
+          "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
         }
       ]
     },
@@ -980,7 +1588,7 @@ window.LN_AUTO_CONTROL={
       "links": [
         {
           "label": "教材目录（清华大学出版社）",
-          "href": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08941901"
+          "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
         }
       ]
     },
@@ -988,7 +1596,7 @@ window.LN_AUTO_CONTROL={
       "links": [
         {
           "label": "教材目录（清华大学出版社）",
-          "href": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08941901"
+          "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
         }
       ]
     }
@@ -999,6 +1607,109 @@ window.LN_AUTO_CONTROL={
     "edition": 3,
     "isbn": "9787302665564",
     "publisher": "清华大学出版社",
-    "url": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08941901"
+    "url": "https://www.tup.tsinghua.edu.cn/bookscenter/book_08941901.html"
+  },
+  "textbookContents": {
+    "edition": "王建辉、顾树生《自动控制原理》第3版",
+    "source": "清华大学出版社完整目录",
+    "url": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901",
+    "thirdChapterSubsections": {
+      "3.1": [
+        [
+          "3.1.1",
+          "对控制性能的要求"
+        ],
+        [
+          "3.1.2",
+          "自动控制系统的典型输入信号"
+        ]
+      ],
+      "3.2": [
+        [
+          "3.2.1",
+          "一阶系统的数学模型"
+        ],
+        [
+          "3.2.2",
+          "一阶系统的单位阶跃响应"
+        ]
+      ],
+      "3.3": [
+        [
+          "3.3.1",
+          "典型二阶系统的动态特性"
+        ],
+        [
+          "3.3.2",
+          "二阶系统动态性能指标"
+        ],
+        [
+          "3.3.3",
+          "二阶系统特征参数与动态性能指标之间的关系"
+        ],
+        [
+          "3.3.4",
+          "二阶工程最佳参数"
+        ],
+        [
+          "3.3.5",
+          "零点、极点对二阶系统动态性能的影响"
+        ]
+      ],
+      "3.5": [
+        [
+          "3.5.1",
+          "线性系统稳定性的概念和稳定的充分必要条件"
+        ],
+        [
+          "3.5.2",
+          "劳斯判据"
+        ],
+        [
+          "3.5.3",
+          "赫尔维茨判据"
+        ],
+        [
+          "3.5.4",
+          "谢绪恺判据"
+        ],
+        [
+          "3.5.5",
+          "参数对稳定性的影响"
+        ],
+        [
+          "3.5.6",
+          "相对稳定性和稳定裕度"
+        ]
+      ],
+      "3.6": [
+        [
+          "3.6.1",
+          "扰动稳态误差"
+        ],
+        [
+          "3.6.2",
+          "给定稳态误差和误差系数"
+        ],
+        [
+          "3.6.3",
+          "减小稳态误差的方法"
+        ]
+      ],
+      "3.7": [
+        [
+          "3.7.1",
+          "典型输入信号的MATLAB实现"
+        ],
+        [
+          "3.7.2",
+          "系统的稳定性分析"
+        ],
+        [
+          "3.7.3",
+          "MATLAB在求解系统给定稳态误差中的应用"
+        ]
+      ]
+    }
   }
 };
