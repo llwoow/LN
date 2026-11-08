@@ -1,0 +1,30 @@
+name: Automatic control course validation
+on:
+  pull_request:
+    paths:
+      - 'courses/automatic-control/**'
+      - 'courses/practice/**'
+      - 'courses.js'
+      - 'index.html'
+      - 'app.js'
+      - 'reference-index.js'
+      - 'tests/test_automatic_control.py'
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Course checks
+        run: python -m unittest discover -s tests -p 'test_automatic_control.py' -v
+      - name: Reference index matches sources
+        run: python scripts/build-reference-index.py --check
+      - name: Glossary index matches sources
+        run: python scripts/build-glossary.py --check
+      - name: Exercise bank compiles
+        run: |
+          python scripts/build-practice.py
+          git diff --exit-code -- courses/practice/bank.js
