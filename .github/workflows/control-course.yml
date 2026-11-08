@@ -24,15 +24,6 @@ jobs:
         run: python scripts/build-reference-index.py --check
       - name: Glossary index matches sources
         run: python scripts/build-glossary.py --check
-      - name: Temporary practice bank diagnostic
-        run: |
-          python scripts/build-practice.py
-          python - <<'PY'
-          from pathlib import Path
-          print('BEGIN_EXPECTED_LN_PRACTICE_BANK')
-          print(Path('courses/practice/bank.js').read_text(),end='')
-          print('END_EXPECTED_LN_PRACTICE_BANK')
-          PY
       - name: Exercise bank compiles
         run: |
           python scripts/build-practice.py
