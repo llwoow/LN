@@ -32,6 +32,7 @@
       this.release();
       const course = this.course;
       this.classList.toggle('school-map', course.level === 'highschool');
+      this.classList.toggle('outline-map', Boolean(course.outlineOnly));
       this.mountedCourseId = course.id;
       const byId = new Map(course.sections.map((section) => [section.id, section]));
       this.groups = [...new Set(course.sections.map((section) => section.group))];
@@ -69,14 +70,14 @@
       this.controller = new AbortController();
       const signal = this.controller.signal;
       const link = (section, text) => '<a href="#course/' + escape(course.id) + '/' + escape(section.id) + '">' + escape(text || section.title) + '</a>';
-      const paths=(metadata?.paths||[]).map(path=>'<section><h3>'+escape(path.title)+'</h3><p>'+escape(path.summary)+'</p><ol>'+path.steps.map(step=>'<li>'+link(byId.get(step.section))+'<span>'+escape(step.focus)+'</span></li>').join('')+'</ol></section>').join('');
+      const paths=(metadata?.paths||[]).map(path=>'<section><h3>'+escape(path.title)+'</h3>'+(path.summary?'<p>'+escape(path.summary)+'</p>':'')+'<ol>'+path.steps.map(step=>'<li>'+link(byId.get(step.section))+(step.focus?'<span>'+escape(step.focus)+'</span>':'')+'</li>').join('')+'</ol></section>').join('');
       this.innerHTML = '<section class="knowledge-map" aria-label="' + escape(course.title) + '知识图谱">' +
         (paths?'<details class="map-study-paths"><summary>学习主线 <span>'+metadata.paths.length+'条</span></summary><div class="map-path-list">'+paths+'</div></details>':'')+
         '<div class="map-toolbar"><div class="map-groups" role="group" aria-label="图谱章节"><button data-map-group="-1">全部</button>' + this.groups.map((group, i) => '<button title="' + escape(group) + '" data-map-group="' + i + '">' + escape(group.replace(/^第\d+章\s*/, '')) + '</button>').join('') + '</div>' +
         '<label class="map-relation-toggle"><input type="checkbox" aria-label="显示全部知识联系">全部联系</label><label class="map-search"><span class="map-search-label">查找节点</span><input type="search" aria-label="查找图谱知识点" placeholder="查找知识点…"></label></div>' +
         '<div class="map-canvas-wrap"><svg class="map-canvas" tabindex="0" role="group" aria-label="可交互知识图谱，拖动画布移动，滚轮或双指缩放，点击节点阅读。方向键移动，加减号缩放，Home 适应全图。"></svg>' +
         '<div class="map-zoom" role="group" aria-label="图谱缩放"><button data-map-action="out" aria-label="缩小图谱" title="缩小">−</button><output aria-label="缩放比例">100%</output><button data-map-action="in" aria-label="放大图谱" title="放大">+</button><button data-map-action="fit" class="map-fit">适应全图</button><button data-map-action="reset" title="回到当前章节起点">归位</button></div></div>' +
-        '<div class="map-footer"><p>拖动平移 · 滚轮 / 双指缩放 · 点击进入正文</p><div class="map-legend"><span class="map-order-key">阅读顺序</span><span class="map-relation-key">知识联系</span></div></div>' +
+        '<div class="map-footer"><p>拖动平移 · 滚轮 / 双指缩放 · 点击'+(course.outlineOnly?'打开章节':'进入正文')+'</p><div class="map-legend"><span class="map-order-key">阅读顺序</span><span class="map-relation-key">知识联系</span></div></div>' +
         '<p class="map-status" role="status" aria-live="polite"></p><div class="map-node-context" aria-live="polite"><span>指向或聚焦节点，查看它与其他知识的联系。</span></div>' +
         '<details class="map-connections"><summary>跨知识联系 <span>' + (metadata?.links?.length || 0) + '</span></summary><ul>' + (metadata?.links || []).map((edge) => '<li><div>' + link(byId.get(edge.from), this.byNode.get(edge.from).title) + '<span aria-hidden="true"> → </span>' + link(byId.get(edge.to), this.byNode.get(edge.to).title) + '</div><p>' + escape(edge.description) + '</p></li>').join('') + '</ul></details>' +
         '<details class="map-directory"><summary>全部章节与资料 <span>' + course.sections.length + '</span></summary><div class="map-directory-groups">' + this.groups.map((group) => '<section><h3>' + escape(group) + '</h3><ul>' + course.sections.filter((section) => section.group === group).map((section) => '<li>' + link(section) + '</li>').join('') + '</ul></section>').join('') + '</div></details></section>';

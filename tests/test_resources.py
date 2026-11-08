@@ -32,7 +32,7 @@ class LearningResources(unittest.TestCase):
                 self.assertEqual(urlsplit(link['url']).scheme,'https')
             for link in resource['downloads']:self.assertTrue((ROOT/link['path']).is_file())
             if resource['verification']['executed']:self.assertTrue(resource['downloads'])
-        self.assertEqual(covered,set(self.courses))
+        self.assertEqual(covered,{c['id'] for c in self.courses.values() if not c.get('outlineOnly')})
         self.assertNotIn('/workspace/',json.dumps(self.data))
         anchor=self.resources['motor-catalogue-check']['localLesson'].split('/')[-1]
         section=next(s for s in self.courses['electrical-machines']['sections'] if s['id']=='dc-sec35')
@@ -40,10 +40,8 @@ class LearningResources(unittest.TestCase):
         self.assertTrue(any(n.attrs.get('id')==unquote(anchor) for n in doc.walk()))
 
     def test_unrun_or_inaccessible_projects_are_not_claimed_as_reproduced(self):
-        for identifier in ['modelica-machines','femm','wpilib-sysid','openmct-measured-data','owid-population','tracker-video','phet-faraday-online','phet-concentration-online']:
+        for identifier in ['modelica-machines','femm','wpilib-sysid','openmct-measured-data']:
             self.assertFalse(self.resources[identifier]['verification']['executed'],identifier)
-        for identifier in ['phet-faraday-online','phet-concentration-online']:
-            self.assertIsNone(self.resources[identifier]['repository'])
 
     def test_motor_catalogue_case_preserves_observable_model_error(self):
         folder=ROOT/'assets/practice/dc-specs'

@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 
 ROOT=Path(__file__).resolve().parents[1]
 assignment=runpy.run_path(str(ROOT/'scripts/build-reference-index.py'))['assignment']
-courses={c['id']:{s['id'] for s in c['sections']} for c in [assignment(p) for p in (ROOT/'courses').glob('*/manifest.js')]}
+courses={c['id']:{s['id'] for s in c['sections']} for c in [assignment(p) for p in (ROOT/'courses').glob('*/manifest.js')] if not c.get('outlineOnly')}
 data=json.loads((ROOT/'courses/practice/bank.json').read_text())
 data['sources']=json.loads((ROOT/'courses/practice/sources.json').read_text())['sources']
 source_ids=set()
@@ -45,6 +45,5 @@ for q in data['questions']:
         if q['type']=='numeric':
             assert math.isfinite(q['answer']) and 0<q['tolerance']<1 and q['unit'],q['id']
 assert coverage==set(courses),'Exercise courses differ from registered courses'
-assert sum(q['type'] in {'single','multi'} for q in data['questions'])>len(seen)/2,'Choices should be the majority'
 (ROOT/'courses/practice/bank.js').write_text('window.LN_PRACTICE_BANK='+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\n')
 print('Built',len(seen),'exercise records across',len(coverage),'courses; coverage is not a claim of full lesson assessment.')

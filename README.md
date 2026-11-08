@@ -51,9 +51,9 @@ python tests/glossary-coverage.browser.py
 
 局部符号或术语可用 `sections` 限定适用阅读单元；范围内定义优先，未覆盖的小节不套用，避免将空载量与零序量等混淆。
 
-高中入口为 `#highschool`，九科课程与专业课程分开。结构底本是所附海南2027届核验报告（50册主索引、235节点），候选版本与未确认事项见“教材与来源”；讲解与例题为原创整理，参考资源保留实际核验范围。
+高中入口为 `#highschool`。现阶段保留海南2027届核验报告对应的九科、50册主索引、235个目录节点和17条学习主线。章节页保留标题、原地址及导航，正文留空。“教材与来源”保留原报告、索引表和候选版本。
 
-高中内容保存在 `courses/hs-*/content.json`，节点和册次底本为同目录的 `source-index.json`。修改后运行：
+各科目录底本在 `courses/hs-*/source-index.json`，学习主线在 `courses/highschool/learning-paths.json`。修改后运行：
 
 ```sh
 python scripts/build-highschool.py
@@ -63,15 +63,7 @@ python -m unittest discover -s tests -v
 python tests/highschool.browser.py
 ```
 
-数学公式以本地KaTeX 0.16.11预渲染（MIT许可见 `scripts/vendor/KATEX-LICENSE`）。高中释义按科加载，原首页无需加载全部九科定义；静态打包会从已提交的内容重新生成。
-
-学习主线在 `courses/highschool/learning-paths.json`，可复用的术语别名在 `shared-terms.json`；局部符号继续按阅读单元消歧。典型题使用节点的 `workedExamples` 字段，构建器统一生成分步解析、变式答案及连续公式编号。
-
-新增内容的针对性检查：`node tests/definition-reuse.test.cjs`；`python tests/highschool-deepening.browser.py` 检查17条主线、十六道分步题、跨节原定义返回与窄屏展开排版，并回归斜拉力符号消歧、交变电流定义及GIS释义与返回。
-
-主教学正文保存在每科的 `understanding.json`，包含七个具体教学字段与逐节 `review`，不得以通用提示填充。电机学运行 `python scripts/build-electrical-understanding.py` 后再重建引用和释义；原材料保留，新增公式以 `U.` 独立编号。`python tests/learning.browser.py` 在桌面和390／320px检查全部274个阅读单元，包含原PDF与3D模型的原创讲解。
-
-静态发布会运行 `scripts/check-teaching.py`，缺少主讲解或逐节审查的已注册课程不能打包。`definition-anchors.json` 保留已发布释义链接的稳定锚点；增补正文时不要按段落位置重新生成这份映射。
+静态发布运行 `scripts/check-teaching.py`，区分仅有目录的节点和有正文的阅读单元。正文的 `definition-anchors.json` 保留已发布释义链接的稳定锚点。
 
 实作入口为 `#resources`，课程顶部与固定目录也可就地打开，关闭后保留阅读位置。逐项来源、任务、许可与复算范围在 `courses/resources/catalog.json`，构建命令为 `python scripts/build-resource-library.py`；核验记录见 [RESOURCE-REVIEW.md](RESOURCE-REVIEW.md)。复算代码与结果保存在 `assets/practice/`，公开规格、真实观测和仿真分开标注，原始日志访问失败不计为已经复算。
 

@@ -16,11 +16,6 @@ class PracticeContent(unittest.TestCase):
     def test_calculations_have_independently_checked_values(self):
         expected={'em-power':24*4-Fraction(1,2)*4**2,
             'em-transformer-calc':Fraction(100,5**2*2),
-            'ma-conditional':Fraction(90,90+99)*100,
-            'ph-collision':Fraction(1,2)*2*3**2-Fraction(1,2)*3*Fraction(2*3,3)**2,
-            'ch-limiting':min(Fraction(30,100)/2,Fraction(10,100))*2,
-            'bi-mendel':Fraction(3,4)*160,'ge-water':1200-700-100,
-            'po-real-income':(Fraction(110,105)-1)*100,
             'tr-calc-test':math.sqrt(2100),'tr-calc-line':10000/math.sqrt(3)/10,
             'tr-calc-base':Fraction(1,10),'tr-calc-eff':Fraction(800,830)*100,
             'tr-calc-parallel':math.sqrt(Fraction(105,10)**2+1),
@@ -34,9 +29,7 @@ class PracticeContent(unittest.TestCase):
         data=json.loads((ROOT/'courses/practice/sources.json').read_text())
         sources={s['id']:s for s in data['sources']}
         self.assertNotIn('physport-fci-reference',sources)
-        for id in ['pisa-reading-chicken','openstax-biology-genetics','dig-migrant-mother','bc-noticeboard','pisa2015-science-hot-weather']:
-            self.assertFalse(sources[id]['ready'])
-        for id in ['pisa2022-math-released','pisa-reading-rapanui','mit-machines-ps1']:
+        for id in ['mit-machines-ps1','nptel-transformer-week6']:
             self.assertTrue(sources[id]['ready'])
         for s in sources.values():
             self.assertTrue(s['answers']);self.assertTrue(s['targets']);self.assertTrue(s['evidenceLinks'])

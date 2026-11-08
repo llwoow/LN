@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const bank=window.LN_PRACTICE_BANK,questions=bank.questions,courses=window.LN_COURSES;
+  const bank=window.LN_PRACTICE_BANK,questions=bank.questions,courses=window.LN_COURSES.filter(c=>!c.outlineOnly);
   const kinds={single:'单选',multi:'多选',numeric:'计算',open:'问答'};
   const skills=['建模','因果与证据','推导计算','边界与反例','迁移设计','解释表达'];
   const escape=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -30,6 +30,7 @@
   function needsReview(q,r){return Boolean(r&&(r.hinted||r.revealed||r.attempts?.some(a=>a.correct===false)||(q.type==='open'&&r.submitted&&r.checks.length<q.rubric.length)));}
   function isMistake(r){return Boolean(r&&(r.selfMistake||r.attempts?.some(a=>a.correct===false)));}
   function button(course,section,label='练习'){
+    if(course.outlineOnly)return '';
     return '<button type="button" class="resource-nav-button" data-open-practice data-practice-course="'+escape(course.id)+'"'+(section?' data-practice-section="'+escape(section.id)+'"':'')+' aria-haspopup="dialog" aria-controls="practice-dialog">'+escape(label)+'</button>';
   }
   function shell(course,section){

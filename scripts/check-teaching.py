@@ -6,6 +6,9 @@ a=runpy.run_path(str(ROOT/'scripts/build-reference-index.py'))['assignment']
 for path in (ROOT/'courses').glob('*/manifest.js'):
  course=a(path)
  for section in course['sections']:
+  if section['kind']=='outline':
+   if not course.get('outlineOnly') or 'src' in section: raise ValueError('Invalid outline node: '+section['id'])
+   continue
   payload=a(ROOT/section['src']);body=payload.get('html','')
   if 'LN-UNDERSTANDING:BEGIN' in body or 'data-learning-standard="understanding-v1"' in body:
    raise ValueError('Removed template was reintroduced: '+section['id'])

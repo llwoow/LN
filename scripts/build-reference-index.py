@@ -57,6 +57,7 @@ def build_index():
     for path in sorted((ROOT / 'courses').glob('*/manifest.js')):
         course = assignment(path); courses[course['id']] = course
         for section in course['sections']:
+            if section['kind'] == 'outline': continue
             payload = assignment(ROOT / section['src'])
             if 'html' in payload: documents[(course['id'], section['id'])] = Document(payload['html']).root
     for (course_id, section_id), document in documents.items():

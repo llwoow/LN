@@ -9,7 +9,8 @@ ROOT=Path(__file__).resolve().parents[1]
 assignment=runpy.run_path(str(ROOT/'scripts/build-reference-index.py'))['assignment']
 courses={}
 for path in (ROOT/'courses').glob('*/manifest.js'):
-    course=assignment(path);courses[course['id']]={s['id'] for s in course['sections']}
+    course=assignment(path)
+    if not course.get('outlineOnly'):courses[course['id']]={s['id'] for s in course['sections']}
 data=json.loads((ROOT/'courses/resources/catalog.json').read_text());seen=set();covered=set()
 for resource in data['resources']:
     identifier=resource['id']

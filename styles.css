@@ -358,6 +358,7 @@ ln-knowledge-map { display: block; min-width: 0; }
 .map-group-heading .map-group-count { font-size: 12px; }
 .map-relation-toggle { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; min-height: 36px; font-size: 12px; color: var(--muted); cursor: pointer; }
 .map-relation-toggle input { width: 15px; height: 15px; margin: 0; accent-color: var(--accent); }
+.outline-map .map-relation-toggle, .outline-map .map-relation-key, .outline-map .map-node-context { display: none; }
 @media (max-width: 720px) {
   .map-toolbar { gap: 8px; }
   .map-relation-toggle { min-height: 30px; margin-left: 0; }

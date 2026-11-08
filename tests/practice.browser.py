@@ -61,22 +61,22 @@ with sync_playwright() as p:
             assert panel.locator('.practice-feedback ol li').count()>=3
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth'),(width,q['id'])
         # Selection order, drafts and self-check survive reload without changing the result.
-        before=page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["hi-change"]')
+        before=page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["em-test-design"]')
         page.reload();page.locator('[data-practice-mode="local"]').click();panel=page.locator('main [data-practice-panel]')
-        panel.locator('[data-p-course]').select_option('hs-history');panel.locator('[data-p-question]').select_option('hi-change')
+        panel.locator('[data-p-course]').select_option('electrical-machines');panel.locator('[data-p-question]').select_option('em-test-design')
         assert panel.locator('[data-p-reason]').input_value()==before['reason']
         assert panel.locator('[data-p-rubric]:checked').count()==1
         # Filter by kind and capability rather than awarding a fake mastery score.
         panel.locator('[data-p-type]').select_option('open');panel.locator('[data-p-skill]').select_option('迁移设计')
         assert panel.locator('[data-p-question] option').count()>0
         # Hints/direct reference analysis do not create independent first-answer evidence.
-        page.goto('http://127.0.0.1:8765/#practice/hs-math');page.evaluate('localStorage.removeItem("ln.practice.v1")');page.reload();page.locator('[data-practice-mode="local"]').click()
+        page.goto('http://127.0.0.1:8765/#practice/electrical-machines');page.evaluate('localStorage.removeItem("ln.practice.v1")');page.reload();page.locator('[data-practice-mode="local"]').click()
         panel=page.locator('main [data-practice-panel]');panel.locator('[data-p-hint]').click()
         panel.locator('[name="p-answer"][value="1"]').check();panel.locator('[data-p-submit]').click()
-        assert page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["ma-logic"].attempts[0].assisted')
-        panel.locator('[data-p-question]').select_option('ma-domain');panel.locator('[data-p-reveal]').click()
+        assert page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["em-start"].attempts[0].assisted')
+        panel.locator('[data-p-question]').select_option('em-load');panel.locator('[data-p-reveal]').click()
         panel.locator('[name="p-answer"][value="1"]').check();panel.locator('[data-p-submit]').click()
-        assert page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["ma-domain"].attempts[0].assisted')
+        assert page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["em-load"].attempts[0].assisted')
         page.screenshot(path='.preview/practice-'+str(width)+'.png')
         page.locator('[data-practice-mode="sources"]').click()
         page.locator('[data-source-course]').select_option('electrical-machines')

@@ -185,7 +185,7 @@
     const model = course.sections.find((section) => section.kind === 'model');
     const modelActive = model && location.hash.split('/')[2] === model.id;
     const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
-    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + '章节阅读</a>' + modelLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
+    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + (course.outlineOnly ? '章节目录' : '章节阅读') + '</a>' + modelLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
   }
 
   function renderKnowledgeMap(course) {
@@ -305,13 +305,15 @@
   async function loadLesson(course, selected, anchor) {
     const key = course.id + '/' + selected.id;
     try {
-      await Promise.all([loadScript(selected.src), loadStyle('assets/katex/katex.min.css'), course.glossary ? loadScript(course.glossary) : Promise.resolve()]);
+      const outline = selected.kind === 'outline';
+      if (!outline) await Promise.all([loadScript(selected.src), loadStyle('assets/katex/katex.min.css'), course.glossary ? loadScript(course.glossary) : Promise.resolve()]);
       if (selected.kind === 'model') await loadWindingAssets();
       if (selected.id.startsWith('transformer-')) await loadStyle('courses/electrical-machines/model/transformer-lesson.css');
       const body = $('#lesson-body');
       if (!body || body.dataset.lessonKey !== key) return;
-      const payload = window.LN_LESSONS[key];
-      if (selected.kind === 'pdf') renderPdf(payload, body, anchor);
+      const payload = outline ? {} : window.LN_LESSONS[key];
+      if (outline) body.innerHTML = '<h2>' + escapeHTML(selected.title) + '</h2>';
+      else if (selected.kind === 'pdf') renderPdf(payload, body, anchor);
       else if (selected.kind === 'document') {
         body.innerHTML = (payload.html || '') + '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
       } else body.innerHTML = payload.html;
@@ -380,7 +382,12 @@
     }
     category = view === 'category' ? (categories[id] || '全部') : '全部';
     let title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : (category === '全部' ? '课程' : category);
+    const outlineCourse = courses.find(course => course.id === id && course.outlineOnly);
     if (currentView === 'course') title = renderCourse(id, sectionId, anchor);
+    else if (outlineCourse && ['practice', 'resources'].includes(currentView)) {
+      title = outlineCourse.title;
+      main.innerHTML = '<h1>' + escapeHTML(title) + '</h1><p>当前仅保留目录。</p><a class="secondary-button" href="#course/' + id + '">打开目录</a>';
+    }
     else if (currentView === 'practice') { main.innerHTML = window.LNPractice.pageHtml(id); window.LNPractice.mount(main, id, sectionId); title = '练习'; }
     else if (currentView === 'resources') { main.innerHTML = window.LNResources.pageHtml(id); window.LNResources.bindPage(main, id, sectionId); title = '实作与资料'; }
     else if (currentView === 'highschool' && id === 'resources') { main.innerHTML = window.LNHighSchool.resourcesHtml(); title = '教材与来源'; }

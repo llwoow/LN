@@ -1,7 +1,7 @@
 'use strict';
 (() => {
   const data=window.LN_RESOURCE_CATALOG;
-  const resources=data.resources, courses=window.LN_COURSES;
+  const resources=data.resources, courses=window.LN_COURSES.filter(c=>!c.outlineOnly);
   const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const courseById=id=>courses.find(c=>c.id===id);
   const applies=(resource,course,section)=>resource.targets.some(t=>t.course===course&&(!section||t.section===section));
@@ -20,6 +20,7 @@
     return exact.length?exact:resources.filter(r=>applies(r,course));
   }
   function button(course,section,label='实作资源') {
+    if(course.outlineOnly)return '';
     return '<button type="button" class="resource-nav-button" aria-haspopup="dialog" aria-controls="resource-dialog" data-open-resources data-resource-course="'+escape(course.id)+'"'+(section?' data-resource-section="'+escape(section.id)+'"':'')+'><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>'+label+'</button>';
   }
 

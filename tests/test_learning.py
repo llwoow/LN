@@ -19,12 +19,16 @@ class ContentIntegration(unittest.TestCase):
         for path in (ROOT/'courses').glob('*/manifest.js'):
             course=REF['assignment'](path)
             for section in course['sections']:
+                count+=1
+                if section['kind']=='outline':
+                    self.assertTrue(course['outlineOnly'])
+                    self.assertNotIn('src',section)
+                    continue
                 payload=REF['assignment'](ROOT/section['src']);body=payload.get('html','')
                 self.assertNotIn('LN-UNDERSTANDING:BEGIN',body)
                 self.assertNotIn('data-learning-standard="understanding-v1"',body)
                 self.assertNotIn('katex-error',body)
                 if section['kind']=='html':self.assertTrue(body.strip())
-                count+=1
         self.assertEqual(count,292)
         self.assertFalse((ROOT/'scripts/build-electrical-understanding.py').exists())
         self.assertNotIn('render_understanding',(ROOT/'scripts/build-highschool.py').read_text())
