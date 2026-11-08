@@ -1,0 +1,116 @@
+{
+  "lazy": true,
+  "terms": [
+    {
+      "id": "ac-characteristic",
+      "aliases": [
+        "特征方程",
+        "characteristic equation"
+      ],
+      "title": "特征方程",
+      "english": "Characteristic Equation",
+      "description": "由系统齐次运动或闭环特征表达式得到的多项式方程，其根的位置决定内部自然模态的衰减、振荡或增长。",
+      "section": "ac-3-5",
+      "match": "称为特征方程"
+    },
+    {
+      "id": "ac-routh",
+      "aliases": [
+        "劳斯判据",
+        "Routh criterion"
+      ],
+      "title": "劳斯稳定判据",
+      "english": "Routh Stability Criterion",
+      "description": "不直接求解全部特征根，而从劳斯表首列符号变化判断右半平面的根数；零行需要特殊处理。",
+      "section": "ac-3-5",
+      "match": "劳斯表第一列的符号变化次数"
+    },
+    {
+      "id": "ac-stability",
+      "aliases": [
+        "渐近稳定",
+        "asymptotic stability"
+      ],
+      "title": "渐近稳定",
+      "english": "Asymptotic Stability",
+      "description": "系统零输入自由响应随时间趋于零；连续时间有限维线性定常系统须所有内部特征根严格位于左半平面。",
+      "section": "ac-3-5",
+      "match": "渐近稳定要求第一列"
+    },
+    {
+      "id": "ac-type",
+      "aliases": [
+        "系统型别",
+        "0型系统",
+        "I型系统",
+        "II型系统"
+      ],
+      "title": "系统型别",
+      "english": "System Type",
+      "description": "单位负反馈常规系统中，开环传递函数在原点处未被相消的极点个数，用于判断跟踪多项式给定输入的稳态误差。",
+      "section": "ac-3-6",
+      "match": "为什么系统型别决定跟踪能力"
+    },
+    {
+      "id": "ac-error",
+      "aliases": [
+        "稳态误差",
+        "steady-state error"
+      ],
+      "title": "稳态误差",
+      "english": "Steady-State Error",
+      "description": "在闭环稳定且误差收敛时，误差 e(t)=r(t)−c(t) 的最终极限。误差无界时不存在有限稳态误差。",
+      "section": "ac-3-6",
+      "match": "稳态误差描述在外部信号持续作用"
+    },
+    {
+      "id": "ac-disturbance",
+      "aliases": [
+        "扰动误差",
+        "扰动稳态误差",
+        "disturbance rejection"
+      ],
+      "title": "扰动稳态误差",
+      "english": "Steady-State Disturbance Error",
+      "description": "由扰动输入而不是给定信号引起的输出偏差，取决于扰动加入位置及闭环的传递函数。",
+      "section": "ac-3-6",
+      "match": "扰动误差：位置比总开环型别更重要"
+    },
+    {
+      "id": "ac-final",
+      "aliases": [
+        "终值定理",
+        "final value theorem"
+      ],
+      "title": "终值定理",
+      "english": "Final Value Theorem",
+      "description": "在误差信号满足收敛极限的极点条件时，最终值等于 lim(s→0)sE(s)；不能将发散误差硬套终值定理。",
+      "section": "ac-3-6",
+      "match": "才可使用终值定理"
+    },
+    {
+      "id": "ac-damping",
+      "aliases": [
+        "阻尼比",
+        "damping ratio"
+      ],
+      "title": "阻尼比",
+      "english": "Damping Ratio",
+      "description": "标准二阶系统分母 s²+2ζωₙs+ωₙ² 中的无量纲 ζ，决定欠阻尼、临界阻尼、过阻尼及超调趋势。",
+      "section": "ac-3-3",
+      "match": "决定二阶响应形态"
+    },
+    {
+      "id": "ac-constant",
+      "aliases": [
+        "时间常数",
+        "time constant"
+      ],
+      "title": "时间常数",
+      "english": "Time Constant",
+      "description": "一阶模型 1/(Ts+1) 中的 T>0，阶跃响应在 t=T 达到最终变化量约63.2%。",
+      "section": "ac-3-2",
+      "match": "时间常数具有可测量的意义"
+    }
+  ]
+}
