@@ -335,12 +335,20 @@ window.LN_AUTO_CONTROL={
       "teachingIndex": 39
     },
     {
+      "id": "ac-homework3",
+      "title": "第三章已做习题 · 3-13、3-14、3-15、3-16、3-18",
+      "group": "第3章 自动控制系统的时域分析",
+      "kind": "html",
+      "src": "courses/automatic-control/lessons/ac-homework3.js",
+      "teachingIndex": 40
+    },
+    {
       "id": "ac-4-1",
       "title": "4.1 根轨迹法的基本概念",
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.1",
-      "teachingIndex": 40
+      "teachingIndex": 41
     },
     {
       "id": "ac-4-2",
@@ -348,7 +356,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2",
-      "teachingIndex": 41
+      "teachingIndex": 42
     },
     {
       "id": "ac-4-2-1",
@@ -356,7 +364,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2.1",
-      "teachingIndex": 42
+      "teachingIndex": 43
     },
     {
       "id": "ac-4-2-2",
@@ -364,7 +372,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2.2",
-      "teachingIndex": 43
+      "teachingIndex": 44
     },
     {
       "id": "ac-4-2-3",
@@ -372,7 +380,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2.3",
-      "teachingIndex": 44
+      "teachingIndex": 45
     },
     {
       "id": "ac-4-2-4",
@@ -380,7 +388,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.2.4",
-      "teachingIndex": 45
+      "teachingIndex": 46
     },
     {
       "id": "ac-4-3",
@@ -388,7 +396,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3",
-      "teachingIndex": 46
+      "teachingIndex": 47
     },
     {
       "id": "ac-4-3-1",
@@ -396,7 +404,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.1",
-      "teachingIndex": 47
+      "teachingIndex": 48
     },
     {
       "id": "ac-4-3-2",
@@ -404,7 +412,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.2",
-      "teachingIndex": 48
+      "teachingIndex": 49
     },
     {
       "id": "ac-4-3-3",
@@ -412,7 +420,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.3",
-      "teachingIndex": 49
+      "teachingIndex": 50
     },
     {
       "id": "ac-4-3-4",
@@ -420,7 +428,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.4",
-      "teachingIndex": 50
+      "teachingIndex": 51
     },
     {
       "id": "ac-4-3-5",
@@ -428,7 +436,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.3.5",
-      "teachingIndex": 51
+      "teachingIndex": 52
     },
     {
       "id": "ac-4-4",
@@ -436,7 +444,7 @@ window.LN_AUTO_CONTROL={
       "group": "第4章 根轨迹法",
       "kind": "outline",
       "textbookSection": "4.4",
-      "teachingIndex": 52
+      "teachingIndex": 53
     },
     {
       "id": "ac-5-1",
@@ -444,7 +452,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.1",
-      "teachingIndex": 53
+      "teachingIndex": 54
     },
     {
       "id": "ac-5-2",
@@ -452,7 +460,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.2",
-      "teachingIndex": 54
+      "teachingIndex": 55
     },
     {
       "id": "ac-5-3",
@@ -460,7 +468,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.3",
-      "teachingIndex": 55
+      "teachingIndex": 56
     },
     {
       "id": "ac-5-3-1",
@@ -468,7 +476,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.3.1",
-      "teachingIndex": 56
+      "teachingIndex": 57
     },
     {
       "id": "ac-5-3-2",
@@ -476,7 +484,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.3.2",
-      "teachingIndex": 57
+      "teachingIndex": 58
     },
     {
       "id": "ac-5-3-3",
@@ -484,7 +492,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.3.3",
-      "teachingIndex": 58
+      "teachingIndex": 59
     },
     {
       "id": "ac-5-4",
@@ -492,7 +500,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.4",
-      "teachingIndex": 59
+      "teachingIndex": 60
     },
     {
       "id": "ac-5-5",
@@ -500,7 +508,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.5",
-      "teachingIndex": 60
+      "teachingIndex": 61
     },
     {
       "id": "ac-5-6",
@@ -508,7 +516,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.6",
-      "teachingIndex": 61
+      "teachingIndex": 62
     },
     {
       "id": "ac-5-6-5",
@@ -516,7 +524,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.6.5",
-      "teachingIndex": 62
+      "teachingIndex": 63
     },
     {
       "id": "ac-5-6-9",
@@ -524,7 +532,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.6.9",
-      "teachingIndex": 63
+      "teachingIndex": 64
     },
     {
       "id": "ac-5-7",
@@ -532,7 +540,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.7",
-      "teachingIndex": 64
+      "teachingIndex": 65
     },
     {
       "id": "ac-5-8",
@@ -540,7 +548,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.8",
-      "teachingIndex": 65
+      "teachingIndex": 66
     },
     {
       "id": "ac-5-9",
@@ -548,7 +556,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.9",
-      "teachingIndex": 66
+      "teachingIndex": 67
     },
     {
       "id": "ac-5-10",
@@ -556,7 +564,7 @@ window.LN_AUTO_CONTROL={
       "group": "第5章 频率法",
       "kind": "outline",
       "textbookSection": "5.10",
-      "teachingIndex": 67
+      "teachingIndex": 68
     },
     {
       "id": "ac-6-1",
@@ -564,7 +572,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.1",
-      "teachingIndex": 68
+      "teachingIndex": 69
     },
     {
       "id": "ac-6-2",
@@ -572,7 +580,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.2",
-      "teachingIndex": 69
+      "teachingIndex": 70
     },
     {
       "id": "ac-6-2-1",
@@ -580,7 +588,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.2.1",
-      "teachingIndex": 70
+      "teachingIndex": 71
     },
     {
       "id": "ac-6-2-2",
@@ -588,7 +596,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.2.2",
-      "teachingIndex": 71
+      "teachingIndex": 72
     },
     {
       "id": "ac-6-2-3",
@@ -596,7 +604,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.2.3",
-      "teachingIndex": 72
+      "teachingIndex": 73
     },
     {
       "id": "ac-6-3",
@@ -604,7 +612,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.3",
-      "teachingIndex": 73
+      "teachingIndex": 74
     },
     {
       "id": "ac-6-4",
@@ -612,7 +620,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.4",
-      "teachingIndex": 74
+      "teachingIndex": 75
     },
     {
       "id": "ac-6-4-1",
@@ -620,7 +628,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.4.1",
-      "teachingIndex": 75
+      "teachingIndex": 76
     },
     {
       "id": "ac-6-4-2",
@@ -628,7 +636,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.4.2",
-      "teachingIndex": 76
+      "teachingIndex": 77
     },
     {
       "id": "ac-6-5",
@@ -636,7 +644,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5",
-      "teachingIndex": 77
+      "teachingIndex": 78
     },
     {
       "id": "ac-6-5-1",
@@ -644,7 +652,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.1",
-      "teachingIndex": 78
+      "teachingIndex": 79
     },
     {
       "id": "ac-6-5-2",
@@ -652,7 +660,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.2",
-      "teachingIndex": 79
+      "teachingIndex": 80
     },
     {
       "id": "ac-6-5-3",
@@ -660,7 +668,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.3",
-      "teachingIndex": 80
+      "teachingIndex": 81
     },
     {
       "id": "ac-6-5-4",
@@ -668,7 +676,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.4",
-      "teachingIndex": 81
+      "teachingIndex": 82
     },
     {
       "id": "ac-6-5-5",
@@ -676,7 +684,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.5",
-      "teachingIndex": 82
+      "teachingIndex": 83
     },
     {
       "id": "ac-6-5-6",
@@ -684,7 +692,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.5.6",
-      "teachingIndex": 83
+      "teachingIndex": 84
     },
     {
       "id": "ac-6-6",
@@ -692,7 +700,7 @@ window.LN_AUTO_CONTROL={
       "group": "第6章 控制系统的校正及综合",
       "kind": "outline",
       "textbookSection": "6.6",
-      "teachingIndex": 84
+      "teachingIndex": 85
     },
     {
       "id": "ac-7-1",
@@ -700,7 +708,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.1",
-      "teachingIndex": 85
+      "teachingIndex": 86
     },
     {
       "id": "ac-7-2",
@@ -708,7 +716,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2",
-      "teachingIndex": 86
+      "teachingIndex": 87
     },
     {
       "id": "ac-7-2-1",
@@ -716,7 +724,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.1",
-      "teachingIndex": 87
+      "teachingIndex": 88
     },
     {
       "id": "ac-7-2-2",
@@ -724,7 +732,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.2",
-      "teachingIndex": 88
+      "teachingIndex": 89
     },
     {
       "id": "ac-7-2-3",
@@ -732,7 +740,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.3",
-      "teachingIndex": 89
+      "teachingIndex": 90
     },
     {
       "id": "ac-7-2-4",
@@ -740,7 +748,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.4",
-      "teachingIndex": 90
+      "teachingIndex": 91
     },
     {
       "id": "ac-7-2-5",
@@ -748,7 +756,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.2.5",
-      "teachingIndex": 91
+      "teachingIndex": 92
     },
     {
       "id": "ac-7-3",
@@ -756,7 +764,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.3",
-      "teachingIndex": 92
+      "teachingIndex": 93
     },
     {
       "id": "ac-7-4",
@@ -764,7 +772,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.4",
-      "teachingIndex": 93
+      "teachingIndex": 94
     },
     {
       "id": "ac-7-5",
@@ -772,7 +780,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.5",
-      "teachingIndex": 94
+      "teachingIndex": 95
     },
     {
       "id": "ac-7-6",
@@ -780,7 +788,7 @@ window.LN_AUTO_CONTROL={
       "group": "第7章 非线性系统分析",
       "kind": "outline",
       "textbookSection": "7.6",
-      "teachingIndex": 95
+      "teachingIndex": 96
     },
     {
       "id": "ac-8-1",
@@ -788,7 +796,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.1",
-      "teachingIndex": 96
+      "teachingIndex": 97
     },
     {
       "id": "ac-8-2",
@@ -796,7 +804,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.2",
-      "teachingIndex": 97
+      "teachingIndex": 98
     },
     {
       "id": "ac-8-2-3",
@@ -804,7 +812,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.2.3",
-      "teachingIndex": 98
+      "teachingIndex": 99
     },
     {
       "id": "ac-8-3",
@@ -812,7 +820,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3",
-      "teachingIndex": 99
+      "teachingIndex": 100
     },
     {
       "id": "ac-8-3-1",
@@ -820,7 +828,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3.1",
-      "teachingIndex": 100
+      "teachingIndex": 101
     },
     {
       "id": "ac-8-3-2",
@@ -828,7 +836,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3.2",
-      "teachingIndex": 101
+      "teachingIndex": 102
     },
     {
       "id": "ac-8-3-3",
@@ -836,7 +844,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3.3",
-      "teachingIndex": 102
+      "teachingIndex": 103
     },
     {
       "id": "ac-8-3-4",
@@ -844,7 +852,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.3.4",
-      "teachingIndex": 103
+      "teachingIndex": 104
     },
     {
       "id": "ac-8-4",
@@ -852,7 +860,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.4",
-      "teachingIndex": 104
+      "teachingIndex": 105
     },
     {
       "id": "ac-8-5",
@@ -860,7 +868,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.5",
-      "teachingIndex": 105
+      "teachingIndex": 106
     },
     {
       "id": "ac-8-6",
@@ -868,7 +876,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.6",
-      "teachingIndex": 106
+      "teachingIndex": 107
     },
     {
       "id": "ac-8-6-2",
@@ -876,7 +884,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.6.2",
-      "teachingIndex": 107
+      "teachingIndex": 108
     },
     {
       "id": "ac-8-6-3",
@@ -884,7 +892,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.6.3",
-      "teachingIndex": 108
+      "teachingIndex": 109
     },
     {
       "id": "ac-8-7",
@@ -892,7 +900,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.7",
-      "teachingIndex": 109
+      "teachingIndex": 110
     },
     {
       "id": "ac-8-8",
@@ -900,7 +908,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.8",
-      "teachingIndex": 110
+      "teachingIndex": 111
     },
     {
       "id": "ac-8-9",
@@ -908,7 +916,7 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.9",
-      "teachingIndex": 111
+      "teachingIndex": 112
     },
     {
       "id": "ac-8-10",
@@ -916,14 +924,6 @@ window.LN_AUTO_CONTROL={
       "group": "第8章 线性离散系统的理论基础",
       "kind": "outline",
       "textbookSection": "8.10",
-      "teachingIndex": 112
-    },
-    {
-      "id": "ac-homework3",
-      "title": "第三章已做习题 · 3-13、3-14、3-15、3-16、3-18",
-      "group": "第3章 自动控制系统的时域分析",
-      "kind": "html",
-      "src": "courses/automatic-control/lessons/ac-homework3.js",
       "teachingIndex": 113
     }
   ],
