@@ -4,3 +4,4 @@
 *.js text eol=lf
 *.md text eol=lf
 *.svg text eol=lf
+assets/practice/checks/data/penguins.csv text eol=lf
