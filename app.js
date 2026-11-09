@@ -181,7 +181,9 @@
   }
 
   function courseViewNav(course, active) {
-    const first = course.sections[0];
+    const first = course.id === 'automatic-control'
+      ? (course.sections.find(section => section.kind !== 'outline') || course.sections[0])
+      : course.sections[0];
     const model = course.sections.find((section) => section.kind === 'model');
     const modelActive = model && location.hash.split('/')[2] === model.id;
     const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
