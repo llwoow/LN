@@ -6,7 +6,7 @@ const vm = require('node:vm');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const context = vm.createContext({ window: {} });
-for (const file of ['courses/electrical-machines/manifest.js', 'courses/electrical-machines/knowledge-map.js', 'courses/highschool/courses.js', 'courses.js']) {
+for (const file of ['courses/electrical-machines/manifest.js', 'courses/electrical-machines/knowledge-map.js', 'courses/electromagnetic-compatibility/manifest.js', 'courses/electromagnetic-compatibility/knowledge-map.js', 'courses/highschool/courses.js', 'courses.js']) {
   vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context, { filename: file });
 }
 for (const course of context.window.LN_COURSES) {
