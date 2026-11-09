@@ -360,7 +360,7 @@ window.LN_AUTO_CONTROL={
     },
     {
       "id": "ac-homework3",
-      "title": "第三章已做习题 · 3-13、3-14、3-15、3-16、3-18",
+      "title": "第三章课堂习题与严格批改（附第3版题号对照）",
       "group": "第3章 自动控制系统的时域分析",
       "kind": "html",
       "src": "courses/automatic-control/lessons/ac-homework3.js",
@@ -1541,6 +1541,10 @@ window.LN_AUTO_CONTROL={
         {
           "label": "教材目录（清华大学出版社）",
           "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
+        },
+        {
+          "label": "清华大学出版社 · 第3版第三章官方样章（PDF）",
+          "href": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf"
         }
       ]
     },
@@ -1549,6 +1553,10 @@ window.LN_AUTO_CONTROL={
         {
           "label": "教材目录（清华大学出版社）",
           "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
+        },
+        {
+          "label": "清华大学出版社 · 第3版第三章官方样章（PDF）",
+          "href": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf"
         }
       ]
     },
@@ -1557,6 +1565,10 @@ window.LN_AUTO_CONTROL={
         {
           "label": "教材目录（清华大学出版社）",
           "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
+        },
+        {
+          "label": "清华大学出版社 · 第3版第三章官方样章（PDF）",
+          "href": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf"
         }
       ]
     },
@@ -1565,6 +1577,10 @@ window.LN_AUTO_CONTROL={
         {
           "label": "教材目录（清华大学出版社）",
           "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
+        },
+        {
+          "label": "清华大学出版社 · 第3版第三章官方样章（PDF）",
+          "href": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf"
         }
       ]
     },
@@ -1573,6 +1589,10 @@ window.LN_AUTO_CONTROL={
         {
           "label": "教材目录（清华大学出版社）",
           "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
+        },
+        {
+          "label": "清华大学出版社 · 第3版第三章官方样章（PDF）",
+          "href": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf"
         }
       ]
     },
@@ -1581,6 +1601,10 @@ window.LN_AUTO_CONTROL={
         {
           "label": "教材目录（清华大学出版社）",
           "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
+        },
+        {
+          "label": "清华大学出版社 · 第3版第三章官方样章（PDF）",
+          "href": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf"
         }
       ]
     },
@@ -1589,6 +1613,10 @@ window.LN_AUTO_CONTROL={
         {
           "label": "教材目录（清华大学出版社）",
           "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
+        },
+        {
+          "label": "清华大学出版社 · 第3版第三章官方样章（PDF）",
+          "href": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf"
         }
       ]
     },
@@ -1597,6 +1625,10 @@ window.LN_AUTO_CONTROL={
         {
           "label": "教材目录（清华大学出版社）",
           "href": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=08941901"
+        },
+        {
+          "label": "清华大学出版社 · 第3版第三章官方样章（PDF）",
+          "href": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf"
         }
       ]
     }
@@ -1607,7 +1639,15 @@ window.LN_AUTO_CONTROL={
     "edition": 3,
     "isbn": "9787302665564",
     "publisher": "清华大学出版社",
-    "url": "https://www.tup.tsinghua.edu.cn/bookscenter/book_08941901.html"
+    "url": "https://www.tup.tsinghua.edu.cn/bookscenter/book_08941901.html",
+    "officialChapter3Sample": {
+      "url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf",
+      "format": "PDF",
+      "pages": 58,
+      "printedPageRange": "85–141",
+      "verified": "2026-11-09",
+      "scope": "第三章官方完整样章；不是教材整本PDF"
+    }
   },
   "textbookContents": {
     "edition": "王建辉、顾树生《自动控制原理》第3版",
@@ -1712,5 +1752,45 @@ window.LN_AUTO_CONTROL={
       ]
     }
   },
-  "glossary": "courses/automatic-control/glossary-index.js"
+  "glossary": "courses/automatic-control/glossary-index.js",
+  "textbookRevision": {
+    "policy": "第三版为课程目录和内容核查基准；保留课堂材料原编号，不把编号相同但内容不同的题混同。",
+    "questionCrosswalk": [
+      {
+        "source": "conversation-handout",
+        "sourceNumber": "3-13",
+        "edition3Number": "3-20",
+        "status": "confirmed_same_problem",
+        "note": "单位负反馈四阶特征方程；增益参数课堂用K、教材用K_K"
+      },
+      {
+        "source": "conversation-handout",
+        "sourceNumber": "3-14",
+        "edition3Number": "3-21",
+        "status": "confirmed_equivalent_structure",
+        "note": "同一双反馈结构；课堂用τs、教材用K_fs"
+      },
+      {
+        "source": "conversation-handout",
+        "sourceNumber": "3-15",
+        "edition3Number": null,
+        "status": "unmapped",
+        "note": "第三版3-15为结构图动态指标题，和课堂材料中三个稳态误差小题不同"
+      },
+      {
+        "source": "conversation-handout",
+        "sourceNumber": "3-16",
+        "edition3Number": null,
+        "status": "unmapped",
+        "note": "第三版3-16为带结构图的参数与误差计算题；不可按相同编号绑定"
+      },
+      {
+        "source": "conversation-handout",
+        "sourceNumber": "3-18",
+        "edition3Number": null,
+        "status": "different_problem",
+        "note": "第三版3-18为调节器选择题；课堂材料3-18是PI控制的双扰动误差题"
+      }
+    ]
+  }
 };
