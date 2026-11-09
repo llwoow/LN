@@ -124,6 +124,21 @@ class AutomaticControlTests(unittest.TestCase):
         self.assertIn("ξ",second)
         self.assertNotIn("<mi>ζ</mi>",second)
 
+
+    def test_disturbance_position_analytic_response(self):
+        from math import exp, sin, cos
+        page = assignment(ROOT/"courses/automatic-control/lessons/ac-3-6.js")["html"]
+        self.assertIn("data-ac-disturbance",page)
+        code = (ROOT/"courses/automatic-control/control-lab.js").read_text(encoding="utf-8")
+        self.assertIn("data-ac-disturbance-select",code)
+        for t in (0.0,0.5,1.0,3.0,10.0):
+            before = -exp(-t)*sin(3*t)
+            after = -0.3 + 0.3*exp(-t)*cos(3*t) + 0.1*exp(-t)*sin(3*t)
+            self.assertTrue(math.isfinite(before))
+            self.assertTrue(math.isfinite(after))
+        self.assertAlmostEqual(-exp(-20)*sin(60),0,places=7)
+        self.assertAlmostEqual(-0.3 + 0.3*exp(-20)*cos(60) + 0.1*exp(-20)*sin(60),-0.3,places=7)
+
     def test_labs_connected(self):
         app=(ROOT/"app.js").read_text(encoding="utf-8")
         self.assertIn("LN_MOUNT_CONTROL_LABS",app)
