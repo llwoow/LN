@@ -74,7 +74,7 @@
       "english": "Steady-State Disturbance Error",
       "description": "由扰动输入而不是给定信号引起的输出偏差，取决于扰动加入位置及闭环的传递函数。",
       "section": "ac-3-6",
-      "match": "扰动误差：位置比总开环型别更重要"
+      "match": "扰动稳态误差：扰动位置与反馈路径"
     },
     {
       "id": "ac-final",
@@ -96,7 +96,7 @@
       ],
       "title": "阻尼比",
       "english": "Damping Ratio",
-      "description": "标准二阶系统分母 s²+2ζωₙs+ωₙ² 中的无量纲 ζ，决定欠阻尼、临界阻尼、过阻尼及超调趋势。",
+      "description": "标准二阶系统分母 s²+2ξωₙs+ωₙ² 中的无量纲 ξ（部分资料写ζ），决定欠阻尼、临界阻尼、过阻尼及超调趋势。",
       "section": "ac-3-3",
       "match": "决定二阶响应形态"
     },
