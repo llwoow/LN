@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["electromagnetic-compatibility/emc-8-2"]={"html":"<p class=\"ln-source-note\">教材依据：林福昌、李化《电磁兼容原理及应用》，第8章 电子设备的电磁兼容设计，印刷第198页起。本节为独立教学讲解，不是原书转录。</p><section class=\"article-section\" data-section=\"sec-8-2\"><h2 class=\"section-head\" id=\"sec-8-2\">8.2 线路终端的匹配连接</h2><p>当互连长度相对信号上升沿的传播距离不可忽略时，应将走线看作传输线。终端不匹配会形成反射、振铃和过冲，既影响信号完整性也可能增加电磁发射。</p><p>先估算传播延迟与信号上升时间，再按驱动阻抗、传输线特征阻抗和接收端结构选择源端串联、负载端并联或其他终端方案；匹配并不意味着所有场景都要在接收端加一个 50 Ω 电阻。</p></section>"};
