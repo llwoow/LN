@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["electromagnetic-compatibility/emc-5-5"]={"html":"<p class=\"ln-source-note\">教材依据：林福昌、李化《电磁兼容原理及应用》，第5章 滤波和滤波器，印刷第130页起。本节为独立教学讲解，不是原书转录。</p><section class=\"article-section\" data-section=\"sec-5-5\"><h2 class=\"section-head\" id=\"sec-5-5\">5.5 有源滤波器</h2><p>有源滤波器使用放大或反馈电路实现选择性传输或主动抑制。它可在特定频段取得无源器件不易实现的特性，但受供电、电路噪声、稳定性、动态范围和高频带宽限制。</p><p>设计有源消噪环路时，必须评估环路延迟、传感噪声、扰动幅值与失稳风险；它不能代替符合安全要求的电源输入安规网络。</p></section>"};

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["electromagnetic-compatibility/emc-1-1"]={"html":"<p class=\"ln-source-note\">教材依据：林福昌、李化《电磁兼容原理及应用》，第1章 概述，印刷第1页起。本节为独立教学讲解，不是原书转录。</p><section class=\"article-section\" data-section=\"sec-1-1\"><h2 class=\"section-head\" id=\"sec-1-1\">1.1 引言</h2><p>电磁兼容研究的不是某个元件能否单独正常工作，而是设备放在真实电磁环境中后，能否保持功能，同时不对周围设备造成不可接受的干扰。无线通信、开关电源和大型电力设备都可能改变这个环境。</p><p>分析一个干扰故障时，先记下受影响的功能、出现条件、频率或时间特征，再寻找源和传播路径；直接加滤波器可能掩盖真正的接地或布线问题。</p></section>"};

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["electromagnetic-compatibility/emc-4-5"]={"html":"<p class=\"ln-source-note\">教材依据：林福昌、李化《电磁兼容原理及应用》，第4章 屏蔽技术，印刷第107页起。本节为独立教学讲解，不是原书转录。</p><section class=\"article-section\" data-section=\"sec-4-5\"><h2 class=\"section-head\" id=\"sec-4-5\">4.5 孔缝泄漏的抑制措施</h2><p>屏蔽外壳的开口可能成为主导泄漏路径，尤其当孔缝尺寸接近相关波长的一定比例时。处理目标是既满足通风、接线和维护，又避免长而连续的电磁泄漏通道。</p><p>可采用减小单孔尺寸、分散孔阵列、导电密封垫、周向接触连接器和屏蔽穿墙滤波等方法；较长窄缝与多个互不连通的小孔不能简单按总面积等效。</p></section>"};

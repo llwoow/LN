@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["electromagnetic-compatibility/emc-4-1"]={"html":"<p class=\"ln-source-note\">教材依据：林福昌、李化《电磁兼容原理及应用》，第4章 屏蔽技术，印刷第85页起。本节为独立教学讲解，不是原书转录。</p><section class=\"article-section\" data-section=\"sec-4-1\"><h2 class=\"section-head\" id=\"sec-4-1\">4.1 概述</h2><p>屏蔽是利用导电或导磁结构改变场的传播和耦合。屏蔽效能既取决于材料，也受频率、场源性质、开孔、接缝以及电缆穿越方式限制；单纯增加金属厚度并不能解决所有泄漏。</p><p>实际机箱即使六面全为金属，也可能因接口缝隙、显示窗、通风孔或屏蔽电缆端接不良而形成主要辐射路径，设计时应先找薄弱环节。</p></section>"};

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["electromagnetic-compatibility/emc-2-1"]={"html":"<p class=\"ln-source-note\">教材依据：林福昌、李化《电磁兼容原理及应用》，第2章 电磁干扰传输和耦合理论，印刷第25页起。本节为独立教学讲解，不是原书转录。</p><section class=\"article-section\" data-section=\"sec-2-1\"><h2 class=\"section-head\" id=\"sec-2-1\">2.1 电磁干扰的传输途径</h2><p>耦合是干扰能量从一个电路或区域到另一处的过程。先画出干扰源、干扰接收端与返回路径，再区分沿导体传输的传导耦合以及经电磁场传播的辐射耦合；现实系统中两者常同时存在。</p><p>例如变频器电机线缆上的高频共模电流能够先沿电缆传导，再由电缆辐射到空间；只把电缆看成理想导线，就会漏掉它作为天线的作用。</p></section>"};
