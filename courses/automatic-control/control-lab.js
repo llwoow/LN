@@ -77,4 +77,31 @@ window.LN_MOUNT_CONTROL_LABS = function mountControlLabs(root) {
     select.addEventListener('change',render);
     render();
   }
+  const disturbance = root.querySelector('[data-ac-disturbance]');
+  if (disturbance) {
+    const selector = disturbance.querySelector('[data-ac-disturbance-select]');
+    const render = () => {
+      const integratorBefore = selector.value === 'before';
+      const graph = [];
+      for (let i = 0; i <= 240; i++) {
+        const t = i*7/240;
+        const exp = Math.exp(-t);
+        const e = integratorBefore
+          ? -exp*Math.sin(3*t)
+          : -0.3 + 0.3*exp*Math.cos(3*t) + 0.1*exp*Math.sin(3*t);
+        const x = 47 + 584*i/240, y = 64 - 130*e;
+        graph.push((i ? 'L' : 'M') + x.toFixed(2) + ',' + y.toFixed(2));
+      }
+      disturbance.querySelector('[data-ac-disturbance-path]').setAttribute('d', graph.join(' '));
+      disturbance.querySelector('[data-ac-disturbance-formula]').textContent =
+        integratorBefore ? 'Eₙ(s)=−3/(s²+2s+10)' : 'Eₙ(s)=−3/[s(s²+2s+10)]';
+      disturbance.querySelector('[data-ac-disturbance-status]').textContent =
+        integratorBefore
+          ? '积分在扰动之前：eₙ(t)=−e^(−t)sin(3t)，故 eₛₛ,ₙ=0；积分控制能够消除恒定扰动。'
+          : '积分在扰动之后：eₙ(t)=−0.3+0.3e^(−t)cos(3t)+0.1e^(−t)sin(3t)，故 eₛₛ,ₙ=−0.3；仍保留固定偏差。';
+    };
+    selector.addEventListener('change', render);
+    render();
+  }
+
 };
