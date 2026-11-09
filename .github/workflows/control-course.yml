@@ -20,6 +20,21 @@ jobs:
           python-version: '3.12'
       - name: Course checks
         run: python -m unittest discover -s tests -p 'test_automatic_control.py' -v
+      - name: Temporary source-index regeneration for review
+        run: |
+          python scripts/build-reference-index.py
+          python scripts/build-glossary.py
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          files = ['reference-index.js','courses/automatic-control/glossary-index.js']
+          for path in files:
+              print('BEGIN_GENERATED_FILE:' + path)
+              contents = Path(path).read_text(encoding='utf-8')
+              for i in range(0,len(contents),800):
+                  print(json.dumps(contents[i:i+800], ensure_ascii=False))
+              print('END_GENERATED_FILE:' + path)
+          PY
       - name: Reference index matches sources
         run: python scripts/build-reference-index.py --check
       - name: Glossary index matches sources
