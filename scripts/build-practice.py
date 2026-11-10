@@ -39,7 +39,7 @@ for q in data['questions']:
         assert len(options)>=3 and len(ids)==len(options),q['id']
         assert all(o['text'] and o['feedback'] for o in options),q['id']
         assert set(q['answer'])<ids and len(set(q['answer']))==len(q['answer']),q['id']
-        assert len(q['answer'])==(1 if q['type']=='single' else 2),q['id']
+        assert (len(q['answer'])==1 if q['type']=='single' else len(q['answer'])>=2),q['id']
     else:
         assert len(q['rubric'])>=3,q['id']
         if q['type']=='numeric':

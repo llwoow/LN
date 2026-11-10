@@ -22,7 +22,7 @@ python -m http.server 4173 --bind 127.0.0.1
 - 物理符号、重要缩写与英文术语支持释义小窗：查看原定义、单位或英文全称；跳转原文后可返回阅读位置。
 - 五套配色，日间 / 夜间 / 跟随系统。
 - 原生 HTML、CSS、JavaScript，无需安装依赖。
-- 已整合电机学：磁路、变压器、直流电机、第二章作业及直流电机 3D 交互模型；电磁兼容原理及应用依据林福昌、李化教材建立 10 章、40 个阅读小节与 107 个三级小节的原创导读（详见课程 REVIEW.md）。不含音频。
+- 已整合电机学：磁路、变压器、直流电机、第二章作业及直流电机 3D 交互模型；新增《电磁兼容原理及应用》的完整目录与四节详细教学样章（其余章节仍为简短导读，见 `courses/electromagnetic-compatibility/REVIEW.md`）。不含音频。
 - 课程正文、公式字体和模型按需加载；保留原讲义 PDF。仅展示已有真实材料的课程。
 
 `/` 或 `Ctrl/Cmd + K` 搜索，`Esc` 关闭设置或手机侧栏。
@@ -51,11 +51,12 @@ python tests/glossary-coverage.browser.py
 
 局部符号或术语可用 `sections` 限定适用阅读单元；范围内定义优先，未覆盖的小节不套用，避免将空载量与零序量等混淆。
 
-高中入口为 `#highschool`。现阶段保留海南2027届核验报告对应的九科、50册主索引、235个目录节点和17条学习主线。章节页保留标题、原地址及导航，正文留空。“教材与来源”保留原报告、索引表和候选版本。
+高中入口为 `#highschool`。现阶段保留海南2027届核验报告对应的九科、50册主索引、235个目录节点和17条学习主线。原教材目录页保留标题、原地址及导航，正文留空；物理另增“试卷001”资料组，含原卷、18题详解、20段动画与12个参数交互。课程顶部“试卷讲解”直接进入资料页。“教材与来源”保留原报告、索引表和候选版本。
 
 各科目录底本在 `courses/hs-*/source-index.json`，学习主线在 `courses/highschool/learning-paths.json`。修改后运行：
 
 ```sh
+python scripts/build-physics001.py
 python scripts/build-highschool.py
 python scripts/build-reference-index.py
 python scripts/build-glossary.py
@@ -68,3 +69,5 @@ python tests/highschool.browser.py
 实作入口为 `#resources`，课程顶部与固定目录也可就地打开，关闭后保留阅读位置。逐项来源、任务、许可与复算范围在 `courses/resources/catalog.json`，构建命令为 `python scripts/build-resource-library.py`；核验记录见 [RESOURCE-REVIEW.md](RESOURCE-REVIEW.md)。复算代码与结果保存在 `assets/practice/`，公开规格、真实观测和仿真分开标注，原始日志访问失败不计为已经复算。
 
 内容、验收与合并要求见 [REQUIREMENTS.md](REQUIREMENTS.md)，执行入口见 [AGENTS.md](AGENTS.md)。变压器正文采用用户二次整理的PDF网页版，阅读框架、高中资料与练习系统来自切换前完整版本；构建不再插入固定七段正文。
+
+物理001的迁入范围、辨读限制与验证证据见 [PHYSICS001-REVIEW.md](PHYSICS001-REVIEW.md)。常规PDF保留关键帧，播放链接指向LN；这次PR合并并部署后链接才对应上线内容。

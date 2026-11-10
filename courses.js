@@ -2,5 +2,6 @@
 window.LN_COURSES = Object.freeze([
   { ...window.LN_ELECTRICAL_MACHINES, knowledgeMap: window.LN_ELECTRICAL_MACHINES_MAP },
   { ...window.LN_ELECTROMAGNETIC_COMPATIBILITY, knowledgeMap: window.LN_ELECTROMAGNETIC_COMPATIBILITY_MAP },
+  { ...window.LN_AUTO_CONTROL, knowledgeMap: window.LN_AUTO_CONTROL_MAP },
   ...(window.LN_HIGH_SCHOOL_COURSES || [])
 ]);

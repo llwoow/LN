@@ -20,7 +20,7 @@
     return exact.length?exact:resources.filter(r=>applies(r,course));
   }
   function button(course,section,label='实作资源') {
-    if(course.outlineOnly)return '';
+    if(course.outlineOnly||section?.kind==='outline'||!resources.some(r=>applies(r,course.id)))return '';
     return '<button type="button" class="resource-nav-button" aria-haspopup="dialog" aria-controls="resource-dialog" data-open-resources data-resource-course="'+escape(course.id)+'"'+(section?' data-resource-section="'+escape(section.id)+'"':'')+'><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>'+label+'</button>';
   }
 

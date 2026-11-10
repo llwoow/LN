@@ -1,0 +1,930 @@
+{
+  "checkCount": 185,
+  "checks": [
+    {
+      "name": "摆球机械能与端点回归",
+      "passed": true,
+      "detail": "4.8183679268731794e-14"
+    },
+    {
+      "name": "传送带切换处位置速度连续t=1.480960979386122",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带切换处位置速度连续t=2.2974575603138483",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "传送带分段受力与功能核验",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "最右端不是平衡",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "定滑轮两侧等位移与牛顿定律",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "动滑轮绳长约束与两物体动力学",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光电门两边缘实际挡光时长",
+      "passed": true,
+      "detail": "0.002400001728004364"
+    },
+    {
+      "name": "复合轨道接点位置速率连续",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "复合轨道接点位置速率连续",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "光滑圆弧机械能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "第18题主要事件顺序",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "第18题第一次B停间距",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "第18题最终间距",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "固定墙弹性反射",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "两物体弹性碰撞动量与动能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "全程摩擦耗散等于初动能",
+      "passed": true,
+      "detail": "24.0"
+    },
+    {
+      "name": "固定墙弹性反射",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "全程摩擦耗散等于初动能",
+      "passed": true,
+      "detail": "21.0"
+    },
+    {
+      "name": "固定墙弹性反射",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "全程摩擦耗散等于初动能",
+      "passed": true,
+      "detail": "21.0"
+    },
+    {
+      "name": "固定墙弹性反射",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "两物体弹性碰撞动量与动能",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "全程摩擦耗散等于初动能",
+      "passed": true,
+      "detail": "20.999999999999996"
+    },
+    {
+      "name": "临界以下无互撞",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "临界质量同点静止",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "临界以上按实际互撞继续",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "恒功率能量与有限末速",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "阻力上抛耗散",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

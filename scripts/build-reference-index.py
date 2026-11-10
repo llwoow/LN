@@ -91,7 +91,7 @@ def build_index():
             source_equation_index = 0
             for i, node in enumerate(displays):
                 tags = [n for n in node.walk() if 'katex-tag' in n.classes or 'tag' in n.classes]
-                number = label(node.attrs.get('data-equation', '')) or (label(tags[0].text()) if tags else None)
+                number = label(node.attrs.get('data-equation', '')) or node.attrs.get('data-equation-source-label') or (label(tags[0].text()) if tags else None)
                 aliases = []
                 siblings = [n for n in node.parent.children if isinstance(n,Element)]
                 position = siblings.index(node)

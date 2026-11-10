@@ -1,0 +1,293 @@
+{
+  "materials": [
+    {
+      "id": "physics-001",
+      "group": "试卷001",
+      "description": "用户提供8页原卷；逐题详解、物理仿真与复做记录。",
+      "sections": [
+        {
+          "id": "physics-001",
+          "title": "试卷001：原件、详解与学习记录",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "src": "courses/hs-physics/lessons/physics-001.js"
+        },
+        {
+          "id": "physics-001-q01",
+          "title": "第1题 · 阻力系数的单位：先解出待求量",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "单位与量纲",
+            "模型识别"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q01.js"
+        },
+        {
+          "id": "physics-001-q02",
+          "title": "第2题 · 自由落体：同时核对初速度和受力",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "运动模型",
+            "自由落体"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q02.js"
+        },
+        {
+          "id": "physics-001-q03",
+          "title": "第3题 · 单摆端点：真实力与分力不能重复计算",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "受力分析",
+            "矢量分解"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q03.js"
+        },
+        {
+          "id": "physics-001-q04",
+          "title": "第4题 · 匀速上斜面：力做功的正负与克服力做功",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "受力分析",
+            "功与能"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q04.js"
+        },
+        {
+          "id": "physics-001-q05",
+          "title": "第5题 · 叠放课本：先分对象，再辨接触处的相对运动",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "受力分析",
+            "静摩擦与滑动摩擦"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q05.js"
+        },
+        {
+          "id": "physics-001-q06",
+          "title": "第6题 · 由卫星周期求地球密度：先分清高度和轨道半径",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "万有引力",
+            "圆周运动"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q06.js"
+        },
+        {
+          "id": "physics-001-q07",
+          "title": "第7题 · 定滑轮连接体：两个物体分别列牛顿第二定律",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "牛顿第二定律",
+            "连接体"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q07.js"
+        },
+        {
+          "id": "physics-001-q08",
+          "title": "第8题 · 足球转向：冲量是动量的矢量差",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "动量与冲量",
+            "功与能"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q08.js"
+        },
+        {
+          "id": "physics-001-q09",
+          "title": "第9题 · 转盘上的碎石：向心力需求与静摩擦上限",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "圆周运动",
+            "临界条件"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q09.js"
+        },
+        {
+          "id": "physics-001-q10",
+          "title": "第10题 · 平抛的两个时刻：用速度角求水平速度",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "平抛运动",
+            "分解与合成"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q10.js"
+        },
+        {
+          "id": "physics-001-q11",
+          "title": "第11题 · 恒功率启动：加速度减小，速度曲线向下弯",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "功率",
+            "速度图像",
+            "模型边界"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q11.js"
+        },
+        {
+          "id": "physics-001-q12",
+          "title": "第12题 · 有恒定阻力的上抛：上升和下降分段用能量",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "功与能",
+            "分段运动"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q12.js"
+        },
+        {
+          "id": "physics-001-q13",
+          "title": "第13题 · 传送带与弹簧：从a—x图读出三段运动",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "摩擦切换",
+            "图像",
+            "弹簧能量"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q13.js"
+        },
+        {
+          "id": "physics-001-q14",
+          "title": "第14题 · 实验：弹簧图像与向心力控制变量",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "实验读图",
+            "有效数字",
+            "控制变量"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q14.js"
+        },
+        {
+          "id": "physics-001-q15",
+          "title": "第15题 · 实验：游标卡尺、光电门与v²—F直线",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "实验读数",
+            "光电门",
+            "线性拟合"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q15.js"
+        },
+        {
+          "id": "physics-001-q16",
+          "title": "第16题 · 紧急刹车：由受力得到减速度，再求距离",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "牛顿第二定律",
+            "匀减速"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q16.js"
+        },
+        {
+          "id": "physics-001-q17",
+          "title": "第17题 · 斜面—圆弧：由F—h图反推质量与半径",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "分段运动",
+            "圆周运动",
+            "图像反演"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q17.js"
+        },
+        {
+          "id": "physics-001-q18",
+          "title": "第18题 · 弹簧弹开—撞墙—再碰撞：按事件顺序建模",
+          "group": "试卷001",
+          "kind": "html",
+          "supplement": "physics-001",
+          "keywords": [
+            "动量守恒",
+            "弹性碰撞",
+            "多过程临界"
+          ],
+          "src": "courses/hs-physics/lessons/physics-001-q18.js"
+        }
+      ],
+      "knowledgeLinks": [
+        {
+          "from": "physics-001-q04",
+          "to": "physics-001-q12",
+          "label": "摩擦与能量",
+          "description": "两题均把摩擦做负功写入动能定理；第12题须在上升、下降分别确定阻力方向。"
+        },
+        {
+          "from": "physics-001-q07",
+          "to": "physics-001-q15",
+          "label": "绳长约束",
+          "description": "第7题定滑轮两端等位移；第15题含动滑轮，a的位移为b的两倍，不能照搬等加速度。"
+        },
+        {
+          "from": "physics-001-q08",
+          "to": "physics-001-q18",
+          "label": "动量变化与碰撞",
+          "description": "第8题用动量矢量变化求冲量；第18题仅在极短弹开或两块互撞时使用系统动量守恒。"
+        },
+        {
+          "from": "physics-001-q09",
+          "to": "physics-001-q13",
+          "label": "静摩擦的上限",
+          "description": "第9题所需向心力与最大静摩擦比较；第13题中间阶段静摩擦随弹力增加，不能始终取μmg。"
+        },
+        {
+          "from": "physics-001-q16",
+          "to": "physics-001-q18",
+          "label": "停止距离与事件",
+          "description": "第16题由减速求停止距离；第18题每次碰撞后重新判断停止位置和下一事件。"
+        },
+        {
+          "from": "physics-001-q04",
+          "to": "physics-001-q17",
+          "label": "斜面功与圆弧",
+          "description": "第17题斜面有摩擦、圆弧光滑，先求A点状态再推进到B，不能全程套机械能守恒。"
+        }
+      ],
+      "links": [
+        {
+          "label": "试卷001资料与记录",
+          "href": "#course/hs-physics/physics-001"
+        },
+        {
+          "label": "详解 PDF（84页）",
+          "href": "courses/hs-physics/physics-001/files/physics001-solutions.pdf"
+        },
+        {
+          "label": "排序原卷",
+          "href": "courses/hs-physics/physics-001/files/physics001-original.pdf"
+        }
+      ]
+    }
+  ]
+}
