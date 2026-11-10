@@ -972,6 +972,60 @@
         }
       ],
       "localLesson": "#course/hs-physics/physics-001"
+    },
+    {
+      "id": "automatic-control-official-chapter3",
+      "title": "第三版官方样章：稳定性与稳态误差核对",
+      "kind": "出版社公开样章",
+      "repository": null,
+      "checked": "2026-11-10",
+      "targets": [
+        {
+          "course": "automatic-control",
+          "section": "ac-3-5"
+        },
+        {
+          "course": "automatic-control",
+          "section": "ac-3-6"
+        },
+        {
+          "course": "automatic-control",
+          "section": "ac-homework3"
+        }
+      ],
+      "question": "如何把劳斯边界、扰动路径与课堂题号对应到第三版原文？",
+      "summary": "链接出版社58页第三章样章；本次核读谢绪恺条件和动态误差系数段落。",
+      "steps": [
+        "先按纸质114—115页核对必要条件、充分条件和适用的系数正性。",
+        "按纸质124—126页对照误差传递函数在原点展开，再复算本站0型斜坡示例。",
+        "对照章末题面与本站题号对应表；课堂资料不能仅凭同号认作第三版原题。"
+      ],
+      "output": "模型假设、稳定参数范围与带来源的题号对应。",
+      "requirements": "可在线阅读PDF；本站网页直接给出推导。",
+      "license": "出版社样章保留原权利，仅链接官方PDF，不复制整章进仓库。",
+      "links": [
+        {
+          "label": "清华大学出版社第三章官方样章",
+          "url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf"
+        }
+      ],
+      "limits": [
+        "本次未逐页审校全部58页，也没有实测硬件。",
+        "公开样章不是整书；课堂题号仍按经核对的映射使用。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "核读原文并做解析算式核对；未运行MATLAB或硬件实验。",
+        "read": "实际查阅谢绪恺条件和动态误差系数段落；网页另有课堂习题映射说明。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/089419-01.pdf",
+          "summary": "第三章官方样章；核对纸质114—115和124—126页的判据及误差系数定义。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/automatic-control/ac-3-6/ac-dynamic-error"
     }
   ]
 }

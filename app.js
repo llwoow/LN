@@ -181,7 +181,9 @@
   }
 
   function courseViewNav(course, active) {
-    const first = course.sections[0];
+    const first = course.id === 'automatic-control'
+      ? (course.sections.find(section => section.kind !== 'outline') || course.sections[0])
+      : course.sections[0];
     const model = course.sections.find((section) => section.kind === 'model');
     const modelActive = model && location.hash.split('/')[2] === model.id;
     const material = course.sections.find(section=>section.supplement);
@@ -341,6 +343,15 @@
         window.LNPublication.prepare(body, course, selected);
         window.LNGlossary.prepare(body, course, selected);
         window.LNResources.mountLesson(body);
+        if (course.id === 'automatic-control') {
+          await loadStyle('courses/automatic-control/control-lab.css');
+          if (!body.isConnected || body.dataset.lessonKey !== key) return;
+          if (['ac-3-3', 'ac-3-5', 'ac-3-6'].includes(selected.id)) {
+            await loadScript('courses/automatic-control/control-lab.js');
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            window.LN_MOUNT_CONTROL_LABS?.(body);
+          }
+        }
         bindInlineModels(body);
         if (selected.supplement === 'physics-001') window.LNPhysics001.mount(body, payload);
       }

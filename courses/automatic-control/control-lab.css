@@ -1,0 +1,17 @@
+.ac-lab{border:1px solid var(--border);border-radius:12px;padding:1.1rem;margin:2rem 0;background:var(--subtle);color:var(--text)}.ac-lab h3{margin-top:0}.ac-lab-label{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;font-weight:600;margin:1.1rem 0}.ac-lab-label input[type=range]{flex:1;min-width:160px;accent-color:var(--accent)}.ac-lab-label output{font-variant-numeric:tabular-nums;min-width:3rem}.ac-lab-label select{max-width:100%;padding:.4rem;border:1px solid var(--border);border-radius:6px;background:var(--surface,#fff);color:var(--text)}.ac-lab svg{width:100%;max-width:680px;height:auto}.ac-lab .ac-negative{color:#b63d34;font-weight:700}.ac-lab [data-ac-routh-status],.ac-lab [data-ac-z-status],.ac-lab [data-ac-error-status]{font-weight:600}@media(prefers-reduced-motion:reduce){.ac-lab *{animation:none!important;transition:none!important}}
+/* Edition 3 textbook navigation, provenance and responsive mathematics. */
+.ac-chapter-anchor-nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem .75rem;margin:1rem 0 1.6rem;padding:.8rem 1rem;border-inline-start:3px solid var(--accent);background:var(--subtle);border-radius:6px;font-size:.93em}
+.ac-chapter-anchor-nav a{white-space:nowrap;max-width:100%}
+.homework-provenance{border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0 1.7rem;background:var(--subtle)}
+.homework-provenance h3{margin:.1rem 0 .65rem;font-size:1.08em}
+.homework-provenance p:last-child{margin-bottom:0}
+.ac-textbook-note{margin:1.4rem 0;padding:0 .8rem;border-inline-start:3px solid var(--accent)}
+.ac-textbook-audit{margin:1.6rem 0;padding-top:.4rem;border-top:1px solid var(--border)}
+.ac-equation{max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;padding:.75rem .5rem;margin:.8rem 0 1.2rem;text-align:center}
+.ac-equation math{max-width:none;min-width:max-content;font-size:1.05em}
+.ac-error-emphasis{font-weight:700}
+@media(max-width:600px){.ac-chapter-anchor-nav{padding:.65rem .75rem}.ac-equation{font-size:.9em}.homework-provenance{padding:.8rem}}
+
+.ac-lab-formula{display:block;margin:1rem 0;padding:.65rem .75rem;border-radius:7px;border:1px solid var(--border);font-size:1.05em;font-weight:600;overflow-x:auto;font-variant-numeric:tabular-nums}
+.ac-lab svg{background:#fff;border-radius:6px}
+.lesson[data-lesson-key^="automatic-control/"] p{text-align:start}

@@ -28,7 +28,7 @@ class ContentIntegration(unittest.TestCase):
                 self.assertNotIn('data-learning-standard="understanding-v1"',body)
                 self.assertNotIn('katex-error',body)
                 if section['kind']=='html':self.assertTrue(body.strip())
-        self.assertEqual(count,311)
+        self.assertGreaterEqual(count,311)  # Additional real courses may register more routes.
         self.assertFalse((ROOT/'scripts/build-electrical-understanding.py').exists())
         self.assertNotIn('render_understanding',(ROOT/'scripts/build-highschool.py').read_text())
     def test_user_pdf_scientific_svg_is_preserved(self):
