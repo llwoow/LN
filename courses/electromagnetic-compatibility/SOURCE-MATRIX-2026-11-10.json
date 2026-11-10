@@ -297,9 +297,12 @@
       "id": "emc-9-2",
       "heading": "9.2 建筑物的防雷和接地技术",
       "bookStartPrintPage": 216,
-      "status": "awaiting-detailed-primary-source-audit",
-      "sourcePages": null,
-      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+      "status": "lecture-source-reviewed-textbook-scan-pending",
+      "sourcePages": {
+        "lecture": "9浪涌及抑制n.pdf PDF第15—33页",
+        "textbook": "教材目录对应章节已核对；扫描教材在本轮运行时xref损坏导致原页打不开"
+      },
+      "auditNotes": "未通过当前损坏扫描件复核教材对应正文；课件第16、20、24、28、33页已核读，雷电流RL和保护件端口电压为教学推导"
     },
     {
       "id": "emc-9-3",
@@ -329,9 +332,12 @@
       "id": "emc-10-2",
       "heading": "10.2 发电厂、变电站的地电位干扰及保护措施",
       "bookStartPrintPage": 254,
-      "status": "awaiting-detailed-primary-source-audit",
-      "sourcePages": null,
-      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+      "status": "lecture-source-reviewed-textbook-scan-pending",
+      "sourcePages": {
+        "lecture": "10电力系统电磁兼容n.pdf PDF第25—31页",
+        "textbook": "教材目录对应章节已核对；扫描教材在本轮运行时xref损坏导致原页打不开"
+      },
+      "auditNotes": "课件第26—28页的均匀土壤半球电极J/E/U/R关系与第29、31页的跨步/二次电缆机制已核读；教材原始扫描页仍待恢复"
     },
     {
       "id": "emc-10-3",
@@ -348,9 +354,12 @@
       "id": "emc-10-4",
       "heading": "10.4 冲击试验时的电磁干扰",
       "bookStartPrintPage": 270,
-      "status": "awaiting-detailed-primary-source-audit",
-      "sourcePages": null,
-      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+      "status": "lecture-source-reviewed-textbook-scan-pending",
+      "sourcePages": {
+        "lecture": "10电力系统电磁兼容n.pdf PDF第51—58、62、65页",
+        "textbook": "教材目录对应章节已核对；扫描教材在本轮运行时xref损坏导致原页打不开"
+      },
+      "auditNotes": "课件第52—55页L1/L2屏蔽层分流与Cs寄生回路示意已核读；课件保护地处理为历史试验背景，网页明确不提供断开PE的操作步骤"
     }
   ],
   "manualChecks": [
@@ -373,6 +382,11 @@
       "id": "line-first-reflection",
       "status": "resolved-in-teaching",
       "detail": "2V+ is the first open-end voltage relative to the incident travelling wave; source amplitude and source reflection must be tracked independently."
+    },
+    {
+      "id": "second-batch-source-limit",
+      "status": "pending-textbook-scan-repair",
+      "detail": "PDF info/PyMuPDF failed to parse the 292-page scanned textbook in current environment (invalid XRef). Corresponding lecture PDFs were inspected at source pages for 9.2,10.2,10.4; do not claim book scan formula review."
     }
   ]
 }
