@@ -13,3 +13,4 @@
 @media(max-width:600px){.ac-chapter-anchor-nav{padding:.65rem .75rem}.ac-equation{font-size:.9em}.homework-provenance{padding:.8rem}}
 
 .ac-lab-formula{display:block;margin:1rem 0;padding:.65rem .75rem;border-radius:7px;border:1px solid var(--border);font-size:1.05em;font-weight:600;overflow-x:auto;font-variant-numeric:tabular-nums}
+.ac-lab svg{background:#fff;border-radius:6px}

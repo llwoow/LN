@@ -94,7 +94,7 @@
   function interactive(element, entry, accessible = false) {
     element.classList.add('definition-symbol'); element.dataset.definition = entry.id; identity(element);
     if (accessible) {
-      element.tabIndex = 0; element.setAttribute('role', 'link'); element.setAttribute('aria-haspopup', 'dialog');
+      element.setAttribute('tabindex', '0'); element.setAttribute('role', 'link'); element.setAttribute('aria-haspopup', 'dialog');
       element.setAttribute('aria-label', '查看符号定义：' + entry.title);
     }
     element.title = '点击查看定义';
@@ -201,6 +201,27 @@
       if (equation && unique.length && !equation.querySelector('.definition-formula-tool')) {
         const tool = make('button','definition-formula-tool','符号'); tool.type='button'; tool.dataset.definitionList=unique.map((e)=>e.id).join(' ');
         tool.setAttribute('aria-label','查看本公式的物理符号定义'); tool.setAttribute('aria-haspopup','dialog'); identity(tool); equation.append(tool);
+      }
+    });
+    // Native MathML is visible content, unlike KaTeX's hidden accessibility tree.
+    body.querySelectorAll('math').forEach(math => {
+      if (math.closest('.katex, mjx-container')) return;
+      const found = [];
+      function visit(node) {
+        if (['mi','mtext','msub','msup','msubsup','mover','munder'].includes(node.localName)) {
+          const entry = resolveSymbol(course, section, atom(node));
+          if (entry) { interactive(node, entry, true); found.push(entry); }
+          return;
+        }
+        [...node.children].filter(child => child.localName !== 'annotation').forEach(visit);
+      }
+      visit(math);
+      const equation = math.closest('.paper-equation');
+      const unique = [...new Map(found.map(entry => [entry.id, entry])).values()];
+      if (equation && unique.length && !equation.querySelector('.definition-formula-tool')) {
+        const tool = make('button', 'definition-formula-tool', '符号'); tool.type = 'button';
+        tool.dataset.definitionList = unique.map(entry => entry.id).join(' '); identity(tool);
+        tool.setAttribute('aria-label', '查看本公式的符号定义'); tool.setAttribute('aria-haspopup', 'dialog'); equation.append(tool);
       }
     });
     prepareSVG(body, course, section);

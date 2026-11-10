@@ -21,7 +21,7 @@
       '<p>高中目录按所附核验报告的九科、50册主索引与235个知识节点组织。选科和课程类别沿用原报告。</p>'+
       '<p>海南采用六科自主选三的3＋3框架。'+link('https://www.eol.cn/kaoshi/gaokao/gkzc/202610/t20261026_2786604.shtml','2027报名通知转载')+'支持选科规则，不据此预测卷型、题量或新增考点。非统编六科的个人实际版本、教材印次和学校进度仍需与实书核对。</p>'+
       '<div class="source-downloads">'+link('courses/highschool/assets/hainan-2027-report.pdf','原核验报告 PDF')+link('courses/highschool/assets/hainan-2027-index.xlsx','原知识与交叉核验表 XLSX')+'</div>'+
-      '<h2>九科与册次</h2>'+table(['学科','主索引册数','范围与版本'],courses.map(c=>['<a href="#course/'+escape(c.id)+'">'+escape(c.title)+'</a>',String(new Set(c.sections.map(s=>s.group)).size),escape(c.versionNote)]))+
+      '<h2>九科与册次</h2>'+table(['学科','主索引册数','范围与版本'],courses.map(c=>['<a href="#course/'+escape(c.id)+'">'+escape(c.title)+'</a>',String(new Set(c.sections.filter(s=>!s.supplement).map(s=>s.group)).size),escape(c.versionNote)]))+
       '<details class="study-sources"><summary>版本差异</summary>'+table(['学科','版本','差异','对应方法'],versionRows)+'</details>'+
       '<details class="study-sources"><summary>外研英语 · 七册42个单元</summary><p>保留原报告核验的修订版单元导航；与人教主题索引按内容查找，不把两版单元号视为相同。</p>'+table(['册次','单元'],data['外研七册单元'].map(r=>[escape(r['册次']),escape(r['单元名'])]))+'</details>'+
       '<h2>教材、教辅与公开课程</h2><ul class="resource-links">'+online.map(([url,title,note])=>'<li>'+link(url,title)+'<p>'+escape(note)+'</p></li>').join('')+'</ul>'+

@@ -21,6 +21,8 @@ jobs:
           python-version: '3.12'
       - name: Course checks
         run: python -m unittest discover -s tests -p 'test_automatic_control.py' -v
+      - name: Course graph and existing materials
+        run: node tests/knowledge-map.test.cjs
       - name: Reference index matches sources
         run: python scripts/build-reference-index.py --check
       - name: Glossary index matches sources

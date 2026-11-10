@@ -6,7 +6,7 @@ const vm = require('node:vm');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const context = vm.createContext({ window: {} });
-for (const file of ['courses/electrical-machines/manifest.js', 'courses/electrical-machines/knowledge-map.js', 'courses/highschool/courses.js', 'courses.js']) {
+for (const file of ['courses/electrical-machines/manifest.js', 'courses/electrical-machines/knowledge-map.js', 'courses/automatic-control/manifest.js', 'courses/automatic-control/knowledge-map.js', 'courses/highschool/courses.js', 'courses.js']) {
   vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context, { filename: file });
 }
 for (const course of context.window.LN_COURSES) {
@@ -14,7 +14,6 @@ for (const course of context.window.LN_COURSES) {
   const sections = new Map(course.sections.map(section => [section.id, section]));
   for (const section of sections.values()) {
     if (section.kind === 'outline') {
-      assert.equal(course.outlineOnly, true, `Outline section must belong to an outline course: ${section.id}`);
       assert(section.title && section.group, `Outline section needs a title and book: ${section.id}`);
       assert(!section.src, `Outline section must not load removed content: ${section.id}`);
     } else {

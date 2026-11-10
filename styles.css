@@ -701,3 +701,7 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 @media print{.homework-navigation,.homework-problem>p:has([data-open-practice]){display:none}.homework-problem{break-before:auto}}
 
 .homework-diagram-link{display:block;cursor:zoom-in;text-decoration:none!important}
+
+/* Authored math in practice uses the same local KaTeX as the reader. */
+.practice-panel .math.display { max-width:100%; overflow-x:auto; overflow-y:hidden; }
+.practice-panel .practice-prompt:has(.math) { white-space:normal; }

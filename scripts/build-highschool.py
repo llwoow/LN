@@ -67,6 +67,22 @@ def build():
             'resources': {book['册次']: {'links': [{'label': '教材与来源', 'href': '#highschool/resources'}]} for book in books.values()},
             'knowledgeMap': {'chapters': chapters, 'paths': paths},
         }
+        supplemental = folder / 'supplements.json'
+        if supplemental.exists():
+            extras = json.loads(supplemental.read_text(encoding='utf-8'))
+            for material in extras['materials']:
+                for section in material['sections']:
+                    if section['id'] in ids or not (ROOT / section['src']).is_file():
+                        raise ValueError('Invalid supplementary section: ' + section['id'])
+                    ids.add(section['id'])
+                    manifest['sections'].append(section)
+                manifest['resources'][material['group']] = {'links': material['links']}
+                manifest['knowledgeMap']['chapters'].append({'group': material['group'], 'description': material['description']})
+                manifest['knowledgeMap'].setdefault('links', []).extend(material.get('knowledgeLinks', []))
+            manifest['knowledgeMap']['nodes'] = [{'section': s['id'], 'title': s['title'], 'note': s.get('curriculum') or ('原卷与学习记录' if s['id']=='physics-001' else '逐题讲解与运动模型')} for s in manifest['sections']]
+            manifest['outlineOnly'] = False
+            manifest['topics'] = ['教材目录', '试卷讲解']
+            manifest['glossary'] = 'courses/' + course_id + '/glossary-index.js'
         (folder / 'manifest.js').write_text('window.LN_HS_' + slug.upper() + '=' + dump(manifest) + ';\n', encoding='utf-8', newline='\n')
         courses.append(manifest)
     (directory / 'courses.js').write_text('window.LN_HIGH_SCHOOL_COURSES=' + dump(courses) + ';\n', encoding='utf-8', newline='\n')

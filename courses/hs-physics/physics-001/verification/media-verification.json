@@ -1,0 +1,606 @@
+{
+  "clips": [
+    {
+      "id": "q01",
+      "gifFrames": 104,
+      "durationSeconds": 12.7,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 34,
+          "sourceFrame": 41,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 69,
+          "sourceFrame": 76,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 102,
+          "sourceFrame": 109,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 127,
+      "gifBytes": 601975
+    },
+    {
+      "id": "q02",
+      "gifFrames": 110,
+      "durationSeconds": 15.2,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 36,
+          "sourceFrame": 48,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 73,
+          "sourceFrame": 92,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 108,
+          "sourceFrame": 134,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 152,
+      "gifBytes": 572295
+    },
+    {
+      "id": "q03",
+      "gifFrames": 106,
+      "durationSeconds": 14.3,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 35,
+          "sourceFrame": 49,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 70,
+          "sourceFrame": 91,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 104,
+          "sourceFrame": 125,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 143,
+      "gifBytes": 664204
+    },
+    {
+      "id": "q04",
+      "gifFrames": 104,
+      "durationSeconds": 12.7,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 34,
+          "sourceFrame": 41,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 69,
+          "sourceFrame": 76,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 102,
+          "sourceFrame": 109,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 127,
+      "gifBytes": 600180
+    },
+    {
+      "id": "q05",
+      "gifFrames": 104,
+      "durationSeconds": 12.7,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 34,
+          "sourceFrame": 41,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 69,
+          "sourceFrame": 76,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 102,
+          "sourceFrame": 109,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 127,
+      "gifBytes": 450430
+    },
+    {
+      "id": "q06",
+      "gifFrames": 106,
+      "durationSeconds": 14.3,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 35,
+          "sourceFrame": 49,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 70,
+          "sourceFrame": 91,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 104,
+          "sourceFrame": 125,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 143,
+      "gifBytes": 394850
+    },
+    {
+      "id": "q07",
+      "gifFrames": 104,
+      "durationSeconds": 12.7,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 34,
+          "sourceFrame": 41,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 69,
+          "sourceFrame": 76,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 102,
+          "sourceFrame": 109,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 127,
+      "gifBytes": 499317
+    },
+    {
+      "id": "q08",
+      "gifFrames": 105,
+      "durationSeconds": 13.5,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 35,
+          "sourceFrame": 42,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 70,
+          "sourceFrame": 84,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 103,
+          "sourceFrame": 117,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 135,
+      "gifBytes": 309750
+    },
+    {
+      "id": "q09",
+      "gifFrames": 108,
+      "durationSeconds": 14.3,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 36,
+          "sourceFrame": 41,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 72,
+          "sourceFrame": 91,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 106,
+          "sourceFrame": 125,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 143,
+      "gifBytes": 1002476
+    },
+    {
+      "id": "q10",
+      "gifFrames": 105,
+      "durationSeconds": 13.5,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 35,
+          "sourceFrame": 42,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 70,
+          "sourceFrame": 84,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 103,
+          "sourceFrame": 117,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 135,
+      "gifBytes": 460151
+    },
+    {
+      "id": "q11",
+      "gifFrames": 104,
+      "durationSeconds": 12.7,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 34,
+          "sourceFrame": 41,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 69,
+          "sourceFrame": 76,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 102,
+          "sourceFrame": 109,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 127,
+      "gifBytes": 622360
+    },
+    {
+      "id": "q12",
+      "gifFrames": 106,
+      "durationSeconds": 13.6,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 35,
+          "sourceFrame": 42,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 70,
+          "sourceFrame": 84,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 104,
+          "sourceFrame": 118,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 136,
+      "gifBytes": 444622
+    },
+    {
+      "id": "q13",
+      "gifFrames": 108,
+      "durationSeconds": 14.5,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 36,
+          "sourceFrame": 50,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 72,
+          "sourceFrame": 93,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 106,
+          "sourceFrame": 127,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 145,
+      "gifBytes": 975719
+    },
+    {
+      "id": "q14a",
+      "gifFrames": 108,
+      "durationSeconds": 14.5,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 36,
+          "sourceFrame": 43,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 72,
+          "sourceFrame": 93,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 106,
+          "sourceFrame": 127,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 145,
+      "gifBytes": 486599
+    },
+    {
+      "id": "q14b",
+      "gifFrames": 107,
+      "durationSeconds": 14.4,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 35,
+          "sourceFrame": 42,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 71,
+          "sourceFrame": 92,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 105,
+          "sourceFrame": 126,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 144,
+      "gifBytes": 505437
+    },
+    {
+      "id": "q15",
+      "gifFrames": 119,
+      "durationSeconds": 16.4,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 39,
+          "sourceFrame": 54,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 79,
+          "sourceFrame": 94,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 117,
+          "sourceFrame": 146,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 164,
+      "gifBytes": 548370
+    },
+    {
+      "id": "q16",
+      "gifFrames": 104,
+      "durationSeconds": 12.7,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 34,
+          "sourceFrame": 41,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 69,
+          "sourceFrame": 76,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 102,
+          "sourceFrame": 109,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 127,
+      "gifBytes": 513670
+    },
+    {
+      "id": "q17",
+      "gifFrames": 108,
+      "durationSeconds": 14.5,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 36,
+          "sourceFrame": 43,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 72,
+          "sourceFrame": 79,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 106,
+          "sourceFrame": 127,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 145,
+      "gifBytes": 348098
+    },
+    {
+      "id": "q18a",
+      "gifFrames": 110,
+      "durationSeconds": 15.4,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 36,
+          "sourceFrame": 50,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 73,
+          "sourceFrame": 101,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 108,
+          "sourceFrame": 136,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 154,
+      "gifBytes": 553386
+    },
+    {
+      "id": "q18b",
+      "gifFrames": 104,
+      "durationSeconds": 12.7,
+      "gifPixelParity": [
+        {
+          "gifFrame": 0,
+          "sourceFrame": 0,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 34,
+          "sourceFrame": 41,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 69,
+          "sourceFrame": 76,
+          "maximumChannelDifference": 0
+        },
+        {
+          "gifFrame": 102,
+          "sourceFrame": 109,
+          "maximumChannelDifference": 0
+        }
+      ],
+      "videoCodec": "h264",
+      "videoFrames": 127,
+      "gifBytes": 409382
+    }
+  ],
+  "count": 20,
+  "description": "GIF decoded frames compared pixel-for-pixel with the same physical renderer used for the PDF sheets; MP4 timing and codec checked."
+}

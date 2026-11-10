@@ -1,0 +1,472 @@
+{
+  "version": "1.2",
+  "width": 960,
+  "height": 560,
+  "fps": 10,
+  "clips": [
+    {
+      "id": "q01",
+      "question": 1,
+      "title": "雨滴与线性阻力",
+      "gif": "q01.gif",
+      "video": "q01.mp4",
+      "poster": "q01.png",
+      "plates": [
+        "q01-keyframes-1.png"
+      ],
+      "physicalEnd": 4.0,
+      "framesPlanned": 127,
+      "playbackSeconds": 12.7,
+      "keyTimes": [
+        0.0,
+        1.0,
+        4.0
+      ],
+      "gifBytes": 601975,
+      "mp4Bytes": 98846,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q1/q01",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q02",
+      "question": 2,
+      "title": "四种下落情境",
+      "gif": "q02.gif",
+      "video": "q02.mp4",
+      "poster": "q02.png",
+      "plates": [
+        "q02-keyframes-1.png",
+        "q02-keyframes-2.png"
+      ],
+      "physicalEnd": 4.0,
+      "framesPlanned": 152,
+      "playbackSeconds": 15.2,
+      "keyTimes": [
+        0.65,
+        1.65,
+        2.65,
+        3.98
+      ],
+      "gifBytes": 572295,
+      "mp4Bytes": 155907,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q2/q02",
+      "note": "四个独立的生活情境，未把示意场景参数当成原题给定值。"
+    },
+    {
+      "id": "q03",
+      "question": 3,
+      "title": "摆球与端点受力",
+      "gif": "q03.gif",
+      "video": "q03.mp4",
+      "poster": "q03.png",
+      "plates": [
+        "q03-keyframes-1.png"
+      ],
+      "physicalEnd": 2.034272678946327,
+      "framesPlanned": 143,
+      "playbackSeconds": 14.3,
+      "keyTimes": [
+        0.0,
+        0.5085681697365817,
+        1.0171363394731634
+      ],
+      "gifBytes": 664204,
+      "mp4Bytes": 202084,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q3/q03",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q04",
+      "question": 4,
+      "title": "物块匀速上斜面",
+      "gif": "q04.gif",
+      "video": "q04.mp4",
+      "poster": "q04.png",
+      "plates": [
+        "q04-keyframes-1.png"
+      ],
+      "physicalEnd": 4.0,
+      "framesPlanned": 127,
+      "playbackSeconds": 12.7,
+      "keyTimes": [
+        0.0,
+        2.0,
+        4.0
+      ],
+      "gifBytes": 600180,
+      "mp4Bytes": 147545,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q4/q04",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q05",
+      "question": 5,
+      "title": "课本相对滑动",
+      "gif": "q05.gif",
+      "video": "q05.mp4",
+      "poster": "q05.png",
+      "plates": [
+        "q05-keyframes-1.png"
+      ],
+      "physicalEnd": 1.5,
+      "framesPlanned": 127,
+      "playbackSeconds": 12.7,
+      "keyTimes": [
+        0.0,
+        0.75,
+        1.5
+      ],
+      "gifBytes": 450430,
+      "mp4Bytes": 83782,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q5/q05",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q06",
+      "question": 6,
+      "title": "卫星圆轨道",
+      "gif": "q06.gif",
+      "video": "q06.mp4",
+      "poster": "q06.png",
+      "plates": [
+        "q06-keyframes-1.png"
+      ],
+      "physicalEnd": 1.0,
+      "framesPlanned": 143,
+      "playbackSeconds": 14.3,
+      "keyTimes": [
+        0.0,
+        0.25,
+        0.5
+      ],
+      "gifBytes": 394850,
+      "mp4Bytes": 127633,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q6/q06",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q07",
+      "question": 7,
+      "title": "定滑轮连接体",
+      "gif": "q07.gif",
+      "video": "q07.mp4",
+      "poster": "q07.png",
+      "plates": [
+        "q07-keyframes-1.png"
+      ],
+      "physicalEnd": 0.55,
+      "framesPlanned": 127,
+      "playbackSeconds": 12.7,
+      "keyTimes": [
+        0.0,
+        0.35,
+        0.55
+      ],
+      "gifBytes": 499317,
+      "mp4Bytes": 97230,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q7/q07",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q08",
+      "question": 8,
+      "title": "踢球与动量变化",
+      "gif": "q08.gif",
+      "video": "q08.mp4",
+      "poster": "q08.png",
+      "plates": [
+        "q08-keyframes-1.png"
+      ],
+      "physicalEnd": 2.5,
+      "framesPlanned": 135,
+      "playbackSeconds": 13.5,
+      "keyTimes": [
+        0.75,
+        1.5,
+        2.5
+      ],
+      "gifBytes": 309750,
+      "mp4Bytes": 77035,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q8/q08",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q09",
+      "question": 9,
+      "title": "转盘静摩擦临界",
+      "gif": "q09.gif",
+      "video": "q09.mp4",
+      "poster": "q09.png",
+      "plates": [
+        "q09-keyframes-1.png"
+      ],
+      "physicalEnd": 6.0,
+      "framesPlanned": 143,
+      "playbackSeconds": 14.3,
+      "keyTimes": [
+        1.2,
+        3.2,
+        5.2
+      ],
+      "gifBytes": 1002476,
+      "mp4Bytes": 222632,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q9/q09",
+      "note": "三档分别匀速，换档处明确重置；不包含转盘加速时的切向摩擦。"
+    },
+    {
+      "id": "q10",
+      "question": 10,
+      "title": "平抛与两个方向角",
+      "gif": "q10.gif",
+      "video": "q10.mp4",
+      "poster": "q10.png",
+      "plates": [
+        "q10-keyframes-1.png"
+      ],
+      "physicalEnd": 0.2,
+      "framesPlanned": 135,
+      "playbackSeconds": 13.5,
+      "keyTimes": [
+        0.0,
+        0.1,
+        0.2
+      ],
+      "gifBytes": 460151,
+      "mp4Bytes": 123299,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q10/q10",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q11",
+      "question": 11,
+      "title": "恒功率启动",
+      "gif": "q11.gif",
+      "video": "q11.mp4",
+      "poster": "q11.png",
+      "plates": [
+        "q11-keyframes-1.png"
+      ],
+      "physicalEnd": 40.91464547107982,
+      "framesPlanned": 127,
+      "playbackSeconds": 12.7,
+      "keyTimes": [
+        0.0,
+        12.274393641323947,
+        40.91464547107982
+      ],
+      "gifBytes": 622360,
+      "mp4Bytes": 147104,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q11/q11",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q12",
+      "question": 12,
+      "title": "有阻力的上抛",
+      "gif": "q12.gif",
+      "video": "q12.mp4",
+      "poster": "q12.png",
+      "plates": [
+        "q12-keyframes-1.png"
+      ],
+      "physicalEnd": 1.149497799542316,
+      "framesPlanned": 136,
+      "playbackSeconds": 13.6,
+      "keyTimes": [
+        0.24325212770525997,
+        0.48650425541051995,
+        1.149497799542316
+      ],
+      "gifBytes": 444622,
+      "mp4Bytes": 120307,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q12/q12",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q13",
+      "question": 13,
+      "title": "传送带与弹簧三阶段",
+      "gif": "q13.gif",
+      "video": "q13.mp4",
+      "poster": "q13.png",
+      "plates": [
+        "q13-keyframes-1.png"
+      ],
+      "physicalEnd": 4.518899029393031,
+      "framesPlanned": 145,
+      "playbackSeconds": 14.5,
+      "keyTimes": [
+        0.9626246366009793,
+        1.8892092698499852,
+        4.518899029393031
+      ],
+      "gifBytes": 975719,
+      "mp4Bytes": 193906,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q13/q13",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q14a",
+      "question": 14,
+      "title": "弹簧加载与图像",
+      "gif": "q14a.gif",
+      "video": "q14a.mp4",
+      "poster": "q14a.png",
+      "plates": [
+        "q14a-keyframes-1.png"
+      ],
+      "physicalEnd": 3.0,
+      "framesPlanned": 145,
+      "playbackSeconds": 14.5,
+      "keyTimes": [
+        0.0,
+        1.0,
+        3.0
+      ],
+      "gifBytes": 486599,
+      "mp4Bytes": 132822,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q14/q14a",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q14b",
+      "question": 14,
+      "title": "塔轮与控制变量",
+      "gif": "q14b.gif",
+      "video": "q14b.mp4",
+      "poster": "q14b.png",
+      "plates": [
+        "q14b-keyframes-1.png"
+      ],
+      "physicalEnd": 8.0,
+      "framesPlanned": 144,
+      "playbackSeconds": 14.4,
+      "keyTimes": [
+        0.8,
+        3.6,
+        7.5
+      ],
+      "gifBytes": 505437,
+      "mp4Bytes": 178797,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q14/q14b",
+      "note": "两个独立控制变量实验；换接前停机，下一组重新开始。"
+    },
+    {
+      "id": "q15",
+      "question": 15,
+      "title": "滑轮约束与光电门",
+      "gif": "q15.gif",
+      "video": "q15.mp4",
+      "poster": "q15.png",
+      "plates": [
+        "q15-keyframes-1.png"
+      ],
+      "physicalEnd": 1.140175425099138,
+      "framesPlanned": 164,
+      "playbackSeconds": 16.4,
+      "keyTimes": [
+        -1.0,
+        1.0,
+        1.140175425099138
+      ],
+      "gifBytes": 548370,
+      "mp4Bytes": 138264,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q15/q15",
+      "note": "先展示未计时的准备状态；剪断a下方约束绳后，a位移为b的两倍；挡光瞬间局部慢放。"
+    },
+    {
+      "id": "q16",
+      "question": 16,
+      "title": "汽车匀减速刹车",
+      "gif": "q16.gif",
+      "video": "q16.mp4",
+      "poster": "q16.png",
+      "plates": [
+        "q16-keyframes-1.png"
+      ],
+      "physicalEnd": 4.0,
+      "framesPlanned": 127,
+      "playbackSeconds": 12.7,
+      "keyTimes": [
+        0.0,
+        2.0,
+        4.0
+      ],
+      "gifBytes": 513670,
+      "mp4Bytes": 103950,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q16/q16",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q17",
+      "question": 17,
+      "title": "斜面圆弧水平轨道",
+      "gif": "q17.gif",
+      "video": "q17.mp4",
+      "poster": "q17.png",
+      "plates": [
+        "q17-keyframes-1.png"
+      ],
+      "physicalEnd": 2.0284226121761186,
+      "framesPlanned": 145,
+      "playbackSeconds": 14.5,
+      "keyTimes": [
+        0.0,
+        1.4142135623730951,
+        1.6084226121761185
+      ],
+      "gifBytes": 348098,
+      "mp4Bytes": 103481,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q17/q17",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q18a",
+      "question": 18,
+      "title": "弹开与弹性碰撞全过程",
+      "gif": "q18a.gif",
+      "video": "q18a.mp4",
+      "poster": "q18a.png",
+      "plates": [
+        "q18a-keyframes-1.png",
+        "q18a-keyframes-2.png"
+      ],
+      "physicalEnd": 2.209430584957905,
+      "framesPlanned": 154,
+      "playbackSeconds": 15.4,
+      "keyTimes": [
+        0.5,
+        1.0,
+        1.4188611699158102,
+        2.209430584957905
+      ],
+      "gifBytes": 553386,
+      "mp4Bytes": 162106,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q18/q18a",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    },
+    {
+      "id": "q18b",
+      "question": 18,
+      "title": "恰好不碰的临界对照",
+      "gif": "q18b.gif",
+      "video": "q18b.mp4",
+      "poster": "q18b.png",
+      "plates": [
+        "q18b-keyframes-1.png"
+      ],
+      "physicalEnd": 2.7170026670040004,
+      "framesPlanned": 127,
+      "playbackSeconds": 12.7,
+      "keyTimes": [
+        0.0,
+        0.8,
+        2.7170026670040004
+      ],
+      "gifBytes": 409382,
+      "mp4Bytes": 95182,
+      "url": "https://hainan-physics-001-study.lqw193wql.chatgpt.site/#q18/q18b",
+      "note": "动画与关键帧使用同一物理模型；暂停时物理时钟冻结。"
+    }
+  ]
+}

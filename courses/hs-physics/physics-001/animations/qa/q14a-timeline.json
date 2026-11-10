@@ -1,0 +1,697 @@
+[
+  {
+    "t": 0.0,
+    "hold": false,
+    "phase": "平衡读数：F=0.0N，l=4.0cm"
+  },
+  {
+    "t": 0.0,
+    "hold": true,
+    "phase": "平衡读数：F=0.0N，l=4.0cm"
+  },
+  {
+    "t": 0.0,
+    "hold": true,
+    "phase": "平衡读数：F=0.0N，l=4.0cm"
+  },
+  {
+    "t": 0.0,
+    "hold": true,
+    "phase": "平衡读数：F=0.0N，l=4.0cm"
+  },
+  {
+    "t": 0.0,
+    "hold": true,
+    "phase": "平衡读数：F=0.0N，l=4.0cm"
+  },
+  {
+    "t": 0.0,
+    "hold": true,
+    "phase": "平衡读数：F=0.0N，l=4.0cm"
+  },
+  {
+    "t": 0.0,
+    "hold": true,
+    "phase": "平衡读数：F=0.0N，l=4.0cm"
+  },
+  {
+    "t": 0.0,
+    "hold": true,
+    "phase": "平衡读数：F=0.0N，l=4.0cm"
+  },
+  {
+    "t": 0.0,
+    "hold": true,
+    "phase": "平衡读数：F=0.0N，l=4.0cm"
+  },
+  {
+    "t": 0.03,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.1N，l=4.1cm"
+  },
+  {
+    "t": 0.06,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.1N，l=4.1cm"
+  },
+  {
+    "t": 0.09,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.2N，l=4.2cm"
+  },
+  {
+    "t": 0.12,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.2N，l=4.2cm"
+  },
+  {
+    "t": 0.15,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.3N，l=4.3cm"
+  },
+  {
+    "t": 0.18,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.4N，l=4.4cm"
+  },
+  {
+    "t": 0.21,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.4N，l=4.4cm"
+  },
+  {
+    "t": 0.24,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.5N，l=4.5cm"
+  },
+  {
+    "t": 0.27,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.5N，l=4.5cm"
+  },
+  {
+    "t": 0.3,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.6N，l=4.6cm"
+  },
+  {
+    "t": 0.33,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.7N，l=4.7cm"
+  },
+  {
+    "t": 0.36,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.7N，l=4.7cm"
+  },
+  {
+    "t": 0.39,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.8N，l=4.8cm"
+  },
+  {
+    "t": 0.42,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.8N，l=4.8cm"
+  },
+  {
+    "t": 0.45,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=0.9N，l=4.9cm"
+  },
+  {
+    "t": 0.48,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.0N，l=5.0cm"
+  },
+  {
+    "t": 0.51,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.0N，l=5.0cm"
+  },
+  {
+    "t": 0.54,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.1N，l=5.1cm"
+  },
+  {
+    "t": 0.57,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.1N，l=5.1cm"
+  },
+  {
+    "t": 0.6,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.2N，l=5.2cm"
+  },
+  {
+    "t": 0.63,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.3N，l=5.3cm"
+  },
+  {
+    "t": 0.66,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.3N，l=5.3cm"
+  },
+  {
+    "t": 0.69,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.4N，l=5.4cm"
+  },
+  {
+    "t": 0.72,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.4N，l=5.4cm"
+  },
+  {
+    "t": 0.75,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.5N，l=5.5cm"
+  },
+  {
+    "t": 0.78,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.6N，l=5.6cm"
+  },
+  {
+    "t": 0.81,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.6N，l=5.6cm"
+  },
+  {
+    "t": 0.84,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.7N，l=5.7cm"
+  },
+  {
+    "t": 0.87,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.7N，l=5.7cm"
+  },
+  {
+    "t": 0.9,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.8N，l=5.8cm"
+  },
+  {
+    "t": 0.93,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.9N，l=5.9cm"
+  },
+  {
+    "t": 0.96,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=1.9N，l=5.9cm"
+  },
+  {
+    "t": 0.99,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.0,
+    "hold": false,
+    "phase": "平衡读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.0,
+    "hold": true,
+    "phase": "平衡读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.0,
+    "hold": true,
+    "phase": "平衡读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.0,
+    "hold": true,
+    "phase": "平衡读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.0,
+    "hold": true,
+    "phase": "平衡读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.0,
+    "hold": true,
+    "phase": "平衡读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.0,
+    "hold": true,
+    "phase": "平衡读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.0,
+    "hold": true,
+    "phase": "平衡读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.0,
+    "hold": true,
+    "phase": "平衡读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.02,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.0N，l=6.0cm"
+  },
+  {
+    "t": 1.05,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.1N，l=6.1cm"
+  },
+  {
+    "t": 1.08,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.2N，l=6.2cm"
+  },
+  {
+    "t": 1.11,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.2N，l=6.2cm"
+  },
+  {
+    "t": 1.14,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.3N，l=6.3cm"
+  },
+  {
+    "t": 1.17,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.3N，l=6.3cm"
+  },
+  {
+    "t": 1.2,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.4N，l=6.4cm"
+  },
+  {
+    "t": 1.23,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.5N，l=6.5cm"
+  },
+  {
+    "t": 1.26,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.5N，l=6.5cm"
+  },
+  {
+    "t": 1.29,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.6N，l=6.6cm"
+  },
+  {
+    "t": 1.32,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.6N，l=6.6cm"
+  },
+  {
+    "t": 1.35,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.7N，l=6.7cm"
+  },
+  {
+    "t": 1.38,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.8N，l=6.8cm"
+  },
+  {
+    "t": 1.41,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.8N，l=6.8cm"
+  },
+  {
+    "t": 1.44,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.9N，l=6.9cm"
+  },
+  {
+    "t": 1.47,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=2.9N，l=6.9cm"
+  },
+  {
+    "t": 1.5,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.0N，l=7.0cm"
+  },
+  {
+    "t": 1.53,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.1N，l=7.1cm"
+  },
+  {
+    "t": 1.56,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.1N，l=7.1cm"
+  },
+  {
+    "t": 1.59,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.2N，l=7.2cm"
+  },
+  {
+    "t": 1.62,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.2N，l=7.2cm"
+  },
+  {
+    "t": 1.65,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.3N，l=7.3cm"
+  },
+  {
+    "t": 1.68,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.4N，l=7.4cm"
+  },
+  {
+    "t": 1.71,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.4N，l=7.4cm"
+  },
+  {
+    "t": 1.74,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.5N，l=7.5cm"
+  },
+  {
+    "t": 1.77,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.5N，l=7.5cm"
+  },
+  {
+    "t": 1.8,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.6N，l=7.6cm"
+  },
+  {
+    "t": 1.83,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.7N，l=7.7cm"
+  },
+  {
+    "t": 1.86,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.7N，l=7.7cm"
+  },
+  {
+    "t": 1.89,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.8N，l=7.8cm"
+  },
+  {
+    "t": 1.92,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.8N，l=7.8cm"
+  },
+  {
+    "t": 1.95,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=3.9N，l=7.9cm"
+  },
+  {
+    "t": 1.98,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.0,
+    "hold": false,
+    "phase": "平衡读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.0,
+    "hold": true,
+    "phase": "平衡读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.0,
+    "hold": true,
+    "phase": "平衡读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.0,
+    "hold": true,
+    "phase": "平衡读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.0,
+    "hold": true,
+    "phase": "平衡读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.0,
+    "hold": true,
+    "phase": "平衡读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.0,
+    "hold": true,
+    "phase": "平衡读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.0,
+    "hold": true,
+    "phase": "平衡读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.0,
+    "hold": true,
+    "phase": "平衡读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.01,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.0N，l=8.0cm"
+  },
+  {
+    "t": 2.04,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.1N，l=8.1cm"
+  },
+  {
+    "t": 2.07,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.1N，l=8.1cm"
+  },
+  {
+    "t": 2.1,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.2N，l=8.2cm"
+  },
+  {
+    "t": 2.13,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.3N，l=8.3cm"
+  },
+  {
+    "t": 2.16,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.3N，l=8.3cm"
+  },
+  {
+    "t": 2.19,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.4N，l=8.4cm"
+  },
+  {
+    "t": 2.22,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.4N，l=8.4cm"
+  },
+  {
+    "t": 2.25,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.5N，l=8.5cm"
+  },
+  {
+    "t": 2.28,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.6N，l=8.6cm"
+  },
+  {
+    "t": 2.31,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.6N，l=8.6cm"
+  },
+  {
+    "t": 2.34,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.7N，l=8.7cm"
+  },
+  {
+    "t": 2.37,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.7N，l=8.7cm"
+  },
+  {
+    "t": 2.4,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.8N，l=8.8cm"
+  },
+  {
+    "t": 2.43,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.9N，l=8.9cm"
+  },
+  {
+    "t": 2.46,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=4.9N，l=8.9cm"
+  },
+  {
+    "t": 2.49,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.0N，l=9.0cm"
+  },
+  {
+    "t": 2.52,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.0N，l=9.0cm"
+  },
+  {
+    "t": 2.55,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.1N，l=9.1cm"
+  },
+  {
+    "t": 2.58,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.2N，l=9.2cm"
+  },
+  {
+    "t": 2.61,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.2N，l=9.2cm"
+  },
+  {
+    "t": 2.64,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.3N，l=9.3cm"
+  },
+  {
+    "t": 2.67,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.3N，l=9.3cm"
+  },
+  {
+    "t": 2.7,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.4N，l=9.4cm"
+  },
+  {
+    "t": 2.73,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.5N，l=9.5cm"
+  },
+  {
+    "t": 2.76,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.5N，l=9.5cm"
+  },
+  {
+    "t": 2.79,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.6N，l=9.6cm"
+  },
+  {
+    "t": 2.82,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.6N，l=9.6cm"
+  },
+  {
+    "t": 2.85,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.7N，l=9.7cm"
+  },
+  {
+    "t": 2.88,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.8N，l=9.8cm"
+  },
+  {
+    "t": 2.91,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.8N，l=9.8cm"
+  },
+  {
+    "t": 2.94,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.9N，l=9.9cm"
+  },
+  {
+    "t": 2.97,
+    "hold": false,
+    "phase": "缓慢加载过渡，不作正式读数：F=5.9N，l=9.9cm"
+  },
+  {
+    "t": 3.0,
+    "hold": false,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  },
+  {
+    "t": 3.0,
+    "hold": true,
+    "phase": "平衡读数：F=6.0N，l=10.0cm"
+  }
+]

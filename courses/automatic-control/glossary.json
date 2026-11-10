@@ -112,5 +112,63 @@
       "section": "ac-3-2",
       "match": "时间常数具有可测量的意义"
     }
+  ],
+  "symbolDefinitions": [
+    {
+      "id": "ac-time-constant",
+      "title": "时间常数 T",
+      "keys": [
+        "T"
+      ],
+      "description": "一阶模型 T dc/dt+c=r 的时间常数。T>0 时，一个时间常数后达到最终变化量的1−e⁻¹；它不等于调节时间。",
+      "unitHtml": "s",
+      "section": "ac-3-2",
+      "sections": [
+        "ac-3-2"
+      ],
+      "match": "为时间常数"
+    },
+    {
+      "id": "ac-damping-ratio",
+      "title": "阻尼比 ξ",
+      "keys": [
+        "ξ"
+      ],
+      "description": "标准二阶系统的无量纲阻尼比；本教材使用ξ，其他资料常用ζ表示相同量。0<ξ<1对应衰减振荡。",
+      "unitHtml": "无量纲",
+      "section": "ac-3-3",
+      "sections": [
+        "ac-3-3"
+      ],
+      "match": "表示阻尼比"
+    },
+    {
+      "id": "ac-natural-frequency",
+      "title": "自然频率 ωₙ",
+      "keys": [
+        "ω_n"
+      ],
+      "description": "标准二阶分母 s²+2ξωₙs+ωₙ²中的正参数；单位为rad/s，与阻尼后的振荡频率ωd不同。",
+      "unitHtml": "rad/s",
+      "section": "ac-3-3",
+      "sections": [
+        "ac-3-3"
+      ],
+      "match": "称自然频率"
+    },
+    {
+      "id": "ac-damped-frequency",
+      "title": "阻尼振荡频率 ωd",
+      "keys": [
+        "ω_d"
+      ],
+      "description": "0<ξ<1时，标准二阶共轭极点的虚部大小：ωd=ωₙ√(1−ξ²)，决定阻尼振荡的角频率。",
+      "unitHtml": "rad/s",
+      "section": "ac-3-3",
+      "sections": [
+        "ac-3-3"
+      ],
+      "match": "阻尼振荡频率"
+    }
   ]
 }

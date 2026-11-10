@@ -49,7 +49,24 @@ def run() -> None:
                 assert "第3版3-20" in page.locator("#question-3-13").inner_text()
                 assert "第3版3-21" in page.locator("#question-3-14").inner_text()
                 assert "不同于第3版3-18" in page.locator("#question-3-18").inner_text()
+                if not page.locator('[data-homework-jump]').is_visible():
+                    page.locator('[data-reader-directory]').click()
+                page.locator('[data-homework-jump]').select_option('3-16')
+                page.locator('#question-3-16.reference-target').wait_for()
                 page.screenshot(path=str(OUT / ("automatic-control-" + name + "-homework.png")), full_page=True)
+
+                page.goto(base + "#course/automatic-control/ac-3-3", wait_until="domcontentloaded")
+                symbol = page.locator('math [data-definition="ac-natural-frequency"]').first
+                symbol.wait_for(); symbol.scroll_into_view_if_needed()
+                y = symbol.bounding_box()['y']; symbol.click(force=True)
+                popup = page.locator('#definition-popover:popover-open'); popup.wait_for()
+                assert 'rad/s' in popup.inner_text()
+                page.locator('.definition-source-link').click()
+                page.locator('.reference-target[data-definition-source]').wait_for()
+                page.locator('.reference-return').click()
+                page.wait_for_function('document.querySelector(".reference-return").hidden')
+                page.wait_for_timeout(100)
+                assert abs(page.locator('math [data-definition="ac-natural-frequency"]').first.bounding_box()['y'] - y) < 4
                 page.close()
             browser.close()
     finally:

@@ -4,3 +4,6 @@ __pycache__/
 
 # Generated static deployment output
 dist/
+
+# Reconstructed physics manuscript preview; retain the supplied canonical PDF instead.
+/courses/hs-physics/physics-001/verification/build/

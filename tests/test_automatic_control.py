@@ -104,6 +104,8 @@ class AutomaticControlTests(unittest.TestCase):
     def test_dynamic_error_coefficients_and_book_sections(self):
         lesson = assignment(ROOT/"courses/automatic-control/lessons/ac-3-6.js")["html"]
         self.assertIn("ac-dynamic-error",lesson)
+        indexed = {e["number"] for e in self.index["automatic-control"]["sections"]["ac-3-6"]["equations"]}
+        self.assertTrue({"U.3.6."+str(n) for n in range(8,12)} <= indexed)
         self.assertIn("ac-3-6-feedback-definition",lesson)
         for section in ("ac-3-6-1","ac-3-6-2","ac-3-6-3"):
             self.assertIn('id="' + section + '"',lesson)

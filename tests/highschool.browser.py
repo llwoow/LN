@@ -11,15 +11,16 @@ with sync_playwright() as p:
         page.on('pageerror', lambda error: errors.append(str(error)))
         page.goto(BASE)
         assert page.locator('#course-list a[href^="#course/hs-"]').count() == 0
+        if width<1100:page.locator('#sidebar-toggle').click()
         page.locator('.highschool-entry').click()
         page.wait_for_function('document.querySelectorAll("#course-list .course-row").length === 9')
-        courses = page.evaluate('LN_COURSES.filter(c => c.outlineOnly)')
+        courses = page.evaluate("LN_COURSES.filter(c => c.level === 'highschool')")
         for course in courses:
             page.goto(BASE+'#course/'+course['id'])
             page.locator('ln-knowledge-map').wait_for()
             assert page.locator('.map-node').count() == len(course['sections'])
-            assert not page.locator('[data-open-practice]').count()
-            assert not page.locator('[data-open-resources]').count()
+            assert bool(page.locator('[data-open-practice]').count()) == (course['id']=='hs-physics')
+            assert bool(page.locator('[data-open-resources]').count()) == (course['id']=='hs-physics')
             page.locator('.map-node').first.click()
             body = page.locator('#lesson-body[aria-busy="false"]')
             body.wait_for()
@@ -30,12 +31,12 @@ with sync_playwright() as p:
         page.goto(BASE+'#course/hs-physics/wl-01-k01/definition-passage-2')
         page.locator('#lesson-body h2', has_text='运动的描述').wait_for()
         page.goto(BASE+'#practice/hs-physics')
-        page.locator('main a[href="#course/hs-physics"]').wait_for()
+        page.locator('[data-practice-mode="local"]').wait_for()
         page.goto(BASE+'#highschool/resources')
         page.locator('h1', has_text='教材与来源').wait_for()
         assert page.locator('a[href$="hainan-2027-report.pdf"]').count() == 1
         assert page.locator('a[href$="hainan-2027-index.xlsx"]').count() == 1
-        assert not any('/hs-' in url and ('/lessons/' in url or '/glossary-index.js' in url) for url in requests)
+        assert not any('/hs-' in url and '/lessons/' in url for url in requests)
         assert not errors, errors
         page.close()
     browser.close()
