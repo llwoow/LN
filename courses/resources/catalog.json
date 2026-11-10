@@ -1026,6 +1026,65 @@
       ],
       "downloads": [],
       "localLesson": "#course/automatic-control/ac-3-6/ac-dynamic-error"
+    },
+    {
+      "id": "emc-textbook-lecture-crosscheck",
+      "title": "电磁兼容：教材与课堂讲义对照的电路推导和整改验证",
+      "kind": "用户提供教材与课件的独立研读任务",
+      "repository": null,
+      "checked": "2026-11-10",
+      "targets": [
+        {
+          "course": "electromagnetic-compatibility",
+          "section": "emc-2-2"
+        },
+        {
+          "course": "electromagnetic-compatibility",
+          "section": "emc-4-4"
+        },
+        {
+          "course": "electromagnetic-compatibility",
+          "section": "emc-5-4"
+        },
+        {
+          "course": "electromagnetic-compatibility",
+          "section": "emc-6-3"
+        },
+        {
+          "course": "electromagnetic-compatibility",
+          "section": "emc-10-3"
+        }
+      ],
+      "question": "如何从实际干扰回路出发，推导耦合电压，再分别验证屏蔽、滤波、测试与变电站暂态的适用边界？",
+      "summary": "以用户上传的林福昌、李化教材和刘其凤10份课件为对应材料，沿LN课程页逐项复原基本模型并校核方向、单位和测量条件。原始扫描文档不公开放入仓库。",
+      "steps": [
+        "在2.2节画出两个导体间的耦合电容及受扰端对地回路，从KCL推导受扰电压，并用模型改变R2和耦合电容观察高低频近似。",
+        "在4.4节对正入射均匀金属平板逐次应用两界面边界条件，解释反射、吸收与多次反射，并标明为何不能代替含孔缝的机箱测试。",
+        "在5.4与6.3节区分共模/差模电流与滤波器输入输出绕行，再给出相同LISN、带宽、检波器和运行模式下的测量复查方案。",
+        "在10.3节从给定初值求出理想LC合闸暂态，把行波的终端反射与真实GIS多次重燃情况分开，说明尚需什么实测或仿真数据。"
+      ],
+      "output": "可在站点逐节浏览的原创解析、四个局部可调计算模型；以课程REVIEW记录来源页码、适用条件和未核范围。",
+      "requirements": "浏览器打开LN即可阅读和调整局部计算参数；使用合法持有的教材及课件原件对照原图和公式。实际EMC测试与高压操作需符合适用安全标准和专业条件。",
+      "license": "本站解释、重绘和局部模型为本项目新内容；原教材和学校课件著作权归权利人所有，不在公开GitHub仓库重分发。",
+      "links": [],
+      "evidence": [],
+      "downloads": [
+        {
+          "label": "核读范围和适用边界",
+          "path": "courses/electromagnetic-compatibility/REVIEW.md"
+        }
+      ],
+      "limits": [
+        "已核对教材章节和重点扫描页，尚未完成全部292页扫描教材的逐式逐图核对。",
+        "4个小节已包含详细推导和独立交互，其他36节已扩展解释但未全部达到同等深度。",
+        "尚无特定设备的独立EMC测量或高压现场验证，课内假设值不得冒充实测记录或现行强制限值。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "讲解与教学假设已经编写并做静态/浏览器检查；没有运行真实EMC实验或复现用户课件的全部原始测试。",
+        "read": "用户上传的教材全书目录和关键扫描页；按章节核读10份PPT的具体文本、图示及部分公式。"
+      },
+      "localLesson": "#course/electromagnetic-compatibility/emc-2-2"
     }
   ]
 }
