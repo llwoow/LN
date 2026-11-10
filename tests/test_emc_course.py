@@ -90,7 +90,7 @@ class EMCCourseIntegrity(unittest.TestCase):
             html = ASSIGN(ROOT / section["src"])["html"]
             self.assertIn('data-emc-lab=', html)
             self.assertGreaterEqual(html.count('class="math display"'), 3)
-            displays = list(re.finditer(r'<math\\b[^>]*>.*?</math>', html, re.S))
+            displays = list(re.finditer(r'<math\b[^>]*>.*?</math>', html, re.S))
             self.assertEqual(len(displays), len(ref["sections"][section_id]["equations"]))
             for display in displays:
                 ET.fromstring(display.group(0))
