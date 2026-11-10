@@ -48,9 +48,12 @@
       "id": "emc-2-2",
       "heading": "2.2 传导耦合原理",
       "bookStartPrintPage": 26,
-      "status": "awaiting-detailed-primary-source-audit",
-      "sourcePages": null,
-      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+      "status": "selected-primary-source-reviewed-in-prior-batch",
+      "sourcePages": {
+        "previousAudit": "教材印刷第26页起；对应课件2 PDF第4—28页",
+        "previousAuditDocument": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md"
+      },
+      "auditNotes": "电容与互感耦合传递函数、复相量极限；原始审校见AUDIT-2026-11-10.md"
     },
     {
       "id": "emc-2-3",
@@ -124,9 +127,12 @@
       "id": "emc-4-4",
       "heading": "4.4 电磁屏蔽",
       "bookStartPrintPage": 95,
-      "status": "awaiting-detailed-primary-source-audit",
-      "sourcePages": null,
-      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+      "status": "selected-primary-source-reviewed-in-prior-batch",
+      "sourcePages": {
+        "previousAudit": "教材印刷第95页起；对应课件4 PDF第21—43页",
+        "previousAuditDocument": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md"
+      },
+      "auditNotes": "金属板界面反射/吸收/多次反射；原始审校见AUDIT-2026-11-10.md"
     },
     {
       "id": "emc-4-5",
@@ -164,9 +170,12 @@
       "id": "emc-5-4",
       "heading": "5.4 电源电磁干扰滤波器",
       "bookStartPrintPage": 126,
-      "status": "awaiting-detailed-primary-source-audit",
-      "sourcePages": null,
-      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+      "status": "selected-primary-source-reviewed-in-prior-batch",
+      "sourcePages": {
+        "previousAudit": "教材印刷第126页起；对应课件5 PDF第27—34页",
+        "previousAuditDocument": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md"
+      },
+      "auditNotes": "共模差模滤波与安规电容；原始审校见AUDIT-2026-11-10.md"
     },
     {
       "id": "emc-5-5",
@@ -328,9 +337,12 @@
       "id": "emc-10-3",
       "heading": "10.3 发电厂、变电站内的暂态干扰",
       "bookStartPrintPage": 262,
-      "status": "awaiting-detailed-primary-source-audit",
-      "sourcePages": null,
-      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+      "status": "selected-primary-source-reviewed-in-prior-batch",
+      "sourcePages": {
+        "previousAudit": "教材印刷第262页起；对应课件10 PDF第38—50页",
+        "previousAuditDocument": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md"
+      },
+      "auditNotes": "理想LC合闸初值及GIS行波反射；原始审校见AUDIT-2026-11-10.md"
     },
     {
       "id": "emc-10-4",

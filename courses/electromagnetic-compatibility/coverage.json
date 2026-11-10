@@ -351,5 +351,29 @@
       "newInteractiveModels": 4,
       "newPracticeQuestions": 4
     }
-  ]
+  ],
+  "latestBatchAudit": "courses/electromagnetic-compatibility/AUDIT-FOUR-STAGES-2026-11-10.md",
+  "currentMeasuredCounts": {
+    "readingSections": 40,
+    "extendedSamples": 8,
+    "noOriginalSchematicSections": 22,
+    "noNumberedEquationSections": 23,
+    "originalDrawings": 24,
+    "supplementalNumberedEquations": 46,
+    "interactiveTeachingModels": 8,
+    "emcDiagnosticQuestions": 15
+  },
+  "latestVisualReview": {
+    "status": "last-change-visual-regression-pending-or-underway",
+    "realChromiumViewports": [
+      1440,
+      390,
+      320
+    ],
+    "manuallyFoundAndFixed": [
+      "emc-8-1-shorted-parallel-branch",
+      "emc-4-3-inductor-bypassed-by-wire",
+      "emc-mobile-justified-latin-spacing"
+    ]
+  }
 }
