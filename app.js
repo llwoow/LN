@@ -339,6 +339,19 @@
         window.LNGlossary.prepare(body, course, selected);
         window.LNResources.mountLesson(body);
         bindInlineModels(body);
+        if (course.id === 'electromagnetic-compatibility' && body.querySelector('[data-emc-lab]')) {
+          // Optional, lesson-local educational models: the static explanation survives failure.
+          try {
+            await Promise.all([
+              loadScript('courses/electromagnetic-compatibility/model/emc-labs.js'),
+              loadStyle('courses/electromagnetic-compatibility/model/emc-labs.css')
+            ]);
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            window.LN_MOUNT_EMC_LABS?.(body);
+          } catch (error) {
+            // Keep the standalone fallback and the rest of the lesson available.
+          }
+        }
       }
       body.setAttribute('aria-busy', 'false');
       body.classList.toggle('model-lesson', selected.kind === 'model');
