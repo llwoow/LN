@@ -68,6 +68,80 @@
         return {text:'理想 LC 特征频率 f₀ ≈ '+fmt(f0/1e3)+' kHz；横轴曲线为 log₁₀(|Xᴸ|/|Xᶜ|)，过零点才是两电抗模相等的位置，不是实测插入损耗。',plot:makePlot('理想元件电抗比随频率变化（1 kHz 到 10 MHz）',points,'log₁₀ |XL/XC|','1 kHz → 10 MHz')}
       }
     },
+
+    'capacitor-srf':{
+      inputs:[
+        {key:'logc',title:'标称电容 C（对数）',min:-9,max:-5,step:.1,value:-6,format:v=>fmt(Math.pow(10,v)*1e9)+' nF'},
+        {key:'esl',title:'串联等效电感 ESL',min:.2,max:5,step:.2,value:1,format:v=>fmt(v)+' nH'},
+        {key:'esr',title:'串联等效电阻 ESR',min:5,max:100,step:5,value:20,format:v=>fmt(v)+' mΩ'}
+      ],
+      run:p=>{
+        const C=Math.pow(10,p.logc),L=p.esl*1e-9,R=p.esr*1e-3;
+        const f0=1/(2*Math.PI*Math.sqrt(L*C));
+        const points=Array.from({length:121},(_,i)=>{
+          const f=Math.pow(10,3+i*5/120),w=2*Math.PI*f;
+          return Math.log10(Math.hypot(R,w*L-1/(w*C)));
+        });
+        return {text:'理想串联模型自谐振 f₀≈'+fmt(f0/1e6)+' MHz；在自谐振附近的理论最小 |Z|≈'+fmt(p.esr)+' mΩ。图只展示固定ESR/ESL的一阶模型，不含直流偏置、多个电容反谐振或PCB寄生参数。',
+          plot:makePlot('假设的ESR+ESL+C串联模型阻抗频响（1 kHz—100 MHz，对数频率）',points,'log₁₀ |Z/Ω|','1 kHz → 100 MHz')};
+      }
+    },
+    'line-reflection':{
+      inputs:[
+        {key:'z0',title:'线路特征阻抗 Z₀',min:30,max:120,step:5,value:50,format:v=>fmt(v)+' Ω'},
+        {key:'zs',title:'驱动源阻抗 Zs',min:0,max:80,step:5,value:10,format:v=>fmt(v)+' Ω'},
+        {key:'rs',title:'源端串联电阻 Rs',min:0,max:100,step:5,value:40,format:v=>fmt(v)+' Ω'},
+        {key:'load',title:'负载端 ZL（典型档位）',min:0,max:5,step:1,value:5,format:v=>['0 Ω（短路）','25 Ω','50 Ω','100 Ω','1 kΩ','理想开路'][v]},
+        {key:'length',title:'线长 ℓ',min:.1,max:5,step:.1,value:.5,format:v=>fmt(v)+' m'}
+      ],
+      run:p=>{
+        const loads=[0,25,50,100,1000,Infinity],Zl=loads[p.load];
+        const gl=Number.isFinite(Zl)?(Zl-p.z0)/(Zl+p.z0):1;
+        const sourceZ=p.zs+p.rs,gs=(sourceZ-p.z0)/(sourceZ+p.z0);
+        const launched=3.3*p.z0/(sourceZ+p.z0),td=p.length/2e8;
+        const first=launched*(1+gl);
+        const values=Array.from({length:161},(_,i)=>{
+          const t=i*8/160;
+          let voltage=0;
+          for(let n=0;n<=3;n++){
+            if(t>=2*n+1-1e-9)voltage+=first*Math.pow(gl*gs,n);
+          }
+          return voltage;
+        });
+        return {text:'单程传播延迟 tₑ='+fmt(td*1e9)+' ns；ΓL='+fmt(gl)+'；ΓS='+fmt(gs)+'；源端发出 V⁺='+fmt(launched)+' V；首次负载变化 ΔVL='+fmt(first)+' V。3.3 V理想阶跃、传播速度2×10⁸ m/s、无损单一线路；负载电容和非线性未计入。',
+          plot:makePlot('理想阶跃从源端出发后，负载端电压随单程延迟倍数变化',values,'Vload (V)','t / td: 0 → 8')};
+      }
+    },
+    'eddy-shield':{
+      inputs:[
+        {key:'res',title:'屏蔽等效电阻 Rs',min:.01,max:1,step:.01,value:.1,format:v=>fmt(v)+' Ω'},
+        {key:'ind',title:'屏蔽等效自感 Ls',min:.2,max:5,step:.2,value:1,format:v=>fmt(v)+' μH'}
+      ],
+      run:p=>{
+        const R=p.res,L=p.ind*1e-6,M=.2e-6;
+        const fc=R/(2*Math.PI*L);
+        const points=Array.from({length:121},(_,i)=>{
+          const f=Math.pow(10,3+i*4/120),w=2*Math.PI*f;
+          return w*M/Math.hypot(R,w*L);
+        });
+        return {text:'令互感 M=0.2 μH（教学假设）。等效交界 f≈Rs/(2πLs)='+fmt(fc/1e3)+' kHz；高频极限 |Is/I|≈M/Ls='+fmt(M/L)+'。此数仅是短路匝电流幅比，不是屏蔽空腔内的磁场，也不是整机SE。',
+          plot:makePlot('理想互感与短路匝电流幅比随频率变化（1 kHz—10 MHz）',points,'|Is/I|','1 kHz → 10 MHz')};
+      }
+    },
+    'probe-ideal':{
+      inputs:[
+        {key:'logf',title:'频率（理想近似）',min:2,max:6,step:.1,value:5,format:v=>fmt(Math.pow(10,v))+' Hz'},
+        {key:'m',title:'互感 M',min:.1,max:2,step:.1,value:.5,format:v=>fmt(v)+' μH'},
+        {key:'i',title:'被测正弦电流峰值',min:.02,max:1,step:.02,value:.1,format:v=>fmt(v)+' A'}
+      ],
+      run:p=>{
+        const f=Math.pow(10,p.logf),M=p.m*1e-6,I=p.i;
+        const voltage=2*Math.PI*f*M*I;
+        const points=Array.from({length:121},(_,i)=>2*Math.PI*Math.pow(10,2+i*4/120)*M*I*1000);
+        return {text:'理想开路感应电压峰值 |uoc|≈'+fmt(voltage*1000)+' mV（忽略次级负载、频散和饱和）。真实电流探头必须用对应频率和端接下的校准转移阻抗 ZT(f)，不能以此曲线充当实测响应。',
+          plot:makePlot('只供推导用的理想互感开路电压（100 Hz—1 MHz）',points,'|uoc| (mV)','100 Hz → 1 MHz')};
+      }
+    },
     switching:{
       inputs:[
         {key:'l',title:'线路等效电感 Ls',min:.1,max:10,step:.1,value:1,format:v=>fmt(v)+' mH'},
