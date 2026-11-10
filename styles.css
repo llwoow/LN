@@ -718,3 +718,14 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .publication-body nav[aria-label="本节小节"] ol { list-style: none; margin: 1em 0 1.2em; padding-inline-start: 0; }
 .publication-body nav[aria-label="本节小节"] li { margin: .4em 0; }
 .publication-body nav[aria-label="本节小节"] a { overflow-wrap: anywhere; }
+
+/* Clearly indicate that the full-resolution schematic has more content to the right. */
+@media (max-width: 620px) {
+  .publication-body figure:has(.emc-figure-scroll)::before {
+    content: "↔ 左右滑动查看完整原理图";
+    display: block;
+    margin: .4em 0;
+    color: var(--muted);
+    font: 500 12px/1.5 var(--font);
+  }
+}
