@@ -1,5 +1,5 @@
 {
-  "status": "all-sections-expanded-partial-review",
+  "status": "eight-extended-sample-sections-with-remaining-source-audit",
   "reference": "林福昌、李化《电磁兼容原理及应用》及刘其凤《电磁兼容与建模仿真》课件",
   "readings": [
     {
@@ -83,8 +83,8 @@
     {
       "id": "emc-4-3",
       "title": "4.3 磁场屏蔽",
-      "status": "expanded-source-guided",
-      "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
+      "status": "worked-example-model",
+      "sourceReviewed": "selected original printed textbook pages and scanned figures, corresponding PPT slides; not full textbook review"
     },
     {
       "id": "emc-4-4",
@@ -137,8 +137,8 @@
     {
       "id": "emc-6-2",
       "title": "6.2 主要测试设备",
-      "status": "expanded-source-guided",
-      "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
+      "status": "worked-example-model",
+      "sourceReviewed": "selected original printed textbook pages and scanned figures, corresponding PPT slides; not full textbook review"
     },
     {
       "id": "emc-6-3",
@@ -179,14 +179,14 @@
     {
       "id": "emc-8-1",
       "title": "8.1 常用元器件的选择",
-      "status": "expanded-source-guided",
-      "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
+      "status": "worked-example-model",
+      "sourceReviewed": "selected original printed textbook pages and scanned figures, corresponding PPT slides; not full textbook review"
     },
     {
       "id": "emc-8-2",
       "title": "8.2 线路终端的匹配连接",
-      "status": "expanded-source-guided",
-      "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
+      "status": "worked-example-model",
+      "sourceReviewed": "selected original printed textbook pages and scanned figures, corresponding PPT slides; not full textbook review"
     },
     {
       "id": "emc-8-3",
@@ -279,9 +279,45 @@
       "equations": 3,
       "figures": 2,
       "lab": "LC暂态初值"
+    },
+    {
+      "id": "emc-4-3",
+      "book": "教材印刷第90—94页（扫描PDF第100—104页）",
+      "ppt": "4屏蔽技术n.pdf PDF第11—20页",
+      "focus": "磁阻分流、圆筒线性屏蔽比与dB区别、短路匝等效、电流幅比频率极限",
+      "equations": 6,
+      "figures": 2,
+      "lab": "磁屏蔽短路匝涡流响应"
+    },
+    {
+      "id": "emc-6-2",
+      "book": "教材印刷第139页起（扫描PDF第149页起，至图6-9与检波器说明）",
+      "ppt": "6电磁兼容测试技术n.pdf PDF第9—19页",
+      "focus": "互感与开路电压、转移阻抗/负载区别、环探头、天线系数、检波链",
+      "equations": 4,
+      "figures": 2,
+      "lab": "电流探头理想互感"
+    },
+    {
+      "id": "emc-8-1",
+      "book": "教材印刷第186—198页（扫描PDF第196—208页）",
+      "ppt": "8电子设备的电磁兼容设计n.pdf PDF第4—23页",
+      "focus": "寄生电阻电容电感等效、ESR/ESL自谐振、去耦返回路径、二极管结电容、封装地弹",
+      "equations": 6,
+      "figures": 2,
+      "lab": "电容ESR/ESL自谐振"
+    },
+    {
+      "id": "emc-8-2",
+      "book": "教材印刷第198—201页（扫描PDF第208—211页）",
+      "ppt": "8电子设备的电磁兼容设计n.pdf PDF第24—29页",
+      "focus": "传输线分布参数、首波、负载/源端反射系数、端接时序、不同拓扑实际差别",
+      "equations": 3,
+      "figures": 2,
+      "lab": "传输线端接与反射"
     }
   ],
-  "note": "All 40 reading sections have first-pass explanations, but 26 lack independently authored figures and 27 lack numbered equations. The source scan (292 pages) is not yet fully audited. 75 Python tests plus Node and three-view Chromium CI passed as of this audit; manual content and device review remains required.",
+  "note": "40 course section pages have baseline explanations. Eight core sections now have source-guided extended derivations and models; the latest four are 4.3,6.2,8.1,8.2. The 292-page textbook has NOT been completely examined; numerical/unit and browser checks are tracked separately. Current figures/formulas counts should be regenerated from the site source, not used as a teaching-quality proof.",
   "audit": {
     "date": "2026-11-10",
     "report": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md",
@@ -298,5 +334,22 @@
     "visualReviewLessons": 13,
     "fullTextbookExamined": false,
     "status": "selected-model-review-complete; course-depth-incomplete"
-  }
+  },
+  "reviewBatches": [
+    {
+      "date": "2026-11-10",
+      "focus": [
+        "emc-4-3",
+        "emc-6-2",
+        "emc-8-1",
+        "emc-8-2"
+      ],
+      "sourceMatrix": "courses/electromagnetic-compatibility/SOURCE-MATRIX-2026-11-10.json",
+      "status": "four-primary-source-selected-section-rewrites",
+      "newEquations": 19,
+      "newOriginalFigures": 8,
+      "newInteractiveModels": 4,
+      "newPracticeQuestions": 4
+    }
+  ]
 }
