@@ -142,6 +142,47 @@
           plot:makePlot('只供推导用的理想互感开路电压（100 Hz—1 MHz）',points,'|uoc| (mV)','100 Hz → 1 MHz')};
       }
     },
+    'ground-rise':{
+      inputs:[
+        {key:'rho',title:'土壤电阻率 ρ',min:20,max:500,step:10,value:100,format:v=>fmt(v)+' Ω·m'},
+        {key:'current',title:'恒定入地电流 I',min:10,max:500,step:10,value:100,format:v=>fmt(v)+' A'},
+        {key:'r0',title:'半球电极半径 r₀',min:.2,max:2,step:.1,value:.5,format:v=>fmt(v)+' m'},
+        {key:'a',title:'跨步间距 a',min:.2,max:1.5,step:.1,value:.8,format:v=>fmt(v)+' m'}
+      ],
+      run:p=>{
+        const potential=r=>p.rho*p.current/(2*Math.PI*r);
+        const at=p.r0+1.5,step=potential(at)-potential(at+p.a);
+        const points=Array.from({length:121},(_,i)=>potential(p.r0+(i/120)*10));
+        return {text:'静态电极表面电位 U(r₀)='+fmt(potential(p.r0))+' V；接地电阻 Rg='+fmt(p.rho/(2*Math.PI*p.r0))+' Ω；在 r=r₀+1.5 m 两点相隔 a 的电位差='+fmt(step)+' V。只用于均匀土壤半球模型，不是人员安全判据。',
+          plot:makePlot('均匀土壤半球电极静态电位，横轴距电极中心从 r₀ 到 r₀+10m',points,'U(r) (V)','r₀ → r₀+10 m')};
+      }
+    },
+    'surge-lead':{
+      inputs:[
+        {key:'l',title:'连接线等效电感 L',min:.1,max:3,step:.1,value:.6,format:v=>fmt(v)+' μH'},
+        {key:'di',title:'电流上升率 di/dt',min:.1,max:10,step:.1,value:1,format:v=>fmt(v)+' kA/μs'}
+      ],
+      run:p=>{
+        const voltage=p.l*p.di*1000;
+        const points=Array.from({length:101},(_,i)=>p.l*(i*.1)*1000);
+        return {text:'引线电感单独产生的电压幅度≈'+fmt(voltage)+' V。需再考虑保护器件动态箝位、方向、源阻抗和实际波形；并非可直接用于施工的SPD残压估算。',
+          plot:makePlot('连接线电感电压与电流前沿（0—10 kA/μs）',points,'uL (V)','di/dt: 0 → 10 kA/μs')};
+      }
+    },
+    'impulse-shield':{
+      inputs:[
+        {key:'l1',title:'分压器接地引线 L₁',min:.2,max:5,step:.1,value:1,format:v=>fmt(v)+' μH'},
+        {key:'l2',title:'电缆外皮回路 L₂',min:.5,max:8,step:.1,value:3,format:v=>fmt(v)+' μH'},
+        {key:'cs',title:'示波器对地寄生电容 Cs',min:100,max:3000,step:100,value:1000,format:v=>fmt(v)+' pF'}
+      ],
+      run:p=>{
+        const portion=p.l1/(p.l1+p.l2);
+        const f0=1/(2*Math.PI*Math.sqrt(p.l2*1e-6*p.cs*1e-12));
+        const points=Array.from({length:121},(_,i)=>p.l1/(p.l1+.5+i*7.5/120)*100);
+        return {text:'理想并联电感分流：外皮电流约占 '+fmt(portion*100)+'%；独立 LC 寄生谐振假设 f₀≈'+fmt(f0/1e6)+' MHz。两种模型的回路边界条件不同，不能直接组合解释高压现场。不得断开保护地进行试验。',
+          plot:makePlot('理想并联电感的外皮分流比例随 L₂ 变化',points,'i₂/i (%)','L₂: 0.5 → 8 μH')};
+      }
+    },
     switching:{
       inputs:[
         {key:'l',title:'线路等效电感 Ls',min:.1,max:10,step:.1,value:1,format:v=>fmt(v)+' mH'},
