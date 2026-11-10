@@ -203,8 +203,8 @@
     {
       "id": "emc-9-2",
       "title": "9.2 建筑物的防雷和接地技术",
-      "status": "expanded-source-guided",
-      "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
+      "status": "extended-lecture-reviewed-textbook-scan-pending",
+      "sourceReviewed": "corresponding uploaded lecture PDF pages physically reviewed; original textbook scanned page inaccessible in this runtime due XRef corruption"
     },
     {
       "id": "emc-9-3",
@@ -227,8 +227,8 @@
     {
       "id": "emc-10-2",
       "title": "10.2 发电厂、变电站的地电位干扰及保护措施",
-      "status": "expanded-source-guided",
-      "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
+      "status": "extended-lecture-reviewed-textbook-scan-pending",
+      "sourceReviewed": "corresponding uploaded lecture PDF pages physically reviewed; original textbook scanned page inaccessible in this runtime due XRef corruption"
     },
     {
       "id": "emc-10-3",
@@ -239,8 +239,8 @@
     {
       "id": "emc-10-4",
       "title": "10.4 冲击试验时的电磁干扰",
-      "status": "expanded-source-guided",
-      "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
+      "status": "extended-lecture-reviewed-textbook-scan-pending",
+      "sourceReviewed": "corresponding uploaded lecture PDF pages physically reviewed; original textbook scanned page inaccessible in this runtime due XRef corruption"
     }
   ],
   "detailedSamples": [
@@ -317,7 +317,7 @@
       "lab": "传输线端接与反射"
     }
   ],
-  "note": "40 course section pages have baseline explanations. Eight core sections now have source-guided extended derivations and models; the latest four are 4.3,6.2,8.1,8.2. The 292-page textbook has NOT been completely examined; numerical/unit and browser checks are tracked separately. Current figures/formulas counts should be regenerated from the site source, not used as a teaching-quality proof.",
+  "note": "11 core sections now have source-guided formulas, explanatory SVGs and interaction; 29 others remain less detailed. This new 3-section batch is grounded in uploaded slide pages only, since the scanned textbook PDF is corrupt in the current runtime. Final scientific/visual human approval is not claimed.",
   "audit": {
     "date": "2026-11-10",
     "report": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md",
@@ -350,18 +350,32 @@
       "newOriginalFigures": 8,
       "newInteractiveModels": 4,
       "newPracticeQuestions": 4
+    },
+    {
+      "date": "2026-11-10",
+      "focus": [
+        "emc-9-2",
+        "emc-10-2",
+        "emc-10-4"
+      ],
+      "sourceMatrix": "courses/electromagnetic-compatibility/SOURCE-MATRIX-2026-11-10.json",
+      "status": "selected-lecture-source-rewrites-textbook-scan-pending",
+      "newEquations": 8,
+      "newOriginalFigures": 3,
+      "newInteractiveModels": 3,
+      "newPracticeQuestions": 3
     }
   ],
-  "latestBatchAudit": "courses/electromagnetic-compatibility/AUDIT-FOUR-STAGES-2026-11-10.md",
+  "latestBatchAudit": "courses/electromagnetic-compatibility/AUDIT-SECOND-BATCH-2026-11-10.md",
   "currentMeasuredCounts": {
     "readingSections": 40,
-    "extendedSamples": 8,
-    "noOriginalSchematicSections": 22,
-    "noNumberedEquationSections": 23,
-    "originalDrawings": 24,
-    "supplementalNumberedEquations": 46,
-    "interactiveTeachingModels": 8,
-    "emcDiagnosticQuestions": 15
+    "extendedSamples": 11,
+    "noOriginalSchematicSections": 19,
+    "noNumberedEquationSections": 20,
+    "originalDrawings": 27,
+    "supplementalNumberedEquations": 54,
+    "interactiveTeachingModels": 11,
+    "emcDiagnosticQuestions": 18
   },
   "latestVisualReview": {
     "status": "last-change-visual-regression-pending-or-underway",
