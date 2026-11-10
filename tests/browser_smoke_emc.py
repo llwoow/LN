@@ -53,6 +53,27 @@ def main():
                     audit.append({"section":id, "viewport":name, "ok":True})
                 assert not errors, errors
                 assert not http_errors, http_errors
+                # Exercise every new EMC diagnostic through actual radio/checkbox/numeric controls.
+                emc_questions = [q for q in json.loads((ROOT / "courses/practice/bank.json").read_text())["questions"]
+                                 if q["course"] == "electromagnetic-compatibility"]
+                page.goto(base + "#practice/electromagnetic-compatibility", wait_until="domcontentloaded")
+                page.locator('[data-practice-mode="local"]').click()
+                panel = page.locator("main [data-practice-panel]")
+                for q in emc_questions:
+                    panel.locator("[data-p-question]").select_option(q["id"])
+                    if q["type"] in ("single", "multi"):
+                        for option in q["answer"]:
+                            panel.locator('[name="p-answer"][value="' + option + '"]').check()
+                    elif q["type"] == "numeric":
+                        panel.locator("[data-p-value]").fill(str(q["answer"]))
+                        panel.locator("[data-p-reason]").fill("按题给模型独立复算，并核对参考单位。")
+                    else:
+                        panel.locator("[data-p-reason]").fill("写出模型、条件与可检验的工程结论。")
+                    panel.locator("[data-p-submit]").click()
+                    assert panel.locator(".practice-feedback").count() == 1, (q["id"],name)
+                    assert panel.locator(".practice-feedback ol li").count() >= 3, (q["id"],"missing steps")
+                    assert not page.evaluate("document.documentElement.scrollWidth > innerWidth"), (q["id"],width)
+                page.screenshot(path=str(OUT / ("emc-practice-" + name + ".png")),full_page=True)
                 page.goto(base + "#course/automatic-control/ac-3-6")
                 page.locator("#lesson-body[data-lesson-key='automatic-control/ac-3-6'][aria-busy=false]").wait_for()
                 assert "动态误差系数" in page.locator("#lesson-body").inner_text()
@@ -63,7 +84,7 @@ def main():
     finally:
         server.shutdown()
         server.server_close()
-    (OUT / "audit.json").write_text(json.dumps({"checks":len(audit),"viewports":["desktop","mobile","mobile-small"],"lessons":len(META["sections"])},ensure_ascii=False,indent=2))
+    (OUT / "audit.json").write_text(json.dumps({"checks":len(audit),"viewports":["desktop","mobile","mobile-small"],"lessons":len(META["sections"]),"practiceQuestions":11},ensure_ascii=False,indent=2))
     print(f"Verified {len(audit)} rendered reading states in real Chromium.")
 
 
