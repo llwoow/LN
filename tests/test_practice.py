@@ -24,7 +24,10 @@ class PracticeContent(unittest.TestCase):
             'emc-mode-decompose':(12+8)/2,
             'emc-shield-absorption':8.686*Fraction(10,2),
             'emc-esd':Fraction(1,2)*100e-12*2000**2*1000,
-            'emc-harmonics':math.sqrt(3**2+4**2)/10*100}
+            'emc-harmonics':math.sqrt(3**2+4**2)/10*100,
+            'emc-magnetic-cylinder':20*math.log10((200*(22**2-20**2)+20**2)/22**2),
+            'emc-probe-emf':2*math.pi*100000*.5e-6*.1*1000,
+            'emc-capacitor-resonance':1/(2*math.pi*math.sqrt(1e-9*1e-6))/1e6}
         numeric={q['id'] for q in self.questions if q['type']=='numeric'}
         self.assertEqual(numeric,set(expected))
         for identifier,value in expected.items():

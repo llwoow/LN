@@ -60,5 +60,46 @@ class ScientificEMCReview(unittest.TestCase):
         self.assertAlmostEqual(math.hypot(3, 4) / 10 * 100, 50.0)
 
 
+    def test_magnetic_flux_parallel_model_and_eddy_turn(self):
+        r1, rs, mu_r = 20.0, 22.0, 200.0
+        linear = (mu_r * (rs**2 - r1**2) + r1**2) / rs**2
+        self.assertAlmostEqual(linear, 17200 / 484, places=12)
+        self.assertAlmostEqual(20 * math.log10(linear), 31.0, delta=0.1)
+        resistance, inductance, mutual = .1, 1e-6, .2e-6
+        response = lambda f: 2 * math.pi * f * mutual / math.hypot(resistance, 2 * math.pi * f * inductance)
+        self.assertLess(response(1000), response(1e5))
+        self.assertAlmostEqual(response(1e8), mutual / inductance, delta=.001)
+        # Neither current ratio nor simple cylinder formula certifies actual enclosure shielding.
+
+    def test_probes_near_field_and_calibrated_current(self):
+        f, m, current = 1e5, .5e-6, .1
+        self.assertAlmostEqual(2 * math.pi * f * m * current * 1000, 31.4159265359, places=7)
+        self.assertAlmostEqual(.5 * .1, .05)  # 0.5 ohm calibrated transfer impedance
+        area, b_peak, f2 = 1e-4, 1e-6, 1e6
+        self.assertAlmostEqual(2 * math.pi * f2 * area * b_peak * 1000, .6283185307, places=7)
+
+    def test_capacitor_esl_esr_reality_vs_ideal_srf(self):
+        c, esl, esr = 1e-6, 1e-9, .02
+        f0 = 1 / (2 * math.pi * math.sqrt(c * esl))
+        self.assertAlmostEqual(f0 / 1e6, 5.0329212104, places=8)
+        impedance = lambda f: math.hypot(esr, 2 * math.pi * f * esl - 1 / (2 * math.pi * f * c))
+        self.assertAlmostEqual(impedance(f0), esr, places=10)
+        self.assertGreater(impedance(1e3), esr)
+        self.assertGreater(impedance(100e6), esr)
+
+    def test_lossless_line_source_and_load_reflections(self):
+        vs, z0, zs, rs, speed, length = 3.3, 50.0, 10.0, 40.0, 2e8, .5
+        launched = vs * z0 / (z0 + zs + rs)
+        gamma_s = (zs + rs - z0) / (zs + rs + z0)
+        self.assertAlmostEqual(launched, 1.65)
+        self.assertAlmostEqual(gamma_s, 0.0)
+        self.assertAlmostEqual(2 * launched, vs)  # ideal open ΓL=+1
+        self.assertAlmostEqual(length / speed * 1e9, 2.5)
+        self.assertAlmostEqual((0-z0)/(0+z0), -1)
+        self.assertAlmostEqual((z0-z0)/(z0+z0), 0)
+        gamma_s_unmatched = (zs-z0)/(zs+z0)
+        self.assertLess(gamma_s_unmatched, 0)
+        self.assertNotEqual(gamma_s_unmatched, 0)
+
 if __name__ == "__main__":
     unittest.main()

@@ -73,6 +73,14 @@ class EMCCourseIntegrity(unittest.TestCase):
             ("emc-5-4", "emc-mains-filter", "5.4.1"),
             ("emc-10-3", "emc-switching-lc", "10.3.1"),
             ("emc-10-3", "emc-gis-reflection", "10.3.2"),
+            ("emc-4-3", "emc-magnetic-reluctance", "4.3.1"),
+            ("emc-4-3", "emc-eddy-shortturn", "4.3.2"),
+            ("emc-6-2", "emc-current-probe-schematic", "6.2.1"),
+            ("emc-6-2", "emc-emi-receiver-chain", "6.2.2"),
+            ("emc-8-1", "emc-rcl-nonideal", "8.1.1"),
+            ("emc-8-1", "emc-decoupling-loop", "8.1.2"),
+            ("emc-8-2", "emc-line-terminations", "8.2.1"),
+            ("emc-8-2", "emc-wave-bounce", "8.2.2"),
             ("emc-8-3", "emc-pcb-return-figure", "8.3.1"),
         ):
             html = ASSIGN(ROOT / next(s["src"] for s in self.course["sections"] if s["id"] == section))["html"]
@@ -85,7 +93,7 @@ class EMCCourseIntegrity(unittest.TestCase):
     def test_deep_lesson_math_and_interactives(self):
         import xml.etree.ElementTree as ET
         ref = ASSIGN(ROOT / "reference-index.js")["electromagnetic-compatibility"]
-        for section_id in ("emc-2-2", "emc-4-4", "emc-5-4", "emc-10-3"):
+        for section_id in ("emc-2-2", "emc-4-3", "emc-4-4", "emc-5-4", "emc-6-2", "emc-8-1", "emc-8-2", "emc-10-3"):
             section = next(s for s in self.course["sections"] if s["id"] == section_id)
             html = ASSIGN(ROOT / section["src"])["html"]
             self.assertIn('data-emc-lab=', html)

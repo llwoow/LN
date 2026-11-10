@@ -13,10 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "emc-browser-artifacts"
 OUT.mkdir(exist_ok=True)
 META = json.loads((ROOT / "courses/electromagnetic-compatibility/curriculum.json").read_text())
-SELECTED = ("emc-2-2", "emc-4-4", "emc-5-4", "emc-10-3")
+SELECTED = ("emc-2-2", "emc-4-3", "emc-4-4", "emc-5-4", "emc-6-2", "emc-8-1", "emc-8-2", "emc-10-3")
 VISUAL_REVIEW = ("emc-2-2", "emc-2-3", "emc-3-3", "emc-4-2", "emc-4-4",
                  "emc-5-2", "emc-5-4", "emc-6-3", "emc-6-4", "emc-7-2",
-                 "emc-9-3", "emc-10-1", "emc-10-3")
+                 "emc-9-3", "emc-10-1", "emc-10-3",
+                 "emc-4-3", "emc-6-2", "emc-8-1", "emc-8-2")
 
 
 def main():
@@ -104,7 +105,7 @@ def main():
     finally:
         server.shutdown()
         server.server_close()
-    (OUT / "audit.json").write_text(json.dumps({"checks":len(audit),"viewports":["desktop","mobile","mobile-small"],"lessons":len(META["sections"]),"practiceQuestions":11,"visualReviewPages":len(VISUAL_REVIEW)},ensure_ascii=False,indent=2))
+    (OUT / "audit.json").write_text(json.dumps({"checks":len(audit),"viewports":["desktop","mobile","mobile-small"],"lessons":len(META["sections"]),"practiceQuestions":len(emc_questions),"visualReviewPages":len(VISUAL_REVIEW)},ensure_ascii=False,indent=2))
     print(f"Verified {len(audit)} rendered reading states in real Chromium.")
 
 
