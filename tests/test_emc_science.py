@@ -101,5 +101,27 @@ class ScientificEMCReview(unittest.TestCase):
         self.assertLess(gamma_s_unmatched, 0)
         self.assertNotEqual(gamma_s_unmatched, 0)
 
+
+    def test_hemisphere_ground_potential_and_step_model(self):
+        rho, i, r0, r, a = 100.0, 100.0, .5, 2.0, .8
+        potential = lambda radius: rho * i / (2 * math.pi * radius)
+        self.assertAlmostEqual(potential(r0), 3183.0988618, places=5)
+        self.assertAlmostEqual(rho / (2 * math.pi * r0), 31.830988618, places=6)
+        self.assertAlmostEqual(potential(r) - potential(r + a), 227.36420442, delta=.02)
+        self.assertGreater(potential(r), potential(r + a))
+
+    def test_lightning_lead_inductance_is_not_device_clamping_voltage(self):
+        inductance, ramp = .6e-6, 1000 / 1e-6
+        self.assertAlmostEqual(inductance * ramp, 600.0)
+        # Same R and di/dt cannot establish actual SPD residual voltage.
+
+    def test_impulse_shield_parallel_inductors_and_parasitic_resonance(self):
+        l1, l2 = 1e-6, 3e-6
+        self.assertAlmostEqual(l1/(l1+l2), .25)
+        circuit_l, cs = 1.5e-6, 1000e-12
+        f0 = 1/(2*math.pi*math.sqrt(circuit_l*cs))
+        self.assertAlmostEqual(f0/1e6, 4.10936296, places=5)
+        self.assertAlmostEqual((2 * math.pi * f0)**2 * circuit_l * cs, 1.0)
+
 if __name__ == "__main__":
     unittest.main()
