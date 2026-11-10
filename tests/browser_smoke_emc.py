@@ -14,6 +14,9 @@ OUT = ROOT / "emc-browser-artifacts"
 OUT.mkdir(exist_ok=True)
 META = json.loads((ROOT / "courses/electromagnetic-compatibility/curriculum.json").read_text())
 SELECTED = ("emc-2-2", "emc-4-4", "emc-5-4", "emc-10-3")
+VISUAL_REVIEW = ("emc-2-2", "emc-2-3", "emc-3-3", "emc-4-2", "emc-4-4",
+                 "emc-5-2", "emc-5-4", "emc-6-3", "emc-6-4", "emc-7-2",
+                 "emc-9-3", "emc-10-1", "emc-10-3")
 
 
 def main():
@@ -40,6 +43,24 @@ def main():
                     assert lesson.locator('.katex-error').count() == 0, (id,"math parse")
                     assert lesson.locator('p[role="alert"]').count() == 0, (id,"load failed")
                     assert not page.evaluate("document.documentElement.scrollWidth > innerWidth"), (id,width,"horizontal overflow")
+                    # Audit actual subsection destinations and figure semantics.
+                    for link in lesson.locator('nav[aria-label="本节小节"] a').all():
+                        target_id = link.get_attribute("href").split("/")[-1]
+                        assert lesson.locator('[id="' + target_id + '"]').count() == 1, (id,target_id)
+                    for fig in lesson.locator("figure").all():
+                        assert fig.locator("figcaption").count() > 0, (id,"missing caption")
+                        for svg in fig.locator("svg").all():
+                            assert svg.locator("title").count() > 0, (id,"SVG lacks text alternative")
+                    if id in VISUAL_REVIEW:
+                        source_note = lesson.locator(".ln-source-note").first
+                        assert source_note.count() == 1, (id,"missing provenance")
+                        if width <= 390:
+                            font = source_note.evaluate("(n) => parseFloat(getComputedStyle(n).fontSize)")
+                            assert 12 <= font <= 15, (id,font,"source-note scale")
+                            for pan in lesson.locator(".emc-figure-scroll").all():
+                                sizes = pan.evaluate("(n)=>({content:n.scrollWidth,viewport:n.clientWidth})")
+                                assert sizes["content"] > sizes["viewport"], (id,width,"diagram not pannable",sizes)
+                        page.screenshot(path=str(OUT / (id+"-"+name+".png")), full_page=True)
                     if id in SELECTED:
                         assert lesson.locator(".paper-equation.is-numbered").count() >= 3, (id,"unindexed formula")
                         assert lesson.locator("figure").count() > 0, (id,"missing figures")
@@ -49,7 +70,6 @@ def main():
                         slider = lesson.locator(".emc-lab-field input[type=range]").first
                         slider.evaluate("(el)=>{el.value = el.max; el.dispatchEvent(new Event('input',{bubbles:true}));}")
                         assert status.inner_text() != original, (id,"interactive model does not respond")
-                        page.screenshot(path=str(OUT / (id+"-"+name+".png")), full_page=True)
                     audit.append({"section":id, "viewport":name, "ok":True})
                 assert not errors, errors
                 assert not http_errors, http_errors
@@ -84,7 +104,7 @@ def main():
     finally:
         server.shutdown()
         server.server_close()
-    (OUT / "audit.json").write_text(json.dumps({"checks":len(audit),"viewports":["desktop","mobile","mobile-small"],"lessons":len(META["sections"]),"practiceQuestions":11},ensure_ascii=False,indent=2))
+    (OUT / "audit.json").write_text(json.dumps({"checks":len(audit),"viewports":["desktop","mobile","mobile-small"],"lessons":len(META["sections"]),"practiceQuestions":11,"visualReviewPages":len(VISUAL_REVIEW)},ensure_ascii=False,indent=2))
     print(f"Verified {len(audit)} rendered reading states in real Chromium.")
 
 
