@@ -116,6 +116,51 @@
       "section": "emc-10-3",
       "match": "GIS（金属封闭气体绝缘开关设备）",
       "description": "由金属外壳包围并使用气体绝缘的高压开关设备。"
+    },
+    {
+      "id": "magnetic-reluctance",
+      "title": "磁阻",
+      "aliases": [
+        "磁阻",
+        "Rm"
+      ],
+      "section": "emc-4-3",
+      "match": "因此磁阻Rm=ℓ/(μS)",
+      "description": "在均匀线性磁路近似下，磁位差与磁通之比，取决于路径长度、截面积和磁导率。"
+    },
+    {
+      "id": "transfer-impedance",
+      "title": "电流探头转移阻抗",
+      "aliases": [
+        "转移阻抗",
+        "Z_T"
+      ],
+      "section": "emc-6-2",
+      "match": "转移阻抗Z_T(f)",
+      "description": "校准端接下电流探头输出电压与被测交流电流之比，随频率变化，单位Ω。"
+    },
+    {
+      "id": "esr",
+      "title": "等效串联电阻（ESR）",
+      "aliases": [
+        "ESR",
+        "等效串联电阻"
+      ],
+      "section": "emc-8-1",
+      "match": "等效串联电阻ESR",
+      "description": "用串联电阻近似描述实际电容内耗，在简化串联模型的自谐振点限制最小阻抗。"
+    },
+    {
+      "id": "characteristic-impedance",
+      "title": "传输线特征阻抗",
+      "aliases": [
+        "特征阻抗",
+        "Z0",
+        "Z₀"
+      ],
+      "section": "emc-8-2",
+      "match": "行波速度与特征阻抗分别为",
+      "description": "无损均匀传输线上前行电压波与电流波的比值，Z₀=√(L′/C′)。"
     }
   ]
 }
