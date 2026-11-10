@@ -729,3 +729,11 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
     font: 500 12px/1.5 var(--font);
   }
 }
+
+/* Avoid stretched Latin symbols and erratic inter-word spacing in narrow CJK technical reading. */
+@media (max-width: 620px) {
+  #lesson-body[data-lesson-key^="electromagnetic-compatibility/"] .article-section p {
+    text-align: start;
+    overflow-wrap: break-word;
+  }
+}
