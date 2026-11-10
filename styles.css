@@ -713,3 +713,8 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .emc-figure-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .emc-figure-scroll svg { display: block; height: auto; }
 @media (max-width: 620px) { .emc-figure-scroll svg { min-width: 580px; max-width: none !important; } }
+
+/* The chapter numbering is already authored in link text (e.g. 4.4.1); avoid double list numbers. */
+.publication-body nav[aria-label="本节小节"] ol { list-style: none; margin: 1em 0 1.2em; padding-inline-start: 0; }
+.publication-body nav[aria-label="本节小节"] li { margin: .4em 0; }
+.publication-body nav[aria-label="本节小节"] a { overflow-wrap: anywhere; }
