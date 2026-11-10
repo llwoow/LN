@@ -20,7 +20,11 @@ class PracticeContent(unittest.TestCase):
             'tr-calc-base':Fraction(1,10),'tr-calc-eff':Fraction(800,830)*100,
             'tr-calc-parallel':math.sqrt(Fraction(105,10)**2+1),
             'tr-calc-auto':198*Fraction(1000,22),'tr-calc-burden':25*Fraction(18,100),
-            'ac-ch3-313':(-10+math.sqrt(100+80))/2,'ac-ch3-316':Fraction(10,10)}
+            'ac-ch3-313':(-10+math.sqrt(100+80))/2,'ac-ch3-316':Fraction(10,10),
+            'emc-mode-decompose':(12+8)/2,
+            'emc-shield-absorption':8.686*Fraction(10,2),
+            'emc-esd':Fraction(1,2)*100e-12*2000**2*1000,
+            'emc-harmonics':math.sqrt(3**2+4**2)/10*100}
         numeric={q['id'] for q in self.questions if q['type']=='numeric'}
         self.assertEqual(numeric,set(expected))
         for identifier,value in expected.items():
