@@ -184,13 +184,15 @@
     const first = course.sections[0];
     const model = course.sections.find((section) => section.kind === 'model');
     const modelActive = model && location.hash.split('/')[2] === model.id;
+    const material = course.sections.find(section=>section.supplement);
+    const materialLink = material ? '<a href="#course/'+course.id+'/'+material.id+'">试卷讲解</a>' : '';
     const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
-    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + (course.outlineOnly ? '章节目录' : '章节阅读') + '</a>' + modelLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
+    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + (course.outlineOnly ? '章节目录' : '章节阅读') + '</a>' + modelLink + materialLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
   }
 
   function renderKnowledgeMap(course) {
     main.classList.add('course-main', 'map-main');
-    main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.map((section) => section.group)).size + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'map') + '<ln-knowledge-map></ln-knowledge-map>';
+    main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.filter(s=>!s.supplement).map((section) => section.group)).size + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'map') + '<ln-knowledge-map></ln-knowledge-map>';
     $('ln-knowledge-map', main).course = course;
   }
 
@@ -203,7 +205,7 @@
       const items=course.sections.filter(s=>s.group===group),references=items.filter(s=>s.referenceOnly);
       return '<details class="outline-group"'+(selected?.group===group?' open':'')+'><summary>'+escapeHTML(group)+'</summary><nav aria-label="'+escapeHTML(group)+'">'+items.filter(s=>!s.referenceOnly).map(sectionLink).join('')+'</nav>'+(references.length?'<details class="outline-references"'+(selected?.group===group&&selected.referenceOnly?' open':'')+'><summary>专题、原题与资料</summary><nav aria-label="专题与资料">'+references.map(sectionLink).join('')+'</nav></details>':'')+'</details>';
     }).join('');
-    main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + groups.length + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'reader') + '<div class="reader-layout"><details class="reader-outline" id="reader-outline"' + (matchMedia('(min-width: 961px)').matches ? ' open' : '') + '><summary>目录</summary>' + outline + '</details><section class="lesson-column"><div class="lesson-tools" id="lesson-tools"></div><article class="lesson" id="lesson-body" data-lesson-key="' + (selected ? course.id + '/' + selected.id : '') + '" aria-busy="true">' + (selected ? '<p class="loading-state" role="status">加载中…</p>' : '<h2>章节不存在</h2>') + '</article><nav class="lesson-pagination" id="lesson-pagination" aria-label="章节翻页"></nav></section></div>';
+    main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.filter(s=>!s.supplement).map(s=>s.group)).size + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'reader') + '<div class="reader-layout"><details class="reader-outline" id="reader-outline"' + (matchMedia('(min-width: 961px)').matches ? ' open' : '') + '><summary>目录</summary>' + outline + '</details><section class="lesson-column"><div class="lesson-tools" id="lesson-tools"></div><article class="lesson" id="lesson-body" data-lesson-key="' + (selected ? course.id + '/' + selected.id : '') + '" aria-busy="true">' + (selected ? '<p class="loading-state" role="status">加载中…</p>' : '<h2>章节不存在</h2>') + '</article><nav class="lesson-pagination" id="lesson-pagination" aria-label="章节翻页"></nav></section></div>';
     if (selected) {
       renderReaderDock(course, selected, outline);
       void loadLesson(course, selected, anchor);
@@ -211,7 +213,7 @@
     else $('#lesson-body').setAttribute('aria-busy', 'false');
   }
 
-  function readingSections(course, selected) { return selected.referenceOnly ? course.sections : course.sections.filter(s=>!s.referenceOnly); }
+  function readingSections(course, selected) { return selected.supplement ? course.sections.filter(s=>s.supplement===selected.supplement) : selected.referenceOnly ? course.sections : course.sections.filter(s=>!s.referenceOnly&&!s.supplement); }
 
   function renderReaderDock(course, selected, outline) {
     const sequence=readingSections(course,selected),index = sequence.indexOf(selected);
@@ -309,6 +311,7 @@
       if (!outline) await Promise.all([loadScript(selected.src), loadStyle('assets/katex/katex.min.css'), course.glossary ? loadScript(course.glossary) : Promise.resolve()]);
       if (selected.kind === 'model') await loadWindingAssets();
       if (selected.id.startsWith('transformer-')) await loadStyle('courses/electrical-machines/model/transformer-lesson.css');
+      if (selected.supplement === 'physics-001') await Promise.all([loadScript('courses/hs-physics/physics-001/models.js'), loadScript('courses/hs-physics/physics-001/reader.js'), loadStyle('courses/hs-physics/physics-001/reader.css')]);
       const body = $('#lesson-body');
       if (!body || body.dataset.lessonKey !== key) return;
       const payload = outline ? {} : window.LN_LESSONS[key];
@@ -339,6 +342,7 @@
         window.LNGlossary.prepare(body, course, selected);
         window.LNResources.mountLesson(body);
         bindInlineModels(body);
+        if (selected.supplement === 'physics-001') window.LNPhysics001.mount(body, payload);
       }
       body.setAttribute('aria-busy', 'false');
       body.classList.toggle('model-lesson', selected.kind === 'model');
@@ -359,6 +363,7 @@
   }
 
   function renderRoute() {
+    window.LNPhysics001?.onRoute();
     window.LNPractice.onRoute();
     window.LNResources.onRoute();
     window.LNPublication.onRoute();

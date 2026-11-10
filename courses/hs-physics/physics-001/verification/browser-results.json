@@ -1,0 +1,29 @@
+[
+  {
+    "width": 1440,
+    "questions": 18,
+    "errors": [],
+    "badResponses": [],
+    "videoDecodeSeekPause": true,
+    "notesImportIsolated": true,
+    "referenceAttemptAssisted": true
+  },
+  {
+    "width": 390,
+    "questions": 18,
+    "errors": [],
+    "badResponses": [],
+    "videoDecodeSeekPause": true,
+    "notesImportIsolated": true,
+    "referenceAttemptAssisted": true
+  },
+  {
+    "width": 320,
+    "questions": 18,
+    "errors": [],
+    "badResponses": [],
+    "videoDecodeSeekPause": true,
+    "notesImportIsolated": true,
+    "referenceAttemptAssisted": true
+  }
+]

@@ -21,7 +21,6 @@ class ContentIntegration(unittest.TestCase):
             for section in course['sections']:
                 count+=1
                 if section['kind']=='outline':
-                    self.assertTrue(course['outlineOnly'])
                     self.assertNotIn('src',section)
                     continue
                 payload=REF['assignment'](ROOT/section['src']);body=payload.get('html','')
@@ -29,7 +28,7 @@ class ContentIntegration(unittest.TestCase):
                 self.assertNotIn('data-learning-standard="understanding-v1"',body)
                 self.assertNotIn('katex-error',body)
                 if section['kind']=='html':self.assertTrue(body.strip())
-        self.assertEqual(count,292)
+        self.assertEqual(count,311)
         self.assertFalse((ROOT/'scripts/build-electrical-understanding.py').exists())
         self.assertNotIn('render_understanding',(ROOT/'scripts/build-highschool.py').read_text())
     def test_user_pdf_scientific_svg_is_preserved(self):

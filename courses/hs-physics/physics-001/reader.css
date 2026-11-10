@@ -1,0 +1,19 @@
+.physics001 figure { margin: 1.6em 0; }
+.physics001 img,.physics001 video,.physics001 svg { display:block; width:100%; height:auto; max-width:100%; }
+.physics001 video,.physics-lab-diagram { background:#fbfcfa; color:#223b49; border:1px solid var(--border); border-radius:6px; }
+.physics001 figcaption { font-family:system-ui,sans-serif; font-size:.85em; line-height:1.6; margin-top:.6em; }
+.physics001 details { margin:1em 0; }
+.physics001 summary { cursor:pointer; }
+.physics001 details img { margin-top:.75em; }
+.physics001 label { display:block; margin:1em 0; }
+.physics001 select,.physics001 textarea { display:block; width:100%; box-sizing:border-box; background:var(--surface); color:var(--text); border:1px solid var(--border); border-radius:4px; padding:.6em; font:inherit; }
+.physics001 input[type=range] { display:block; width:100%; min-height:36px; }
+.physics001 input[type=file] { display:block; max-width:100%; }
+.physics001 .physics-lab { margin:2em 0; padding:1em 0; border-block:1px solid var(--border); }
+.physics001 .physics-metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(135px,1fr)); gap:1em; font-family:system-ui,sans-serif; font-size:.85em; }
+.physics001 .physics-metrics dd { margin:0; font-weight:700; }
+.physics001 .physics-answer { border-left:3px solid currentColor; padding-left:1em; }
+.physics001 .physics-note-content { white-space:pre-wrap; overflow-wrap:anywhere; }
+.physics001 .math.display { overflow-x:auto; overflow-y:hidden; max-width:100%; }
+.physics001 li > p { margin:.3em 0; }
+@media(max-width:600px){.physics001 .physics-lab { margin-block:1.3em; }.physics001 figcaption { font-size:.82em; }}

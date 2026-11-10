@@ -1,0 +1,35 @@
+{
+  "pythonUnitTests": 55,
+  "nodeSuites": [
+    "motor-winding",
+    "knowledge-map",
+    "definition-reuse"
+  ],
+  "browserSuitesPassed": [
+    "publication",
+    "glossary",
+    "glossary-coverage",
+    "homework",
+    "learning",
+    "practice",
+    "reader-toolbar",
+    "resources",
+    "transformer",
+    "highschool",
+    "physics001"
+  ],
+  "newFlowWidths": [
+    1440,
+    390,
+    320
+  ],
+  "physicsChecks": 185,
+  "gifAndVideoPairs": 20,
+  "pdfPagesPixelIdentical": 84,
+  "limits": [
+    "No learner trial or independent teacher review",
+    "No student physics answer sheet",
+    "No deployed LN verification; PR only"
+  ],
+  "baselineMain": "9ef4a84a010f3cbd4b37d2c6cc92b4221a19cb94"
+}

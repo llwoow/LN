@@ -850,6 +850,128 @@
           "path": "assets/practice/transformer/results.json"
         }
       ]
+    },
+    {
+      "id": "physics001-original-and-models",
+      "title": "试卷001原件、详解与运动模型",
+      "kind": "用户原卷与本站教学仿真",
+      "repository": null,
+      "checked": "2026-11-10",
+      "targets": [
+        {
+          "course": "hs-physics",
+          "section": "physics-001"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q01"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q02"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q03"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q04"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q05"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q06"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q07"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q08"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q09"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q10"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q11"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q12"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q13"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q14"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q15"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q16"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q17"
+        },
+        {
+          "course": "hs-physics",
+          "section": "physics-001-q18"
+        }
+      ],
+      "question": "如何从受力与运动约束建立模型，并检查分段运动和碰撞事件？",
+      "summary": "8页照片按卷面页码排序；独立推导逐题解答，附同源GIF、可控视频和交互。",
+      "steps": [
+        "先回查对应原题照片，分清可读条件与裁切说明。",
+        "把运动按受力改变、约束改变或碰撞分段，先写预测再播放。",
+        "暂停在阶段交界处，核对方向、位移关系和能量收支，再改变交互参数。"
+      ],
+      "output": "逐题推理、静态关键帧与播放链接；学习笔记和复做记录独立保存。",
+      "requirements": "浏览器即可阅读与播放；源码复算使用Python、NumPy、SciPy和Pillow，媒体检查另需ffmpeg。",
+      "license": "用户提供试卷仅按本项目学习用途整理，原权利归权利人；解答、重绘图和模型为本站教学整理，不冒称官方评分。",
+      "links": [],
+      "evidence": [],
+      "limits": [
+        "未核实本卷命题单位与正式出版信息，不能标为海南官方高考题或2027正式考纲。",
+        "第7题原图有裁切，按3m/2辨读求解；第11题保留高中恒功率启动理想化说明。",
+        "仿真用于检查给定理想模型，不是实际物体实验；未收到本套学生答卷，不认定个人薄弱点。"
+      ],
+      "verification": {
+        "executed": true,
+        "scope": "已复算动力学、绳长约束、碰撞事件与功能收支；媒体采样检查在仓库verification保留，不能代替学生学习效果试测。",
+        "read": "逐题核读用户提供8页照片及本次整理的解答；未核读相应出版社教材全文。"
+      },
+      "downloads": [
+        {
+          "label": "排序原卷PDF",
+          "path": "courses/hs-physics/physics-001/files/physics001-original.pdf"
+        },
+        {
+          "label": "详解PDF（关键帧与播放链接）",
+          "path": "courses/hs-physics/physics-001/files/physics001-solutions.pdf"
+        },
+        {
+          "label": "记录表",
+          "path": "courses/hs-physics/physics-001/files/physics001-learning-records.xlsx"
+        }
+      ],
+      "localLesson": "#course/hs-physics/physics-001"
     }
   ]
 }
