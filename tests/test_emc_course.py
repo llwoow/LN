@@ -68,13 +68,33 @@ class EMCCourseIntegrity(unittest.TestCase):
         ref = ASSIGN(ROOT / "reference-index.js")["electromagnetic-compatibility"]
         for section, anchor, label in (
             ("emc-2-2", "emc-capacitive-figure", "2.2.1"),
+            ("emc-2-2", "emc-mutual-figure", "2.2.2"),
+            ("emc-4-4", "emc-shield-wave", "4.4.1"),
+            ("emc-5-4", "emc-mains-filter", "5.4.1"),
+            ("emc-10-3", "emc-switching-lc", "10.3.1"),
+            ("emc-10-3", "emc-gis-reflection", "10.3.2"),
             ("emc-8-3", "emc-pcb-return-figure", "8.3.1"),
         ):
             html = ASSIGN(ROOT / next(s["src"] for s in self.course["sections"] if s["id"] == section))["html"]
             self.assertIn('id="' + anchor + '"', html)
             self.assertIn("图 " + label, html)
-            self.assertEqual([(f["anchor"], f["number"]) for f in ref["sections"][section]["figures"]], [(anchor, label)])
+            self.assertIn((anchor, label), [(f["anchor"], f["number"]) for f in ref["sections"][section]["figures"]])
 
+
+
+    def test_deep_lesson_math_and_interactives(self):
+        import xml.etree.ElementTree as ET
+        ref = ASSIGN(ROOT / "reference-index.js")["electromagnetic-compatibility"]
+        for section_id in ("emc-2-2", "emc-4-4", "emc-5-4", "emc-10-3"):
+            section = next(s for s in self.course["sections"] if s["id"] == section_id)
+            html = ASSIGN(ROOT / section["src"])["html"]
+            self.assertIn('data-emc-lab=', html)
+            self.assertGreaterEqual(html.count('class="math display"'), 3)
+            displays = list(re.finditer(r'<math\\b[^>]*>.*?</math>', html, re.S))
+            self.assertEqual(len(displays), len(ref["sections"][section_id]["equations"]))
+            for display in displays:
+                ET.fromstring(display.group(0))
+            self.assertIn("<figure ", html)
 
 if __name__ == "__main__":
     unittest.main()
