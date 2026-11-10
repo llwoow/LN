@@ -17,20 +17,27 @@ class HighSchoolIntegrity(unittest.TestCase):
 
     def test_nine_subjects_fifty_books_and_original_235_nodes(self):
         self.assertEqual(len(self.courses), 9)
-        self.assertEqual(sum(len(c['sections']) for c in self.courses), 235)
-        self.assertEqual(sum(len({s['group'] for s in c['sections']}) for c in self.courses), 50)
+        self.assertEqual(sum(len([s for s in c['sections'] if s['kind']=='outline']) for c in self.courses), 235)
+        self.assertEqual(sum(len({s['group'] for s in c['sections'] if s['kind']=='outline'}) for c in self.courses), 50)
         self.assertEqual(collections.Counter(c['track'] for c in self.courses), {'语言':2,'数理化生':4,'政史地':3})
         for course in self.courses:
             folder = ROOT/'courses'/course['id']
             source = json.loads((folder/'source-index.json').read_text(encoding='utf-8'))
             expected = [(n['知识节点编号'].lower(), n['模块或主题']) for n in source['nodes']]
-            self.assertEqual([(s['id'], s['title']) for s in course['sections']], expected)
+            self.assertEqual([(s['id'], s['title']) for s in course['sections'] if s['kind']=='outline'], expected)
             self.assertEqual(assignment(folder/'manifest.js'), course)
 
     def test_outline_nodes_have_no_teaching_payload(self):
         index = assignment(ROOT/'reference-index.js')
         for course in self.courses:
             folder = ROOT/'courses'/course['id']
+            if course['id']=='hs-physics':
+                self.assertFalse(course['outlineOnly'])
+                for section in course['sections']:
+                    if section['kind']=='outline':
+                        self.assertNotIn('src',section)
+                        self.assertNotIn(section['id'],index[course['id']]['sections'])
+                continue
             self.assertTrue(course['outlineOnly'])
             self.assertNotIn('glossary', course)
             self.assertFalse((folder/'content.json').exists())
@@ -42,7 +49,7 @@ class HighSchoolIntegrity(unittest.TestCase):
                 self.assertNotIn('src', section)
 
     def test_teaching_catalogs_exclude_outline_courses(self):
-        outline = {course['id'] for course in self.courses}
+        outline = {course['id'] for course in self.courses if course['outlineOnly']}
         practice = assignment(ROOT/'courses/practice/bank.js')
         resources = assignment(ROOT/'courses/resources/catalog.js')
         self.assertFalse(any(q['course'] in outline for q in practice['questions']))

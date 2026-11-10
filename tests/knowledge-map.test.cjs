@@ -14,7 +14,6 @@ for (const course of context.window.LN_COURSES) {
   const sections = new Map(course.sections.map(section => [section.id, section]));
   for (const section of sections.values()) {
     if (section.kind === 'outline') {
-      assert.equal(course.outlineOnly, true, `Outline section must belong to an outline course: ${section.id}`);
       assert(section.title && section.group, `Outline section needs a title and book: ${section.id}`);
       assert(!section.src, `Outline section must not load removed content: ${section.id}`);
     } else {

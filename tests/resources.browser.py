@@ -23,7 +23,7 @@ with sync_playwright() as p:
         page.locator('[data-resource-code-only]').uncheck();page.locator('[data-resource-run-only]').check()
         assert page.locator('[data-resource-results] > .resource-entry').count()==sum(r['verification']['executed'] for r in resources)
         page.locator('[data-resource-run-only]').uncheck()
-        courses=page.evaluate('LN_COURSES')
+        courses=page.evaluate('LN_COURSES.filter(c=>!c.outlineOnly)')
         for course in courses:
             page.locator('[data-resource-course-filter]').select_option(course['id'])
             assert page.locator('[data-resource-results] > .resource-entry').count()==sum(any(t['course']==course['id'] for t in r['targets']) for r in resources)
@@ -77,4 +77,4 @@ with sync_playwright() as p:
         assert not bad,bad
         checks.append(width);context.close()
     browser.close()
-print(json.dumps({'viewports':checks,'resources':len(resources),'checks':['all ten course mappings','GitHub and execution filters','unrun/403 disclosure','manufacturer vs simulation residuals','calibration is not validation','responsive figure','fixed-directory access and exact return','all local artifacts','no browser errors']},ensure_ascii=False))
+print(json.dumps({'viewports':checks,'resources':len(resources),'checks':['all resource-bearing course mappings','GitHub and execution filters','unrun/403 disclosure','manufacturer vs simulation residuals','calibration is not validation','responsive figure','fixed-directory access and exact return','all local artifacts','no browser errors']},ensure_ascii=False))
