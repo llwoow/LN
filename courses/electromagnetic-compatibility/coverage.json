@@ -281,5 +281,22 @@
       "lab": "LC暂态初值"
     }
   ],
-  "note": "40/40 reading pages now have section-specific technical explanations; 4 pages have extended multi-step derivations, original diagrams and adjustable computational models. Other 36 pages have explanatory mechanisms and examples, but require deeper equation/figure verification and additional models; not fully textbook audited. No user-device browser test has yet been performed."
+  "note": "All 40 reading sections have first-pass explanations, but 26 lack independently authored figures and 27 lack numbered equations. The source scan (292 pages) is not yet fully audited. 75 Python tests plus Node and three-view Chromium CI passed as of this audit; manual content and device review remains required.",
+  "audit": {
+    "date": "2026-11-10",
+    "report": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md",
+    "lessonPages": 40,
+    "lessonsWithoutOriginalFigures": 26,
+    "lessonsWithoutNumberedEquations": 27,
+    "numericalAuditUnitTests": 6,
+    "pythonSuiteLastGreenCount": 75,
+    "chromiumViewportWidths": [
+      320,
+      390,
+      1440
+    ],
+    "visualReviewLessons": 13,
+    "fullTextbookExamined": false,
+    "status": "selected-model-review-complete; course-depth-incomplete"
+  }
 }
