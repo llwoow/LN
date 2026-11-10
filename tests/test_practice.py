@@ -27,7 +27,10 @@ class PracticeContent(unittest.TestCase):
             'emc-harmonics':math.sqrt(3**2+4**2)/10*100,
             'emc-magnetic-cylinder':20*math.log10((200*(22**2-20**2)+20**2)/22**2),
             'emc-probe-emf':2*math.pi*100000*.5e-6*.1*1000,
-            'emc-capacitor-resonance':1/(2*math.pi*math.sqrt(1e-9*1e-6))/1e6}
+            'emc-capacitor-resonance':1/(2*math.pi*math.sqrt(1e-9*1e-6))/1e6,
+            'emc-ground-step':100*100*.8/(2*math.pi*2*(2+.8)),
+            'emc-lightning-lead-voltage':.6e-6*(1000/1e-6),
+            'emc-impulse-shield-current':1/(1+3)*100}
         numeric={q['id'] for q in self.questions if q['type']=='numeric'}
         self.assertEqual(numeric,set(expected))
         for identifier,value in expected.items():
