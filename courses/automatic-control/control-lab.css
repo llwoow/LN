@@ -14,3 +14,4 @@
 
 .ac-lab-formula{display:block;margin:1rem 0;padding:.65rem .75rem;border-radius:7px;border:1px solid var(--border);font-size:1.05em;font-weight:600;overflow-x:auto;font-variant-numeric:tabular-nums}
 .ac-lab svg{background:#fff;border-radius:6px}
+.lesson[data-lesson-key^="automatic-control/"] p{text-align:start}
