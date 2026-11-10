@@ -26,6 +26,8 @@ def run() -> None:
                 page = browser.new_page(viewport={"width": width, "height": height}, device_scale_factor=1)
                 page.goto(base + "#course/automatic-control/ac-3-6", wait_until="domcontentloaded")
                 page.locator("#ac-dynamic-error").wait_for(timeout=20000)
+                page.evaluate('document.fonts.ready')
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
                 assert "动态误差系数" in page.locator("#ac-dynamic-error").inner_text()
                 assert page.locator(".ac-equation math").count() >= 3
                 selector = page.locator("[data-ac-disturbance-select]")
@@ -53,6 +55,7 @@ def run() -> None:
                     page.locator('[data-reader-directory]').click()
                 page.locator('[data-homework-jump]').select_option('3-16')
                 page.locator('#question-3-16.reference-target').wait_for()
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
                 page.screenshot(path=str(OUT / ("automatic-control-" + name + "-homework.png")), full_page=True)
 
                 page.goto(base + "#course/automatic-control/ac-3-3", wait_until="domcontentloaded")
