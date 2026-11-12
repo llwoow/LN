@@ -1,12 +1,24 @@
 # LN
 
+## 在线访问与自动部署
+
+- [GitHub Pages](https://llwoow.github.io/LN/)：首次启用 Pages 并部署成功后可访问。
+- [现有 LN 站点](https://ln-llwoow.lqw193wql.chatgpt.site)：保留现有访问权限。
+- [Pages 部署记录与手动重跑](https://github.com/llwoow/LN/actions/workflows/pages.yml)。
+
+提交推送或 PR 合并到 `main` 后，GitHub Actions 自动运行检查、执行 `python scripts/build-static.py`，再将 `dist/` 发布到 Pages。分支与未合并 PR 不发布到正式站点；PR 的 Pages 检查只构建和验证。构建检查失败时保留此前已部署的网站。
+
+首次设置：仓库 **Settings → Pages → Build and deployment → Source → GitHub Actions**。如果页面没有自动启用，需要仓库管理员完成这一次设置，再在上述部署记录点击 **Run workflow**。私有仓库能否启用 Pages 取决于 GitHub 账户套餐；本配置不会修改仓库可见性，也不要求把访问令牌写入仓库。
+
+此自动流程更新 GitHub Pages，现有 LN 站点继续使用原部署流程。两域名的浏览器错题、收藏、设置各自保存，不自动互通。
+
 变压器新增汤蕴璆《电机学》第5版2.1—2.14原创讲解主线，旧专题与原作业保留。新增24道诊断题及NPTEL原题/图解入口；目录依据、逐节修改与全文未取得的边界见 [TRANSFORMER-REVIEW.md](TRANSFORMER-REVIEW.md)。算例可用 `python assets/practice/transformer/reproduce.py` 独立复算。
 
 练习入口 `#practice`，课程顶部及固定目录也可打开。默认先展示有出处的精选来源，链接原题、解析/评分与知识点，候选和原创补充分开。88道补充题采用单选、多选、计算和问答，支持错题/收藏再做；记录仅当前浏览器，首答与辅助后结果分开。规范和覆盖限制见 [PRACTICE.md](PRACTICE.md)，来源核查见 [PRACTICE-REVIEW.md](PRACTICE-REVIEW.md)，构建 `python scripts/build-practice.py`。
 
 按学科分类的轻量学习网页。
 
-教学以理解系统、独立推导和迁移为目标，统一标准见 [TEACHING.md](TEACHING.md)。每节先呈现问题、模型或证据、推理、完整分步例子、边界、检验和迁移；原讲义、原计算和练习后置保留。逐节审查记录见 [TEACHING-REVIEW.md](TEACHING-REVIEW.md)。
+教学以理解系统、独立推导和迁移为目标，统一标准见 [TEACHING.md](TEACHING.md)。正文按知识自身的逻辑连贯展开，关键推理和具体例子默认可见；统一标准不要求每节使用固定标题或模板。逐节审查记录见 [TEACHING-REVIEW.md](TEACHING-REVIEW.md)。
 
 直接打开 `index.html`，或运行：
 
