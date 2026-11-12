@@ -3,7 +3,8 @@
 .rd-lab { margin:1.4rem 0; border:1px solid var(--border); border-radius:8px; padding:1rem; }
 .rd-lab-ui label { display:grid; grid-template-columns:1fr auto; gap:.35rem 1rem; margin:.7rem 0; font-family:var(--font-ui, sans-serif); font-size:.95rem; }
 .rd-lab-ui input { grid-column:1/-1; width:100%; accent-color:currentColor; }
-.rd-lab-ui svg { width:100%; height:auto; display:block; }
+.rd-lab-plot { max-width:100%; overflow-x:auto; }
+.rd-lab-ui svg { width:100%; min-width:480px; height:auto; display:block; }
 .rd-lab-result { margin-bottom:0; font-variant-numeric:tabular-nums; }
 .rd-sources { font-size:.9em; margin:2rem 0; }
 .rd-sources summary { cursor:pointer; font-weight:650; }

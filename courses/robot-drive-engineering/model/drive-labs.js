@@ -26,7 +26,7 @@
       fields.forEach(([key,label,min,max,step,value])=>{const row=document.createElement('label');row.textContent=label;const val=document.createElement('output');const input=document.createElement('input');input.type='range';Object.assign(input,{min,max,step,value});input.dataset.key=key;row.append(val,input);ui.append(row);});
       const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 640 300');svg.setAttribute('role','img');
       const result=document.createElement('p');result.className='rd-lab-result';result.setAttribute('role','status');result.setAttribute('aria-live','polite');
-      ui.append(svg,result);el.replaceChildren(ui);
+      const plot=document.createElement('div');plot.className='rd-lab-plot';plot.tabIndex=0;plot.setAttribute('role','region');plot.setAttribute('aria-label',type==='projection'?'dq投影图，可横向阅读':'速度轨迹图，可横向阅读');plot.append(svg);ui.append(plot,result);el.replaceChildren(ui);
       function draw(){
         const values={};ui.querySelectorAll('input').forEach(i=>{values[i.dataset.key]=Number(i.value);i.previousElementSibling.textContent=i.value;});
         if(type==='projection'){

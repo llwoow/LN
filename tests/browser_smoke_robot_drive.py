@@ -27,6 +27,8 @@ def main():
       for svg in fig.locator('svg').all():assert svg.locator('title').count(),(sid,'alternative')
      for lab in body.locator('[data-rd-lab]').all():
       result=lab.locator('.rd-lab-result');before=result.inner_text();slider=lab.locator('input[type=range]').first
+      if w<=390:
+       plot=lab.locator('.rd-lab-plot');assert plot.evaluate('n=>n.scrollWidth>n.clientWidth'),(sid,'readable plot pan')
       slider.evaluate("el=>{el.value=el.max;el.dispatchEvent(new Event('input',{bubbles:true}))}");assert before!=result.inner_text(),sid
      page.screenshot(path=str(OUT/(sid+'-'+name+'.png')),full_page=True)
      # A dock in the page header remains reachable after a long scroll.
