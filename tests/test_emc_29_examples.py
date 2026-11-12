@@ -52,7 +52,7 @@ class NewEMCAdditions(unittest.TestCase):
                 self.assertEqual(ids["emc-deepen-example-" + sid], 1)
                 self.assertRegex(html, r'<figure id="emc-deepen-figure-' + sid)
                 self.assertIn("figcaption", html)
-                formula = re.search(r'<div class="math display" data-equation="(D\\.[^"]+)">'
+                formula = re.search(r'<div class="math display" data-equation="(D\.[^"]+)">'
                                     r'(<math[^>]*>.*?</math>)', html, re.S)
                 self.assertIsNotNone(formula, sid)
                 ET.fromstring(formula.group(2))
