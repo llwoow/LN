@@ -1,0 +1,70 @@
+name: Deploy LN to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - '.github/workflows/pages.yml'
+      - 'tests/browser_smoke_pages.py'
+      - 'scripts/build-static.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify source indexes and existing behavior
+        run: |
+          set -e
+          python scripts/build-reference-index.py --check
+          python scripts/build-glossary.py --check
+          python -m unittest discover -s tests -v
+          for test_file in tests/*.test.cjs; do node "$test_file"; done
+      - name: Build the static LN site
+        run: |
+          python scripts/build-static.py
+          touch dist/.nojekyll
+      - name: Install browser check dependencies
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+      - name: Verify site assets and navigation under the Pages subdirectory
+        run: python tests/browser_smoke_pages.py
+      - name: Upload the verified static site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Read the repository Pages configuration
+        uses: actions/configure-pages@v5
+      - name: Deploy the exact built artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
