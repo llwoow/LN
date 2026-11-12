@@ -16,7 +16,7 @@
 .ac-root-values li{overflow-wrap:anywhere}
 .ac-root-lab [data-ac-root-status]{font-weight:600}
 .ac-root-lab [data-ac-root-test]{padding:.65rem .8rem;border-left:3px solid var(--accent);background:var(--subtle);border-radius:5px;overflow-wrap:anywhere}
-@media(max-width:560px){.ac-root-values{grid-template-columns:1fr}.ac-root-presets button,.ac-root-tools button{font-size:.85em}}
+@media(max-width:560px){.ac-root-lab svg{min-width:640px}.ac-root-values{grid-template-columns:1fr}.ac-root-presets button,.ac-root-tools button{font-size:.85em}}
 
 html[data-theme="dark"] .ac-root-lab svg{color:#e5ebf2;background:var(--surface,#16191f)}
 html[data-theme="dark"] .ac-root-presets button,html[data-theme="dark"] .ac-root-tools button{background:var(--surface,#16191f)}

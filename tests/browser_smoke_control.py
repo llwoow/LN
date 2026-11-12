@@ -75,6 +75,8 @@ def run() -> None:
                 plot.wait_for(timeout=20000)
                 page.locator("[data-ac-root-values] li").first.wait_for()
                 assert page.locator("[data-ac-root-values] li").count() == 4
+                if width < 560:
+                    assert page.locator('.ac-root-plot-wrapper').evaluate('(n)=>n.scrollWidth>n.clientWidth')
                 assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
                 page.locator("[data-ac-set-k='8.16']").click()
                 assert "临界稳定" in page.locator("[data-ac-root-status]").inner_text()
