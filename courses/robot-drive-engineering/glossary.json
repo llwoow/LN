@@ -123,7 +123,7 @@
         "LSB"
       ],
       "section": "rd-current-sense",
-      "match": "半个LSB的量化边界",
+      "match": "LSB（Least Significant Bit",
       "description": "理想均匀量化器的一步代码间隔；本页折回到电流端，不代表真实有效位数。"
     },
     {
@@ -167,7 +167,7 @@
         "DMA"
       ],
       "section": "rd-sampling-time",
-      "match": "DMA",
+      "match": "DMA（Direct Memory Access",
       "description": "由外设/总线机制搬运数据；仍需确认所有权、缓存和完成条件。"
     },
     {
@@ -278,7 +278,7 @@
         "FOC"
       ],
       "section": "rd-foc",
-      "match": "FOC先把平衡三相",
+      "match": "FOC（Field-Oriented Control",
       "description": "将电流表达在转子磁链相关坐标中进行调节的控制方法。"
     },
     {
@@ -400,8 +400,41 @@
         "RK4"
       ],
       "section": "rd-simulation",
-      "match": "速度控制器每1 ms更新",
+      "match": "四阶Runge–Kutta（RK4）",
       "description": "本课程植物方程的数值积分方法；需做步长与模型核查。"
+    },
+    {
+      "id": "rd-ai-relu",
+      "title": "修正线性单元",
+      "english": "Rectified Linear Unit",
+      "aliases": [
+        "ReLU"
+      ],
+      "section": "rd-edge-inference",
+      "match": "神经网络把单个仿射映射换成多层",
+      "description": "保留输入正部分的分段线性函数；与仿射层组合可表达非线性映射。"
+    },
+    {
+      "id": "rd-ai-backprop",
+      "title": "反向传播",
+      "english": "Backpropagation",
+      "aliases": [
+        "反向传播"
+      ],
+      "section": "rd-edge-inference",
+      "match": "反向传播仍是沿计算图",
+      "description": "沿计算图应用链式法则求参数梯度，参数更新由优化步骤执行。"
+    },
+    {
+      "id": "rd-ai-loss",
+      "title": "损失函数",
+      "english": "Loss Function",
+      "aliases": [
+        "损失"
+      ],
+      "section": "rd-edge-inference",
+      "match": "损失描述这组数据上预测离目标有多远",
+      "description": "将指定数据上的预测误差映射到优化目标；小训练损失不代表任务泛化。"
     }
   ],
   "symbolDefinitions": [
