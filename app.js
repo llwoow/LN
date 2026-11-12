@@ -360,6 +360,17 @@
             window.LN_MOUNT_ROOT_LOCUS?.(body);
           }
         }
+        if (course.id === 'robot-drive-engineering') {
+          await loadStyle('courses/robot-drive-engineering/model/drive-labs.css');
+          if (!body.isConnected || body.dataset.lessonKey !== key) return;
+          if (body.querySelector('[data-rd-lab]')) {
+            try {
+              await loadScript('courses/robot-drive-engineering/model/drive-labs.js');
+              if (!body.isConnected || body.dataset.lessonKey !== key) return;
+              window.LN_MOUNT_DRIVE_LABS?.(body);
+            } catch (error) { /* Keep the static calculation readable. */ }
+          }
+        }
         bindInlineModels(body);
         if (course.id === 'electromagnetic-compatibility' && body.querySelector('[data-emc-lab]')) {
           // Educational models are optional; keep the static lesson readable if loading fails.

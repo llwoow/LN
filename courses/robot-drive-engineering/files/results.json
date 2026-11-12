@@ -1,0 +1,9 @@
+{
+  "frame_octets": 14,
+  "uart_115200_ms": 1.215277777777778,
+  "crc_check": "29B1",
+  "deadline_margin_us": 5,
+  "parser_frames": 2,
+  "final_state": "STOP_REQUESTED",
+  "scope": "host-side original model; no UART/CAN adapter, DSP, motor or physical stop has been exercised"
+}

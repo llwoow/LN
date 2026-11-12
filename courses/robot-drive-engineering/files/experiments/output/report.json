@@ -1,0 +1,119 @@
+{
+  "provenance": "LN original synthetic teaching plant, not observations from any manufactured drive",
+  "parameters": {
+    "R_ohm": 2.0,
+    "L_H": 0.004,
+    "Kt_Nm_per_A": 0.05,
+    "Ke_Vs_per_rad": 0.05,
+    "J_kg_m2": 0.0002,
+    "b_Nms_per_rad": 0.0001,
+    "bus_limit_V": 12.0
+  },
+  "convergence": {
+    "locked_rotor_exact_current_at_2ms_A": 1.896361676485673,
+    "Euler_runs": [
+      {
+        "step_s": 0.001,
+        "current_A": 2.25,
+        "absolute_error_A": 0.353638323514327
+      },
+      {
+        "step_s": 0.0005,
+        "current_A": 2.05078125,
+        "absolute_error_A": 0.154419573514327
+      },
+      {
+        "step_s": 0.0001,
+        "current_A": 1.924542232774373,
+        "absolute_error_A": 0.028180556288700087
+      }
+    ],
+    "Euler_pole_at_5ms": -1.5,
+    "full_motor_speed_after_1s_rad_s": 221.98027102999131,
+    "analytic_steady_speed_rad_s": 222.2222222222222
+  },
+  "identification": {
+    "source": "synthetic locked rotor RL current, seeded Gaussian measurement noise, known offset calibration",
+    "R_fit_ohm": 2.0008831935110942,
+    "L_fit_H": 0.003990796593124736,
+    "tau_fit_s": 0.001994517524094846,
+    "training_RMSE_A": 0.0020750736441902456,
+    "changed_resistance_ohm": 2.4,
+    "holdout_RMSE_A": 0.6469661222946914,
+    "claim": "Small training residual does not validate an unchanged resistance at another temperature/condition."
+  },
+  "comparisons": [
+    {
+      "policy": "arrival-order",
+      "faults": false,
+      "controller_period_s": 0.001,
+      "plant_step_s": 2e-05,
+      "accepted_packets": 100,
+      "rejected_out_of_order": 0,
+      "rejected_stale": 0,
+      "tracking_RMSE_to_applied_reference_rad_s": 3.5997373336744847,
+      "max_abs_current_A": 0.670561691598955,
+      "max_reference_acceleration_rad_s2": 100.00000000000142,
+      "max_command_age_s": 0.026000000000000023,
+      "end_speed_rad_s": 41.141074377194386,
+      "limits": "Script-generated plans emulate asynchronous command arrivals. No model inference, hardware, encoder noise, PWM ripple or current protection is represented."
+    },
+    {
+      "policy": "guarded",
+      "faults": false,
+      "controller_period_s": 0.001,
+      "plant_step_s": 2e-05,
+      "accepted_packets": 100,
+      "rejected_out_of_order": 0,
+      "rejected_stale": 0,
+      "tracking_RMSE_to_applied_reference_rad_s": 3.5997373336744847,
+      "max_abs_current_A": 0.670561691598955,
+      "max_reference_acceleration_rad_s2": 100.00000000000142,
+      "max_command_age_s": 0.026000000000000023,
+      "end_speed_rad_s": 41.141074377194386,
+      "limits": "Script-generated plans emulate asynchronous command arrivals. No model inference, hardware, encoder noise, PWM ripple or current protection is represented."
+    },
+    {
+      "policy": "arrival-order",
+      "faults": true,
+      "controller_period_s": 0.001,
+      "plant_step_s": 2e-05,
+      "accepted_packets": 90,
+      "rejected_out_of_order": 0,
+      "rejected_stale": 0,
+      "tracking_RMSE_to_applied_reference_rad_s": 3.5129933555588884,
+      "max_abs_current_A": 0.6694484981322736,
+      "max_reference_acceleration_rad_s2": 100.00000000000142,
+      "max_command_age_s": 0.2240000000000001,
+      "end_speed_rad_s": 41.13753986136784,
+      "limits": "Script-generated plans emulate asynchronous command arrivals. No model inference, hardware, encoder noise, PWM ripple or current protection is represented."
+    },
+    {
+      "policy": "guarded",
+      "faults": true,
+      "controller_period_s": 0.001,
+      "plant_step_s": 2e-05,
+      "accepted_packets": 89,
+      "rejected_out_of_order": 1,
+      "rejected_stale": 0,
+      "tracking_RMSE_to_applied_reference_rad_s": 3.8975807328587098,
+      "max_abs_current_A": 0.661921139229482,
+      "max_reference_acceleration_rad_s2": 100.00000000000142,
+      "max_command_age_s": 0.2240000000000001,
+      "end_speed_rad_s": 41.30588302118324,
+      "limits": "Script-generated plans emulate asynchronous command arrivals. No model inference, hardware, encoder noise, PWM ripple or current protection is represented."
+    }
+  ],
+  "step_halving": {
+    "coarse_step_s": 2e-05,
+    "fine_step_s": 1e-05,
+    "end_speed_difference_rad_s": 9.237055564881302e-14
+  },
+  "optional_scipy_crosscheck": {
+    "executed": true,
+    "function": "scipy.signal.lsim",
+    "input_interpolation": "zero-order hold (interp=False)",
+    "final_state_max_abs_difference_RK4_vs_lsim": 4.085620730620576e-13,
+    "scipy_version": "1.17.0"
+  }
+}

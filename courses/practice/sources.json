@@ -100,6 +100,98 @@
         "CT题先说明一次电流被外部系统约束，再解释二次安匝、励磁与开路电压；重做时改变负荷或接法，检查原结论的前提。"
       ],
       "ready": true
+    },
+    {
+      "id": "rd-mit-motor-solved",
+      "title": "MIT 6.01SC：电流反馈与双端电机驱动",
+      "targets": [
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-circuit-foundations"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-current-sense"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-cascade-control"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-inverter"
+        }
+      ],
+      "links": [
+        {
+          "label": "MIT 6.01SC Additional Review Problems with Solutions",
+          "url": "https://ocw.mit.edu/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/resources/mit6_01scs11_mid02_rev_sol/"
+        }
+      ],
+      "focus": "运放反馈、取样增益、K的量纲和两端电位差。",
+      "selection": "PDF第4—5页Motor Control，以及13—14页Circuits Q13/Q14；2011课程收集的题目含2009页眉。",
+      "answers": "同一公开PDF内附红色解答或Solution框。电流比例控制由两级理想运放求得K=50Ω、Id=0.1A；双端驱动要求电源范围内的端口差值。",
+      "evidenceLevel": "公开大学课程/大学教材的原题与官方完整解答；不是心理测量效度证明",
+      "evidence": "已取得并核对所选原题与公开解答；本站提供阅读与迁移任务，不冒称全部题已网页化。",
+      "evidenceLinks": [
+        {
+          "label": "MIT 6.01SC Additional Review Problems with Solutions",
+          "url": "https://ocw.mit.edu/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/resources/mit6_01scs11_mid02_rev_sol/"
+        }
+      ],
+      "access": "公开原网页或PDF；通过外部资料模式打开，完成后可在LN手动记录、收藏和重做。",
+      "license": "原内容按其页面许可（MIT OCW CC BY-NC-SA；OpenStax CC BY）使用；本站链接和原创阅读指导不重分发原PDF。",
+      "limit": "理想运放题不包含真实功率级电流能力、门极驱动、回灌或保护，不能当成电机板原理图照接。",
+      "readScope": "PDF第4—5页Motor Control，以及13—14页Circuits Q13/Q14；2011课程收集的题目含2009页眉。",
+      "checked": "2026-11-12",
+      "guide": [
+        "先遮住解答，从分流电阻、运放虚短/KCL推到Vc对Io的关系，标清单位。",
+        "再看双端电压约束，检查每端是否在0—10V内；改变电源或电机端点要求，说明何时不可行。",
+        "对照解答后在LN记录依据；讨论真实电机驱动还缺少哪些电流、热和开关条件。"
+      ],
+      "ready": true
+    },
+    {
+      "id": "rd-openstax-rc-solved",
+      "title": "OpenStax 10.5：RC时间常数与阈值计时",
+      "targets": [
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-circuit-foundations"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-analog-filter"
+        }
+      ],
+      "links": [
+        {
+          "label": "OpenStax University Physics Volume 2 §10.5 RC Circuits",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits"
+        }
+      ],
+      "focus": "从KVL推导指数响应，理解阈值时刻依赖初始值与电压比例。",
+      "selection": "10.5 RC Circuits的Example10.8题干、公式与完整解答；原例阈值时间约8.13s。",
+      "answers": "原网页给出Strategy、Solution和Significance；用对数求达到指定阈值的时间。",
+      "evidenceLevel": "公开大学课程/大学教材的原题与官方完整解答；不是心理测量效度证明",
+      "evidence": "已取得并核对所选原题与公开解答；本站提供阅读与迁移任务，不冒称全部题已网页化。",
+      "evidenceLinks": [
+        {
+          "label": "OpenStax University Physics Volume 2 §10.5 RC Circuits",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits"
+        }
+      ],
+      "access": "公开原网页或PDF；通过外部资料模式打开，完成后可在LN手动记录、收藏和重做。",
+      "license": "原内容按其页面许可（MIT OCW CC BY-NC-SA；OpenStax CC BY）使用；本站链接和原创阅读指导不重分发原PDF。",
+      "limit": "这是教材的理想一阶RC例题；原装置和电压不作为动手操作指令，也不等于SAR复杂前端的完整模型。",
+      "readScope": "10.5 RC Circuits的Example10.8题干、公式与完整解答；原例阈值时间约8.13s。",
+      "checked": "2026-11-12",
+      "guide": [
+        "从初始电容电压与最终值写出指数关系，先检查t=0与t趋于无穷的端点。",
+        "反解到指定阈值的时间并对照原解；解释阈值越接近最终值为什么耗时越长。",
+        "迁移到本站低压理想ADC例子，改用半个LSB误差比例，并指出外部电容和运放动态何时使单RC近似失效。"
+      ],
+      "ready": true
     }
   ],
   "excluded": [

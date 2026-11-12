@@ -1,0 +1,41 @@
+{
+  "kind": "synthetic regression and observed host CPU inference, not a robot or edge-board trial",
+  "plant": {
+    "R_ohm": 2.0,
+    "L_H": 0.004,
+    "Ts_s": 0.0005,
+    "exact_a": 0.7788007830714049,
+    "exact_b_A_per_V": 0.11059960846429756
+  },
+  "fit": {
+    "train_samples": 350,
+    "heldout_samples": 150,
+    "a": 0.778438150882721,
+    "b_A_per_V": 0.11075495928525925,
+    "bias_A": 4.786561021319358e-06,
+    "heldout_same_distribution_RMSE_A": 0.002044250532699891,
+    "changed_R_ohm": 2.4,
+    "changed_R_RMSE_A": 0.022002248093485832
+  },
+  "onnx_vs_same_coefficients_max_abs_error_A": 0.0,
+  "inference_timing": {
+    "boundary": "session.run on one prepared float32 row; excludes data loading, preprocessing, model loading, network and motor control",
+    "warmup": 100,
+    "samples": 500,
+    "median_us": 4.016,
+    "p99_us_linear": 18.781509999999994,
+    "max_us": 30.574
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.1",
+    "machine": "x86_64"
+  },
+  "limits": [
+    "No foundation model or real robot policy was run.",
+    "Host timing does not guarantee worst-case latency on any target board.",
+    "Synthetic held-out data are not independent physical measurements."
+  ]
+}
