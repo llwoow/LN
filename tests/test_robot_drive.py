@@ -1,5 +1,5 @@
 """Independent physics keys, actual file links and regression/data contracts."""
-import importlib.util,json,math,re,runpy,subprocess,sys,unittest
+import hashlib,importlib.util,json,math,re,runpy,subprocess,sys,unittest
 from pathlib import Path
 from urllib.parse import unquote
 ROOT=Path(__file__).resolve().parents[1];BASE=ROOT/'courses/robot-drive-engineering'
@@ -25,10 +25,13 @@ class RobotDrive(unittest.TestCase):
   self.assertEqual(set(q),set(e))
   for k,v in e.items():self.assertAlmostEqual(q[k]['answer'],v,places=10,msg=k)
  def test_old_exercise_payloads_and_storage_version_unchanged(self):
-  old=json.loads(subprocess.check_output(['git','show','f8fad65:courses/practice/bank.json'],cwd=ROOT,text=True))
+  # Immutable digest of all 96 old records at baseline f8fad65, including ordering.
+  # No Git history dependency: the same guard works in shallow CI/static archives.
   new=json.loads((ROOT/'courses/practice/bank.json').read_text())
-  self.assertEqual(old['version'],new['version'])
-  self.assertEqual(old['questions'],[q for q in new['questions'] if q['course']!='robot-drive-engineering'])
+  self.assertEqual(1,new['version'])
+  old=[q for q in new['questions'] if q['course']!='robot-drive-engineering']
+  digest=hashlib.sha256(json.dumps(old,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
+  self.assertEqual(digest,'0006ce68e751ff19d1a1b6eda60ca226a6fd7465541feb640f3210b561f17e4d')
  def test_new_lesson_links_and_unique_ids(self):
   courses={c['id']:c for c in [assignment(p) for p in (ROOT/'courses').glob('*/manifest.js')]}
   for l in self.d['lessons']:
