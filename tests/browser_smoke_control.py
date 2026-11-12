@@ -80,6 +80,10 @@ def run() -> None:
                 assert "临界稳定" in page.locator("[data-ac-root-status]").inner_text()
                 page.locator("[data-ac-root-wrong-toggle]").click()
                 assert page.locator("[data-ac-root-wrong-toggle]").get_attribute("aria-pressed") == "true"
+                assert page.locator("[data-ac-root-wrong] path").first.is_visible()
+                page.locator("[data-ac-set-k='0']").click()
+                assert page.locator("[data-ac-root-moving] circle[fill='#1676b5']").count() == 2
+                page.locator("[data-ac-set-k='5']").click()
                 page.screenshot(path=str(OUT / ("automatic-control-" + name + "-root-locus.png")), full_page=True)
                 page.close()
             browser.close()

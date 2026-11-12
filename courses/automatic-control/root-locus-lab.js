@@ -45,6 +45,12 @@ function groups(k){
   const left=sorted.slice(0,2),right=sorted.slice(2,4);
   return {leftUpper:left.find(z=>z.im>=0),leftLower:left.find(z=>z.im<0),rightUpper:right.find(z=>z.im>=0),rightLower:right.find(z=>z.im<0)};
 }
+function originFamily(k,z){
+  const g=groups(k),realOrigin=[g.leftReal,g.rightReal,g.leftUpper,g.leftLower].filter(Boolean);
+  const complexOrigin=[g.rightUpper,g.rightLower];
+  const nearest=points=>Math.min(...points.map(p=>abs(sub(z,p))));
+  return nearest(realOrigin)<=nearest(complexOrigin)?'real':'complex';
+}
 const XP=350,YP=260,S=55;
 const xy=z=>[XP+S*z.re,YP-S*z.im];
 const fmt=z=>z.re.toFixed(6)+(z.im<0?' − j':' + j')+Math.abs(z.im).toFixed(6);
@@ -126,7 +132,7 @@ function mount(root){
     roots.forEach((z,i)=>{
       const li=document.createElement('li');li.textContent='s'+(i+1)+' = '+fmt(z);labels.append(li);
       const [x,y]=xy(z);
-      svg('circle',{cx:x,cy:y,r:6,fill:z.re<-1.4?Cblue:Corange,stroke:'#fff','stroke-width':1.4},markers);
+      svg('circle',{cx:x,cy:y,r:6,fill:originFamily(k,z)==='real'?Cblue:Corange,stroke:'#fff','stroke-width':1.4},markers);
     });
     const angleOn=box.querySelector('[data-ac-root-tangent]').getAttribute('aria-pressed')==='true';
     if(angleOn){
@@ -165,6 +171,6 @@ function mount(root){
   });
   render();
 }
-window.LN_ROOT_LOCUS={solve,polynomial,group:groups,KD};
+window.LN_ROOT_LOCUS={solve,polynomial,group:groups,originFamily,KD};
 window.LN_MOUNT_ROOT_LOCUS=mount;
 })();

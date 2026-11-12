@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Course checks
-        run: python -m unittest discover -s tests -p 'test_automatic_control.py' -v
+        run: python -m unittest discover -s tests -v
       - name: Course graph and existing materials
         run: node tests/knowledge-map.test.cjs
       - name: Chapter-four numerical solver checks

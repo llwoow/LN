@@ -28,3 +28,10 @@ assert.equal(api.group(0).leftReal.re,-3);
 assert.equal(api.group(0).rightReal.re,0);
 assert(api.group(20).leftUpper.re<0&&api.group(20).rightUpper.re>0);
 console.log('Numerical root-locus solver matches independent polynomial and sample roots.');
+
+// Marker colour follows the branch origin, including the root starting at zero.
+for(const k of [0,1,5,8.16,20]){
+ const g=api.group(k);
+ for(const z of [g.leftReal,g.rightReal,g.leftUpper,g.leftLower].filter(Boolean))assert.equal(api.originFamily(k,z),'real');
+ for(const z of [g.rightUpper,g.rightLower])assert.equal(api.originFamily(k,z),'complex');
+}
