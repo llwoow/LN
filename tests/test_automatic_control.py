@@ -41,7 +41,8 @@ class AutomaticControlTests(unittest.TestCase):
         self.assertEqual(len(ids),len(set(ids)))
         self.assertEqual(len(set(s["group"] for s in sections)),8)
         self.assertEqual([s["id"] for s in sections if s["kind"] != "outline"],[
-            "ac-3-1","ac-3-2","ac-3-3","ac-3-4","ac-3-5","ac-3-6","ac-3-7","ac-homework3"
+            "ac-3-1","ac-3-2","ac-3-3","ac-3-4","ac-3-5","ac-3-6","ac-3-7","ac-homework3",
+            "ac-4-1","ac-4-2","ac-4-2-1","ac-4-2-2","ac-4-2-3","ac-4-2-4","ac-4-3","ac-4-4"
         ])
         self.assertEqual(self.course["textbook"]["isbn"],"9787302665564")
         self.assertEqual(self.course["textbook"]["edition"],3)
@@ -67,10 +68,34 @@ class AutomaticControlTests(unittest.TestCase):
 
     def test_practice_bank(self):
         course_questions=[q for q in self.bank["questions"] if q["course"]=="automatic-control"]
-        self.assertEqual(len(course_questions),5)
+        self.assertEqual(len(course_questions),13)
         self.assertEqual({q["id"] for q in course_questions},{q["id"] for q in self.compiled["questions"] if q["course"]=="automatic-control"})
         self.assertIn("automatic-control",self.index)
-        self.assertEqual(len(self.index["automatic-control"]["sections"]),8)
+        self.assertEqual(len(self.index["automatic-control"]["sections"]),16)
+
+    def test_root_locus_lesson_and_bank(self):
+        lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-4-2-2.js")["html"]
+        for fact in ("4.3315704160", "−71.565", "8.16", "204−25K", "data-ac-root-locus", "错误连接"):
+            self.assertIn(fact, lesson)
+        lesson_math = Parser();lesson_math.feed(lesson)
+        self.assertEqual(lesson_math.math_open, lesson_math.math_close)
+        root_ids = {"ac-root-poles", "ac-root-real", "ac-root-asym", "ac-root-break",
+                    "ac-root-angle", "ac-root-8p16", "ac-root-wrong", "ac-root-zero"}
+        questions = {q["id"]: q for q in self.bank["questions"]}
+        self.assertTrue(root_ids <= set(questions))
+        for key in root_ids:
+            self.assertGreaterEqual(len(questions[key]["steps"]), 3)
+            self.assertIn("ac-4-", questions[key]["sections"][0])
+        self.assertEqual(questions["ac-root-wrong"]["answer"], ["a", "b"])
+        self.assertAlmostEqual(questions["ac-root-break"]["answer"], 4.331570416, places=7)
+        self.assertAlmostEqual(questions["ac-root-angle"]["answer"], -71.565051, places=6)
+        for k in (0, 4.331570416, 5, 8.16, 20):
+            # Differentiating K(s) gives 4s³+15s²+16s+6=0.
+            if k == 4.331570416:
+                r = -2.28858434682
+                self.assertAlmostEqual(4*r*r*r+15*r*r+16*r+6, 0, places=8)
+                self.assertAlmostEqual(-r*(r+3)*(r*r+2*r+2),k,places=8)
+        self.assertAlmostEqual((204/25), 8.16, places=10)
 
     def test_math_results(self):
         self.assertAlmostEqual(3*math.sqrt(5)-5,1.7082039325,places=9)

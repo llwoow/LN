@@ -370,57 +370,64 @@ window.LN_AUTO_CONTROL={
       "id": "ac-4-1",
       "title": "4.1 根轨迹法的基本概念",
       "group": "第4章 根轨迹法",
-      "kind": "outline",
+      "kind": "html",
       "textbookSection": "4.1",
-      "teachingIndex": 44
+      "teachingIndex": 44,
+      "src": "courses/automatic-control/lessons/ac-4-1.js"
     },
     {
       "id": "ac-4-2",
       "title": "4.2 根轨迹的绘制法则",
       "group": "第4章 根轨迹法",
-      "kind": "outline",
+      "kind": "html",
       "textbookSection": "4.2",
-      "teachingIndex": 45
+      "teachingIndex": 45,
+      "src": "courses/automatic-control/lessons/ac-4-2.js"
     },
     {
       "id": "ac-4-2-1",
       "title": "4.2.1 绘制根轨迹的一般法则",
       "group": "第4章 根轨迹法",
-      "kind": "outline",
+      "kind": "html",
       "textbookSection": "4.2.1",
-      "teachingIndex": 46
+      "teachingIndex": 46,
+      "src": "courses/automatic-control/lessons/ac-4-2-1.js"
     },
     {
       "id": "ac-4-2-2",
       "title": "4.2.2 自动控制系统的根轨迹",
       "group": "第4章 根轨迹法",
-      "kind": "outline",
+      "kind": "html",
       "textbookSection": "4.2.2",
-      "teachingIndex": 47
+      "teachingIndex": 47,
+      "src": "courses/automatic-control/lessons/ac-4-2-2.js"
     },
     {
       "id": "ac-4-2-3",
       "title": "4.2.3 零度根轨迹",
       "group": "第4章 根轨迹法",
-      "kind": "outline",
+      "kind": "html",
       "textbookSection": "4.2.3",
-      "teachingIndex": 48
+      "teachingIndex": 48,
+      "src": "courses/automatic-control/lessons/ac-4-2-3.js"
     },
     {
       "id": "ac-4-2-4",
       "title": "4.2.4 参数根轨迹",
       "group": "第4章 根轨迹法",
-      "kind": "outline",
+      "kind": "html",
       "textbookSection": "4.2.4",
-      "teachingIndex": 49
+      "teachingIndex": 49,
+      "src": "courses/automatic-control/lessons/ac-4-2-4.js"
     },
     {
       "id": "ac-4-3",
       "title": "4.3 用根轨迹法分析系统的动态特性",
       "group": "第4章 根轨迹法",
-      "kind": "outline",
+      "kind": "html",
       "textbookSection": "4.3",
-      "teachingIndex": 50
+      "teachingIndex": 50,
+      "src": "courses/automatic-control/lessons/ac-4-3.js"
     },
     {
       "id": "ac-4-3-1",
@@ -466,9 +473,10 @@ window.LN_AUTO_CONTROL={
       "id": "ac-4-4",
       "title": "4.4 用MATLAB绘制根轨迹",
       "group": "第4章 根轨迹法",
-      "kind": "outline",
+      "kind": "html",
       "textbookSection": "4.4",
-      "teachingIndex": 56
+      "teachingIndex": 56,
+      "src": "courses/automatic-control/lessons/ac-4-4.js"
     },
     {
       "id": "ac-4-4-1",
