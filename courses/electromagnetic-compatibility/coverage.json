@@ -1,35 +1,35 @@
 {
-  "status": "eight-extended-sample-sections-with-remaining-source-audit",
+  "status": "forty-reading-sections-with-29-added-model-diagram-and-worked-examples-audit-pending",
   "reference": "林福昌、李化《电磁兼容原理及应用》及刘其凤《电磁兼容与建模仿真》课件",
   "readings": [
     {
       "id": "emc-1-1",
       "title": "1.1 引言",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-1-2",
       "title": "1.2 电磁兼容的基本概念",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-1-3",
       "title": "1.3 主要的电磁干扰源",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-1-4",
       "title": "1.4 电磁干扰的危害",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-2-1",
       "title": "2.1 电磁干扰的传输途径",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
@@ -41,43 +41,43 @@
     {
       "id": "emc-2-3",
       "title": "2.3 辐射耦合原理",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-3-1",
       "title": "3.1 保护接地和信号接地",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-3-2",
       "title": "3.2 电路和系统接地方式的选择",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-3-3",
       "title": "3.3 地线回路中的干扰及抑制技术",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-3-4",
       "title": "3.4 电缆屏蔽体的接地",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-4-1",
       "title": "4.1 概述",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-4-2",
       "title": "4.2 电场屏蔽",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
@@ -95,25 +95,25 @@
     {
       "id": "emc-4-5",
       "title": "4.5 孔缝泄漏的抑制措施",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-5-1",
       "title": "5.1 概述",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-5-2",
       "title": "5.2 反射式滤波器",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-5-3",
       "title": "5.3 吸收式滤波器",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
@@ -125,13 +125,13 @@
     {
       "id": "emc-5-5",
       "title": "5.5 有源滤波器",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-6-1",
       "title": "6.1 测试场地",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
@@ -143,37 +143,37 @@
     {
       "id": "emc-6-3",
       "title": "6.3 电磁干扰发射测量",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-6-4",
       "title": "6.4 电磁干扰敏感度测试",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-7-1",
       "title": "7.1 静电的产生",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-7-2",
       "title": "7.2 静电放电",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-7-3",
       "title": "7.3 静电的危害",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-7-4",
       "title": "7.4 静电干扰的防护",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
@@ -191,13 +191,13 @@
     {
       "id": "emc-8-3",
       "title": "8.3 印制电路板的布局和布线",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-9-1",
       "title": "9.1 雷电浪涌的产生和传递",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
@@ -209,19 +209,19 @@
     {
       "id": "emc-9-3",
       "title": "9.3 浪涌抑制器件",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-9-4",
       "title": "9.4 电子设备的端口防护技术",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
       "id": "emc-10-1",
       "title": "10.1 电力系统谐波",
-      "status": "expanded-source-guided",
+      "status": "supplemented-derivation-svg-worked-example-primary-source-audit-pending",
       "sourceReviewed": "lecture-slide section with textbook curriculum alignment; not scanned-book formula-by-formula validation"
     },
     {
@@ -317,7 +317,7 @@
       "lab": "传输线端接与反射"
     }
   ],
-  "note": "11 core sections now have source-guided formulas, explanatory SVGs and interaction; 29 others remain less detailed. This new 3-section batch is grounded in uploaded slide pages only, since the scanned textbook PDF is corrupt in the current runtime. Final scientific/visual human approval is not claimed.",
+  "note": "原先11节具较完整模型，2026-11-12另补强其余29节，增加各1组编号公式、原创SVG工程图及数值算例。40节都有对应教学补充，但新增29节尚未经教材逐页、逐式、逐图源校；自动测试不等于学科准确性、完整理解或实机验收。",
   "audit": {
     "date": "2026-11-10",
     "report": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md",
@@ -364,30 +364,70 @@
       "newOriginalFigures": 3,
       "newInteractiveModels": 3,
       "newPracticeQuestions": 3
+    },
+    {
+      "date": "2026-11-12",
+      "focus": [
+        "emc-1-1",
+        "emc-1-2",
+        "emc-1-3",
+        "emc-1-4",
+        "emc-2-1",
+        "emc-2-3",
+        "emc-3-1",
+        "emc-3-2",
+        "emc-3-3",
+        "emc-3-4",
+        "emc-4-1",
+        "emc-4-2",
+        "emc-4-5",
+        "emc-5-1",
+        "emc-5-2",
+        "emc-5-3",
+        "emc-5-5",
+        "emc-6-1",
+        "emc-6-3",
+        "emc-6-4",
+        "emc-7-1",
+        "emc-7-2",
+        "emc-7-3",
+        "emc-7-4",
+        "emc-8-3",
+        "emc-9-1",
+        "emc-9-3",
+        "emc-9-4",
+        "emc-10-1"
+      ],
+      "status": "all-29-previously-shallow-sections-supplemented-primary-source-and-manual-visual-audit-pending",
+      "newEquations": 29,
+      "newOriginalFigures": 29,
+      "newWorkedExamples": 29,
+      "newInteractiveModels": 0,
+      "newPracticeQuestions": 0,
+      "audit": "courses/electromagnetic-compatibility/AUDIT-29-SECTION-ENRICHMENT-2026-11-12.md"
     }
   ],
-  "latestBatchAudit": "courses/electromagnetic-compatibility/AUDIT-SECOND-BATCH-2026-11-10.md",
+  "latestBatchAudit": "courses/electromagnetic-compatibility/AUDIT-29-SECTION-ENRICHMENT-2026-11-12.md",
   "currentMeasuredCounts": {
     "readingSections": 40,
     "extendedSamples": 11,
-    "noOriginalSchematicSections": 19,
-    "noNumberedEquationSections": 20,
-    "originalDrawings": 27,
-    "supplementalNumberedEquations": 54,
+    "noOriginalSchematicSections": 0,
+    "noNumberedEquationSections": 0,
+    "originalDrawings": 56,
+    "supplementalNumberedEquations": 83,
     "interactiveTeachingModels": 11,
-    "emcDiagnosticQuestions": 18
+    "emcDiagnosticQuestions": 18,
+    "firstPassSupplementedSections": 29,
+    "sourceAndAcademicAuditPending": 29
   },
   "latestVisualReview": {
-    "status": "last-change-visual-regression-pending-or-underway",
+    "status": "2026-11-12 Chromium 40 sections x 3 viewports CI passed; new 29 SVGs NOT individually human-image-reviewed; Android-device testing pending",
     "realChromiumViewports": [
       1440,
       390,
       320
     ],
-    "manuallyFoundAndFixed": [
-      "emc-8-1-shorted-parallel-branch",
-      "emc-4-3-inductor-bypassed-by-wire",
-      "emc-mobile-justified-latin-spacing"
-    ]
+    "automationRun": "https://github.com/llwoow/LN/actions/runs/43159979209",
+    "manual29FigureReview": false
   }
 }
