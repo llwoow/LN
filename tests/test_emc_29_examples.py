@@ -56,6 +56,9 @@ class NewEMCAdditions(unittest.TestCase):
                                     r'(<math[^>]*>.*?</math>)', html, re.S)
                 self.assertIsNotNone(formula, sid)
                 ET.fromstring(formula.group(2))
+                # A whole equation in mtext is technically valid XML but leaves literal
+                # underscores/slashes instead of mathematical subscripts and fractions.
+                self.assertNotRegex(html, r'<mrow>\s*<mtext>[^<]*_[^<]*</mtext>\s*</mrow>')
                 targets = index["sections"][sid]
                 self.assertIn(formula.group(1), [e["number"] for e in targets["equations"]])
                 self.assertIn("emc-deepen-figure-" + sid,
