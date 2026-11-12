@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 412" role="img" aria-labelledby="title desc">
+<title id="title">反偏突变 PN 结的空间电荷、电场和电势</title><desc id="desc">p 侧耗尽区较窄、负电荷密度幅值较大，n 侧较宽。电场指向 p 侧，电势由 p 侧向 n 侧增加。</desc>
+<rect width="760" height="412" fill="#fff"/>
+<rect x="166" y="62" width="120" height="309" fill="#fbecf1"/>
+<rect x="286" y="62" width="360" height="309" fill="#eaf4fa"/>
+<g fill="none" stroke="#526477" stroke-width="1.6">
+<path d="M115 119H704m-8-4 8 4-8 4M115 119V70m-4 8 4-8 4 8"/>
+<path d="M115 213H704m-8-4 8 4-8 4M115 267V180m-4 8 4-8 4 8"/>
+<path d="M115 360H704m-8-4 8 4-8 4M115 360V280m-4 8 4-8 4 8"/>
+<path d="M166 63V370M286 63V370M646 63V370" stroke="#738192" stroke-dasharray="4 5"/>
+</g>
+<path d="M117 119H166V167H286V103H646V119H697" fill="none" stroke="#943552" stroke-width="2.8"/>
+<path d="M117 213H166L286 267L646 213H697" fill="none" stroke="#146381" stroke-width="2.8"/>
+<path d="M117 360H166Q226 360 286 342Q466 288 646 288H697" fill="none" stroke="#21614e" stroke-width="2.8"/>
+<g font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#162334" font-size="19">
+<text x="26" y="35" font-weight="bold">一维突变结 · 左侧掺杂较重</text>
+<text x="222" y="86" text-anchor="middle">p 侧</text><text x="466" y="86" text-anchor="middle">n 侧</text>
+<text x="53" y="121">ρ(x)</text><text x="53" y="213">E(x)</text><text x="53" y="361">ψ(x)</text>
+<text x="166" y="394" text-anchor="middle">−xₚ</text><text x="286" y="394" text-anchor="middle">0（结面）</text><text x="646" y="394" text-anchor="middle">xₙ</text><text x="711" y="366">x</text>
+</g></svg>

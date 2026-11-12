@@ -1,0 +1,89 @@
+<section data-lesson="power-diodes">
+<h2>功率二极管的储存电荷与反向恢复</h2>
+<p>低功率 PN 结讲的是势垒，高压功率二极管还要讲一层足够厚的材料。硅 PiN 功率二极管通常用 p⁺／n⁻／n⁺ 结构，其中厚而轻掺杂的 n⁻ 区承担反偏电压，字母 i 指它承担近本征层的作用。大电流正向导通时，两端向漂移区注入载流子。电子和空穴的浓度同时升高，电导率随之上升，这就是<strong>电导调制</strong>。它降低了厚漂移区的正向压降，也使漂移区留下过剩电荷。</p>
+<p>稳态正向损耗可以按 \(P_{\mathrm F}=\langle v_{\mathrm F}i_{\mathrm F}\rangle\) 算。常电流 10 A 导通半个周期，假定该电流下压降为 1.2 V，则平均 6 W。若电流随时间变化，应按波形积分或用 \(v_{\mathrm F}\approx V_0+r_{\mathrm d}i_{\mathrm F}\) 作分段线性近似。\(V_0\) 和 \(r_{\mathrm d}\) 取自同一结温的正向曲线。</p>
+<h3>看换流时电流穿过零点以后发生什么</h3>
+<p id="def-recovery">反向恢复是已正向导通的二极管被外电路换成反向时，储存电荷抽取和复合、结重新建立阻断的过程。取从阳极流入为正，电流过零后继续为负，再回到小漏电附近。反向恢复峰值幅度是 \(I_{\mathrm{RRM}}\)，从零点到规定结束判据的时间是 \(t_{\mathrm{rr}}\)，其反向电流面积的正值是 \(Q_{\mathrm{rr}}\)。数据手册的结束判据和测试条件必须一并读。</p>
+<figure id="fig-diode-recovery">
+  <a href="courses/power-semiconductors/assets/recovery.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/recovery.svg" width="760" height="335" alt="二极管正向电流降到零，短时反向后逐渐恢复，阴影表示反向电荷"></a>
+  <figcaption>图2.6　反向恢复电流的教学波形。阴影是简化积分区，实测终点按给定判据取值。</figcaption>
+</figure>
+<div class="math-block" id="eq-recovery-charge" data-equation="2.5">\[Q_{\mathrm{rr}}=\int_{t_0}^{t_1}|i_{\mathrm D}(t)|\,dt.\]</div>
+<p>如果把 80 ns 的反向电流近似为峰值 4 A 的三角形，式（2.5）给 \(Q_{\mathrm{rr}}\approx160\,\mathrm{nC}\)。硬开通时，对侧开关电流在负载电流上叠加一部分恢复电流。\(V_{\mathrm{bus}}Q_{\mathrm{rr}}\) 可帮助估量额外能量量级。以 400 V 为例为 \(64\,\mu\mathrm J\)，但损耗在两器件间如何分配，要分别对各自端口的 \(vi\) 积分。测得的开通能量若已包含恢复影响，应避免再加一次这笔估计。</p>
+<p>肖特基二极管（SBD）的整流界面是金属与半导体势垒，正向输运以多数载流子为主。硅肖特基常用于较低电压，高压 SiC 肖特基利用材料耐场能力扩展了应用范围。其换流仍要给结电容充电，也有反向漏电。FRD 是快速恢复二极管的统称，FRED 常指快恢复外延二极管。比较器件时直接对照 \(V_{\mathrm F}\)、\(Q_{\mathrm{rr}}\)、漏电和相同的 \(I_{\mathrm F}\)、\(di/dt\)、反压、结温。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 7–8、23 页。Baliga §4.1、§5.1、§5.4.2。<a href="https://www.st.com/resource/en/application_note/dm00380483-calculation-of-turnoff-power-losses-generated-by-a-ultrafast-diode-stmicroelectronics.pdf" target="_blank" rel="noopener">ST AN5028 §1.1、§2.2</a>，核对积分、恢复条件和对侧开关的额外损耗。</p></details>
+</section>
+<section data-lesson="thyristors">
+<h2>从功率 BJT 到晶闸管的自保持</h2>
+<p>功率双极结型晶体管（BJT，有时称 GTR）用基极电流控制集电极电流。NPN 的发射结正偏时，电子从发射区注入基区，多数能穿过较薄的基区并被集电结收集。作开关时，外部驱动要提供基极电流。深饱和时集电结也会正偏，额外储存电荷使关断出现储存延迟。限制基极过驱或加速抽取电荷可缩短这段时间，代价要结合导通压降和驱动能力看。</p>
+<h3>为什么晶闸管的栅极撤掉仍然导通</h3>
+<p id="def-scr">普通可控硅整流器（SCR）是有阳极 A、阴极 K、门极 G 的 PNPN 晶闸管。把中间两层分别看成一个 PNP 和一个 NPN 的基区，每管的集电极电流能给另一管提供基极驱动。在正向阻断时中间结反偏。门极注入让两个晶体管的电流上升，互相供给的基极电流形成正反馈。一旦再生足以自行维持，撤去门极脉冲，阳极电流仍可继续。</p>
+<p>可用两个共基极电流增益 \(\alpha_{\mathrm{PNP}},\alpha_{\mathrm{NPN}}\) 理解正反馈。忽略门极以外的分流，电流平衡式整理后，阳极电流分母含 \(1-\alpha_{\mathrm{PNP}}-\alpha_{\mathrm{NPN}}\)。电流上升使增益之和接近 1 时，反馈显著增强，实际电流由外电路限制。这是解释再生的静态模型，在转折处不应用来算无穷电流。</p>
+<p id="def-holding">擎住电流 \(I_{\mathrm L}\) 是触发后撤去门极时建立自保持所需的阳极电流门槛。维持电流 \(I_{\mathrm H}\) 是充分导通后继续保持导通所需的最低阳极电流，两者对应不同过程。教学器件假定 \(I_{\mathrm L}=80\,\mathrm{mA}\)、\(I_{\mathrm H}=40\,\mathrm{mA}\)。脉冲结束时只升到 60 mA 不能保证擎住。若已经在 150 mA 稳定导通，降到 60 mA 仍高于维持门槛。</p>
+<p>让普通 SCR 关断，需要外电路将电流降低到维持条件以下，并留出载流子恢复所需的时间，再施加正向电压。交流可利用自然换流，直流要另外提供换流路径。GTO 允许用强负门极电流关断。IGCT 将低电感门极驱动与器件紧密集成，通过强门极换流提高关断控制能力。这里的门极参与大电流转移，与 MOSFET 的栅电荷驱动机制不同。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 9–12、19 页。Baliga §7.1、§7.8.2、§8.1、§8.4.5、§8.7。<a href="https://www.st.com/resource/en/application_note/cd00003854-thyristors-and-triacs-latching-current-stmicroelectronics.pdf" target="_blank" rel="noopener">ST AN303 擎住电流</a>、<a href="https://www.st.com/resource/en/application_note/cd00003853-thyristors-and-triacs-holding-current-an-important-parameter-stmicroelectronics.pdf" target="_blank" rel="noopener">ST AN302 维持电流</a>与 <a href="https://www.hitachienergy.com/products-and-solutions/semiconductors/integrated-gate-commutated-thyristors-igct" target="_blank" rel="noopener">Hitachi Energy 的 IGCT 技术说明</a>。</p></details>
+</section>
+<section data-lesson="mosfet-resistance">
+<h2>从导通电阻到沟槽栅和超结</h2>
+<p>读到 \(R_{\mathrm{DS(on)}}\) 时，可以在<a href="#course/power-semiconductors/vdmos-conduction/fig-vdmos-current">原来的元胞图</a>上逐段找压降。多个元胞的沟道并联，但每条电流路径都要经过沟道、表面积累区、元胞间窄区、漂移层和衬底。接触、金属和封装也带电阻。阈值用规定的小电流定义，选定的驱动电压和结温才决定可用的导通电阻。</p>
+<p id="def-specific-resistance">比导通电阻 \(R_{\mathrm{on,sp}}\) 是电阻乘有效芯片面积，用于比较不同面积的结构。理想均匀 n 型漂移层厚度为 \(W\)，以 \(q\mu_nN_D\) 为电导率，在充分导通、未发生高场速度饱和时有 \(R_{\mathrm{drift,sp}}=W/(q\mu_nN_D)\)。若一维未穿通层刚好在峰值场 \(E_{\mathrm c}\) 时承担 \(V_{\mathrm B}\)，三角形电场给 \(V_{\mathrm B}=E_{\mathrm c}W/2\)，且 \(E_{\mathrm c}=qN_DW/\varepsilon_s\)。消去 \(N_D,W\) 后得到漂移层的理想极限。</p>
+<div class="math-block" id="eq-drift-specific" data-equation="2.6">\[R_{\mathrm{drift,sp}}=\frac{4V_{\mathrm B}^{\,2}}{\varepsilon_s\mu_n E_{\mathrm c}^{\,3}}.\]</div>
+<p>这个推导把 \(E_{\mathrm c}\) 和 \(\mu_n\) 暂当常数。该模型下，同材料把耐压从 600 V 提高到 1200 V，漂移层比电阻变为四倍。实际临界场与掺杂相关，还有终端和元胞电阻，这个比例不能直接用来外推商用品。反过来，若只把芯片面积加倍，漂移层电阻约减半，但结电容与需要驱动的电荷通常也会上升。</p>
+<table id="table-mos-variants" class="compact-table">
+<caption>表2.3　两种结构改动解决的压降不同</caption>
+<thead><tr><th scope="col">改动</th><th scope="col">主要改变</th><th scope="col">新的约束</th></tr></thead>
+<tbody><tr><td>沟槽栅</td><td>沟道沿沟槽侧壁，可提高元胞密度并减轻传统平面元胞的窄区限制。</td><td>沟槽底部电场、栅漏耦合和工艺控制仍要核对。</td></tr>
+<tr><td>超结</td><td>漂移区由交替 p、n 柱组成。反偏时横向互耗尽，允许 n 柱在较高掺杂下承压。</td><td>柱电荷需平衡，电容随耗尽过程非线性变化。</td></tr></tbody>
+</table>
+<p id="def-superjunction">超结的近似电荷平衡可写成 \(N_Dw_n\approx N_Aw_p\)，\(w_n,w_p\) 是柱宽。若 n 柱电荷多出一截，耗尽后仍有净空间电荷，纵向电场就不再接近均匀。这个检查比只看柱宽是否相等更重要。沟槽与超结分别改变元胞和漂移区，不能因为用了其中一种，就推断另一种结构也在芯片中。</p>
+<h3>元胞里的 JFET 窄区与独立 JFET</h3>
+<p id="def-power-jfet">结型场效应晶体管（JFET）的控制栅本身是 PN 结。对典型常开型 n 沟道垂直 JFET，零栅压时已有可导电的 n 型通道，栅相对源加负压会使栅结更深反偏，两侧耗尽层挤窄通道。VDMOS 的体区间也有这种挤压，但那一段的 p-base 接源，真正可控制的外部栅隔着氧化层。两者共享的是耗尽挤压的物理机制，外部控制端结构不同。</p>
+<p>常开型 SiC JFET 可以和一只低压常关型硅 MOSFET 串接成共源共栅器件。把 JFET 栅接到 MOSFET 源。低压管关闭时，它的漏压上升，使 JFET 的源相对自身栅升高，于是 JFET 栅源电压变负并关断，主体阻断由高压 JFET 承担。外部看到常关开关，内部的栅压参考点却各不相同。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 14、16 页。Baliga §1.6–1.7、§6.6、§6.8 的漂移区极限、VDMOS 和 U-MOS 导通路径。<a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-applicationnote-600v-650v-700v-800v-coolmos-ce-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon CoolMOS CE §2.2</a> 用于对照超结电容。<a href="https://www.onsemi.com/download/application-notes/pdf/and90329-d.pdf" target="_blank" rel="noopener">onsemi AND90329 图 1–2</a>与 <a href="https://www.onsemi.com/download/application-notes/pdf/and90328-d.pdf" target="_blank" rel="noopener">AND90328 图 1</a>用于核对垂直 JFET 与共源共栅连接。</p></details>
+</section>
+<section data-lesson="switching">
+<h2>从栅电荷到硬开关损耗</h2>
+<p>导通电阻回答「已经开通以后怎样」。现在考虑电感电流在一段很短的时间内基本不变的硬开通过程。初始开关承受母线电压，电感电流由续流器件承接。门极得到电荷后，沟道形成并接手电流。电流接近负载值以后，器件端电压才大幅下降。与纯电阻负载相比，电感使电压和电流的交接更容易分开观察。</p>
+<p id="def-miller">米勒平台是漏源电压快速变化期间，栅源电压变化较慢的区段。此时门极电流有很大一部分用于改变栅漏耦合所对应的电荷。\(Q_{\mathrm g}\) 表示在指定终点和测试条件下给门极的总电荷，\(Q_{\mathrm{gd}}\) 表示门极电荷曲线中的漏压转换部分。单点小信号 \(C_{\mathrm{iss}}\) 无法代替整个栅电荷过程。</p>
+<figure id="fig-gate-switch">
+  <a href="courses/power-semiconductors/assets/gate-switch.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/gate-switch.svg" width="760" height="415" alt="硬开通时栅压到达平台、漏极电流先上升、漏源电压随后下降"></a>
+  <figcaption>图2.7　感性负载硬开通的分段示意。省去恢复电流尖峰及寄生振铃，三条纵轴各自归一化。</figcaption>
+</figure>
+<p>假设驱动为 12 V、平台约 5 V、总门极通路电阻 \(R_{\mathrm{g,tot}}=14\,\Omega\)，门极电流约 0.50 A。若条件匹配时 \(Q_{\mathrm{gd}}=20\,\mathrm{nC}\)，漏压主要转换区间可估为 \(Q_{\mathrm{gd}}/I_{\mathrm g}=40\,\mathrm{ns}\)。加大门极电阻通常拉长转换时间，降低边沿速度，同时可能增加开关能量。实际应分别读驱动器拉电流和灌电流能力、内外栅电阻以及平台电压。</p>
+<p id="def-switching-energy">开通、关断能量 \(E_{\mathrm{on}},E_{\mathrm{off}}\) 是相应时间窗内开关端口电压和电流乘积的积分。每周期各一次时，平均动态损耗是能量之和乘开关频率 \(f_{\mathrm s}\)。</p>
+<div class="math-block" id="eq-switching-energy" data-equation="2.7">\[E_{\mathrm{sw}}=\int_{\mathrm{transition}}v(t)i(t)\,dt,\qquad P_{\mathrm{sw}}=f_{\mathrm s}(E_{\mathrm{on}}+E_{\mathrm{off}}).\]</div>
+<p>示例只取图2.7的降压段。若 400 V 线性降到近零，电流恒 10 A，历时 40 ns，该段约 \(80\,\mu\mathrm J\)。50 kHz 时这一段单独贡献 4 W。完整开通还含电流上升及换流，必须把积分窗分清。漏感带来的尖峰一阶约为 \(L_\sigma|di/dt|\)。用 \(20\,\mathrm{nH}\) 与 \(1\,\mathrm{A/ns}\) 得到 20 V 量级，回路布局会改变结果。</p>
+<p>输出电容是电压的函数，独立充电时其储能由 \(E_{\mathrm{oss}}=\int_0^V v C_{\mathrm{oss}}(v)\,dv\) 给出。直接取某点电容代入二分之一 \(CV^2\) 常不合适。储能是否在开通时耗散取决于换流方式。若使用实测或厂家给出的开关能量，先核对已计入的部分，再进入<a href="#course/power-semiconductors/device-selection">综合算例</a>。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 17 页的栅与端口电容图。Baliga §6.13–6.16。<a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-gate-drive-for-power-mosfets-in-switchtin-applications-applicationnotes-en.pdf?fileId=8ac78c8c80027ecd0180467c871b3622" target="_blank" rel="noopener">Infineon 门极驱动应用笔记 §3.2</a>，以及 <a href="https://www.st.com/resource/en/application_note/dm00380483-calculation-of-turnoff-power-losses-generated-by-a-ultrafast-diode-stmicroelectronics.pdf" target="_blank" rel="noopener">ST AN5028 §2.2</a>。</p></details>
+</section>
+<section data-lesson="igbt">
+<h2>IGBT 的电导调制、场截止与尾电流</h2>
+<p id="def-igbt">绝缘栅双极型晶体管（IGBT）用 MOS 沟道控制电子注入，同时让集电极侧 p⁺ 层向 n⁻ 漂移区注入空穴。对比<a href="#course/power-semiconductors/vdmos-structure/fig-vdmos-structure">图2.1 的 MOSFET 截面</a>，关键改变是背面从 n⁺ 漏极接触变成带 p 型注入层的集电极结构。开通后，漂移区中电子、空穴同时增多，电导调制使高压器件的厚漂移区更容易输送大电流。</p>
+<figure id="fig-igbt-section">
+  <a href="courses/power-semiconductors/assets/igbt.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/igbt.svg" width="760" height="378" alt="IGBT 剖面示意，电子从顶部发射极经沟道注入，空穴从底部集电极注入漂移层"></a>
+  <figcaption>图2.8　场截止型 IGBT 的简化导通截面。箭头是载流子运动方向，层厚非比例。</figcaption>
+</figure>
+<p>工程上常在指定栅压、电流和结温下读饱和压降 \(V_{\mathrm{CE(sat)}}\)。笔记把它拆成结注入相关压降与等离子体漂移区压降，用来解释为什么并非只剩一个电阻。实际还包括沟道、接触等贡献。电流为 20 A、压降为 1.8 V、导通占空比 0.5 时，平均导通损耗约 18 W。这个例子用常压降近似，跨电流或温度范围要重读曲线。</p>
+<p id="def-tail">尾电流出现在关断时。栅压下降以后，反型沟道停止继续注入电子，漂移区中原先存下的载流子仍需抽取或复合。器件两端电压已回升时，这段电流仍然消耗关断能量。图中发射极的 n⁺、p-base、漂移区和 p⁺ 集电区还构成寄生 PNPN 路径。体区接触设计用来抑制寄生再生，避免栅失去正常控制。</p>
+<h3>阻断电场的三种设计思路</h3>
+<p>NPT 结构使耗尽区在到达集电极注入层前结束。传统 PT 利用较重掺杂的缓冲层限制电场向集电侧延伸。场截止（FS）结构在 n⁻ 漂移层与 p 型集电极之间设置场截止层，使纵向电场在背面侧较快降到接近零，允许使用较薄的漂移层。导通与关断的权衡还取决于集电极注入效率和载流子寿命。不能只凭结构名称判断某只器件的 \(V_{\mathrm{CE(sat)}}\) 或 \(E_{\mathrm{off}}\)。</p>
+<p>普通 IGBT 的反向阻断能力与产品结构有关。半桥中常另配反并联二极管供反向电流，反向导通型 IGBT 则有专门结构。把器件放进半桥之前，先画出死区内的实际续流路径，再看开关能量的测试电路是否相同。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 17–20 页。Baliga 第 9 章的基本结构、导通、关断和闩锁部分。<a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-an2011-05-igbt-modules-explanation-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon AN 2011-05 §3.10 与图 22</a>，核对能量定义、积分窗口和温度条件。</p></details>
+</section>
+<section data-lesson="wide-bandgap">
+<h2>用同一个换流问题比较硅、SiC 与 GaN</h2>
+<p>设半桥在死区内仍有电感电流。两只开关的栅极都发出关断指令，电感电流却需要路径。选材料之前，先问两件事。此时是谁在反向导电？下一只开关开通时，需要搬运的是少数载流子储存电荷、输出电容电荷，还是两者都有？</p>
+<p>从式（2.6）可见，临界场提高对同耐压下的漂移层电阻非常有利。4H-SiC 可做垂直肖特基二极管和垂直 MOSFET。许多增强型功率 GaN 器件则是横向高电子迁移率晶体管（HEMT），主要利用异质结形成的高浓度二维电子气输运。材料参数带来机会，实际的面积、导通电阻和开关能量仍取决于结构、工作电压和封装。</p>
+<table id="table-reverse-paths" class="compact-table">
+<caption>表2.4　三类器件在死区中的路径与随后换流</caption>
+<thead><tr><th scope="col">器件</th><th scope="col">栅关断时的反向路径</th><th scope="col">需关注的换流电荷</th></tr></thead>
+<tbody>
+<tr><td>硅功率 MOSFET</td><td>反向压差足够时，体二极管导通。</td><td>体二极管可能有 \(Q_{\mathrm{rr}}\)，还要考虑输出电容。</td></tr>
+<tr><td>SiC MOSFET</td><td>有 PN 体二极管，主动开通时也可由沟道分流。</td><td>恢复和电容电荷应看具体条件，与外置 SiC 肖特基不能混称。</td></tr>
+<tr><td>增强型 GaN HEMT</td><td>典型器件无 PN 体二极管。反向电压使栅相对漏端的电压升高，达到导通条件后由沟道反向导电。</td><td>无体二极管少子恢复，仍有电容换流、反向压降和寄生振铃。</td></tr>
+</tbody>
+</table>
+<p id="def-dead-time">死区是半桥互补开关之间故意留出的同时关断时间，用于减小直通风险。假设两次死区均为 100 ns，反向电流均为 10 A，压降近似 2 V，频率 100 kHz。单次能量约 \(2\,\mu\mathrm J\)，平均共 0.4 W。若每次加到 200 ns 且其他量近似不变，损耗加倍。实际两个换流方向、反向电流和结电容充放电未必相同，所需的死区下限也受驱动延迟差影响。</p>
+<p>若看到「没有反向恢复」，可以追问关断状态下的反向压降与输出电荷 \(Q_{\mathrm{oss}}\) 是否仍需计算。选型时还要核对栅极允许电压、共源电感和驱动回路、漏极峰值、动态导通电阻与热路径。不要把一种 GaN 结构的驱动方式套到所有 GaN 器件。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 19、22、24 页。Baliga §1.6、§4.4.4。<a href="https://www.ti.com/document-viewer/lit/html/SLUAAM0" target="_blank" rel="noopener">TI SLUAAM0 的 GaN 栅驱与反向恢复说明</a>、<a href="https://www.ti.com/document-viewer/lit/html/sluaam1" target="_blank" rel="noopener">TI SLUAAM1 的死区说明</a>及 <a href="https://www.infineon.com/products/power/diodes-thyristors/coolsic-schottky-diodes/1200v-g5" target="_blank" rel="noopener">Infineon SiC 肖特基产品说明</a>。</p></details>
+</section>

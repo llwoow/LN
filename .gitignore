@@ -5,6 +5,12 @@ __pycache__/
 # Generated static deployment output
 dist/
 
+# User-supplied local references and extraction files
+/resources/local/
+
+# Temporary PDF render and verification files
+/tmp/pdfs/
+
 # Reconstructed physics manuscript preview; retain the supplied canonical PDF instead.
 /courses/hs-physics/physics-001/verification/build/
 

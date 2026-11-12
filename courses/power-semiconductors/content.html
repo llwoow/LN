@@ -1,0 +1,147 @@
+<section data-lesson="vdmos-structure">
+<h2>平面栅 VDMOS 的元胞与终端</h2>
+<p>为什么叫「平面栅」，漏极却在芯片背面？栅极贴着芯片正面，控制同样位于表面的短沟道。电流经过这段沟道后，可在器件主体内沿厚度方向流动。这个结构让同一块硅既能用正面的栅开关电流，也能用较厚的硅层承担关断时的高电压。本章沿同一个截面讲清这两种状态，再用它完成<a href="#course/power-semiconductors/chapter-2-test">四道绘图题</a>。</p>
+<p id="definition-doping">读图先认掺杂。n 型硅的多数载流子是电子，p 型硅的多数载流子是空穴。上标 ⁺ 表示重掺杂，⁻ 表示轻掺杂，它们标的是掺杂浓度，不是端子电压。元胞是有源区内重复布置的基本单元，多个元胞共用源极 S、栅极 G 和漏极 D。增强型的意思是栅、源等电位时没有栅控反型沟道，需要施加足够的正栅源电压才能开启。</p>
+<p id="definition-vdmos">VDMOS 是垂直双扩散 MOSFET。平面栅覆盖硅表面，相邻的 p-base 体区之间留有 n 型窄区。双扩散形成的 n⁺ 源区边界和 p-base 边界在表面错开，两者之间正是反型沟道要跨过的距离。</p>
+<figure id="fig-vdmos-structure">
+  <a href="courses/power-semiconductors/assets/structure.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/structure.svg" width="1500" height="930" alt="三个条形元胞的非比例剖面，顶部为源极和栅极，右侧为三个浮置场限环，底部为漏极"></a>
+  <figcaption>图2.1　平面栅 VDMOS 的三个重复元胞及一侧终端。白色虚框标出由 S 金属填充的接触窗口，场限环上方覆盖绝缘介质和钝化层。结构尺寸不按比例。点图查看原尺寸。</figcaption>
+</figure>
+<h3 id="draw-vdmos-structure">从背面漏极画到正面栅极</h3>
+<p>先画贯穿整个截面的 n⁺ 衬底和背面漏极金属 D。其上是较厚的 n⁻ 漂移区。这个区域在导通时输送电流，在关断时可形成较宽的耗尽区来承受电压。把 p-base 画成从顶面进入 n⁻ 区的三个重复体区。每个体区的表面包含 n⁺ 源区和 p⁺ 体接触。图中的 n⁺ 源区约为 p-base 最大结深的四分之一，用来表现浅结，实际结深依工艺而定。三个元胞之间留出 n 型窄区。</p>
+<p>把源金属 S 画到 n⁺ 和 p⁺ 的接触窗口上。这样源区和体区都接到 S，p⁺ 重掺杂有助于降低体接触电阻。若体区有电流，体区电阻上的压降可能正偏 n⁺ 源区与 p-base 的结，触发内部寄生双极晶体管。源体短接有助于减小这个风险。再在 n⁺ 源区边缘到 p-base 外缘上方画薄栅氧和多晶硅栅 G。栅氧隔开 G 和硅，层间介质隔开 G 和 S 金属，钝化层覆盖并保护芯片正面。</p>
+<p id="definition-ring">浮置场限环是在主结外围设置的 p 型扩散环。俯视时它们围绕有源区，剖面上画成主结外侧彼此分离的 p⁺ 小区，既不接 S，也不接 G。它们通过周围的结和耗尽区耦合改变终端场分布。画图时把钝化层延伸到终端，环数与间距按示意表示。</p>
+<table id="table-vdmos-interfaces" class="compact-table">
+  <caption>表2.1　剖面上容易混淆的三处界面</caption>
+  <thead><tr><th scope="col">界面</th><th scope="col">如何判断它的作用</th></tr></thead>
+  <tbody>
+    <tr><td>多晶硅栅／薄栅氧／硅</td><td>隔着介质控制表面电荷。沟道在硅侧。</td></tr>
+    <tr><td>p-base／n⁻ 漂移区</td><td id="definition-passage-8">关断时承受反偏。源体短接后，这个结也构成端子间的体二极管。</td></tr>
+    <tr><td>n⁻ 漂移区／n⁺ 衬底</td><td>同为 n 型。掺杂浓度不同，职责分别偏向耐压和低阻接触。</td></tr>
+  </tbody>
+</table>
+<p>用图2.1和表2.1检查自己的截面。若栅线碰到了源金属，栅就失去独立控制电位。若 n⁺ 源区穿出了 p-base 接到 n⁻ 漂移区，源漏之间就出现绕过沟道的通路。正确的结构把这段连接留给<a href="#course/power-semiconductors/vdmos-conduction/definition-inversion">栅压建立的沟道</a>，而关断时由<a href="#course/power-semiconductors/vdmos-blocking/definition-depletion">反偏主结</a>阻断。</p>
+</section>
+<section data-lesson="vdmos-conduction">
+<h2>正栅压怎样接通漏极与源极</h2>
+<p id="definition-ports">以源极 S 为参考，栅源电压 \(V_{GS}=V_G-V_S\)，漏源电压 \(V_{DS}=V_D-V_S\)。漏极电流 \(I_D\) 取流入漏极 D 为正。题面给 \(V_{GS}=15\,\mathrm V\) 和 \(V_{DS}>0\)，以下假定 15 V 在允许范围内且高于阈值，并用小正漏压展示连续导电路径。</p>
+<p>先把漏极电压放在一边，只提高 G 相对于 S 的电压。栅和硅被薄氧化层隔开，像电容的两侧。栅上的正电荷使 p-base 表面的空穴向体内退开，表面先剩下固定的负离子。继续提高栅压，表面能聚集从相邻 n⁺ 源区补充的电子。稳态下栅通过电场控制硅表面的电荷，电子走在硅里。</p>
+<p id="definition-inversion">反型沟道是 p-base 硅表面形成的电子导电薄层。表面从以空穴为多数变成以电子为多数，因此称为反型。连通的薄层跨过 n⁺ 源区到 n⁻ 漂移区之间的 p-base 表面。栅下本来就是 n 型的那一段可以积累更多电子，称为积累层。图2.2把这两段放在同一个局部截面上。</p>
+<figure id="fig-vdmos-channel">
+  <a href="courses/power-semiconductors/assets/zoom.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/zoom.svg" width="1300" height="450" alt="局部放大显示薄栅氧下的反型沟道和积累层"></a>
+  <figcaption>图2.2　小正漏压时的表面导电层。蓝段位于 p-base 表面，绿段位于 n⁻ 表面。薄栅氧及彩色表面薄层均示意加厚。点图查看原尺寸。</figcaption>
+</figure>
+<p id="definition-jfet">相邻 p-base 之间的 n 型窄区称为 JFET 收缩区。两侧耗尽区会挤占可供电流流过的截面，使这里产生额外电阻。图2.3中，传统电流从背面 D 经 n⁺ 衬底、n⁻ 漂移区和这个窄区上行，再沿栅下积累层与反型沟道进入 n⁺ 源区和 S 金属。电子的净移动方向与传统电流相反。</p>
+<figure id="fig-vdmos-current">
+  <a href="courses/power-semiconductors/assets/current.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/current.svg" width="1300" height="930" alt="传统电流由背面漏极上行，经窄区后沿表面反型沟道分流到源极"></a>
+  <figcaption>图2.3　橙色箭头为 D → S 的传统电流。硅侧绿色积累层和蓝色 n 型反型层示意加厚，流线与栅氧分开。点图查看原尺寸。</figcaption>
+</figure>
+<p>沿箭头回查<a href="#course/power-semiconductors/vdmos-structure/fig-vdmos-structure">图2.1</a>。从 D 向上画到相邻 p-base 之间，再拐向贴着氧化层的硅表面，横穿沟道后进入 n⁺ 源区。p-base 通过 p⁺ 体接触连到 S，漂移区通向较高电位的 D，体二极管处于反偏。因此主路径沿反型沟道绕过这个结，同时避开绝缘的栅氧和浮置的场限环。</p>
+<p>保持正栅压，将漏压从小正值降到零，沟道仍在，但沿沟道的驱动电场消失，理想稳态漏流降为零。若反过来提高漏压，虽然驱动力变大，漏端能留住的电子却会减少。<a href="#course/power-semiconductors/vdmos-output/definition-overdrive">下一节</a>把这两件事写进同一个电流模型。</p>
+</section>
+<section data-lesson="vdmos-output">
+<h2>从沟道电荷推到输出特性</h2>
+<p><a href="#course/power-semiconductors/vdmos-conduction/fig-vdmos-channel">图2.2</a>画出的是已经形成的反型层。现在固定栅压，让漏压逐渐升高。沟道在源端仍然接近源极电位，但靠漏端的地方电位升高。栅相对于那里的电压随之降低，所以同一条沟道在两端保有的电子量不同。</p>
+<p id="definition-overdrive">\(V_{\mathrm{th}}\) 是模型中的阈值电压。栅过驱动电压 \(V_{\mathrm{ov}}=V_{GS}-V_{\mathrm{th}}\) 表示源端超过反型阈值的电压余量。以下取 \(V_{\mathrm{ov}}>0\)，用长沟道近似把垂直方向的表面电荷和沿沟道的输运分别计算。阈值与迁移率视为常量，暂略去体电荷变化、串联压降和沟道长度调制。</p>
+<p id="definition-passage-2">从源端到漏端取坐标 \(x\)，沟道长度为 \(L\)，局部电压 \(v(x)\) 相对源端测量。栅到该点可用的过驱动变为 \(V_{\mathrm{ov}}-v(x)\)。在尚有反型的区段，按单位面积栅氧电容 \(C_{\mathrm{ox}}\) 乘这份电压余量，估算电子面电荷幅值 \(\lvert Q_{\mathrm{inv}}\rvert\)，单位为 \(\mathrm{C/m^2}\)。</p>
+<p id="definition-channel-transport">沿沟道的电场是 \(-dv/dx\)，电子向电位升高的方向漂移，速率近似为 \(\mu_n\,dv/dx\)，其中 \(\mu_n\) 是反型层有效迁移率。取跨过一条横向截线的总沟道宽度为 \(W_{\mathrm{eff}}\)。面电荷幅值乘速率和宽度，单位正好是 \(\mathrm{C/s}\)，给出从漏极流入的传统电流 \(I_D\)。</p>
+<div class="math-block" id="eq-channel-charge" data-equation="2.1">\[|Q_{\mathrm{inv}}| \simeq C_{\mathrm{ox}}(V_{\mathrm{ov}}-v),\qquad I_D=\mu_n W_{\mathrm{eff}} |Q_{\mathrm{inv}}|\frac{dv}{dx}.\]</div>
+<p>栅氧隔绝稳态栅电流，沿沟道的 \(I_D\) 因此处处相同。在沟道尚未夹断、串联压降忽略的范围，端点是 \(v(0)=0\) 和 \(v(L)=V_{DS}\)。把式（2.1）乘 \(dx\)，把右侧的 \((dv/dx)\,dx\) 换成 \(dv\)，就能直接对电压积分。</p>
+<div class="math-block">\[\begin{aligned}I_D L&=\mu_n C_{\mathrm{ox}}W_{\mathrm{eff}}\int_0^{V_{DS}}(V_{\mathrm{ov}}-v)\,dv\\&=\mu_n C_{\mathrm{ox}}W_{\mathrm{eff}}(V_{\mathrm{ov}}V_{DS}-V_{DS}^2/2).\end{aligned}\]</div>
+<p id="definition-passage-3">将上式除以 \(L\)，令 \(\beta=\mu_n C_{\mathrm{ox}}W_{\mathrm{eff}}/L\)，单位为 \(\mathrm{A/V^2}\)。当 \(V_{DS}\) 恰等于 \(V_{\mathrm{ov}}\)，漏端过驱动为零，这个点叫沟道夹断点。再提高漏压，额外电压主要落在漏端高场区，从沟道进入该区的电子仍被扫到漏极。若有效沟道长度近似不变，就用夹断点的电流作为饱和段的值，得到式（2.2）。</p>
+<div class="math-block" id="eq-output" data-equation="2.2">\[I_D=\begin{cases}\beta(V_{\mathrm{ov}}V_{DS}-V_{DS}^2/2),&0\le V_{DS}\lt V_{\mathrm{ov}},\\[2pt]\beta V_{\mathrm{ov}}^2/2,&V_{DS}\ge V_{\mathrm{ov}}.\end{cases}\]</div>
+<p>例如在 \(V_{DS}=V_{\mathrm{ov}}/2\) 时，式（2.2）给 \(I_D=3\beta V_{\mathrm{ov}}^2/8\)，已经达到同一栅压下饱和电流的 75%。若沿原点的直线斜率外推，会算成 \(\beta V_{\mathrm{ov}}^2/2\)。差异来自漏端反型层逐渐变薄，所以「线性区」只有靠近原点时才近似直线。</p>
+<h3 id="worked-output-plot">从四个夹断点画出整张图</h3>
+<p>用一组教学数值从头画一遍。设 \(V_{\mathrm{th}}=3\,\mathrm V\)、\(\beta=1\,\mathrm{A/V^2}\)，取栅压 4、5、6、7 V，过驱动就是 1、2、3、4 V。四个夹断点 \((V_{DS},I_D)\) 依次为 \((1,0.5)\)、\((2,2)\)、\((3,4.5)\)、\((4,8)\)，横轴单位 V，纵轴单位 A。这些值用于练习作图。</p>
+<p>以栅压 5 V 的一条线为例。式（2.2）给出 \(V_{DS}\) 为 0、1、1.5、2 V 时，电流分别是 0、1.5、1.875、2 A。把它们连成先陡后缓的曲线，到 2 V 后沿 2 A 画水平线。其余三条同法。过驱动越大，原点附近的斜率 \(\beta V_{\mathrm{ov}}\) 越大，曲线由低到高标为 4、5、6、7 V。</p>
+<p>连接四个夹断点的虚线满足 \(I_{D,\mathrm{sat}}=\beta V_{DS,\mathrm{sat}}^2/2\)。对同一条栅压曲线，夹断点左侧都是非饱和区，也就是题面所称的线性区，只有原点附近才近似直线。夹断点右侧进入饱和。</p>
+<figure id="fig-vdmos-output">
+  <a href="courses/power-semiconductors/assets/output.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/output.svg" width="1300" height="775" alt="四条从原点出发的输出特性，栅压越高曲线越高，夹断点用虚线连接"></a>
+  <figcaption>图2.4　用式（2.2）绘制的四条理想输出曲线。纵轴是漏极电流，横轴是漏源电压，虚线连接各曲线夹断点。点图查看原尺寸。</figcaption>
+</figure>
+<p>最后把端子电压和沟道压降分开看。假设只在沟道漏端和外部 D 之间串联 \(0.2\,\Omega\)，保持上例 5 V 栅压，在夹断电流 2 A 时，电阻分掉 0.4 V。因此外部 D 要到 2.4 V，沟道才达到原来的 2 V 夹断条件。实际器件还会有源区、漂移区和窄区的压降以及有效沟道长度变化，所以外部转折位置与饱和段斜率可能偏离图2.4。</p>
+</section>
+<section data-lesson="vdmos-blocking">
+<h2>从 PN 结耗尽到 1200 V 等势线</h2>
+<p>让 G、S 都处于 0 V 并把 D 提到 +1200 V。增强型沟道关闭。按<a href="#course/power-semiconductors/vdmos-structure/fig-vdmos-structure">图2.1</a>找电位，p-base 通过体接触接近 S 电位，n⁻ 漂移区通向高电位的 D。PN 结的 n 侧外加电位高于 p 侧时，叫作反偏。</p>
+<p id="definition-depletion">反偏把主结两侧的多数载流子拉离结面，扩大了自由载流子稀少的耗尽区。n 侧失去可移动电子后留下固定的正施主离子，p 侧失去空穴后留下固定的负受主离子。远离终端的一维截面上，两侧空间电荷量大小近似相等。每单位体积内固定电荷越少，就需要更长的一段来凑足电荷量，因此轻掺杂的 n⁻ 漂移区承担主要的耗尽宽度和电压降。</p>
+<p id="definition-npt">未穿通（NPT）近似取耗尽层在到达 n⁺ 衬底前结束。在远离终端的一维单边均匀结模型中，从主结 n 侧向背面取 \(y\)，耗尽宽度为 \(W\)，施主浓度为 \(N_D\)，半导体介电常数为 \(\varepsilon_s\)，元电荷 \(q\) 取正。令 \(\psi\) 为电势，\(E_y\) 为沿深度方向的电场分量。忽略内建电压与 p 侧耗尽压降，取 \(\psi(0)=0\)，且耗尽边界的电场 \(E_y(W)=0\)。</p>
+<p>用高斯定律看电场为何是斜线。取横截面积相同、厚度为 \(dy\) 的薄片。电场通量从前一面到后一面的增加量，除以截面积，等于这一薄片的净电荷密度乘 \(dy/\varepsilon_s\)。耗尽区内近似处处留下同样多的正施主，电荷密度为 \(qN_D\)，所以 \(E_y\) 随 \(y\) 以固定斜率增加。从耗尽边界的零场往回算，得到式（2.3）。</p>
+<div class="math-block" id="eq-blocking-field" data-equation="2.3">\[\frac{dE_y}{dy}=\frac{qN_D}{\varepsilon_s},\qquad E_y=-\frac{d\psi}{dy}=-\frac{qN_D}{\varepsilon_s}(W-y).\]</div>
+<p id="definition-passage-3">由式（2.3），电场分量为负，方向指向主结。由于 \(d\psi/dy=-E_y\)，电势增量等于从主结到该位置对场强积分。靠主结时每增加一点深度就累积较多电压，靠耗尽边界时同样的深度只增加少量电压。把 \(y=W\) 代入积分结果，耗尽区总压降 \(V_R=\psi(W)=qN_DW^2/(2\varepsilon_s)\)。再将任一点的电势除以 \(V_R\)，令 \(u=y/W\)，得到无量纲的位置关系。</p>
+<div class="math-block" id="eq-blocking-potential" data-equation="2.4">\[\psi(y)=\frac{qN_D}{\varepsilon_s}\left(Wy-\frac{y^2}{2}\right),\qquad \frac{\psi}{V_R}=2u-u^2,\quad 0\le u\le 1.\]</div>
+<p>取 \(V_R=1200\,\mathrm V\)。例如 300 V 对应 \(\psi/V_R=1/4\)，解得 \(u=1-\sqrt{3/4}\approx0.134\)。用同一步骤可得表2.2。主结附近电场大，同样的 300 V 只需较短距离。靠近 \(W\) 时电场趋零，900 到 1200 V 对应最后一半耗尽宽度。</p>
+<table id="table-equipotential-depth" class="compact-table">
+  <caption>表2.2　一维近似下的等势线位置</caption>
+  <thead><tr><th scope="col">电势 / V</th><th scope="col">深度 \(y/W\)</th><th scope="col">相对前一电势线的距离 / \(W\)</th></tr></thead>
+  <tbody><tr><td>300</td><td>0.134</td><td>0.134（自 0 V 起）</td></tr><tr><td>600</td><td>0.293</td><td>0.159</td></tr><tr><td>900</td><td>0.500</td><td>0.207</td></tr><tr><td>1200</td><td>1.000</td><td>0.500</td></tr></tbody>
+</table>
+<figure id="fig-vdmos-blocking">
+  <a href="courses/power-semiconductors/assets/blocking.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/blocking.svg" width="1300" height="930" alt="中心区按一维未穿通模型标出四个电位。紫色虚线为中心区 1200 V 耗尽边界，背面漏极全宽为 1200 V，终端渐隐虚线示意走向"></a>
+  <figcaption>图2.5　中心区按一维未穿通模型画出四个电位。紫色虚线为 1200 V 耗尽边界。模型中，下方未耗尽的 n⁻ 区与背面 D 金属同为 +1200 V。终端渐隐虚线仅示意走向。点图查看原尺寸。</figcaption>
+</figure>
+<h3 id="draw-equipotential">把一维位置画回芯片</h3>
+<p>在第 1 题的截面上先标 G、S 为 0 V、背面 D 为 +1200 V。在有源区取一条向下的深度线，从 p-base／n⁻ 主结的 n 侧量到耗尽边界。按表2.2在这段长度的约 13%、29% 和 50% 处标记 300、600、900 V，再以这些位置为基准画近似平行于表面的线。每两条线相差 300 V，间距向下变大，正好对应场强逐渐减小。</p>
+<p>在这个近似里，耗尽边界到漏极之间的电场取零，沿深度没有电压降。因此，中心区耗尽边界和下方未耗尽的 n⁻ 区都取漏极电势 +1200 V。图2.5用紫色虚线标出模型边界，并用整条紫色实线标出背面 D 金属的施加电位。靠近终端时，300、600、900 V 的渐隐虚线只示意弯曲方向，实际延伸位置和环电位需通过二维求解确定。</p>
+<p id="definition-passage-17">表2.2给的是所选一维模型的相对间距。终端线形和环电位还取决于掺杂、几何和界面电荷，需要二维分析。题目给出的关断额定漏源电压是 \(V_{DSS}=1200\,\mathrm V\)，额定值不足以倒推实际雪崩点。若漂移层已全耗尽，\(E_y(W)=0\) 这条边界条件需要重新检查。</p>
+</section>
+<section data-lesson="chapter-2-test">
+<h2>第二章测试</h2>
+<p>四题均以同一个 N 沟道增强型平面栅功率 MOSFET 为对象。先画第 1 题的截面，再各复制一份用于第 3、4 题。每题下方可展开完整画法和参考图，站内练习可保存草稿。</p>
+<div class="homework-navigation"><label for="homework-question">按题定位</label>
+<select id="homework-question" data-homework-jump><option value="1">1 芯片横截面</option><option value="2">2 输出特性</option><option value="3">3 关断等势线</option><option value="4">4 导通电流</option></select></div>
+<h3 id="question-1">1 芯片横截面</h3>
+<p>绘制 N 沟道增强型平面栅功率 MOSFET 芯片横截面结构示意图，有源区至少绘制三个重复元胞，标注 n⁺ 源区、p⁺ 体接触区、p-base 区、n⁻ 漂移区和 n⁺ 衬底，并标出源极金属、栅极多晶硅及栅氧层。终端区绘制场限环结构，同时画出芯片正面钝化层和背面金属电极层。</p>
+<button type="button" class="secondary-button" data-open-practice data-practice-course="power-semiconductors" data-practice-section="chapter-2-test" data-practice-question="psd-ch2-q1">记录第 1 题</button>
+<details><summary>参考解答</summary>
+  <ol>
+    <li>从背面向上画漏极金属 D、n⁺ 衬底、n⁻ 漂移区。把有源区与一侧终端分开。</li>
+    <li>在有源区画三个相同的 p-base 体区。各体区内画 n⁺ 源区和 p⁺ 体接触，源金属 S 通过接触窗口同时接到二者。</li>
+    <li>在源区边缘和 p-base 外缘上方画薄栅氧与多晶硅栅 G，用层间绝缘介质隔开 G 与 S 金属。在终端画彼此分离的浮置 p⁺ 环，最后画覆盖正面的钝化层。</li>
+  </ol>
+  <a href="courses/power-semiconductors/assets/structure.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/structure.svg" width="1500" height="930" loading="lazy" alt="三元胞平面栅截面，右侧为浮置场限环，底部为背面漏极金属"></a>
+  <p>对照图核查，n⁺ 源区是否被 p-base 包住，虚框内的 S 金属是否同时接到 n⁺ 和 p⁺。再检查栅氧与层间介质的落点，以及场限环是否独立于源金属。点图可看原尺寸。<a href="#course/power-semiconductors/vdmos-structure/draw-vdmos-structure">回看截面画法</a></p>
+</details>
+<h3 id="question-2">2 输出特性</h3>
+<p>绘制功率 MOSFET 的输出特性曲线，横坐标为漏源电压 \(V_{DS}\)，纵坐标为漏极电流 \(I_D\)，在同一坐标系中至少画出四条不同 \(V_{GS}\) 下的 \(I_D\)–\(V_{DS}\) 特性曲线，标明各曲线对应 \(V_{GS}\) 的大小关系，使用虚线区分线性区与饱和区。</p>
+<button type="button" class="secondary-button" data-open-practice data-practice-course="power-semiconductors" data-practice-section="chapter-2-test" data-practice-question="psd-ch2-q2">记录第 2 题</button>
+<details><summary>参考解答</summary>
+  <ol>
+    <li>横轴写 \(V_{DS}\)，纵轴写 \(I_D\)。四条曲线都从原点出发，按 \(V_{\mathrm{th}}\lt V_{GS1}\lt V_{GS2}\lt V_{GS3}\lt V_{GS4}\) 由低到高标记。</li>
+    <li>对每条线，在横坐标 \(V_{GS}-V_{\mathrm{th}}\) 处放夹断点，纵坐标随过驱动的平方增加。把原点和夹断点连成斜率逐渐减小的曲线，过夹断点后在理想模型中画近水平的饱和段。</li>
+    <li>用虚线串起四个夹断点。虚线左侧标「线性区（非饱和区）」，右侧标「饱和区」。只有靠近原点时才近似直线。</li>
+  </ol>
+  <a href="courses/power-semiconductors/assets/output.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/output.svg" width="1300" height="775" loading="lazy" alt="四条输出特性共用原点，夹断点由左下到右上，虚线区分非饱和与饱和区"></a>
+  <p>检查最高栅压的曲线是否在最上方、最晚进入饱和，虚线是否经过每一条曲线的夹断点。点图可看原尺寸。<a href="#course/power-semiconductors/vdmos-output/worked-output-plot">回看带数值的作图算例</a></p>
+</details>
+<h3 id="question-3">3 关断等势线</h3>
+<p>假设某功率 MOSFET 的额定漏源电压 \(V_{DSS}\) 为 1200 V，源极为参考电位。在第 1 题所绘芯片横截面结构的基础上，绘制器件在 \(V_{GS}=0\,\mathrm V\)、\(V_{DS}=1200\,\mathrm V\) 条件下 300 V、600 V、900 V 和 1200 V 的等势线。</p>
+<button type="button" class="secondary-button" data-open-practice data-practice-course="power-semiconductors" data-practice-section="chapter-2-test" data-practice-question="psd-ch2-q3">记录第 3 题</button>
+<details><summary>参考解答</summary>
+  <ol>
+    <li>把原截面的 S、G 标为 0 V，把漏极金属 D 标为 +1200 V。此时沟道关闭，接 S 的 p-base 与通向 D 的 n⁻ 漂移区形成反偏主结。</li>
+    <li>在中心区从主结 n 侧向下量耗尽宽度。在约 13%、29% 和 50% 深度处画 300、600、900 V。用虚线标出中心区的 1200 V 耗尽边界，其下的未耗尽区在模型中同为 +1200 V。沿背面 D 金属全宽标出题设的 +1200 V。</li>
+    <li>靠终端用渐隐虚线示意 300、600、900 V 的弯曲方向。实际延伸位置及浮置环电位需要给出器件几何、掺杂等条件后做二维求解。</li>
+  </ol>
+  <a href="courses/power-semiconductors/assets/blocking.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/blocking.svg" width="1300" height="930" loading="lazy" alt="等势线在主结附近较密。中心区 1200 V 耗尽边界以虚线绘制，漏极金属全宽为 1200 V，终端虚线渐隐"></a>
+  <p>检查最密的等差电势线是否靠近主结，中心区的 1200 V 模型边界是否与 D 金属的施加电位分开标注。点图可看原尺寸。<a href="#course/power-semiconductors/vdmos-blocking/draw-equipotential">回看电位和间距如何确定</a></p>
+</details>
+<h3 id="question-4">4 导通电流</h3>
+<p>在第 1 题所绘芯片横截面结构的基础上，绘制功率 MOSFET 在 \(V_{GS}=15\,\mathrm V\)、\(V_{DS}>0\) 条件下芯片内部的主要电流路径，并用箭头标明电流方向。</p>
+<button type="button" class="secondary-button" data-open-practice data-practice-course="power-semiconductors" data-practice-section="chapter-2-test" data-practice-question="psd-ch2-q4">记录第 4 题</button>
+<details><summary>参考解答</summary>
+  <p>假定 15 V 在允许范围内且高于阈值，选择小正漏压来画连续沟道的代表情形。先在各栅下的 p-base 表面标出反型沟道，连起 n⁺ 源区与 n⁻ 漂移区。</p>
+  <p>沿传统电流方向画箭头。由 D 向上，经过 n⁺ 衬底、n⁻ 漂移区和相邻体区间的 JFET 窄区，转到栅下硅表面，沿积累层和反型沟道分流进入 n⁺ 源区，再进 S 金属。电子净移动方向与这些箭头相反。</p>
+  <a href="courses/power-semiconductors/assets/current.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/current.svg" width="1300" height="930" loading="lazy" alt="传统电流由背面漏极上行，在元胞间转向硅表面，并从沟道流入源极"></a>
+  <p>检查橙色流线是否在硅侧沿绿色积累层与蓝色反型层进入 n⁺ 源区，横向段与栅氧要能分辨。若漏压升高到使漏端夹断，应把那一小段改画成高场区，传统电流方向仍为 D 到 S。点图可看原尺寸。<a href="#course/power-semiconductors/vdmos-conduction/fig-vdmos-channel">回看栅下局部放大图</a></p>
+</details>
+<details class="review-notes">
+  <summary>资料出处（备查）</summary>
+  <p>四题来自用户提供的《功率半导体器件》第 2 章测试 v1.7WDY。课程以笔记 PDF 第 13–16 页的功率 MOSFET 内容为主，并参考第 7 页的反向阻断与第 21 页的终端结构。</p>
+  <ul>
+    <li>Baliga《Fundamentals of Power Semiconductor Devices》，§6.2.2 图 6.3、§6.6 图 6.38–6.39、§6.12 核对元胞、导通与输出特性。§3.2、§3.6.3、图 6.11–6.12 核对耗尽电场与终端。</li>
+    <li>Sze《半导体器件物理》第 3 版，§2.2.1、§6.2.2 图 6.9、§6.5.6 图 6.39(a) 核对结耗尽、沟道特性与器件结构。</li>
+    <li>Quirk《半导体制造技术》，§9.3 图 9.29 核对层间介质与钝化层的区别。</li>
+  </ul>
+</details>
+</section>

@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "documentWidth": 375,
+      "brokenInternalLinks": [],
+      "mathErrors": 0,
+      "figures": 5,
+      "sheets": 9
+    },
+    {
+      "width": 1000,
+      "documentWidth": 985,
+      "brokenInternalLinks": [],
+      "mathErrors": 0,
+      "figures": 5,
+      "sheets": 9
+    },
+    {
+      "width": 1440,
+      "documentWidth": 1425,
+      "brokenInternalLinks": [],
+      "mathErrors": 0,
+      "figures": 5,
+      "sheets": 9
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "pdf": "output/pdf/功率半导体器件-第二章测试答案-完整版.pdf",
+  "pdf_pages": 9,
+  "pdf_sha256": "15269b314a5135dc39c6c4e37b316ead766efac74a3f90314355aae19a2113a2",
+  "reference_targets_checked": [
+    "#fig-structure",
+    "#fig-blocking",
+    "#fig-current",
+    "#eq-1"
+  ],
+  "mobile_figure_scroll": true
+}
