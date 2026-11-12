@@ -60,16 +60,37 @@ class ScientificEMCReview(unittest.TestCase):
         self.assertAlmostEqual(math.hypot(3, 4) / 10 * 100, 50.0)
 
 
-    def test_magnetic_flux_parallel_model_and_eddy_turn(self):
-        r1, rs, mu_r = 20.0, 22.0, 200.0
-        linear = (mu_r * (rs**2 - r1**2) + r1**2) / rs**2
-        self.assertAlmostEqual(linear, 17200 / 484, places=12)
-        self.assertAlmostEqual(20 * math.log10(linear), 31.0, delta=0.1)
+    def test_transverse_cylinder_from_interface_conditions_and_eddy_turn(self):
+        # Solve the four interface equations independently of the closed-form answer.
+        a,b,mu=20.0,22.0,200.0
+        rows=[[1,-1,-1/a**2,0,0],[1,-mu,mu/a**2,0,0],
+              [0,1,1/b**2,-1/b**2,1],[0,mu,-mu/b**2,1/b**2,1]]
+        for col in range(4):
+            pivot=max(range(col,4),key=lambda r:abs(rows[r][col]))
+            rows[col],rows[pivot]=rows[pivot],rows[col]
+            value=rows[col][col];rows[col]=[x/value for x in rows[col]]
+            for r in range(4):
+                if r!=col:
+                    factor=rows[r][col]
+                    rows[r]=[x-factor*y for x,y in zip(rows[r],rows[col])]
+        A,B,C,D=[row[-1] for row in rows]
+        ratio=4*mu/((mu+1)**2-(mu-1)**2*(a/b)**2)
+        self.assertAlmostEqual(A,ratio,places=12)
+        self.assertAlmostEqual(A,B+C/a**2,places=12)
+        self.assertAlmostEqual(A,mu*(B-C/a**2),places=12)
+        self.assertAlmostEqual(20*math.log10(1/A),19.6373919583,places=7)
+        for permeability,inner in [(1,a),(mu,b)]:
+            self.assertAlmostEqual(4*permeability/((permeability+1)**2-(permeability-1)**2*(inner/b)**2),1)
         resistance, inductance, mutual = .1, 1e-6, .2e-6
         response = lambda f: 2 * math.pi * f * mutual / math.hypot(resistance, 2 * math.pi * f * inductance)
         self.assertLess(response(1000), response(1e5))
         self.assertAlmostEqual(response(1e8), mutual / inductance, delta=.001)
         # Neither current ratio nor simple cylinder formula certifies actual enclosure shielding.
+
+    def test_active_filter_phase_requires_complex_sum(self):
+        self.assertAlmostEqual(abs(1/(1+9)),.1)
+        self.assertAlmostEqual(abs(1/(1-9)),.125)
+        self.assertAlmostEqual(abs(1/(1-.9)),10)
 
     def test_probes_near_field_and_calibrated_current(self):
         f, m, current = 1e5, .5e-6, .1

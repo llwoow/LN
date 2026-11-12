@@ -95,7 +95,7 @@ class NewEMCAdditions(unittest.TestCase):
         close(.5e-12 * 2 / 1e-9 * 50, .05)                   # 8.3 V
         close(.2e-6 * 1000 / 1e-6, 200)                      # 9.1 V
         close(600 + 2 * (30 - 10), 640)                       # 9.3 V
-        close(640 * 20 * 10e-6, .128)                          # 9.3 J
+        close(640 * 30 * 10e-6, .192)                          # 9.3 J
         close(15e-9 * .5 / 1e-9, 7.5)                        # 9.4 V
         close(math.sqrt(10**2 + 3**2 + 4**2), 11.18033989)   # 10.1 A
         close((10**2 + 3**2 + 4**2) / 10**2, 1.25)          # 10.1 copper ratio

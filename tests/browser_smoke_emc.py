@@ -1,4 +1,4 @@
-"""Chromium verification for every EMC lesson + four lesson-local models.
+"""Chromium verification for every EMC lesson and its lesson-local models.
 
 Starts a real HTTP server from the checked-out LN branch. No deployment required.
 """
@@ -74,6 +74,19 @@ def main():
                     audit.append({"section":id, "viewport":name, "ok":True})
                 assert not errors, errors
                 assert not http_errors, http_errors
+                # Native symbol definitions must open, locate the actual source, and return.
+                page.goto(base + "#course/electromagnetic-compatibility/emc-2-2")
+                symbol = page.locator('math [data-definition="emc-symbol-c12"]').first
+                symbol.wait_for(); symbol.scroll_into_view_if_needed()
+                y = symbol.bounding_box()['y']; symbol.click(force=True)
+                popup = page.locator('#definition-popover:popover-open'); popup.wait_for()
+                assert '耦合电容' in popup.inner_text()
+                page.locator('.definition-source-link').click()
+                page.locator('.reference-target[data-definition-source]').wait_for()
+                page.locator('.reference-return').click()
+                page.wait_for_function('document.querySelector(".reference-return").hidden')
+                page.wait_for_timeout(100)
+                assert abs(symbol.bounding_box()['y'] - y) < 4
                 # Exercise every new EMC diagnostic through actual radio/checkbox/numeric controls.
                 emc_questions = [q for q in json.loads((ROOT / "courses/practice/bank.json").read_text())["questions"]
                                  if q["course"] == "electromagnetic-compatibility"]

@@ -29,14 +29,15 @@ jobs:
       - name: Full native Node test suite
         run: |
           set -e
-          find tests -maxdepth 1 -name '*.test.cjs' -print -exec node '{}' \;
+          for test_file in tests/*.test.cjs; do node "$test_file"; done
       - name: Check formula and figure index
         run: python scripts/build-reference-index.py --check
       - name: Check glossary index
         run: python scripts/build-glossary.py --check
-      - name: Check static build without writing tracked files
+      - name: Static build and generated data consistency
         run: |
-          python scripts/build-static.py --help || true
+          python scripts/build-static.py
+          git diff --exit-code -- courses/practice/bank.js resource-library.js courses/highschool
   emc-browser-desktop-mobile:
     runs-on: ubuntu-latest
     timeout-minutes: 30

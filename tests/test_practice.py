@@ -25,7 +25,7 @@ class PracticeContent(unittest.TestCase):
             'emc-shield-absorption':8.686*Fraction(10,2),
             'emc-esd':Fraction(1,2)*100e-12*2000**2*1000,
             'emc-harmonics':math.sqrt(3**2+4**2)/10*100,
-            'emc-magnetic-cylinder':20*math.log10((200*(22**2-20**2)+20**2)/22**2),
+            'emc-magnetic-cylinder':20*math.log10((201**2-199**2*(20/22)**2)/(4*200)),
             'emc-probe-emf':2*math.pi*100000*.5e-6*.1*1000,
             'emc-capacitor-resonance':1/(2*math.pi*math.sqrt(1e-9*1e-6))/1e6,
             'emc-ground-step':100*100*.8/(2*math.pi*2*(2+.8)),
