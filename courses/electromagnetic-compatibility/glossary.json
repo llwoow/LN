@@ -1,0 +1,695 @@
+{
+  "lazy": true,
+  "terms": [
+    {
+      "id": "emc",
+      "title": "电磁兼容（EMC）",
+      "aliases": [
+        "电磁兼容",
+        "EMC"
+      ],
+      "section": "emc-1-2",
+      "match": "电磁兼容（EMC）",
+      "description": "设备在电磁环境中保持规定功能，同时不对环境造成不可接受的电磁干扰。",
+      "english": "Electromagnetic Compatibility"
+    },
+    {
+      "id": "emi",
+      "title": "电磁干扰（EMI）",
+      "aliases": [
+        "电磁干扰",
+        "EMI"
+      ],
+      "section": "emc-1-3",
+      "match": "电磁干扰（EMI）",
+      "description": "使电气、电子系统或通信性能降低的电磁扰动。",
+      "english": "Electromagnetic Interference"
+    },
+    {
+      "id": "common-mode",
+      "title": "共模干扰",
+      "aliases": [
+        "共模干扰",
+        "共模电流"
+      ],
+      "section": "emc-1-2",
+      "match": "共模电流可在多根导线上同向流动",
+      "description": "多根导线上同向流动、经机壳地或寄生路径返回的干扰电流分量。",
+      "english": "Common Mode"
+    },
+    {
+      "id": "coupling",
+      "title": "耦合",
+      "aliases": [
+        "耦合"
+      ],
+      "section": "emc-2-1",
+      "match": "耦合是干扰能量",
+      "description": "扰动能量从一个回路或空间区域传递到另一个的过程。",
+      "english": "Coupling"
+    },
+    {
+      "id": "pe",
+      "title": "保护接地",
+      "aliases": [
+        "保护接地"
+      ],
+      "section": "emc-3-1",
+      "match": "保护接地关注故障电流",
+      "description": "为触电防护建立的保护连接，不等于任意信号参考电位。",
+      "english": "Protective Earth"
+    },
+    {
+      "id": "se",
+      "title": "屏蔽效能",
+      "aliases": [
+        "屏蔽效能"
+      ],
+      "section": "emc-4-4",
+      "match": "屏蔽效能衡量屏蔽前后",
+      "description": "在指定测量条件下屏蔽前后同一电磁量的比值，常以分贝表示。",
+      "english": "Shielding Effectiveness"
+    },
+    {
+      "id": "il",
+      "title": "插入损耗",
+      "aliases": [
+        "插入损耗"
+      ],
+      "section": "emc-5-1",
+      "match": "插入损耗是同一测量条件下",
+      "description": "同一测试网络加入滤波器前后接收量的变化。",
+      "english": "Insertion Loss"
+    },
+    {
+      "id": "lisn",
+      "title": "线路阻抗稳定网络（LISN）",
+      "aliases": [
+        "LISN",
+        "线路阻抗稳定网络"
+      ],
+      "section": "emc-6-2",
+      "match": "线路阻抗稳定网络（LISN）",
+      "description": "为传导干扰发射测试提供受控电源端口阻抗及测量接口的网络。",
+      "english": "Line Impedance Stabilization Network"
+    },
+    {
+      "id": "esd",
+      "title": "静电放电（ESD）",
+      "aliases": [
+        "ESD",
+        "静电放电"
+      ],
+      "section": "emc-7-2",
+      "match": "静电放电（ESD）",
+      "description": "累积电荷通过导电接触或介质击穿迅速释放的瞬态过程。",
+      "english": "Electrostatic Discharge"
+    },
+    {
+      "id": "tvs",
+      "title": "瞬态电压抑制器（TVS）",
+      "aliases": [
+        "TVS",
+        "TVS 二极管"
+      ],
+      "section": "emc-9-3",
+      "match": "TVS 二极管响应快",
+      "description": "用于限制接口过电压的半导体器件，需注意钳位电压和寄生电容。",
+      "english": "Transient Voltage Suppressor"
+    },
+    {
+      "id": "gis",
+      "title": "气体绝缘金属封闭开关设备（GIS）",
+      "aliases": [
+        "GIS"
+      ],
+      "section": "emc-10-3",
+      "match": "GIS（金属封闭气体绝缘开关设备）",
+      "description": "由金属外壳包围并使用气体绝缘的高压开关设备。",
+      "english": "Gas-Insulated Switchgear"
+    },
+    {
+      "id": "magnetic-reluctance",
+      "title": "磁阻",
+      "aliases": [
+        "磁阻",
+        "Rm"
+      ],
+      "section": "emc-4-3",
+      "match": "因此磁阻Rm=ℓ/(μS)",
+      "description": "在均匀线性磁路近似下，磁位差与磁通之比，取决于路径长度、截面积和磁导率。",
+      "english": "Magnetic Reluctance"
+    },
+    {
+      "id": "transfer-impedance",
+      "title": "电流探头转移阻抗",
+      "aliases": [
+        "转移阻抗",
+        "Z_T"
+      ],
+      "section": "emc-6-2",
+      "match": "转移阻抗Z_T(f)",
+      "description": "校准端接下电流探头输出电压与被测交流电流之比，随频率变化，单位Ω。",
+      "english": "Transfer Impedance"
+    },
+    {
+      "id": "esr",
+      "title": "等效串联电阻（ESR）",
+      "aliases": [
+        "ESR",
+        "等效串联电阻"
+      ],
+      "section": "emc-8-1",
+      "match": "等效串联电阻ESR",
+      "description": "用串联电阻近似描述实际电容内耗，在简化串联模型的自谐振点限制最小阻抗。",
+      "english": "Equivalent Series Resistance"
+    },
+    {
+      "id": "characteristic-impedance",
+      "title": "传输线特征阻抗",
+      "aliases": [
+        "特征阻抗",
+        "Z0",
+        "Z₀"
+      ],
+      "section": "emc-8-2",
+      "match": "行波速度与特征阻抗分别为",
+      "description": "无损均匀传输线上前行电压波与电流波的比值，Z₀=√(L′/C′)。",
+      "english": "Characteristic Impedance"
+    },
+    {
+      "id": "emc-dm",
+      "title": "差模干扰",
+      "english": "Differential Mode",
+      "section": "emc-1-2",
+      "match": "差模电流在来回导线上方向相反",
+      "description": "两根工作导体上的反向分量；应先统一电流参考方向，再进行代数或相量分解。",
+      "aliases": [
+        "差模干扰",
+        "差模电流"
+      ]
+    },
+    {
+      "id": "emc-eut",
+      "title": "受试设备（EUT）",
+      "english": "Equipment Under Test",
+      "section": "emc-6-1",
+      "match": "被测设备（EUT）",
+      "description": "测试时按规定工作模式运行的设备；其线缆与布置也是测量条件。",
+      "aliases": [
+        "EUT"
+      ]
+    },
+    {
+      "id": "emc-oats",
+      "title": "开阔区域测试场地（OATS）",
+      "english": "Open-Area Test Site",
+      "section": "emc-6-1",
+      "match": "开阔测试场地（OATS）",
+      "description": "须验证反射、背景噪声和规定几何的开放场地，空旷外观不代表合格。",
+      "aliases": [
+        "OATS"
+      ]
+    },
+    {
+      "id": "emc-eft",
+      "title": "电快速瞬变脉冲群（EFT/B）",
+      "english": "Electrical Fast Transient/Burst",
+      "section": "emc-6-4",
+      "match": "电快速瞬变脉冲群（EFT/B）",
+      "description": "重复快速脉冲群抗扰度试验，波形与耦合网络区别于浪涌和ESD。",
+      "aliases": [
+        "EFT/B"
+      ]
+    },
+    {
+      "id": "emc-hbm",
+      "title": "人体模型（HBM）",
+      "english": "Human Body Model",
+      "section": "emc-7-2",
+      "match": "人体模型（HBM）",
+      "description": "器件级放电应力模型；不能由器件级通过推出整机ESD通过。",
+      "aliases": [
+        "HBM"
+      ]
+    },
+    {
+      "id": "emc-cdm",
+      "title": "带电器件模型（CDM）",
+      "english": "Charged Device Model",
+      "section": "emc-7-2",
+      "match": "带电器件模型（CDM）",
+      "description": "器件本身带电后向外部导体快速放电，路径与时间尺度区别于HBM。",
+      "aliases": [
+        "CDM"
+      ]
+    },
+    {
+      "id": "emc-esl",
+      "title": "等效串联电感（ESL）",
+      "english": "Equivalent Series Inductance",
+      "section": "emc-8-1",
+      "match": "等效串联电感ESL",
+      "description": "实际电容及连接的串联寄生电感，和C共同决定串联模型自谐振。",
+      "aliases": [
+        "ESL"
+      ]
+    },
+    {
+      "id": "emc-pcb",
+      "title": "印制电路板（PCB）",
+      "english": "Printed Circuit Board",
+      "section": "emc-8-3",
+      "match": "PCB布线不是",
+      "description": "走线、参考平面与元件共同形成电磁回路，不能只按直流导通分析。",
+      "aliases": [
+        "PCB"
+      ]
+    },
+    {
+      "id": "emc-gdt",
+      "title": "气体放电管（GDT）",
+      "english": "Gas Discharge Tube",
+      "section": "emc-9-3",
+      "match": "气体放电管（GDT）",
+      "description": "利用气体击穿分流浪涌，需核对动态击穿和持续电源续流。",
+      "aliases": [
+        "GDT"
+      ]
+    },
+    {
+      "id": "emc-mov",
+      "title": "金属氧化物压敏电阻（MOV）",
+      "english": "Metal-Oxide Varistor",
+      "section": "emc-9-3",
+      "match": "氧化锌压敏电阻（MOV）",
+      "description": "具有非线性伏安特性的保护件，残压、耗能、老化及热失效需共同检查。",
+      "aliases": [
+        "MOV"
+      ]
+    },
+    {
+      "id": "emc-thd",
+      "title": "总谐波畸变率（THD）",
+      "english": "Total Harmonic Distortion",
+      "section": "emc-10-1",
+      "match": "总谐波畸变率THD",
+      "description": "各高次谐波有效值平方和开方与基波有效值之比，不能代替逐频谱分析。",
+      "aliases": [
+        "THD"
+      ]
+    },
+    {
+      "id": "emc-cvt",
+      "title": "电容式电压互感器（CVT）",
+      "english": "Capacitive Voltage Transformer",
+      "section": "emc-10-3",
+      "match": "电容式电压互感器（CVT）",
+      "description": "以电容分压等结构用于高压电压测量；暂态耦合不能只用工频变比解释。",
+      "aliases": [
+        "CVT"
+      ]
+    },
+    {
+      "id": "emc-vfto",
+      "title": "特快速暂态过电压（VFTO）",
+      "english": "Very Fast Transient Overvoltage",
+      "section": "emc-10-3",
+      "match": "快速暂态过电压（VFTO）",
+      "description": "GIS操作重燃和行波多次反射形成的陡峭过电压，单次开路2倍模型不提供全系统上限。",
+      "aliases": [
+        "VFTO"
+      ]
+    }
+  ],
+  "symbolDefinitions": [
+    {
+      "id": "emc-symbol-c12",
+      "title": "互电容 C₁₂",
+      "keys": [
+        "C_12"
+      ],
+      "unitHtml": "F",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "互电容 C₁₂",
+      "description": "源导线与受扰导线之间的耦合电容。"
+    },
+    {
+      "id": "emc-symbol-c2g",
+      "title": "对地电容 C₂G",
+      "keys": [
+        "C_2G"
+      ],
+      "unitHtml": "F",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "电容 C₂G",
+      "description": "受扰导线相对于参考导体的电容；和互电容一起限制高频分压。"
+    },
+    {
+      "id": "emc-symbol-r2",
+      "title": "受扰端电阻 R₂",
+      "keys": [
+        "R_2"
+      ],
+      "unitHtml": "Ω",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "电阻 R₂",
+      "description": "受扰输入到参考导体的等效负载电阻。"
+    },
+    {
+      "id": "emc-symbol-u1",
+      "title": "源电压 U₁",
+      "keys": [
+        "U_1"
+      ],
+      "unitHtml": "V",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "电压为 U₁",
+      "description": "干扰源导线相对于共同参考导体的电压。"
+    },
+    {
+      "id": "emc-symbol-u2",
+      "title": "受扰电压 U₂",
+      "keys": [
+        "U_2"
+      ],
+      "unitHtml": "V",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "对 U₂ 节点应用 KCL",
+      "description": "受扰节点相对于共同参考导体的电压；频域式使用复相量。"
+    },
+    {
+      "id": "emc-symbol-mutual",
+      "title": "互感 M",
+      "keys": [
+        "M"
+      ],
+      "unitHtml": "H",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "把两回路的耦合用互感 M 表示",
+      "description": "两个回路间的互感；感应电势极性取决于选定绕向与参考方向。"
+    },
+    {
+      "id": "emc-symbol-permeability",
+      "title": "磁导率 μ",
+      "keys": [
+        "μ"
+      ],
+      "unitHtml": "H/m",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "μ 为磁导率",
+      "description": "分析频段与工作点下的材料磁导率，不等同于真空磁导率μ₀。"
+    },
+    {
+      "id": "emc-symbol-conductivity",
+      "title": "电导率 σ",
+      "keys": [
+        "σ"
+      ],
+      "unitHtml": "S/m",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "σ 为电导率",
+      "description": "材料电导率，良导体集肤深度模型中近似为给定常数。"
+    },
+    {
+      "id": "emc-symbol-angular",
+      "title": "角频率 ω",
+      "keys": [
+        "ω"
+      ],
+      "unitHtml": "rad/s",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "ω＝2πf",
+      "description": "正弦扰动的角频率，等于2π乘以频率f。"
+    },
+    {
+      "id": "emc-symbol-depth",
+      "title": "集肤深度 δ",
+      "keys": [
+        "δ"
+      ],
+      "unitHtml": "m",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "match": "δ 为集肤深度",
+      "description": "良导体中场幅度降至表面值1/e的传播深度。"
+    },
+    {
+      "id": "emc-symbol-mur",
+      "title": "相对磁导率 μᵣ",
+      "keys": [
+        "μ_r"
+      ],
+      "unitHtml": "无量纲",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "match": "恒定相对磁导率μᵣ",
+      "description": "线性壳体磁导率与μ₀的比值；本例忽略饱和、磁滞和频散。"
+    },
+    {
+      "id": "emc-symbol-cx",
+      "title": "X类电容 Cₓ",
+      "keys": [
+        "C_X",
+        "C_x"
+      ],
+      "unitHtml": "F",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "match": "安规电容 Cₓ",
+      "description": "跨L与N连接的合格X类电容，主要提供差模高频旁路。"
+    },
+    {
+      "id": "emc-symbol-cy",
+      "title": "Y类电容 Cᵧ",
+      "keys": [
+        "C_Y",
+        "C_y",
+        "C_Y1",
+        "C_Y2"
+      ],
+      "unitHtml": "F",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "match": "Cᵧ₁、Cᵧ₂",
+      "description": "从工作导体到机壳/PE的合格Y类电容；容量受泄漏电流等安全要求约束。"
+    },
+    {
+      "id": "emc-symbol-ldm",
+      "title": "差模电感 LDM",
+      "keys": [
+        "L_DM"
+      ],
+      "unitHtml": "H",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "match": "LDM 指差模电流实际看到的电感",
+      "description": "差模回路的实际串联电感，不能直接用共模标称电感代替。"
+    },
+    {
+      "id": "emc-symbol-cap-c",
+      "title": "电容 C",
+      "keys": [
+        "C"
+      ],
+      "unitHtml": "F",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "match": "理想电容C",
+      "description": "ESR、ESL、C串联模型中的理想电容量。"
+    },
+    {
+      "id": "emc-symbol-esl-symbol",
+      "title": "等效串联电感 ESL",
+      "keys": [
+        "ESL"
+      ],
+      "unitHtml": "H",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "match": "等效串联电感ESL",
+      "description": "电容简化串联模型的寄生电感。"
+    },
+    {
+      "id": "emc-symbol-esr-symbol",
+      "title": "等效串联电阻 ESR",
+      "keys": [
+        "ESR"
+      ],
+      "unitHtml": "Ω",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "match": "等效串联电阻ESR",
+      "description": "电容简化串联模型的损耗电阻。"
+    },
+    {
+      "id": "emc-symbol-line-z",
+      "title": "传输线特征阻抗 Z₀",
+      "keys": [
+        "Z_0"
+      ],
+      "unitHtml": "Ω",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "match": "特征阻抗分别为",
+      "description": "无损均匀线的行波电压与同向电流之比，Z₀=√(L′/C′)。"
+    },
+    {
+      "id": "emc-symbol-line-gl",
+      "title": "负载反射系数 ΓL",
+      "keys": [
+        "Γ_L"
+      ],
+      "unitHtml": "无量纲",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "match": "负载电压反射系数Γ_L",
+      "description": "负载处反射电压波与入射电压波之比。"
+    },
+    {
+      "id": "emc-symbol-line-gs",
+      "title": "源端反射系数 ΓS",
+      "keys": [
+        "Γ_S"
+      ],
+      "unitHtml": "无量纲",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "match": "源端反射系数Γ_S",
+      "description": "返回波在源端看到的电压反射系数，包括源阻抗与外加串联电阻。"
+    },
+    {
+      "id": "emc-symbol-line-delay",
+      "title": "单程传播延迟 td",
+      "keys": [
+        "t_d"
+      ],
+      "unitHtml": "s",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "match": "单程延迟t_d",
+      "description": "行波沿全线传播一次的时间，等于线长除以传播速度。"
+    },
+    {
+      "id": "emc-symbol-soil",
+      "title": "土壤电阻率 ρ",
+      "keys": [
+        "ρ"
+      ],
+      "unitHtml": "Ω·m",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "match": "土壤电阻率为 ρ",
+      "description": "均匀各向同性静态土壤模型的电阻率。"
+    },
+    {
+      "id": "emc-symbol-electrode",
+      "title": "半球电极半径 r₀",
+      "keys": [
+        "r_0"
+      ],
+      "unitHtml": "m",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "match": "半径 r₀ 的半球形导体",
+      "description": "教学模型的半球电极半径，距中心的r须不小于r₀。"
+    },
+    {
+      "id": "emc-symbol-switch-l",
+      "title": "合闸模型电感 Ls",
+      "keys": [
+        "L_s"
+      ],
+      "unitHtml": "H",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "match": "线路等效串联电感 Lₛ",
+      "description": "空载线路集中参数合闸模型的串联电感。"
+    },
+    {
+      "id": "emc-symbol-switch-c",
+      "title": "合闸模型电容 Ct",
+      "keys": [
+        "C_t"
+      ],
+      "unitHtml": "F",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "match": "线路等效对地电容 Cₜ",
+      "description": "空载线路集中参数合闸模型的对地电容。"
+    },
+    {
+      "id": "emc-symbol-initial",
+      "title": "初始电容电压 U₀",
+      "keys": [
+        "U_0"
+      ],
+      "unitHtml": "V",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "match": "初始电容电压为 U₀",
+      "description": "开关闭合前电容上保留的初始电压，方向与u꜀参考方向一致。"
+    }
+  ]
+}

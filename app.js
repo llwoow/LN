@@ -361,6 +361,19 @@
           }
         }
         bindInlineModels(body);
+        if (course.id === 'electromagnetic-compatibility' && body.querySelector('[data-emc-lab]')) {
+          // Educational models are optional; keep the static lesson readable if loading fails.
+          try {
+            await Promise.all([
+              loadScript('courses/electromagnetic-compatibility/model/emc-labs.js'),
+              loadStyle('courses/electromagnetic-compatibility/model/emc-labs.css')
+            ]);
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            window.LN_MOUNT_EMC_LABS?.(body);
+          } catch (error) {
+            // Leave the source-backed explanation and static calculation visible.
+          }
+        }
         if (selected.supplement === 'physics-001') window.LNPhysics001.mount(body, payload);
       }
       body.setAttribute('aria-busy', 'false');

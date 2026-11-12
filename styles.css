@@ -421,6 +421,8 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 /* Single-column scholarly reading, shared by all HTML course material. */
 :root { --reading-font: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Songti SC', 'STSong', 'SimSun', Georgia, serif; }
 .publication-body { max-width: 68ch; font-family: var(--reading-font); font-size: 18px; font-weight: 500; line-height: 1.85; text-rendering: optimizeLegibility; }
+/* Source provenance is metadata, not a full-size teaching paragraph. Keep it readable on narrow screens. */
+.publication-body > p.ln-source-note { margin: .5em 0 1.1em; font: 500 13px/1.7 var(--font); color: var(--muted); text-align: start; overflow-wrap: anywhere; }
 .publication-body p { margin: .85em 0; text-align: justify; text-justify: inter-ideograph; hanging-punctuation: allow-end; }
 .publication-body h2, .publication-body h3, .publication-body h4, .publication-body h5 { font-family: var(--font); text-wrap: pretty; }
 .publication-body h2 { font-size: 24px; line-height: 1.45; margin: 1.5em 0 .8em; }
@@ -705,3 +707,33 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 /* Authored math in practice uses the same local KaTeX as the reader. */
 .practice-panel .math.display { max-width:100%; overflow-x:auto; overflow-y:hidden; }
 .practice-panel .practice-prompt:has(.math) { white-space:normal; }
+
+/* EMC diagrams: preserve technical annotations on narrow phones rather than shrinking to unreadable thumbnails. */
+.emc-figure-scroll { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+.emc-figure-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.emc-figure-scroll svg { display: block; height: auto; }
+@media (max-width: 620px) { .emc-figure-scroll svg { min-width: 580px; max-width: none !important; } }
+
+/* The chapter numbering is already authored in link text (e.g. 4.4.1); avoid double list numbers. */
+.publication-body nav[aria-label="本节小节"] ol { list-style: none; margin: 1em 0 1.2em; padding-inline-start: 0; }
+.publication-body nav[aria-label="本节小节"] li { margin: .4em 0; }
+.publication-body nav[aria-label="本节小节"] a { overflow-wrap: anywhere; }
+
+/* Clearly indicate that the full-resolution schematic has more content to the right. */
+@media (max-width: 620px) {
+  .publication-body figure:has(.emc-figure-scroll)::before {
+    content: "↔ 左右滑动查看完整原理图";
+    display: block;
+    margin: .4em 0;
+    color: var(--muted);
+    font: 500 12px/1.5 var(--font);
+  }
+}
+
+/* Avoid stretched Latin symbols and erratic inter-word spacing in narrow CJK technical reading. */
+@media (max-width: 620px) {
+  #lesson-body[data-lesson-key^="electromagnetic-compatibility/"] .article-section p {
+    text-align: start;
+    overflow-wrap: break-word;
+  }
+}

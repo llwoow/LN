@@ -1,0 +1,392 @@
+{
+  "date": "2026-11-10",
+  "course": "electromagnetic-compatibility",
+  "basis": "用户提供的292页教材扫描件及10份课件PDF（课堂材料可提取文字、教材正文主要为扫描图像）",
+  "policy": "Only mark original pages and diagrams as reviewed when actually inspected; outline-only coverage is not source review. All lesson text is newly authored, not verbatim distribution.",
+  "sections": [
+    {
+      "id": "emc-1-1",
+      "heading": "1.1 引言",
+      "bookStartPrintPage": 1,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-1-2",
+      "heading": "1.2 电磁兼容的基本概念",
+      "bookStartPrintPage": 3,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-1-3",
+      "heading": "1.3 主要的电磁干扰源",
+      "bookStartPrintPage": 10,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-1-4",
+      "heading": "1.4 电磁干扰的危害",
+      "bookStartPrintPage": 19,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-2-1",
+      "heading": "2.1 电磁干扰的传输途径",
+      "bookStartPrintPage": 25,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-2-2",
+      "heading": "2.2 传导耦合原理",
+      "bookStartPrintPage": 26,
+      "status": "selected-primary-source-reviewed-in-prior-batch",
+      "sourcePages": {
+        "previousAudit": "教材印刷第26页起；对应课件2 PDF第4—28页",
+        "previousAuditDocument": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md"
+      },
+      "auditNotes": "电容与互感耦合传递函数、复相量极限；原始审校见AUDIT-2026-11-10.md"
+    },
+    {
+      "id": "emc-2-3",
+      "heading": "2.3 辐射耦合原理",
+      "bookStartPrintPage": 47,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-3-1",
+      "heading": "3.1 保护接地和信号接地",
+      "bookStartPrintPage": 59,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-3-2",
+      "heading": "3.2 电路和系统接地方式的选择",
+      "bookStartPrintPage": 63,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-3-3",
+      "heading": "3.3 地线回路中的干扰及抑制技术",
+      "bookStartPrintPage": 68,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-3-4",
+      "heading": "3.4 电缆屏蔽体的接地",
+      "bookStartPrintPage": 80,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-4-1",
+      "heading": "4.1 概述",
+      "bookStartPrintPage": 85,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-4-2",
+      "heading": "4.2 电场屏蔽",
+      "bookStartPrintPage": 86,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-4-3",
+      "heading": "4.3 磁场屏蔽",
+      "bookStartPrintPage": 90,
+      "status": "selected-primary-source-and-lecture-reviewed",
+      "sourcePages": {
+        "textbook": "教材印刷第90—94页（扫描PDF第100—104页）",
+        "lecture": "4屏蔽技术n.pdf PDF第11—20页",
+        "figuresAndEquations": "式(4-9)—(4-22)，图4-5、4-7、4-8"
+      },
+      "auditNotes": "磁阻分流、圆筒线性屏蔽比与dB区别、短路匝等效、电流幅比频率极限"
+    },
+    {
+      "id": "emc-4-4",
+      "heading": "4.4 电磁屏蔽",
+      "bookStartPrintPage": 95,
+      "status": "selected-primary-source-reviewed-in-prior-batch",
+      "sourcePages": {
+        "previousAudit": "教材印刷第95页起；对应课件4 PDF第21—43页",
+        "previousAuditDocument": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md"
+      },
+      "auditNotes": "金属板界面反射/吸收/多次反射；原始审校见AUDIT-2026-11-10.md"
+    },
+    {
+      "id": "emc-4-5",
+      "heading": "4.5 孔缝泄漏的抑制措施",
+      "bookStartPrintPage": 107,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-5-1",
+      "heading": "5.1 概述",
+      "bookStartPrintPage": 112,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-5-2",
+      "heading": "5.2 反射式滤波器",
+      "bookStartPrintPage": 115,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-5-3",
+      "heading": "5.3 吸收式滤波器",
+      "bookStartPrintPage": 122,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-5-4",
+      "heading": "5.4 电源电磁干扰滤波器",
+      "bookStartPrintPage": 126,
+      "status": "selected-primary-source-reviewed-in-prior-batch",
+      "sourcePages": {
+        "previousAudit": "教材印刷第126页起；对应课件5 PDF第27—34页",
+        "previousAuditDocument": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md"
+      },
+      "auditNotes": "共模差模滤波与安规电容；原始审校见AUDIT-2026-11-10.md"
+    },
+    {
+      "id": "emc-5-5",
+      "heading": "5.5 有源滤波器",
+      "bookStartPrintPage": 130,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-6-1",
+      "heading": "6.1 测试场地",
+      "bookStartPrintPage": 134,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-6-2",
+      "heading": "6.2 主要测试设备",
+      "bookStartPrintPage": 139,
+      "status": "selected-primary-source-and-lecture-reviewed",
+      "sourcePages": {
+        "textbook": "教材印刷第139页起（扫描PDF第149页起，至图6-9与检波器说明）",
+        "lecture": "6电磁兼容测试技术n.pdf PDF第9—19页",
+        "figuresAndEquations": "式(6-1)—(6-5)、(6-8)，图6-5、6-7、6-9"
+      },
+      "auditNotes": "互感与开路电压、转移阻抗/负载区别、环探头、天线系数、检波链"
+    },
+    {
+      "id": "emc-6-3",
+      "heading": "6.3 电磁干扰发射测量",
+      "bookStartPrintPage": 145,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-6-4",
+      "heading": "6.4 电磁干扰敏感度测试",
+      "bookStartPrintPage": 149,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-7-1",
+      "heading": "7.1 静电的产生",
+      "bookStartPrintPage": 163,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-7-2",
+      "heading": "7.2 静电放电",
+      "bookStartPrintPage": 167,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-7-3",
+      "heading": "7.3 静电的危害",
+      "bookStartPrintPage": 174,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-7-4",
+      "heading": "7.4 静电干扰的防护",
+      "bookStartPrintPage": 179,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-8-1",
+      "heading": "8.1 常用元器件的选择",
+      "bookStartPrintPage": 186,
+      "status": "selected-primary-source-and-lecture-reviewed",
+      "sourcePages": {
+        "textbook": "教材印刷第186—198页（扫描PDF第196—208页）",
+        "lecture": "8电子设备的电磁兼容设计n.pdf PDF第4—23页",
+        "figuresAndEquations": "式(8-1)—(8-5)、图8-2—8-14"
+      },
+      "auditNotes": "寄生电阻电容电感等效、ESR/ESL自谐振、去耦返回路径、二极管结电容、封装地弹"
+    },
+    {
+      "id": "emc-8-2",
+      "heading": "8.2 线路终端的匹配连接",
+      "bookStartPrintPage": 198,
+      "status": "selected-primary-source-and-lecture-reviewed",
+      "sourcePages": {
+        "textbook": "教材印刷第198—201页（扫描PDF第208—211页）",
+        "lecture": "8电子设备的电磁兼容设计n.pdf PDF第24—29页",
+        "figuresAndEquations": "式(8-6)，图8-15—8-19"
+      },
+      "auditNotes": "传输线分布参数、首波、负载/源端反射系数、端接时序、不同拓扑实际差别"
+    },
+    {
+      "id": "emc-8-3",
+      "heading": "8.3 印制电路板的布局和布线",
+      "bookStartPrintPage": 201,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-9-1",
+      "heading": "9.1 雷电浪涌的产生和传递",
+      "bookStartPrintPage": 210,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-9-2",
+      "heading": "9.2 建筑物的防雷和接地技术",
+      "bookStartPrintPage": 216,
+      "status": "lecture-source-reviewed-textbook-scan-pending",
+      "sourcePages": {
+        "lecture": "9浪涌及抑制n.pdf PDF第15—33页",
+        "textbook": "教材目录对应章节已核对；扫描教材在本轮运行时xref损坏导致原页打不开"
+      },
+      "auditNotes": "未通过当前损坏扫描件复核教材对应正文；课件第16、20、24、28、33页已核读，雷电流RL和保护件端口电压为教学推导"
+    },
+    {
+      "id": "emc-9-3",
+      "heading": "9.3 浪涌抑制器件",
+      "bookStartPrintPage": 226,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-9-4",
+      "heading": "9.4 电子设备的端口防护技术",
+      "bookStartPrintPage": 234,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-10-1",
+      "heading": "10.1 电力系统谐波",
+      "bookStartPrintPage": 240,
+      "status": "awaiting-detailed-primary-source-audit",
+      "sourcePages": null,
+      "auditNotes": "Textbook outline aligned; not audited against all corresponding source figures/equations."
+    },
+    {
+      "id": "emc-10-2",
+      "heading": "10.2 发电厂、变电站的地电位干扰及保护措施",
+      "bookStartPrintPage": 254,
+      "status": "lecture-source-reviewed-textbook-scan-pending",
+      "sourcePages": {
+        "lecture": "10电力系统电磁兼容n.pdf PDF第25—31页",
+        "textbook": "教材目录对应章节已核对；扫描教材在本轮运行时xref损坏导致原页打不开"
+      },
+      "auditNotes": "课件第26—28页的均匀土壤半球电极J/E/U/R关系与第29、31页的跨步/二次电缆机制已核读；教材原始扫描页仍待恢复"
+    },
+    {
+      "id": "emc-10-3",
+      "heading": "10.3 发电厂、变电站内的暂态干扰",
+      "bookStartPrintPage": 262,
+      "status": "selected-primary-source-reviewed-in-prior-batch",
+      "sourcePages": {
+        "previousAudit": "教材印刷第262页起；对应课件10 PDF第38—50页",
+        "previousAuditDocument": "courses/electromagnetic-compatibility/AUDIT-2026-11-10.md"
+      },
+      "auditNotes": "理想LC合闸初值及GIS行波反射；原始审校见AUDIT-2026-11-10.md"
+    },
+    {
+      "id": "emc-10-4",
+      "heading": "10.4 冲击试验时的电磁干扰",
+      "bookStartPrintPage": 270,
+      "status": "lecture-source-reviewed-textbook-scan-pending",
+      "sourcePages": {
+        "lecture": "10电力系统电磁兼容n.pdf PDF第51—58、62、65页",
+        "textbook": "教材目录对应章节已核对；扫描教材在本轮运行时xref损坏导致原页打不开"
+      },
+      "auditNotes": "课件第52—55页L1/L2屏蔽层分流与Cs寄生回路示意已核读；课件保护地处理为历史试验背景，网页明确不提供断开PE的操作步骤"
+    }
+  ],
+  "manualChecks": [
+    {
+      "id": "magnetic-shield-unit",
+      "status": "resolved-in-teaching",
+      "detail": "Original teaching material uses SE=H0/H1 as a linear amplitude ratio; webpage separately shows SEdB=20log10(H0/H1)."
+    },
+    {
+      "id": "probe-open-vs-load",
+      "status": "resolved-in-teaching",
+      "detail": "uoc=-M di/dt is an ideal open-circuit induced emf; a calibrated loaded current probe uses frequency-dependent transfer impedance ZT(f)."
+    },
+    {
+      "id": "capacitor-model",
+      "status": "resolved-in-teaching",
+      "detail": "ESR+ESL+C is an approximate model. Do not treat typical clock-dependent decoupling ranges in old slide deck as universal component-selection standards."
+    },
+    {
+      "id": "line-first-reflection",
+      "status": "resolved-in-teaching",
+      "detail": "2V+ is the first open-end voltage relative to the incident travelling wave; source amplitude and source reflection must be tracked independently."
+    },
+    {
+      "id": "second-batch-source-limit",
+      "status": "pending-textbook-scan-repair",
+      "detail": "PDF info/PyMuPDF failed to parse the 292-page scanned textbook in current environment (invalid XRef). Corresponding lecture PDFs were inspected at source pages for 9.2,10.2,10.4; do not claim book scan formula review."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+.emc-lab { margin: 26px 0; padding: 16px 18px; background: var(--subtle); border: 1.5px solid var(--border); border-radius: 10px; color: var(--text); }
+.emc-lab h4 { margin: 0 0 12px; font: 700 16px/1.55 var(--font); }
+.emc-lab-fallback { color: var(--muted); }
+.emc-lab-inputs { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 16px; }
+.emc-lab-field { display:flex; flex-direction:column; gap:6px; font: 600 13px/1.5 var(--font); color: var(--text); }
+.emc-lab-field input { width:100%; accent-color:var(--accent); }
+.emc-lab-field output { font-variant-numeric:tabular-nums; font-weight:500; color:var(--text); }
+.emc-lab-result { margin:20px 0 12px; font: 600 14px/1.8 var(--font); }
+.emc-lab-plot { width:100%; max-width:100%; overflow-x:auto; }
+.emc-lab-plot svg { display:block; min-width:640px; width:100%; height:auto; color:var(--text); }
+.emc-lab-plot svg polyline { color:var(--accent); }
+.emc-lab math[display='block'] { overflow-x:auto; }
+@media (max-width:600px) {.emc-lab { padding:13px 12px; }.emc-lab-inputs { grid-template-columns:1fr; }}
+@media print {.emc-lab-ui { break-inside:avoid; }}
