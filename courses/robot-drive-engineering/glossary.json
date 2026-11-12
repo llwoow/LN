@@ -1,0 +1,1054 @@
+{
+  "lazy": true,
+  "terms": [
+    {
+      "id": "rd-kcl",
+      "title": "节点电流定律",
+      "english": "Kirchhoff Current Law",
+      "aliases": [
+        "KCL"
+      ],
+      "section": "rd-circuit-foundations",
+      "match": "基尔霍夫电流定律KCL",
+      "description": "集总电路节点的有向电流守恒关系。"
+    },
+    {
+      "id": "rd-kvl",
+      "title": "回路电压定律",
+      "english": "Kirchhoff Voltage Law",
+      "aliases": [
+        "KVL"
+      ],
+      "section": "rd-circuit-foundations",
+      "match": "基尔霍夫电压定律KVL",
+      "description": "沿闭合回路的有向电压代数和关系，变化磁通应被计入模型。"
+    },
+    {
+      "id": "rd-thevenin",
+      "title": "戴维南等效",
+      "english": "Thevenin Equivalent",
+      "aliases": [
+        "戴维南"
+      ],
+      "section": "rd-circuit-foundations",
+      "match": "戴维南等效用开路电压",
+      "description": "线性二端网络用开路电压和串联电阻表示的端口等效。"
+    },
+    {
+      "id": "rd-bitmask",
+      "title": "位掩码",
+      "english": "Bit Mask",
+      "aliases": [
+        "位掩码"
+      ],
+      "section": "rd-c-foundations",
+      "match": "位掩码是用某些二进制位",
+      "description": "以指定二进制位选择、设置或清除字段；硬件寄存器读写规则还需另查。"
+    },
+    {
+      "id": "rd-kelvin",
+      "title": "Kelvin四线取样",
+      "english": "Kelvin Sensing",
+      "aliases": [
+        "Kelvin取样",
+        "Kelvin"
+      ],
+      "section": "rd-current-sense",
+      "match": "Kelvin取样线在电阻元件附近单独引出",
+      "description": "将电压取样接点与负载功率连接分开，减少连接铜箔压降进入结果；仍需考虑热电势和布局。"
+    },
+    {
+      "id": "rd-cmrr",
+      "title": "共模抑制比",
+      "english": "Common-Mode Rejection Ratio",
+      "aliases": [
+        "CMRR",
+        "共模抑制比"
+      ],
+      "section": "rd-current-sense",
+      "match": "共模抑制比CMRR",
+      "description": "差模增益与共模增益比的分贝表达；与允许输入共模范围不同，也随频率变化。"
+    },
+    {
+      "id": "rd-adc",
+      "title": "模数转换器",
+      "english": "Analog-to-Digital Converter",
+      "aliases": [
+        "ADC"
+      ],
+      "section": "rd-current-sense",
+      "match": "它收到的是ADC码",
+      "description": "把模拟电压映射为离散码的器件，分辨率、输入建立、参考和非线性共同影响电流反馈。"
+    },
+    {
+      "id": "rd-aliasing",
+      "title": "混叠",
+      "english": "Aliasing",
+      "aliases": [
+        "混叠",
+        "aliasing"
+      ],
+      "section": "rd-analog-filter",
+      "match": "混叠（aliasing）是不同模拟频率",
+      "description": "不同模拟信号经过采样产生相同样本，无法仅凭这些样本唯一分辨原频率。"
+    },
+    {
+      "id": "rd-sar",
+      "title": "逐次逼近ADC",
+      "english": "Successive Approximation Register ADC",
+      "aliases": [
+        "SAR ADC"
+      ],
+      "section": "rd-analog-filter",
+      "match": "SAR ADC内部跟踪开关闭合时",
+      "description": "通过采样保持与逐次比较得到码值；采集时间与比较转换时间应分开。"
+    },
+    {
+      "id": "rd-resolution",
+      "title": "分辨率与准确度",
+      "english": "Resolution and Accuracy",
+      "aliases": [
+        "分辨率",
+        "准确度"
+      ],
+      "section": "rd-measurement",
+      "match": "分辨率描述可区分的最小读数间隔",
+      "description": "分辨率说明读数间隔，准确度说明与真实值的关系；重复性好不排除共同系统偏差。"
+    },
+    {
+      "id": "rd-lsb",
+      "title": "最低有效位",
+      "english": "Least Significant Bit",
+      "aliases": [
+        "LSB"
+      ],
+      "section": "rd-current-sense",
+      "match": "半个LSB的量化边界",
+      "description": "理想均匀量化器的一步代码间隔；本页折回到电流端，不代表真实有效位数。"
+    },
+    {
+      "id": "rd-emb-isr",
+      "title": "中断服务程序",
+      "english": "Interrupt Service Routine",
+      "aliases": [
+        "ISR"
+      ],
+      "section": "rd-embedded-c",
+      "match": "中断服务程序 ISR",
+      "description": "处理被接受中断的函数；事件到达与开始执行之间仍可能等待。"
+    },
+    {
+      "id": "rd-emb-volatile",
+      "title": "易变访问限定",
+      "english": "Volatile",
+      "aliases": [
+        "volatile"
+      ],
+      "section": "rd-embedded-c",
+      "match": "volatile告诉编译器",
+      "description": "实现规定的可观察访问语义，不自动提供互斥、原子事务或跨线程发布顺序。"
+    },
+    {
+      "id": "rd-emb-fsm",
+      "title": "有限状态机",
+      "english": "Finite-State Machine",
+      "aliases": [
+        "FSM"
+      ],
+      "section": "rd-embedded-c",
+      "match": "有限状态机 FSM",
+      "description": "用明确状态和转移条件表示允许的行为；本身不是安全证明。"
+    },
+    {
+      "id": "rd-emb-dma",
+      "title": "直接存储器访问",
+      "english": "Direct Memory Access",
+      "aliases": [
+        "DMA"
+      ],
+      "section": "rd-sampling-time",
+      "match": "DMA",
+      "description": "由外设/总线机制搬运数据；仍需确认所有权、缓存和完成条件。"
+    },
+    {
+      "id": "rd-emb-octet",
+      "title": "八位组",
+      "english": "Octet",
+      "aliases": [
+        "octet"
+      ],
+      "section": "rd-drive-protocol",
+      "match": "octet",
+      "description": "协议约定的8位单元，不可假定所有C实现的char均为8位。"
+    },
+    {
+      "id": "rd-emb-crc",
+      "title": "循环冗余校验",
+      "english": "Cyclic Redundancy Check",
+      "aliases": [
+        "CRC"
+      ],
+      "section": "rd-drive-protocol",
+      "match": "CRC（Cyclic Redundancy Check",
+      "description": "按明确参数检测传输错误，不证明身份、新鲜度或机械合理性。"
+    },
+    {
+      "id": "rd-emb-lease",
+      "title": "接收租期",
+      "english": "Receiver Lease",
+      "aliases": [
+        "接收租期"
+      ],
+      "section": "rd-drive-protocol",
+      "match": "接收租期是本例",
+      "description": "从本地接受消息开始计算的有效持续时间，不等于端到端观察年龄。"
+    },
+    {
+      "id": "rd-gate-charge",
+      "title": "门极电荷",
+      "english": "Gate Charge",
+      "aliases": [
+        "Qg",
+        "门极电荷"
+      ],
+      "section": "rd-mosfet-driver",
+      "match": "门极总电荷Qg",
+      "description": "指定测试条件下一次门极充电所需电荷；不是所有工作点下恒定电容。"
+    },
+    {
+      "id": "rd-bootstrap",
+      "title": "自举电容",
+      "english": "Bootstrap Capacitor",
+      "aliases": [
+        "自举"
+      ],
+      "section": "rd-mosfet-driver",
+      "match": "自举电容的最低电荷预算",
+      "description": "高边浮动驱动供电的储能电容，需要刷新并满足允许电压下降。"
+    },
+    {
+      "id": "rd-svpwm",
+      "title": "空间矢量调制",
+      "english": "Space Vector PWM",
+      "aliases": [
+        "SVPWM"
+      ],
+      "section": "rd-inverter",
+      "match": "空间矢量PWM（SVPWM）",
+      "description": "通过相邻有效矢量与零矢量的时间分配合成平均电压。"
+    },
+    {
+      "id": "rd-pmsm",
+      "title": "永磁同步电机",
+      "english": "Permanent Magnet Synchronous Motor",
+      "aliases": [
+        "PMSM"
+      ],
+      "section": "rd-joint-model",
+      "match": "以下PMSM模型假设",
+      "description": "本课三相正弦、忽略零序的线性模型；不泛化为所有BLDC电机。"
+    },
+    {
+      "id": "rd-clarke",
+      "title": "Clarke变换",
+      "english": "Clarke Transform",
+      "aliases": [
+        "Clarke"
+      ],
+      "section": "rd-foc",
+      "match": "以下沿用相电流峰值",
+      "description": "将平衡三相量投影到静止αβ坐标，本课采用幅值不变约定。"
+    },
+    {
+      "id": "rd-park",
+      "title": "Park变换",
+      "english": "Park Transform",
+      "aliases": [
+        "Park变换"
+      ],
+      "section": "rd-foc",
+      "match": "Park变换把αβ矢量",
+      "description": "按转子电角将静止矢量投影到dq旋转坐标。"
+    },
+    {
+      "id": "rd-foc",
+      "title": "磁场定向控制",
+      "english": "Field-Oriented Control",
+      "aliases": [
+        "FOC"
+      ],
+      "section": "rd-foc",
+      "match": "FOC先把平衡三相",
+      "description": "将电流表达在转子磁链相关坐标中进行调节的控制方法。"
+    },
+    {
+      "id": "rd-windup",
+      "title": "积分饱和累积",
+      "english": "Integral Windup",
+      "aliases": [
+        "积分抗饱和",
+        "饱和后恢复"
+      ],
+      "section": "rd-cascade-control",
+      "match": "假设速度环Kp",
+      "description": "执行器受限时积分继续累积导致恢复迟缓；需按实际限幅设计。"
+    },
+    {
+      "id": "rd-trapezoid",
+      "title": "梯形速度轨迹",
+      "english": "Trapezoidal Velocity Profile",
+      "aliases": [
+        "梯形速度轨迹"
+      ],
+      "section": "rd-trajectory",
+      "match": "从静止到静止的一维梯形",
+      "description": "由加速、巡航和减速组成的一维受限速度轨迹，短距离变为三角形。"
+    },
+    {
+      "id": "rd-ai-timestamp",
+      "title": "时间戳",
+      "english": "Timestamp",
+      "aliases": [
+        "时间戳"
+      ],
+      "section": "rd-python-data",
+      "match": "时间戳应说明时钟来源",
+      "description": "事件发生时的时间标签；必须说明事件和时钟域。"
+    },
+    {
+      "id": "rd-ai-rmse",
+      "title": "均方根误差",
+      "english": "Root Mean Square Error",
+      "aliases": [
+        "RMSE"
+      ],
+      "section": "rd-python-data",
+      "match": "均方根误差RMSE",
+      "description": "所选误差平方平均后开方的指标，保留原量单位。"
+    },
+    {
+      "id": "rd-ai-contract",
+      "title": "命令契约",
+      "english": "Command Contract",
+      "aliases": [
+        "命令契约"
+      ],
+      "section": "rd-ai-interface",
+      "match": "命令契约规定版本",
+      "description": "对消息结构、身份、单位、期限与状态的明确约定。"
+    },
+    {
+      "id": "rd-ai-onnx",
+      "title": "模型交换格式",
+      "english": "Open Neural Network Exchange",
+      "aliases": [
+        "ONNX"
+      ],
+      "section": "rd-edge-inference",
+      "match": "ONNX是一种模型计算图交换格式",
+      "description": "计算图交换格式；与执行图的运行时、机器人动作语义分别核查。"
+    },
+    {
+      "id": "rd-ai-qos",
+      "title": "服务质量策略",
+      "english": "Quality of Service",
+      "aliases": [
+        "QoS"
+      ],
+      "section": "rd-robot-integration",
+      "match": "ROS 2 QoS包括",
+      "description": "通信历史、可靠性和时限等策略，不自动保证整个控制系统的实时性。"
+    },
+    {
+      "id": "rd-ai-dsp",
+      "title": "数字信号处理器",
+      "english": "Digital Signal Processor",
+      "aliases": [
+        "DSP"
+      ],
+      "section": "rd-ai-interface",
+      "match": "电流与速度快环按自己的时钟运行",
+      "description": "用于本地周期控制的处理器角色；具体外设和平台需按芯片核对。"
+    },
+    {
+      "id": "rd-identification",
+      "title": "系统辨识",
+      "english": "System Identification",
+      "aliases": [
+        "辨识"
+      ],
+      "section": "rd-identification",
+      "match": "在固定转子、恒定电压",
+      "description": "依据输入输出和明确模型估计参数；先判断可辨识性。"
+    },
+    {
+      "id": "rd-holdout",
+      "title": "独立验证数据",
+      "english": "Held-Out Validation",
+      "aliases": [
+        "独立验证"
+      ],
+      "section": "rd-identification",
+      "match": "独立验证数据应与标定",
+      "description": "不参与校准、参数选择和调参的数据，应说明工况是否独立。"
+    },
+    {
+      "id": "rd-rk4",
+      "title": "四阶龙格库塔法",
+      "english": "Fourth-Order Runge–Kutta Method",
+      "aliases": [
+        "RK4"
+      ],
+      "section": "rd-simulation",
+      "match": "速度控制器每1 ms更新",
+      "description": "本课程植物方程的数值积分方法；需做步长与模型核查。"
+    }
+  ],
+  "symbolDefinitions": [
+    {
+      "id": "rd-base-beta",
+      "title": "反馈系数 β",
+      "keys": [
+        "β"
+      ],
+      "unitHtml": "无量纲",
+      "section": "rd-circuit-foundations",
+      "sections": [
+        "rd-circuit-foundations"
+      ],
+      "match": "反馈节点的分压系数β",
+      "description": "同相放大器反馈到反相输入端的输出分量比例。"
+    },
+    {
+      "id": "rd-base-A",
+      "title": "运放开环增益 A",
+      "keys": [
+        "A"
+      ],
+      "unitHtml": "V/V",
+      "section": "rd-circuit-foundations",
+      "sections": [
+        "rd-circuit-foundations"
+      ],
+      "match": "A为有限开环增益",
+      "description": "本节运放的低频有限差分电压增益。"
+    },
+    {
+      "id": "rd-meas-R_s",
+      "title": "源电阻 Rₛ",
+      "keys": [
+        "R_s"
+      ],
+      "unitHtml": "Ω",
+      "section": "rd-measurement",
+      "sections": [
+        "rd-measurement"
+      ],
+      "match": "把被测节点等效为戴维南源",
+      "description": "被测节点的戴维南源电阻；测量仪器接入后由它和探头负载共同分压。"
+    },
+    {
+      "id": "rd-meas-R_p",
+      "title": "探头输入电阻 Rₚ",
+      "keys": [
+        "R_p"
+      ],
+      "unitHtml": "Ω",
+      "section": "rd-measurement",
+      "sections": [
+        "rd-measurement"
+      ],
+      "match": "把被测节点等效为戴维南源",
+      "description": "从探头尖端看向仪器的等效输入电阻，非被测电路原有电阻。"
+    },
+    {
+      "id": "rd-meas-C_p",
+      "title": "探头输入电容 Cₚ",
+      "keys": [
+        "C_p"
+      ],
+      "unitHtml": "F",
+      "section": "rd-measurement",
+      "sections": [
+        "rd-measurement"
+      ],
+      "match": "把被测节点等效为戴维南源",
+      "description": "探头与仪器在尖端呈现的等效并联电容，影响高频加载。"
+    },
+    {
+      "id": "rd-meas-V_s",
+      "title": "开路源电压 Vₛ",
+      "keys": [
+        "V_s"
+      ],
+      "unitHtml": "V",
+      "section": "rd-measurement",
+      "sections": [
+        "rd-measurement"
+      ],
+      "match": "把被测节点等效为戴维南源",
+      "description": "戴维南源开路电压；不是接上探头后必然还存在于节点的电压。"
+    },
+    {
+      "id": "rd-meas-V_m",
+      "title": "测得节点电压 Vₘ",
+      "keys": [
+        "V_m"
+      ],
+      "unitHtml": "V",
+      "section": "rd-measurement",
+      "sections": [
+        "rd-measurement"
+      ],
+      "match": "把被测节点等效为戴维南源",
+      "description": "探头加载后节点相对于共同参考导体的电压。"
+    },
+    {
+      "id": "rd-sense-R_sh",
+      "title": "分流电阻 Rsh",
+      "keys": [
+        "R_sh"
+      ],
+      "unitHtml": "Ω",
+      "section": "rd-current-sense",
+      "sections": [
+        "rd-current-sense"
+      ],
+      "match": "分流电阻",
+      "description": "串在被测电流路径中的已知小电阻，用压降建立电流反馈。"
+    },
+    {
+      "id": "rd-sense-i",
+      "title": "有向电流 i",
+      "keys": [
+        "i"
+      ],
+      "unitHtml": "A",
+      "section": "rd-current-sense",
+      "sections": [
+        "rd-current-sense"
+      ],
+      "match": "分流电阻",
+      "description": "从正取样端流向负取样端为本节正方向。"
+    },
+    {
+      "id": "rd-sense-G",
+      "title": "差分增益 G",
+      "keys": [
+        "G"
+      ],
+      "unitHtml": "V/V",
+      "section": "rd-current-sense",
+      "sections": [
+        "rd-current-sense"
+      ],
+      "match": "把放大器简化为差分增益",
+      "description": "电流放大器从分流差分电压到输出变化量的增益。"
+    },
+    {
+      "id": "rd-sense-V_0",
+      "title": "零电流偏置 V₀",
+      "keys": [
+        "V_0"
+      ],
+      "unitHtml": "V",
+      "section": "rd-current-sense",
+      "sections": [
+        "rd-current-sense"
+      ],
+      "match": "把放大器简化为差分增益",
+      "description": "单极性ADC表示双向电流时采用的输出零电流电压。"
+    },
+    {
+      "id": "rd-sense-V_ref",
+      "title": "ADC参考电压 Vref",
+      "keys": [
+        "V_ref"
+      ],
+      "unitHtml": "V",
+      "section": "rd-current-sense",
+      "sections": [
+        "rd-current-sense"
+      ],
+      "match": "把放大器简化为差分增益",
+      "description": "决定理想电压到码尺度的ADC参考电压。"
+    },
+    {
+      "id": "rd-sense-N",
+      "title": "ADC位数 N",
+      "keys": [
+        "N"
+      ],
+      "unitHtml": "bit",
+      "section": "rd-current-sense",
+      "sections": [
+        "rd-current-sense"
+      ],
+      "match": "把放大器简化为差分增益",
+      "description": "理想ADC分辨率位数，不能直接作为实际有效位数或准确度。"
+    },
+    {
+      "id": "rd-sense-v_cm",
+      "title": "输入共模电压 vcm",
+      "keys": [
+        "v_cm"
+      ],
+      "unitHtml": "V",
+      "section": "rd-current-sense",
+      "sections": [
+        "rd-current-sense"
+      ],
+      "match": "放大器输入共模电压",
+      "description": "两个差分输入电位相对于共同参考的平均值。"
+    },
+    {
+      "id": "rd-sense-v_d",
+      "title": "输入差模电压 vd",
+      "keys": [
+        "v_d"
+      ],
+      "unitHtml": "V",
+      "section": "rd-current-sense",
+      "sections": [
+        "rd-current-sense"
+      ],
+      "match": "放大器输入共模电压",
+      "description": "两输入端的电压差，符号由输入正负端定义。"
+    },
+    {
+      "id": "rd-analog-R",
+      "title": "滤波电阻 R",
+      "keys": [
+        "R"
+      ],
+      "unitHtml": "Ω",
+      "section": "rd-analog-filter",
+      "sections": [
+        "rd-analog-filter"
+      ],
+      "match": "理想电压源",
+      "description": "RC滤波电路中的外部串联电阻。"
+    },
+    {
+      "id": "rd-analog-C",
+      "title": "滤波电容 C",
+      "keys": [
+        "C"
+      ],
+      "unitHtml": "F",
+      "section": "rd-analog-filter",
+      "sections": [
+        "rd-analog-filter"
+      ],
+      "match": "理想电压源",
+      "description": "从输出节点到参考端的外部滤波电容，不是ADC内部保持电容。"
+    },
+    {
+      "id": "rd-analog-f_s",
+      "title": "采样频率 fs",
+      "keys": [
+        "f_s"
+      ],
+      "unitHtml": "Hz",
+      "section": "rd-analog-filter",
+      "sections": [
+        "rd-analog-filter"
+      ],
+      "match": "对采样频率",
+      "description": "每秒采样次数，样本间隔为1/fs。"
+    },
+    {
+      "id": "rd-analog-C_h",
+      "title": "ADC保持电容 Ch",
+      "keys": [
+        "C_h"
+      ],
+      "unitHtml": "F",
+      "section": "rd-analog-filter",
+      "sections": [
+        "rd-analog-filter"
+      ],
+      "match": "SAR ADC内部跟踪开关闭合时",
+      "description": "ADC内部采样保持电容，采集窗口中经等效源阻抗充电。"
+    },
+    {
+      "id": "rd-analog-R_eq",
+      "title": "采集等效电阻 Req",
+      "keys": [
+        "R_eq"
+      ],
+      "unitHtml": "Ω",
+      "section": "rd-analog-filter",
+      "sections": [
+        "rd-analog-filter"
+      ],
+      "match": "SAR ADC内部跟踪开关闭合时",
+      "description": "模型中源、滤波串联及内部开关等组成的等效充电电阻。"
+    },
+    {
+      "id": "rd-analog-t_acq",
+      "title": "采集时间 tacq",
+      "keys": [
+        "t_acq"
+      ],
+      "unitHtml": "s",
+      "section": "rd-analog-filter",
+      "sections": [
+        "rd-analog-filter"
+      ],
+      "match": "SAR ADC内部跟踪开关闭合时",
+      "description": "ADC跟踪开关导通以获取输入电压的时间，不等于总转换周期。"
+    },
+    {
+      "id": "rd-emb-Ts",
+      "title": "控制周期 Ts",
+      "keys": [
+        "T_s"
+      ],
+      "unitHtml": "s",
+      "section": "rd-sampling-time",
+      "sections": [
+        "rd-sampling-time"
+      ],
+      "match": "采样周期",
+      "description": "本节采样与控制更新间隔，不等于纯计算耗时。"
+    },
+    {
+      "id": "rd-emb-wire",
+      "title": "纯线时 Twire",
+      "keys": [
+        "T_wire"
+      ],
+      "unitHtml": "s",
+      "section": "rd-drive-protocol",
+      "sections": [
+        "rd-drive-protocol"
+      ],
+      "match": "纯线时",
+      "description": "一条帧占用串行线路的理论持续时间，不含排队与调度。"
+    },
+    {
+      "id": "rd-gate-Qg",
+      "title": "门极电荷 Qg",
+      "keys": [
+        "Q_g"
+      ],
+      "unitHtml": "C",
+      "section": "rd-mosfet-driver",
+      "sections": [
+        "rd-mosfet-driver"
+      ],
+      "match": "门极总电荷Qg",
+      "description": "指定测试条件下门极充电总电荷。"
+    },
+    {
+      "id": "rd-buck-L",
+      "title": "Buck电感 L",
+      "keys": [
+        "L"
+      ],
+      "unitHtml": "H",
+      "section": "rd-buck-power",
+      "sections": [
+        "rd-buck-power"
+      ],
+      "match": "电感电流iL向负载为正",
+      "description": "本节开关电源的储能电感。"
+    },
+    {
+      "id": "rd-buck-C",
+      "title": "输出电容 C",
+      "keys": [
+        "C"
+      ],
+      "unitHtml": "F",
+      "section": "rd-buck-power",
+      "sections": [
+        "rd-buck-power"
+      ],
+      "match": "输出为电容C与电阻负载R并联",
+      "description": "负载端并联储能电容。"
+    },
+    {
+      "id": "rd-buck-D",
+      "title": "高边占空比 D",
+      "keys": [
+        "D"
+      ],
+      "unitHtml": "无量纲",
+      "section": "rd-buck-power",
+      "sections": [
+        "rd-buck-power"
+      ],
+      "match": "周期稳态时",
+      "description": "高边导通时间与开关周期之比。"
+    },
+    {
+      "id": "rd-inverter-Ts",
+      "title": "开关周期 Ts",
+      "keys": [
+        "T_s"
+      ],
+      "unitHtml": "s",
+      "section": "rd-inverter",
+      "sections": [
+        "rd-inverter"
+      ],
+      "match": "取Ts=50 μs",
+      "description": "本节SVPWM平均矢量合成的时间周期。"
+    },
+    {
+      "id": "rd-ctrl-pole",
+      "title": "极对数 p",
+      "keys": [
+        "p"
+      ],
+      "unitHtml": "无量纲",
+      "section": "rd-joint-model",
+      "sections": [
+        "rd-joint-model"
+      ],
+      "match": "p为极对数",
+      "description": "电角速度与机械角速度之比。"
+    },
+    {
+      "id": "rd-ctrl-flux",
+      "title": "永磁磁链 ψf",
+      "keys": [
+        "ψ_f"
+      ],
+      "unitHtml": "Wb",
+      "section": "rd-joint-model",
+      "sections": [
+        "rd-joint-model"
+      ],
+      "match": "ψf为每相永磁磁链幅值",
+      "description": "本节幅值不变dq模型的每相永磁磁链峰值参数。"
+    },
+    {
+      "id": "rd-ctrl-ratio",
+      "title": "减速比 N",
+      "keys": [
+        "N"
+      ],
+      "unitHtml": "无量纲",
+      "section": "rd-joint-model",
+      "sections": [
+        "rd-joint-model"
+      ],
+      "match": "规定减速比N",
+      "description": "电机轴速度除以关节轴速度。"
+    },
+    {
+      "id": "rd-ctrl-iq",
+      "title": "q轴电流 iq",
+      "keys": [
+        "i_q"
+      ],
+      "unitHtml": "A",
+      "section": "rd-foc",
+      "sections": [
+        "rd-foc"
+      ],
+      "match": "Park变换把αβ矢量",
+      "description": "按本节q轴方向定义的电流分量，幅值对应相峰值。"
+    },
+    {
+      "id": "rd-ctrl-id",
+      "title": "d轴电流 id",
+      "keys": [
+        "i_d"
+      ],
+      "unitHtml": "A",
+      "section": "rd-foc",
+      "sections": [
+        "rd-foc"
+      ],
+      "match": "Park变换把αβ矢量",
+      "description": "沿转子磁链d轴的电流分量。"
+    },
+    {
+      "id": "rd-ctrl-angle",
+      "title": "电角 θe",
+      "keys": [
+        "θ_e"
+      ],
+      "unitHtml": "rad",
+      "section": "rd-foc",
+      "sections": [
+        "rd-foc"
+      ],
+      "match": "Park变换把αβ矢量",
+      "description": "坐标投影采用的转子电角；机械角还需极对数和零位。"
+    },
+    {
+      "id": "rd-ctrl-wc",
+      "title": "电流环目标角频率 ωc",
+      "keys": [
+        "ω_c"
+      ],
+      "unitHtml": "rad/s",
+      "section": "rd-foc",
+      "sections": [
+        "rd-foc"
+      ],
+      "match": "取R=0.2 Ω",
+      "description": "理想电流环设计所选闭环角频率，不等于开关频率。"
+    },
+    {
+      "id": "rd-ctrl-J",
+      "title": "等效惯量 J",
+      "keys": [
+        "J"
+      ],
+      "unitHtml": "kg·m²",
+      "section": "rd-cascade-control",
+      "sections": [
+        "rd-cascade-control"
+      ],
+      "match": "机械对象为J",
+      "description": "本节机械方程所选轴侧的总等效转动惯量。"
+    },
+    {
+      "id": "rd-ctrl-Ts",
+      "title": "采样周期 Ts",
+      "keys": [
+        "T_s"
+      ],
+      "unitHtml": "s",
+      "section": "rd-cascade-control",
+      "sections": [
+        "rd-cascade-control"
+      ],
+      "match": "选择积分状态x",
+      "description": "本节离散PI的更新周期。"
+    },
+    {
+      "id": "rd-ctrl-acc",
+      "title": "加速度上限 a",
+      "keys": [
+        "a"
+      ],
+      "unitHtml": "rad/s²",
+      "section": "rd-trajectory",
+      "sections": [
+        "rd-trajectory"
+      ],
+      "match": "从静止到静止的一维梯形",
+      "description": "一维对称加减速轨迹的加速度幅值。"
+    },
+    {
+      "id": "rd-ai-Tage",
+      "title": "观察年龄 Tage",
+      "keys": [
+        "T_{age}",
+        "T_age"
+      ],
+      "unitHtml": "ms或s，需统一",
+      "section": "rd-ai-interface",
+      "sections": [
+        "rd-ai-interface"
+      ],
+      "match": "设允许年龄120 ms",
+      "description": "从本地观察捕获到结果接收的时间差，包括全部路径。"
+    },
+    {
+      "id": "rd-ai-a",
+      "title": "离散RL系数 a",
+      "keys": [
+        "a"
+      ],
+      "unitHtml": "无量纲",
+      "section": "rd-edge-inference",
+      "sections": [
+        "rd-edge-inference"
+      ],
+      "match": "固定转子、恒定电阻电感",
+      "description": "采样周期内初始电流保留系数exp(−R Ts/L)。"
+    },
+    {
+      "id": "rd-ai-b",
+      "title": "离散RL系数 b",
+      "keys": [
+        "b"
+      ],
+      "unitHtml": "A/V",
+      "section": "rd-edge-inference",
+      "sections": [
+        "rd-edge-inference"
+      ],
+      "match": "固定转子、恒定电阻电感",
+      "description": "该模型中输入电压对下一步电流的增益。"
+    },
+    {
+      "id": "rd-sim-L",
+      "title": "等效绕组电感 L",
+      "keys": [
+        "L"
+      ],
+      "unitHtml": "H",
+      "section": "rd-simulation",
+      "sections": [
+        "rd-simulation"
+      ],
+      "match": "电枢型模型中",
+      "description": "单轴电枢型平均模型的电感，区别于相电感/dq约定。"
+    },
+    {
+      "id": "rd-sim-R",
+      "title": "等效绕组电阻 R",
+      "keys": [
+        "R"
+      ],
+      "unitHtml": "Ω",
+      "section": "rd-simulation",
+      "sections": [
+        "rd-simulation"
+      ],
+      "match": "电枢型模型中",
+      "description": "本节平均模型的等效绕组电阻。"
+    },
+    {
+      "id": "rd-sim-Kt",
+      "title": "转矩常数 Kt",
+      "keys": [
+        "K_t"
+      ],
+      "unitHtml": "N·m/A",
+      "section": "rd-simulation",
+      "sections": [
+        "rd-simulation"
+      ],
+      "match": "电枢型模型中",
+      "description": "本节电枢型平均模型的转矩/电流比例。"
+    },
+    {
+      "id": "rd-sim-Ke",
+      "title": "反电势常数 Ke",
+      "keys": [
+        "K_e"
+      ],
+      "unitHtml": "V·s/rad",
+      "section": "rd-simulation",
+      "sections": [
+        "rd-simulation"
+      ],
+      "match": "电枢型模型中",
+      "description": "本节机械角速度到反电势的比例。"
+    },
+    {
+      "id": "rd-id-tau",
+      "title": "电气时间常数 τ",
+      "keys": [
+        "τ"
+      ],
+      "unitHtml": "s",
+      "section": "rd-identification",
+      "sections": [
+        "rd-identification"
+      ],
+      "match": "在固定转子、恒定电压",
+      "description": "理想RL电流阶跃的L/R时间常数。"
+    }
+  ]
+}

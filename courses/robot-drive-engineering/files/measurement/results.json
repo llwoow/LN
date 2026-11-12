@@ -1,0 +1,27 @@
+{
+  "evidence": "synthetic model calculations, not measured sensor accuracy",
+  "current_step_A": 0.008056640624999998,
+  "quantization_half_step_A": 0.004028320312499999,
+  "current_output_V": [
+    [
+      -10,
+      0.6499999999999999
+    ],
+    [
+      0,
+      1.65
+    ],
+    [
+      10,
+      2.65
+    ]
+  ],
+  "shunt_power_at_10A_W": 0.5,
+  "first_order_worst_case_bound_A": 0.0890283203125,
+  "cm_input_error_V_80dB_12V": 0.0012,
+  "cm_current_error_A": 0.23999999999999996,
+  "acquisition_half_LSB_s": 9.010913347279287e-07,
+  "alias_19k_1k_max_sample_difference": 9.492406860545088e-14,
+  "loaded_probe_dc_ratio": 0.9090909090909091,
+  "loaded_probe_pole_Hz": 116713.62493405657
+}

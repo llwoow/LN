@@ -1085,6 +1085,683 @@
         "read": "历史批次记录了目录、精选扫描页和课件核读；2026-11-12本次复审实际核读40节网页正文、18题与11模型源码，独立复算并核看工程图和重点浏览器截图。"
       },
       "localLesson": "#course/electromagnetic-compatibility/emc-2-2"
+    },
+    {
+      "id": "rd-c-and-measurement",
+      "title": "电路与测量：从码值、负载到采集误差",
+      "kind": "固定源码核读与原创复现实验",
+      "repository": "https://github.com/scipy/scipy",
+      "checked": "2026-11-12",
+      "targets": [
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-c-foundations"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-measurement"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-current-sense"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-analog-filter"
+        }
+      ],
+      "question": "为什么探头改变被测电压，12位ADC又不能保证12位准确度？",
+      "summary": "以电阻负载、分流链、SAR建立和混叠为四个可计算的观察，配合主机C的类型边界。",
+      "steps": [
+        "编译c_foundations.c，检查除法、符号、累计范围和输入异常。",
+        "运行measurement/reproduce.py，将0、±10A的输出与正文三点表核对。",
+        "改变源阻抗或采集电阻，先预测加载与建立时间，再用计算检查；用19kHz与1kHz采样序列检验混叠。"
+      ],
+      "output": "独立可运行的C与Python检查、测量链计算报告；这些不是实物测量。",
+      "requirements": "Python 3.10+；C示例需支持C11的主机编译器。电脑模型不连接板卡。",
+      "license": "本站脚本为LN原创。上游资料依其原许可；这里只链接固定源码，不复制教材、器件PDF或第三方程序。",
+      "links": [
+        {
+          "label": "C11 draft N1570",
+          "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf"
+        },
+        {
+          "label": "TI INA240 datasheet SBOS662C Rev C",
+          "url": "https://www.ti.com/lit/ds/symlink/ina240.pdf"
+        },
+        {
+          "label": "ST AN2834 How to optimize the ADC accuracy, Rev 10 (2024-10)",
+          "url": "https://www.st.com/resource/en/application_note/an2834-how-to-optimize-the-adc-accuracy-in-the-stm32-mcus-stmicroelectronics.pdf"
+        },
+        {
+          "label": "OpenStax University Physics Volume 2 §10.5 RC Circuits",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits"
+        },
+        {
+          "label": "SciPy signal filter design source",
+          "url": "https://github.com/scipy/scipy/blob/f020736c3e5ae7591d32820422a0e2900fb5eec4/scipy/signal/_filter_design.py"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "C11 draft N1570",
+          "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf"
+        },
+        {
+          "label": "TI INA240 datasheet SBOS662C Rev C",
+          "url": "https://www.ti.com/lit/ds/symlink/ina240.pdf"
+        },
+        {
+          "label": "ST AN2834 How to optimize the ADC accuracy, Rev 10 (2024-10)",
+          "url": "https://www.st.com/resource/en/application_note/an2834-how-to-optimize-the-adc-accuracy-in-the-stm32-mcus-stmicroelectronics.pdf"
+        },
+        {
+          "label": "OpenStax University Physics Volume 2 §10.5 RC Circuits",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits"
+        },
+        {
+          "label": "SciPy signal filter design source",
+          "url": "https://github.com/scipy/scipy/blob/f020736c3e5ae7591d32820422a0e2900fb5eec4/scipy/signal/_filter_design.py"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "主机C示例",
+          "path": "courses/robot-drive-engineering/files/c_foundations.c"
+        },
+        {
+          "label": "测量模型复算",
+          "path": "courses/robot-drive-engineering/files/measurement/reproduce.py"
+        },
+        {
+          "label": "本次计算报告",
+          "path": "courses/robot-drive-engineering/files/measurement/results.json"
+        }
+      ],
+      "limits": [
+        "误差预算是一阶保守模型，不是有效位数或实测不确定度。",
+        "ADC建立模型不含全部驱动动态，需按选定芯片手册重核。"
+      ],
+      "verification": {
+        "executed": true,
+        "scope": "主机C11编译执行；Python标准库复算分流、误差折算、半LSB建立与混叠。没有实际运行SciPy滤波器或传感器。",
+        "read": "取得完整草案，核读§6.2.5类型、§6.5.6加减/指针和§6.5.16赋值约定；未声称全文审读。；电气特性条件、8.3.1 PWM共模/带宽、8.4误差分析、9.1.1输入滤波；已下载原PDF并提取对应正文。；3.2.7源阻抗影响、4.2.6 SAR采样时间前提、4.4高阻信号测量；已下载53页原文，只核读上述段落及相关等效输入模型。；10.5的KVL到充放电指数关系、时间常数、Example 10.8阈值计时完整解答。只读本节，未宣称整本教材核读。；已读取freqs的模拟多项式与rad/s约定、buttord阶数设计和butter模拟/数字参数约定，及仓库LICENSE.txt；独立脚本不用复制源码。"
+      },
+      "localLesson": "#course/robot-drive-engineering/rd-c-foundations"
+    },
+    {
+      "id": "rd-embedded-timing",
+      "title": "嵌入式：一致记录、触发时序与消息有效期",
+      "kind": "固定源码核读与原创复现实验",
+      "repository": "https://github.com/TexasInstruments/c2000ware-core-sdk",
+      "checked": "2026-11-12",
+      "targets": [
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-embedded-c"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-sampling-time"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-drive-protocol"
+        }
+      ],
+      "question": "CRC正确的旧包为什么仍可能破坏控制？",
+      "summary": "比较Cortex-M与C28x语义，区分连续ADC+DMA与PWM触发SOC，再重放序号与超时。",
+      "steps": [
+        "编译snapshot_demo.c，观察逐字段复制怎样读出混合记录。",
+        "运行embedded_replay.py，核对CRC测试向量、序号跨界与租期。",
+        "对照固定TI/ST例程画触发—就绪—ISR—PWM装载轴；重新计算12μs运算改为20μs时的余量。"
+      ],
+      "output": "主机确定性交错示例和协议重放结果；不是目标DSP最坏执行时间。",
+      "requirements": "Python 3.10+；C示例需支持C11的主机编译器。电脑模型不连接板卡。",
+      "license": "本站脚本为LN原创。上游资料依其原许可；这里只链接固定源码，不复制教材、器件PDF或第三方程序。",
+      "links": [
+        {
+          "label": "TI C28x compiler user guide",
+          "url": "https://www.ti.com/lit/ug/spru514/spru514.pdf"
+        },
+        {
+          "label": "TexasInstruments/c2000ware-core-sdk",
+          "url": "https://github.com/TexasInstruments/c2000ware-core-sdk/blob/699b8c6aa190cf7430a36bdcf7f5b1ea2e928063/driverlib/f2837xd/examples/cpu1/adc/adc_ex2_soc_epwm.c"
+        },
+        {
+          "label": "STMicroelectronics/STM32CubeF4",
+          "url": "https://github.com/STMicroelectronics/STM32CubeF4/blob/60c8abe0ae88a23bbd1c925358330031e36dd20f/Projects/STM32F429I-Discovery/Examples/ADC/ADC_RegularConversion_DMA/Src/main.c"
+        },
+        {
+          "label": "GCC Volatiles",
+          "url": "https://gcc.gnu.org/onlinedocs/gcc/Volatiles.html"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "TI C28x compiler user guide",
+          "url": "https://www.ti.com/lit/ug/spru514/spru514.pdf"
+        },
+        {
+          "label": "TexasInstruments/c2000ware-core-sdk",
+          "url": "https://github.com/TexasInstruments/c2000ware-core-sdk/blob/699b8c6aa190cf7430a36bdcf7f5b1ea2e928063/driverlib/f2837xd/examples/cpu1/adc/adc_ex2_soc_epwm.c"
+        },
+        {
+          "label": "STMicroelectronics/STM32CubeF4",
+          "url": "https://github.com/STMicroelectronics/STM32CubeF4/blob/60c8abe0ae88a23bbd1c925358330031e36dd20f/Projects/STM32F429I-Discovery/Examples/ADC/ADC_RegularConversion_DMA/Src/main.c"
+        },
+        {
+          "label": "GCC Volatiles",
+          "url": "https://gcc.gnu.org/onlinedocs/gcc/Volatiles.html"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "C记录示例",
+          "path": "courses/robot-drive-engineering/files/snapshot_demo.c"
+        },
+        {
+          "label": "协议与时序重放",
+          "path": "courses/robot-drive-engineering/files/embedded_replay.py"
+        },
+        {
+          "label": "实际离线结果",
+          "path": "courses/robot-drive-engineering/files/results.json"
+        },
+        {
+          "label": "执行边界",
+          "path": "courses/robot-drive-engineering/files/README.txt"
+        }
+      ],
+      "limits": [
+        "屏蔽中断不能同时解决DMA、缓存或跨核一致性。",
+        "本例串口帧不是CANopen或安全通信协议。"
+      ],
+      "verification": {
+        "executed": true,
+        "scope": "C主机示例及Python内存帧重放；固定源码逐项核读，未烧录TI/ST开发板。",
+        "read": "核读§6.3数据类型与CHAR_BIT=16相关约定，不默认C字节就是线缆8位组。；核读F2837xD上数计数器ePWM触发SOC→ADC→ISR的例程；不是完整FOC或中心对齐时序。；核读STM32F429I-Discovery连续规则转换DMA例程；没有把它冒认为PWM同步采样。；核读volatile可观察访问与普通内存排序说明；不是目标DSP编译器的全部规则。"
+      },
+      "localLesson": "#course/robot-drive-engineering/rd-embedded-c"
+    },
+    {
+      "id": "rd-power-and-modulation",
+      "title": "功率级：门极预算、Buck与三相桥",
+      "kind": "固定源码核读与原创复现实验",
+      "repository": "https://github.com/simplefoc/SimpleFOC-DriveShield",
+      "checked": "2026-11-12",
+      "targets": [
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-mosfet-driver"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-buck-power"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-inverter"
+        }
+      ],
+      "question": "逻辑PWM为什么还需要门极驱动、有效窗口和损耗计算？",
+      "summary": "将门极电荷与平均供电、理想Buck积分、三相桥状态与空间矢量逐项核对。",
+      "steps": [
+        "运行power_checks.py --output power-results.json；区分门极峰值与平均电流。",
+        "将100μH理想Buck的电流斜率结果与100ns步长RK4比较，说明ESR估计与纯电容纹波差异。",
+        "核读DriveShield原理图与DRV8320数据表，找出电荷泵结构；对照自举充电路径，避免混套限制。"
+      ],
+      "output": "门极、纹波、状态100、SVPWM与死区的复算报告。",
+      "requirements": "Python 3.10+；C示例需支持C11的主机编译器。电脑模型不连接板卡。",
+      "license": "本站脚本为LN原创。上游资料依其原许可；这里只链接固定源码，不复制教材、器件PDF或第三方程序。",
+      "links": [
+        {
+          "label": "TI SLUA887A Bootstrap Circuitry Selection",
+          "url": "https://www.ti.com/lit/an/slua887a/slua887a.pdf"
+        },
+        {
+          "label": "TI SLVA477C Basic Calculation of a Buck Converter Power Stage",
+          "url": "https://www.ti.com/lit/an/slva477c/slva477c.pdf"
+        },
+        {
+          "label": "TI DRV8320 data sheet",
+          "url": "https://www.ti.com/lit/ds/symlink/drv8320.pdf"
+        },
+        {
+          "label": "SimpleFOC DriveShield fixed revision",
+          "url": "https://github.com/simplefoc/SimpleFOC-DriveShield/tree/22b4c5506e67aa473017a09c13aa4fd4a453504b"
+        },
+        {
+          "label": "SimpleFOC 3PWM/6PWM drivers",
+          "url": "https://github.com/simplefoc/Arduino-FOC/tree/b3d8f3931342ae68a980d0140e24b9048eba098b/src/drivers"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "TI SLUA887A Bootstrap Circuitry Selection",
+          "url": "https://www.ti.com/lit/an/slua887a/slua887a.pdf"
+        },
+        {
+          "label": "TI SLVA477C Basic Calculation of a Buck Converter Power Stage",
+          "url": "https://www.ti.com/lit/an/slva477c/slva477c.pdf"
+        },
+        {
+          "label": "TI DRV8320 data sheet",
+          "url": "https://www.ti.com/lit/ds/symlink/drv8320.pdf"
+        },
+        {
+          "label": "SimpleFOC DriveShield fixed revision",
+          "url": "https://github.com/simplefoc/SimpleFOC-DriveShield/tree/22b4c5506e67aa473017a09c13aa4fd4a453504b"
+        },
+        {
+          "label": "SimpleFOC 3PWM/6PWM drivers",
+          "url": "https://github.com/simplefoc/Arduino-FOC/tree/b3d8f3931342ae68a980d0140e24b9048eba098b/src/drivers"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "功率级计算程序",
+          "path": "courses/robot-drive-engineering/files/power_checks.py"
+        },
+        {
+          "label": "实际数值结果",
+          "path": "courses/robot-drive-engineering/files/power-results.json"
+        }
+      ],
+      "limits": [
+        "驱动板README中未明确条件的电流数值不作为额定。",
+        "平均模型不含器件非线性、PCB寄生和硬件保护延迟。"
+      ],
+      "verification": {
+        "executed": true,
+        "scope": "Python标准库RK4及代数复算；没有制造、上电或热测试。",
+        "read": "实际核读第2—4页充放电路径、电荷预算及UVLO相关条件。；核读连续导通下占空比、纹波、开关峰值与元件选择相关式；不当作完整闭环设计。；核读门极驱动、电荷泵与保护结构；与自举结构区分。；原理图、BOM、README和LICENSE；识别DRV8320电荷泵，不沿用含糊电流额定。；核读BLDCDriver3PWM.cpp、BLDCDriver6PWM.cpp、hardware_api.h的占空比和平台分工。"
+      },
+      "localLesson": "#course/robot-drive-engineering/rd-mosfet-driver"
+    },
+    {
+      "id": "rd-foc-source-reading",
+      "title": "控制源码：电流投影、离散PI与受限轨迹",
+      "kind": "固定源码核读与原创复现实验",
+      "repository": "https://github.com/simplefoc/Arduino-FOC",
+      "checked": "2026-11-12",
+      "targets": [
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-joint-model"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-foc"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-cascade-control"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-trajectory"
+        }
+      ],
+      "question": "同名dq电流与PI参数为什么不能直接从其他代码复制？",
+      "summary": "阅读固定SimpleFOC与ODrive文件，再以本站交互投影与轨迹核对约定。",
+      "steps": [
+        "先手算α=2A、β=0、θ=30°的dq投影，在本节实验台改变角度核对平方和。",
+        "对照pid.cpp的时间步长、积分、输出限幅和斜率限制，与本站前向积分示例区分。",
+        "读trapTraj.cpp非零初速分支，再用本站静止起终点轨迹改变距离，定位梯形转三角形的临界。"
+      ],
+      "output": "网页交互计算与源码阅读记录。",
+      "requirements": "浏览器；上游固件编译和硬件复现另需各自平台及版本条件。",
+      "license": "本站脚本为LN原创。上游资料依其原许可；这里只链接固定源码，不复制教材、器件PDF或第三方程序。",
+      "links": [
+        {
+          "label": "SimpleFOC CurrentSense.cpp",
+          "url": "https://github.com/simplefoc/Arduino-FOC/blob/b3d8f3931342ae68a980d0140e24b9048eba098b/src/common/base_classes/CurrentSense.cpp"
+        },
+        {
+          "label": "SimpleFOC PID implementation",
+          "url": "https://github.com/simplefoc/Arduino-FOC/blob/b3d8f3931342ae68a980d0140e24b9048eba098b/src/common/pid.cpp"
+        },
+        {
+          "label": "ODrive trapezoidal trajectory",
+          "url": "https://github.com/odriverobotics/ODrive/blob/3a2e4dd1bfbda9e4c534d5c7d8428a99c361e783/Firmware/MotorControl/trapTraj.cpp"
+        },
+        {
+          "label": "MIT 6.685 PM machines notes",
+          "url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/pages/lecture-notes/"
+        },
+        {
+          "label": "Modern Robotics §8.9 Actuation, Gearing, Friction",
+          "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-9-actuation-gearing-and-friction/"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "SimpleFOC CurrentSense.cpp",
+          "url": "https://github.com/simplefoc/Arduino-FOC/blob/b3d8f3931342ae68a980d0140e24b9048eba098b/src/common/base_classes/CurrentSense.cpp"
+        },
+        {
+          "label": "SimpleFOC PID implementation",
+          "url": "https://github.com/simplefoc/Arduino-FOC/blob/b3d8f3931342ae68a980d0140e24b9048eba098b/src/common/pid.cpp"
+        },
+        {
+          "label": "ODrive trapezoidal trajectory",
+          "url": "https://github.com/odriverobotics/ODrive/blob/3a2e4dd1bfbda9e4c534d5c7d8428a99c361e783/Firmware/MotorControl/trapTraj.cpp"
+        },
+        {
+          "label": "MIT 6.685 PM machines notes",
+          "url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/pages/lecture-notes/"
+        },
+        {
+          "label": "Modern Robotics §8.9 Actuation, Gearing, Friction",
+          "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/8-9-actuation-gearing-and-friction/"
+        }
+      ],
+      "downloads": [],
+      "limits": [
+        "dq幅值与电角约定必须一致；本站不覆盖全部弱磁/凸极/MTPA工况。",
+        "运动学轨迹没有模拟饱和后的真实跟踪。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "逐段核读固定源码；本站两种简化模型另以Node数值测试与浏览器交互核验，不声称运行完整上游固件。",
+        "read": "核读getABCurrents/getDQCurrents、两/三电流输入与变换。；核读固定/自适应dt、梯形积分、输出/积分及斜率限制。；核读轨迹分段和初速度处理；并查controller.cpp及固件LICENSE。；核读所取得永磁电机笔记的磁链、转矩与约定；本站数值和变换推导另行声明。；核读齿轮传动、惯量折算和摩擦讲解页面；不是整书或全部实验复现。"
+      },
+      "localLesson": "#course/robot-drive-engineering/rd-joint-model"
+    },
+    {
+      "id": "rd-ai-contract-replay",
+      "title": "AI接口：观察年龄、命令约束与日志",
+      "kind": "固定源码核读与原创复现实验",
+      "repository": "https://github.com/huggingface/lerobot",
+      "checked": "2026-11-12",
+      "targets": [
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-python-data"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-ai-interface"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-robot-integration"
+        }
+      ],
+      "question": "模型推理只花20ms，返回的动作为什么仍会过期？",
+      "summary": "以本地观察关联、序号和明确状态重放异步指令，对照LeRobot和ROS 2接口职责。",
+      "steps": [
+        "在files/ai目录运行python -m unittest -v test_command_guard.py。",
+        "运行replay.py，检查过期、乱序、未知观察、角度越限和禁止隐藏重新使能。",
+        "运行log_analysis.py，区分计划时刻、开始间隔、耗时与截止点；保留四样本不能保证尾部时延的限制。"
+      ],
+      "output": "原创本地契约、合成CSV、拒绝原因及统计报告。",
+      "requirements": "Python 3.10+；C示例需支持C11的主机编译器。电脑模型不连接板卡。",
+      "license": "本站脚本为LN原创。上游资料依其原许可；这里只链接固定源码，不复制教材、器件PDF或第三方程序。",
+      "links": [
+        {
+          "label": "LeRobot inference and remote inference",
+          "url": "https://github.com/huggingface/lerobot/tree/1ef599dc5a7fd6aca6ad2ded8cf710e4d0e3f1be/src/lerobot"
+        },
+        {
+          "label": "ROS 2 Jazzy QoS",
+          "url": "https://docs.ros.org/en/jazzy/Concepts/Intermediate/About-Quality-of-Service-Settings.html"
+        },
+        {
+          "label": "ROS 2 real-time programming",
+          "url": "https://docs.ros.org/en/jazzy/Tutorials/Demos/Real-Time-Programming.html"
+        },
+        {
+          "label": "ros2_control controller manager",
+          "url": "https://github.com/ros-controls/ros2_control/blob/139077cd892a5745c25cc9c29bdaab231e1cb043/controller_manager/src/ros2_control_node.cpp"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "LeRobot inference and remote inference",
+          "url": "https://github.com/huggingface/lerobot/tree/1ef599dc5a7fd6aca6ad2ded8cf710e4d0e3f1be/src/lerobot"
+        },
+        {
+          "label": "ROS 2 Jazzy QoS",
+          "url": "https://docs.ros.org/en/jazzy/Concepts/Intermediate/About-Quality-of-Service-Settings.html"
+        },
+        {
+          "label": "ROS 2 real-time programming",
+          "url": "https://docs.ros.org/en/jazzy/Tutorials/Demos/Real-Time-Programming.html"
+        },
+        {
+          "label": "ros2_control controller manager",
+          "url": "https://github.com/ros-controls/ros2_control/blob/139077cd892a5745c25cc9c29bdaab231e1cb043/controller_manager/src/ros2_control_node.cpp"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "命令契约",
+          "path": "courses/robot-drive-engineering/files/ai/command_guard.py"
+        },
+        {
+          "label": "边界测试",
+          "path": "courses/robot-drive-engineering/files/ai/test_command_guard.py"
+        },
+        {
+          "label": "合成重放",
+          "path": "courses/robot-drive-engineering/files/ai/replay.py"
+        },
+        {
+          "label": "重放报告",
+          "path": "courses/robot-drive-engineering/files/ai/replay-results.json"
+        },
+        {
+          "label": "日志分析",
+          "path": "courses/robot-drive-engineering/files/ai/log_analysis.py"
+        },
+        {
+          "label": "原始合成日志",
+          "path": "courses/robot-drive-engineering/files/ai/synthetic-log.csv"
+        }
+      ],
+      "limits": [
+        "HOLD只停止参考推进，不代表机械刹车或安全等级。",
+        "ROS可靠传输不能代替端到端新鲜度和DSP周期检查。"
+      ],
+      "verification": {
+        "executed": true,
+        "scope": "执行纯Python契约与日志检查；没有接入外部模型、ROS硬件或真实机器人。",
+        "read": "核读inference/contracts.py、dispatch.py、latency.py和remote_inference/protocol.py、engine.py、对应说明及LICENSE。；核读可靠性、历史、deadline和lifespan相关段落；未运行硬件DDS链路。；核读内存、缺页、阻塞与调度示例及其版本源码。；核读循环调度与read/update/write流程，并参照Jazzy文档；未复现实时系统。"
+      },
+      "localLesson": "#course/robot-drive-engineering/rd-python-data"
+    },
+    {
+      "id": "rd-onnx-repro",
+      "title": "边缘推理：训练、导出、一致性和计时",
+      "kind": "固定源码核读与原创复现实验",
+      "repository": "https://github.com/pytorch/pytorch",
+      "checked": "2026-11-12",
+      "targets": [
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-edge-inference"
+        }
+      ],
+      "question": "怎样区分模型拟合、推理接口正确与换工况有效？",
+      "summary": "合成RL数据拟合小线性模型，构造ONNX图，在CPU运行并保存每次计时。",
+      "steps": [
+        "先运行ai/gradient_descent.py，手算第一次权重更新并用中心差分核对梯度。",
+        "在独立Python环境安装requirements-edge.txt后运行edge_inference.py。",
+        "核对同系数NumPy与ONNX输出，再比较同分布留出集与R改变后的电流RMSE。",
+        "保留500次预热后耗时，写清计时不包括前处理、通信和控制器；换设备重新测。"
+      ],
+      "output": "本次实际生成的ONNX、拟合误差和原始CPU耗时。",
+      "requirements": "Python虚拟环境与固定依赖；下载和安装来自官方软件源。",
+      "license": "本站脚本为LN原创。上游资料依其原许可；这里只链接固定源码，不复制教材、器件PDF或第三方程序。",
+      "links": [
+        {
+          "label": "ONNX Runtime Python API",
+          "url": "https://onnxruntime.ai/docs/api/python/api_summary.html"
+        },
+        {
+          "label": "PyTorch ONNX export documentation",
+          "url": "https://github.com/pytorch/pytorch/blob/5291044bad04f9f0606e330377be25ae8e83aaaf/docs/source/onnx_export.md"
+        },
+        {
+          "label": "LeRobot inference and remote inference",
+          "url": "https://github.com/huggingface/lerobot/tree/1ef599dc5a7fd6aca6ad2ded8cf710e4d0e3f1be/src/lerobot"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "ONNX Runtime Python API",
+          "url": "https://onnxruntime.ai/docs/api/python/api_summary.html"
+        },
+        {
+          "label": "PyTorch ONNX export documentation",
+          "url": "https://github.com/pytorch/pytorch/blob/5291044bad04f9f0606e330377be25ae8e83aaaf/docs/source/onnx_export.md"
+        },
+        {
+          "label": "LeRobot inference and remote inference",
+          "url": "https://github.com/huggingface/lerobot/tree/1ef599dc5a7fd6aca6ad2ded8cf710e4d0e3f1be/src/lerobot"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "训练与推理程序",
+          "path": "courses/robot-drive-engineering/files/edge_inference.py"
+        },
+        {
+          "label": "固定依赖",
+          "path": "courses/robot-drive-engineering/files/requirements-edge.txt"
+        },
+        {
+          "label": "数值报告",
+          "path": "courses/robot-drive-engineering/files/edge-results.json"
+        },
+        {
+          "label": "模型",
+          "path": "courses/robot-drive-engineering/files/rl_predictor.onnx"
+        },
+        {
+          "label": "逐次主机计时",
+          "path": "courses/robot-drive-engineering/files/inference-timings-ns.json"
+        },
+        {
+          "label": "梯度与中心差分核对",
+          "path": "courses/robot-drive-engineering/files/ai/gradient_descent.py"
+        },
+        {
+          "label": "梯度实验实际结果",
+          "path": "courses/robot-drive-engineering/files/ai/gradient-results.json"
+        }
+      ],
+      "limits": [
+        "小线性预测器不是具身大模型，不代表AI闭环有效。",
+        "主机耗时不能外推到目标边缘板。"
+      ],
+      "verification": {
+        "executed": true,
+        "scope": "本次云主机实际执行NumPy2.5.4/ONNX1.23.2/ONNXRuntime1.31.1 CPU；直接构图，不是PyTorch大型策略导出。",
+        "read": "核读InferenceSession、CPU provider及输入/输出调用。；核读torch.export-based导出流程与额外依赖；未执行大型PyTorch策略导出。；核读inference/contracts.py、dispatch.py、latency.py和remote_inference/protocol.py、engine.py、对应说明及LICENSE。"
+      },
+      "localLesson": "#course/robot-drive-engineering/rd-edge-inference"
+    },
+    {
+      "id": "rd-model-experiment",
+      "title": "仿真与辨识：步长、独立验证及失败对照",
+      "kind": "固定源码核读与原创复现实验",
+      "repository": "https://github.com/python-control/python-control",
+      "checked": "2026-11-12",
+      "targets": [
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-simulation"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-identification"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-experiment-design"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-contest-project"
+        },
+        {
+          "course": "robot-drive-engineering",
+          "section": "rd-capstone"
+        }
+      ],
+      "question": "曲线更平滑或单项RMSE更小，为什么还不能宣布方案更优？",
+      "summary": "固定单轴平均模型、噪声种子与通信事件，对照解、辨识数据和两种命令策略。",
+      "steps": [
+        "运行experiments/reproduce.py --output experiment-output，核对RL极限与Euler步长差异。",
+        "比较拟合数据与电阻变化后的独立数据，记录偏置处理和不可辨识参数。",
+        "在同一植物和控制器下查看迟到/丢包回放；解释受约束方案为何位置误差可能变大，而过期命令仍应被拒绝。"
+      ],
+      "output": "合成输入CSV、RL/电机结果、辨识和通信对照报告。",
+      "requirements": "Python 3.10+；C示例需支持C11的主机编译器。电脑模型不连接板卡。",
+      "license": "本站脚本为LN原创。上游资料依其原许可；这里只链接固定源码，不复制教材、器件PDF或第三方程序。",
+      "links": [
+        {
+          "label": "University of Michigan CTMS DC Motor Modeling",
+          "url": "https://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling"
+        },
+        {
+          "label": "python-control numerical time responses",
+          "url": "https://github.com/python-control/python-control/blob/bfe9380eedcfbc6e57c0a7117e77e633575e3a18/control/timeresp.py"
+        },
+        {
+          "label": "SciPy lsim documentation",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.lsim.html"
+        },
+        {
+          "label": "MIT 6.01SC Additional Review Problems with Solutions",
+          "url": "https://ocw.mit.edu/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/resources/mit6_01scs11_mid02_rev_sol/"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "University of Michigan CTMS DC Motor Modeling",
+          "url": "https://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling"
+        },
+        {
+          "label": "python-control numerical time responses",
+          "url": "https://github.com/python-control/python-control/blob/bfe9380eedcfbc6e57c0a7117e77e633575e3a18/control/timeresp.py"
+        },
+        {
+          "label": "SciPy lsim documentation",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.lsim.html"
+        },
+        {
+          "label": "MIT 6.01SC Additional Review Problems with Solutions",
+          "url": "https://ocw.mit.edu/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/resources/mit6_01scs11_mid02_rev_sol/"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "复现实验",
+          "path": "courses/robot-drive-engineering/files/experiments/reproduce.py"
+        },
+        {
+          "label": "本次实际报告",
+          "path": "courses/robot-drive-engineering/files/experiments/output/report.json"
+        },
+        {
+          "label": "Simulink搭建文本（尚未执行）",
+          "path": "courses/robot-drive-engineering/files/build_joint_model.m"
+        }
+      ],
+      "limits": [
+        "未模拟完整三相开关、电流保护、机械碰撞或真实大模型。",
+        "受约束策略没有在所有指标上获胜，正文保留此结果。"
+      ],
+      "verification": {
+        "executed": true,
+        "scope": "实际执行Python标准库RK4、确定性合成辨识与回放；Simulink搭建说明未在MATLAB执行。",
+        "read": "依据公开模型的电气/机械状态关系，本站另设参数并用Python复算；未执行MATLAB。；核读本次取得固定提交的control/timeresp.py与examples/cruise-control.py，检查状态响应和限幅示例。；核读连续LTI响应接口与均匀时间轴条件；独立RK4程序不冒称调用了所有SciPy方法。；实际取得PDF，核读PDF第4—5页Motor Control、13—14页双端驱动Q13/Q14及解答；页面是2011课程汇编，题目含旧年页眉。"
+      },
+      "localLesson": "#course/robot-drive-engineering/rd-simulation"
     }
   ]
 }

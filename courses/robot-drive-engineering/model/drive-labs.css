@@ -1,0 +1,12 @@
+.rd-figure-scroll { max-width:100%; overflow-x:auto; margin:1rem 0; }
+.rd-figure-scroll svg { display:block; width:100%; min-width:640px; height:auto; }
+.rd-lab { margin:1.4rem 0; border:1px solid var(--border); border-radius:8px; padding:1rem; }
+.rd-lab-ui label { display:grid; grid-template-columns:1fr auto; gap:.35rem 1rem; margin:.7rem 0; font-family:var(--font-ui, sans-serif); font-size:.95rem; }
+.rd-lab-ui input { grid-column:1/-1; width:100%; accent-color:currentColor; }
+.rd-lab-ui svg { width:100%; height:auto; display:block; }
+.rd-lab-result { margin-bottom:0; font-variant-numeric:tabular-nums; }
+.rd-sources { font-size:.9em; margin:2rem 0; }
+.rd-sources summary { cursor:pointer; font-weight:650; }
+.rd-sources li { margin:.8rem 0; overflow-wrap:anywhere; }
+.rd-sources li p { margin:.2rem 0; }
+#lesson-body[data-lesson-key^="robot-drive-engineering/"] pre { overflow:auto; max-width:100%; font-size:.86em; padding:1rem; background:var(--surface-hover,var(--bg)); border:1px solid var(--border); }

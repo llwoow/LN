@@ -1,0 +1,72 @@
+{
+  "conditions": "All input values are teaching assumptions; no hardware measurements.",
+  "gate": {
+    "average_gate_current_A": 0.0004,
+    "miller_current_A": 0.2,
+    "gate_supply_power_W": 0.004,
+    "bootstrap_charge_C": 2.8999999999999998e-08,
+    "bootstrap_Cmin_F": 1.1599999999999999e-07,
+    "bootstrap_drop_at_220nF_V": 0.1318181818181818,
+    "conduction_at_on_5A_D_half_R10mohm_W": 0.125,
+    "switching_overlap_24V_5A_100ns_20kHz_W": 0.12000000000000001
+  },
+  "buck": {
+    "D": 0.5,
+    "i_pp_A": 0.6,
+    "i_peak_A": 2.3,
+    "i_min_A": 1.7,
+    "capacitor_pp_V": 0.0075,
+    "ESR_pp_V": 0.012,
+    "component_ripple_sum_bound_V": 0.0195,
+    "i_rms2_A2": 4.03,
+    "inductor_copper_W": 0.403,
+    "lightload_boundary_A_for_nonnegative_current": 0.3,
+    "f0_Hz": 1591.5494309189535,
+    "numerical": {
+      "i_average_A": 1.9999993521324884,
+      "v_average_V": 12.000000202441278,
+      "i_pp_A": 0.6001250396761626,
+      "v_pp_V": 0.00750186523802121,
+      "dt_s": 1.0000000000000001e-07,
+      "cycles": 2000
+    }
+  },
+  "inverter": {
+    "pole_100_V": [
+      24,
+      0,
+      0
+    ],
+    "phase_100_V": [
+      16,
+      -8,
+      -8
+    ],
+    "Vref_V": 10,
+    "theta_deg": 30,
+    "T1_s": 1.8042195912175803e-05,
+    "T2_s": 1.8042195912175803e-05,
+    "T0_s": 1.39156081756484e-05,
+    "duties": [
+      0.860843918243516,
+      0.5000000000000001,
+      0.139156081756484
+    ],
+    "phase_average_V": [
+      8.660254037844384,
+      1.7763568394002505e-15,
+      -8.660254037844386
+    ],
+    "alpha_V": 8.660254037844384,
+    "beta_V": 5.000000000000001,
+    "linear_circle_limit_V": 13.85640646055102,
+    "deadtime_pole_error_magnitude_V": 0.24,
+    "opposite_current_line_error_magnitude_V": 0.48
+  },
+  "limits": [
+    "Ideal forced-synchronous buck allows negative current during startup; it is not a diode-emulation DCM solver.",
+    "Output ripple excludes ESR in the numerical model; ESR contribution is reported separately.",
+    "Loss terms omit reverse recovery, output capacitance, magnetic core, temperature dependence and PCB parasitics.",
+    "Sampling, controller stability, device limits and real hardware are not validated by these calculations."
+  ]
+}

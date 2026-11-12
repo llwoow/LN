@@ -34,7 +34,8 @@ class PracticeContent(unittest.TestCase):
             'emc-ground-step':100*100*.8/(2*math.pi*2*(2+.8)),
             'emc-lightning-lead-voltage':.6e-6*(1000/1e-6),
             'emc-impulse-shield-current':1/(1+3)*100}
-        numeric={q['id'] for q in self.questions if q['type']=='numeric'}
+        # Robot-drive keys have an independent calculation registry in test_robot_drive.py.
+        numeric={q['id'] for q in self.questions if q['type']=='numeric' and q['course']!='robot-drive-engineering'}
         self.assertEqual(numeric,set(expected))
         for identifier,value in expected.items():
             self.assertAlmostEqual(self.byid[identifier]['answer'],float(value),places=8)

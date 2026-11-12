@@ -1,0 +1,19 @@
+{
+  "kind": "hand-authored synthetic log, not an instrument measurement",
+  "period_ms": [
+    10.5,
+    9.5,
+    10.700000000000001
+  ],
+  "work_duration_ms": [
+    3.0,
+    3.4999999999999996,
+    2.999999999999999,
+    10.499999999999998
+  ],
+  "deadline_misses": 1,
+  "rmse_rad": 0.0020615528128088306,
+  "p99_work_ms_linear": 10.289999999999997,
+  "max_work_ms": 10.499999999999998,
+  "samples": 4
+}

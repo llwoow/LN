@@ -1,0 +1,40 @@
+{
+  "evidence": "noise-free synthetic linear regression, not task validation",
+  "normalization": "x,y dimensionless for gradient exercise",
+  "initial_gradient": [
+    -0.4,
+    0.2
+  ],
+  "central_difference": [
+    -0.3999999999976245,
+    0.20000000000575113
+  ],
+  "history": [
+    {
+      "step": 0,
+      "w": 0.0,
+      "b": 0.2,
+      "loss": 0.18000000000000002
+    },
+    {
+      "step": 1,
+      "w": 0.08000000000000002,
+      "b": 0.16,
+      "loss": 0.14240000000000003
+    },
+    {
+      "step": 10,
+      "w": 0.52105724792,
+      "b": 0.02147483648000001,
+      "loss": 0.019682849035412467
+    },
+    {
+      "step": 100,
+      "w": 0.79997875088089,
+      "b": 4.0740719930715993e-11,
+      "loss": 1.1288126573916789e-10
+    }
+  ],
+  "heldout_x_0p25_prediction": 0.1999946877609632,
+  "target_at_0p25": 0.2
+}
