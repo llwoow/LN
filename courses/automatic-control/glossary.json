@@ -111,6 +111,79 @@
       "description": "一阶模型 1/(Ts+1) 中的 T>0，阶跃响应在 t=T 达到最终变化量约63.2%。",
       "section": "ac-3-2",
       "match": "时间常数具有可测量的意义"
+    },
+    {
+      "id": "ac-root-locus",
+      "aliases": [
+        "根轨迹",
+        "root locus"
+      ],
+      "title": "根轨迹",
+      "english": "Root Locus",
+      "description": "随一个实数参数变化，闭环特征根在复平面留下的轨迹；由闭环特征方程确定。",
+      "section": "ac-4-1",
+      "match": "根轨迹就是特征根"
+    },
+    {
+      "id": "ac-root-asymptote",
+      "aliases": [
+        "根轨迹渐近线",
+        "asymptote"
+      ],
+      "title": "根轨迹渐近线",
+      "english": "Root Locus Asymptote",
+      "description": "通向无穷远的根轨迹分支在远处趋近的直线，不直接决定开环极点与渐近线如何连接。",
+      "section": "ac-4-2-1",
+      "match": "渐近线说明"
+    },
+    {
+      "id": "ac-root-breakaway",
+      "aliases": [
+        "分离点",
+        "汇合点",
+        "breakaway point"
+      ],
+      "title": "根轨迹分离点",
+      "english": "Breakaway Point",
+      "description": "两条或多条根轨迹分支在特定增益下汇合为重根的点；dK/ds=0只给候选点，需检验增益和相角。",
+      "section": "ac-4-2-1",
+      "match": "分离点和汇合点"
+    },
+    {
+      "id": "ac-root-departure",
+      "aliases": [
+        "出射角",
+        "angle of departure"
+      ],
+      "title": "复数极点出射角",
+      "english": "Angle of Departure",
+      "description": "根轨迹离开复数开环极点时，沿增益增大方向的局部切线角，可由相角条件极限求出。",
+      "section": "ac-4-2-1",
+      "match": "复数极点出射角与复数零点到达角"
+    },
+    {
+      "id": "ac-root-arrival",
+      "aliases": [
+        "到达角",
+        "angle of arrival"
+      ],
+      "title": "复数零点到达角",
+      "english": "Angle of Arrival",
+      "description": "根轨迹在复数开环零点附近的局部方向；应区分由零点指向邻近轨迹的位置角与沿增益增大驶入零点的切线角，两者相差180°。",
+      "section": "ac-4-2-1",
+      "match": "在复零点"
+    },
+    {
+      "id": "ac-root-zero-degree",
+      "aliases": [
+        "零度根轨迹",
+        "zero-degree root locus"
+      ],
+      "title": "零度根轨迹",
+      "english": "Zero-degree Root Locus",
+      "description": "当特征方程对应1−KL0(s)=0且K>0时，相角条件为360°的整数倍；实轴奇偶规则改为偶数。",
+      "section": "ac-4-2-3",
+      "match": "零度根轨迹"
     }
   ],
   "symbolDefinitions": [

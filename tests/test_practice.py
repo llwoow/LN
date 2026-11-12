@@ -21,6 +21,9 @@ class PracticeContent(unittest.TestCase):
             'tr-calc-parallel':math.sqrt(Fraction(105,10)**2+1),
             'tr-calc-auto':198*Fraction(1000,22),'tr-calc-burden':25*Fraction(18,100),
             'ac-ch3-313':(-10+math.sqrt(100+80))/2,'ac-ch3-316':Fraction(10,10),
+            'ac-root-break':self.breakaway_gain(),
+            'ac-root-angle':180-135-math.degrees(math.atan2(1,2))-90,
+            'ac-root-8p16':8*Fraction(6,5)-Fraction(6,5)**2,
             'emc-mode-decompose':(12+8)/2,
             'emc-shield-absorption':8.686*Fraction(10,2),
             'emc-esd':Fraction(1,2)*100e-12*2000**2*1000,
@@ -35,6 +38,17 @@ class PracticeContent(unittest.TestCase):
         self.assertEqual(numeric,set(expected))
         for identifier,value in expected.items():
             self.assertAlmostEqual(self.byid[identifier]['answer'],float(value),places=8)
+
+    @staticmethod
+    def breakaway_gain():
+        # Independently bisect D'(s) on the valid real-axis interval.
+        lo,hi=-3.0,-2.0
+        for _ in range(60):
+            x=(lo+hi)/2
+            if 4*x**3+15*x*x+16*x+6>0:hi=x
+            else:lo=x
+        x=(lo+hi)/2
+        return -x*(x+3)*(x*x+2*x+2)
 
     def test_restricted_or_incomplete_sources_are_not_sold_as_ready(self):
         data=json.loads((ROOT/'courses/practice/sources.json').read_text())

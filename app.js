@@ -351,6 +351,14 @@
             if (!body.isConnected || body.dataset.lessonKey !== key) return;
             window.LN_MOUNT_CONTROL_LABS?.(body);
           }
+          if (selected.id === 'ac-4-2-2') {
+            await Promise.all([
+              loadStyle('courses/automatic-control/root-locus-lab.css'),
+              loadScript('courses/automatic-control/root-locus-lab.js')
+            ]);
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            window.LN_MOUNT_ROOT_LOCUS?.(body);
+          }
         }
         bindInlineModels(body);
         if (course.id === 'electromagnetic-compatibility' && body.querySelector('[data-emc-lab]')) {

@@ -14,7 +14,7 @@ window.LN_AUTO_CONTROL_MAP={
     },
     {
       "group": "第4章 根轨迹法",
-      "description": "教材原目录框架，正文尚待补全"
+      "description": "根轨迹原理、完整法则、用户课堂题与实数增益交互验证"
     },
     {
       "group": "第5章 频率法",
@@ -46,8 +46,8 @@ window.LN_AUTO_CONTROL_MAP={
     },
     {
       "section": "ac-4-1",
-      "title": "根轨迹法",
-      "note": "本章目录入口，正文待补全"
+      "title": "4.1 根轨迹的基础条件",
+      "note": "相角、幅值条件及极点连续运动"
     },
     {
       "section": "ac-5-1",
@@ -103,6 +103,41 @@ window.LN_AUTO_CONTROL_MAP={
       "section": "ac-3-7",
       "title": "3.7 用MATLAB进行系统时域分析",
       "note": "MATLAB验证与适用条件"
+    },
+    {
+      "section": "ac-4-2",
+      "title": "4.2 根轨迹绘制法则",
+      "note": "绘图顺序与学习导航"
+    },
+    {
+      "section": "ac-4-2-1",
+      "title": "4.2.1 关键绘制公式",
+      "note": "实轴、渐近线、分离点、出射到达角"
+    },
+    {
+      "section": "ac-4-2-2",
+      "title": "4.2.2 四阶例题与纠错",
+      "note": "实时复平面轨迹、错误连接反证"
+    },
+    {
+      "section": "ac-4-2-3",
+      "title": "4.2.3 零度根轨迹",
+      "note": "相角条件与实轴奇偶条件转变"
+    },
+    {
+      "section": "ac-4-2-4",
+      "title": "4.2.4 参数根轨迹",
+      "note": "参数分离与等效开环模型"
+    },
+    {
+      "section": "ac-4-3",
+      "title": "4.3 动态性能",
+      "note": "闭环极点、衰减振荡和稳定边界"
+    },
+    {
+      "section": "ac-4-4",
+      "title": "4.4 MATLAB求根轨迹",
+      "note": "数值求根与rlocus复算"
     }
   ],
   "links": [
@@ -141,6 +176,60 @@ window.LN_AUTO_CONTROL_MAP={
       "to": "ac-3-7",
       "label": "计算与验证",
       "description": "用时域仿真与符号计算核查误差"
+    },
+    {
+      "from": "ac-3-5",
+      "to": "ac-4-1",
+      "label": "稳定性到根轨迹",
+      "description": "劳斯法判断区间，根轨迹展示随增益移动的闭环根"
+    },
+    {
+      "from": "ac-4-1",
+      "to": "ac-4-2",
+      "label": "从条件到画法",
+      "description": "利用相角和幅值条件推导几何法则"
+    },
+    {
+      "from": "ac-4-2",
+      "to": "ac-4-2-1",
+      "label": "一般法则",
+      "description": "建立完整公式及可检验的绘图顺序"
+    },
+    {
+      "from": "ac-4-2-1",
+      "to": "ac-4-2-2",
+      "label": "公式代入本题",
+      "description": "用四阶具体模型计算全部关键点与排除错误连接"
+    },
+    {
+      "from": "ac-4-2-1",
+      "to": "ac-4-2-3",
+      "label": "增益符号变化",
+      "description": "相角奇数周条件与零度条件对照"
+    },
+    {
+      "from": "ac-4-2-3",
+      "to": "ac-4-2-4",
+      "label": "到一般参数",
+      "description": "参数线性分离后形成等效轨迹问题"
+    },
+    {
+      "from": "ac-4-2-2",
+      "to": "ac-4-3",
+      "label": "读出稳定性",
+      "description": "用已求闭环极点解释稳定界和衰减"
+    },
+    {
+      "from": "ac-4-3",
+      "to": "ac-4-4",
+      "label": "数值验证",
+      "description": "用MATLAB检验极点连续性与临界增益"
+    },
+    {
+      "from": "ac-3-3",
+      "to": "ac-4-3",
+      "label": "阻尼关系",
+      "description": "由复根位置得到阻尼频率和二阶近似"
     }
   ]
 };

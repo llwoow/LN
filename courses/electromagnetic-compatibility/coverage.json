@@ -1,5 +1,5 @@
 {
-  "status": "forty-reading-sections-with-29-added-model-diagram-and-worked-examples-audit-pending",
+  "status": "web-manuscript-reviewed-and-corrected-primary-book-audit-incomplete",
   "reference": "林福昌、李化《电磁兼容原理及应用》及刘其凤《电磁兼容与建模仿真》课件",
   "readings": [
     {
@@ -429,5 +429,6 @@
     ],
     "automationRun": "https://github.com/llwoow/LN/actions/runs/43159979209",
     "manual29FigureReview": false
-  }
+  },
+  "latestReview": "AUDIT-PR3-REVIEW-2026-11-12.md"
 }
