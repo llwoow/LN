@@ -1,5 +1,6 @@
 """Prepare LN's existing static application for hosting."""
 from pathlib import Path
+import json
 import shutil
 import subprocess
 import sys
@@ -20,6 +21,12 @@ for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.
 for name in ('assets', 'courses'):
     shutil.copytree(root / name, out / name,
                     ignore=shutil.ignore_patterns('*.md', '__pycache__', 'verification'))
+# Source-tree existence is insufficient: every advertised download must ship.
+resources = json.loads((root / 'courses/resources/catalog.json').read_text())
+for resource in resources['resources']:
+    for download in resource['downloads']:
+        if not (out / download['path']).is_file():
+            raise ValueError('Download absent from static output: ' + download['path'])
 subprocess.run([sys.executable, str(root / 'scripts/build-reference-index.py'), '--output', str(out / 'reference-index.js')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-glossary.py'), '--output', str(out / 'glossary-index.js')], check=True)
 print('Static site prepared in dist/')
