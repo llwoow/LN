@@ -14,7 +14,7 @@ OUT = ROOT / "emc-browser-artifacts"
 OUT.mkdir(exist_ok=True)
 META = json.loads((ROOT / "courses/electromagnetic-compatibility/curriculum.json").read_text())
 SELECTED = ("emc-2-2", "emc-4-3", "emc-4-4", "emc-5-4", "emc-6-2", "emc-8-1", "emc-8-2", "emc-9-2", "emc-10-2", "emc-10-3", "emc-10-4")
-VISUAL_REVIEW = ("emc-2-2", "emc-2-3", "emc-3-3", "emc-4-2", "emc-4-4",
+VISUAL_REVIEW = ("emc-1-2", "emc-1-3", "emc-5-1", "emc-5-5", "emc-7-4", "emc-9-1", "emc-9-4", "emc-2-2", "emc-2-3", "emc-3-3", "emc-4-2", "emc-4-4",
                  "emc-5-2", "emc-5-4", "emc-6-3", "emc-6-4", "emc-7-2",
                  "emc-9-3", "emc-10-1", "emc-10-3",
                  "emc-4-3", "emc-6-2", "emc-8-1", "emc-8-2", "emc-9-2", "emc-10-2", "emc-10-4")
