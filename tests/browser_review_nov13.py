@@ -56,7 +56,8 @@ def main():
     assert panel.locator('.practice-feedback h3').inner_text()=='选择吻合，请继续核对理由'
     dialog.locator('[data-close-practice]').click();page.reload();page.locator('#lesson-body[aria-busy=false]').wait_for();page.locator('[data-practice-question="'+q['id']+'"]').click();dialog=page.locator('#practice-dialog:modal')
     saved=page.evaluate('(id)=>JSON.parse(localStorage.getItem("ln.practice.v1"))[id]',q['id']);assert saved['favorite'];assert saved['attempts'][0]['correct'] is False;assert saved['attempts'][-1]['correct'] is True;assert saved['attempts'][-1]['assisted'] is True
-    dialog.locator('[data-practice-mode=mistakes]').click();assert dialog.locator('[data-question-id="'+q['id']+'"]').count()==1
+    dialog.locator('[data-practice-mode=mistakes]').click();dialog.locator('[data-p-question]').select_option(q['id']);assert dialog.locator('[data-question-id="'+q['id']+'"]').count()==1
+    dialog.locator('[data-practice-mode=favorites]').click();dialog.locator('[data-p-question]').select_option(q['id']);assert dialog.locator('[data-question-id="'+q['id']+'"]').count()==1
     dialog.locator('[data-close-practice]').click()
     # Supplied open questions retain manual review, source anchors and collection persistence.
     body=visit(MATERIAL,'em-test-fill');qid='materials-photo-fill-1';body.locator('[data-practice-question="'+qid+'"]').click();dialog=page.locator('#practice-dialog:modal');panel=dialog.locator('[data-practice-panel]');assert panel.locator('[data-p-question]').input_value()==qid
