@@ -4,13 +4,13 @@
 
 ## 在线访问与自动部署
 
-- [GitHub Pages](https://llwoow.github.io/LN/)：首次启用 Pages 并部署成功后可访问。
+- [GitHub Pages](https://llwoow.github.io/LN/)：已上线，随 `main` 自动更新。
 - [现有 LN 站点](https://ln-llwoow.lqw193wql.chatgpt.site)：保留现有访问权限。
 - [Pages 部署记录与手动重跑](https://github.com/llwoow/LN/actions/workflows/pages.yml)。
 
 提交推送或 PR 合并到 `main` 后，GitHub Actions 自动运行检查、执行 `python scripts/build-static.py`，再将 `dist/` 发布到 Pages。分支与未合并 PR 不发布到正式站点；PR 的 Pages 检查只构建和验证。构建检查失败时保留此前已部署的网站。
 
-首次设置：仓库 **Settings → Pages → Build and deployment → Source → GitHub Actions**。如果页面没有自动启用，需要仓库管理员完成这一次设置，再在上述部署记录点击 **Run workflow**。私有仓库能否启用 Pages 取决于 GitHub 账户套餐；本配置不会修改仓库可见性，也不要求把访问令牌写入仓库。
+仓库已启用 **Settings → Pages → Build and deployment → Source → GitHub Actions**。需要手动发布时，在上述部署记录点击 **Run workflow**；无需把访问令牌写入仓库。
 
 此自动流程更新 GitHub Pages，现有 LN 站点继续使用原部署流程。两域名的浏览器错题、收藏、设置各自保存，不自动互通。
 
