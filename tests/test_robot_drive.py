@@ -29,7 +29,7 @@ class RobotDrive(unittest.TestCase):
   # No Git history dependency: the same guard works in shallow CI/static archives.
   new=json.loads((ROOT/'courses/practice/bank.json').read_text())
   self.assertEqual(1,new['version'])
-  old=[q for q in new['questions'] if q['course']!='robot-drive-engineering']
+  old=[q for q in new['questions'] if q['course'] not in {'robot-drive-engineering', 'power-semiconductors'}]
   digest=hashlib.sha256(json.dumps(old,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
   self.assertEqual(digest,'0006ce68e751ff19d1a1b6eda60ca226a6fd7465541feb640f3210b561f17e4d')
  def test_new_lesson_links_and_unique_ids(self):

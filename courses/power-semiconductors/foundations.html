@@ -1,0 +1,41 @@
+<section data-lesson="carrier-basics">
+<h2>从晶格和能带到掺杂</h2>
+<p>同一只功率开关要在导通时输送电流，又要在关断时挡住母线电压。电路图上的开关只有两个状态，芯片却必须安排不同区域分别承担导电、承压和控制。以硅为例，重掺杂的接触区需要足够多的可移动载流子，轻掺杂的漂移区则要在反偏时留下较低密度的固定电荷。理解这两种区域，先要区分晶体结构、电子能量和载流子浓度。</p>
+<h3>晶面决定从哪里观察，能带决定电子如何占据</h3>
+<p>硅是金刚石立方结构，可看成面心立方晶格加上两个原子的基元。4H-SiC 的「4H」描述特定的六方堆垛周期。晶面 \((hkl)\) 和方向 \([uvw]\) 分别描述平面和向量。立方晶体中 \([100]\) 垂直于 \((100)\)。六方晶体常用四指数晶面记号 \((hkil)\)，其中 \(i=-(h+k)\)，方向的四指数转换另有规则。标明晶面是因为外延、界面和刻蚀可能随取向改变，不能从晶面编号直接推断掺杂。</p>
+<p id="def-bandgap">大量原子成晶体后，能量状态形成允许带。导带底记 \(E_C\)，价带顶记 \(E_V\)，禁带宽度 \(E_g=E_C-E_V\)。导带电子可参与导电，价带缺少一个电子时可用带正电的空穴描述。热平衡的费米能级 \(E_F\) 决定能级的占据概率。它是能量参考，不表示样品中每个电子都具有这一个能量。</p>
+<p id="def-carrier-density">用 \(n,p\) 表示自由电子和空穴的体浓度，\(n_i\) 表示该温度下的本征载流子浓度。本征材料在平衡时 \(n=p=n_i\)。在热平衡、非简并的近似下，电子与空穴的浓度乘积恒为 \(n_i^2\)。掺杂提高一种载流子的浓度，另一种浓度会相应降低。升温会改变 \(n_i\)，乘积随温度变化。</p>
+<p id="def-compensation">浅施主电离后贡献电子，留下正离子。浅受主俘获电子后产生空穴，留下负离子。用 \(N_D^+\) 和 \(N_A^-\) 表示电离施主与受主浓度。体内远离界面的准中性区近似满足正负电荷密度相等。</p>
+<div class="math-block" id="eq-carrier-neutrality" data-equation="1.1">\[p+N_D^+=n+N_A^-,\qquad np=n_i^2.\]</div>
+<p>例如取 300 K 的教学近似 \(n_i=10^{10}\,\mathrm{cm^{-3}}\)。同一均匀区域的施主为 \(10^{16}\,\mathrm{cm^{-3}}\)，受主为 \(2\times10^{15}\,\mathrm{cm^{-3}}\)，假定完全电离。式（1.1）给出 \(n-p=8\times10^{15}\,\mathrm{cm^{-3}}\)，远大于 \(n_i\)。于是 \(n\approx8\times10^{15}\,\mathrm{cm^{-3}}\)，\(p\approx1.25\times10^4\,\mathrm{cm^{-3}}\)。补偿改变的是净掺杂，计算时不能把两种杂质浓度直接相加。在高温本征区、低温冻结区或重掺杂简并区，应回到适用的载流子统计。</p>
+<p>把这套语言带入<a href="#course/power-semiconductors/carrier-transport">载流子输运</a>。浓度告诉我们有多少载流子，迁移率和浓度梯度才告诉我们它们怎样形成电流。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 1–3、24 页。Sze 第 3 版第 1 章中晶体结构、能带与载流子浓度部分。4H-SiC 晶体结构对照 <a href="https://assets.wolfspeed.com/uploads/2020/12/materials_catalog.pdf" target="_blank" rel="noopener">Wolfspeed 材料目录的物理性质表</a>。</p></details>
+</section>
+<section data-lesson="carrier-transport">
+<h2>漂移、扩散与载流子寿命</h2>
+<p>先规定坐标 \(x\) 向右，电场分量 \(E_x\) 向右为正。电子在电场中向左漂移，空穴向右漂移。因为电子带负电，它向左的移动也贡献向右的传统电流。若右侧电子更多，电子还会从右向左扩散，同样贡献向右的传统电流。判断方向时先写粒子怎么走，再按电荷符号换成电流方向。</p>
+<p id="def-mobility">低场时漂移速率近似与场强成正比。电子和空穴的迁移率分别为 \(\mu_n,\mu_p\)，单位为 \(\mathrm{cm^2/(V\,s)}\) 或 \(\mathrm{m^2/(V\,s)}\)。扩散系数 \(D_n,D_p\) 描述浓度梯度驱动的粒子输运。扩散粒子通量与浓度梯度方向相反。把带电量乘进通量，得到一维传统电流密度。</p>
+<div class="math-block" id="eq-transport-current" data-equation="1.2">\[\begin{aligned}J_n&=q n\mu_n E_x+qD_n\frac{dn}{dx},\\J_p&=q p\mu_p E_x-qD_p\frac{dp}{dx}.\end{aligned}\]</div>
+<p>其中 \(q\) 是元电荷的正值。均匀材料内两项扩散电流为零，故总电流密度 \(J_n+J_p=\sigma E_x\)，电导率 \(\sigma=q(n\mu_n+p\mu_p)\)。取 n 型材料 \(n=10^{15}\,\mathrm{cm^{-3}}\)、\(\mu_n=1000\,\mathrm{cm^2/(V\,s)}\)，忽略空穴，得到 \(\sigma\approx0.160\,\mathrm{S/cm}\)、电阻率约 \(6.24\,\Omega\mathrm{\,cm}\)。同样材料若长 \(100\,\mu\mathrm m=0.01\,\mathrm{cm}\)、截面积 \(0.10\,\mathrm{cm^2}\)，电阻约 \(0.624\,\Omega\)。这解释了为什么厚而轻掺杂的漂移区会抬高导通电阻。</p>
+<p>非简并、近热平衡时，爱因斯坦关系给出 \(D/\mu=kT/q\)。300 K 时约为 25.9 mV。结内即使没有端口电流，也可能同时存在漂移和扩散，平衡条件是两者相抵。高场下速度会偏离线性，前面的均匀电阻例子仅用于低场近似。</p>
+<h3>撤去注入之后，为什么电荷还在</h3>
+<p id="def-lifetime">载流子寿命 \(\tau\) 衡量过剩载流子消失的时间尺度。只考虑均匀、低注入、单一有效寿命的复合，撤去注入后过剩浓度 \(\Delta n\) 满足 \(d\Delta n/dt=-\Delta n/\tau\)，解为 \(\Delta n(0)e^{-t/\tau}\)。经过一倍寿命还剩约 37%，并不会马上清零。缺陷辅助复合、辐射复合、俄歇复合可在不同注入条件下主导，有效寿命未必固定。</p>
+<p>在器件中，过剩电荷既能复合，也能被外部电场抽出。这是<a href="#course/power-semiconductors/power-diodes/def-recovery">二极管反向恢复</a>与<a href="#course/power-semiconductors/igbt/def-tail">IGBT 尾电流</a>的共同前提，两个波形仍由各自的结构和电路决定。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 3–4 页。Sze 第 3 版第 1 章载流子输运部分。<a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/d65b60631ae1d84dce7c0051412f0b7a_MIT6_012F09_lec03_five_eqn.pdf" target="_blank" rel="noopener">MIT 6.012 漂移扩散与基本方程</a>。</p></details>
+</section>
+<section data-lesson="pn-junction">
+<h2>PN 结怎样从平衡变成阻断</h2>
+<p>把 p 区放在左、n 区放在右。刚形成结时，n 侧电子向左扩散，p 侧空穴向右扩散。结附近留下 p 侧负受主与 n 侧正施主，产生由 n 指向 p 的内建电场。平衡时电场产生的漂移电流与浓度梯度产生的扩散电流相抵，费米能级在整个结上平坦。内建电势是芯片内部的势垒，在外端子间不能把它当作可以取电的电源。</p>
+<p>定义 \(V_A\) 为 p 端相对 n 端的外加电压。正偏使势垒降低，载流子可以越结注入对方，形成正向电流。反偏使势垒升高，耗尽层拓宽，直至高场引起击穿或别处先限制耐压。正向电流在理想低注入时随 \(V_A\) 近似指数上升，实际功率二极管的大电流区还受漂移层和串联电阻影响。所谓「开启电压」只是在指定电流下读出的工程近似。</p>
+<h3>用电荷守恒确定耗尽区在哪一边</h3>
+<p id="def-pn-width">在均匀突变结、耗尽近似下，\(x_p,x_n\) 是结面向 p、n 两侧的耗尽宽度，\(N_A,N_D\) 是两侧的受主、施主浓度，\(\varepsilon_s\) 是半导体介电常数，\(V_{bi}\) 是内建电势。假定杂质已电离，耗尽层两端电场近似为零。高斯定律要求两侧固定电荷面积相等，即 \(N_A x_p=N_D x_n\)。</p>
+<figure id="fig-pn-fields">
+  <a href="courses/power-semiconductors/assets/pn-fields.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/pn-fields.svg" width="760" height="412" alt="左窄右宽的 PN 结耗尽区中，负正电荷面积相等，电场向左，电势从左向右增加"></a>
+  <figcaption>图1.1　突变结的电荷密度、电场与电势。横坐标共用，纵坐标各自为定性示意。</figcaption>
+</figure>
+<p>由图1.1从电荷画到电场。左边负受主使 \(E\) 向下斜，右边正施主使 \(E\) 向上斜。整个耗尽区 \(E\leq0\)，所以 \(d\psi/dx=-E\) 为正。峰值场强大小为 \(qN_Dx_n/\varepsilon_s\)。电势升高量 \(V_{bi}-V_A\) 等于电场三角形面积，即峰值场强乘总宽度的一半。再用电荷平衡消去 \(x_n\)，得到式（1.3）。</p>
+<div class="math-block" id="eq-junction-width" data-equation="1.3">\[x_p+x_n=\sqrt{\frac{2\varepsilon_s}{q}\left(\frac{1}{N_A}+\frac{1}{N_D}\right)(V_{bi}-V_A)}.\]</div>
+<p>若 \(N_A=100N_D\)，p 侧宽度只有 n 侧的 1%。以硅、\(N_D=10^{15}\,\mathrm{cm^{-3}}\)、反偏 100 V 为教学条件，忽略不足 1 V 量级的内建势垒，取 \(\varepsilon_s\approx1.04\times10^{-12}\,\mathrm{F/cm}\)。式（1.3）给出总耗尽宽度约 \(11.45\,\mu\mathrm m\)。电压提高四倍，理想宽度约翻倍。若轻掺杂层不足这一厚度，先触及背面的边界，单边未穿通解不再适用。<a href="#course/power-semiconductors/vdmos-blocking">第二章的 1200 V 等势线</a>用的是同一套方程。</p>
+<p id="def-avalanche">雪崩击穿源于载流子在高场中获得足够能量，碰撞电离产生新的电子空穴对并继续倍增。重掺杂窄耗尽层中还可能出现带间隧穿。单凭反向电压数值无法区分机制，需看掺杂、结结构和温度特性。结边缘曲率会改变场分布，因而器件还需要<a href="#course/power-semiconductors/junction-termination">终端结构</a>。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 5–8 页。Sze 第 3 版 §2.2.1 的突变结及第 2 章注入内容。Baliga §3.1–3.2 的碰撞电离与一维突变结。<a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/resources/mit6_012f09_lec04/" target="_blank" rel="noopener">MIT 6.012 PN 结静电学</a>。</p></details>
+</section>

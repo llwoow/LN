@@ -1,0 +1,61 @@
+<section data-lesson="wafer-materials">
+<h2>衬底、晶圆和外延层</h2>
+<p>回看<a href="#course/power-semiconductors/vdmos-structure/fig-vdmos-structure">VDMOS 截面</a>。n⁺ 衬底和 n⁻ 漂移区同为硅，电学任务却不同。衬底给芯片机械支撑，提供低阻背面接触。外延层给器件所需的掺杂和厚度。将晶圆和外延分开设计，可以在同一片晶体上同时实现这两个要求。</p>
+<h3>从单晶棒到可加工的表面</h3>
+<p>直拉法（CZ）以籽晶从熔硅中旋转提拉并长成单晶棒。熔硅接触坩埚，氧含量与热工条件相关。区熔法（FZ）用移动的局部熔区重结晶，无需坩埚接触熔区，适用于需要较低氧含量或高电阻率的硅材料。选哪条路线取决于目标直径、均匀性、纯度和成本。高电阻率材料也可采用中子嬗变掺杂改善施主均匀性。硅中的 \(^{30}\mathrm{Si}\) 捕获中子后形成 \(^{31}\mathrm{Si}\)，经 β 衰变得到 \(^{31}\mathrm P\)。这个方法调节体掺杂，与用掩模局部注入杂质不同。</p>
+<p>晶棒定向后切片，经过研磨、去损伤、抛光与清洗。化学机械抛光（CMP）利用化学反应与机械作用共同得到平整表面。晶圆缺口用来标明取向，切片标称厚度与后续漂移层的厚度是两份规格。对 4H-SiC，常用物理气相传输（PVT）生长晶体，再把抛光衬底作为外延的起点。</p>
+<p id="def-epitaxy">外延是在已定向的单晶表面继续生长晶体层。对典型垂直 MOSFET，可在 n⁺ 衬底上生长控制过的 n⁻ 层，用它承载阻断电场。降低外延层掺杂，给定反偏下耗尽层变宽，导通电阻也会增加。只改变衬底厚度，不能等同于改变漂移层厚度。</p>
+<p>以均匀、低场的 n 型外延为例，令 \(N_D=2.0\times10^{15}\,\mathrm{cm^{-3}}\)、\(\mu_n=1000\,\mathrm{cm^2/(V\,s)}\)、厚度 \(20\,\mu\mathrm m\)。用式（1.2）的漂移项得 \(\rho\approx3.12\,\Omega\mathrm{\,cm}\)，层的比电阻约 \(6.24\,\mathrm{m\Omega\,cm^2}\)。这是漂移层的估计，不能当作整个芯片的导通电阻或阻断额定值。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 21–24 页。Quirk §4.5、§4.7–4.9 的单晶硅、晶圆制备与外延。<a href="https://www-pub.iaea.org/MTCD/Publications/PDF/TE_1681_web.pdf" target="_blank" rel="noopener">IAEA-TECDOC-1681 的中子嬗变掺杂</a>及 <a href="https://www.csp.fraunhofer.de/en/areas-of-research/crystallization.html" target="_blank" rel="noopener">Fraunhofer CSP 的 SiC 晶体生长</a>。<a href="https://assets.wolfspeed.com/uploads/2020/12/materials_catalog.pdf" target="_blank" rel="noopener">Wolfspeed 衬底与外延目录</a> 的晶向、导电型、厚度与浓度条目，用来核对这些是独立规格。</p></details>
+</section>
+<section data-lesson="wafer-fabrication">
+<h2>把元胞截面变成晶圆上的工艺步骤</h2>
+<p>从图2.1逆着看：上方要有彼此绝缘的栅与源，下方要把 n⁺ 和 p⁺ 选择性地接给源金属，边缘还要留下浮置 p⁺ 区。实现这些关系的关键，是把「哪里加工」和「加工什么」分开。光刻在胶上定义位置，刻蚀移走选定区域的材料，注入或扩散改变硅内掺杂，淀积或生长添加薄膜。工艺循环反复进行，前一轮留下的结构成为下一轮的边界条件。</p>
+<table id="table-process" class="compact-table">
+<caption>表3.1　从层或区域反推可用工艺</caption>
+<thead><tr><th scope="col">截面目标</th><th scope="col">代表做法</th><th scope="col">要验证的量</th></tr></thead>
+<tbody>
+<tr><td>栅下绝缘与导电栅</td><td>在硅上形成薄栅氧，淀积多晶硅并图形化。</td><td>栅氧厚度、界面质量、栅极线宽。</td></tr>
+<tr><td>p-base、n⁺ 源区与体接触</td><td>按掩模开窗注入并热处理。体区和源区轮廓的相对位置决定平面沟道。</td><td>结深、掺杂分布、横向扩展与电性。</td></tr>
+<tr><td>层间绝缘与源金属</td><td>淀积介质，图形化并刻蚀接触孔，再形成和图形化金属。</td><td>接触孔是否到位、接触电阻、源栅绝缘。</td></tr>
+<tr><td>正面保护和背面漏极</td><td>形成钝化、开放焊盘，按结构要求加工和金属化背面。</td><td>焊盘可接触性、漏电、背面接触和外观。</td></tr>
+</tbody>
+</table>
+<h3>追踪一次正胶开窗</h3>
+<p>在需要开窗的介质膜上涂正性光刻胶，经对准和曝光后，显影除去曝光区的胶。到这一步只是胶上出现开口，下面的膜仍在。刻蚀通过开口移除相应薄膜，去胶后图形才保留在介质里。若将开口用于掺杂，注入后的退火用于激活杂质并修复部分晶格损伤。离子能量主要改变深度分布，剂量决定单位面积注入的离子数，温度和时间还会改变最终剖面。</p>
+<p id="def-cvd">化学气相淀积（CVD）通过气态前驱物在表面反应形成膜。热氧化则由氧化剂与硅反应，生长氧化层时消耗一部分硅。笔记的微米级 CVD 氧化物示例可用来理解介质开窗。薄栅氧、厚层间介质和表面钝化负责不同的工作，应分别标注。</p>
+<p>若某一轮光刻错位，最直接的风险随其任务而变。源接触孔偏向栅时先看源栅短路和接触不良；场环掩模偏移时先看终端间距与边缘击穿。同一个测量项目无法同时排除两类问题。表3.1是教学流程，各代器件的掩模数量、薄膜材料和工序顺序会变。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 24–25 页。Quirk §9.3 的介质与钝化层结构及第 10–17 章的工艺分类。<a href="https://www.asml.com/en/company/stories/2021/semiconductor-manufacturing-process-steps" target="_blank" rel="noopener">ASML 的淀积、曝光、刻蚀与注入流程</a>核对各步骤的作用。这里的元胞流程是 LN 教学重构。</p></details>
+</section>
+<section data-lesson="junction-termination">
+<h2>从结终端到封装与电热测试</h2>
+<p>器件中心的一维耐压计算在<a href="#course/power-semiconductors/vdmos-blocking/fig-vdmos-blocking">图2.5</a>中很清楚，但芯片边缘的结要转弯并接近表面。若电位在较短距离内变化，局部电场就更大。中心尚未到达临界场，边缘就可能先击穿，因此需要单独设计终端。</p>
+<p>浮置场限环用多个 p 型区域分散边缘的电势变化。场板是跨在绝缘层上的导体延伸，可通过电容耦合调节表面场。结终端扩展（JTE）则利用邻接主结的浅掺杂区重新分布空间电荷。三者都改变二维场，却分别依赖环的位置、介质和场板几何、扩展区的剂量。钝化还影响表面界面电荷和环境稳定性。用中心区的一维式可以核对数量级，具体二维线形需要结构参数和场求解。</p>
+<h3>芯片测到的值为何会在封装后改变</h3>
+<p>晶圆探针阶段可在可接触的焊盘上做规定的漏电、阈值和电阻筛查。切割后，芯片贴装到导热且可提供电连接的基座，用键合线、铜夹等连接正面电极，再用塑封、模块或压接方式形成产品。终测还需验证端子连接与成品规格。键合、基板和外部回路加入电阻、电感、热阻，所以静态芯片合格与系统动态表现是两层证据。</p>
+<p id="def-thermal-impedance">热阻 \(R_{\theta}\) 表示给定稳态热路径上的温升除以耗散功率，单位 \(\mathrm{K/W}\)。瞬态热阻抗 \(Z_{\theta}(t)\) 描述阶跃功率作用到时间 \(t\) 的温升响应。以固定壳温 60 ℃、单次矩形脉冲耗散 80 W 为例，若该脉宽的结到壳 \(Z_{\theta JC}=0.30\,\mathrm{K/W}\)，估计脉冲末结温约 84 ℃。若重复脉冲之间未完全冷却，应考虑累积温升，不能反复从 60 ℃起算。</p>
+<p>查看热参数时先定位测温点和边界。结到壳热阻对应规定的壳面和导热条件，结到环境热阻包含特定板与环境。若走「结 → 壳 → 散热器 → 环境」的串联近似，只加这条路径的热阻，不能再加一遍包含整条路径的 \(R_{\theta JA}\)。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 21 页。Baliga §3.6 的场环、场板与 JTE；Quirk §9.3 及第 19–20 章的测试与封装分类。<a href="https://www.ti.com/lit/an/spra953d/spra953d.pdf" target="_blank" rel="noopener">TI SPRA953D §1–3</a>，以及 <a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-an2011-05-igbt-modules-explanation-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon AN 2011-05 §3.13</a>核对测温点与热阻抗条件。</p></details>
+</section>
+<section data-lesson="device-selection">
+<h2>把数据手册读成一份损耗和结温账</h2>
+<p>选型先画电路里开关实际承受的波形。母线是 400 V，不意味着器件端子峰值也是 400 V。若回路电感与换流速度给出约 40 V 的尖峰，初估需承受 440 V，还要核对容差、异常工况、钳位与安全工作区。安全工作区（SOA）把允许的电压、电流、脉宽和温度条件联系起来，绝对最大电压和电流通常不能同时取到。</p>
+<h3 id="worked-device-selection">同一工况下为何会换选型结论</h3>
+<p>以下数值为教学假设。两只器件都满足所设阻断要求，在相同的 400 V、20 A、同一参考结温下，比较同一个开关位置。导通时电流恒 20 A，通态占空比 \(D=0.50\)。每周期一次开通和关断，表中能量取各自端口的一对开关积分。暂不计驱动和独立续流器件的损耗。</p>
+<table id="table-selection-input" class="compact-table">
+<caption>表3.2　同一工作点的教学输入</caption>
+<thead><tr><th scope="col">器件</th><th scope="col">通态条件</th><th scope="col">每周期动态能量</th></tr></thead>
+<tbody>
+<tr><td>A：MOSFET</td><td>\(R_{\mathrm{DS(on)}}=80\,\mathrm{m\Omega}\)</td><td>\(200\,\mu\mathrm J\)</td></tr>
+<tr><td>B：IGBT</td><td>\(V_{\mathrm{CE(sat)}}=1.4\,\mathrm V\)</td><td>\(350\,\mu\mathrm J\)</td></tr>
+</tbody>
+</table>
+<div class="math-block" id="eq-loss-budget" data-equation="3.1">\[\begin{aligned}P_{\mathrm A}&=DI^2R_{\mathrm{DS(on)}}+f_{\mathrm s}E_{\mathrm A},\\P_{\mathrm B}&=DIV_{\mathrm{CE(sat)}}+f_{\mathrm s}E_{\mathrm B}.\end{aligned}\]</div>
+<p>A 的导通损耗是 16 W，B 是 14 W。频率 5 kHz 时，动态项是 1 W 和 1.75 W，B 的器件损耗较低。频率 20 kHz 时，动态项是 4 W 和 7 W，合计为 20 W 和 21 W，此时 A 较低。把两式相等可得交点 \(2\,\mathrm W/(150\,\mu\mathrm J)\approx13.33\,\mathrm{kHz}\)。它只属于这组条件，不是器件类别的固定分界。</p>
+<p>若两者有效结到环境热阻都近似为 \(3.0\,\mathrm{K/W}\)，环境 40 ℃，20 kHz 的初估结温是 100 ℃和 103 ℃。下一步要按估计结温更新导通和开关参数，重复计算。若过流只有短脉冲，换用<a href="#course/power-semiconductors/junction-termination/def-thermal-impedance">瞬态热阻抗</a>和对应的 SOA 数据。对 MOSFET，读 \(R_{\mathrm{DS(on)}}\) 要带 \(V_{GS}\) 和结温。对 IGBT，读 \(V_{\mathrm{CE(sat)}}\) 要带 \(V_{GE}\)、电流和结温。两类的 \(E_{\mathrm{on}},E_{\mathrm{off}}\) 还要对照母线、门极电阻及对侧续流器件。典型值用于估算，保证边界需核对最大值、温升迭代与测量。</p>
+<p>要验证能量，可在双脉冲测试中先用第一脉冲建立电感电流，再记录第二脉冲的开通和关断波形。电压和电流探头应先核对时延对齐，按明确的积分窗计算 \(vi\)。否则两个边沿的时间偏移会直接变成能量误差。上例已经把开关测量口径写成每周期器件端口能量，不能再额外套一个三角重叠项。</p>
+<h3 id="worked-datasheet">读一次真实数据手册</h3>
+<p>以 STW40N65M2（DS10858 Rev. 2）为例。厂家表 4 在 \(V_{GS}=0\)、\(I_D=1\,\mathrm{mA}\) 下给出漏源击穿电压最小值 650 V。阈值典型 3 V，判据是 \(I_D=250\,\mu\mathrm A\)。导通电阻则是在 \(V_{GS}=10\,\mathrm V\)、\(I_D=16\,\mathrm A\)、壳温 25 ℃ 下给出，典型 87 mΩ、最大 99 mΩ。三个数对应三个不同测试条件，3 V 的阈值不能作为按 99 mΩ 计算的驱动电压。</p>
+<p>按上述通态测试点的最大电阻复算，16 A 时的导通压降约 1.58 V，瞬时导通损耗约 25.3 W。这里用的是冷壳条件下的电阻，连续运行要重新校核热态电阻。厂家表 5 的总栅电荷典型值 56.5 nC 来自 520 V、32 A 的门极充电测试，不能拿它反推上述 16 A 测试下的开关能量。把数值连同测试条件抄到选型表，才能判断哪些数据可以放进同一个模型。</p>
+<details class="review-notes"><summary>资料出处（备查）</summary><p>Baliga §6.15–6.16 和第 9 章开关特性。<a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-an2011-05-igbt-modules-explanation-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon AN 2011-05 的 SOA、能量和热参数</a>用于定义比较条件。真实规格摘自 <a href="https://www.st.com/resource/en/datasheet/stw40n65m2.pdf" target="_blank" rel="noopener">STW40N65M2 数据手册表 4–5</a>。表3.2为原创教学数据。</p></details>
+</section>
