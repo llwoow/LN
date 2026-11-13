@@ -37,13 +37,14 @@ def main():
       audit.append({'course':cid,'section':sid,'viewport':name})
     # The textbook's unfinished chapter stays an empty outline, not invented prose.
     body=visit(MATERIAL,'em-1-1');assert body.locator('h2').count()==1;assert body.locator('.math').count()==0
+    page.goto(base+'#course/'+MATERIAL+'/map');page.locator('ln-knowledge-map').wait_for();page.get_by_role('link',name='章节阅读',exact=True).click();page.locator('#lesson-body[data-lesson-key="electrical-materials/em-2-1"][aria-busy=false]').wait_for()
     # New model uses the same declared parallel-branch physics at each viewport.
     body=visit(DC,'dc-sec32');page.locator('[data-dc-value=branches]').wait_for();assert page.locator('[data-dc-value=emf]').inner_text()=='240.0 V'
     page.locator('[data-dc-winding]').select_option('wave');assert page.locator('[data-dc-value=branches]').inner_text()=='2';assert page.locator('[data-dc-value=emf]').inner_text()=='480.0 V'
     if w<=390:assert page.locator('[data-dc-diagram]').evaluate('n=>n.scrollWidth>n.clientWidth')
     # Each of the new course bundles supplies actual definition popups and source return.
     for cid,sid in [(MATERIAL,'em-2-4'),(PSD,'vdmos-output'),(DC,'dc-sec32')]:
-     body=visit(cid,sid);symbol=body.locator('math [data-definition]').first;symbol.wait_for();symbol.scroll_into_view_if_needed();symbol.click(force=True)
+     body=visit(cid,sid);symbol=body.locator('.katex-html [data-definition]:visible, math [data-definition]:visible').first;symbol.wait_for();symbol.scroll_into_view_if_needed();symbol.click(force=True)
      pop=page.locator('#definition-popover:popover-open');pop.wait_for();assert len(pop.inner_text())>20
      page.locator('.definition-source-link').click();page.locator('.reference-target[data-definition-source]').wait_for();page.locator('.reference-return').click();page.wait_for_function('document.querySelector(".reference-return").hidden')
     # All five DC diagnostics use native records rather than an unpersisted local answer checker.

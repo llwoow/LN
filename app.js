@@ -181,9 +181,9 @@
   }
 
   function courseViewNav(course, active) {
-    const first = course.id === 'automatic-control'
+    const first = course.sections.find(section => section.id === course.defaultSection) || (course.id === 'automatic-control'
       ? (course.sections.find(section => section.kind !== 'outline') || course.sections[0])
-      : course.sections[0];
+      : course.sections[0]);
     const model = course.sections.find((section) => section.kind === 'model');
     const modelActive = model && location.hash.split('/')[2] === model.id;
     const material = course.sections.find(section=>section.supplement);
