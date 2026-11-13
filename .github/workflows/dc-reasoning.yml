@@ -1,0 +1,48 @@
+name: Verify DC machine reasoning
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/dc-reasoning.yml'
+      - 'app.js'
+      - 'courses/electrical-machines/lessons/dc-*.js'
+      - 'courses/electrical-machines/model/dc-learning-lab.*'
+      - 'tests/dc-reasoning*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check generated indexes and existing course tests
+        run: |
+          set -e
+          python scripts/build-reference-index.py --check
+          python scripts/build-glossary.py --check
+          python -m unittest discover -s tests -v
+          node tests/motor-winding.test.cjs
+          node tests/dc-reasoning.test.cjs
+      - name: Install Chromium
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+      - name: Test desktop and mobile learning interactions
+        run: python tests/dc-reasoning.browser.py
+      - name: Preserve review screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dc-reasoning-browser-preview
+          path: dc-browser-artifacts/*.png
+          if-no-files-found: ignore
