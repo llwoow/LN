@@ -1762,6 +1762,161 @@
         "read": "依据公开模型的电气/机械状态关系，本站另设参数并用Python复算；未执行MATLAB。；核读本次取得固定提交的control/timeresp.py与examples/cruise-control.py，检查状态响应和限幅示例。；核读连续LTI响应接口与均匀时间轴条件；独立RK4程序不冒称调用了所有SciPy方法。；实际取得PDF，核读PDF第4—5页Motor Control、13—14页双端驱动Q13/Q14及解答；页面是2011课程汇编，题目含旧年页眉。"
       },
       "localLesson": "#course/robot-drive-engineering/rd-simulation"
+    },
+    {
+      "id": "vdmos-channel-and-output",
+      "title": "从沟道电荷复算理想输出曲线",
+      "kind": "LN 站内算例",
+      "repository": null,
+      "checked": "2026-11-08",
+      "targets": [
+        {
+          "course": "power-semiconductors",
+          "section": "vdmos-conduction"
+        },
+        {
+          "course": "power-semiconductors",
+          "section": "vdmos-output"
+        },
+        {
+          "course": "power-semiconductors",
+          "section": "chapter-2-test"
+        }
+      ],
+      "question": "为什么提高漏源电压时，漏极电流先近似线性增大，随后逐渐进入饱和？",
+      "summary": "用站内的模型、作图数值和参考图完成四条输出曲线，再检验串联压降怎样改变外部夹断位置。",
+      "steps": [
+        "取阈值 3 V、电流系数 1 A/V²，依次算出 4、5、6、7 V 四个栅压对应的过驱动和夹断坐标。",
+        "用站内分段式计算每条曲线夹断前的两三个点，再画饱和段与虚线。用站内算例和参考图逐项核对。",
+        "在 5 V 栅压的算例中，让沟道漏端与 D 之间串联 0.2 Ω，再算外部夹断电压并和站内解答对照。"
+      ],
+      "output": "一张带四个夹断点的输出特性图，以及一组内外夹断电压。",
+      "requirements": "纸笔即可。模型、已解算例和参考图均在 LN 内。",
+      "license": "算例与绘图为 LN 原创整理。可选参考资料按原站条款使用。",
+      "links": [],
+      "limits": [
+        "渐变沟道模型解释理想通道。真实 VDMOS 还包含电压依赖的串联区。",
+        "本资源没有特定型号实测数据，也不用于求 1200 V 的二维终端场分布。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "教学数值已按站内分段式复算。曲线用于练习作图，不是器件实测。",
+        "read": "核对 MIT 讲义的反型电荷、积分及夹断条件，以及厂商资料图 3、6、8。"
+      },
+      "evidence": [
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/eeb94eab00ebb62a3fde0eec1484bc08_MIT6_012F09_lec11_gradual.pdf",
+          "summary": "渐变沟道近似将沟道电流与反型电荷和局部电位联系起来。"
+        },
+        {
+          "url": "https://www.infineon.com/assets/row/public/documents/24/54/infineon-power-mosfet-basics-article-en.pdf",
+          "summary": "剖面、输出特性和分区电阻可用于对照真实功率 MOSFET 的工作区域。"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "第二章完整网页答卷（含此前参考评分说明）",
+          "path": "answers/power-semiconductors/chapter-2/答案.html",
+          "view": true
+        },
+        {
+          "label": "第二章完整PDF答卷",
+          "path": "output/pdf/功率半导体器件-第二章测试答案-完整版.pdf"
+        }
+      ],
+      "localLesson": "#course/power-semiconductors/vdmos-output/worked-output-plot"
+    },
+    {
+      "id": "psd-electrothermal-budget",
+      "title": "用同一工况比较器件损耗与结温",
+      "kind": "LN 站内算例",
+      "repository": null,
+      "checked": "2026-11-09",
+      "targets": [
+        {
+          "course": "power-semiconductors",
+          "section": "switching"
+        },
+        {
+          "course": "power-semiconductors",
+          "section": "junction-termination"
+        },
+        {
+          "course": "power-semiconductors",
+          "section": "device-selection"
+        }
+      ],
+      "question": "为什么同两只器件的损耗排序会随开关频率反转？",
+      "summary": "用同一工况的通态参数和开关能量复算两条损耗线，再求交点与结温。",
+      "steps": [
+        "从表3.2分开计算通态损耗和每周期动态能量。",
+        "在 5 kHz 和 20 kHz 处比较两器件，再解出交点。",
+        "用给定的热路径初估结温，并说明何时要换用瞬态热阻抗。"
+      ],
+      "output": "两条损耗直线、交点和 20 kHz 的初估结温。",
+      "requirements": "纸笔即可，全部输入和参考解答都在 LN。",
+      "license": "LN 原创教学算例。",
+      "links": [],
+      "limits": [
+        "教学参数固定在参考结温，用于理解比较方法。",
+        "用作实际设计时须按器件规格和实测波形修正。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "复算两组损耗、交点和初估结温。",
+        "read": "查阅厂商应用笔记中开关能量的测试口径和热参数。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.infineon.com/assets/row/public/documents/24/42/infineon-an2011-05-igbt-modules-explanation-applicationnotes-en.pdf",
+          "summary": "Infineon AN 2011-05 §3.10 和 §3.13 的开关能量及热特性"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/power-semiconductors/device-selection/worked-device-selection"
+    },
+    {
+      "id": "electrical-materials-thermal-slab",
+      "title": "电气材料热阻：一维绝缘板算例与条件核查",
+      "kind": "本站原创可复算计算",
+      "repository": null,
+      "checked": "2026-11-13",
+      "targets": [
+        {
+          "course": "electrical-materials",
+          "section": "em-2-4"
+        }
+      ],
+      "question": "一维稳态热阻为何与厚度成正比、面积成反比？哪些工程边界使这个结论失效？",
+      "summary": "把第2章2.4的傅里叶定律用于无内热源、常热导率、单层平板的教学假设，再改变厚度并检查单位；不冒充实测温升。",
+      "steps": [
+        "先从 q_x=−λdT/dx 推导热流率 Qdot=λAΔT/L，说明负号和热流方向的约定。",
+        "运行提供的Python标准库复算脚本，核对0.004m、0.01m²、0.2W/(m·K)、8W下的热阻与温差。",
+        "仅将厚度加倍，验证热阻增加一倍；在纸上另做面积减半与加入接触热阻的情况。",
+        "指出稳态、一维、无内热源、常热导率假设，并解释为什么结果不能直接当作真实电缆或变压器温升。"
+      ],
+      "output": "标准库脚本打印2 K/W、16 K及厚度加倍时4 K/W；无真实测量数据。",
+      "requirements": "Python 3.9+标准库；也可仅在正文中手算，无硬件、外部依赖与网络连接。",
+      "license": "本站原创推导案例与代码；未复制教材原文、原图或第三方数值表。",
+      "links": [],
+      "limits": [
+        "所有输入数值均为本站教学假设，不是任何真实材料的验证参数。",
+        "一维稳态模型忽略接触热阻、辐射、对流、内热源和温度依赖热导率。",
+        "代码复算结果只验证算术与假设模型，不等于材料热学实验校准。"
+      ],
+      "verification": {
+        "executed": true,
+        "scope": "已在当前隔离Python环境实际运行脚本，验证热阻2 K/W、温差16 K、厚度加倍热阻4 K/W；未开展物理实验。",
+        "read": "依据用户提供教材第2章2.4节（书内42—48页）的热传导、热阻概念，新增模型与测试由本站原创编写。"
+      },
+      "evidence": [],
+      "downloads": [
+        {
+          "label": "热阻复算 Python 脚本",
+          "path": "assets/practice/electrical-materials/heat_resistance.py"
+        }
+      ],
+      "localLesson": "#course/electrical-materials/em-2-4"
     }
   ]
 }

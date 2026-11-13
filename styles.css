@@ -159,12 +159,13 @@ h1 { font-size: 28px; line-height: 1.4; font-weight: 750; letter-spacing: -.5px;
 .lesson .math-inline::-webkit-scrollbar, .lesson .math.inline::-webkit-scrollbar { display: none; }
 .equation-anchor { scroll-margin-top: 24px; }
 .lesson figure { margin: 28px 0; }
-.lesson figure > img { display: block; width: 100%; height: auto; }
+.lesson figure > img, .lesson a > img.original-diagram { display: block; width: 100%; height: auto; }
 .lesson figure > svg { display: block; width: 100%; }
 .lesson figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .lesson img.original-diagram { background: #fff; padding: 8px; border: var(--line-width) solid var(--border); border-radius: 6px; }
 .table-scroll { overflow: auto; max-width: 100%; margin: 24px 0; }
 .lesson table { border-collapse: collapse; width: 100%; min-width: 460px; font-size: 13px; line-height: 1.8; }
+.lesson table.compact-table { min-width: 0; }
 .lesson th, .lesson td { border-bottom: var(--line-width) solid var(--border); padding: 11px 13px; text-align: left; vertical-align: top; }
 .lesson th { background: var(--subtle); font-weight: 650; }
 .lesson-pagination { display: flex; justify-content: space-between; gap: 20px; border-top: var(--line-width) solid var(--border); margin-top: 42px; padding-top: 20px; }
@@ -737,3 +738,8 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
     overflow-wrap: break-word;
   }
 }
+
+/* Material diagrams preserve readable labels within the existing reader. */
+.em-figure-scroll { max-width:100%; overflow-x:auto; margin:1rem 0; overscroll-behavior-inline:contain; }
+.em-figure-scroll svg { display:block; width:100%; min-width:680px; height:auto; }
+.semiconductor-figure-scroll { max-width:100%; overflow-x:auto; margin:.8rem 0; overscroll-behavior-inline:contain; }

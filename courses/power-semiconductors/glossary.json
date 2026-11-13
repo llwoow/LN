@@ -1,0 +1,824 @@
+{
+  "lazy": true,
+  "terms": [
+    {
+      "id": "vdmos",
+      "title": "VDMOS",
+      "aliases": [
+        "VDMOS",
+        "垂直双扩散 MOSFET"
+      ],
+      "english": "Vertical Double-Diffused MOSFET",
+      "description": "平面栅控制表面沟道，主电流在漂移层中沿芯片厚度方向流动。",
+      "section": "vdmos-structure",
+      "match": "VDMOS 是垂直双扩散"
+    },
+    {
+      "id": "field-ring",
+      "title": "浮置场限环",
+      "aliases": [
+        "浮置场限环",
+        "场限环"
+      ],
+      "english": "Floating field-limiting ring",
+      "description": "主结外围的浮置扩散环，用于调整边缘电场。",
+      "section": "vdmos-structure",
+      "match": "浮置场限环是在主结外围"
+    },
+    {
+      "id": "inversion",
+      "title": "反型沟道",
+      "aliases": [
+        "反型沟道",
+        "反型层"
+      ],
+      "english": "Inversion channel",
+      "description": "正栅压作用下在 p-base 硅表面形成的电子导电薄层。",
+      "section": "vdmos-conduction",
+      "match": "反型沟道是 p-base"
+    },
+    {
+      "id": "accumulation",
+      "title": "积累层",
+      "aliases": [
+        "积累层"
+      ],
+      "english": "Accumulation layer",
+      "description": "栅下 n 型表面的电子浓度增大所形成的薄层。",
+      "section": "vdmos-conduction",
+      "match": "称为积累层"
+    },
+    {
+      "id": "jfet-region",
+      "title": "JFET 收缩区",
+      "aliases": [
+        "JFET 收缩区",
+        "JFET 窄区",
+        "JFET"
+      ],
+      "english": "Junction field-effect transistor region",
+      "description": "相邻体区之间受两侧耗尽区限制的 n 型窄区。",
+      "section": "vdmos-conduction",
+      "match": "相邻 p-base 之间的 n 型窄区"
+    },
+    {
+      "id": "npt",
+      "title": "NPT",
+      "aliases": [
+        "NPT",
+        "未穿通"
+      ],
+      "english": "Non-punch-through",
+      "description": "此处指耗尽区在抵达 n⁺ 衬底前结束的阻断近似。",
+      "section": "vdmos-blocking",
+      "match": "近似取耗尽层在到达"
+    },
+    {
+      "id": "body-diode",
+      "title": "体二极管",
+      "aliases": [
+        "体二极管"
+      ],
+      "english": "Body diode",
+      "description": "源体短接后，p-base／n⁻ 主结构成源漏端子之间的二极管。",
+      "section": "vdmos-structure",
+      "match": "这个结也构成端子间的体二极管"
+    },
+    {
+      "id": "enhancement-mode",
+      "title": "增强型",
+      "aliases": [
+        "增强型"
+      ],
+      "english": "Enhancement mode",
+      "description": "栅、源等电位时没有栅控反型沟道，施加足够的栅源电压才开启。",
+      "section": "vdmos-structure",
+      "match": "增强型的意思是"
+    },
+    {
+      "id": "depletion-region",
+      "title": "耗尽区",
+      "aliases": [
+        "耗尽区",
+        "耗尽层"
+      ],
+      "english": "Depletion region",
+      "description": "自由载流子显著减少、以固定电离杂质电荷为主的区域。",
+      "section": "vdmos-blocking",
+      "match": "扩大了自由载流子稀少的耗尽区"
+    },
+    {
+      "id": "carrier-lifetime",
+      "title": "载流子寿命",
+      "aliases": [
+        "载流子寿命"
+      ],
+      "english": "Carrier lifetime",
+      "description": "过剩载流子因复合衰减的特征时间。",
+      "section": "carrier-transport",
+      "match": "衡量过剩载流子消失的时间尺度"
+    },
+    {
+      "id": "avalanche",
+      "title": "雪崩击穿",
+      "aliases": [
+        "雪崩击穿"
+      ],
+      "english": "Avalanche breakdown",
+      "description": "高场下载流子碰撞电离并倍增所引起的反向击穿。",
+      "section": "pn-junction",
+      "match": "雪崩击穿源于"
+    },
+    {
+      "id": "reverse-recovery",
+      "title": "反向恢复",
+      "aliases": [
+        "反向恢复"
+      ],
+      "english": "Reverse recovery",
+      "description": "正向导通二极管换到反偏时，存储电荷被抽取和复合、恢复阻断的过程。",
+      "section": "power-diodes",
+      "match": "反向恢复是已正向导通"
+    },
+    {
+      "id": "scr",
+      "title": "SCR",
+      "aliases": [
+        "SCR",
+        "PNPN 晶闸管"
+      ],
+      "english": "Silicon controlled rectifier",
+      "description": "可由门极触发导通并自保持的 PNPN 器件。",
+      "section": "thyristors",
+      "match": "普通可控硅整流器"
+    },
+    {
+      "id": "superjunction",
+      "title": "超结",
+      "aliases": [
+        "超结"
+      ],
+      "english": "Superjunction",
+      "description": "交替的 p、n 柱以横向耗尽来平衡空间电荷并承担反向阻断。",
+      "section": "mosfet-resistance",
+      "match": "超结的近似电荷平衡"
+    },
+    {
+      "id": "miller-plateau",
+      "title": "米勒平台",
+      "aliases": [
+        "米勒平台"
+      ],
+      "english": "Miller plateau",
+      "description": "漏源电压明显变化时，栅源电压变化较慢的区间。",
+      "section": "switching",
+      "match": "米勒平台是漏源电压"
+    },
+    {
+      "id": "igbt",
+      "title": "IGBT",
+      "aliases": [
+        "IGBT",
+        "绝缘栅双极型晶体管"
+      ],
+      "english": "Insulated-gate bipolar transistor",
+      "description": "绝缘栅控制电子注入，同时利用集电极注入与电导调制降低漂移区压降。",
+      "section": "igbt",
+      "match": "绝缘栅双极型晶体管"
+    },
+    {
+      "id": "tail-current",
+      "title": "尾电流",
+      "aliases": [
+        "尾电流"
+      ],
+      "english": "Tail current",
+      "description": "关断后漂移区过剩载流子继续被抽取或复合时留下的电流。",
+      "section": "igbt",
+      "match": "尾电流出现在关断时"
+    },
+    {
+      "id": "dead-time",
+      "title": "死区",
+      "aliases": [
+        "死区"
+      ],
+      "english": "Dead time",
+      "description": "半桥互补开关之间两管同时关断的间隔。",
+      "section": "wide-bandgap",
+      "match": "死区是半桥互补开关"
+    },
+    {
+      "id": "epitaxy",
+      "title": "外延",
+      "aliases": [
+        "外延",
+        "外延层"
+      ],
+      "english": "Epitaxy",
+      "description": "在定向单晶表面继续生长的晶体层或生长工艺。",
+      "section": "wafer-materials",
+      "match": "外延是在已定向的单晶表面"
+    },
+    {
+      "id": "cvd",
+      "title": "CVD",
+      "aliases": [
+        "CVD",
+        "化学气相淀积"
+      ],
+      "english": "Chemical vapor deposition",
+      "description": "前驱物在表面发生化学反应并形成薄膜。",
+      "section": "wafer-fabrication",
+      "match": "通过气态前驱物"
+    },
+    {
+      "id": "thermal-impedance",
+      "title": "瞬态热阻抗",
+      "aliases": [
+        "瞬态热阻抗"
+      ],
+      "english": "Transient thermal impedance",
+      "description": "给定热边界下，功率阶跃引起的温升除以阶跃功率。",
+      "section": "junction-termination",
+      "match": "描述阶跃功率作用"
+    },
+    {
+      "id": "soa",
+      "title": "安全工作区",
+      "aliases": [
+        "SOA",
+        "安全工作区"
+      ],
+      "english": "Safe operating area",
+      "description": "特定温度、脉宽和开关条件下允许的电压电流组合。",
+      "section": "device-selection",
+      "match": "把允许的电压、电流、脉宽"
+    },
+    {
+      "id": "sbd",
+      "title": "SBD",
+      "english": "Schottky barrier diode",
+      "description": "依靠金属与半导体势垒整流的二极管。",
+      "section": "power-diodes",
+      "match": "肖特基二极管（SBD）",
+      "aliases": [
+        "SBD"
+      ]
+    },
+    {
+      "id": "bjt",
+      "title": "BJT",
+      "english": "Bipolar junction transistor",
+      "description": "由基极驱动并利用两类载流子输运的三端晶体管。",
+      "section": "thyristors",
+      "match": "功率双极结型晶体管",
+      "aliases": [
+        "BJT"
+      ]
+    },
+    {
+      "id": "gto",
+      "title": "GTO",
+      "english": "Gate turn-off thyristor",
+      "description": "可由足够的反向门极电流关断的晶闸管。",
+      "section": "thyristors",
+      "match": "GTO 允许",
+      "aliases": [
+        "GTO"
+      ]
+    },
+    {
+      "id": "igct",
+      "title": "IGCT",
+      "english": "Integrated gate-commutated thyristor",
+      "description": "带紧耦合低电感门极驱动的门极换流型晶闸管。",
+      "section": "thyristors",
+      "match": "IGCT 将低电感门极驱动",
+      "aliases": [
+        "IGCT"
+      ]
+    },
+    {
+      "id": "field-stop",
+      "title": "场截止",
+      "english": "Field stop",
+      "description": "在背面侧引入掺杂层，让阻断电场更快降至接近零。",
+      "section": "igbt",
+      "match": "场截止（FS）结构",
+      "aliases": [
+        "场截止",
+        "FS"
+      ]
+    },
+    {
+      "id": "hemt",
+      "title": "HEMT",
+      "english": "High-electron-mobility transistor",
+      "description": "利用异质结高迁移率载流子通道输运的晶体管。",
+      "section": "wide-bandgap",
+      "match": "高电子迁移率晶体管",
+      "aliases": [
+        "HEMT"
+      ]
+    },
+    {
+      "id": "pvt",
+      "title": "PVT",
+      "english": "Physical vapor transport",
+      "description": "通过气相输运与再结晶生长 SiC 等材料的工艺。",
+      "section": "wafer-materials",
+      "match": "物理气相传输",
+      "aliases": [
+        "PVT"
+      ]
+    },
+    {
+      "id": "cmp",
+      "title": "CMP",
+      "english": "Chemical mechanical polishing",
+      "description": "结合化学反应和机械作用的抛光方式。",
+      "section": "wafer-materials",
+      "match": "化学机械抛光",
+      "aliases": [
+        "CMP"
+      ]
+    },
+    {
+      "id": "jte",
+      "title": "JTE",
+      "english": "Junction termination extension",
+      "description": "通过主结旁浅掺杂区重分配边缘空间电荷的终端。",
+      "section": "junction-termination",
+      "match": "结终端扩展",
+      "aliases": [
+        "JTE"
+      ]
+    },
+    {
+      "id": "igbt-npt",
+      "title": "NPT",
+      "english": "Non-punch-through",
+      "description": "在所讨论的 IGBT 中，耗尽区在到达集电极注入层前终止。",
+      "section": "igbt",
+      "sections": [
+        "igbt"
+      ],
+      "match": "NPT 结构使耗尽区",
+      "aliases": [
+        "NPT"
+      ]
+    },
+    {
+      "id": "power-jfet",
+      "title": "功率 JFET",
+      "aliases": [
+        "JFET",
+        "结型场效应晶体管"
+      ],
+      "english": "Power junction field-effect transistor",
+      "description": "用栅结耗尽宽度控制主电流通道的独立器件。",
+      "section": "mosfet-resistance",
+      "sections": [
+        "mosfet-resistance"
+      ],
+      "match": "控制栅本身是 PN 结"
+    }
+  ],
+  "symbolDefinitions": [
+    {
+      "id": "gate-source-voltage",
+      "keys": [
+        "V_GS"
+      ],
+      "title": "栅源电压",
+      "description": "栅极相对于源极的电压，单位 V。",
+      "section": "vdmos-conduction",
+      "match": "以源极 S 为参考"
+    },
+    {
+      "id": "drain-source-voltage",
+      "keys": [
+        "V_DS"
+      ],
+      "title": "漏源电压",
+      "description": "漏极相对于源极的电压，单位 V。",
+      "section": "vdmos-conduction",
+      "match": "以源极 S 为参考"
+    },
+    {
+      "id": "drain-current",
+      "keys": [
+        "I_D"
+      ],
+      "title": "漏极电流",
+      "description": "以流入漏极为正，单位 A。",
+      "section": "vdmos-conduction",
+      "match": "以源极 S 为参考"
+    },
+    {
+      "id": "gate-overdrive",
+      "keys": [
+        "V_ov"
+      ],
+      "title": "栅过驱动电压",
+      "description": "栅源电压减去模型阈值电压，单位 V。",
+      "section": "vdmos-output",
+      "match": "表示源端超过反型阈值的电压余量"
+    },
+    {
+      "id": "gate-threshold",
+      "keys": [
+        "V_th"
+      ],
+      "title": "阈值电压",
+      "description": "在所用沟道模型中标定反型开始的栅源电压，单位 V。",
+      "section": "vdmos-output",
+      "match": "是模型中的阈值电压"
+    },
+    {
+      "id": "drift-doping",
+      "keys": [
+        "N_D"
+      ],
+      "title": "施主浓度",
+      "description": "一维均匀 n 侧的施主浓度。",
+      "section": "vdmos-blocking",
+      "sections": [
+        "vdmos-blocking"
+      ],
+      "match": "施主浓度为"
+    },
+    {
+      "id": "depletion-width",
+      "keys": [
+        "W"
+      ],
+      "title": "耗尽宽度",
+      "description": "从主结 n 侧到耗尽边界的距离。",
+      "section": "vdmos-blocking",
+      "sections": [
+        "vdmos-blocking"
+      ],
+      "match": "耗尽宽度为"
+    },
+    {
+      "id": "oxide-capacitance",
+      "keys": [
+        "C_ox"
+      ],
+      "title": "单位面积栅氧电容",
+      "description": "栅氧层电容除以面积，单位 F/m²。",
+      "section": "vdmos-output",
+      "match": "单位面积栅氧电容"
+    },
+    {
+      "id": "effective-mobility",
+      "keys": [
+        "μ_n"
+      ],
+      "title": "电子有效迁移率",
+      "description": "低场下电子漂移速度幅值与电场幅值之比，此处用于反型层。",
+      "section": "vdmos-output",
+      "match": "反型层有效迁移率",
+      "sections": [
+        "vdmos-output"
+      ]
+    },
+    {
+      "id": "channel-width",
+      "keys": [
+        "W_eff"
+      ],
+      "title": "有效总沟道宽度",
+      "description": "共同导电的沟道宽度之和。",
+      "section": "vdmos-output",
+      "match": "横向截线的总沟道宽度"
+    },
+    {
+      "id": "channel-beta",
+      "keys": [
+        "β"
+      ],
+      "title": "平方律电流系数",
+      "description": "迁移率、单位面积栅氧电容和沟道宽长比的乘积，单位 A/V²。",
+      "section": "vdmos-output",
+      "match": "将上式除以"
+    },
+    {
+      "id": "channel-length",
+      "keys": [
+        "L"
+      ],
+      "title": "沟道长度",
+      "description": "沿硅表面从源端到漏端的导电沟道长度。",
+      "section": "vdmos-output",
+      "sections": [
+        "vdmos-output"
+      ],
+      "match": "沟道长度为"
+    },
+    {
+      "id": "channel-sheet-charge",
+      "keys": [
+        "Q_inv"
+      ],
+      "title": "反型层面电荷密度",
+      "description": "单位面积硅表面所含的反型电子电荷，单位 C/m²。式中用其绝对值。",
+      "section": "vdmos-output",
+      "sections": [
+        "vdmos-output"
+      ],
+      "match": "估算电子面电荷幅值"
+    },
+    {
+      "id": "blocking-rating",
+      "keys": [
+        "V_DSS"
+      ],
+      "title": "额定漏源电压",
+      "description": "题面给出的关断额定电压。本题取 1200 V。",
+      "section": "vdmos-blocking",
+      "match": "不足以倒推实际雪崩点"
+    },
+    {
+      "id": "depletion-drop",
+      "keys": [
+        "V_R"
+      ],
+      "title": "耗尽区总压降",
+      "description": "从模型的主结 n 侧到耗尽层末端的电势差。",
+      "section": "vdmos-blocking",
+      "match": "耗尽区总压降"
+    },
+    {
+      "id": "silicon-permittivity",
+      "keys": [
+        "ε_s"
+      ],
+      "title": "半导体介电常数",
+      "description": "硅的介电常数，单位 F/m。",
+      "section": "vdmos-blocking",
+      "sections": [
+        "vdmos-blocking"
+      ],
+      "match": "半导体介电常数为"
+    },
+    {
+      "id": "depth-potential",
+      "keys": [
+        "ψ"
+      ],
+      "title": "沿深度的电势",
+      "description": "相对一维模型主结 n 侧所选参考点的电势，单位 V。",
+      "section": "vdmos-blocking",
+      "sections": [
+        "vdmos-blocking"
+      ],
+      "match": "为沿深度方向的电场分量"
+    },
+    {
+      "id": "depth-field",
+      "keys": [
+        "E_y"
+      ],
+      "title": "沿深度的电场分量",
+      "description": "以从主结向背面为正方向的电场分量，单位 V/m。",
+      "section": "vdmos-blocking",
+      "sections": [
+        "vdmos-blocking"
+      ],
+      "match": "为沿深度方向的电场分量"
+    },
+    {
+      "id": "bandgap",
+      "keys": [
+        "E_g"
+      ],
+      "title": "禁带宽度",
+      "description": "导带底和价带顶的能量差。",
+      "section": "carrier-basics",
+      "sections": [
+        "carrier-basics"
+      ],
+      "match": "导带底记"
+    },
+    {
+      "id": "fermi-energy",
+      "keys": [
+        "E_F"
+      ],
+      "title": "费米能级",
+      "description": "热平衡下决定电子能态占据概率的能量。",
+      "section": "carrier-basics",
+      "sections": [
+        "carrier-basics"
+      ],
+      "match": "决定能级的占据概率"
+    },
+    {
+      "id": "intrinsic-density",
+      "keys": [
+        "n_i"
+      ],
+      "title": "本征载流子浓度",
+      "description": "给定温度下本征半导体中的平衡电子或空穴浓度。",
+      "section": "carrier-basics",
+      "sections": [
+        "carrier-basics"
+      ],
+      "match": "该温度下的本征载流子浓度"
+    },
+    {
+      "id": "bulk-electron-mobility",
+      "keys": [
+        "μ_n"
+      ],
+      "title": "体材料电子迁移率",
+      "description": "体材料低场漂移速度幅值与电场幅值的比。",
+      "section": "carrier-transport",
+      "sections": [
+        "carrier-transport",
+        "mosfet-resistance",
+        "wafer-materials"
+      ],
+      "match": "电子和空穴的迁移率"
+    },
+    {
+      "id": "excess-lifetime",
+      "keys": [
+        "τ"
+      ],
+      "title": "过剩载流子寿命",
+      "description": "此处为单一有效复合时间常数，单位 s。",
+      "section": "carrier-transport",
+      "sections": [
+        "carrier-transport"
+      ],
+      "match": "衡量过剩载流子消失的时间尺度"
+    },
+    {
+      "id": "built-in-potential",
+      "keys": [
+        "V_bi"
+      ],
+      "title": "内建电势",
+      "description": "热平衡 PN 结内部的电势差。",
+      "section": "pn-junction",
+      "sections": [
+        "pn-junction"
+      ],
+      "match": "是内建电势"
+    },
+    {
+      "id": "reverse-charge",
+      "keys": [
+        "Q_rr"
+      ],
+      "title": "反向恢复电荷",
+      "description": "过零后规定恢复区间内反向电流的积分幅值，单位 C。",
+      "section": "power-diodes",
+      "sections": [
+        "power-diodes",
+        "wide-bandgap"
+      ],
+      "match": "反向电流面积的正值"
+    },
+    {
+      "id": "reverse-time",
+      "keys": [
+        "t_rr"
+      ],
+      "title": "反向恢复时间",
+      "description": "从二极管电流过零至规定恢复结束判据的时间。",
+      "section": "power-diodes",
+      "sections": [
+        "power-diodes"
+      ],
+      "match": "从零点到规定结束判据"
+    },
+    {
+      "id": "scr-latching",
+      "keys": [
+        "I_L"
+      ],
+      "title": "擎住电流",
+      "description": "触发后撤去门极时建立自保持所需的最小阳极电流。",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "match": "擎住电流"
+    },
+    {
+      "id": "scr-holding",
+      "keys": [
+        "I_H"
+      ],
+      "title": "维持电流",
+      "description": "已充分导通后继续自保持所需的最小阳极电流。",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "match": "是充分导通后"
+    },
+    {
+      "id": "specific-resistance",
+      "keys": [
+        "R_on,sp"
+      ],
+      "title": "比导通电阻",
+      "description": "导通电阻乘有效芯片面积。",
+      "section": "mosfet-resistance",
+      "sections": [
+        "mosfet-resistance"
+      ],
+      "match": "比导通电阻"
+    },
+    {
+      "id": "miller-charge",
+      "keys": [
+        "Q_gd"
+      ],
+      "title": "栅漏转换电荷",
+      "description": "给定测试条件下，漏压转换过程需要的门极电荷。",
+      "section": "switching",
+      "sections": [
+        "switching"
+      ],
+      "match": "表示门极电荷曲线中的漏压转换部分"
+    },
+    {
+      "id": "igbt-saturation-voltage",
+      "keys": [
+        "V_CE(sat)"
+      ],
+      "title": "IGBT 饱和压降",
+      "description": "指定电流、栅压和结温下的导通压降。",
+      "section": "igbt",
+      "sections": [
+        "igbt",
+        "device-selection"
+      ],
+      "match": "在指定栅压、电流和结温下读"
+    },
+    {
+      "id": "turn-on-energy",
+      "keys": [
+        "E_on"
+      ],
+      "title": "单次开通能量",
+      "description": "在规定开通窗口对开关端口电压与电流乘积积分。",
+      "section": "switching",
+      "sections": [
+        "switching",
+        "device-selection"
+      ],
+      "match": "是相应时间窗内"
+    },
+    {
+      "id": "turn-off-energy",
+      "keys": [
+        "E_off"
+      ],
+      "title": "单次关断能量",
+      "description": "在规定关断窗口对开关端口电压与电流乘积积分。",
+      "section": "switching",
+      "sections": [
+        "switching",
+        "igbt",
+        "device-selection"
+      ],
+      "match": "是相应时间窗内"
+    },
+    {
+      "id": "psd-scr-alpha-1",
+      "title": "PNP共基极电流增益 α₁",
+      "keys": [
+        "α_1"
+      ],
+      "unitHtml": "无量纲",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "match": "把PNP记作",
+      "description": "两管等效模型中T1在声明偏置下的共基极电流增益，非恒定通用材料常数。"
+    },
+    {
+      "id": "psd-scr-alpha-2",
+      "title": "NPN共基极电流增益 α₂",
+      "keys": [
+        "α_2"
+      ],
+      "unitHtml": "无量纲",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "match": "把PNP记作",
+      "description": "两管等效模型中T2的共基极电流增益。"
+    }
+  ]
+}

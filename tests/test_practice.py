@@ -20,6 +20,11 @@ class PracticeContent(unittest.TestCase):
             'tr-calc-base':Fraction(1,10),'tr-calc-eff':Fraction(800,830)*100,
             'tr-calc-parallel':math.sqrt(Fraction(105,10)**2+1),
             'tr-calc-auto':198*Fraction(1000,22),'tr-calc-burden':25*Fraction(18,100),
+            'psd-depletion-scale':10*math.sqrt(400/100),
+            'psd-recovery-area':Fraction(60*5,2),
+            'psd-miller-time':25/Fraction(13-5,16),
+            'psd-pulse-temperature':55+60*Fraction(1,5),
+            'psd-loss-crossover':Fraction((19-16)*1000,330-180),
             'ac-ch3-313':(-10+math.sqrt(100+80))/2,'ac-ch3-316':Fraction(10,10),
             'ac-root-break':self.breakaway_gain(),
             'ac-root-angle':180-135-math.degrees(math.atan2(1,2))-90,
@@ -33,7 +38,10 @@ class PracticeContent(unittest.TestCase):
             'emc-capacitor-resonance':1/(2*math.pi*math.sqrt(1e-9*1e-6))/1e6,
             'emc-ground-step':100*100*.8/(2*math.pi*2*(2+.8)),
             'emc-lightning-lead-voltage':.6e-6*(1000/1e-6),
-            'emc-impulse-shield-current':1/(1+3)*100}
+            'emc-impulse-shield-current':1/(1+3)*100,
+            # New electrical materials keys independently recomputed from SI units and Hooke/Fourier relations.
+            'emat-2-thermal':Fraction(4,1000)/(Fraction(1,5)*Fraction(1,100)),
+            'emat-2-modulus':(400/(2e-6))/(0.1/100)/1e9}
         # Robot-drive keys have an independent calculation registry in test_robot_drive.py.
         numeric={q['id'] for q in self.questions if q['type']=='numeric' and q['course']!='robot-drive-engineering'}
         self.assertEqual(numeric,set(expected))

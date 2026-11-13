@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 
 ROOT=Path(__file__).resolve().parents[1]
 assignment=runpy.run_path(str(ROOT/'scripts/build-reference-index.py'))['assignment']
-courses={c['id']:{s['id'] for s in c['sections']} for c in [assignment(p) for p in (ROOT/'courses').glob('*/manifest.js')] if not c.get('outlineOnly')}
+courses={c['id']:{s['id']:s for s in c['sections']} for c in [assignment(p) for p in (ROOT/'courses').glob('*/manifest.js')] if not c.get('outlineOnly')}
 data=json.loads((ROOT/'courses/practice/bank.json').read_text())
 data['sources']=json.loads((ROOT/'courses/practice/sources.json').read_text())['sources']
 source_ids=set()
@@ -24,10 +24,11 @@ seen=set();coverage=set()
 skills={'建模','因果与证据','推导计算','边界与反例','迁移设计','解释表达'}
 for q in data['questions']:
     assert q['id'] not in seen,q['id'];seen.add(q['id'])
-    assert q['course'] in courses and q['sections'] and set(q['sections'])<=courses[q['course']],q['id']
+    assert q['course'] in courses and q['sections'] and set(q['sections'])<=courses[q['course']].keys(),q['id']
     if q.get('readingAnchor'):
-        assert q['course']=='electrical-machines' and 'transformer-homework' in q['sections'],q['id']
-        payload=assignment(ROOT/'courses/electrical-machines/lessons/transformer-homework.js')
+        reading_section=q.get('readingSection','transformer-homework')
+        assert reading_section in q['sections'],q['id']
+        payload=assignment(ROOT/courses[q['course']][reading_section]['src'])
         document=runpy.run_path(str(ROOT/'scripts/build-reference-index.py'))['Document'](payload['html']).root
         assert any(n.attrs.get('id')==q['readingAnchor'] for n in document.walk()),q['id']
     coverage.add(q['course'])

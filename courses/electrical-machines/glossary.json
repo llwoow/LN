@@ -2198,6 +2198,201 @@
         "transformer-homework"
       ],
       "match": "复功率：第2-7题带下划线的S₂为复功率，定义为端电压相量乘以电流相量的共轭，单位VA；它与视在功率幅值U₂I₂的标记分开，归算保持对应复功率不变。"
+    },
+    {
+      "id": "dc-count-P",
+      "title": "磁极总数 P",
+      "keys": [
+        "P"
+      ],
+      "section": "dc-sec32",
+      "sections": [
+        "dc-sec32",
+        "dc-quickref",
+        "dc-worked"
+      ],
+      "match": "这里统一记磁极总数",
+      "description": "总磁极数P=2p。"
+    },
+    {
+      "id": "dc-count-p",
+      "title": "极对数 p",
+      "keys": [
+        "p"
+      ],
+      "section": "dc-sec32",
+      "sections": [
+        "dc-sec32",
+        "dc-quickref",
+        "dc-worked"
+      ],
+      "match": "这里统一记磁极总数",
+      "description": "总磁极数的一半。"
+    },
+    {
+      "id": "dc-count-A",
+      "title": "并联支路总数 A",
+      "keys": [
+        "A"
+      ],
+      "section": "dc-sec32",
+      "sections": [
+        "dc-sec32",
+        "dc-quickref",
+        "dc-worked"
+      ],
+      "match": "这里统一记磁极总数",
+      "description": "相同两电刷极性端口之间的电枢并联通路总数。"
+    },
+    {
+      "id": "dc-count-a",
+      "title": "支路对数 a",
+      "keys": [
+        "a"
+      ],
+      "section": "dc-sec32",
+      "sections": [
+        "dc-sec32",
+        "dc-quickref",
+        "dc-worked"
+      ],
+      "match": "这里统一记磁极总数",
+      "description": "本章a=A/2，不能与其他书中的总支路数约定混用。"
+    },
+    {
+      "id": "dc-new-Z",
+      "title": "有效导体总数 Z",
+      "keys": [
+        "Z"
+      ],
+      "section": "dc-sec32",
+      "sections": [
+        "dc-sec32",
+        "dc-quickref",
+        "dc-worked"
+      ],
+      "match": "是整个电枢参加感应的有效导体总数",
+      "description": "包括所有支路中的有效导体，不是线圈数或匝数。"
+    },
+    {
+      "id": "dc-new-flux",
+      "title": "每极磁通 Φ",
+      "keys": [
+        "Φ"
+      ],
+      "section": "dc-sec32",
+      "sections": [
+        "dc-sec32",
+        "dc-quickref",
+        "dc-worked"
+      ],
+      "match": "是每极主磁通",
+      "description": "每极主磁通，单位Wb。"
+    },
+    {
+      "id": "dc-new-rpm",
+      "title": "机械转速 n",
+      "keys": [
+        "n"
+      ],
+      "section": "dc-sec32",
+      "sections": [
+        "dc-sec32",
+        "dc-quickref",
+        "dc-worked"
+      ],
+      "match": "是机械转速",
+      "description": "机械转速，使用r/min。"
+    },
+    {
+      "id": "dc-new-Ia",
+      "title": "电枢总电流 I_a",
+      "keys": [
+        "I_a"
+      ],
+      "section": "dc-sec32",
+      "sections": [
+        "dc-sec32",
+        "dc-quickref",
+        "dc-worked"
+      ],
+      "match": "各支路按理想对称模型分流",
+      "description": "电枢端口总电流，不是单支路电流。"
+    },
+    {
+      "id": "dc-new-Te",
+      "title": "电磁转矩 T_e",
+      "keys": [
+        "T_e"
+      ],
+      "section": "dc-quickref",
+      "sections": [
+        "dc-quickref",
+        "dc-worked",
+        "dc-sec32"
+      ],
+      "match": "功率关系与转矩系数可以相互检验",
+      "description": "机电转换对应的电磁转矩，不直接等于轴输出转矩。"
+    },
+    {
+      "id": "dc-new-Pem",
+      "title": "机电转换功率 P_em",
+      "keys": [
+        "P_em"
+      ],
+      "section": "dc-quickref",
+      "sections": [
+        "dc-quickref",
+        "dc-worked",
+        "dc-sec32"
+      ],
+      "match": "功率关系与转矩系数可以相互检验",
+      "description": "感应电势与电枢总电流的乘积，尚未扣除机械等损耗。"
+    },
+    {
+      "id": "dc-new-omega",
+      "title": "机械角速度 ω",
+      "keys": [
+        "ω"
+      ],
+      "section": "dc-quickref",
+      "sections": [
+        "dc-quickref",
+        "dc-worked",
+        "dc-sec32"
+      ],
+      "match": "功率关系与转矩系数可以相互检验",
+      "description": "机械角速度，单位rad/s；零速求转矩不能以功率除以速度。"
+    },
+    {
+      "id": "dc-new-Ce",
+      "title": "转速电势系数 C_e",
+      "keys": [
+        "C_e"
+      ],
+      "section": "dc-quickref",
+      "sections": [
+        "dc-quickref",
+        "dc-worked",
+        "dc-sec32"
+      ],
+      "match": "功率关系与转矩系数可以相互检验",
+      "description": "按本节E=CeΦn、n用r/min定义的系数，不含磁通。"
+    },
+    {
+      "id": "dc-new-Ct",
+      "title": "转矩系数 C_T",
+      "keys": [
+        "C_T"
+      ],
+      "section": "dc-quickref",
+      "sections": [
+        "dc-quickref",
+        "dc-worked",
+        "dc-sec32"
+      ],
+      "match": "功率关系与转矩系数可以相互检验",
+      "description": "按本节Te=CTΦIa定义的系数。"
     }
   ]
 }

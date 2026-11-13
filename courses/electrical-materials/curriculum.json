@@ -1,0 +1,230 @@
+{
+  "source": {
+    "title": "电气材料基础",
+    "authors": "钟力生、高景晖、徐曼、李建英",
+    "publisher": "机械工业出版社",
+    "year": 2023,
+    "pdfPages": 231,
+    "printedPageOffset": 6,
+    "tocChecked": "原书扫描PDF第5—6页",
+    "note": "第2章已开始写作；余章不虚构正文。页码是原书印刷页码，PDF页码=印刷页码+6（正文区域）。"
+  },
+  "chapters": [
+    {
+      "name": "第1章 绪论",
+      "printedStartPage": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "电力系统中的电力设备",
+          "printedStartPage": 1,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "1.2",
+          "title": "电力设备中的电气材料",
+          "printedStartPage": 6,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "1.3",
+          "title": "电气材料与电力设备发展的关系",
+          "printedStartPage": 9,
+          "status": "not-yet-authored"
+        }
+      ]
+    },
+    {
+      "name": "第2章 电气材料结构与性能",
+      "printedStartPage": 14,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "材料结构与性能的关系",
+          "printedStartPage": 14,
+          "status": "draft-reviewed-initial"
+        },
+        {
+          "number": "2.2",
+          "title": "物质结构基础",
+          "printedStartPage": 16,
+          "status": "draft-reviewed-initial"
+        },
+        {
+          "number": "2.3",
+          "title": "电气材料的导电性",
+          "printedStartPage": 35,
+          "status": "draft-reviewed-initial"
+        },
+        {
+          "number": "2.4",
+          "title": "电气材料的导热性",
+          "printedStartPage": 42,
+          "status": "draft-reviewed-initial"
+        },
+        {
+          "number": "2.5",
+          "title": "电气材料的力学性能",
+          "printedStartPage": 48,
+          "status": "draft-reviewed-initial"
+        }
+      ]
+    },
+    {
+      "name": "第3章 电介质材料",
+      "printedStartPage": 54,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "电介质基本性能",
+          "printedStartPage": 54,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "3.2",
+          "title": "气体和液体电介质",
+          "printedStartPage": 70,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "3.3",
+          "title": "固体电介质材料",
+          "printedStartPage": 84,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "3.4",
+          "title": "复合电介质材料",
+          "printedStartPage": 107,
+          "status": "not-yet-authored"
+        }
+      ]
+    },
+    {
+      "name": "第4章 半导体材料",
+      "printedStartPage": 119,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "半导体基本特征",
+          "printedStartPage": 119,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "4.2",
+          "title": "本征半导体和掺杂半导体",
+          "printedStartPage": 120,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "4.3",
+          "title": "半导体电导特性",
+          "printedStartPage": 127,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "4.4",
+          "title": "p-n结和金属-半导体接触",
+          "printedStartPage": 133,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "4.5",
+          "title": "半导体材料应用",
+          "printedStartPage": 143,
+          "status": "not-yet-authored"
+        }
+      ]
+    },
+    {
+      "name": "第5章 导电材料",
+      "printedStartPage": 155,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "导电材料基本性能",
+          "printedStartPage": 155,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "5.2",
+          "title": "常用导电材料",
+          "printedStartPage": 160,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "5.3",
+          "title": "超导电材料",
+          "printedStartPage": 171,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "5.4",
+          "title": "半导电材料",
+          "printedStartPage": 177,
+          "status": "not-yet-authored"
+        }
+      ]
+    },
+    {
+      "name": "第6章 磁性材料",
+      "printedStartPage": 180,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "物质磁性的起源",
+          "printedStartPage": 180,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "6.2",
+          "title": "材料磁性",
+          "printedStartPage": 189,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "6.3",
+          "title": "软磁材料",
+          "printedStartPage": 194,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "6.4",
+          "title": "硬磁材料",
+          "printedStartPage": 200,
+          "status": "not-yet-authored"
+        }
+      ]
+    },
+    {
+      "name": "第7章 电储能材料",
+      "printedStartPage": 205,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "储能电容器介质材料",
+          "printedStartPage": 205,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "7.2",
+          "title": "电化学电容器材料",
+          "printedStartPage": 210,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "7.3",
+          "title": "锂离子电池",
+          "printedStartPage": 212,
+          "status": "not-yet-authored"
+        },
+        {
+          "number": "7.4",
+          "title": "燃料电池",
+          "printedStartPage": 217,
+          "status": "not-yet-authored"
+        }
+      ]
+    }
+  ]
+}

@@ -181,9 +181,9 @@
   }
 
   function courseViewNav(course, active) {
-    const first = course.id === 'automatic-control'
+    const first = course.sections.find(section => section.id === course.defaultSection) || (course.id === 'automatic-control'
       ? (course.sections.find(section => section.kind !== 'outline') || course.sections[0])
-      : course.sections[0];
+      : course.sections[0]);
     const model = course.sections.find((section) => section.kind === 'model');
     const modelActive = model && location.hash.split('/')[2] === model.id;
     const material = course.sections.find(section=>section.supplement);
@@ -372,6 +372,20 @@
           }
         }
         bindInlineModels(body);
+        // Keep the original winding 3D model intact; the comparison lab is a separate idealized model.
+        if (course.id === 'electrical-machines' && body.querySelector('.dc-reasoning')) {
+          try {
+            await loadStyle('courses/electrical-machines/model/dc-learning-lab.css');
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            if (body.querySelector('[data-dc-winding-lab], [data-dc-question]')) {
+              await loadScript('courses/electrical-machines/model/dc-learning-lab.js');
+              if (!body.isConnected || body.dataset.lessonKey !== key) return;
+              window.LN_DCMachinesLabs?.mount(body);
+            }
+          } catch (error) {
+            // Keep the noninteractive reasoning and equations readable when an asset fails.
+          }
+        }
         if (course.id === 'electromagnetic-compatibility' && body.querySelector('[data-emc-lab]')) {
           // Educational models are optional; keep the static lesson readable if loading fails.
           try {

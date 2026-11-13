@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" role="img" aria-labelledby="scr-title">
+<title id="scr-title">SCR两晶体管等效：PNP集电极接NPN基极，NPN集电极接PNP基极，门极注入NPN基极节点</title>
+<defs><marker id="scr-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4.5L0 9Z" fill="#202c36"/></marker></defs>
+<g fill="none" stroke="#202c36" stroke-width="2.5" stroke-linejoin="round">
+ <path d="M210 95V155M210 110L260 80V55M210 140L260 170V260H470M120 125H210M120 125V15H680V210H530L470 245M470 230V290M470 275L530 310V370M330 315V260"/>
+ <path d="M250 86L234 96M506 296L524 306" marker-end="url(#scr-arrow)"/>
+ <path d="M260 193V232M610 210H565M330 307V277M530 325V354" marker-end="url(#scr-arrow)"/>
+</g>
+<circle cx="330" cy="260" r="4.5" fill="#202c36"/>
+<g fill="#202c36" font-family="sans-serif" font-size="20">
+ <text x="252" y="45">A</text><text x="542" y="380">K</text><text x="318" y="341">G</text>
+ <text x="282" y="76">I_A</text><text x="544" y="343">I_K</text><text x="343" y="296">I_G</text>
+ <text x="272" y="215">I_C1</text><text x="585" y="197">I_C2</text>
+ <text x="135" y="181">T₁：PNP</text><text x="551" y="268">T₂：NPN</text>
+ <text x="172" y="88">B₁</text><text x="435" y="248">B₂</text>
+ <text x="20" y="400">I_K = I_A + I_G；两管集电极—基极连接构成再生反馈</text>
+</g></svg>

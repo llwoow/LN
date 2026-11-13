@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>功率半导体器件 · 第二章测试答案</title>
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<style>
+:root{color-scheme:light;--ink:#151515;--muted:#373737;--line:#c8c8c8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eee;color:var(--ink);font-family:"Noto Serif CJK SC","SimSun",serif;font-size:17px;line-height:1.8;font-weight:500}
+header.toolbar{position:sticky;top:0;z-index:2;background:#fafafa;border-bottom:1px solid var(--line);padding:10px 20px;font:600 14px/1.5 system-ui,sans-serif;display:flex;gap:18px;align-items:center;flex-wrap:wrap}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}button{font:inherit;color:inherit;background:white;border:1px solid #888;border-radius:5px;padding:5px 12px;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid #222;outline-offset:3px}
+main{margin:24px auto;max-width:1000px}.sheet{background:white;padding:36px 44px;margin:0 0 22px;position:relative}h1,h2,h3{font-family:system-ui,"Microsoft YaHei",sans-serif;line-height:1.4;color:#111;break-after:avoid}h1{font-size:29px;margin:10px 0 20px}h2{font-size:24px;margin:8px 0 18px}h3{font-size:19px;margin:20px 0 8px}.eyebrow{font:650 13px/1.5 system-ui,sans-serif;letter-spacing:.03em;margin:0 0 12px;color:var(--muted)}p{margin:10px 0;text-align:justify}strong{font-weight:750;color:#111}figure{margin:18px 0;break-inside:avoid}svg{width:100%;height:auto;display:block}figcaption{font-size:14px;line-height:1.7;color:var(--muted);margin:6px 0 12px}.small,.sources{font-size:14px;line-height:1.75}.note{border-left:3px solid #535353;padding:8px 14px;margin:16px 0;background:#f6f6f4}.page-no{font:500 12px system-ui,sans-serif;color:#444;text-align:right;margin-top:22px;border-top:1px solid #ddd;padding-top:8px}table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.65;margin:16px 0;break-inside:avoid}th,td{padding:8px 10px;text-align:left;vertical-align:top;border-bottom:1px solid #ccc}thead{border-top:2px solid #333;border-bottom:1px solid #555}tr:last-child td{border-bottom:2px solid #333}ul,ol{padding-left:1.6em;margin:10px 0}li{padding-left:3px;margin:6px 0}.equation{display:grid;grid-template-columns:minmax(0,1fr) 42px;align-items:center;gap:6px;margin:14px 0;break-inside:avoid}.equation .number{font-size:14px;text-align:right}.equation .katex-display{margin:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;padding:4px 0}.equation .katex-display::-webkit-scrollbar{display:none}.katex{font-size:1.06em}.katex-display>.katex{white-space:nowrap}.term{white-space:nowrap}.break-word{overflow-wrap:anywhere}.answer-path{font-size:19px;font-weight:650;text-align:center;line-height:2}.source-code{font-family:ui-monospace,monospace;font-size:12px;overflow-wrap:anywhere}
+@media(max-width:650px){body{font-size:16px}main{margin:0}.sheet{padding:24px 18px;margin-bottom:12px}h1{font-size:25px}h2{font-size:21px}table{font-size:13px}th,td{padding:6px}header.toolbar{position:relative;gap:12px}.equation{grid-template-columns:minmax(0,1fr) 32px}.equation .katex{font-size:.96em}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+[id]{scroll-margin-top:72px}
+.figure-view{overflow-x:auto}
+.reference-target:focus{outline:2px solid #535353;outline-offset:4px}
+.reference-mark{text-decoration:none}
+.reference-mark:hover,.reference-mark:focus-visible{text-decoration:underline}
+@media screen and (max-width:650px){.figure-view svg{min-width:680px}.figure-view:focus-visible{outline:2px solid #535353;outline-offset:2px}}
+@page{size:A4;margin:14mm 15mm 13mm}
+@media print{.equation .katex-display{overflow:visible}html{scroll-behavior:auto}body{background:white;font-size:10.7pt;line-height:1.68;-webkit-print-color-adjust:exact;print-color-adjust:exact}header.toolbar{display:none}main{max-width:none;margin:0}.sheet{padding:0;margin:0;break-after:page;min-height:0}.sheet:last-child{break-after:auto}h1{font-size:21pt;margin:4mm 0}h2{font-size:17pt;margin:2mm 0 4mm}h3{font-size:12pt;margin:4mm 0 2mm}p{margin:2.5mm 0}.eyebrow{font-size:8.5pt;margin-bottom:2mm}figure{margin:3mm 0}figcaption,.small,.sources{font-size:8.6pt;line-height:1.65}table{font-size:9pt;line-height:1.6;margin:3mm 0}td,th{padding:2mm}.note{padding:2mm 3mm;margin:3mm 0}.equation{margin:3mm 0}.equation .number{font-size:9pt}.page-no{font-size:8pt;margin-top:4mm;padding-top:2mm}.answer-path{font-size:12pt}.katex{font-size:1.05em}a{text-decoration:none}ul,ol{margin:2mm 0}li{margin:1.5mm 0}}
+#review th:first-child{width:22%}
+#review th:nth-child(2){width:14%}
+#review td:nth-child(2){white-space:nowrap}
+@media print{#q4 .figure-view{width:91%;margin-inline:auto}#sources td,#sources th{padding-block:1.7mm}#sources .page-no{margin-top:2mm}}
+</style>
+</head>
+<body>
+<header class="toolbar"><a href="../../../index.html">LN</a><a href="#q1">第1题</a><a href="#q2">第2题</a><a href="#q3">第3题</a><a href="#q4">第4题</a><a href="#review">审查</a><button onclick="window.print()">打印 / PDF</button></header>
+<main>
+<section class="sheet" id="q1">
+<p class="eyebrow">功率半导体器件 · 第二章测试 · 完整版 · 2026-11-12</p>
+<h1>第1题　芯片横截面结构</h1>
+<p>按常规硅制<strong>N 沟道增强型平面栅垂直双扩散 MOSFET（VDMOS）</strong>作图。图1(a)用三个条形元胞的剖面表示有源区，右侧画出一侧终端。硅材料和普通漂移层是本答卷采用的结构假设。</p>
+<figure>{{structure}}<figcaption>图1(a)　平面栅 VDMOS 及终端剖面。白色虚框标出 S 金属填充的接触窗口，同时接通 n⁺ 源区和 p⁺ 体接触。FR1–FR3 位于绝缘层下方，与 S 金属隔离。[B1][B3][S2][Q1][Q2]</figcaption></figure>
+<table><thead><tr><th>必须标出的部分</th><th>位置与电气关系</th></tr></thead><tbody>
+<tr><td>n⁺ 源区、p⁺ 体接触、p-base</td><td>n⁺ 源区是 p-base 表面的浅结，p⁺ 体接触也画在体区内。S 金属同时接触两者。</td></tr>
+<tr><td>n⁻ 漂移区、n⁺ 衬底、背面金属 D</td><td>从上到下依次为轻掺杂漂移区、重掺杂衬底、漏极金属。</td></tr>
+<tr><td>多晶硅 G、薄栅氧、层间介质</td><td>栅位于平坦硅表面上方；薄栅氧隔开 G 与硅，层间介质隔开 G 与 S 金属。</td></tr>
+<tr><td>场限环、正面钝化层</td><td>外围 p 型环在本图取 p⁺，不接 S 或 G；正面最外层钝化，局部焊盘开窗未展开。</td></tr>
+</tbody></table>
+<div class="page-no">1 / 9</div>
+</section>
+
+<section class="sheet">
+<p class="eyebrow">第1题 · 接触关系与画图检查</p>
+<h2>栅源绝缘、体区短接与表面层</h2>
+<figure>{{zoom}}<figcaption>图1(b)　图1(a)中元胞右侧的局部放大。蓝线与绿线分别标出小正漏压导通时的反型层与积累层。薄栅氧及彩色表面薄层均示意加厚。[B1][B4][Q1]</figcaption></figure>
+<p><strong>源极与体区接在一起，栅极保持独立。</strong>S 金属通过接触窗口同时与 n⁺ 源区和 p⁺ 体接触形成欧姆接触。p⁺ 区降低体接触电阻，把 p-base 接到源电位，有助于抑制 n⁺ 源区 / p-base / n⁻ 漂移区构成的寄生 NPN 晶体管。不能把 p⁺ 体接触画成另一只源区，也不能把它伸穿 p-base、直接接到 n⁻ 漂移区。[B1]</p>
+<p><strong>薄栅氧、层间介质和钝化层是三个不同的层次。</strong>薄栅氧处在多晶硅与半导体之间；覆盖栅的层间介质防止上层源金属把栅短路；最外侧钝化层用于表面保护。实际介质堆叠和焊盘开窗依工艺而异。Quirk 的 CMOS 制造剖面可用来核对这些材料层的区别，不能直接当作本题 VDMOS 的完整工艺图。[Q1][Q2]</p>
+<p><strong>“平面栅”描述栅与沟道的位置，不表示主电流全为横向。</strong>沟道在 p-base 的平坦上表面，连通 n⁺ 源区与 n⁻ 区；漂移区和衬底中的电流主要为纵向。双扩散形成的横向结边界差决定沟道长度，不应把功率 MOSFET 画成正面同时引出源、漏的普通横向 MOSFET。[B1][S2]</p>
+<p><strong>场限环与元胞不同。</strong>环绕有源区的 p 型掺杂区不需要 n⁺ 源区，也不形成承载主电流的重复元胞。剖面中的三段环实际对应俯视图中围绕芯片有源区的环形结构；本题采用浮置环，没有给它们加外部电源或把它们并到源极。[B3]</p>
+<p>图1(a)与图1(b)均把 n⁺ 源区画成 p-base 最大结深约四分之一的浅结。结构尺寸按示意表示，薄栅氧与表面薄层放大显示。结深、漂移层厚度和终端尺寸由器件工艺决定。</p>
+<div class="note">手绘时先画 n⁻ / n⁺ / D 三层，再画三个 p-base 及其中的 n⁺、p⁺；最后补齐薄栅氧、多晶硅、介质、S 金属和外围环。重点检查：G 与 S 不相接，p⁺ 与 n⁺ 通过同一 S 接触窗口短接。</div>
+<p class="sources">依据：[B1] Baliga §6.2.2、图6.3，书页284—285；[B3] §3.6.2—3.6.3，图3.20、3.31—3.32；[S2] Sze §6.5.6、图6.39(a)，书页263—264；[Q1][Q2] 见第9页。</p>
+<div class="page-no">2 / 9</div>
+</section>
+
+<section class="sheet" id="q2">
+<p class="eyebrow">第2题 · 输出特性</p>
+<h2>四条不同栅压下的漏极特性</h2>
+<p>固定结温，取 \(V_{GS4}>V_{GS3}>V_{GS2}>V_{GS1}>V_{th}>0\)。同一正漏源电压下，图2中栅压较高的曲线对应较大的漏极电流。四条曲线都从原点出发。虚线连接理想平方律模型的各个夹断点。[S1][B5]</p>
+<figure>{{output}}<figcaption>图2　四条曲线和虚线均由同一理想长沟道模型生成。为避免把假设当器件参数，图中不标安培、伏特的具体刻度；栅压以大小关系标注。实际功率器件的串联电阻会改变外部端口上的转折位置。[S1][B5]</figcaption></figure>
+<p>令 \(V_{ov}=V_{GS}-V_{th}\)，\(\beta=\mu_n C_{ox}W_{\mathrm{eff}}/L\)。忽略体电荷沿沟道的变化、迁移率变化、串联电阻及沟道长度调制时：</p>
+<div class="equation" id="eq-1">\[I_D=\begin{cases}\beta\left(V_{ov}V_{DS}-\dfrac{V_{DS}^{2}}{2}\right),&0\le V_{DS}<V_{ov},\\[3pt]\dfrac{\beta}{2}V_{ov}^{2},&V_{DS}\ge V_{ov}.\end{cases}\]<a class="number" href="#eq-1">(1)</a></div>
+<p class="small">\(\mu_n\) 为反型层有效电子迁移率；\(C_{ox}\) 为单位面积栅氧电容；\(W_{\mathrm{eff}}\) 为并联沟道的有效总宽度；\(L\) 为有效沟道长度。\(\beta\) 的单位为 A/V²。本题“线性区”按常见题意泛指非饱和的欧姆／三极管区，严格近似直线只在 \(V_{DS}\ll V_{ov}\) 成立。</p>
+<div class="page-no">3 / 9</div>
+</section>
+
+<section class="sheet">
+<p class="eyebrow">第2题 · 曲线的依据与近似边界</p>
+<h2>夹断点与平方律模型</h2>
+<p>取沟道坐标 \(x\) 从源端指向沟道漏端，局部沟道电压为 \(v(x)\)。在式(1)采用的简化电荷片模型中，反型电荷面密度为</p>
+<div class="equation" id="eq-2">\[Q_{\mathrm{inv}}(x)\simeq-C_{ox}\left[V_{ov}-v(x)\right],\qquad I_D=\mu_n W_{\mathrm{eff}}|Q_{\mathrm{inv}}|\frac{dv}{dx}.\]<a class="number" href="#eq-2">(2)</a></div>
+<p>沿沟道积分：\(I_DL=\mu_n W_{\mathrm{eff}}C_{ox}\int_0^{V_{DS}}(V_{ov}-v)\,dv\)，即得到式(1)的非饱和表达式。漏端反型电荷趋近于零时发生夹断，理想转折点满足</p>
+<div class="equation" id="eq-3">\[V_{DS,\mathrm{sat}}=V_{ov},\qquad I_{D,\mathrm{sat}}=\frac{\beta}{2}V_{ov}^{2}=\frac{\beta}{2}V_{DS,\mathrm{sat}}^{2}.\]<a class="number" href="#eq-3">(3)</a></div>
+<p>因此，输出坐标中的转折点轨迹是一条抛物线。较高栅压的曲线不但更高，转折点也更靠右。进入饱和后，夹断区仍能输运电子，<strong>夹断不等于漏极电流变成零</strong>；在实际器件中沟道长度调制可使曲线略向上倾斜。[S1][B5]</p>
+<h3>比“\(V_{DS}=V_{GS}-V_{th}\)”更完整的说明</h3>
+<p>Sze §6.2.2 还保留了耗尽电荷随局部沟道电压的变化。将反型电荷近似为 \(Q_{\mathrm{inv}}\simeq-C_{ox}(V_{ov}-M v)\)，体电荷修正系数 \(M>1\)，则有</p>
+<div class="equation" id="eq-4">\[I_D\simeq\beta\left(V_{ov}v-\frac{M v^2}{2}\right),\quad v_{\mathrm{sat}}\simeq\frac{V_{ov}}{M},\quad I_{D,\mathrm{sat}}\simeq\frac{\beta V_{ov}^{2}}{2M}.\]<a class="number" href="#eq-4">(4)</a></div>
+<p>对均匀 p 型沟道与零源体偏压，可近似取 \(M=1+\gamma/(2\sqrt{2\phi_F})\)，其中 \(\gamma=\sqrt{2q\varepsilon_s N_A}/C_{ox}\)，\(N_A\) 为受主浓度，\(\phi_F=(k_BT/q)\ln(N_A/n_i)>0\) 为 p 型材料费米势的幅值；\(k_B\) 为玻尔兹曼常数，\(T\) 为绝对温度，\(n_i\) 为本征载流子浓度。非均匀掺杂 VDMOS 的有效参数还需按实际沟道确定。</p>
+<p>这里 \(v\) 是<strong>沟道两端电压</strong>，并非无条件等于芯片外部 \(V_{DS}\)。VDMOS 还串联积累区、JFET 区、漂移区、衬底和接触等电阻，外部 \(V_{DS}\) 包含它们的压降；源区压降也可能降低内部有效栅压。式(1)和图2取 \(M=1\) 且忽略这些压降，只用于说明题目所需的曲线形态，不能据此给出某个真实功率器件的精确边界。[S1][B4][B5]</p>
+<p>在原点附近，式(1)化为 \(I_D\simeq\beta V_{ov}V_{DS}\)；功率开关的低压降充分导通工作点通常选在这个欧姆区。<strong>MOSFET 的电流饱和区不是 BJT 的低压降饱和导通概念。</strong>另外，\(V_{GS}=0\) 时增强型器件近似截止，实际仍有漏电，过高漏压下还可能雪崩，图2未画这些支路。</p>
+<p class="sources">依据：[S1] Sze 书页231—234、图6.9—6.10及式(23)—(32)；[B4] Baliga 书页327—333；[B5] §6.12，书页381—384。式(1)—(4)为本答卷编号，不是教材原编号。</p>
+<div class="page-no">4 / 9</div>
+</section>
+
+<section class="sheet" id="q3">
+<p class="eyebrow">第3题 · 关断时的电势分布</p>
+<h2>\(V_{GS}=0\)，\(V_{DS}=1200\,\mathrm{V}\)</h2>
+<p>设 \(V_S=0\)，则 \(V_G=0\)、\(V_D=+1200\,\mathrm{V}\)。S 与体区短接，p-base 的近中性部分约为源电位；没有栅致 n 型反型通道。p-base / n⁻ 主结承受反向偏压，耗尽区主要伸入轻掺杂 n⁻ 漂移区，主电压由该区承担。[B1][B2]</p>
+<figure>{{blocking}}<figcaption>图3　图1(a)结构上的关断等势线。中心区 300、600、900 V 按一维未穿通近似定位，紫色虚线标出该模型的 1200 V 耗尽边界。模型中，下方未耗尽的 n⁻ 区电场取零，电势与背面 D 金属同为 +1200 V。终端渐隐虚线示意走向，实际位置和浮置环电位由二维分布决定。[B2][B3][B6]</figcaption></figure>
+<p><strong>画图要点：</strong>有源区深部等势线大致平行于芯片表面；等电势差的线在高场处更密，不能默认等间距。靠近有源区边缘和场限环，电势分布具有二维弯曲；场限环通过改变电势分布来缓解边缘电场集中。不同电位的等势线互不相交。</p>
+<div class="note">终端等势线的具体位置取决于掺杂剖面、漂移层厚度、环宽环距、介质厚度和界面电荷。给定这些参数后，可用二维仿真求出线形和延伸范围。</div>
+<div class="page-no">5 / 9</div>
+</section>
+
+<section class="sheet">
+<p class="eyebrow">第3题 · 间距、边界与不能确定的量</p>
+<h2>等差电压不对应等差距离</h2>
+<p>在远离边缘的一维近似中，取 \(y=0\) 为主结的 n 侧边界，\(y\) 向背面增大；均匀、完全电离的施主浓度为 \(N_D\)，耗尽宽度为 \(W\)；\(q>0\) 为元电荷，\(\varepsilon_s\) 为半导体绝对介电常数。忽略 p 侧耗尽和相对 1200 V 很小的内建电势，按所选 NPT 模型取 \(\psi(0)=0\)、\(E_y(W)=0\)，有</p>
+<div class="equation" id="eq-5">\[\frac{d^2\psi}{dy^2}=-\frac{qN_D}{\varepsilon_s},\qquad E_y=-\frac{d\psi}{dy}=-\frac{qN_D}{\varepsilon_s}(W-y).\]<a class="number" href="#eq-5">(5)</a></div>
+<div class="equation" id="eq-6">\[\psi(y)=\frac{qN_D}{\varepsilon_s}\left(Wy-\frac{y^2}{2}\right),\quad V_R=1200\,\mathrm{V}=\frac{qN_DW^2}{2\varepsilon_s}.\]<a class="number" href="#eq-6">(6)</a></div>
+<p>令 \(u=y/W\)，则 \(\psi/V_R=2u-u^2\)。据此得到下表。靠近主结电场大，前一个 300 V 只占约 \(0.134W\)；最后一个 300 V 则占 \(0.500W\)。这是图3中心区间距的依据。[B6]</p>
+<table><thead><tr><th>电势 / V</th><th>位置 \(y/W\)</th><th>相邻等势线距离 / \(W\)</th></tr></thead><tbody>
+<tr><td>0</td><td>0</td><td>—</td></tr><tr><td>300</td><td>0.133975</td><td>0.133975</td></tr><tr><td>600</td><td>0.292893</td><td>0.158919</td></tr><tr><td>900</td><td>0.500000</td><td>0.207107</td></tr><tr><td>1200</td><td>1.000000</td><td>0.500000</td></tr>
+</tbody></table>
+<p>对于穿通型、非均匀掺杂或不同终端结构，末端电场不一定为零，上表不能直接套用。严格电势还含接触功函数、内建势与表面势；把近中性体区写成“约 0 V”、近中性漏区写成“约 1200 V”，是本题高压示意采用的工程近似，不表示所有半导体微区都严格等势。</p>
+<p><strong>浮置环电位不能预先指定。</strong>它由耗尽耦合、结与表面漏电、几何和电荷等共同决定；多环电势也不必均分电压。应求解 \(\nabla\cdot(\varepsilon\nabla\psi)=-\rho\)，并对浮置区加入相应电荷或稳态电流约束，才能确定实际分布。既不能把三个环全标成 0 V，也不能只因有三只环就分别标成 300、600、900 V。[B3]</p>
+<p class="small"><strong>额定值与击穿：</strong>题给额定 \(V_{DSS}=1200\,\mathrm{V}\)，不能推出实际击穿电压恰好为 1200 V、也不能据此计算峰值电场。这里按能承受题设电压且未发生显著雪崩的静态阻断示意处理；具体器件须核对其 \(BV_{DSS}\) 的测试电流、温度和安全裕量。电场方向为从高电势漏侧指向低电势源侧，局部垂直于等势线。</p>
+<div class="page-no">6 / 9</div>
+</section>
+
+<section class="sheet" id="q4">
+<p class="eyebrow">第4题 · 导通时的主要电流路径</p>
+<h2>\(V_{GS}=15\,\mathrm{V}\)，\(V_{DS}>0\)</h2>
+<p>取 \(V_S=0\)，\(V_G=+15\,\mathrm{V}\)，\(V_D>0\)；按通常硅功率 MOSFET 的 \(15\,\mathrm{V}>V_{th}\) 且栅压在允许范围内解释题意。栅下 p-base 表面形成 n 型反型沟道，将 n⁺ 源区与 n⁻ 区连通。图4的橙色箭头表示<strong>传统电流方向，D → S</strong>，电子运动方向为 S → D。[B1][B4][S2]</p>
+<figure>{{current}}<figcaption>图4　图1(a)结构上小正漏压时的代表性流线。橙色箭头在硅侧依次经过 JFET 窄区、绿色积累层、蓝色 n 型反型层、n⁺ 源区，再进入 S 金属。彩色薄层为示意加厚，与上方薄栅氧有可见分隔。局部层次见图1(b)。[B1][B4]</figcaption></figure>
+<p class="answer-path">D → n⁺ 衬底 → n⁻ 漂移区 → JFET 收缩区<br>→ 栅下积累／电流扩展区 → p-base 表面 n 反型沟道<br>→ n⁺ 源区 → S 金属</p>
+<p><strong>路径解释：</strong>n⁻ 区电子浓度在正栅压作用下于表面进一步增加，形成积累层；p-base 原本以空穴为多数载流子，其表面在足够正栅压下转为电子主导的反型层。两者位置和物理含义不同。相邻 p-base 之间的狭窄 n 区因两侧结耗尽而具有 JFET 式收缩电阻；这不是另加了一只独立接线的 JFET。[B4]</p>
+<p>图4取小正漏压来表示连续沟道。漏压足够高时，漏端会发生夹断，正向电流仍可经漏端高场区流动。仅凭 15 V 栅压和正漏压，工作区和电流大小仍待确定。[S1][B5]</p>
+<p>D 高、S 低时，体二极管反偏。p⁺ 体接触用于固定体电位和泄放体电流，有助于抑制寄生 NPN。正常主电流经 n 型反型沟道进入 n⁺ 源区。[B1][B2]</p>
+<div class="page-no">7 / 9</div>
+</section>
+
+<section class="sheet" id="review">
+<p class="eyebrow">手稿批改 · 2026-11-12</p>
+<h2>此前手稿参考评价</h2>
+<p>以下保留此前按 v1.7WDY 题面自拟标准给出的 <strong>93 / 100</strong> 参考评价，非教师评分。本轮未取得原手稿，未重新核分；四题各25分及扣分文字仅作历史记录。手稿已经注明第 3、4 题的工况不同，共用底图本身未扣分。</p>
+<table><thead><tr><th>题目</th><th>得分</th><th>判分依据</th></tr></thead><tbody>
+<tr><td>1　芯片剖面</td><td>24 / 25</td><td>三个重复元胞、掺杂区、栅、场限环、钝化与背金属均画出。扣 1 分。接触窗口虽已标出，窗口内的金属填充与周围介质采用相近线条，同时接到 n⁺ 和 p⁺ 的关系需要更醒目。</td></tr>
+<tr><td>2　输出特性</td><td>24 / 25</td><td>坐标、四条曲线、栅压顺序、线性区和饱和区的方向正确。扣 1 分。高栅压曲线转为平台时有明显折角，虚线与个别转折点略错开。按理想模型，曲线应逐渐变平，虚线通过各夹断点。</td></tr>
+<tr><td>3　关断等势线</td><td>21 / 25</td><td>工况、四个电位及漏极 1200 V 均有标注，中心线间距总体向下增大。扣 4 分。1200 V 耗尽边界中心段用实线，终端段又落在右侧边界，容易把所画形状读成确定结果（2 分）。终端的 300、600、900 V 虚线应注明是走向示意（1 分）。按图采用的一维未穿通模型，900 到 1200 V 的中心间距偏大（1 分）。</td></tr>
+<tr><td>4　导通路径</td><td>24 / 25</td><td>红箭头从背面 D 向上，经元胞间窄区分流，方向正确。扣 1 分。栅下横线贴近硅／栅氧界面，回到 S 前通过 n⁺ 源区的路径不够清楚。把横线落在硅侧，并让转折显式经过 n⁺ 源区。</td></tr>
+</tbody></table>
+<p>第 3 题的中心区按一维未穿通模型给出相对位置，终端线形需由器件结构和掺杂等条件确定。真实器件的输出曲线也会随串联电阻、结温等条件改变。</p>
+<div class="page-no">8 / 9</div>
+</section>
+
+<section class="sheet" id="sources">
+<p class="eyebrow">来源与核验范围</p>
+<h2>教材定位及可复核范围</h2>
+<p class="small">以下“书页”指页面上印出的页码，“PDF页”从文件第一页起按1计数。只核读列出的相关页段、图表及版权页，没有通读三本教材全文。原始文件按用户提供的名称保留在本地被 Git 忽略的资源目录。</p>
+<table><thead><tr><th>编号与教材</th><th>实际采用位置</th><th>支持的内容</th></tr></thead><tbody>
+<tr><td>[B1] B. J. Baliga<br><i>Fundamentals of Power Semiconductor Devices</i>，2008</td><td>§6.2，重点§6.2.2；书页282—285，PDF301—304；图6.3</td><td>VDMOS、双扩散、主结、源体短接、n 型主通路。</td></tr>
+<tr><td>[B2] 同上</td><td>§6.3—6.4：PDF305、308（书页286、289）；§6.4.4，PDF313—314（书页294—295），图6.11—6.12</td><td>体二极管、反向阻断、元胞内等势线与电场集中。</td></tr>
+<tr><td>[B3] 同上</td><td>§3.6.2，书页120—121，PDF141—142，图3.20；书页128—132，PDF149—153，重点§3.6.3及图3.28—3.32</td><td>浮置环、中间电位、界面电荷影响、多环终端；不能先验均分电位。</td></tr>
+<tr><td>[B4] 同上</td><td>§6.6，书页327—329，PDF346—348，图6.38—6.39；§6.6.3—6.6.5，书页331—333，PDF350—352</td><td>沟道、积累、JFET、漂移区和衬底等电阻及相互位置。</td></tr>
+<tr><td>[B5] 同上</td><td>§6.5 开头：书页300，PDF319；§6.12，书页381—384，PDF400—403，图6.70—6.71</td><td>欧姆区、饱和区、真实器件电阻与有限输出电阻。</td></tr>
+<tr><td>[B6] 同上</td><td>§3.2，书页95—97，PDF116—118；图3.2、式(3.11)—(3.15)</td><td>单边均匀结的泊松方程、电场、电势与耗尽宽度。</td></tr>
+<tr><td>[S1] S. M. Sze、Kwok K. Ng<br>《半导体器件物理》第3版</td><td>§6.2.2，书页231—234，PDF242—245；图6.9—6.10、式(23)—(32)；§2.2.1，书页61—62，PDF72—73</td><td>电荷片、渐变沟道、夹断、体电荷修正；结电势。</td></tr>
+<tr><td>[S2] 同上</td><td>§6.5.6，书页263—264，PDF274—275；图6.39(a)</td><td>功率 DMOS 与横向 LDMOS 的结构区别。</td></tr>
+<tr><td>[Q1] Michael Quirk、Julian Serda<br>《半导体制造技术》，2004</td><td>§3.4，书页50—51，PDF65—66，图3.15—3.17</td><td>绝缘栅、多晶硅、反型与电子运动；不是 VDMOS 专用工艺依据。</td></tr>
+<tr><td>[Q2] 同上</td><td>§9.3 末，书页205—207，PDF220—222；图9.28—9.29</td><td>栅氧／层间介质／顶层钝化的区别和保护作用。</td></tr>
+</tbody></table>
+<p class="small"><strong>版本核对：</strong>Sze 文件名虽然以“2007”开头，所附扫描件版权页为中文第3版，2008年6月第1版／第1次印刷；页码按这份扫描件标，不把文件名前缀当中文版出版年。Quirk 的版权页为2004年1月第1次印刷。</p>
+<p class="small"><strong>补充交叉核查：</strong><a href="https://www.infineon.com/assets/row/public/documents/24/54/infineon-power-mosfet-basics-article-en.pdf">International Rectifier / Infineon，Power MOSFET Basics</a> 的“Breakdown Voltage”段用于核对 \(BV_{DSS}\) 的栅源短接测试定义；<a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/eeb94eab00ebb62a3fde0eec1484bc08_MIT6_012F09_lec11_gradual.pdf">MIT 6.012，The Gradual Channel Approximation for the MOSFET</a> 用于核对体电荷因子及模型条件。主要结论依据仍为上列三本教材。</p>
+<p class="small"><strong>原版整理记录（不等于本轮重新取得全部原件）：</strong>逐题按题面核对必画对象与方向；对照教材上述页段审查模型及近似；另以脚本复算式(1)、式(3)、式(6)及等势线位置，并检查文件忽略和成品排版。公式自洽和页面检查不能证明某个真实器件设计已经验证，也不能代替教师评分或独立专家复审。</p>
+<div class="page-no">9 / 9</div>
+</section>
+</main>
+<script>
+const referenceReturns = new Map();
+document.addEventListener('click', (event) => {
+  if (event.button || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+  const link = event.target.closest('.jump-reference, .reference-mark, .equation .number');
+  if (!link) return;
+  const target = document.getElementById(link.hash.slice(1));
+  if (!target) return;
+  if (link.classList.contains('jump-reference')) {
+    event.preventDefault();
+    referenceReturns.set(target.id, { link, top: window.scrollY });
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ block: 'start' });
+    return;
+  }
+  const origin = referenceReturns.get(target.id);
+  if (origin) {
+    event.preventDefault();
+    referenceReturns.delete(target.id);
+    origin.link.focus({ preventScroll: true });
+    window.scrollTo({ top: origin.top, behavior: 'instant' });
+  }
+});
+</script>
+</body>
+</html>
