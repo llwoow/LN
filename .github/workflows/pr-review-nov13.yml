@@ -55,11 +55,12 @@ jobs:
         run: |
           python - <<'PY'
           from pypdf import PdfReader
+          import re
           for path in ['nov13-browser-artifacts/answer-reviewed.pdf', 'output/pdf/功率半导体器件-第二章测试答案-完整版.pdf']:
               pdf = PdfReader(path)
               assert len(pdf.pages) == 9, (path, len(pdf.pages))
               assert all(page.extract_text().strip() for page in pdf.pages), path
-              assert '未重新核分' in pdf.pages[7].extract_text(), path
+              assert '未重新核分' in re.sub(r'\s+', '', pdf.pages[7].extract_text()), path
           PY
       - name: Verify repository Pages subdirectory
         run: python tests/browser_smoke_pages.py
