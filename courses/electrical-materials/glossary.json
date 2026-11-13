@@ -1,0 +1,1196 @@
+{
+  "lazy": true,
+  "terms": [
+    {
+      "id": "emat-pauli",
+      "title": "泡利不相容原理",
+      "english": "Pauli Exclusion Principle",
+      "aliases": [
+        "泡利不相容原理",
+        "Pauli"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "一个原子中两电子不能拥有四个完全相同的量子数",
+      "description": "同一原子中两个电子不能具有完全相同的四个量子数；同一空间轨道因自旋两种取值最多容纳两个电子。"
+    },
+    {
+      "id": "emat-hund",
+      "title": "洪特规则",
+      "english": "Hund Rule",
+      "aliases": [
+        "洪特规则",
+        "Hund"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "在等能轨道中",
+      "description": "基态等能轨道的优先占据规则：先分占并取平行自旋，再成对填入；不能代替泡利占据限制。"
+    },
+    {
+      "id": "emat-binding-energy",
+      "title": "结合能",
+      "english": "Binding Energy",
+      "aliases": [
+        "结合能"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "把原子从平衡位置完全分开所需的结合能",
+      "description": "在无穷远势能取零的束缚态模型中，将粒子从稳定平衡位置分开到无穷远所需的正能量。"
+    },
+    {
+      "id": "emat-ionic-bond",
+      "title": "离子键",
+      "english": "Ionic Bond",
+      "aliases": [
+        "离子键"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "离子键主要体现相反电荷间的静电吸引",
+      "description": "以相反电荷之间静电作用为主要特征的结合；键强需结合具体材料判断。"
+    },
+    {
+      "id": "emat-covalent-bond",
+      "title": "共价键",
+      "english": "Covalent Bond",
+      "aliases": [
+        "共价键"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "共价键与电子态共享",
+      "description": "与电子态共享、轨道重叠相关，通常有方向性和饱和性；不推出所有共价材料的键能统一排序。"
+    },
+    {
+      "id": "emat-metallic-bond",
+      "title": "金属键",
+      "english": "Metallic Bond",
+      "aliases": [
+        "金属键"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "金属键可用离域电子参与的结合",
+      "description": "由离域电子参与的结合；具体电子结构与能带仍需进一步分析。"
+    },
+    {
+      "id": "emat-dispersion",
+      "title": "色散力",
+      "english": "Dispersion Force",
+      "aliases": [
+        "色散力"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "色散力源于瞬时电子分布涨落",
+      "description": "瞬时电子分布涨落及其相互关联导致的分子间作用，不要求永久偶极。"
+    },
+    {
+      "id": "emat-crystal",
+      "title": "晶体与非晶体",
+      "english": "Crystal and Amorphous Solid",
+      "aliases": [
+        "晶体",
+        "非晶体"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "晶体在理想模型中具有长程周期性",
+      "description": "理想晶体具有长程周期性，非晶体缺少这种长程有序；准晶体是长程有序但无普通平移周期性的情况。"
+    },
+    {
+      "id": "emat-schottky",
+      "title": "肖特基缺陷",
+      "english": "Schottky Defect",
+      "aliases": [
+        "肖特基缺陷"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "肖特基缺陷：",
+      "description": "离子晶体中按化学计量与有效电荷补偿形成的阳、阴离子空位组合。应区分体相格位占据数和整个样品的粒子守恒。"
+    },
+    {
+      "id": "emat-frenkel",
+      "title": "弗兰克尔缺陷",
+      "english": "Frenkel Defect",
+      "aliases": [
+        "弗兰克尔缺陷"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "弗兰克尔缺陷：",
+      "description": "同种离子由正常晶格位置移入间隙，形成空位—间隙离子对，不需要从样品移除该离子。"
+    },
+    {
+      "id": "emat-dislocation",
+      "title": "位错",
+      "english": "Dislocation",
+      "aliases": [
+        "位错"
+      ],
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "位错属于线缺陷",
+      "description": "晶体中的线缺陷；金属塑性变形的重要机制涉及位错运动。"
+    },
+    {
+      "id": "emat-band",
+      "title": "能带与禁带",
+      "english": "Energy Band and Band Gap",
+      "aliases": [
+        "允许带",
+        "禁带"
+      ],
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "形成允许带；允许带之间",
+      "description": "原子轨道相互作用使许多能级分裂为密集允许态，允许带之间可存在没有该理想晶体电子态的能量区间。"
+    },
+    {
+      "id": "emat-donor",
+      "title": "浅施主与浅受主",
+      "english": "Shallow Donor and Acceptor",
+      "aliases": [
+        "浅施主",
+        "浅受主"
+      ],
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "浅施主易向导带提供电子",
+      "description": "浅施主易向导带提供电子；浅受主易从价带获得电子并留下空穴。多数载流子并不代表另一类完全消失。"
+    },
+    {
+      "id": "emat-phonon",
+      "title": "声子",
+      "english": "Phonon",
+      "aliases": [
+        "声子"
+      ],
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "把晶格振动量子化得到声子概念",
+      "description": "量子化晶格振动的激发；本课一维等质量谐链只描述传播色散，不单独给出真实有限热导率。"
+    },
+    {
+      "id": "emat-fourier",
+      "title": "傅里叶导热定律",
+      "english": "Fourier Heat Conduction Law",
+      "aliases": [
+        "傅里叶定律"
+      ],
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "傅里叶定律把热流密度与温度梯度联系起来",
+      "description": "连续介质、局部热平衡近似下热流密度沿温度下降方向，与温度梯度成比例。"
+    },
+    {
+      "id": "emat-thermal-resistance",
+      "title": "热阻",
+      "english": "Thermal Resistance",
+      "aliases": [
+        "热阻"
+      ],
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "两块材料沿热流方向串接",
+      "description": "温差与热流率的比值，单位K/W；平板公式需一维稳态、常热导率等条件，并区分接触与边界热阻。"
+    },
+    {
+      "id": "emat-heat-capacity",
+      "title": "热容与比热容",
+      "english": "Heat Capacity and Specific Heat",
+      "aliases": [
+        "热容",
+        "比热容"
+      ],
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "材料温度升高 ΔT 需要的显热",
+      "description": "质量与相应比热容乘积给出该对象热容；线性显热近似下热量为热容乘温升。"
+    },
+    {
+      "id": "emat-thermal-expansion",
+      "title": "线膨胀",
+      "english": "Linear Thermal Expansion",
+      "aliases": [
+        "热膨胀"
+      ],
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "线膨胀系数近似常量",
+      "description": "小温差、系数近似常量时，长度变化与初始长度及温差成正比；约束及材料膨胀失配还会产生应力。"
+    },
+    {
+      "id": "emat-engineering-stress",
+      "title": "工程应力与工程应变",
+      "english": "Engineering Stress and Strain",
+      "aliases": [
+        "工程应力",
+        "工程应变"
+      ],
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "用原始截面积",
+      "description": "单轴拉伸模型以原始截面积定义工程应力、原始标距定义工程应变，须与真实应力区分。"
+    },
+    {
+      "id": "emat-young",
+      "title": "弹性模量",
+      "english": "Young Modulus",
+      "aliases": [
+        "弹性模量",
+        "杨氏模量"
+      ],
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "在近似线性弹性段",
+      "description": "单轴近似线性弹性区应力与应变的比例，反映弹性抗变形能力，不等同于强度或韧性。"
+    },
+    {
+      "id": "emat-yield",
+      "title": "屈服强度与规定塑性延伸强度",
+      "english": "Yield Strength and Proof Stress",
+      "aliases": [
+        "屈服强度",
+        "规定塑性延伸强度"
+      ],
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "在标准拉伸试验中",
+      "description": "显著塑性变形起始水平及按标准规定偏移量取得的强度指标；需注明试验定义。"
+    },
+    {
+      "id": "emat-uts",
+      "title": "抗拉强度",
+      "english": "Ultimate Tensile Strength",
+      "aliases": [
+        "抗拉强度"
+      ],
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "抗拉强度为工程应力曲线的最大值",
+      "description": "规定拉伸试验中工程应力曲线的最大值，不等于断裂时工程应力。"
+    },
+    {
+      "id": "emat-toughness",
+      "title": "强度、刚度、硬度与韧性",
+      "english": "Strength, Stiffness, Hardness and Toughness",
+      "aliases": [
+        "刚度",
+        "硬度",
+        "韧性"
+      ],
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "强度强调抵抗破坏",
+      "description": "这些指标分别涉及破坏/塑性、结构变形、局部压入和吸能抗破坏，不能用一个替代其余指标。"
+    },
+    {
+      "id": "em-photo-vdw",
+      "title": "范德华相互作用",
+      "english": "Van der Waals Interaction",
+      "aliases": [
+        "范德华力",
+        "范德华相互作用"
+      ],
+      "section": "em-test-fill",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "通常所指范德华相互作用比典型分子内共价键弱得多",
+      "description": "本题采用的分子间作用术语；强弱经验尺度不能替代具体物质与相互作用的比较。"
+    },
+    {
+      "id": "em-photo-bondlength",
+      "title": "平衡键长",
+      "english": "Equilibrium Bond Length",
+      "aliases": [
+        "平衡键长",
+        "平衡原子间距"
+      ],
+      "section": "em-test-fill",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "稳定平衡处势能取局部极小",
+      "description": "原子对在指定相互作用模型下的稳定平衡间距，区别于玻尔半径。"
+    },
+    {
+      "id": "em-photo-binding",
+      "title": "结合能",
+      "english": "Binding Energy",
+      "aliases": [
+        "结合能"
+      ],
+      "section": "em-test-fill",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "正值的结合能是",
+      "description": "本题在无穷远零势能约定下，正结合能为将结合体系分离所需能量。"
+    },
+    {
+      "id": "em-photo-quasi",
+      "title": "准晶体",
+      "english": "Quasicrystal",
+      "aliases": [
+        "准晶体"
+      ],
+      "section": "em-test-fill",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "准晶体有长程有序",
+      "description": "具有长程有序但没有通常平移周期的结构；本题按传统教材与周期晶体分别列出。"
+    },
+    {
+      "id": "em-photo-donor",
+      "title": "施主能级",
+      "english": "Donor Level",
+      "aliases": [
+        "施主能级"
+      ],
+      "section": "em-test-fill",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "施主杂质易电离提供导带电子",
+      "description": "本题的典型浅施主容易电离并向导带提供电子。"
+    },
+    {
+      "id": "em-photo-acceptor",
+      "title": "受主能级",
+      "english": "Acceptor Level",
+      "aliases": [
+        "受主能级"
+      ],
+      "section": "em-test-fill",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "受主杂质可俘获价带电子形成空穴",
+      "description": "本题的典型浅受主可接受价带电子，在价带留下空穴。"
+    },
+    {
+      "id": "em-photo-fermi-dirac",
+      "title": "费米–狄拉克占据规律",
+      "english": "Fermi–Dirac Distribution",
+      "aliases": [
+        "费米–狄拉克",
+        "费米-狄拉克"
+      ],
+      "section": "em-test-fill",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "热平衡的费米—狄拉克分布",
+      "description": "有限温度下电子单粒子态的统计占据规律；f(EF)=1/2不直接表示导电电子比例。"
+    },
+    {
+      "id": "em-photo-dispersion",
+      "title": "色散力",
+      "english": "London Dispersion Force",
+      "aliases": [
+        "色散力"
+      ],
+      "section": "em-test-short",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "电子云的瞬时涨落引起瞬时偶极矩",
+      "description": "由关联电子云涨落产生的相互作用，无永久偶极的粒子间也存在。"
+    },
+    {
+      "id": "em-photo-schottky",
+      "title": "肖特基缺陷",
+      "english": "Schottky Defect",
+      "aliases": [
+        "肖特基缺陷"
+      ],
+      "section": "em-test-short",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "肖特基缺陷：离子晶体中的",
+      "description": "满足化学计量和相对电中性的空位组合；本题图示为简单1:1离子晶体。"
+    },
+    {
+      "id": "em-photo-frenkel",
+      "title": "弗兰克尔缺陷",
+      "english": "Frenkel Defect",
+      "aliases": [
+        "弗兰克尔缺陷"
+      ],
+      "section": "em-test-short",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "弗兰克尔缺陷：离子从正常格点",
+      "description": "同种离子正常格点空位与间隙离子的缺陷对；数目变化需说明观察范围。"
+    },
+    {
+      "id": "em-photo-band-conduction",
+      "title": "能带与导电",
+      "english": "Band Description of Conduction",
+      "aliases": [
+        "能带理论"
+      ],
+      "section": "em-test-short",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "导体的能带部分填充",
+      "description": "按允许态、占据、载流子激发与输运解释导体、半导体和绝缘体的差异。"
+    },
+    {
+      "id": "em-photo-hbond",
+      "title": "氢键",
+      "english": "Hydrogen Bond",
+      "aliases": [
+        "氢键"
+      ],
+      "section": "em-test-short",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "典型 X—H···Y 氢键中",
+      "description": "典型供体—氢—受体相互作用，受电子结构和几何关系约束，不把经验数量规则视为绝对。"
+    },
+    {
+      "id": "em-photo-pauli",
+      "title": "泡利不相容原理",
+      "english": "Pauli Exclusion Principle",
+      "aliases": [
+        "泡利不相容原理"
+      ],
+      "section": "em-test-short",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "泡利不相容原理要求同一原子中",
+      "description": "同一原子的两个电子不能具有完全相同的四个量子数。"
+    },
+    {
+      "id": "em-photo-hund",
+      "title": "洪特规则",
+      "english": "Hund Rule",
+      "aliases": [
+        "洪特规则"
+      ],
+      "section": "em-test-short",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "洪特规则强调简并轨道",
+      "description": "本题用于简并轨道的基态构造：满足泡利原理时优先单占并平行自旋。"
+    },
+    {
+      "id": "em-photo-network",
+      "title": "共价网络",
+      "english": "Covalent Network",
+      "aliases": [
+        "共价网络",
+        "连续三维网络"
+      ],
+      "section": "em-test-short",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "每个碳原子以sp³杂化与四个邻近碳原子",
+      "description": "本题金刚石模型为连续三维共价连接，区别于离散分子间弱作用堆积。"
+    },
+    {
+      "id": "em-photo-solute",
+      "title": "溶质散射",
+      "english": "Solute Scattering",
+      "aliases": [
+        "溶质散射"
+      ],
+      "section": "em-test-short",
+      "sections": [
+        "em-test-summary",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "溶质原子引起局部势场变化和晶格畸变",
+      "description": "固溶原子改变局部势场并散射传导电子；实际电导还受组织、温度与加工状态影响。"
+    },
+    {
+      "id": "emat-fermi-defined",
+      "title": "费米能级",
+      "english": "Fermi Level",
+      "aliases": [
+        "费米能级",
+        "Fermi level"
+      ],
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3",
+        "em-test-fill",
+        "em-test-short",
+        "em-test-review"
+      ],
+      "match": "热平衡电子系统的化学势",
+      "description": "热平衡电子系统的化学势，不能视为所有电子的平均能量。"
+    }
+  ],
+  "symbolDefinitions": [
+    {
+      "id": "emat-quantum-n",
+      "title": "主量子数 n",
+      "keys": [
+        "n"
+      ],
+      "unitHtml": "1",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "主量子数 n 区分能层",
+      "description": "区分原子能层的量子数。"
+    },
+    {
+      "id": "emat-quantum-l",
+      "title": "角量子数 l",
+      "keys": [
+        "l"
+      ],
+      "unitHtml": "1",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "主量子数 n 区分能层",
+      "description": "与轨道角动量相关的量子数。"
+    },
+    {
+      "id": "emat-quantum-ml",
+      "title": "磁量子数 ml",
+      "keys": [
+        "m_l"
+      ],
+      "unitHtml": "1",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "主量子数 n 区分能层",
+      "description": "用于区分轨道取向的量子数。"
+    },
+    {
+      "id": "emat-quantum-ms",
+      "title": "自旋磁量子数 ms",
+      "keys": [
+        "m_s"
+      ],
+      "unitHtml": "1",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "主量子数 n 区分能层",
+      "description": "本节电子自旋投影量子数，取±1/2。"
+    },
+    {
+      "id": "emat-potential-U",
+      "title": "有效势能 U",
+      "keys": [
+        "U"
+      ],
+      "unitHtml": "J",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "以两粒子有效势能",
+      "description": "本节两粒子有效相互作用势能；零点选取须声明。"
+    },
+    {
+      "id": "emat-separation-r",
+      "title": "粒子间距离 r",
+      "keys": [
+        "r"
+      ],
+      "unitHtml": "m",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "以两粒子有效势能",
+      "description": "有效势能模型中两粒子间距离。"
+    },
+    {
+      "id": "emat-equilibrium-r0",
+      "title": "稳定平衡距离 r₀",
+      "keys": [
+        "r_0"
+      ],
+      "unitHtml": "m",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "以两粒子有效势能",
+      "description": "本节势能极小处的粒子间平衡距离。"
+    },
+    {
+      "id": "emat-binding-Eb",
+      "title": "结合能 Eb",
+      "keys": [
+        "E_b"
+      ],
+      "unitHtml": "J",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "match": "把原子从平衡位置完全分开所需的结合能",
+      "description": "在所声明零势能参考下，从束缚平衡态分开至无穷远所需能量。"
+    },
+    {
+      "id": "emat-band-Ev",
+      "title": "价带顶能量 Ev",
+      "keys": [
+        "E_v"
+      ],
+      "unitHtml": "eV 或 J（统一使用）",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "把价带顶与导带底能量分别记为",
+      "description": "本节价带最高能量。"
+    },
+    {
+      "id": "emat-band-Ec",
+      "title": "导带底能量 Ec",
+      "keys": [
+        "E_c"
+      ],
+      "unitHtml": "eV 或 J（统一使用）",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "把价带顶与导带底能量分别记为",
+      "description": "本节导带最低能量。"
+    },
+    {
+      "id": "emat-band-Eg",
+      "title": "禁带宽度 Eg",
+      "keys": [
+        "E_g"
+      ],
+      "unitHtml": "eV 或 J（统一使用）",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "把价带顶与导带底能量分别记为",
+      "description": "本节导带底与价带顶的能量差。"
+    },
+    {
+      "id": "emat-sigma-conductivity",
+      "title": "电导率 σ",
+      "keys": [
+        "σ"
+      ],
+      "unitHtml": "S/m",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "分别为电子、空穴浓度",
+      "description": "均匀材料低场漂移模型的电导率；不是2.5节的机械应力。"
+    },
+    {
+      "id": "emat-electron-n",
+      "title": "电子浓度 n",
+      "keys": [
+        "n"
+      ],
+      "unitHtml": "m⁻³",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "分别为电子、空穴浓度",
+      "description": "单位体积的电子数浓度；不是2.2节主量子数或2.4节原子序号。"
+    },
+    {
+      "id": "emat-hole-p",
+      "title": "空穴浓度 p",
+      "keys": [
+        "p"
+      ],
+      "unitHtml": "m⁻³",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "分别为电子、空穴浓度",
+      "description": "单位体积的空穴数浓度。"
+    },
+    {
+      "id": "emat-electron-mu",
+      "title": "电子迁移率 μn",
+      "keys": [
+        "μ_n"
+      ],
+      "unitHtml": "m²/(V·s)",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "分别为电子、空穴浓度",
+      "description": "本节电子漂移输运系数，应与电子浓度联合判断电导贡献。"
+    },
+    {
+      "id": "emat-hole-mu",
+      "title": "空穴迁移率 μp",
+      "keys": [
+        "μ_p"
+      ],
+      "unitHtml": "m²/(V·s)",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "分别为电子、空穴浓度",
+      "description": "本节空穴漂移输运系数。"
+    },
+    {
+      "id": "emat-charge-q",
+      "title": "基本电荷量 q",
+      "keys": [
+        "q"
+      ],
+      "unitHtml": "C",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3"
+      ],
+      "match": "分别为电子、空穴浓度",
+      "description": "本节取正值的基本电荷量。"
+    },
+    {
+      "id": "emat-chain-n",
+      "title": "原子序号 n",
+      "keys": [
+        "n"
+      ],
+      "unitHtml": "1",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "记第 n 个原子相对平衡位置",
+      "description": "一维原子链中相邻平衡位置的整数序号，不是载流子浓度。"
+    },
+    {
+      "id": "emat-chain-un",
+      "title": "原子位移 un",
+      "keys": [
+        "u_n"
+      ],
+      "unitHtml": "m",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "记第 n 个原子相对平衡位置",
+      "description": "第n个原子相对平衡位置的微小位移。"
+    },
+    {
+      "id": "emat-chain-a",
+      "title": "链的原子间距 a",
+      "keys": [
+        "a"
+      ],
+      "unitHtml": "m",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "其中 a 为原子间距",
+      "description": "等质量一维原子链的平衡相邻间距。"
+    },
+    {
+      "id": "emat-chain-k",
+      "title": "波数 k",
+      "keys": [
+        "k"
+      ],
+      "unitHtml": "rad/m",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "其中 a 为原子间距",
+      "description": "本节试探波解中的空间波数。"
+    },
+    {
+      "id": "emat-chain-omega",
+      "title": "角频率 ω",
+      "keys": [
+        "ω"
+      ],
+      "unitHtml": "rad/s",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "其中 a 为原子间距",
+      "description": "本节谐链振动模式的角频率。"
+    },
+    {
+      "id": "emat-heat-flux",
+      "title": "热流密度 qx",
+      "keys": [
+        "q_x"
+      ],
+      "unitHtml": "W/m²",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "傅里叶定律把热流密度与温度梯度联系起来",
+      "description": "通过单位面积、沿x方向的热流率，不是总热量或电荷。"
+    },
+    {
+      "id": "emat-lambda",
+      "title": "热导率 λ",
+      "keys": [
+        "λ"
+      ],
+      "unitHtml": "W/(m·K)",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "傅里叶定律把热流密度与温度梯度联系起来",
+      "description": "本节傅里叶定律中联系温度梯度与热流密度的材料参数。"
+    },
+    {
+      "id": "emat-slab-L",
+      "title": "平板厚度 L",
+      "keys": [
+        "L"
+      ],
+      "unitHtml": "m",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "对于厚度 L、横截面积 A",
+      "description": "单层平板沿热流方向厚度。"
+    },
+    {
+      "id": "emat-slab-A",
+      "title": "传热横截面积 A",
+      "keys": [
+        "A"
+      ],
+      "unitHtml": "m²",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "对于厚度 L、横截面积 A",
+      "description": "一维平板模型与热流垂直的有效截面积。"
+    },
+    {
+      "id": "emat-heat-rate",
+      "title": "热流率 Q̇",
+      "keys": [
+        "dot:Q"
+      ],
+      "unitHtml": "W",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "两块材料沿热流方向串接",
+      "description": "单位时间传输的热量，区别于热量Q和热流密度qx。"
+    },
+    {
+      "id": "emat-Rth",
+      "title": "热阻 Rth",
+      "keys": [
+        "R_th"
+      ],
+      "unitHtml": "K/W",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "两块材料沿热流方向串接",
+      "description": "所定义两端温差除以通过的热流率。"
+    },
+    {
+      "id": "emat-heat-Q",
+      "title": "显热 Q",
+      "keys": [
+        "Q"
+      ],
+      "unitHtml": "J",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "材料温度升高 ΔT 需要的显热",
+      "description": "本节小温差显热模型中的能量，不是带时间导数的热流率。"
+    },
+    {
+      "id": "emat-heat-cp",
+      "title": "定压比热容 cp",
+      "keys": [
+        "c_p"
+      ],
+      "unitHtml": "J/(kg·K)",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "材料温度升高 ΔT 需要的显热",
+      "description": "本节显热近似采用的单位质量定压比热容。"
+    },
+    {
+      "id": "emat-heat-C",
+      "title": "热容 C",
+      "keys": [
+        "C"
+      ],
+      "unitHtml": "J/K",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "材料温度升高 ΔT 需要的显热",
+      "description": "质量与所用比热容的乘积，不能与热阻相互代替。"
+    },
+    {
+      "id": "emat-expansion-alpha",
+      "title": "线膨胀系数 α",
+      "keys": [
+        "α"
+      ],
+      "unitHtml": "K⁻¹",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "线膨胀系数近似常量",
+      "description": "本节小温差自由线膨胀近似中的线膨胀系数。"
+    },
+    {
+      "id": "emat-stress-sigma",
+      "title": "工程应力 σ",
+      "keys": [
+        "σ"
+      ],
+      "unitHtml": "Pa",
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "用原始截面积",
+      "description": "轴向拉力除以原始截面积；不是2.3节电导率。"
+    },
+    {
+      "id": "emat-strain-epsilon",
+      "title": "工程应变 ε",
+      "keys": [
+        "ε"
+      ],
+      "unitHtml": "1",
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "用原始截面积",
+      "description": "标距伸长量除以原始标距。"
+    },
+    {
+      "id": "emat-area-A0",
+      "title": "原始截面积 A₀",
+      "keys": [
+        "A_0"
+      ],
+      "unitHtml": "m²",
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "用原始截面积",
+      "description": "拉伸开始前的试样截面积。"
+    },
+    {
+      "id": "emat-gauge-L0",
+      "title": "原始标距 L₀",
+      "keys": [
+        "L_0"
+      ],
+      "unitHtml": "m",
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "用原始截面积",
+      "description": "用于计算工程应变的初始标距。"
+    },
+    {
+      "id": "emat-modulus-E",
+      "title": "弹性模量 E",
+      "keys": [
+        "E"
+      ],
+      "unitHtml": "Pa",
+      "section": "em-2-5",
+      "sections": [
+        "em-2-5"
+      ],
+      "match": "在近似线性弹性段",
+      "description": "近似线性弹性区应力/应变比。"
+    },
+    {
+      "id": "emat-atomic-mass",
+      "title": "原子质量 m",
+      "keys": [
+        "m"
+      ],
+      "unitHtml": "kg",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "原子质量为",
+      "description": "一维谐链中单个原子的质量，与物体总质量M区分。"
+    },
+    {
+      "id": "emat-body-mass",
+      "title": "物体质量 M",
+      "keys": [
+        "M"
+      ],
+      "unitHtml": "kg",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "是整个物体的质量",
+      "description": "热容模型中整个物体的质量，与单原子质量m区分。"
+    },
+    {
+      "id": "emat-fermi-energy",
+      "title": "费米能级 E_F",
+      "keys": [
+        "E_F"
+      ],
+      "unitHtml": "J（也可用eV表能量）",
+      "section": "em-2-3",
+      "sections": [
+        "em-2-3",
+        "em-test-fill",
+        "em-test-short"
+      ],
+      "match": "热平衡电子系统的化学势",
+      "description": "热平衡电子系统的化学势。"
+    }
+  ]
+}

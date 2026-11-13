@@ -28,20 +28,6 @@
       pairs, seriesConductors, branchCurrent, ce, ct, emf, torque, power };
   }
 
-  const questions = Object.freeze({
-    wave6: { answer: 'b', explanation: '正常单波绕组 A=2，与六极无关；每支路电流为 36/2=18 A。' },
-    lap4: { answer: 'c', explanation: '四极单叠 A=P=4。每支路串联有效导体数 Z/A=480/4=120，不是线圈数。' },
-    generator: { answer: 'a', explanation: '82 kW 是发电机额定端口输出：I=82000/230≈356.52 A。并励绕组从端口取电，所以 Ia=I+If。' },
-    brushes: { answer: 'b', explanation: '若题目说的是电刷总压降 2 V，发电机电势 E=U+IaRa+2 V，不能再乘以 2。' },
-    compare: { answer: 'c', explanation: '四极单叠 A=4、单波 A=2。相同 Z、Φ、n 时单波电势为两倍；若每根导体允许电流不变，单波允许总电流减半，不能无成本地增加容量。' }
-  });
-
-  function check(questionId, choice) {
-    const q = questions[questionId];
-    if (!q) throw new RangeError('Unknown question');
-    return { correct: choice === q.answer, explanation: q.explanation };
-  }
-
   function diagram(state) {
     const width = 760, left = 85, usable = 590, top = 42, bottom = 222;
     const paths = Array.from({ length: state.branches }, (_, i) => {
@@ -70,7 +56,7 @@
         '<label>磁极总数 P<select data-dc-poles><option value="2">2 极</option><option value="4" selected>4 极</option><option value="6">6 极</option><option value="8">8 极</option></select></label>' +
         '<label>绕组类型<select data-dc-winding><option value="lap">单叠绕组</option><option value="wave">正常单波绕组</option></select></label>' +
         '<label class="dc-lab-current">电枢总电流 Ia <input data-dc-current type="range" min="10" max="120" step="10" value="40"><output data-dc-current-value>40 A</output></label></div>' +
-        '<div class="dc-lab-diagram" data-dc-diagram></div>' +
+        '<div class="dc-lab-diagram" data-dc-diagram tabindex="0" role="region" aria-label="支路等效图，可横向阅读"></div>' +
         '<div class="dc-lab-values" aria-live="polite">' +
         '<span>并联支路数 A<strong data-dc-value="branches">4</strong></span>' +
         '<span>支路对数 a<strong data-dc-value="pairs">2</strong></span>' +
@@ -96,26 +82,9 @@
       [poles, winding, current].forEach((input) => input.addEventListener('input', update));
       update();
     });
-    body.querySelectorAll('[data-dc-question]').forEach((card) => {
-      if (card.dataset.mounted) return;
-      card.dataset.mounted = 'true';
-      const button = card.querySelector('[data-dc-check]');
-      const feedback = card.querySelector('[data-dc-feedback]');
-      if (!button || !feedback) return;
-      button.addEventListener('click', () => {
-        const selected = card.querySelector('input[type="radio"]:checked');
-        if (!selected) {
-          feedback.textContent = '先选择一个答案，再检查。';
-          return;
-        }
-        const result = check(card.dataset.dcQuestion, selected.value);
-        feedback.textContent = (result.correct ? '正确。' : '不正确。') + result.explanation;
-        feedback.dataset.correct = String(result.correct);
-      });
-    });
   }
 
-  const api = { calculate, check, mount };
+  const api = { calculate, mount };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (root) root.LN_DCMachinesLabs = api;
 })(typeof window === 'undefined' ? null : window);

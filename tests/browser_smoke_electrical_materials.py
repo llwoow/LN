@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "electrical-materials-browser-artifacts"
 OUT.mkdir(exist_ok=True)
 COURSE = "electrical-materials"
-LESSONS = ["em-2-1", "em-2-2", "em-2-3", "em-2-4", "em-2-5"]
+LESSONS = ["em-2-1", "em-2-2", "em-2-3", "em-2-4", "em-2-5", "em-test-summary", "em-test-fill", "em-test-short", "em-test-review"]
 SIZES = [("desktop", 1440, 900), ("phone", 390, 844), ("phone-small", 320, 690)]
 
 def main():

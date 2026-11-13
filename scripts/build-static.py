@@ -23,6 +23,15 @@ for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.
 for name in ('assets', 'courses'):
     shutil.copytree(root / name, out / name,
                     ignore=shutil.ignore_patterns('*.md', '__pycache__', 'verification'))
+# The authored standalone answer is a separate reading/print artifact, not source PDFs.
+answer_source = root / 'answers/power-semiconductors/chapter-2'
+answer_out = out / 'answers/power-semiconductors/chapter-2'
+answer_out.mkdir(parents=True, exist_ok=True)
+shutil.copy2(answer_source / '答案.html', answer_out / '答案.html')
+shutil.copytree(answer_source / 'assets', answer_out / 'assets')
+pdf = Path('output/pdf/功率半导体器件-第二章测试答案-完整版.pdf')
+(out / pdf).parent.mkdir(parents=True, exist_ok=True)
+shutil.copy2(root / pdf, out / pdf)
 # Source-tree existence is insufficient: every advertised download must ship.
 resources = json.loads((root / 'courses/resources/catalog.json').read_text())
 for resource in resources['resources']:

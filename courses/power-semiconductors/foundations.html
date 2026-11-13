@@ -30,7 +30,7 @@
 <h3>用电荷守恒确定耗尽区在哪一边</h3>
 <p id="def-pn-width">在均匀突变结、耗尽近似下，\(x_p,x_n\) 是结面向 p、n 两侧的耗尽宽度，\(N_A,N_D\) 是两侧的受主、施主浓度，\(\varepsilon_s\) 是半导体介电常数，\(V_{bi}\) 是内建电势。假定杂质已电离，耗尽层两端电场近似为零。高斯定律要求两侧固定电荷面积相等，即 \(N_A x_p=N_D x_n\)。</p>
 <figure id="fig-pn-fields">
-  <a href="courses/power-semiconductors/assets/pn-fields.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/pn-fields.svg" width="760" height="412" alt="左窄右宽的 PN 结耗尽区中，负正电荷面积相等，电场向左，电势从左向右增加"></a>
+  <div class="semiconductor-figure-scroll" tabindex="0" role="region" aria-label="器件机理图，可横向阅读或点击放大"><a href="courses/power-semiconductors/assets/pn-fields.svg" target="_blank" rel="noopener"><img style="min-width:720px" class="original-diagram" src="courses/power-semiconductors/assets/pn-fields.svg" width="760" height="412" alt="左窄右宽的 PN 结耗尽区中，负正电荷面积相等，电场向左，电势从左向右增加"></a></div>
   <figcaption>图1.1　突变结的电荷密度、电场与电势。横坐标共用，纵坐标各自为定性示意。</figcaption>
 </figure>
 <p>由图1.1从电荷画到电场。左边负受主使 \(E\) 向下斜，右边正施主使 \(E\) 向上斜。整个耗尽区 \(E\leq0\)，所以 \(d\psi/dx=-E\) 为正。峰值场强大小为 \(qN_Dx_n/\varepsilon_s\)。电势升高量 \(V_{bi}-V_A\) 等于电场三角形面积，即峰值场强乘总宽度的一半。再用电荷平衡消去 \(x_n\)，得到式（1.3）。</p>

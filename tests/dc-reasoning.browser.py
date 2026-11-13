@@ -44,15 +44,22 @@ def run():
                 page.screenshot(path=str(OUT / ("dc-branch-" + label + ".png")), full_page=True)
 
                 page.goto(url + "#course/electrical-machines/dc-answers", wait_until="domcontentloaded")
-                question = page.locator('[data-dc-question="wave6"]')
-                question.wait_for(timeout=20000)
-                question.locator('input[value="a"]').check()
-                question.locator("[data-dc-check]").click()
-                assert "不正确" in question.locator("[data-dc-feedback]").inner_text()
-                question.locator('input[value="b"]').check()
-                question.locator("[data-dc-check]").click()
-                assert "正确" in question.locator("[data-dc-feedback]").inner_text()
-                assert page.locator('[data-dc-question]').count() == 5
+                page.locator('[data-practice-question="dc-branch-wave-six"]').click()
+                dialog = page.locator('#practice-dialog:modal')
+                panel = dialog.locator('[data-practice-panel]')
+                panel.locator('input[value="divide-poles"]').check()
+                panel.locator('[data-p-submit]').click()
+                assert panel.locator('.practice-feedback h3').inner_text() == '答案尚不吻合，检查下面的推理'
+                panel.locator('[data-p-redo]').click()
+                panel.locator('input[value="two-paths"]').check()
+                panel.locator('[data-p-submit]').click()
+                assert panel.locator('.practice-feedback h3').inner_text() == '选择吻合，请继续核对理由'
+                panel.locator('[data-p-favorite]').click()
+                state = page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["dc-branch-wave-six"]')
+                assert state['favorite'] and state['attempts'][0]['correct'] is False
+                assert state['attempts'][-1]['correct'] is True
+                dialog.locator('[data-close-practice]').click()
+                assert page.locator('#dc-concept-diagnostics [data-practice-question]').count() == 5
                 assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
                 page.screenshot(path=str(OUT / ("dc-diagnostics-" + label + ".png")), full_page=True)
 

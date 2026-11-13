@@ -10,7 +10,7 @@
 .dc-lab-controls input[type=range] { width: 100%; accent-color: var(--accent); }
 .dc-lab-controls output { font-weight: 700; font-variant-numeric: tabular-nums; }
 .dc-lab-diagram { margin: 1rem 0; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); overflow-x: auto; }
-.dc-lab-diagram svg { width: 100%; min-width: 320px; height: auto; display: block; }
+.dc-lab-diagram svg { width: 100%; min-width: 680px; height: auto; display: block; }
 .dc-lab-values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
 .dc-lab-values span { display: grid; gap: .12rem; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); padding: .65rem .75rem; font-size: .9em; }
 .dc-lab-values strong { font-size: 1.16em; font-variant-numeric: tabular-nums; color: var(--text); }
@@ -25,5 +25,5 @@
 .dc-diagnostic button { margin: .65rem 0 .25rem; padding: .42rem .85rem; background: var(--accent); color: var(--on-accent); border-radius: 6px; font-weight: 650; }
 .dc-diagnostic [data-dc-feedback] { min-height: 1.65em; margin: .4rem 0 0; }
 .dc-diagnostic [data-correct=true] { font-weight: 650; }
-@media(max-width: 650px) { .dc-reasoning { padding: .85rem; } .dc-lab-values { grid-template-columns: repeat(2, minmax(0, 1fr)); } .dc-lab-values span { padding: .5rem; } .dc-lab-diagram svg { min-width: 290px; } }
+@media(max-width: 650px) { .dc-reasoning { padding: .85rem; } .dc-lab-values { grid-template-columns: repeat(2, minmax(0, 1fr)); } .dc-lab-values span { padding: .5rem; } .dc-lab-diagram svg { min-width: 680px; } }
 @media(prefers-reduced-motion: reduce) { .dc-reasoning * { animation: none!important; transition: none!important; } }

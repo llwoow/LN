@@ -29,12 +29,14 @@ near(lap.branchCurrent, wave.branchCurrent);
 assert.throws(() => lab.calculate({ poles: 3, winding: 'lap', armatureCurrent: 40 }), RangeError);
 assert.throws(() => lab.calculate({ poles: 4, winding: 'duplex', armatureCurrent: 40 }), RangeError);
 assert.throws(() => lab.calculate({ poles: 4, winding: 'lap', armatureCurrent: -1 }), RangeError);
-for (const [id, correct, wrong] of [['wave6','b','a'],['lap4','c','b'],['generator','a','b'],['brushes','b','a'],['compare','c','a']]) {
-  assert.equal(lab.check(id, correct).correct, true);
-  assert.equal(lab.check(id, wrong).correct, false);
-  assert.ok(lab.check(id, correct).explanation.length > 15);
+// Stable native questions now share the global mistake/favorite/redo record system.
+const bank=JSON.parse(fs.readFileSync(path.join(__dirname,'../courses/practice/bank.json'),'utf8'));
+const expectedKeys={'dc-branch-wave-six':'two-paths','dc-branch-series-conductors':'divide-branches','dc-generator-rated-port':'load-plus-field','dc-total-brush-drop':'count-total-once','dc-lap-wave-tradeoff':'voltage-current-tradeoff'};
+for(const [id,key] of Object.entries(expectedKeys)) {
+  const q=bank.questions.find(q=>q.id===id);assert(q,id);assert.equal(q.type,'single');assert.deepEqual(q.answer,[key]);
 }
-assert.throws(() => lab.check('missing', 'a'), RangeError);
+const stopped=lab.calculate({poles:4,winding:'lap',armatureCurrent:40,rpm:0});
+near(stopped.emf,0);near(stopped.power,0);near(stopped.torque,lap.torque);
 
 // The new lesson content must remain attached to real chapter sections.
 global.window = { LN_LESSONS: {} };

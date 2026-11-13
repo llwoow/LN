@@ -1813,7 +1813,17 @@
           "summary": "剖面、输出特性和分区电阻可用于对照真实功率 MOSFET 的工作区域。"
         }
       ],
-      "downloads": [],
+      "downloads": [
+        {
+          "label": "第二章完整网页答卷（含此前参考评分说明）",
+          "path": "answers/power-semiconductors/chapter-2/答案.html",
+          "view": true
+        },
+        {
+          "label": "第二章完整PDF答卷",
+          "path": "output/pdf/功率半导体器件-第二章测试答案-完整版.pdf"
+        }
+      ],
       "localLesson": "#course/power-semiconductors/vdmos-output/worked-output-plot"
     },
     {

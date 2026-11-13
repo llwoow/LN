@@ -5,7 +5,7 @@
 <h3>看换流时电流穿过零点以后发生什么</h3>
 <p id="def-recovery">反向恢复是已正向导通的二极管被外电路换成反向时，储存电荷抽取和复合、结重新建立阻断的过程。取从阳极流入为正，电流过零后继续为负，再回到小漏电附近。反向恢复峰值幅度是 \(I_{\mathrm{RRM}}\)，从零点到规定结束判据的时间是 \(t_{\mathrm{rr}}\)，其反向电流面积的正值是 \(Q_{\mathrm{rr}}\)。数据手册的结束判据和测试条件必须一并读。</p>
 <figure id="fig-diode-recovery">
-  <a href="courses/power-semiconductors/assets/recovery.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/recovery.svg" width="760" height="335" alt="二极管正向电流降到零，短时反向后逐渐恢复，阴影表示反向电荷"></a>
+  <div class="semiconductor-figure-scroll" tabindex="0" role="region" aria-label="器件机理图，可横向阅读或点击放大"><a href="courses/power-semiconductors/assets/recovery.svg" target="_blank" rel="noopener"><img style="min-width:720px" class="original-diagram" src="courses/power-semiconductors/assets/recovery.svg" width="760" height="335" alt="二极管正向电流降到零，短时反向后逐渐恢复，阴影表示反向电荷"></a></div>
   <figcaption>图2.6　反向恢复电流的教学波形。阴影是简化积分区，实测终点按给定判据取值。</figcaption>
 </figure>
 <div class="math-block" id="eq-recovery-charge" data-equation="2.5">\[Q_{\mathrm{rr}}=\int_{t_0}^{t_1}|i_{\mathrm D}(t)|\,dt.\]</div>
@@ -18,7 +18,9 @@
 <p>功率双极结型晶体管（BJT，有时称 GTR）用基极电流控制集电极电流。NPN 的发射结正偏时，电子从发射区注入基区，多数能穿过较薄的基区并被集电结收集。作开关时，外部驱动要提供基极电流。深饱和时集电结也会正偏，额外储存电荷使关断出现储存延迟。限制基极过驱或加速抽取电荷可缩短这段时间，代价要结合导通压降和驱动能力看。</p>
 <h3>为什么晶闸管的栅极撤掉仍然导通</h3>
 <p id="def-scr">普通可控硅整流器（SCR）是有阳极 A、阴极 K、门极 G 的 PNPN 晶闸管。把中间两层分别看成一个 PNP 和一个 NPN 的基区，每管的集电极电流能给另一管提供基极驱动。在正向阻断时中间结反偏。门极注入让两个晶体管的电流上升，互相供给的基极电流形成正反馈。一旦再生足以自行维持，撤去门极脉冲，阳极电流仍可继续。</p>
-<p>可用两个共基极电流增益 \(\alpha_{\mathrm{PNP}},\alpha_{\mathrm{NPN}}\) 理解正反馈。忽略门极以外的分流，电流平衡式整理后，阳极电流分母含 \(1-\alpha_{\mathrm{PNP}}-\alpha_{\mathrm{NPN}}\)。电流上升使增益之和接近 1 时，反馈显著增强，实际电流由外电路限制。这是解释再生的静态模型，在转折处不应用来算无穷电流。</p>
+<p id="def-scr-alpha">把PNP记作T₁、NPN记作T₂，α₁、α₂分别为该偏置下的共基极电流增益；I_CBO1、I_CBO2表示模型中的集电结漏电项。取阳极流入为I_A、门极流入为I_G、阴极流出为I_K。两管的等效连接要先画清：T₁集电极接T₂基极，T₂集电极接T₁基极，门极也接到T₂的基极节点。</p>
+<figure id="fig-scr-two-transistor"><div class="semiconductor-figure-scroll" tabindex="0" role="region" aria-label="器件机理图，可横向阅读或点击放大"><a href="courses/power-semiconductors/assets/scr-two-transistor.svg" target="_blank" rel="noopener"><img style="min-width:720px" class="original-diagram" src="courses/power-semiconductors/assets/scr-two-transistor.svg" width="760" height="410" alt="PNP与NPN交叉连接的SCR两晶体管等效电路，规定阳极、门极与阴极电流方向"/></a></div><figcaption>图 S.2.1 两管等效中的电流关系；器件剖面与内部寄生结构仍需另行考虑。</figcaption></figure>
+<p>共基极增益定义把每管集电极电流联系到其发射极电流。这里T₁发射极电流为I_A，T₂发射极电流为I_K，所以：</p><div class="math display" data-equation="S.2.1">\[I_{C1}=\alpha_1 I_A+I_{CBO1},\qquad I_{C2}=\alpha_2 I_K+I_{CBO2}\]</div><p>T₁的发射极电流分给自己的基极与集电极；因T₁基极只与T₂集电极相连，I_A=I_C1+I_C2。再从整个三端器件作电流守恒，I_K=I_A+I_G。将这两条关系代入上式：</p><div class="math display" data-equation="S.2.2">\[I_A=(\alpha_1+\alpha_2)I_A+\alpha_2 I_G+I_{CBO1}+I_{CBO2}\quad\Longrightarrow\quad I_A=\frac{\alpha_2I_G+I_{CBO1}+I_{CBO2}}{1-\alpha_1-\alpha_2}\]</div><p>分母揭示再生：增益和接近1时，小门极注入与漏电能引起很大的阳极电流变化；电流又会改变增益，增强反馈。若仅作代数示意，α₁=0.45、α₂=0.50，暂忽略漏电，I_G=2mA会给I_A=20mA。把增益和改到0.99，静态式预测的敏感性显著提高，但不能据此计算真实导通大电流。转折后的注入、饱和、参数变化和外电路限流都会破坏该线性近似，分母为零也不表示可得到无穷电流。</p>
 <p id="def-holding">擎住电流 \(I_{\mathrm L}\) 是触发后撤去门极时建立自保持所需的阳极电流门槛。维持电流 \(I_{\mathrm H}\) 是充分导通后继续保持导通所需的最低阳极电流，两者对应不同过程。教学器件假定 \(I_{\mathrm L}=80\,\mathrm{mA}\)、\(I_{\mathrm H}=40\,\mathrm{mA}\)。脉冲结束时只升到 60 mA 不能保证擎住。若已经在 150 mA 稳定导通，降到 60 mA 仍高于维持门槛。</p>
 <p>让普通 SCR 关断，需要外电路将电流降低到维持条件以下，并留出载流子恢复所需的时间，再施加正向电压。交流可利用自然换流，直流要另外提供换流路径。GTO 允许用强负门极电流关断。IGCT 将低电感门极驱动与器件紧密集成，通过强门极换流提高关断控制能力。这里的门极参与大电流转移，与 MOSFET 的栅电荷驱动机制不同。</p>
 <details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 9–12、19 页。Baliga §7.1、§7.8.2、§8.1、§8.4.5、§8.7。<a href="https://www.st.com/resource/en/application_note/cd00003854-thyristors-and-triacs-latching-current-stmicroelectronics.pdf" target="_blank" rel="noopener">ST AN303 擎住电流</a>、<a href="https://www.st.com/resource/en/application_note/cd00003853-thyristors-and-triacs-holding-current-an-important-parameter-stmicroelectronics.pdf" target="_blank" rel="noopener">ST AN302 维持电流</a>与 <a href="https://www.hitachienergy.com/products-and-solutions/semiconductors/integrated-gate-commutated-thyristors-igct" target="_blank" rel="noopener">Hitachi Energy 的 IGCT 技术说明</a>。</p></details>
@@ -46,7 +48,7 @@
 <p>导通电阻回答「已经开通以后怎样」。现在考虑电感电流在一段很短的时间内基本不变的硬开通过程。初始开关承受母线电压，电感电流由续流器件承接。门极得到电荷后，沟道形成并接手电流。电流接近负载值以后，器件端电压才大幅下降。与纯电阻负载相比，电感使电压和电流的交接更容易分开观察。</p>
 <p id="def-miller">米勒平台是漏源电压快速变化期间，栅源电压变化较慢的区段。此时门极电流有很大一部分用于改变栅漏耦合所对应的电荷。\(Q_{\mathrm g}\) 表示在指定终点和测试条件下给门极的总电荷，\(Q_{\mathrm{gd}}\) 表示门极电荷曲线中的漏压转换部分。单点小信号 \(C_{\mathrm{iss}}\) 无法代替整个栅电荷过程。</p>
 <figure id="fig-gate-switch">
-  <a href="courses/power-semiconductors/assets/gate-switch.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/gate-switch.svg" width="760" height="415" alt="硬开通时栅压到达平台、漏极电流先上升、漏源电压随后下降"></a>
+  <div class="semiconductor-figure-scroll" tabindex="0" role="region" aria-label="器件机理图，可横向阅读或点击放大"><a href="courses/power-semiconductors/assets/gate-switch.svg" target="_blank" rel="noopener"><img style="min-width:720px" class="original-diagram" src="courses/power-semiconductors/assets/gate-switch.svg" width="760" height="415" alt="硬开通时栅压到达平台、漏极电流先上升、漏源电压随后下降"></a></div>
   <figcaption>图2.7　感性负载硬开通的分段示意。省去恢复电流尖峰及寄生振铃，三条纵轴各自归一化。</figcaption>
 </figure>
 <p>假设驱动为 12 V、平台约 5 V、总门极通路电阻 \(R_{\mathrm{g,tot}}=14\,\Omega\)，门极电流约 0.50 A。若条件匹配时 \(Q_{\mathrm{gd}}=20\,\mathrm{nC}\)，漏压主要转换区间可估为 \(Q_{\mathrm{gd}}/I_{\mathrm g}=40\,\mathrm{ns}\)。加大门极电阻通常拉长转换时间，降低边沿速度，同时可能增加开关能量。实际应分别读驱动器拉电流和灌电流能力、内外栅电阻以及平台电压。</p>
@@ -60,7 +62,7 @@
 <h2>IGBT 的电导调制、场截止与尾电流</h2>
 <p id="def-igbt">绝缘栅双极型晶体管（IGBT）用 MOS 沟道控制电子注入，同时让集电极侧 p⁺ 层向 n⁻ 漂移区注入空穴。对比<a href="#course/power-semiconductors/vdmos-structure/fig-vdmos-structure">图2.1 的 MOSFET 截面</a>，关键改变是背面从 n⁺ 漏极接触变成带 p 型注入层的集电极结构。开通后，漂移区中电子、空穴同时增多，电导调制使高压器件的厚漂移区更容易输送大电流。</p>
 <figure id="fig-igbt-section">
-  <a href="courses/power-semiconductors/assets/igbt.svg" target="_blank" rel="noopener"><img class="original-diagram" src="courses/power-semiconductors/assets/igbt.svg" width="760" height="378" alt="IGBT 剖面示意，电子从顶部发射极经沟道注入，空穴从底部集电极注入漂移层"></a>
+  <div class="semiconductor-figure-scroll" tabindex="0" role="region" aria-label="器件机理图，可横向阅读或点击放大"><a href="courses/power-semiconductors/assets/igbt.svg" target="_blank" rel="noopener"><img style="min-width:720px" class="original-diagram" src="courses/power-semiconductors/assets/igbt.svg" width="760" height="378" alt="IGBT 剖面示意，电子从顶部发射极经沟道注入，空穴从底部集电极注入漂移层"></a></div>
   <figcaption>图2.8　场截止型 IGBT 的简化导通截面。箭头是载流子运动方向，层厚非比例。</figcaption>
 </figure>
 <p>工程上常在指定栅压、电流和结温下读饱和压降 \(V_{\mathrm{CE(sat)}}\)。笔记把它拆成结注入相关压降与等离子体漂移区压降，用来解释为什么并非只剩一个电阻。实际还包括沟道、接触等贡献。电流为 20 A、压降为 1.8 V、导通占空比 0.5 时，平均导通损耗约 18 W。这个例子用常压降近似，跨电流或温度范围要重读曲线。</p>

@@ -6,7 +6,7 @@
   const courseById=id=>courses.find(c=>c.id===id);
   const applies=(resource,course,section)=>resource.targets.some(t=>t.course===course&&(!section||t.section===section));
   const external=entry=>'<a href="'+escape(entry.url)+'" target="_blank" rel="noopener noreferrer">'+escape(entry.label)+'</a>';
-  const downloads=resource=>resource.downloads.map(d=>'<a href="'+escape(d.path)+'" download>'+escape(d.label)+'</a>').join(' · ');
+  const downloads=resource=>resource.downloads.map(d=>'<a href="'+escape(d.path)+'"'+(d.view?' target="_blank" rel="noopener"':' download')+'>'+escape(d.label)+'</a>').join(' · ');
   const targetLink=target=>{
     const course=courseById(target.course),section=course.sections.find(s=>s.id===target.section);
     return '<a href="#course/'+course.id+'/'+section.id+'">'+escape(course.title+' · '+section.title)+'</a>';

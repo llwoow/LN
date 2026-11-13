@@ -738,3 +738,8 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
     overflow-wrap: break-word;
   }
 }
+
+/* Material diagrams preserve readable labels within the existing reader. */
+.em-figure-scroll { max-width:100%; overflow-x:auto; margin:1rem 0; overscroll-behavior-inline:contain; }
+.em-figure-scroll svg { display:block; width:100%; min-width:680px; height:auto; }
+.semiconductor-figure-scroll { max-width:100%; overflow-x:auto; margin:.8rem 0; overscroll-behavior-inline:contain; }

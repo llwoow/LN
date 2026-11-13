@@ -791,6 +791,34 @@
         "device-selection"
       ],
       "match": "是相应时间窗内"
+    },
+    {
+      "id": "psd-scr-alpha-1",
+      "title": "PNP共基极电流增益 α₁",
+      "keys": [
+        "α_1"
+      ],
+      "unitHtml": "无量纲",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "match": "把PNP记作",
+      "description": "两管等效模型中T1在声明偏置下的共基极电流增益，非恒定通用材料常数。"
+    },
+    {
+      "id": "psd-scr-alpha-2",
+      "title": "NPN共基极电流增益 α₂",
+      "keys": [
+        "α_2"
+      ],
+      "unitHtml": "无量纲",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "match": "把PNP记作",
+      "description": "两管等效模型中T2的共基极电流增益。"
     }
   ]
 }
