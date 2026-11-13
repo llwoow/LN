@@ -8,6 +8,9 @@ on:
       - '.github/workflows/pages.yml'
       - 'tests/browser_smoke_pages.py'
       - 'scripts/build-static.py'
+      - 'scripts/check-publication.py'
+      - '.gitleaks.toml'
+      - '.github/workflows/publication-review.yml'
   workflow_dispatch:
 
 permissions:
@@ -18,7 +21,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  privacy:
+    uses: ./.github/workflows/publication-review.yml
   build:
+    needs: privacy
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

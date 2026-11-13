@@ -1,0 +1,7 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Fixed public localStorage key, not an API credential"
+regexTarget = "secret"
+regexes = ['''^ln\.practice\.v1$''']

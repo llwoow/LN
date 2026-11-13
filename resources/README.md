@@ -5,3 +5,5 @@
 功率半导体器件本批材料位于 `local/power-semiconductors/`：5 份原始 PDF 保留原名和原字节，`manifest.json` 记录页数、大小与 SHA-256；`extracted/` 是本地提取文字和核读页图。
 
 独立编写的第二章答案、矢量图、来源定位和审查记录位于 `../answers/power-semiconductors/chapter-2/`，打印版位于 `../output/pdf/`。忽略本地资源不会自动屏蔽这些原创答卷。
+
+公开发布另遵循 [PUBLICATION.md](../PUBLICATION.md)。用户上传只表示可在当前任务中处理，不自动表示可把教材全文、整卷照片或原件包再分发到公开仓库。`.gitignore`不能清理已提交历史；现有待核范围见 [审查记录](../PUBLICATION-REVIEW-2026-11-13.md)。

@@ -40,4 +40,5 @@ for resource in resources['resources']:
             raise ValueError('Download absent from static output: ' + download['path'])
 subprocess.run([sys.executable, str(root / 'scripts/build-reference-index.py'), '--output', str(out / 'reference-index.js')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-glossary.py'), '--output', str(out / 'glossary-index.js')], check=True)
+subprocess.run([sys.executable, str(root / 'scripts/check-publication.py'), '--dist'], check=True)
 print('Static site prepared in dist/')
