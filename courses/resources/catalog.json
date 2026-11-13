@@ -1762,6 +1762,49 @@
         "read": "依据公开模型的电气/机械状态关系，本站另设参数并用Python复算；未执行MATLAB。；核读本次取得固定提交的control/timeresp.py与examples/cruise-control.py，检查状态响应和限幅示例。；核读连续LTI响应接口与均匀时间轴条件；独立RK4程序不冒称调用了所有SciPy方法。；实际取得PDF，核读PDF第4—5页Motor Control、13—14页双端驱动Q13/Q14及解答；页面是2011课程汇编，题目含旧年页眉。"
       },
       "localLesson": "#course/robot-drive-engineering/rd-simulation"
+    },
+    {
+      "id": "electrical-materials-thermal-slab",
+      "title": "电气材料热阻：一维绝缘板算例与条件核查",
+      "kind": "本站原创可复算计算",
+      "repository": null,
+      "checked": "2026-11-13",
+      "targets": [
+        {
+          "course": "electrical-materials",
+          "section": "em-2-4"
+        }
+      ],
+      "question": "一维稳态热阻为何与厚度成正比、面积成反比？哪些工程边界使这个结论失效？",
+      "summary": "把第2章2.4的傅里叶定律用于无内热源、常热导率、单层平板的教学假设，再改变厚度并检查单位；不冒充实测温升。",
+      "steps": [
+        "先从 q_x=−λdT/dx 推导热流率 Qdot=λAΔT/L，说明负号和热流方向的约定。",
+        "运行提供的Python标准库复算脚本，核对0.004m、0.01m²、0.2W/(m·K)、8W下的热阻与温差。",
+        "仅将厚度加倍，验证热阻增加一倍；在纸上另做面积减半与加入接触热阻的情况。",
+        "指出稳态、一维、无内热源、常热导率假设，并解释为什么结果不能直接当作真实电缆或变压器温升。"
+      ],
+      "output": "标准库脚本打印2 K/W、16 K及厚度加倍时4 K/W；无真实测量数据。",
+      "requirements": "Python 3.9+标准库；也可仅在正文中手算，无硬件、外部依赖与网络连接。",
+      "license": "本站原创推导案例与代码；未复制教材原文、原图或第三方数值表。",
+      "links": [],
+      "limits": [
+        "所有输入数值均为本站教学假设，不是任何真实材料的验证参数。",
+        "一维稳态模型忽略接触热阻、辐射、对流、内热源和温度依赖热导率。",
+        "代码复算结果只验证算术与假设模型，不等于材料热学实验校准。"
+      ],
+      "verification": {
+        "executed": true,
+        "scope": "已在当前隔离Python环境实际运行脚本，验证热阻2 K/W、温差16 K、厚度加倍热阻4 K/W；未开展物理实验。",
+        "read": "依据用户提供教材第2章2.4节（书内42—48页）的热传导、热阻概念，新增模型与测试由本站原创编写。"
+      },
+      "evidence": [],
+      "downloads": [
+        {
+          "label": "热阻复算 Python 脚本",
+          "path": "assets/practice/electrical-materials/heat_resistance.py"
+        }
+      ],
+      "localLesson": "#course/electrical-materials/em-2-4"
     }
   ]
 }
