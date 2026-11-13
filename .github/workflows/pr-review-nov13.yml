@@ -53,7 +53,14 @@ jobs:
         run: python tests/browser_review_nov13.py
       - name: Check the physical PDF pages
         run: |
-          python -c "from pypdf import PdfReader; p=PdfReader('nov13-browser-artifacts/answer-reviewed.pdf'); assert len(p.pages)==9, len(p.pages); assert all(page.extract_text().strip() for page in p.pages)"
+          python - <<'PY'
+          from pypdf import PdfReader
+          for path in ['nov13-browser-artifacts/answer-reviewed.pdf', 'output/pdf/功率半导体器件-第二章测试答案-完整版.pdf']:
+              pdf = PdfReader(path)
+              assert len(pdf.pages) == 9, (path, len(pdf.pages))
+              assert all(page.extract_text().strip() for page in pdf.pages), path
+              assert '未重新核分' in pdf.pages[7].extract_text(), path
+          PY
       - name: Verify repository Pages subdirectory
         run: python tests/browser_smoke_pages.py
       - name: Preserve screenshots, PDF and actual verification scope
