@@ -38,7 +38,10 @@ class PracticeContent(unittest.TestCase):
             'emc-capacitor-resonance':1/(2*math.pi*math.sqrt(1e-9*1e-6))/1e6,
             'emc-ground-step':100*100*.8/(2*math.pi*2*(2+.8)),
             'emc-lightning-lead-voltage':.6e-6*(1000/1e-6),
-            'emc-impulse-shield-current':1/(1+3)*100}
+            'emc-impulse-shield-current':1/(1+3)*100,
+            # New electrical materials keys independently recomputed from SI units and Hooke/Fourier relations.
+            'emat-2-thermal':Fraction(4,1000)/(Fraction(1,5)*Fraction(1,100)),
+            'emat-2-modulus':(400/(2e-6))/(0.1/100)/1e9}
         # Robot-drive keys have an independent calculation registry in test_robot_drive.py.
         numeric={q['id'] for q in self.questions if q['type']=='numeric' and q['course']!='robot-drive-engineering'}
         self.assertEqual(numeric,set(expected))
