@@ -101,6 +101,7 @@ for q in D['questions']:
     if i in [3,5,6]:markup+='<ol type="A">'+''.join('<li>'+esc(t)+'</li>' for t in options[i])+'</ol>'
     if i in extra_tasks:markup+=rich(extra_tasks[i])
     markup+='<p class="source-citation">来源：《高三物理》试卷001，第'+ '、'.join(map(str,q['source']))+'页，第'+str(i)+'题；命题单位与公开原件链接待核。</p>'
+    if i==15:markup+='<figure id="figure-q15-caliper"><img src="'+BASE+'/figures/q15-caliper.svg" alt="游标零线在主尺2与3毫米之间，第8线重合"><figcaption>图15.0 · 根据原稿已核对的刻线条件重新绘制，20等分游标的标定精度为0.05mm。</figcaption></figure>'
     markup+='<h3>'+esc(q['foundation']['title'])+'</h3>'+rich(q['foundation']['text'])
     if q.get('figure'):
         markup+='<figure id="figure-q'+str(i)+'"><img loading="lazy" decoding="async" src="'+BASE+'/figures/'+q['figure']+'.svg" alt="第'+str(i)+'题受力、过程或图像示意"><figcaption>图 '+str(i)+'.1 · '+esc(q.get('figure_note','依据题意重绘的教学示意图。'))+'</figcaption></figure>'
@@ -150,7 +151,7 @@ for q in D['questions']:
             math=re.search(r'<math\b.*?</math>',markup,re.S)[0]
             return linear(ET.fromstring(math))
         return MATH.sub(replace,t)
-    entry={'id':'hs-physics001-'+str(i).zfill(2),'course':COURSE,'sections':[sid(i)],'title':f'原卷第{i}题 · '+q['title'],'type':typ,'hintHtml':rich(q['foundation']['text']),'transferHtml':rich(q['transfer'][0]),'promptHtml':rich(q['prompt']),'stepsHtml':[rich(s['text']).replace('id="equation-', 'id="practice-equation-') for s in q['sections']],'prompt':plain(q['prompt'])+((' '+extra_tasks[i]) if i in extra_tasks else ''),'hint':q['foundation']['text'],'steps':[plain(s['text']) for s in q['sections']],'transfer':plain(q['transfer'][0]),'skills':['建模','推导计算'] if i!=2 else ['建模','边界与反例'],'origin':'用户提供高三物理试卷001，第'+str(i)+'题；原题选项稳定ID保留原字母，显示顺序打乱。本站独立推导解答，非官方评分；未有学生答卷。'}
+    entry={'id':'hs-physics001-'+str(i).zfill(2),'course':COURSE,'sections':[sid(i)],'title':f'原卷第{i}题 · '+q['title'],'type':typ,'hintHtml':rich(q['foundation']['text']),'transferHtml':rich(q['transfer'][0]),'promptHtml':rich(q['prompt'])+('<p><a href="#course/hs-physics/physics-001-q15/figure-q15-caliper">查看游标刻度示意</a></p>' if i==15 else ''),'stepsHtml':[rich(s['text']).replace('id="equation-', 'id="practice-equation-') for s in q['sections']],'prompt':plain(q['prompt'])+((' '+extra_tasks[i]) if i in extra_tasks else ''),'hint':q['foundation']['text'],'steps':[plain(s['text']) for s in q['sections']],'transfer':plain(q['transfer'][0]),'skills':['建模','推导计算'] if i!=2 else ['建模','边界与反例'],'origin':'用户提供高三物理试卷001，第'+str(i)+'题；原题选项稳定ID保留原字母，显示顺序打乱。本站独立推导解答，非官方评分；未有学生答卷。'}
     if typ!='open':entry.update(options=[{'id':chr(65+j),'text':t,'feedback':feedback[i][j]} for j,t in enumerate(options[i])],answer=list(answers[i]))
     else:
         entry['rubric']=[plain(q['foundation']['text']),plain(q['method']),q['answer']]
