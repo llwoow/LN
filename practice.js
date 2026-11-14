@@ -1,10 +1,12 @@
 'use strict';
 (() => {
   const bank=window.LN_PRACTICE_BANK,questions=bank.questions,courses=window.LN_COURSES.filter(c=>!c.outlineOnly);
-  const kinds={single:'单选',multi:'多选',numeric:'计算',open:'问答'};
+  const kinds={single:'单选',multi:'多选',numeric:'计算',fill:'填空',open:'问答'};
   const skills=['建模','因果与证据','推导计算','边界与反例','迁移设计','解释表达'];
   const escape=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const key='ln.practice.v1';let records={},persistent=true;
+  const normalize=v=>String(v??'').trim().replace(/[’‘]/g,"'").replace(/\s+/g,' ').toLowerCase();
+  function stopMedia(root){root?.querySelectorAll('audio').forEach(a=>{a.pause();a.removeAttribute('src');a.load();});}
   try {const saved=JSON.parse(localStorage.getItem(key)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))records=saved;}catch{persistent=false;}
   function save(){try{localStorage.setItem(key,JSON.stringify(records));persistent=true;}catch{persistent=false;}}
   function record(q){
@@ -19,6 +21,7 @@
   }
   function evaluate(q,r){
     if(q.type==='open')return null;
+    if(q.type==='fill')return r.value.trim()?q.answer.some(a=>normalize(a)===normalize(r.value)):undefined;
     if(q.type==='numeric'){
       const raw=r.value.trim().replace(/−/g,'-');
       if(!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(raw))return undefined;
@@ -39,13 +42,21 @@
   function feedback(q,r){
     if(!r.submitted&&!r.revealed)return '';
     const result=r.lastCorrect;
-    const status=r.revealed&&!r.submitted?'已查看参考分析':q.type==='open'?'请逐项自评论证':result?(q.type==='numeric'?'数值吻合，过程仍需核对':'选择吻合，请继续核对理由'):'答案尚不吻合，检查下面的推理';
-    return '<section class="practice-feedback" aria-label="反馈"><h3 role="status">'+status+'</h3>'+(r.hinted||r.revealed?'<p>本题已使用提示或参考分析，后续答对不作独立首答证据。</p>':'')+(q.options?'<ul class="practice-option-feedback">'+r.order.map(id=>{const o=q.options.find(x=>x.id===id);return '<li><strong>'+(q.answer.includes(id)?'应选':'不选')+'：'+escape(o.text)+'</strong><p>'+escape(o.feedback)+'</p></li>';}).join('')+'</ul>':'')+'<h4>推理与核查</h4><ol>'+q.steps.map((s,i)=>'<li>'+(q.stepsHtml?.[i]||escape(s))+'</li>').join('')+'</ol>'+(q.rubric?'<fieldset class="practice-rubric"><legend>对照自己的过程逐项自评</legend>'+q.rubric.map((s,i)=>'<label><input type="checkbox" data-p-rubric value="'+i+'"'+(r.checks.includes(i)?' checked':'')+'>'+(q.rubricHtml?.[i]||escape(s))+'</label>').join('')+'</fieldset>':'')+'<button class="secondary-button" data-p-redo>遮住解析再做（保留首答）</button><h4>换个条件再想</h4><div class="practice-transfer">'+(q.transferHtml||escape(q.transfer))+'</div></section>';
+    const status=r.revealed&&!r.submitted?'已查看参考分析':q.type==='open'?'请逐项自评论证':result?(q.type==='fill'?'答案吻合':q.type==='numeric'?'数值吻合，过程仍需核对':'选择吻合，请继续核对理由'):'答案尚不吻合，检查下面的推理';
+    return '<section class="practice-feedback" aria-label="反馈"><h3 role="status">'+status+'</h3>'+(r.hinted||r.revealed?'<p>本题已使用提示或参考分析，后续答对不作独立首答证据。</p>':'')+(q.type==='fill'?'<p>可接受形式：'+escape(q.answer.join(' / '))+'</p>':'')+(q.options?'<ul class="practice-option-feedback">'+r.order.map(id=>{const o=q.options.find(x=>x.id===id);return '<li><strong>'+(q.answer.includes(id)?'应选':'不选')+'：'+escape(o.text)+'</strong><p>'+escape(o.feedback)+'</p></li>';}).join('')+'</ul>':'')+'<h4>推理与核查</h4><ol>'+q.steps.map((s,i)=>'<li>'+(q.stepsHtml?.[i]||escape(s))+'</li>').join('')+'</ol>'+(q.rubric?'<fieldset class="practice-rubric"><legend>对照自己的过程逐项自评</legend>'+q.rubric.map((s,i)=>'<label><input type="checkbox" data-p-rubric value="'+i+'"'+(r.checks.includes(i)?' checked':'')+'>'+(q.rubricHtml?.[i]||escape(s))+'</label>').join('')+'</fieldset>':'')+'<button class="secondary-button" data-p-redo>遮住解析再做（保留首答）</button><h4>换个条件再想</h4><div class="practice-transfer">'+(q.transferHtml||escape(q.transfer))+'</div></section>';
+  }
+  function promptHtml(q){
+    let markup=q.promptHtml||escape(q.prompt);
+    if(q.collection==='english-2027'&&q.passage==='S')for(const other of questions.filter(x=>x.collection===q.collection&&x.passage==='S')){
+      const chosen=records[other.id]?.selected?.[0],option=other.options.find(o=>o.id===chosen);
+      if(option)markup=markup.replaceAll('['+other.sourceQuestion+']','【'+other.sourceQuestion+' '+escape(option.text)+'】');
+    }
+    return markup;
   }
   function questionHtml(q){
     const r=record(q),choice=q.type==='single'||q.type==='multi';
-    const input=choice?'<fieldset class="practice-options"><legend>'+(q.type==='multi'?'选择全部有依据的判断':'选择最有依据的一项')+'</legend>'+r.order.map(id=>{const o=q.options.find(x=>x.id===id);return '<label><input type="'+(q.type==='multi'?'checkbox':'radio')+'" name="p-answer" value="'+id+'"'+(r.selected.includes(id)?' checked':'')+'><span>'+escape(o.text)+'</span></label>';}).join('')+'</fieldset>':q.type==='numeric'?'<label class="practice-value">计算结果 / '+escape(q.unit)+'<input type="text" inputmode="decimal" data-p-value value="'+escape(r.value)+'" autocomplete="off" placeholder="只填数值，可用科学计数法"></label>':'';
-    return '<article class="practice-question" data-question-id="'+q.id+'"><p class="page-meta">'+kinds[q.type]+' · '+q.skills.join(' / ')+'</p><h2 tabindex="-1" data-p-title>'+escape(q.title)+'</h2><div class="practice-prompt">'+(q.promptHtml||escape(q.prompt))+'</div>'+input+'<label class="practice-reason">'+(q.type==='open'?'写下你的分析':'理由、推导或核查（建议填写）')+'<textarea data-p-reason rows="'+(q.type==='open'?5:3)+'">'+escape(r.reason)+'</textarea></label><label class="practice-confidence">作答把握<select data-p-confidence><option value="unsure"'+(r.confidence==='unsure'?' selected':'')+'>还不确定</option><option value="sure"'+(r.confidence==='sure'?' selected':'')+'>有把握并能解释</option></select></label><div class="practice-actions"><button class="resource-nav-button" data-p-favorite aria-pressed="'+Boolean(r.favorite)+'">'+(r.favorite?'已收藏':'收藏本题')+'</button><button class="resource-nav-button" data-p-mistake aria-pressed="'+Boolean(r.selfMistake)+'">'+(r.selfMistake?'已标记待复习':'标记不会')+'</button><button class="secondary-button" data-p-submit>'+(q.type==='open'?'保存并对照要点':'提交作答')+'</button><button class="resource-nav-button" data-p-hint>提示一步</button><button class="resource-nav-button" data-p-reveal>查看参考分析</button></div><p data-p-error role="alert"></p><div data-p-hint-text'+(r.hinted?'':' hidden')+'>'+(q.hintHtml||escape(q.hint))+'</div><div data-p-feedback>'+feedback(q,r)+'</div><nav class="practice-reading" aria-label="回查讲解">'+q.sections.map(id=>{const c=courses.find(c=>c.id===q.course),s=c.sections.find(s=>s.id===id);return '<a href="#course/'+c.id+'/'+id+(q.readingAnchor&&id===(q.readingSection||'transformer-homework')?'/'+encodeURIComponent(q.readingAnchor):'')+'">回查：'+escape(s.title)+'</a>';}).join('')+'</nav><p class="practice-origin">'+escape(q.origin)+'</p><div class="practice-pagination"><button class="secondary-button" data-p-prev>上一题</button><button class="secondary-button" data-p-next>下一题</button></div></article>';
+    const input=choice?'<fieldset class="practice-options"><legend>'+(q.type==='multi'?'选择全部有依据的判断':'选择最有依据的一项')+'</legend>'+r.order.map(id=>{const o=q.options.find(x=>x.id===id);return '<label><input type="'+(q.type==='multi'?'checkbox':'radio')+'" name="p-answer" value="'+id+'"'+(r.selected.includes(id)?' checked':'')+'><span>'+escape(o.text)+'</span></label>';}).join('')+'</fieldset>':q.type==='fill'?'<label class="practice-value">填空答案<input type="text" data-p-value value="'+escape(r.value)+'" autocomplete="off"></label>':q.type==='numeric'?'<label class="practice-value">计算结果 / '+escape(q.unit)+'<input type="text" inputmode="decimal" data-p-value value="'+escape(r.value)+'" autocomplete="off" placeholder="只填数值，可用科学计数法"></label>':'';
+    return '<article class="practice-question" data-question-id="'+q.id+'"><p class="page-meta">'+kinds[q.type]+' · '+q.skills.join(' / ')+'</p><h2 tabindex="-1" data-p-title>'+escape(q.title)+'</h2><div class="practice-prompt">'+promptHtml(q)+'</div>'+input+'<label class="practice-reason">'+(q.type==='open'?'写下你的分析':'理由、推导或核查（建议填写）')+'<textarea data-p-reason rows="'+(q.type==='open'?5:3)+'">'+escape(r.reason)+'</textarea></label><label class="practice-confidence">作答把握<select data-p-confidence><option value="unsure"'+(r.confidence==='unsure'?' selected':'')+'>还不确定</option><option value="sure"'+(r.confidence==='sure'?' selected':'')+'>有把握并能解释</option></select></label><div class="practice-actions"><button class="resource-nav-button" data-p-favorite aria-pressed="'+Boolean(r.favorite)+'">'+(r.favorite?'已收藏':'收藏本题')+'</button><button class="resource-nav-button" data-p-mistake aria-pressed="'+Boolean(r.selfMistake)+'">'+(r.selfMistake?'已标记待复习':'标记不会')+'</button><button class="secondary-button" data-p-submit>'+(q.type==='open'?'保存并对照要点':'提交作答')+'</button><button class="resource-nav-button" data-p-hint>提示一步</button><button class="resource-nav-button" data-p-reveal>查看参考分析</button></div><p data-p-error role="alert"></p><div data-p-hint-text'+(r.hinted?'':' hidden')+'>'+(q.hintHtml||escape(q.hint))+'</div><div data-p-feedback>'+feedback(q,r)+'</div><nav class="practice-reading" aria-label="回查讲解">'+q.sections.map(id=>{const c=courses.find(c=>c.id===q.course),s=c.sections.find(s=>s.id===id);return '<a href="#course/'+c.id+'/'+id+(q.readingAnchor&&id===(q.readingSection||'transformer-homework')?'/'+encodeURIComponent(q.readingAnchor):'')+'">回查：'+escape(s.title)+'</a>';}).join('')+'</nav><p class="practice-origin">'+escape(q.origin)+'</p><div class="practice-pagination"><button class="secondary-button" data-p-prev>上一题</button><button class="secondary-button" data-p-next>下一题</button></div></article>';
   }
   function mount(root,initialCourse,initialSection,collection=''){
     if(questions.some(q=>q.promptHtml)&&!document.querySelector('link[href="assets/katex/katex.min.css"]')){const link=document.createElement('link');link.rel='stylesheet';link.href='assets/katex/katex.min.css';document.head.append(link);}
@@ -62,7 +73,7 @@
     const label=q=>{const r=record(q);return kinds[q.type]+' · '+q.title+(needsReview(q,r)?' · 待回看':'')+(r.attempts.some(a=>a.confidence==='sure'&&a.correct===false)?' · 自信误判':'');};
     function render(focus=false){
       const q=matches.find(q=>q.id===selected);picker.innerHTML=matches.map(q=>'<option value="'+q.id+'"'+(q.id===selected?' selected':'')+'>'+escape(label(q))+'</option>').join('');
-      picker.disabled=!matches.length;body.innerHTML=q?questionHtml(q):'<p>这个范围没有匹配题目，可调整筛选。</p>';
+      picker.disabled=!matches.length;stopMedia(body);body.innerHTML=q?questionHtml(q):'<p>这个范围没有匹配题目，可调整筛选。</p>';
       if(q){const i=matches.indexOf(q);body.querySelector('[data-p-prev]').disabled=i===0;body.querySelector('[data-p-next]').disabled=i===matches.length-1;if(focus)body.querySelector('[data-p-title]').focus({preventScroll:true});}
       summary();save();storage();
     }
@@ -89,18 +100,21 @@
       else if(t.matches('[data-p-rubric]'))r.checks=Array.from(body.querySelectorAll('[data-p-rubric]:checked'),e=>Number(e.value));
       else return;
       if(!t.matches('[data-p-rubric]')){r.submitted=false;r.checks=[];body.querySelector('[data-p-feedback]').innerHTML=feedback(q,r);}
+      r.updatedAt=new Date().toISOString();
+      if(t.matches('[name="p-answer"]')&&q.collection==='english-2027'&&q.passage==='S')body.querySelector('.practice-prompt').innerHTML=promptHtml(q);
       summary();save();storage();
     }
+    panel.addEventListener('toggle',event=>{if(event.target.matches('[data-practice-transcript]')&&event.target.open){const q=matches.find(x=>x.id===selected);for(const other of questions.filter(x=>x.collection===q.collection&&x.passage===q.passage)){const r=record(other);r.feedbackSeen=true;}save();}},true);
     panel.addEventListener('input',draft);
     panel.addEventListener('click',event=>{
       const q=matches.find(q=>q.id===selected);if(!q)return;const r=record(q),target=event.target;
       if(target.closest('[data-p-submit]')){
         const value=evaluate(q,r),error=body.querySelector('[data-p-error]');
         if(q.type==='open'&&!r.reason.trim()){error.textContent='先写下你的分析，再对照参考要点。';return;}
-        if(value===undefined){error.textContent=q.type==='numeric'?'请填写有限的纯数值；单位见输入框标签。':'请先选择答案。';return;}
-        r.submitted=true;r.lastCorrect=value;r.attempts.push({correct:value,assisted:r.hinted||r.revealed||Boolean(r.feedbackSeen),confidence:r.confidence});r.feedbackSeen=true;if(r.attempts.length>100)r.attempts=[r.attempts[0],...r.attempts.slice(-99)];render();
+        if(value===undefined){error.textContent=q.type==='numeric'?'请填写有限的纯数值；单位见输入框标签。':q.type==='fill'?'请先填写答案。':'请先选择答案。';return;}
+        r.submitted=true;r.lastCorrect=value;r.attempts.push({correct:value,assisted:r.hinted||r.revealed||Boolean(r.feedbackSeen),confidence:r.confidence,answer:q.type==='open'?r.reason:q.type==='numeric'||q.type==='fill'?r.value:[...r.selected],time:new Date().toISOString()});r.updatedAt=new Date().toISOString();r.feedbackSeen=true;if(r.attempts.length>100)r.attempts=[r.attempts[0],...r.attempts.slice(-99)];render();
       }else if(target.closest('[data-p-hint]')){r.hinted=true;const hint=body.querySelector('[data-p-hint-text]');hint.hidden=false;save();summary();}
-      else if(target.closest('[data-p-reveal]')){r.revealed=true;render();}
+      else if(target.closest('[data-p-reveal]')){r.revealed=true;r.feedbackSeen=true;render();}
       else if(target.closest('[data-p-redo]')){r.submitted=false;r.revealed=false;r.selected=[];r.value='';r.reason='';r.checks=[];render();}
       else if(target.closest('[data-p-favorite]')){r.favorite=!r.favorite;if(collection)filter();else render();}
       else if(target.closest('[data-p-mistake]')){r.selfMistake=!r.selfMistake;render();}
@@ -110,6 +124,7 @@
     });
     filter();
   }
+  document.addEventListener('play',event=>{if(event.target.tagName==='AUDIO')document.querySelectorAll('audio').forEach(a=>{if(a!==event.target)a.pause();});},true);
   const extItems=()=>{if(!Array.isArray(records.externalItems))records.externalItems=[];records.externalItems=records.externalItems.filter(i=>i&&typeof i.key==='string'&&typeof i.sourceId==='string'&&typeof i.ref==='string');return records.externalItems;};
   const courseOptions=course=>courses.map(c=>'<option value="'+c.id+'"'+(c.id===course?' selected':'')+'>'+escape(c.title)+'</option>').join('');
   const sourceLinks=s=>s.links.map(l=>'<a href="'+escape(l.url)+'" target="_blank" rel="noopener noreferrer">'+escape(l.label)+'</a>').join(' · ');
@@ -163,7 +178,7 @@
     const trigger=event.target.closest('[data-open-practice]');if(!trigger)return;
     const directory=document.querySelector('#reader-directory');
     origin={element:directory.contains(trigger)?document.querySelector('[data-reader-directory]'):trigger,x:scrollX,y:scrollY};
-    if(directory.open)directory.close();
+    if(directory.open)directory.close();stopMedia(dialog);
     const course=trigger.dataset.practiceCourse,section=trigger.dataset.practiceSection;
     document.querySelector('#practice-dialog-content').innerHTML=hubHtml(course);mountHub(dialog,course,section);
     document.body.classList.add('practice-open');dialog.showModal();
@@ -175,13 +190,45 @@
     }
   });
   dialog.addEventListener('click',event=>{
-    if(event.target.closest('[data-close-practice]')){dialog.close();return;}
+    if(event.target.closest('[data-close-practice]')){stopMedia(dialog);dialog.close();return;}
     const readingLink=event.target.closest('.practice-reading a');
     if(!readingLink||event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||readingLink.hash!==location.hash)return;
     event.preventDefault();origin=null;dialog.close();
     const body=document.querySelector('#lesson-body'),anchor=decodeURIComponent(readingLink.hash.split('/').slice(3).join('/'));
     if(body)window.LNPublication.settle(body,anchor);
   });
-  dialog.addEventListener('close',()=>{document.body.classList.remove('practice-open');if(origin?.element?.isConnected){scrollTo({left:origin.x,top:origin.y,behavior:'instant'});origin.element.focus({preventScroll:true});}origin=null;});
-  window.LNPractice={noteReferenceUse: id=>{const q=questions.find(q=>q.id===id);if(q){const r=record(q);r.revealed=true;r.feedbackSeen=true;save();}},button,pageHtml:course=>'<h1>练习</h1>'+hubHtml(course),mount:mountHub,onRoute:()=>{origin=null;if(dialog.open)dialog.close();}};
+  dialog.addEventListener('cancel',()=>stopMedia(dialog));
+  dialog.addEventListener('close',()=>{if(dialog.open)return;stopMedia(dialog);document.body.classList.remove('practice-open');if(origin?.element?.isConnected){scrollTo({left:origin.x,top:origin.y,behavior:'instant'});origin.element.focus({preventScroll:true});}origin=null;});
+  function exportEnglishRecords(){
+    const subset={};
+    for(const q of questions.filter(q=>q.collection==='english-2027')){
+      const r=records[q.id];if(r&&(r.attempts?.length||r.reason||r.value||r.selected?.length||r.favorite||r.selfMistake||r.feedbackSeen||r.revealed))subset[q.sourceQuestion]=r;
+    }
+    return {assessment:'hainan-english-2027-v1',format:'ln-practice-v1',recordType:'local-learning-not-official-score',exportedAt:new Date().toISOString(),records:subset};
+  }
+  function importEnglishRecords(data){
+    if(data?.assessment!=='hainan-english-2027-v1'||!data.records||typeof data.records!=='object'||Array.isArray(data.records))throw Error('不是本套英语记录');
+    let count=0;
+    for(const q of questions.filter(q=>q.collection==='english-2027')){
+      const x=data.records[q.sourceQuestion]||data.records[q.id];
+      if(!x||typeof x.reason!=='string'||x.reason.length>50000||typeof x.value!=='string'||x.value.length>5000||!Array.isArray(x.attempts))continue;
+      const r=record(q),hasLocal=Boolean(r.attempts.length||r.reason||r.value||r.selected.length);
+      if(!hasLocal){r.reason=x.reason;r.value=x.value;const selected=Array.isArray(x.selected)?x.selected:[x.selected];r.selected=selected.filter(id=>q.options?.some(o=>o.id===id));}
+      r.favorite=Boolean(r.favorite||x.favorite);r.selfMistake=Boolean(r.selfMistake||x.selfMistake||x.mistake);
+      for(const a of x.attempts.slice(0,100)){
+        if(!a||(!Array.isArray(a.answer)&&typeof a.answer!=='string')||JSON.stringify(a.answer).length>50000)continue;
+        const selected=Array.isArray(a.answer)?a.answer:[a.answer];
+        const draft={value:typeof a.answer==='string'?a.answer:'',selected};
+        const correct=evaluate(q,draft);
+        const time=typeof a.time==='string'&&Number.isFinite(Date.parse(a.time))?a.time:null;
+        if(r.attempts.some(old=>old.time===time&&JSON.stringify(old.answer)===JSON.stringify(a.answer)))continue;
+        r.attempts.push({answer:a.answer,correct:correct===undefined?null:correct,assisted:true,confidence:'unsure',time,imported:true});
+      }
+      if(r.attempts.length>100)r.attempts=[r.attempts[0],...r.attempts.slice(-99)];
+      // Imported conditions cannot establish an independent first response.
+      r.feedbackSeen=true;r.updatedAt=new Date().toISOString();count++;
+    }
+    save();return {count,persistent};
+  }
+  window.LNPractice={exportEnglishRecords,importEnglishRecords,noteReferenceUse: id=>{const q=questions.find(q=>q.id===id);if(q){const r=record(q);r.revealed=true;r.feedbackSeen=true;save();}},button,pageHtml:course=>'<h1>练习</h1>'+hubHtml(course),mount:mountHub,onRoute:()=>{stopMedia(document.querySelector('[data-practice-hub]'));stopMedia(dialog);origin=null;if(dialog.open)dialog.close();}};
 })();

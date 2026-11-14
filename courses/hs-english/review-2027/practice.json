@@ -1,0 +1,3138 @@
+{
+  "assessment": "hainan-english-2027-v1",
+  "version": 1,
+  "date": "2026-11-14",
+  "identity": "原创教学诊断；按近年新课标Ⅱ卷结构编排，非真题、非等值模拟或官方评分",
+  "passages": {
+    "A01": {
+      "id": "A01",
+      "title": "听力原文 A01",
+      "text": "W: Does the science club still meet at four?\nM: No. The laboratory is being cleaned. We will start at half past four.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "A02": {
+      "id": "A02",
+      "title": "听力原文 A02",
+      "text": "M: Did you get your train ticket online?\nW: I tried, but my phone stopped working. So I bought it at the station this morning.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "A03": {
+      "id": "A03",
+      "title": "听力原文 A03",
+      "text": "W: Are you coming to the beach clean-up this afternoon?\nM: I would like to, but my laboratory report is due tonight. I need the afternoon to finish it.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "A04": {
+      "id": "A04",
+      "title": "听力原文 A04",
+      "text": "M: Is that new jacket yours?\nW: No, I borrowed it from my sister. The black bag beside it is mine.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "A05": {
+      "id": "A05",
+      "title": "听力原文 A05",
+      "text": "W: The direct train to the museum has been cancelled. What should we do?\nM: We could walk, but that takes an hour. I suggest taking bus twelve. It stops by the museum gate.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "A06": {
+      "id": "A06",
+      "title": "听力原文 A06",
+      "text": "M: I booked eight seats for the school play on Saturday.\nW: Three people have just told me they cannot come. Could you reduce the booking?\nM: Of course. Five seats, then. Does the play still start at seven?\nW: No, the start has moved to six thirty. We should arrive fifteen minutes early.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "A07": {
+      "id": "A07",
+      "title": "听力原文 A07",
+      "text": "W: Your class has a roof garden now. Why did you start it?\nM: We wanted a place where students could learn how food grows, rather than only reading about it.\nW: Was it easy to keep the plants healthy?\nM: Not at first. The young plants got too much sun. We moved some pots into the shade and watered them early in the morning.\nW: What will you do next?\nM: We will invite younger students to visit. Selling vegetables is not our plan.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "A08": {
+      "id": "A08",
+      "title": "听力原文 A08",
+      "text": "W: We have all the parts for the small model bridge, but I cannot understand the instructions.\nM: Let us ask Mr Lee, the design teacher. He helped the other team yesterday.\nW: Good idea. I do not want to attach the pieces in the wrong order.\nM: I will take the instruction sheet to him now. Please keep the parts together until I come back.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "A09": {
+      "id": "A09",
+      "title": "听力原文 A09",
+      "text": "M: I need a camera for the class interview project. May I borrow this one for a week?\nW: Our equipment desk usually lends cameras for three days. If you need it longer, you must request an extension online.\nM: I will do that. What should I bring when I collect it?\nW: Your student card. And please return the charger with the camera. The last user forgot it.\nM: I will check both items before I leave.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "A10": {
+      "id": "A10",
+      "title": "听力原文 A10",
+      "text": "W: Welcome to our morning nature walk. We will meet at the south gate at nine. The path beside the lake is closed after last night's heavy rain, so we will use the forest route instead. It is slightly longer, but the ground is firmer. Please bring drinking water and keep a safe distance from any animals. We will pause at the old wooden shelter for a short talk about local birds. The walk will finish at half past eleven. If the rain returns, the group leader will guide us back by the shorter exit path. Please stay with the group.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "RA": {
+      "id": "RA",
+      "title": "A｜A school repair weekend",
+      "text": "Our school is holding a Repair Weekend to help students give everyday objects a longer life. The event is open to students and their families, but each session has a different requirement. All tools will be provided. Visitors should not bring large electrical equipment.\n\nSaturday morning: Bicycle Basics, 9:00–11:00, in the sports yard. A local mechanic will show visitors how to check a tyre and adjust a seat. Students aged twelve and above may join, but anyone under sixteen must come with an adult. Bring your own bicycle. This session is free.\n\nSaturday afternoon: Creative Clothing, 14:00–16:00, in the art room. Learn to repair a small tear and turn an old shirt into a useful bag. Participants should bring a clean piece of clothing. Materials for decoration cost five yuan. No previous sewing experience is needed.\n\nSunday morning: Book Care, 10:00–11:30, in the library. Members of the reading club will demonstrate simple ways to protect damaged book covers. Bring one book with a damaged cover, rather than a valuable old book. This session is free, but places are limited to twenty people.\n\nTo book a place, send your name and chosen session to the school office by Thursday afternoon. A confirmation message will explain where to meet. If a session is full, the office will offer a place on the waiting list.",
+      "gloss": "mechanic：维修技师；tear在此为破口；sewing：缝纫；confirmation：确认。",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "RB": {
+      "id": "RB",
+      "title": "B｜A question before the survey",
+      "text": "When Ella joined the school environmental club, she expected to spend her first month planting flowers. Instead, the club leader asked her to find out why students rarely used the new bottle-filling station. Ella thought the answer was obvious: students preferred buying sweet drinks. She designed a questionnaire with that idea in mind.\n\nBefore she handed it out, her friend Sam read the questions. Most of them asked students to explain why they liked sweet drinks. \"What if that is not the main reason?\" he asked. Ella felt defensive. She had worked on the sheet all evening. But she agreed to observe the station with him during lunch.\n\nThey soon noticed something surprising. Several students carrying empty reusable bottles walked past the station. One stopped, looked at the long queue and left. Another explained that the station was too far from the dining hall to reach before the next lesson. A third had not realised that the water was free.\n\nElla rewrote the questionnaire. This time, students could describe practical difficulties and suggest changes. The answers did not prove that everyone would stop buying drinks, but they helped the club identify two immediate improvements: clearer signs and a better place for the queue.\n\nA month later, Ella still helped plant flowers. Yet the experience she remembered most was the quiet lunch break beside the water station. She had learned that a useful question begins with attention, not with an answer already decided.",
+      "gloss": "questionnaire：问卷；defensive：感到被质疑；queue：队伍；reusable：可重复使用的。",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "RC": {
+      "id": "RC",
+      "title": "C｜A small study of quiet reading",
+      "text": "Can a short period of quiet reading help students settle into afternoon lessons? A teacher at a fictional school decided to explore the question. For four weeks, two classes were offered fifteen minutes of reading after lunch. Participation was voluntary: students could choose the reading room or continue their usual break.\n\nAt the end of the trial, teachers reported that students who regularly chose the room appeared more ready to start work. Some students also said they enjoyed having a calm place away from their phones. The school newspaper described the room as a success.\n\nHowever, the teacher who organised the project was more cautious. No random assignment had been used. Students already interested in reading might have been more likely to join. The teachers knew who attended, which might also have influenced their impressions. In addition, readiness to start work was based on observation rather than a common, independently scored task.\n\nNone of these limitations means that the room was useless. They mean that the trial cannot show how much of the observed difference was caused by the room itself. A later project could compare groups with similar starting habits and use clearer measures, while keeping participation respectful and practical.\n\nFor now, the school has kept the room open because students value the quiet space. That is a reasonable service decision. It is different from claiming that a small trial has proved a general learning effect. The distinction allows the school to respond to students without making its evidence say more than it can.",
+      "gloss": "fictional：虚构的；voluntary：自愿的；random assignment：随机分组；measure：衡量办法。此研究完全虚构，供阅读训练。",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "RD": {
+      "id": "RD",
+      "title": "D｜When a measure becomes the goal",
+      "text": "A community library wanted to encourage more reading, so it began counting the number of books borrowed each month. At first, the figure seemed useful. It showed when demand was high and helped staff plan opening hours. But problems appeared when the library started rewarding reading groups only for the number of loans they produced.\n\nSome groups chose many very short books. Others borrowed books they did not intend to read until later. The monthly total rose, yet the number did not tell staff whether members understood, enjoyed or discussed what they had read. A measure that once helped describe activity had started to shape the activity itself.\n\nThe solution was not to stop counting. Numbers still helped the library notice changes. Instead, staff widened the conversation. They asked groups what they wanted from reading and invited them to share a passage or question that had mattered to them. Short books were not treated as inferior; a short book could lead to a thoughtful discussion. Nor were long books automatically considered better.\n\nThe aim was to make the count one piece of evidence rather than the whole definition of success. A rising total might reflect better access, but it might also reflect a change in borrowing habits. Staff needed to ask which explanation fitted the wider picture.\n\nThis lesson applies beyond libraries. A convenient number can make work visible, but it cannot always capture the purpose of that work. When a measure is linked to rewards, people may learn to improve the measure instead of the underlying activity. We should therefore ask not only whether a number is increasing, but what kind of behaviour our use of it encourages.",
+      "gloss": "measure：指标；loan在本文为借出；inferior：较差的；underlying：根本的、背后的。",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "S": {
+      "id": "S",
+      "title": "七选五｜Learning from a mistake",
+      "text": "A mistake can be useful, but only if we do more than look at the correct answer. The next time you review a task, begin by keeping your first response. [S01] Without it, you may forget the idea that led you in the wrong direction.\n\nNext, explain exactly where the reasoning broke down. Perhaps you understood the words but missed a negative. Perhaps you remembered a rule but applied it to the wrong clause. [S02] A general label such as \"carelessness\" gives you very little to work on.\n\nOnce you have identified the problem, return to a short explanation or example. Then close it and try to reconstruct the reasoning in your own words. [S03] If you cannot explain the step without looking, return to that step rather than rereading everything.\n\nAfter a delay, try a different task involving the same relationship. [S04] A familiar answer may feel easy even when the method has not become available for a new situation.\n\nFinally, keep the record brief enough to use. Write the error, the evidence and your next action. [S05] The point is to make a useful decision about what to practise next, not to produce a beautiful notebook.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "C": {
+      "id": "C",
+      "title": "完形｜The empty chair",
+      "text": "On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.\n\nThe visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. \"We have plenty of room,\" he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].\n\nHe told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.\n\nBefore leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.\n\nI still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "G": {
+      "id": "G",
+      "title": "语法填空｜A small reading room",
+      "text": "Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.\n\nThe room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "W1": {
+      "id": "W1",
+      "title": "应用文任务｜A suggestion for the school garden",
+      "text": "假定你是李华，学校英文报向学生征求改善校园花园的建议。请给编辑Alex写一封约80词的邮件，内容包括：\n1. 提出一项具体改进建议；\n2. 解释它对学生的好处；\n3. 说明你愿意承担的工作。\n\n请以Dear Alex,开头，以Yours, Li Hua结尾。情境为本套原创，不是高考真题。",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    },
+    "W2": {
+      "id": "W2",
+      "title": "续写原文｜The model boat",
+      "text": "Nina had promised to bring a small model boat to the class exhibition. Her grandfather had helped her build it during the summer, and she wanted to show how carefully its wooden pieces fitted together. She had told her classmates that it would be the centre of her display.\n\nOn the morning of the exhibition, Nina placed the boat on a table and went to collect her poster. When she returned, one side of the boat was cracked. A classmate, Tom, stood beside the table with a pale face. He explained that his bag had caught the edge of the boat as he turned around. He had tried to stop it from falling, but he was too late.\n\nNina looked at the damage and felt tears rise. For a moment, she wanted to tell Tom to go away. Then she noticed that he had carefully gathered every loose piece on a sheet of paper. He had not hidden the broken boat or left the room.\n\nThe exhibition would open in an hour. Nina's teacher offered them a quiet desk and some suitable glue. The boat might not look exactly as it had before, but there was still time to do something. Nina took a slow breath and looked at Tom.\n\n续写两段，约150词；保留下列两段开头语：\nParagraph 1: \"Let's see what we can do together,\" Nina said.\nParagraph 2: When the visitors reached their table, Nina began to explain.\n\n以上原文与开头均为原创。",
+      "gloss": "",
+      "origin": "原创虚构情境，供语言学习与诊断；非真实研究报告或新闻"
+    }
+  },
+  "clips": [
+    {
+      "id": "A01",
+      "lines": [
+        [
+          "W",
+          "Does the science club still meet at four?"
+        ],
+        [
+          "M",
+          "No. The laboratory is being cleaned. We will start at half past four."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A01.mp3"
+    },
+    {
+      "id": "A02",
+      "lines": [
+        [
+          "M",
+          "Did you get your train ticket online?"
+        ],
+        [
+          "W",
+          "I tried, but my phone stopped working. So I bought it at the station this morning."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A02.mp3"
+    },
+    {
+      "id": "A03",
+      "lines": [
+        [
+          "W",
+          "Are you coming to the beach clean-up this afternoon?"
+        ],
+        [
+          "M",
+          "I would like to, but my laboratory report is due tonight. I need the afternoon to finish it."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A03.mp3"
+    },
+    {
+      "id": "A04",
+      "lines": [
+        [
+          "M",
+          "Is that new jacket yours?"
+        ],
+        [
+          "W",
+          "No, I borrowed it from my sister. The black bag beside it is mine."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A04.mp3"
+    },
+    {
+      "id": "A05",
+      "lines": [
+        [
+          "W",
+          "The direct train to the museum has been cancelled. What should we do?"
+        ],
+        [
+          "M",
+          "We could walk, but that takes an hour. I suggest taking bus twelve. It stops by the museum gate."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A05.mp3"
+    },
+    {
+      "id": "A06",
+      "lines": [
+        [
+          "M",
+          "I booked eight seats for the school play on Saturday."
+        ],
+        [
+          "W",
+          "Three people have just told me they cannot come. Could you reduce the booking?"
+        ],
+        [
+          "M",
+          "Of course. Five seats, then. Does the play still start at seven?"
+        ],
+        [
+          "W",
+          "No, the start has moved to six thirty. We should arrive fifteen minutes early."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A06.mp3"
+    },
+    {
+      "id": "A07",
+      "lines": [
+        [
+          "W",
+          "Your class has a roof garden now. Why did you start it?"
+        ],
+        [
+          "M",
+          "We wanted a place where students could learn how food grows, rather than only reading about it."
+        ],
+        [
+          "W",
+          "Was it easy to keep the plants healthy?"
+        ],
+        [
+          "M",
+          "Not at first. The young plants got too much sun. We moved some pots into the shade and watered them early in the morning."
+        ],
+        [
+          "W",
+          "What will you do next?"
+        ],
+        [
+          "M",
+          "We will invite younger students to visit. Selling vegetables is not our plan."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A07.mp3"
+    },
+    {
+      "id": "A08",
+      "lines": [
+        [
+          "W",
+          "We have all the parts for the small model bridge, but I cannot understand the instructions."
+        ],
+        [
+          "M",
+          "Let us ask Mr Lee, the design teacher. He helped the other team yesterday."
+        ],
+        [
+          "W",
+          "Good idea. I do not want to attach the pieces in the wrong order."
+        ],
+        [
+          "M",
+          "I will take the instruction sheet to him now. Please keep the parts together until I come back."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A08.mp3"
+    },
+    {
+      "id": "A09",
+      "lines": [
+        [
+          "M",
+          "I need a camera for the class interview project. May I borrow this one for a week?"
+        ],
+        [
+          "W",
+          "Our equipment desk usually lends cameras for three days. If you need it longer, you must request an extension online."
+        ],
+        [
+          "M",
+          "I will do that. What should I bring when I collect it?"
+        ],
+        [
+          "W",
+          "Your student card. And please return the charger with the camera. The last user forgot it."
+        ],
+        [
+          "M",
+          "I will check both items before I leave."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A09.mp3"
+    },
+    {
+      "id": "A10",
+      "lines": [
+        [
+          "W",
+          "Welcome to our morning nature walk. We will meet at the south gate at nine. The path beside the lake is closed after last night's heavy rain, so we will use the forest route instead. It is slightly longer, but the ground is firmer. Please bring drinking water and keep a safe distance from any animals. We will pause at the old wooden shelter for a short talk about local birds. The walk will finish at half past eleven. If the rain returns, the group leader will guide us back by the shorter exit path. Please stay with the group."
+        ]
+      ],
+      "origin": "原创对话/独白；机器合成练习音，不是高考原声",
+      "audio": "audio/A10.mp3"
+    }
+  ],
+  "questions": [
+    {
+      "id": "L01",
+      "section": "听力",
+      "type": "single",
+      "prompt": "When will the science club start?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At 4:00.",
+          "feedback": "4点是原安排，已被否定。"
+        },
+        {
+          "id": "B",
+          "text": "At 4:30.",
+          "feedback": "half past four是更新后的开始时间。"
+        },
+        {
+          "id": "C",
+          "text": "At 5:00.",
+          "feedback": "材料没有5点这一安排。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "A01",
+      "score": 1.5,
+      "knowledge": [
+        "K07",
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L02",
+      "section": "听力",
+      "type": "single",
+      "prompt": "Where did the woman buy her ticket?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Online.",
+          "feedback": "网上是未完成的尝试。"
+        },
+        {
+          "id": "B",
+          "text": "At the station.",
+          "feedback": "So后的句子说明实际购买地点。"
+        },
+        {
+          "id": "C",
+          "text": "On the train.",
+          "feedback": "没有在列车上购买的信息。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "A02",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L03",
+      "section": "听力",
+      "type": "single",
+      "prompt": "Why will the man miss the activity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He has to finish a report.",
+          "feedback": "but后给出截止时间和必须完成的任务。"
+        },
+        {
+          "id": "B",
+          "text": "He dislikes the beach.",
+          "feedback": "他说would like to，不能推出不喜欢活动。"
+        },
+        {
+          "id": "C",
+          "text": "He is feeling ill.",
+          "feedback": "没有生病信息。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "A03",
+      "score": 1.5,
+      "knowledge": [
+        "K13",
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L04",
+      "section": "听力",
+      "type": "single",
+      "prompt": "What belongs to the woman?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The jacket.",
+          "feedback": "外套是从姐姐或妹妹那里借的。"
+        },
+        {
+          "id": "B",
+          "text": "The black bag.",
+          "feedback": "is mine明确说明黑包归她。"
+        },
+        {
+          "id": "C",
+          "text": "Both items.",
+          "feedback": "借来的外套不属于她。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "A04",
+      "score": 1.5,
+      "knowledge": [
+        "K05",
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L05",
+      "section": "听力",
+      "type": "single",
+      "prompt": "What does the man recommend?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Walking to the museum.",
+          "feedback": "步行是被比较的候选，并非最后建议。"
+        },
+        {
+          "id": "B",
+          "text": "Waiting for another direct train.",
+          "feedback": "没有建议等另一班直达车。"
+        },
+        {
+          "id": "C",
+          "text": "Taking bus 12.",
+          "feedback": "I suggest后明确推荐12路公交。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "A05",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L06",
+      "section": "听力",
+      "type": "single",
+      "prompt": "How many seats were originally booked?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Three.",
+          "feedback": "3是取消的人数。"
+        },
+        {
+          "id": "B",
+          "text": "Five.",
+          "feedback": "5是更新后的人数。"
+        },
+        {
+          "id": "C",
+          "text": "Eight.",
+          "feedback": "第一句明确原订8座。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "A06",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L07",
+      "section": "听力",
+      "type": "single",
+      "prompt": "How many seats are needed now?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Three.",
+          "feedback": "3是取消，不是剩余。"
+        },
+        {
+          "id": "B",
+          "text": "Five.",
+          "feedback": "8减去3，且男士确认five seats。"
+        },
+        {
+          "id": "C",
+          "text": "Eight.",
+          "feedback": "8是旧安排。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "A06",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L08",
+      "section": "听力",
+      "type": "single",
+      "prompt": "When should they arrive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At 6:15.",
+          "feedback": "6:30开始，提前15分钟为6:15。"
+        },
+        {
+          "id": "B",
+          "text": "At 6:30.",
+          "feedback": "6:30是开始时间，不是提前到达时间。"
+        },
+        {
+          "id": "C",
+          "text": "At 7:00.",
+          "feedback": "7点是已变更的旧开始时间。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "A06",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L09",
+      "section": "听力",
+      "type": "single",
+      "prompt": "Why did the class start the garden?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To sell vegetables.",
+          "feedback": "最后明确不打算售卖。"
+        },
+        {
+          "id": "B",
+          "text": "To provide practical learning.",
+          "feedback": "learn how food grows与实践学习对应。"
+        },
+        {
+          "id": "C",
+          "text": "To replace all classroom lessons.",
+          "feedback": "没有取代所有课程。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "A07",
+      "score": 1.5,
+      "knowledge": [
+        "T01",
+        "K17"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L10",
+      "section": "听力",
+      "type": "single",
+      "prompt": "What problem did the plants face?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Too much sunlight.",
+          "feedback": "男士明确说too much sun。"
+        },
+        {
+          "id": "B",
+          "text": "Too little space.",
+          "feedback": "没有空间问题。"
+        },
+        {
+          "id": "C",
+          "text": "Damage from visitors.",
+          "feedback": "尚未邀请参观，无访客破坏。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "A07",
+      "score": 1.5,
+      "knowledge": [
+        "T01",
+        "K17"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L11",
+      "section": "听力",
+      "type": "single",
+      "prompt": "What is the next plan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moving every pot indoors.",
+          "feedback": "只把部分花盆移到阴处，不是全部搬室内。"
+        },
+        {
+          "id": "B",
+          "text": "Opening a vegetable shop.",
+          "feedback": "selling被明确排除。"
+        },
+        {
+          "id": "C",
+          "text": "Inviting younger students.",
+          "feedback": "最后一句计划邀请低年级学生。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "A07",
+      "score": 1.5,
+      "knowledge": [
+        "T01",
+        "K17"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L12",
+      "section": "听力",
+      "type": "single",
+      "prompt": "What is the main difficulty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Missing parts.",
+          "feedback": "首句明确零件齐全。"
+        },
+        {
+          "id": "B",
+          "text": "Unclear instructions.",
+          "feedback": "cannot understand the instructions是当前困难。"
+        },
+        {
+          "id": "C",
+          "text": "Lack of glue.",
+          "feedback": "未提到胶水不足。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "A08",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L13",
+      "section": "听力",
+      "type": "single",
+      "prompt": "Who is Mr Lee?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A design teacher.",
+          "feedback": "对话直接介绍其身份。"
+        },
+        {
+          "id": "B",
+          "text": "A shop assistant.",
+          "feedback": "没有商店情境。"
+        },
+        {
+          "id": "C",
+          "text": "A team member from their class.",
+          "feedback": "并未说是同班队员。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "A08",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L14",
+      "section": "听力",
+      "type": "single",
+      "prompt": "What will the man do immediately?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Attach the pieces.",
+          "feedback": "先求助，尚不拼装。"
+        },
+        {
+          "id": "B",
+          "text": "Buy a new bridge.",
+          "feedback": "没有购买新桥的计划。"
+        },
+        {
+          "id": "C",
+          "text": "Take the sheet to Mr Lee.",
+          "feedback": "I will...now给出紧接着的行动。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "A08",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L15",
+      "section": "听力",
+      "type": "single",
+      "prompt": "Why does the man need a camera?",
+      "options": [
+        {
+          "id": "A",
+          "text": "For a class interview project.",
+          "feedback": "开头直接给出目的。"
+        },
+        {
+          "id": "B",
+          "text": "For a family holiday.",
+          "feedback": "未提家庭旅行。"
+        },
+        {
+          "id": "C",
+          "text": "For a photography competition.",
+          "feedback": "未提摄影比赛。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "A09",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L16",
+      "section": "听力",
+      "type": "single",
+      "prompt": "What is the usual loan period?",
+      "options": [
+        {
+          "id": "A",
+          "text": "One day.",
+          "feedback": "未给一天。"
+        },
+        {
+          "id": "B",
+          "text": "Three days.",
+          "feedback": "usually...three days是常规借用期。"
+        },
+        {
+          "id": "C",
+          "text": "A week.",
+          "feedback": "一周是男士希望的时间，需延期申请。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "A09",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L17",
+      "section": "听力",
+      "type": "single",
+      "prompt": "What does the woman remind him to return?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A student card.",
+          "feedback": "学生卡用于领取时核验，不是设备归还物。"
+        },
+        {
+          "id": "B",
+          "text": "A memory card only.",
+          "feedback": "没有这一提醒。"
+        },
+        {
+          "id": "C",
+          "text": "The charger.",
+          "feedback": "明确说return the charger with the camera。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "A09",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L18",
+      "section": "听力",
+      "type": "single",
+      "prompt": "Where will the group meet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At the wooden shelter.",
+          "feedback": "木棚是途中停留点。"
+        },
+        {
+          "id": "B",
+          "text": "At the south gate.",
+          "feedback": "开头给出集合地点south gate。"
+        },
+        {
+          "id": "C",
+          "text": "Beside the lake.",
+          "feedback": "湖边路线已关闭。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "A10",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L19",
+      "section": "听力",
+      "type": "single",
+      "prompt": "Why has the route changed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The lake path is closed after rain.",
+          "feedback": "昨晚大雨导致湖边小路关闭。"
+        },
+        {
+          "id": "B",
+          "text": "The forest route is shorter.",
+          "feedback": "森林路线稍长，非更短。"
+        },
+        {
+          "id": "C",
+          "text": "There are no birds by the lake.",
+          "feedback": "没有湖边无鸟的信息。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "A10",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "L20",
+      "section": "听力",
+      "type": "single",
+      "prompt": "When is the walk expected to finish?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At 9:00.",
+          "feedback": "9点是集合时间。"
+        },
+        {
+          "id": "B",
+          "text": "At 11:00.",
+          "feedback": "没有11点结束的安排。"
+        },
+        {
+          "id": "C",
+          "text": "At 11:30.",
+          "feedback": "half past eleven为11:30。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "A10",
+      "score": 1.5,
+      "knowledge": [
+        "T01"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R01",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "What must a fourteen-year-old do to join Bicycle Basics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bring large electrical equipment.",
+          "feedback": "大件电器被排除，且与骑车活动不符。"
+        },
+        {
+          "id": "B",
+          "text": "Come with an adult.",
+          "feedback": "Bicycle Basics要求16岁以下成人陪同，14岁适用。"
+        },
+        {
+          "id": "C",
+          "text": "Pay five yuan.",
+          "feedback": "5元属于服装装饰材料，不是自行车环节。"
+        },
+        {
+          "id": "D",
+          "text": "Have previous repair experience.",
+          "feedback": "未要求已有维修经验。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "RA",
+      "score": 2.5,
+      "knowledge": [
+        "K04",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R02",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "Which session charges for decoration materials?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bicycle Basics.",
+          "feedback": "自行车环节免费。"
+        },
+        {
+          "id": "B",
+          "text": "Book Care.",
+          "feedback": "图书护理免费。"
+        },
+        {
+          "id": "C",
+          "text": "Creative Clothing.",
+          "feedback": "服装环节明确装饰材料5元。"
+        },
+        {
+          "id": "D",
+          "text": "Every session.",
+          "feedback": "不能把一个环节费用扩大到所有环节。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "RA",
+      "score": 2.5,
+      "knowledge": [
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R03",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "What is required to book a place?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Arriving before Thursday morning.",
+          "feedback": "截止为周四下午，且要求发送报名信息，不是周四早到场。"
+        },
+        {
+          "id": "B",
+          "text": "Taking a valuable old book.",
+          "feedback": "珍贵古书被明确排除。"
+        },
+        {
+          "id": "C",
+          "text": "Calling the mechanic directly.",
+          "feedback": "报名联系学校办公室，不是技师。"
+        },
+        {
+          "id": "D",
+          "text": "Sending a name and chosen session by Thursday afternoon.",
+          "feedback": "末段给出姓名、场次和截止时间。"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "passage": "RA",
+      "score": 2.5,
+      "knowledge": [
+        "K13",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R04",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "What was Ella first asked to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Plant flowers at the station.",
+          "feedback": "她原先期待种花，实际任务另有内容。"
+        },
+        {
+          "id": "B",
+          "text": "Find reasons for the station’s limited use.",
+          "feedback": "首段club leader要求调查使用少的原因。"
+        },
+        {
+          "id": "C",
+          "text": "Sell reusable bottles.",
+          "feedback": "未给售卖任务。"
+        },
+        {
+          "id": "D",
+          "text": "Prove that sweet drinks were unhealthy.",
+          "feedback": "原文不是验证饮料健康问题。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "RB",
+      "score": 2.5,
+      "knowledge": [
+        "K15",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R05",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "Why did Sam question the questionnaire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was too short to read.",
+          "feedback": "未讨论长度问题。"
+        },
+        {
+          "id": "B",
+          "text": "It included no environmental words.",
+          "feedback": "词汇是否出现不是问题。"
+        },
+        {
+          "id": "C",
+          "text": "It assumed a reason before collecting evidence.",
+          "feedback": "问题大多围绕喜欢甜饮料，预设了原因。"
+        },
+        {
+          "id": "D",
+          "text": "It asked students to pay for water.",
+          "feedback": "问卷没有收费要求。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "RB",
+      "score": 2.5,
+      "knowledge": [
+        "K16",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R06",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "Which difficulty did students mention?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The station was inconvenient to reach between lessons.",
+          "feedback": "一名学生提到距离餐厅远，赶不上下节课。"
+        },
+        {
+          "id": "B",
+          "text": "The water tasted too sweet.",
+          "feedback": "甜的是购买的饮料，非饮水站水。"
+        },
+        {
+          "id": "C",
+          "text": "The club refused to listen.",
+          "feedback": "俱乐部后来主动调查，未拒听。"
+        },
+        {
+          "id": "D",
+          "text": "Reusable bottles were not allowed.",
+          "feedback": "有人拿着可重复瓶走过，不存在禁令。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "RB",
+      "score": 2.5,
+      "knowledge": [
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R07",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "What best expresses Ella’s main lesson?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Good intentions remove the need for research.",
+          "feedback": "经历恰恰说明需要调查。"
+        },
+        {
+          "id": "B",
+          "text": "People always change after seeing a sign.",
+          "feedback": "把局部改进说成一定改变所有人，没有依据。"
+        },
+        {
+          "id": "C",
+          "text": "A club should avoid difficult questions.",
+          "feedback": "并非回避难题。"
+        },
+        {
+          "id": "D",
+          "text": "Careful observation should help shape a question.",
+          "feedback": "结尾强调先关注实际情况，不预先决定答案。"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "passage": "RB",
+      "score": 2.5,
+      "knowledge": [
+        "K16",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R08",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "How were students placed in the reading group?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By random assignment.",
+          "feedback": "原文明确无随机分组。"
+        },
+        {
+          "id": "B",
+          "text": "By a compulsory school rule.",
+          "feedback": "参与自愿，不是强制。"
+        },
+        {
+          "id": "C",
+          "text": "By their own choice.",
+          "feedback": "学生自己选择是否去阅读室。"
+        },
+        {
+          "id": "D",
+          "text": "By the newspaper editor.",
+          "feedback": "校报只报道，未分组。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "RC",
+      "score": 2.5,
+      "knowledge": [
+        "K16",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R09",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "Why was the organising teacher cautious?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The room had no books.",
+          "feedback": "未说无书。"
+        },
+        {
+          "id": "B",
+          "text": "Several features of the trial limited causal conclusions.",
+          "feedback": "自选、观察者知情、缺少统一独立测量，都限制因果判断。"
+        },
+        {
+          "id": "C",
+          "text": "Every student disliked the room.",
+          "feedback": "Some学生表示喜欢，非全体不喜欢。"
+        },
+        {
+          "id": "D",
+          "text": "The school had banned further projects.",
+          "feedback": "文中还提出后续研究设想。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "RC",
+      "score": 2.5,
+      "knowledge": [
+        "K16",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R10",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "What does “the distinction” in the last paragraph refer to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The difference between offering a valued service and proving a general learning effect.",
+          "feedback": "紧接前文区分服务决定与普遍效果证明。"
+        },
+        {
+          "id": "B",
+          "text": "The difference between lunch and dinner.",
+          "feedback": "不是餐别。"
+        },
+        {
+          "id": "C",
+          "text": "The difference between books and newspapers.",
+          "feedback": "不是媒介种类。"
+        },
+        {
+          "id": "D",
+          "text": "The difference between teachers’ ages.",
+          "feedback": "从未讨论年龄。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "RC",
+      "score": 2.5,
+      "knowledge": [
+        "K05",
+        "K16",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R11",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "What is the author’s attitude to the reading room?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It must be closed immediately.",
+          "feedback": "没有要求关闭，且承认服务价值。"
+        },
+        {
+          "id": "B",
+          "text": "It proves all phones reduce learning.",
+          "feedback": "原文没有研究所有手机的效果。"
+        },
+        {
+          "id": "C",
+          "text": "It is certain to improve every student’s marks.",
+          "feedback": "将有限观察扩大到所有成绩。"
+        },
+        {
+          "id": "D",
+          "text": "It may be worthwhile, while stronger effect claims need better evidence.",
+          "feedback": "同时承认价值和证据边界，与全文相符。"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "passage": "RC",
+      "score": 2.5,
+      "knowledge": [
+        "K16",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R12",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "Why was the borrowing count useful at first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It proved that every borrowed book was understood.",
+          "feedback": "计数不说明每本理解情况。"
+        },
+        {
+          "id": "B",
+          "text": "It helped staff plan for changes in demand.",
+          "feedback": "首段说可看出需求并规划开放时间。"
+        },
+        {
+          "id": "C",
+          "text": "It identified the best literary works.",
+          "feedback": "未衡量作品好坏。"
+        },
+        {
+          "id": "D",
+          "text": "It made discussion unnecessary.",
+          "feedback": "后文反而强调讨论。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "RD",
+      "score": 2.5,
+      "knowledge": [
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R13",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "What problem appeared after rewards were tied only to loans?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Groups stopped borrowing altogether.",
+          "feedback": "计数上升，并非停止借阅。"
+        },
+        {
+          "id": "B",
+          "text": "All short books became harmful.",
+          "feedback": "文中明确短书也可引发深入讨论。"
+        },
+        {
+          "id": "C",
+          "text": "Some behaviour raised the count without showing better reading.",
+          "feedback": "借很多短书或暂不读的书使总数上升，但不证明更好阅读。"
+        },
+        {
+          "id": "D",
+          "text": "Staff lost the ability to count accurately.",
+          "feedback": "问题是指标意义与激励，不是算术失准。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "RD",
+      "score": 2.5,
+      "knowledge": [
+        "K16",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R14",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "What does the author suggest doing with a convenient number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using it alongside other evidence and considering its effects on behaviour.",
+          "feedback": "后两段要求结合更广证据并看它鼓励何种行为。"
+        },
+        {
+          "id": "B",
+          "text": "Treating it as the complete purpose of the work.",
+          "feedback": "恰是全文反对的做法。"
+        },
+        {
+          "id": "C",
+          "text": "Rejecting it whenever it increases.",
+          "feedback": "不是凡上升都拒绝，要问原因。"
+        },
+        {
+          "id": "D",
+          "text": "Replacing every conversation with it.",
+          "feedback": "应增加对话，不取代对话。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "RD",
+      "score": 2.5,
+      "knowledge": [
+        "K16",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "R15",
+      "section": "阅读理解",
+      "type": "single",
+      "prompt": "Which title best fits the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Why Long Books Are Always Better",
+          "feedback": "文中否定长书必优。"
+        },
+        {
+          "id": "B",
+          "text": "How to Borrow More Books in One Day",
+          "feedback": "不教一天多借书。"
+        },
+        {
+          "id": "C",
+          "text": "The End of Community Libraries",
+          "feedback": "并非图书馆终结。"
+        },
+        {
+          "id": "D",
+          "text": "Looking Beyond a Single Measure",
+          "feedback": "概括指标的价值、局限和使用方式。"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "passage": "RD",
+      "score": 2.5,
+      "knowledge": [
+        "K16",
+        "T02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "S01",
+      "section": "七选五",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S01].",
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "列举不同错因在后面段落更合适，不能解释保留初答的作用。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "This指保留初答，后句Without it解释若缺失会忘记早先思路。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "绝对化且与末段简短记录相冲突。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "different task尚未引入，不能在此比较新旧任务。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "解释尚未引入，不是此处初答记录的直接作用。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "简短记录属于末段。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "材料区分多种错误，非全由不努力。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "S",
+      "score": 2.5,
+      "knowledge": [
+        "K05",
+        "K13",
+        "K16",
+        "T03"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "S02",
+      "section": "七选五",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S02].",
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "These回指前面误读否定、规则用错分句等不同问题，并与笼统粗心形成对比。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "earlier reasoning可相关，但不如A连接两类具体错因与下一句general label。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "全文不支持全部抄页。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "本段未讨论间隔后的新任务。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "本段尚未要求关闭解释重建。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "末段才谈记录长度。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "与刚列举的具体错误不符。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "S",
+      "score": 2.5,
+      "knowledge": [
+        "K05",
+        "K13",
+        "K16",
+        "T03"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "S03",
+      "section": "七选五",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S03].",
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "本段重点是关掉解释重建，不再分类错因。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "初答保留已在首段完成。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "与主动重建不同。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "新任务尚未引入，跨段关系不如E。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "This回指不看说明复述推理；后句If you cannot explain...继续检验。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "本段不是缩短笔记。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "把具体理解问题归于努力不足，没有依据。"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "passage": "S",
+      "score": 2.5,
+      "knowledge": [
+        "K05",
+        "K13",
+        "K16",
+        "T03"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "S04",
+      "section": "七选五",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S04].",
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "需要实践虽相关，但这里缺的是新材料与熟悉原题的对比。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "首段记录初答的说明在此重复。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "抄书不检验迁移。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "That指延时后做不同任务；后句解释熟悉答案不等于可迁移。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "可泛指检查，但D更直接建立后句familiar answer的对照。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "未谈记录长度。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "不被支持。"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "passage": "S",
+      "score": 2.5,
+      "knowledge": [
+        "K05",
+        "K13",
+        "K16",
+        "T03"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "S05",
+      "section": "七选五",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S05].",
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "具体分类已说明，末段重点简短可用。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "重复首段目的。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "和brief enough矛盾。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "新旧任务对比已在上一段处理。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "这里没有关闭解释重建的动作。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "与brief、notebook相接，说明记录不必做成第二本教材。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "与全文错因分析不符。"
+        }
+      ],
+      "answer": [
+        "F"
+      ],
+      "passage": "S",
+      "score": 2.5,
+      "knowledge": [
+        "K05",
+        "K13",
+        "K16",
+        "T03"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C01",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C01].",
+      "options": [
+        {
+          "id": "A",
+          "text": "planned",
+          "feedback": "books、name cards、tea说明准备细节。"
+        },
+        {
+          "id": "B",
+          "text": "avoided",
+          "feedback": "并非回避细节。"
+        },
+        {
+          "id": "C",
+          "text": "forgotten",
+          "feedback": "与列举准备及末段仍认真计划矛盾。"
+        },
+        {
+          "id": "D",
+          "text": "destroyed",
+          "feedback": "没有破坏。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C02",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C02].",
+      "options": [
+        {
+          "id": "A",
+          "text": "disappeared",
+          "feedback": "门开后是访客到达。"
+        },
+        {
+          "id": "B",
+          "text": "arrived",
+          "feedback": "only one visitor arrived与预期12席形成落差。"
+        },
+        {
+          "id": "C",
+          "text": "complained",
+          "feedback": "未提投诉。"
+        },
+        {
+          "id": "D",
+          "text": "returned",
+          "feedback": "没有先前来过的信息。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C03",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C03].",
+      "options": [
+        {
+          "id": "A",
+          "text": "broken",
+          "feedback": "椅子未损坏。"
+        },
+        {
+          "id": "B",
+          "text": "wooden",
+          "feedback": "材质不是当前语境重点。"
+        },
+        {
+          "id": "C",
+          "text": "empty",
+          "feedback": "仅一位访客，所以其余椅子空着，对应plenty of room。"
+        },
+        {
+          "id": "D",
+          "text": "borrowed",
+          "feedback": "没有借椅情节。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C04",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C04].",
+      "options": [
+        {
+          "id": "A",
+          "text": "record",
+          "feedback": "不是准备录制。"
+        },
+        {
+          "id": "B",
+          "text": "advertise",
+          "feedback": "宣传建议在后面。"
+        },
+        {
+          "id": "C",
+          "text": "celebrate",
+          "feedback": "失望不引向此处庆祝。"
+        },
+        {
+          "id": "D",
+          "text": "cancel",
+          "feedback": "作者想因人少取消，但老人转向谈书。"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C05",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C05].",
+      "options": [
+        {
+          "id": "A",
+          "text": "silence",
+          "feedback": "用不断发问填补沉默，后文需要思考、放慢、等待相呼应。"
+        },
+        {
+          "id": "B",
+          "text": "bottle",
+          "feedback": "不能用问题填瓶子。"
+        },
+        {
+          "id": "C",
+          "text": "seat",
+          "feedback": "不是占座。"
+        },
+        {
+          "id": "D",
+          "text": "page",
+          "feedback": "不是往页面写题。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C06",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C06].",
+      "options": [
+        {
+          "id": "A",
+          "text": "left",
+          "feedback": "他们继续交谈，并未离开。"
+        },
+        {
+          "id": "B",
+          "text": "waited",
+          "feedback": "给他思考时间，slowed down之后waited自然。"
+        },
+        {
+          "id": "C",
+          "text": "argued",
+          "feedback": "没有争论。"
+        },
+        {
+          "id": "D",
+          "text": "laughed",
+          "feedback": "没有嘲笑或笑的线索。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C07",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C07].",
+      "options": [
+        {
+          "id": "A",
+          "text": "dangerous",
+          "feedback": "没有危险。"
+        },
+        {
+          "id": "B",
+          "text": "expensive",
+          "feedback": "没有花费。"
+        },
+        {
+          "id": "C",
+          "text": "shared",
+          "feedback": "与女儿共同读书的夜晚。"
+        },
+        {
+          "id": "D",
+          "text": "imaginary",
+          "feedback": "老人描述真实回忆，不是明确虚构。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C08",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C08].",
+      "options": [
+        {
+          "id": "A",
+          "text": "writing",
+          "feedback": "对话正在现场发生，不是在写信。"
+        },
+        {
+          "id": "B",
+          "text": "waving",
+          "feedback": "没有挥手告别或示意的情节。"
+        },
+        {
+          "id": "C",
+          "text": "shouting",
+          "feedback": "安静等待与大喊不符。"
+        },
+        {
+          "id": "D",
+          "text": "listening",
+          "feedback": "listening to表示倾听；故事焦点由拯救计划变为听老人分享。"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C09",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C09].",
+      "options": [
+        {
+          "id": "A",
+          "text": "time",
+          "feedback": "诊所等待时有空闲时间，to spare与waiting呼应。"
+        },
+        {
+          "id": "B",
+          "text": "money",
+          "feedback": "不说明金钱。"
+        },
+        {
+          "id": "C",
+          "text": "seats",
+          "feedback": "等待不等于多余座位。"
+        },
+        {
+          "id": "D",
+          "text": "books",
+          "feedback": "未说明有多余书。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C10",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C10].",
+      "options": [
+        {
+          "id": "A",
+          "text": "silent",
+          "feedback": "人数增长，非沉默程度。"
+        },
+        {
+          "id": "B",
+          "text": "full",
+          "feedback": "从1人到3人再到近满圈，full说明参与人数。"
+        },
+        {
+          "id": "C",
+          "text": "closed",
+          "feedback": "没有封闭。"
+        },
+        {
+          "id": "D",
+          "text": "lost",
+          "feedback": "不是丢失。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C11",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C11].",
+      "options": [
+        {
+          "id": "A",
+          "text": "teach",
+          "feedback": "不是先教学。"
+        },
+        {
+          "id": "B",
+          "text": "leave",
+          "feedback": "外侧椅是给想先旁听再加入的人，非离开。"
+        },
+        {
+          "id": "C",
+          "text": "listen",
+          "feedback": "before joining与先旁听相衔接。"
+        },
+        {
+          "id": "D",
+          "text": "pay",
+          "feedback": "活动未设收费。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C12",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C12].",
+      "options": [
+        {
+          "id": "A",
+          "text": "otherwise",
+          "feedback": "不是否则的条件结果。"
+        },
+        {
+          "id": "B",
+          "text": "therefore",
+          "feedback": "并非因果直接引出的同一观点，而是认真计划之外的限制。"
+        },
+        {
+          "id": "C",
+          "text": "similarly",
+          "feedback": "不是与前句相似的新增例子。"
+        },
+        {
+          "id": "D",
+          "text": "however",
+          "feedback": "仍认真计划，但明白不能决定每刻，构成转折。"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C13",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C13].",
+      "options": [
+        {
+          "id": "A",
+          "text": "fill",
+          "feedback": "回扣前文填补每段沉默，后文现在愿意wait。"
+        },
+        {
+          "id": "B",
+          "text": "measure",
+          "feedback": "不是测量空间。"
+        },
+        {
+          "id": "C",
+          "text": "rent",
+          "feedback": "不是出租。"
+        },
+        {
+          "id": "D",
+          "text": "paint",
+          "feedback": "不是涂刷。"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C14",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C14].",
+      "options": [
+        {
+          "id": "A",
+          "text": "holiday",
+          "feedback": "不是假期。"
+        },
+        {
+          "id": "B",
+          "text": "failure",
+          "feedback": "最初人少令作者失望，看来像失败，后来成为学习。"
+        },
+        {
+          "id": "C",
+          "text": "promise",
+          "feedback": "不是承诺本身。"
+        },
+        {
+          "id": "D",
+          "text": "competition",
+          "feedback": "没有比赛。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "C15",
+      "section": "完形填空",
+      "type": "single",
+      "prompt": "Choose the best word for [C15].",
+      "options": [
+        {
+          "id": "A",
+          "text": "technical",
+          "feedback": "重点不是技术。"
+        },
+        {
+          "id": "B",
+          "text": "optional",
+          "feedback": "不是可有可无。"
+        },
+        {
+          "id": "C",
+          "text": "important",
+          "feedback": "making room for other people是经历带来的重要认识。"
+        },
+        {
+          "id": "D",
+          "text": "expensive",
+          "feedback": "没有花费昂贵的线索；此处归纳活动组织的重要认识。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "passage": "C",
+      "score": 1,
+      "knowledge": [
+        "K01",
+        "K02",
+        "K13",
+        "K16",
+        "T04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。"
+    },
+    {
+      "id": "G01",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "Last month, our class [G01] (open) a small reading room.",
+      "answer": [
+        "opened"
+      ],
+      "analysis": "本句缺限定谓语，主语class执行open，last month指已结束过去，用opened；这里不是被动，也不是补一个opening。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K06",
+        "K07"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "G02",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "Our teacher asked us [G02] (think) about what readers needed.",
+      "answer": [
+        "to think"
+      ],
+      "analysis": "ask sb to do sth；us是asked的宾语，后接不定式补足希望我们做什么。仅填think缺to；thinking不符合这里的结构。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K09"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "G03",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "We interviewed several students, [G03] ideas helped us choose chairs.",
+      "answer": [
+        "whose"
+      ],
+      "analysis": "逗号后为补充说明的关系从句，ideas前缺所有格限定，whose ideas表示这些学生的想法；who不能在此直接限定ideas。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K11"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "G04",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "The books [G04] (donate) by families were placed on low shelves.",
+      "answer": [
+        "donated"
+      ],
+      "analysis": "主句谓语were placed已完整，books承受donate动作，donated by families作后置修饰语；不能再填独立谓语were donated。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K06",
+        "K08",
+        "K09"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "G05",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "Every visitor can borrow one book at [G05] time.",
+      "answer": [
+        "a"
+      ],
+      "analysis": "at a time表示一次、每次；one book at a time限定每次借一本，不是at the time表示在当时。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K04",
+        "K10"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "G06",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "The room has become [G06] (popular) than we expected.",
+      "answer": [
+        "more popular"
+      ],
+      "analysis": "than给出比较关系，popular通常用more构成比较级；不能用popularer，也不能把more漏掉。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K10"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "G07",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "Others enjoy [G07] (discuss) a story with friends.",
+      "answer": [
+        "discussing"
+      ],
+      "analysis": "enjoy后以动名词短语作宾语，填discussing；不能因为动作将来可能发生就用to discuss。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K09"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "G08",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "We keep the room not only tidy [G08] also comfortable.",
+      "answer": [
+        "but"
+      ],
+      "analysis": "not only...but also...连接两个并列性质tidy与comfortable；这里需要成对连接结构中的but，不能任意填so或and。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K13"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "G09",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "The greatest [G09] (satisfy) comes from seeing the change.",
+      "answer": [
+        "satisfaction"
+      ],
+      "analysis": "the greatest后需要作主语中心的名词，此处抽象的满意感用satisfaction。satisfied/satisfying为形容词，不能在这里单独担当所需名词。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K02",
+        "K03"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "G10",
+      "section": "语法填空",
+      "type": "fill",
+      "prompt": "The classroom has become a [G10] (use) place.",
+      "answer": [
+        "useful",
+        "usable",
+        "useable"
+      ],
+      "analysis": "a与place之间需要形容词修饰，useful强调有用、带来益处；本段由闲置教室变成阅读室，usable（也拼useable）强调可供使用，也与语境相容。本套接受这些形式；useless会改变正面结果。",
+      "passage": "G",
+      "score": 1.5,
+      "knowledge": [
+        "K02",
+        "K10"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "W01",
+      "section": "应用文",
+      "type": "open",
+      "passage": "W1",
+      "prompt": "Write the email. Do not copy the model before drafting.",
+      "score": 15,
+      "knowledge": [
+        "K03",
+        "K13",
+        "K17",
+        "T06"
+      ],
+      "rubric": [
+        "建议具体且与校园花园相关",
+        "说明建议怎样帮助学生，而非只说重要",
+        "自荐贡献可执行且与建议有关",
+        "身份、对象、格式、语气及篇幅符合任务",
+        "检查句子、时态、名词数与搭配"
+      ],
+      "model": "Dear Alex,\nI suggest adding simple plant labels to our school garden. Many students enjoy the flowers but do not know their names or how to care for them. Clear labels with a short description would turn a pleasant walk into a chance to learn. I would be happy to collect the information with our biology teacher and help design the labels. We could ask classmates to check whether the wording is easy to understand before putting them up.\nYours,\nLi Hua",
+      "analysis": "标签是具体方案；不了解植物名称与养护是理由，标签提供信息形成机制；和生物老师核对资料、设计并测试文字是可执行贡献。参考稿是一种可行写法，不是官方范文或保证得分的模板。",
+      "origin": "原创任务与原创参考稿"
+    },
+    {
+      "id": "W02",
+      "section": "读后续写",
+      "type": "open",
+      "passage": "W2",
+      "prompt": "Continue the story in two paragraphs, using the given openings.",
+      "score": 25,
+      "knowledge": [
+        "K07",
+        "K09",
+        "K16",
+        "K17",
+        "T07"
+      ],
+      "rubric": [
+        "保留人物、意外损坏、收集碎片、老师提供材料及一小时时间约束",
+        "第一段从合作推进到可向访客展示，不无因跳过关键事件",
+        "第二段开头与第一段结果相接，回应事故与修复",
+        "情绪变化由对方负责态度及合作行动触发",
+        "叙事时间、指代、语言连贯准确；两段结构清晰"
+      ],
+      "model": "\"Let's see what we can do together,\" Nina said. Tom nodded and pulled up a chair. They matched the loose pieces to the damaged side, working slowly enough to avoid another mistake. While the glue dried, Nina changed her poster to show the repair process. Tom wrote a short explanation of what had happened and asked if he could stay to help. Looking at his careful handwriting, Nina felt her anger ease.\n\nWhen the visitors reached their table, Nina began to explain. She pointed to the repaired side rather than trying to hide it. Tom described the accident and the steps they had taken afterwards. The boat was not perfect, but the visitors listened closely to their story. Nina realised that the display now showed more than careful building. It showed how people could take responsibility and work together after something went wrong.",
+      "analysis": "第一段把碎片、胶水、展示前一小时这些已有线索用于合作修复，并用改海报填补等待干胶时间。第二段由给定开头自然进入解释，公开修复处回扣前文不隐藏的责任态度。未把船写成突然恢复完美，也未靠无关奖项强行升华。参考续写不是唯一合理结局。",
+      "origin": "原创任务与原创参考稿"
+    },
+    {
+      "id": "M01",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "She gave me ___ useful piece of advice.",
+      "answer": [
+        "a"
+      ],
+      "analysis": "useful以辅音音素开头；advice不可数，此处piece才是可数中心。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M02",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "The two ___ (child) are waiting outside.",
+      "answer": [
+        "children"
+      ],
+      "analysis": "two要求复数，child是不规则复数children。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K04"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M03",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "The quality of these reports ___ (be) excellent.（描述当前状态）",
+      "answer": [
+        "is"
+      ],
+      "analysis": "主语中心quality为单数；不能被of后reports误导。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K05"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M04",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "We ___ (visit) the museum yesterday.",
+      "answer": [
+        "visited"
+      ],
+      "analysis": "yesterday指结束的过去时间，主动谓语用一般过去。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K07"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M05",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "By the time we arrived, the meeting ___ (begin).",
+      "answer": [
+        "had begun"
+      ],
+      "analysis": "arrived是过去参照点，会议在其前已开始，过去完成had begun。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K07"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M06",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "The hall ___ (clean) now; please wait outside.（强调正在清扫）",
+      "answer": [
+        "is being cleaned"
+      ],
+      "analysis": "厅承受动作，now及提示强调进行，用现在进行被动。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K08"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M07",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "The bridge ___ (build) in 2010 is still in use.",
+      "answer": [
+        "built"
+      ],
+      "analysis": "主句谓语is，bridge承受build，过去分词后置修饰。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K09"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M08",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "She made us ___ (check) every name.",
+      "answer": [
+        "check"
+      ],
+      "analysis": "主动make sb do，宾语补足语用无to不定式。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K08"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M09",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "We were made ___ (check) every name.",
+      "answer": [
+        "to check"
+      ],
+      "analysis": "被动be made to do恢复to。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K08"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M10",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "I look forward to ___ (hear) from you.",
+      "answer": [
+        "hearing"
+      ],
+      "analysis": "to属于介词短语look forward to，后接动名词。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K02",
+        "K09"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M11",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "The guide spoke ___ (clear), so everyone understood.",
+      "answer": [
+        "clearly"
+      ],
+      "analysis": "修饰spoke的方式，用副词clearly。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K10"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M12",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "The soup tastes ___ (good).",
+      "answer": [
+        "good"
+      ],
+      "analysis": "taste为系动词，good是表语；不能因动词后而用well。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K10"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M13",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "This is the village ___ we visited last year.",
+      "answer": [
+        "that",
+        "which"
+      ],
+      "analysis": "visit缺宾语，关系代词that/which；地点名词不自动选where。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K11"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M14",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "This is the village ___ we stayed last year.（只填一个词）",
+      "answer": [
+        "where"
+      ],
+      "analysis": "stay在此不缺直接宾语，需要地点关系，where相当于in which。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K11"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M15",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "I wonder ___ she needs.（问她需要什么物品，只填一个词）",
+      "answer": [
+        "what"
+      ],
+      "analysis": "needs缺宾语，what同时连接并承担宾语角色。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K12"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M16",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "___ he will come remains uncertain.（表示“是否”）",
+      "answer": [
+        "Whether",
+        "whether"
+      ],
+      "analysis": "主语从句表示是否，whether合适；此处不直接用if替代。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K12"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M17",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "Although the task was difficult, ___ continued.（填人称代词，指我们）",
+      "answer": [
+        "we"
+      ],
+      "analysis": "although已引让步从句，不再填but；主句需要主语we。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K13"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M18",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "If it ___ (rain) tomorrow, we will stay inside.",
+      "answer": [
+        "rains"
+      ],
+      "analysis": "真实将来条件，if从句常用一般现在表将来，it为单数。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K07",
+        "K13"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M19",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "If I had more free time now, I ___ (join) the club.",
+      "answer": [
+        "would join",
+        "could join",
+        "might join"
+      ],
+      "analysis": "与现在实际不同的假设，主句可用would/could/might加原形，分别侧重意愿或假设结果、能力或可能、较弱可能；此短句未进一步排除这些含义。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K14"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M20",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "The teacher suggested that we ___ (leave) early.（suggest表示建议）",
+      "answer": [
+        "leave",
+        "should leave"
+      ],
+      "analysis": "suggest表示建议，that从句用原形或should加原形，两个均可。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K14"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M21",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "Mia asked where the station ___ (be).（按过去时叙述当时情况）",
+      "answer": [
+        "was"
+      ],
+      "analysis": "间接问句用陈述语序，station单数，提示限定过去参照。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K12",
+        "K19"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M22",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "He is responsible ___ checking the source.",
+      "answer": [
+        "for"
+      ],
+      "analysis": "be responsible for说明负责内容，for后动名词。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K02",
+        "K10"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M23",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "Their first attempt was ___ (success).",
+      "answer": [
+        "successful"
+      ],
+      "analysis": "was后说明attempt性质，形容词successful；success是名词。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K02"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    },
+    {
+      "id": "M24",
+      "section": "基础迁移",
+      "type": "fill",
+      "prompt": "You have finished the task, ___ you?（填缩略形式）",
+      "answer": [
+        "haven't"
+      ],
+      "analysis": "前句为现在完成肯定，附加疑问用haven't you；本题已给出you且要求缩略形式。",
+      "passage": null,
+      "score": 0,
+      "knowledge": [
+        "K14"
+      ],
+      "origin": "原创教学训练",
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。"
+    }
+  ]
+}

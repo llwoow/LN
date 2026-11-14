@@ -43,6 +43,8 @@ with sync_playwright() as p:
             assert panel.locator('.practice-feedback').count()==(1 if q['id']=='em-start' else 0)
             if q['type'] in ('single','multi'):
                 for option in q['answer']:panel.locator('[name="p-answer"][value="'+option+'"]').check()
+            elif q['type']=='fill':
+                panel.locator('[data-p-value]').fill(q['answer'][0])
             elif q['type']=='numeric':
                 for invalid in ['', '12abc', 'Infinity']:
                     panel.locator('[data-p-value]').fill(invalid);panel.locator('[data-p-submit]').click()
@@ -58,7 +60,7 @@ with sync_playwright() as p:
             else:
                 assert '逐项自评' in panel.locator('.practice-feedback h3').inner_text()
                 panel.locator('[data-p-rubric]').first.check()
-            assert panel.locator('.practice-feedback ol li').count()>=3
+            assert panel.locator('.practice-feedback ol li').count()>=len(q['steps'])
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth'),(width,q['id'])
         # Selection order, drafts and self-check survive reload without changing the result.
         before=page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["em-test-design"]')
