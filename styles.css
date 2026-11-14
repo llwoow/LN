@@ -743,3 +743,8 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .em-figure-scroll { max-width:100%; overflow-x:auto; margin:1rem 0; overscroll-behavior-inline:contain; }
 .em-figure-scroll svg { display:block; width:100%; min-width:680px; height:auto; }
 .semiconductor-figure-scroll { max-width:100%; overflow-x:auto; margin:.8rem 0; overscroll-behavior-inline:contain; }
+
+/* Keep instrument graduations legible; pan the figure without moving the page. */
+.instrument-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; }
+.instrument-scroll img { display:block; width:100%; min-width:680px; max-width:none; height:auto; }
+.instrument-scroll:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }

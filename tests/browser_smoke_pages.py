@@ -75,6 +75,10 @@ def main():
                         assert not page.locator('img[src*="/originals/"]').count(), route
                         if route.endswith('physics-001-q15'):
                             assert page.locator('#figure-q15-caliper img').count() == 1
+                            if width <= 390:
+                                assert page.locator('.instrument-scroll').evaluate('e=>e.scrollWidth>e.clientWidth')
+                            if width == 390:
+                                page.locator('#figure-q15-caliper').screenshot(path=str(evidence / 'references-caliper-390.png'))
                         local_documents = page.locator('a[href]').evaluate_all(r"""nodes => nodes.map(a => new URL(a.href, location.href)).filter(u => u.origin === location.origin && /\.(pdf|xlsx?|docx?|pptx?|zip|7z|rar)$/i.test(u.pathname)).map(u => u.href)""")
                         assert not local_documents, (route, local_documents)
                         if width == 390 and route in ['#course/electrical-machines/transformer-quickref', '#highschool/resources', '#course/hs-physics/physics-001']:

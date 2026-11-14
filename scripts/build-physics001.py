@@ -101,7 +101,7 @@ for q in D['questions']:
     if i in [3,5,6]:markup+='<ol type="A">'+''.join('<li>'+esc(t)+'</li>' for t in options[i])+'</ol>'
     if i in extra_tasks:markup+=rich(extra_tasks[i])
     markup+='<p class="source-citation">来源：《高三物理》试卷001，第'+ '、'.join(map(str,q['source']))+'页，第'+str(i)+'题；命题单位与公开原件链接待核。</p>'
-    if i==15:markup+='<figure id="figure-q15-caliper"><img src="'+BASE+'/figures/q15-caliper.svg" alt="游标零线在主尺2与3毫米之间，第8线重合"><figcaption>图15.0 · 根据原稿已核对的刻线条件重新绘制，20等分游标的标定精度为0.05mm。</figcaption></figure>'
+    if i==15:markup+='<figure id="figure-q15-caliper"><div class="instrument-scroll" tabindex="0" role="region" aria-label="游标刻度示意，可横向查看或点击放大"><a href="'+BASE+'/figures/q15-caliper.svg" target="_blank" rel="noopener"><img src="'+BASE+'/figures/q15-caliper.svg" width="720" height="245" alt="游标零线在主尺2与3毫米之间，第8线重合"></a></div><figcaption>图15.0 · 根据原稿已核对的刻线条件重新绘制，20等分游标的标定精度为0.05mm。</figcaption></figure>'
     markup+='<h3>'+esc(q['foundation']['title'])+'</h3>'+rich(q['foundation']['text'])
     if q.get('figure'):
         markup+='<figure id="figure-q'+str(i)+'"><img loading="lazy" decoding="async" src="'+BASE+'/figures/'+q['figure']+'.svg" alt="第'+str(i)+'题受力、过程或图像示意"><figcaption>图 '+str(i)+'.1 · '+esc(q.get('figure_note','依据题意重绘的教学示意图。'))+'</figcaption></figure>'
