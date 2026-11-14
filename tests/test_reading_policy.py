@@ -18,7 +18,7 @@ class ReadingPolicy(unittest.TestCase):
      self.assertEqual(target.attrs.get('id'),e['sourceAnchor'],e['id'])
      self.assertIn(e['match'],B['clean'](target.text()),e['id'])
  def test_math_atoms_keep_semantic_superscripts_and_hats(self):
-  cases=[('<msup><mi>V</mi><mo>+</mo></msup>','V^+'),('<msubsup><mi>u</mi><mi>k</mi><mo>∗</mo></msubsup>','u_k^*'),('<mover><mi>i</mi><mo>^</mo></mover>','hat:i'),('<msup><mi>R</mi><mn>2</mn></msup>','R')]
+  cases=[('<msup><mi>V</mi><mo>+</mo></msup>','V^+'),('<msup><mi>V</mi><mo>−</mo></msup>','V^-'),('<msubsup><mi>u</mi><mi>k</mi><mo>∗</mo></msubsup>','u_k^*'),('<mover><mi>i</mi><mo>^</mo></mover>','hat:i'),('<msup><mi>R</mi><mn>2</mn></msup>','R')]
   for markup,key in cases:
    node=B['Document'](markup).root.children[0];self.assertEqual(B['atom'](node),key)
  def test_brief_reference_and_no_detailed_citation_moved_to_end(self):

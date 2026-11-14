@@ -54,7 +54,6 @@ def main():
     open_symbol(EMC,'emc-7-2','t','D.7.2.1','时间')
     open_symbol(EMC,'emc-4-4','t','D.4.4.3','厚度')
     open_symbol(EMC,'emc-8-2','V^+','D.8.2.2','入射')
-    open_symbol(EMC,'emc-8-2','V^-','D.8.2.2','反射')
     # Upper signs and hats carry meaning; matching only the base letter is wrong.
     open_symbol(RD,'rd-cascade-control','u_k^*','R.4.8','未限幅')
     open_symbol(RD,'rd-cascade-control','u_k','R.4.8','裁剪后')

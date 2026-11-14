@@ -3812,7 +3812,7 @@
       "equations": [
         "D.6.2.4"
       ],
-      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
       "sourceAnchor": "symbols-D-6-2-4"
     },
     {
@@ -3831,7 +3831,7 @@
       "equations": [
         "D.6.2.4"
       ],
-      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
       "sourceAnchor": "symbols-D-6-2-4"
     },
     {
@@ -3841,8 +3841,8 @@
       "keys": [
         "AF"
       ],
-      "description": "校准天线因子。",
-      "unitHtml": "dB/m",
+      "description": "所用天线校准因子的对数值：将线性E/U（单位m⁻¹）除以1 m⁻¹后取20log₁₀。惯用dB/m记号不表示每米衰减。",
+      "unitHtml": "dB（参考1 m⁻¹；惯用记作dB/m）",
       "section": "emc-6-2",
       "sections": [
         "emc-6-2"
@@ -3850,7 +3850,7 @@
       "equations": [
         "D.6.2.4"
       ],
-      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
       "sourceAnchor": "symbols-D-6-2-4"
     },
     {
@@ -3869,7 +3869,7 @@
       "equations": [
         "D.6.2.4"
       ],
-      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
       "sourceAnchor": "symbols-D-6-2-4"
     },
     {
@@ -3888,7 +3888,7 @@
       "equations": [
         "D.6.2.4"
       ],
-      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
       "sourceAnchor": "symbols-D-6-2-4"
     },
     {
@@ -3945,7 +3945,7 @@
       "equations": [
         "D.6.3.2"
       ],
-      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线校准因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
       "sourceAnchor": "symbols-D-6-3-2"
     },
     {
@@ -3964,7 +3964,7 @@
       "equations": [
         "D.6.3.2"
       ],
-      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线校准因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
       "sourceAnchor": "symbols-D-6-3-2"
     },
     {
@@ -3974,8 +3974,8 @@
       "keys": [
         "AF"
       ],
-      "description": "所用天线的校准天线因子。",
-      "unitHtml": "dB/m",
+      "description": "所用天线校准因子的对数值：将线性E/U（单位m⁻¹）除以1 m⁻¹后取20log₁₀。惯用dB/m记号不表示每米衰减。",
+      "unitHtml": "dB（参考1 m⁻¹；惯用记作dB/m）",
       "section": "emc-6-3",
       "sections": [
         "emc-6-3"
@@ -3983,7 +3983,7 @@
       "equations": [
         "D.6.3.2"
       ],
-      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线校准因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
       "sourceAnchor": "symbols-D-6-3-2"
     },
     {
@@ -4002,7 +4002,7 @@
       "equations": [
         "D.6.3.2"
       ],
-      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线校准因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
       "sourceAnchor": "symbols-D-6-3-2"
     },
     {
@@ -4021,7 +4021,7 @@
       "equations": [
         "D.6.3.2"
       ],
-      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线校准因子的对数值（dB，以1 m⁻¹为参考，惯用记作dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
       "sourceAnchor": "symbols-D-6-3-2"
     },
     {
