@@ -6343,6 +6343,3871 @@
         "<p>先设坐标 → 动量与能量定初速 → 列事件表并比较发生时间 → 每次碰撞更新速度与摩擦方向 → 核查有无后续事件 → 临界题先解释最小间距为何在终点。</p>",
         "(1)6m/s、2m/s；1.50m　(2)1.25m　(3)2.10kg"
       ]
+    },
+    {
+      "id": "hs-english2027-L01",
+      "sourceQuestion": "L01",
+      "collection": "english-2027",
+      "passage": "A01",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k07",
+        "english-2027-t01"
+      ],
+      "title": "L01 · When will the science club start?",
+      "type": "single",
+      "prompt": "When will the science club start?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A01.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A01</h3><p>W: Does the science club still meet at four?<br>M: No. The laboratory is being cleaned. We will start at half past four.</p></div></details><p>When will the science club start?</p>",
+      "steps": [
+        "half past four是更新后的开始时间。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果最终通知改为“five, not half past four”，应记录哪个时间？解释为何原约定不是最后安排。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "At 4:00.",
+          "feedback": "4点是原安排，已被否定。"
+        },
+        {
+          "id": "B",
+          "text": "At 4:30.",
+          "feedback": "half past four是更新后的开始时间。"
+        },
+        {
+          "id": "C",
+          "text": "At 5:00.",
+          "feedback": "材料没有5点这一安排。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-L02",
+      "sourceQuestion": "L02",
+      "collection": "english-2027",
+      "passage": "A02",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L02 · Where did the woman buy her ticket?",
+      "type": "single",
+      "prompt": "Where did the woman buy her ticket?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A02.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A02</h3><p>M: Did you get your train ticket online?<br>W: I tried, but my phone stopped working. So I bought it at the station this morning.</p></div></details><p>Where did the woman buy her ticket?</p>",
+      "steps": [
+        "So后的句子说明实际购买地点。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把购票结尾改为“I borrowed another phone and completed the payment online”。原先的购票地点判断还成立吗？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Online.",
+          "feedback": "网上是未完成的尝试。"
+        },
+        {
+          "id": "B",
+          "text": "At the station.",
+          "feedback": "So后的句子说明实际购买地点。"
+        },
+        {
+          "id": "C",
+          "text": "On the train.",
+          "feedback": "没有在列车上购买的信息。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-L03",
+      "sourceQuestion": "L03",
+      "collection": "english-2027",
+      "passage": "A03",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k13",
+        "english-2027-t01"
+      ],
+      "title": "L03 · Why will the man miss the activity?",
+      "type": "single",
+      "prompt": "Why will the man miss the activity?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A03.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A03</h3><p>W: Are you coming to the beach clean-up this afternoon?<br>M: I would like to, but my laboratory report is due tonight. I need the afternoon to finish it.</p></div></details><p>Why will the man miss the activity?</p>",
+      "steps": [
+        "but后给出截止时间和必须完成的任务。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果报告已经交完，但说话者随后说“I have a fever”，缺席原因应怎样改变？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "He has to finish a report.",
+          "feedback": "but后给出截止时间和必须完成的任务。"
+        },
+        {
+          "id": "B",
+          "text": "He dislikes the beach.",
+          "feedback": "他说would like to，不能推出不喜欢活动。"
+        },
+        {
+          "id": "C",
+          "text": "He is feeling ill.",
+          "feedback": "没有生病信息。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-L04",
+      "sourceQuestion": "L04",
+      "collection": "english-2027",
+      "passage": "A04",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k05",
+        "english-2027-t01"
+      ],
+      "title": "L04 · What belongs to the woman?",
+      "type": "single",
+      "prompt": "What belongs to the woman?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A04.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A04</h3><p>M: Is that new jacket yours?<br>W: No, I borrowed it from my sister. The black bag beside it is mine.</p></div></details><p>What belongs to the woman?</p>",
+      "steps": [
+        "is mine明确说明黑包归她。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若改成“Both the jacket and the bag belong to my sister”，哪些所有关系与原段不同？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "The jacket.",
+          "feedback": "外套是从姐姐或妹妹那里借的。"
+        },
+        {
+          "id": "B",
+          "text": "The black bag.",
+          "feedback": "is mine明确说明黑包归她。"
+        },
+        {
+          "id": "C",
+          "text": "Both items.",
+          "feedback": "借来的外套不属于她。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-L05",
+      "sourceQuestion": "L05",
+      "collection": "english-2027",
+      "passage": "A05",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L05 · What does the man recommend?",
+      "type": "single",
+      "prompt": "What does the man recommend?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A05.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A05</h3><p>W: The direct train to the museum has been cancelled. What should we do?<br>M: We could walk, but that takes an hour. I suggest taking bus twelve. It stops by the museum gate.</p></div></details><p>What does the man recommend?</p>",
+      "steps": [
+        "I suggest后明确推荐12路公交。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若结尾改为“Bus twelve is cancelled too; let us walk”，最终建议是什么？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Walking to the museum.",
+          "feedback": "步行是被比较的候选，并非最后建议。"
+        },
+        {
+          "id": "B",
+          "text": "Waiting for another direct train.",
+          "feedback": "没有建议等另一班直达车。"
+        },
+        {
+          "id": "C",
+          "text": "Taking bus 12.",
+          "feedback": "I suggest后明确推荐12路公交。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-L06",
+      "sourceQuestion": "L06",
+      "collection": "english-2027",
+      "passage": "A06",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L06 · How many seats were originally booked?",
+      "type": "single",
+      "prompt": "How many seats were originally booked?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A06.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A06</h3><p>M: I booked eight seats for the school play on Saturday.<br>W: Three people have just told me they cannot come. Could you reduce the booking?<br>M: Of course. Five seats, then. Does the play still start at seven?<br>W: No, the start has moved to six thirty. We should arrive fifteen minutes early.</p></div></details><p>How many seats were originally booked?</p>",
+      "steps": [
+        "第一句明确原订8座。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把原订座数改为十、取消三人：分别回答“originally”和“now”，为什么不能混用？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Three.",
+          "feedback": "3是取消的人数。"
+        },
+        {
+          "id": "B",
+          "text": "Five.",
+          "feedback": "5是更新后的人数。"
+        },
+        {
+          "id": "C",
+          "text": "Eight.",
+          "feedback": "第一句明确原订8座。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-L07",
+      "sourceQuestion": "L07",
+      "collection": "english-2027",
+      "passage": "A06",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L07 · How many seats are needed now?",
+      "type": "single",
+      "prompt": "How many seats are needed now?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A06.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A06</h3><p>M: I booked eight seats for the school play on Saturday.<br>W: Three people have just told me they cannot come. Could you reduce the booking?<br>M: Of course. Five seats, then. Does the play still start at seven?<br>W: No, the start has moved to six thirty. We should arrive fifteen minutes early.</p></div></details><p>How many seats are needed now?</p>",
+      "steps": [
+        "8减去3，且男士确认five seats。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果刚取消的三人中两人又能参加，在原八席基础上最后需几席？写清事件顺序。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Three.",
+          "feedback": "3是取消，不是剩余。"
+        },
+        {
+          "id": "B",
+          "text": "Five.",
+          "feedback": "8减去3，且男士确认five seats。"
+        },
+        {
+          "id": "C",
+          "text": "Eight.",
+          "feedback": "8是旧安排。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-L08",
+      "sourceQuestion": "L08",
+      "collection": "english-2027",
+      "passage": "A06",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L08 · When should they arrive?",
+      "type": "single",
+      "prompt": "When should they arrive?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A06.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A06</h3><p>M: I booked eight seats for the school play on Saturday.<br>W: Three people have just told me they cannot come. Could you reduce the booking?<br>M: Of course. Five seats, then. Does the play still start at seven?<br>W: No, the start has moved to six thirty. We should arrive fifteen minutes early.</p></div></details><p>When should they arrive?</p>",
+      "steps": [
+        "6:30开始，提前15分钟为6:15。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果开场改为六点四十且仍提前十五分钟，几点到？提前量对应哪个时间？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "At 6:15.",
+          "feedback": "6:30开始，提前15分钟为6:15。"
+        },
+        {
+          "id": "B",
+          "text": "At 6:30.",
+          "feedback": "6:30是开始时间，不是提前到达时间。"
+        },
+        {
+          "id": "C",
+          "text": "At 7:00.",
+          "feedback": "7点是已变更的旧开始时间。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-L09",
+      "sourceQuestion": "L09",
+      "collection": "english-2027",
+      "passage": "A07",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01",
+        "english-2027-k17"
+      ],
+      "title": "L09 · Why did the class start the garden?",
+      "type": "single",
+      "prompt": "Why did the class start the garden?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A07.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A07</h3><p>W: Your class has a roof garden now. Why did you start it?<br>M: We wanted a place where students could learn how food grows, rather than only reading about it.<br>W: Was it easy to keep the plants healthy?<br>M: Not at first. The young plants got too much sun. We moved some pots into the shade and watered them early in the morning.<br>W: What will you do next?<br>M: We will invite younger students to visit. Selling vegetables is not our plan.</p></div></details><p>Why did the class start the garden?</p>",
+      "steps": [
+        "learn how food grows与实践学习对应。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若对话明确说园子用于给食堂供菜，能否仍选“提供实践学习”？说明主要目的与附带好处的区别。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "To sell vegetables.",
+          "feedback": "最后明确不打算售卖。"
+        },
+        {
+          "id": "B",
+          "text": "To provide practical learning.",
+          "feedback": "learn how food grows与实践学习对应。"
+        },
+        {
+          "id": "C",
+          "text": "To replace all classroom lessons.",
+          "feedback": "没有取代所有课程。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-L10",
+      "sourceQuestion": "L10",
+      "collection": "english-2027",
+      "passage": "A07",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01",
+        "english-2027-k17"
+      ],
+      "title": "L10 · What problem did the plants face?",
+      "type": "single",
+      "prompt": "What problem did the plants face?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A07.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A07</h3><p>W: Your class has a roof garden now. Why did you start it?<br>M: We wanted a place where students could learn how food grows, rather than only reading about it.<br>W: Was it easy to keep the plants healthy?<br>M: Not at first. The young plants got too much sun. We moved some pots into the shade and watered them early in the morning.<br>W: What will you do next?<br>M: We will invite younger students to visit. Selling vegetables is not our plan.</p></div></details><p>What problem did the plants face?</p>",
+      "steps": [
+        "男士明确说too much sun。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把too much sun改为not enough water，解释为什么不能只听见plants就沿用原答案。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Too much sunlight.",
+          "feedback": "男士明确说too much sun。"
+        },
+        {
+          "id": "B",
+          "text": "Too little space.",
+          "feedback": "没有空间问题。"
+        },
+        {
+          "id": "C",
+          "text": "Damage from visitors.",
+          "feedback": "尚未邀请参观，无访客破坏。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-L11",
+      "sourceQuestion": "L11",
+      "collection": "english-2027",
+      "passage": "A07",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01",
+        "english-2027-k17"
+      ],
+      "title": "L11 · What is the next plan?",
+      "type": "single",
+      "prompt": "What is the next plan?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A07.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A07</h3><p>W: Your class has a roof garden now. Why did you start it?<br>M: We wanted a place where students could learn how food grows, rather than only reading about it.<br>W: Was it easy to keep the plants healthy?<br>M: Not at first. The young plants got too much sun. We moved some pots into the shade and watered them early in the morning.<br>W: What will you do next?<br>M: We will invite younger students to visit. Selling vegetables is not our plan.</p></div></details><p>What is the next plan?</p>",
+      "steps": [
+        "最后一句计划邀请低年级学生。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若最后一句改成“We will sell some vegetables after the younger students visit”，区分先做什么和最终计划。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Moving every pot indoors.",
+          "feedback": "只把部分花盆移到阴处，不是全部搬室内。"
+        },
+        {
+          "id": "B",
+          "text": "Opening a vegetable shop.",
+          "feedback": "selling被明确排除。"
+        },
+        {
+          "id": "C",
+          "text": "Inviting younger students.",
+          "feedback": "最后一句计划邀请低年级学生。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-L12",
+      "sourceQuestion": "L12",
+      "collection": "english-2027",
+      "passage": "A08",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L12 · What is the main difficulty?",
+      "type": "single",
+      "prompt": "What is the main difficulty?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A08.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A08</h3><p>W: We have all the parts for the small model bridge, but I cannot understand the instructions.<br>M: Let us ask Mr Lee, the design teacher. He helped the other team yesterday.<br>W: Good idea. I do not want to attach the pieces in the wrong order.<br>M: I will take the instruction sheet to him now. Please keep the parts together until I come back.</p></div></details><p>What is the main difficulty?</p>",
+      "steps": [
+        "cannot understand the instructions是当前困难。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果说明书已读懂，但发现缺了桥梁支架，主要困难如何变化？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Missing parts.",
+          "feedback": "首句明确零件齐全。"
+        },
+        {
+          "id": "B",
+          "text": "Unclear instructions.",
+          "feedback": "cannot understand the instructions是当前困难。"
+        },
+        {
+          "id": "C",
+          "text": "Lack of glue.",
+          "feedback": "未提到胶水不足。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-L13",
+      "sourceQuestion": "L13",
+      "collection": "english-2027",
+      "passage": "A08",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L13 · Who is Mr Lee?",
+      "type": "single",
+      "prompt": "Who is Mr Lee?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A08.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A08</h3><p>W: We have all the parts for the small model bridge, but I cannot understand the instructions.<br>M: Let us ask Mr Lee, the design teacher. He helped the other team yesterday.<br>W: Good idea. I do not want to attach the pieces in the wrong order.<br>M: I will take the instruction sheet to him now. Please keep the parts together until I come back.</p></div></details><p>Who is Mr Lee?</p>",
+      "steps": [
+        "对话直接介绍其身份。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若改成“Mr Lee works in the model shop”，职业判断应由哪个明确信息支持？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "A design teacher.",
+          "feedback": "对话直接介绍其身份。"
+        },
+        {
+          "id": "B",
+          "text": "A shop assistant.",
+          "feedback": "没有商店情境。"
+        },
+        {
+          "id": "C",
+          "text": "A team member from their class.",
+          "feedback": "并未说是同班队员。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-L14",
+      "sourceQuestion": "L14",
+      "collection": "english-2027",
+      "passage": "A08",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L14 · What will the man do immediately?",
+      "type": "single",
+      "prompt": "What will the man do immediately?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A08.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A08</h3><p>W: We have all the parts for the small model bridge, but I cannot understand the instructions.<br>M: Let us ask Mr Lee, the design teacher. He helped the other team yesterday.<br>W: Good idea. I do not want to attach the pieces in the wrong order.<br>M: I will take the instruction sheet to him now. Please keep the parts together until I come back.</p></div></details><p>What will the man do immediately?</p>",
+      "steps": [
+        "I will...now给出紧接着的行动。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果最后改为“I will keep the parts here; you take the sheet”，谁马上做什么？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Attach the pieces.",
+          "feedback": "先求助，尚不拼装。"
+        },
+        {
+          "id": "B",
+          "text": "Buy a new bridge.",
+          "feedback": "没有购买新桥的计划。"
+        },
+        {
+          "id": "C",
+          "text": "Take the sheet to Mr Lee.",
+          "feedback": "I will...now给出紧接着的行动。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-L15",
+      "sourceQuestion": "L15",
+      "collection": "english-2027",
+      "passage": "A09",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L15 · Why does the man need a camera?",
+      "type": "single",
+      "prompt": "Why does the man need a camera?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A09.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A09</h3><p>M: I need a camera for the class interview project. May I borrow this one for a week?<br>W: Our equipment desk usually lends cameras for three days. If you need it longer, you must request an extension online.<br>M: I will do that. What should I bring when I collect it?<br>W: Your student card. And please return the charger with the camera. The last user forgot it.<br>M: I will check both items before I leave.</p></div></details><p>Why does the man need a camera?</p>",
+      "steps": [
+        "开头直接给出目的。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若借相机用于家庭采访，不能只因出现interview就判断为班级项目。怎样核对项目归属？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "For a class interview project.",
+          "feedback": "开头直接给出目的。"
+        },
+        {
+          "id": "B",
+          "text": "For a family holiday.",
+          "feedback": "未提家庭旅行。"
+        },
+        {
+          "id": "C",
+          "text": "For a photography competition.",
+          "feedback": "未提摄影比赛。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-L16",
+      "sourceQuestion": "L16",
+      "collection": "english-2027",
+      "passage": "A09",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L16 · What is the usual loan period?",
+      "type": "single",
+      "prompt": "What is the usual loan period?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A09.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A09</h3><p>M: I need a camera for the class interview project. May I borrow this one for a week?<br>W: Our equipment desk usually lends cameras for three days. If you need it longer, you must request an extension online.<br>M: I will do that. What should I bring when I collect it?<br>W: Your student card. And please return the charger with the camera. The last user forgot it.<br>M: I will check both items before I leave.</p></div></details><p>What is the usual loan period?</p>",
+      "steps": [
+        "usually...three days是常规借用期。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若通常借期仍三天、已批准延长到一周，区分usual period与this time。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "One day.",
+          "feedback": "未给一天。"
+        },
+        {
+          "id": "B",
+          "text": "Three days.",
+          "feedback": "usually...three days是常规借用期。"
+        },
+        {
+          "id": "C",
+          "text": "A week.",
+          "feedback": "一周是男士希望的时间，需延期申请。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-L17",
+      "sourceQuestion": "L17",
+      "collection": "english-2027",
+      "passage": "A09",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L17 · What does the woman remind him to return?",
+      "type": "single",
+      "prompt": "What does the woman remind him to return?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A09.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A09</h3><p>M: I need a camera for the class interview project. May I borrow this one for a week?<br>W: Our equipment desk usually lends cameras for three days. If you need it longer, you must request an extension online.<br>M: I will do that. What should I bring when I collect it?<br>W: Your student card. And please return the charger with the camera. The last user forgot it.<br>M: I will check both items before I leave.</p></div></details><p>What does the woman remind him to return?</p>",
+      "steps": [
+        "明确说return the charger with the camera。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果提醒改成“Keep your card; return the charger and the case”，分别列出保留物与归还物。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "A student card.",
+          "feedback": "学生卡用于领取时核验，不是设备归还物。"
+        },
+        {
+          "id": "B",
+          "text": "A memory card only.",
+          "feedback": "没有这一提醒。"
+        },
+        {
+          "id": "C",
+          "text": "The charger.",
+          "feedback": "明确说return the charger with the camera。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-L18",
+      "sourceQuestion": "L18",
+      "collection": "english-2027",
+      "passage": "A10",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L18 · Where will the group meet?",
+      "type": "single",
+      "prompt": "Where will the group meet?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A10.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A10</h3><p>W: Welcome to our morning nature walk. We will meet at the south gate at nine. The path beside the lake is closed after last night&#x27;s heavy rain, so we will use the forest route instead. It is slightly longer, but the ground is firmer. Please bring drinking water and keep a safe distance from any animals. We will pause at the old wooden shelter for a short talk about local birds. The walk will finish at half past eleven. If the rain returns, the group leader will guide us back by the shorter exit path. Please stay with the group.</p></div></details><p>Where will the group meet?</p>",
+      "steps": [
+        "开头给出集合地点south gate。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把集合地点改成北门、木棚仍为途中停留点：怎样用事件角色排除干扰？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "At the wooden shelter.",
+          "feedback": "木棚是途中停留点。"
+        },
+        {
+          "id": "B",
+          "text": "At the south gate.",
+          "feedback": "开头给出集合地点south gate。"
+        },
+        {
+          "id": "C",
+          "text": "Beside the lake.",
+          "feedback": "湖边路线已关闭。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-L19",
+      "sourceQuestion": "L19",
+      "collection": "english-2027",
+      "passage": "A10",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L19 · Why has the route changed?",
+      "type": "single",
+      "prompt": "Why has the route changed?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A10.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A10</h3><p>W: Welcome to our morning nature walk. We will meet at the south gate at nine. The path beside the lake is closed after last night&#x27;s heavy rain, so we will use the forest route instead. It is slightly longer, but the ground is firmer. Please bring drinking water and keep a safe distance from any animals. We will pause at the old wooden shelter for a short talk about local birds. The walk will finish at half past eleven. If the rain returns, the group leader will guide us back by the shorter exit path. Please stay with the group.</p></div></details><p>Why has the route changed?</p>",
+      "steps": [
+        "昨晚大雨导致湖边小路关闭。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若森林路线因修路关闭而改走湖边，重新写出原因—路线关系。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "The lake path is closed after rain.",
+          "feedback": "昨晚大雨导致湖边小路关闭。"
+        },
+        {
+          "id": "B",
+          "text": "The forest route is shorter.",
+          "feedback": "森林路线稍长，非更短。"
+        },
+        {
+          "id": "C",
+          "text": "There are no birds by the lake.",
+          "feedback": "没有湖边无鸟的信息。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-L20",
+      "sourceQuestion": "L20",
+      "collection": "english-2027",
+      "passage": "A10",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t01"
+      ],
+      "title": "L20 · When is the walk expected to finish?",
+      "type": "single",
+      "prompt": "When is the walk expected to finish?",
+      "promptHtml": "<p>合成练习音。</p><audio controls preload=\"none\" src=\"courses/hs-english/review-2027/audio/A10.mp3\"></audio><details data-practice-transcript><summary>查看本段原文</summary><div class=\"english-passage\"><h3>听力原文 A10</h3><p>W: Welcome to our morning nature walk. We will meet at the south gate at nine. The path beside the lake is closed after last night&#x27;s heavy rain, so we will use the forest route instead. It is slightly longer, but the ground is firmer. Please bring drinking water and keep a safe distance from any animals. We will pause at the old wooden shelter for a short talk about local birds. The walk will finish at half past eleven. If the rain returns, the group leader will guide us back by the shorter exit path. Please stay with the group.</p></div></details><p>When is the walk expected to finish?</p>",
+      "steps": [
+        "half past eleven为11:30。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若九点出发、全程延长半小时，预计结束时间如何变化？别把出发时间当结束时间。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "At 9:00.",
+          "feedback": "9点是集合时间。"
+        },
+        {
+          "id": "B",
+          "text": "At 11:00.",
+          "feedback": "没有11点结束的安排。"
+        },
+        {
+          "id": "C",
+          "text": "At 11:30.",
+          "feedback": "half past eleven为11:30。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-R01",
+      "sourceQuestion": "R01",
+      "collection": "english-2027",
+      "passage": "RA",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k04",
+        "english-2027-t02"
+      ],
+      "title": "R01 · What must a fourteen-year-old do to join Bicycle Basics?",
+      "type": "single",
+      "prompt": "What must a fourteen-year-old do to join Bicycle Basics?",
+      "promptHtml": "<div class=\"english-passage\"><h3>A｜A school repair weekend</h3><p>Our school is holding a Repair Weekend to help students give everyday objects a longer life. The event is open to students and their families, but each session has a different requirement. All tools will be provided. Visitors should not bring large electrical equipment.</p><p>Saturday morning: Bicycle Basics, 9:00–11:00, in the sports yard. A local mechanic will show visitors how to check a tyre and adjust a seat. Students aged twelve and above may join, but anyone under sixteen must come with an adult. Bring your own bicycle. This session is free.</p><p>Saturday afternoon: Creative Clothing, 14:00–16:00, in the art room. Learn to repair a small tear and turn an old shirt into a useful bag. Participants should bring a clean piece of clothing. Materials for decoration cost five yuan. No previous sewing experience is needed.</p><p>Sunday morning: Book Care, 10:00–11:30, in the library. Members of the reading club will demonstrate simple ways to protect damaged book covers. Bring one book with a damaged cover, rather than a valuable old book. This session is free, but places are limited to twenty people.</p><p>To book a place, send your name and chosen session to the school office by Thursday afternoon. A confirmation message will explain where to meet. If a session is full, the office will offer a place on the waiting list.</p></div><p>What must a fourteen-year-old do to join Bicycle Basics?</p>",
+      "steps": [
+        "Bicycle Basics要求16岁以下成人陪同，14岁适用。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果“十六岁以下”改为“十四岁以下”，一名正好十四岁的学生还必须由成人陪同吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Bring large electrical equipment.",
+          "feedback": "大件电器被排除，且与骑车活动不符。"
+        },
+        {
+          "id": "B",
+          "text": "Come with an adult.",
+          "feedback": "Bicycle Basics要求16岁以下成人陪同，14岁适用。"
+        },
+        {
+          "id": "C",
+          "text": "Pay five yuan.",
+          "feedback": "5元属于服装装饰材料，不是自行车环节。"
+        },
+        {
+          "id": "D",
+          "text": "Have previous repair experience.",
+          "feedback": "未要求已有维修经验。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-R02",
+      "sourceQuestion": "R02",
+      "collection": "english-2027",
+      "passage": "RA",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t02"
+      ],
+      "title": "R02 · Which session charges for decoration materials?",
+      "type": "single",
+      "prompt": "Which session charges for decoration materials?",
+      "promptHtml": "<div class=\"english-passage\"><h3>A｜A school repair weekend</h3><p>Our school is holding a Repair Weekend to help students give everyday objects a longer life. The event is open to students and their families, but each session has a different requirement. All tools will be provided. Visitors should not bring large electrical equipment.</p><p>Saturday morning: Bicycle Basics, 9:00–11:00, in the sports yard. A local mechanic will show visitors how to check a tyre and adjust a seat. Students aged twelve and above may join, but anyone under sixteen must come with an adult. Bring your own bicycle. This session is free.</p><p>Saturday afternoon: Creative Clothing, 14:00–16:00, in the art room. Learn to repair a small tear and turn an old shirt into a useful bag. Participants should bring a clean piece of clothing. Materials for decoration cost five yuan. No previous sewing experience is needed.</p><p>Sunday morning: Book Care, 10:00–11:30, in the library. Members of the reading club will demonstrate simple ways to protect damaged book covers. Bring one book with a damaged cover, rather than a valuable old book. This session is free, but places are limited to twenty people.</p><p>To book a place, send your name and chosen session to the school office by Thursday afternoon. A confirmation message will explain where to meet. If a session is full, the office will offer a place on the waiting list.</p></div><p>Which session charges for decoration materials?</p>",
+      "steps": [
+        "服装环节明确装饰材料5元。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若图书护理新增五元材料费，“只有一个场次收费”的结论还成立吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Bicycle Basics.",
+          "feedback": "自行车环节免费。"
+        },
+        {
+          "id": "B",
+          "text": "Book Care.",
+          "feedback": "图书护理免费。"
+        },
+        {
+          "id": "C",
+          "text": "Creative Clothing.",
+          "feedback": "服装环节明确装饰材料5元。"
+        },
+        {
+          "id": "D",
+          "text": "Every session.",
+          "feedback": "不能把一个环节费用扩大到所有环节。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-R03",
+      "sourceQuestion": "R03",
+      "collection": "english-2027",
+      "passage": "RA",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k13",
+        "english-2027-t02"
+      ],
+      "title": "R03 · What is required to book a place?",
+      "type": "single",
+      "prompt": "What is required to book a place?",
+      "promptHtml": "<div class=\"english-passage\"><h3>A｜A school repair weekend</h3><p>Our school is holding a Repair Weekend to help students give everyday objects a longer life. The event is open to students and their families, but each session has a different requirement. All tools will be provided. Visitors should not bring large electrical equipment.</p><p>Saturday morning: Bicycle Basics, 9:00–11:00, in the sports yard. A local mechanic will show visitors how to check a tyre and adjust a seat. Students aged twelve and above may join, but anyone under sixteen must come with an adult. Bring your own bicycle. This session is free.</p><p>Saturday afternoon: Creative Clothing, 14:00–16:00, in the art room. Learn to repair a small tear and turn an old shirt into a useful bag. Participants should bring a clean piece of clothing. Materials for decoration cost five yuan. No previous sewing experience is needed.</p><p>Sunday morning: Book Care, 10:00–11:30, in the library. Members of the reading club will demonstrate simple ways to protect damaged book covers. Bring one book with a damaged cover, rather than a valuable old book. This session is free, but places are limited to twenty people.</p><p>To book a place, send your name and chosen session to the school office by Thursday afternoon. A confirmation message will explain where to meet. If a session is full, the office will offer a place on the waiting list.</p></div><p>What is required to book a place?</p>",
+      "steps": [
+        "末段给出姓名、场次和截止时间。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果截止时间是Thursday afternoon，周四晚上发送符合要求吗？区分报名截止与活动开始。",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Arriving before Thursday morning.",
+          "feedback": "截止为周四下午，且要求发送报名信息，不是周四早到场。"
+        },
+        {
+          "id": "B",
+          "text": "Taking a valuable old book.",
+          "feedback": "珍贵古书被明确排除。"
+        },
+        {
+          "id": "C",
+          "text": "Calling the mechanic directly.",
+          "feedback": "报名联系学校办公室，不是技师。"
+        },
+        {
+          "id": "D",
+          "text": "Sending a name and chosen session by Thursday afternoon.",
+          "feedback": "末段给出姓名、场次和截止时间。"
+        }
+      ],
+      "answer": [
+        "D"
+      ]
+    },
+    {
+      "id": "hs-english2027-R04",
+      "sourceQuestion": "R04",
+      "collection": "english-2027",
+      "passage": "RB",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k15",
+        "english-2027-t02"
+      ],
+      "title": "R04 · What was Ella first asked to do?",
+      "type": "single",
+      "prompt": "What was Ella first asked to do?",
+      "promptHtml": "<div class=\"english-passage\"><h3>B｜A question before the survey</h3><p>When Ella joined the school environmental club, she expected to spend her first month planting flowers. Instead, the club leader asked her to find out why students rarely used the new bottle-filling station. Ella thought the answer was obvious: students preferred buying sweet drinks. She designed a questionnaire with that idea in mind.</p><p>Before she handed it out, her friend Sam read the questions. Most of them asked students to explain why they liked sweet drinks. &quot;What if that is not the main reason?&quot; he asked. Ella felt defensive. She had worked on the sheet all evening. But she agreed to observe the station with him during lunch.</p><p>They soon noticed something surprising. Several students carrying empty reusable bottles walked past the station. One stopped, looked at the long queue and left. Another explained that the station was too far from the dining hall to reach before the next lesson. A third had not realised that the water was free.</p><p>Ella rewrote the questionnaire. This time, students could describe practical difficulties and suggest changes. The answers did not prove that everyone would stop buying drinks, but they helped the club identify two immediate improvements: clearer signs and a better place for the queue.</p><p>A month later, Ella still helped plant flowers. Yet the experience she remembered most was the quiet lunch break beside the water station. She had learned that a useful question begins with attention, not with an answer already decided.</p></div><p>What was Ella first asked to do?</p>",
+      "steps": [
+        "首段club leader要求调查使用少的原因。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若首段任务明确改为种花，而调查饮水站只是额外建议，哪项应是first asked？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Plant flowers at the station.",
+          "feedback": "她原先期待种花，实际任务另有内容。"
+        },
+        {
+          "id": "B",
+          "text": "Find reasons for the station’s limited use.",
+          "feedback": "首段club leader要求调查使用少的原因。"
+        },
+        {
+          "id": "C",
+          "text": "Sell reusable bottles.",
+          "feedback": "未给售卖任务。"
+        },
+        {
+          "id": "D",
+          "text": "Prove that sweet drinks were unhealthy.",
+          "feedback": "原文不是验证饮料健康问题。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-R05",
+      "sourceQuestion": "R05",
+      "collection": "english-2027",
+      "passage": "RB",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k16",
+        "english-2027-t02"
+      ],
+      "title": "R05 · Why did Sam question the questionnaire?",
+      "type": "single",
+      "prompt": "Why did Sam question the questionnaire?",
+      "promptHtml": "<div class=\"english-passage\"><h3>B｜A question before the survey</h3><p>When Ella joined the school environmental club, she expected to spend her first month planting flowers. Instead, the club leader asked her to find out why students rarely used the new bottle-filling station. Ella thought the answer was obvious: students preferred buying sweet drinks. She designed a questionnaire with that idea in mind.</p><p>Before she handed it out, her friend Sam read the questions. Most of them asked students to explain why they liked sweet drinks. &quot;What if that is not the main reason?&quot; he asked. Ella felt defensive. She had worked on the sheet all evening. But she agreed to observe the station with him during lunch.</p><p>They soon noticed something surprising. Several students carrying empty reusable bottles walked past the station. One stopped, looked at the long queue and left. Another explained that the station was too far from the dining hall to reach before the next lesson. A third had not realised that the water was free.</p><p>Ella rewrote the questionnaire. This time, students could describe practical difficulties and suggest changes. The answers did not prove that everyone would stop buying drinks, but they helped the club identify two immediate improvements: clearer signs and a better place for the queue.</p><p>A month later, Ella still helped plant flowers. Yet the experience she remembered most was the quiet lunch break beside the water station. She had learned that a useful question begins with attention, not with an answer already decided.</p></div><p>Why did Sam question the questionnaire?</p>",
+      "steps": [
+        "问题大多围绕喜欢甜饮料，预设了原因。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把问卷改为先问“有什么实际困难”，它是否仍预设喜欢甜饮料是主因？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "It was too short to read.",
+          "feedback": "未讨论长度问题。"
+        },
+        {
+          "id": "B",
+          "text": "It included no environmental words.",
+          "feedback": "词汇是否出现不是问题。"
+        },
+        {
+          "id": "C",
+          "text": "It assumed a reason before collecting evidence.",
+          "feedback": "问题大多围绕喜欢甜饮料，预设了原因。"
+        },
+        {
+          "id": "D",
+          "text": "It asked students to pay for water.",
+          "feedback": "问卷没有收费要求。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-R06",
+      "sourceQuestion": "R06",
+      "collection": "english-2027",
+      "passage": "RB",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t02"
+      ],
+      "title": "R06 · Which difficulty did students mention?",
+      "type": "single",
+      "prompt": "Which difficulty did students mention?",
+      "promptHtml": "<div class=\"english-passage\"><h3>B｜A question before the survey</h3><p>When Ella joined the school environmental club, she expected to spend her first month planting flowers. Instead, the club leader asked her to find out why students rarely used the new bottle-filling station. Ella thought the answer was obvious: students preferred buying sweet drinks. She designed a questionnaire with that idea in mind.</p><p>Before she handed it out, her friend Sam read the questions. Most of them asked students to explain why they liked sweet drinks. &quot;What if that is not the main reason?&quot; he asked. Ella felt defensive. She had worked on the sheet all evening. But she agreed to observe the station with him during lunch.</p><p>They soon noticed something surprising. Several students carrying empty reusable bottles walked past the station. One stopped, looked at the long queue and left. Another explained that the station was too far from the dining hall to reach before the next lesson. A third had not realised that the water was free.</p><p>Ella rewrote the questionnaire. This time, students could describe practical difficulties and suggest changes. The answers did not prove that everyone would stop buying drinks, but they helped the club identify two immediate improvements: clearer signs and a better place for the queue.</p><p>A month later, Ella still helped plant flowers. Yet the experience she remembered most was the quiet lunch break beside the water station. She had learned that a useful question begins with attention, not with an answer already decided.</p></div><p>Which difficulty did students mention?</p>",
+      "steps": [
+        "一名学生提到距离餐厅远，赶不上下节课。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若学生说水站很近、排队太慢，距离造成的不便还是有效证据吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "The station was inconvenient to reach between lessons.",
+          "feedback": "一名学生提到距离餐厅远，赶不上下节课。"
+        },
+        {
+          "id": "B",
+          "text": "The water tasted too sweet.",
+          "feedback": "甜的是购买的饮料，非饮水站水。"
+        },
+        {
+          "id": "C",
+          "text": "The club refused to listen.",
+          "feedback": "俱乐部后来主动调查，未拒听。"
+        },
+        {
+          "id": "D",
+          "text": "Reusable bottles were not allowed.",
+          "feedback": "有人拿着可重复瓶走过，不存在禁令。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-R07",
+      "sourceQuestion": "R07",
+      "collection": "english-2027",
+      "passage": "RB",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k16",
+        "english-2027-t02"
+      ],
+      "title": "R07 · What best expresses Ella’s main lesson?",
+      "type": "single",
+      "prompt": "What best expresses Ella’s main lesson?",
+      "promptHtml": "<div class=\"english-passage\"><h3>B｜A question before the survey</h3><p>When Ella joined the school environmental club, she expected to spend her first month planting flowers. Instead, the club leader asked her to find out why students rarely used the new bottle-filling station. Ella thought the answer was obvious: students preferred buying sweet drinks. She designed a questionnaire with that idea in mind.</p><p>Before she handed it out, her friend Sam read the questions. Most of them asked students to explain why they liked sweet drinks. &quot;What if that is not the main reason?&quot; he asked. Ella felt defensive. She had worked on the sheet all evening. But she agreed to observe the station with him during lunch.</p><p>They soon noticed something surprising. Several students carrying empty reusable bottles walked past the station. One stopped, looked at the long queue and left. Another explained that the station was too far from the dining hall to reach before the next lesson. A third had not realised that the water was free.</p><p>Ella rewrote the questionnaire. This time, students could describe practical difficulties and suggest changes. The answers did not prove that everyone would stop buying drinks, but they helped the club identify two immediate improvements: clearer signs and a better place for the queue.</p><p>A month later, Ella still helped plant flowers. Yet the experience she remembered most was the quiet lunch break beside the water station. She had learned that a useful question begins with attention, not with an answer already decided.</p></div><p>What best expresses Ella’s main lesson?</p>",
+      "steps": [
+        "结尾强调先关注实际情况，不预先决定答案。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若结尾只报告标牌数量增加，没有反思过程，能否照搬原文主旨？指出缺失的证据。",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Good intentions remove the need for research.",
+          "feedback": "经历恰恰说明需要调查。"
+        },
+        {
+          "id": "B",
+          "text": "People always change after seeing a sign.",
+          "feedback": "把局部改进说成一定改变所有人，没有依据。"
+        },
+        {
+          "id": "C",
+          "text": "A club should avoid difficult questions.",
+          "feedback": "并非回避难题。"
+        },
+        {
+          "id": "D",
+          "text": "Careful observation should help shape a question.",
+          "feedback": "结尾强调先关注实际情况，不预先决定答案。"
+        }
+      ],
+      "answer": [
+        "D"
+      ]
+    },
+    {
+      "id": "hs-english2027-R08",
+      "sourceQuestion": "R08",
+      "collection": "english-2027",
+      "passage": "RC",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k16",
+        "english-2027-t02"
+      ],
+      "title": "R08 · How were students placed in the reading group?",
+      "type": "single",
+      "prompt": "How were students placed in the reading group?",
+      "promptHtml": "<div class=\"english-passage\"><h3>C｜A small study of quiet reading</h3><p>Can a short period of quiet reading help students settle into afternoon lessons? A teacher at a fictional school decided to explore the question. For four weeks, two classes were offered fifteen minutes of reading after lunch. Participation was voluntary: students could choose the reading room or continue their usual break.</p><p>At the end of the trial, teachers reported that students who regularly chose the room appeared more ready to start work. Some students also said they enjoyed having a calm place away from their phones. The school newspaper described the room as a success.</p><p>However, the teacher who organised the project was more cautious. No random assignment had been used. Students already interested in reading might have been more likely to join. The teachers knew who attended, which might also have influenced their impressions. In addition, readiness to start work was based on observation rather than a common, independently scored task.</p><p>None of these limitations means that the room was useless. They mean that the trial cannot show how much of the observed difference was caused by the room itself. A later project could compare groups with similar starting habits and use clearer measures, while keeping participation respectful and practical.</p><p>For now, the school has kept the room open because students value the quiet space. That is a reasonable service decision. It is different from claiming that a small trial has proved a general learning effect. The distinction allows the school to respond to students without making its evidence say more than it can.</p></div><p>How were students placed in the reading group?</p>",
+      "steps": [
+        "学生自己选择是否去阅读室。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果改为抽签分配到两组，自愿参加阅读室的判断如何改变？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "By random assignment.",
+          "feedback": "原文明确无随机分组。"
+        },
+        {
+          "id": "B",
+          "text": "By a compulsory school rule.",
+          "feedback": "参与自愿，不是强制。"
+        },
+        {
+          "id": "C",
+          "text": "By their own choice.",
+          "feedback": "学生自己选择是否去阅读室。"
+        },
+        {
+          "id": "D",
+          "text": "By the newspaper editor.",
+          "feedback": "校报只报道，未分组。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-R09",
+      "sourceQuestion": "R09",
+      "collection": "english-2027",
+      "passage": "RC",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k16",
+        "english-2027-t02"
+      ],
+      "title": "R09 · Why was the organising teacher cautious?",
+      "type": "single",
+      "prompt": "Why was the organising teacher cautious?",
+      "promptHtml": "<div class=\"english-passage\"><h3>C｜A small study of quiet reading</h3><p>Can a short period of quiet reading help students settle into afternoon lessons? A teacher at a fictional school decided to explore the question. For four weeks, two classes were offered fifteen minutes of reading after lunch. Participation was voluntary: students could choose the reading room or continue their usual break.</p><p>At the end of the trial, teachers reported that students who regularly chose the room appeared more ready to start work. Some students also said they enjoyed having a calm place away from their phones. The school newspaper described the room as a success.</p><p>However, the teacher who organised the project was more cautious. No random assignment had been used. Students already interested in reading might have been more likely to join. The teachers knew who attended, which might also have influenced their impressions. In addition, readiness to start work was based on observation rather than a common, independently scored task.</p><p>None of these limitations means that the room was useless. They mean that the trial cannot show how much of the observed difference was caused by the room itself. A later project could compare groups with similar starting habits and use clearer measures, while keeping participation respectful and practical.</p><p>For now, the school has kept the room open because students value the quiet space. That is a reasonable service decision. It is different from claiming that a small trial has proved a general learning effect. The distinction allows the school to respond to students without making its evidence say more than it can.</p></div><p>Why was the organising teacher cautious?</p>",
+      "steps": [
+        "自选、观察者知情、缺少统一独立测量，都限制因果判断。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "即使增加随机分组，教师知晓分组和测量方式的限制是否自动消失？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "The room had no books.",
+          "feedback": "未说无书。"
+        },
+        {
+          "id": "B",
+          "text": "Several features of the trial limited causal conclusions.",
+          "feedback": "自选、观察者知情、缺少统一独立测量，都限制因果判断。"
+        },
+        {
+          "id": "C",
+          "text": "Every student disliked the room.",
+          "feedback": "Some学生表示喜欢，非全体不喜欢。"
+        },
+        {
+          "id": "D",
+          "text": "The school had banned further projects.",
+          "feedback": "文中还提出后续研究设想。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-R10",
+      "sourceQuestion": "R10",
+      "collection": "english-2027",
+      "passage": "RC",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k05",
+        "english-2027-k16",
+        "english-2027-t02"
+      ],
+      "title": "R10 · What does “the distinction” in the last paragraph refer to?",
+      "type": "single",
+      "prompt": "What does “the distinction” in the last paragraph refer to?",
+      "promptHtml": "<div class=\"english-passage\"><h3>C｜A small study of quiet reading</h3><p>Can a short period of quiet reading help students settle into afternoon lessons? A teacher at a fictional school decided to explore the question. For four weeks, two classes were offered fifteen minutes of reading after lunch. Participation was voluntary: students could choose the reading room or continue their usual break.</p><p>At the end of the trial, teachers reported that students who regularly chose the room appeared more ready to start work. Some students also said they enjoyed having a calm place away from their phones. The school newspaper described the room as a success.</p><p>However, the teacher who organised the project was more cautious. No random assignment had been used. Students already interested in reading might have been more likely to join. The teachers knew who attended, which might also have influenced their impressions. In addition, readiness to start work was based on observation rather than a common, independently scored task.</p><p>None of these limitations means that the room was useless. They mean that the trial cannot show how much of the observed difference was caused by the room itself. A later project could compare groups with similar starting habits and use clearer measures, while keeping participation respectful and practical.</p><p>For now, the school has kept the room open because students value the quiet space. That is a reasonable service decision. It is different from claiming that a small trial has proved a general learning effect. The distinction allows the school to respond to students without making its evidence say more than it can.</p></div><p>What does “the distinction” in the last paragraph refer to?</p>",
+      "steps": [
+        "紧接前文区分服务决定与普遍效果证明。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把the distinction替换为a comparison，明确它所连接的两个完整观点。",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "The difference between offering a valued service and proving a general learning effect.",
+          "feedback": "紧接前文区分服务决定与普遍效果证明。"
+        },
+        {
+          "id": "B",
+          "text": "The difference between lunch and dinner.",
+          "feedback": "不是餐别。"
+        },
+        {
+          "id": "C",
+          "text": "The difference between books and newspapers.",
+          "feedback": "不是媒介种类。"
+        },
+        {
+          "id": "D",
+          "text": "The difference between teachers’ ages.",
+          "feedback": "从未讨论年龄。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-R11",
+      "sourceQuestion": "R11",
+      "collection": "english-2027",
+      "passage": "RC",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k16",
+        "english-2027-t02"
+      ],
+      "title": "R11 · What is the author’s attitude to the reading room?",
+      "type": "single",
+      "prompt": "What is the author’s attitude to the reading room?",
+      "promptHtml": "<div class=\"english-passage\"><h3>C｜A small study of quiet reading</h3><p>Can a short period of quiet reading help students settle into afternoon lessons? A teacher at a fictional school decided to explore the question. For four weeks, two classes were offered fifteen minutes of reading after lunch. Participation was voluntary: students could choose the reading room or continue their usual break.</p><p>At the end of the trial, teachers reported that students who regularly chose the room appeared more ready to start work. Some students also said they enjoyed having a calm place away from their phones. The school newspaper described the room as a success.</p><p>However, the teacher who organised the project was more cautious. No random assignment had been used. Students already interested in reading might have been more likely to join. The teachers knew who attended, which might also have influenced their impressions. In addition, readiness to start work was based on observation rather than a common, independently scored task.</p><p>None of these limitations means that the room was useless. They mean that the trial cannot show how much of the observed difference was caused by the room itself. A later project could compare groups with similar starting habits and use clearer measures, while keeping participation respectful and practical.</p><p>For now, the school has kept the room open because students value the quiet space. That is a reasonable service decision. It is different from claiming that a small trial has proved a general learning effect. The distinction allows the school to respond to students without making its evidence say more than it can.</p></div><p>What is the author’s attitude to the reading room?</p>",
+      "steps": [
+        "同时承认价值和证据边界，与全文相符。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若作者只要求关闭阅读室，现有“认可价值但限制效果主张”的态度还成立吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "It must be closed immediately.",
+          "feedback": "没有要求关闭，且承认服务价值。"
+        },
+        {
+          "id": "B",
+          "text": "It proves all phones reduce learning.",
+          "feedback": "原文没有研究所有手机的效果。"
+        },
+        {
+          "id": "C",
+          "text": "It is certain to improve every student’s marks.",
+          "feedback": "将有限观察扩大到所有成绩。"
+        },
+        {
+          "id": "D",
+          "text": "It may be worthwhile, while stronger effect claims need better evidence.",
+          "feedback": "同时承认价值和证据边界，与全文相符。"
+        }
+      ],
+      "answer": [
+        "D"
+      ]
+    },
+    {
+      "id": "hs-english2027-R12",
+      "sourceQuestion": "R12",
+      "collection": "english-2027",
+      "passage": "RD",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-t02"
+      ],
+      "title": "R12 · Why was the borrowing count useful at first?",
+      "type": "single",
+      "prompt": "Why was the borrowing count useful at first?",
+      "promptHtml": "<div class=\"english-passage\"><h3>D｜When a measure becomes the goal</h3><p>A community library wanted to encourage more reading, so it began counting the number of books borrowed each month. At first, the figure seemed useful. It showed when demand was high and helped staff plan opening hours. But problems appeared when the library started rewarding reading groups only for the number of loans they produced.</p><p>Some groups chose many very short books. Others borrowed books they did not intend to read until later. The monthly total rose, yet the number did not tell staff whether members understood, enjoyed or discussed what they had read. A measure that once helped describe activity had started to shape the activity itself.</p><p>The solution was not to stop counting. Numbers still helped the library notice changes. Instead, staff widened the conversation. They asked groups what they wanted from reading and invited them to share a passage or question that had mattered to them. Short books were not treated as inferior; a short book could lead to a thoughtful discussion. Nor were long books automatically considered better.</p><p>The aim was to make the count one piece of evidence rather than the whole definition of success. A rising total might reflect better access, but it might also reflect a change in borrowing habits. Staff needed to ask which explanation fitted the wider picture.</p><p>This lesson applies beyond libraries. A convenient number can make work visible, but it cannot always capture the purpose of that work. When a measure is linked to rewards, people may learn to improve the measure instead of the underlying activity. We should therefore ask not only whether a number is increasing, but what kind of behaviour our use of it encourages.</p></div><p>Why was the borrowing count useful at first?</p>",
+      "steps": [
+        "首段说可看出需求并规划开放时间。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若借阅计数只用于奖金、不用于排班，最初用途的问题应怎样重定位？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "It proved that every borrowed book was understood.",
+          "feedback": "计数不说明每本理解情况。"
+        },
+        {
+          "id": "B",
+          "text": "It helped staff plan for changes in demand.",
+          "feedback": "首段说可看出需求并规划开放时间。"
+        },
+        {
+          "id": "C",
+          "text": "It identified the best literary works.",
+          "feedback": "未衡量作品好坏。"
+        },
+        {
+          "id": "D",
+          "text": "It made discussion unnecessary.",
+          "feedback": "后文反而强调讨论。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-R13",
+      "sourceQuestion": "R13",
+      "collection": "english-2027",
+      "passage": "RD",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k16",
+        "english-2027-t02"
+      ],
+      "title": "R13 · What problem appeared after rewards were tied only to loans?",
+      "type": "single",
+      "prompt": "What problem appeared after rewards were tied only to loans?",
+      "promptHtml": "<div class=\"english-passage\"><h3>D｜When a measure becomes the goal</h3><p>A community library wanted to encourage more reading, so it began counting the number of books borrowed each month. At first, the figure seemed useful. It showed when demand was high and helped staff plan opening hours. But problems appeared when the library started rewarding reading groups only for the number of loans they produced.</p><p>Some groups chose many very short books. Others borrowed books they did not intend to read until later. The monthly total rose, yet the number did not tell staff whether members understood, enjoyed or discussed what they had read. A measure that once helped describe activity had started to shape the activity itself.</p><p>The solution was not to stop counting. Numbers still helped the library notice changes. Instead, staff widened the conversation. They asked groups what they wanted from reading and invited them to share a passage or question that had mattered to them. Short books were not treated as inferior; a short book could lead to a thoughtful discussion. Nor were long books automatically considered better.</p><p>The aim was to make the count one piece of evidence rather than the whole definition of success. A rising total might reflect better access, but it might also reflect a change in borrowing habits. Staff needed to ask which explanation fitted the wider picture.</p><p>This lesson applies beyond libraries. A convenient number can make work visible, but it cannot always capture the purpose of that work. When a measure is linked to rewards, people may learn to improve the measure instead of the underlying activity. We should therefore ask not only whether a number is increasing, but what kind of behaviour our use of it encourages.</p></div><p>What problem appeared after rewards were tied only to loans?</p>",
+      "steps": [
+        "借很多短书或暂不读的书使总数上升，但不证明更好阅读。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "假如计数升高且独立讨论记录也改善，是否仍只能断定阅读没有变好？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Groups stopped borrowing altogether.",
+          "feedback": "计数上升，并非停止借阅。"
+        },
+        {
+          "id": "B",
+          "text": "All short books became harmful.",
+          "feedback": "文中明确短书也可引发深入讨论。"
+        },
+        {
+          "id": "C",
+          "text": "Some behaviour raised the count without showing better reading.",
+          "feedback": "借很多短书或暂不读的书使总数上升，但不证明更好阅读。"
+        },
+        {
+          "id": "D",
+          "text": "Staff lost the ability to count accurately.",
+          "feedback": "问题是指标意义与激励，不是算术失准。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-R14",
+      "sourceQuestion": "R14",
+      "collection": "english-2027",
+      "passage": "RD",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k16",
+        "english-2027-t02"
+      ],
+      "title": "R14 · What does the author suggest doing with a convenient number?",
+      "type": "single",
+      "prompt": "What does the author suggest doing with a convenient number?",
+      "promptHtml": "<div class=\"english-passage\"><h3>D｜When a measure becomes the goal</h3><p>A community library wanted to encourage more reading, so it began counting the number of books borrowed each month. At first, the figure seemed useful. It showed when demand was high and helped staff plan opening hours. But problems appeared when the library started rewarding reading groups only for the number of loans they produced.</p><p>Some groups chose many very short books. Others borrowed books they did not intend to read until later. The monthly total rose, yet the number did not tell staff whether members understood, enjoyed or discussed what they had read. A measure that once helped describe activity had started to shape the activity itself.</p><p>The solution was not to stop counting. Numbers still helped the library notice changes. Instead, staff widened the conversation. They asked groups what they wanted from reading and invited them to share a passage or question that had mattered to them. Short books were not treated as inferior; a short book could lead to a thoughtful discussion. Nor were long books automatically considered better.</p><p>The aim was to make the count one piece of evidence rather than the whole definition of success. A rising total might reflect better access, but it might also reflect a change in borrowing habits. Staff needed to ask which explanation fitted the wider picture.</p><p>This lesson applies beyond libraries. A convenient number can make work visible, but it cannot always capture the purpose of that work. When a measure is linked to rewards, people may learn to improve the measure instead of the underlying activity. We should therefore ask not only whether a number is increasing, but what kind of behaviour our use of it encourages.</p></div><p>What does the author suggest doing with a convenient number?</p>",
+      "steps": [
+        "后两段要求结合更广证据并看它鼓励何种行为。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "一个指标下降时也要直接废弃它吗？分别提出需求变化与行为变化的竞争解释。",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Using it alongside other evidence and considering its effects on behaviour.",
+          "feedback": "后两段要求结合更广证据并看它鼓励何种行为。"
+        },
+        {
+          "id": "B",
+          "text": "Treating it as the complete purpose of the work.",
+          "feedback": "恰是全文反对的做法。"
+        },
+        {
+          "id": "C",
+          "text": "Rejecting it whenever it increases.",
+          "feedback": "不是凡上升都拒绝，要问原因。"
+        },
+        {
+          "id": "D",
+          "text": "Replacing every conversation with it.",
+          "feedback": "应增加对话，不取代对话。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-R15",
+      "sourceQuestion": "R15",
+      "collection": "english-2027",
+      "passage": "RD",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k16",
+        "english-2027-t02"
+      ],
+      "title": "R15 · Which title best fits the passage?",
+      "type": "single",
+      "prompt": "Which title best fits the passage?",
+      "promptHtml": "<div class=\"english-passage\"><h3>D｜When a measure becomes the goal</h3><p>A community library wanted to encourage more reading, so it began counting the number of books borrowed each month. At first, the figure seemed useful. It showed when demand was high and helped staff plan opening hours. But problems appeared when the library started rewarding reading groups only for the number of loans they produced.</p><p>Some groups chose many very short books. Others borrowed books they did not intend to read until later. The monthly total rose, yet the number did not tell staff whether members understood, enjoyed or discussed what they had read. A measure that once helped describe activity had started to shape the activity itself.</p><p>The solution was not to stop counting. Numbers still helped the library notice changes. Instead, staff widened the conversation. They asked groups what they wanted from reading and invited them to share a passage or question that had mattered to them. Short books were not treated as inferior; a short book could lead to a thoughtful discussion. Nor were long books automatically considered better.</p><p>The aim was to make the count one piece of evidence rather than the whole definition of success. A rising total might reflect better access, but it might also reflect a change in borrowing habits. Staff needed to ask which explanation fitted the wider picture.</p><p>This lesson applies beyond libraries. A convenient number can make work visible, but it cannot always capture the purpose of that work. When a measure is linked to rewards, people may learn to improve the measure instead of the underlying activity. We should therefore ask not only whether a number is increasing, but what kind of behaviour our use of it encourages.</p></div><p>Which title best fits the passage?</p>",
+      "steps": [
+        "概括指标的价值、局限和使用方式。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果全文改为比较长短书各自用途，原标题是否仍准确覆盖中心任务？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "Why Long Books Are Always Better",
+          "feedback": "文中否定长书必优。"
+        },
+        {
+          "id": "B",
+          "text": "How to Borrow More Books in One Day",
+          "feedback": "不教一天多借书。"
+        },
+        {
+          "id": "C",
+          "text": "The End of Community Libraries",
+          "feedback": "并非图书馆终结。"
+        },
+        {
+          "id": "D",
+          "text": "Looking Beyond a Single Measure",
+          "feedback": "概括指标的价值、局限和使用方式。"
+        }
+      ],
+      "answer": [
+        "D"
+      ]
+    },
+    {
+      "id": "hs-english2027-S01",
+      "sourceQuestion": "S01",
+      "collection": "english-2027",
+      "passage": "S",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k05",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t03"
+      ],
+      "title": "S01 · Choose the best sentence for [S01].",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S01].",
+      "promptHtml": "<div class=\"english-passage\"><h3>七选五｜Learning from a mistake</h3><p>A mistake can be useful, but only if we do more than look at the correct answer. The next time you review a task, begin by keeping your first response. [S01] Without it, you may forget the idea that led you in the wrong direction.</p><p>Next, explain exactly where the reasoning broke down. Perhaps you understood the words but missed a negative. Perhaps you remembered a rule but applied it to the wrong clause. [S02] A general label such as &quot;carelessness&quot; gives you very little to work on.</p><p>Once you have identified the problem, return to a short explanation or example. Then close it and try to reconstruct the reasoning in your own words. [S03] If you cannot explain the step without looking, return to that step rather than rereading everything.</p><p>After a delay, try a different task involving the same relationship. [S04] A familiar answer may feel easy even when the method has not become available for a new situation.</p><p>Finally, keep the record brief enough to use. Write the error, the evidence and your next action. [S05] The point is to make a useful decision about what to practise next, not to produce a beautiful notebook.</p></div><p>Choose the best sentence for [S01].</p>",
+      "steps": [
+        "This指保留初答，后句Without it解释若缺失会忘记早先思路。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把Without it改为Without these records，选项与前文应提供怎样可识别的复数指代？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "列举不同错因在后面段落更合适，不能解释保留初答的作用。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "This指保留初答，后句Without it解释若缺失会忘记早先思路。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "绝对化且与末段简短记录相冲突。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "different task尚未引入，不能在此比较新旧任务。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "解释尚未引入，不是此处初答记录的直接作用。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "简短记录属于末段。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "材料区分多种错误，非全由不努力。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-S02",
+      "sourceQuestion": "S02",
+      "collection": "english-2027",
+      "passage": "S",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k05",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t03"
+      ],
+      "title": "S02 · Choose the best sentence for [S02].",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S02].",
+      "promptHtml": "<div class=\"english-passage\"><h3>七选五｜Learning from a mistake</h3><p>A mistake can be useful, but only if we do more than look at the correct answer. The next time you review a task, begin by keeping your first response. [S01] Without it, you may forget the idea that led you in the wrong direction.</p><p>Next, explain exactly where the reasoning broke down. Perhaps you understood the words but missed a negative. Perhaps you remembered a rule but applied it to the wrong clause. [S02] A general label such as &quot;carelessness&quot; gives you very little to work on.</p><p>Once you have identified the problem, return to a short explanation or example. Then close it and try to reconstruct the reasoning in your own words. [S03] If you cannot explain the step without looking, return to that step rather than rereading everything.</p><p>After a delay, try a different task involving the same relationship. [S04] A familiar answer may feel easy even when the method has not become available for a new situation.</p><p>Finally, keep the record brief enough to use. Write the error, the evidence and your next action. [S05] The point is to make a useful decision about what to practise next, not to produce a beautiful notebook.</p></div><p>Choose the best sentence for [S02].</p>",
+      "steps": [
+        "These回指前面误读否定、规则用错分句等不同问题，并与笼统粗心形成对比。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "删去前面两种错因后，These are different problems还可直接回指吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "These回指前面误读否定、规则用错分句等不同问题，并与笼统粗心形成对比。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "earlier reasoning可相关，但不如A连接两类具体错因与下一句general label。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "全文不支持全部抄页。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "本段未讨论间隔后的新任务。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "本段尚未要求关闭解释重建。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "末段才谈记录长度。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "与刚列举的具体错误不符。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-S03",
+      "sourceQuestion": "S03",
+      "collection": "english-2027",
+      "passage": "S",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k05",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t03"
+      ],
+      "title": "S03 · Choose the best sentence for [S03].",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S03].",
+      "promptHtml": "<div class=\"english-passage\"><h3>七选五｜Learning from a mistake</h3><p>A mistake can be useful, but only if we do more than look at the correct answer. The next time you review a task, begin by keeping your first response. [S01] Without it, you may forget the idea that led you in the wrong direction.</p><p>Next, explain exactly where the reasoning broke down. Perhaps you understood the words but missed a negative. Perhaps you remembered a rule but applied it to the wrong clause. [S02] A general label such as &quot;carelessness&quot; gives you very little to work on.</p><p>Once you have identified the problem, return to a short explanation or example. Then close it and try to reconstruct the reasoning in your own words. [S03] If you cannot explain the step without looking, return to that step rather than rereading everything.</p><p>After a delay, try a different task involving the same relationship. [S04] A familiar answer may feel easy even when the method has not become available for a new situation.</p><p>Finally, keep the record brief enough to use. Write the error, the evidence and your next action. [S05] The point is to make a useful decision about what to practise next, not to produce a beautiful notebook.</p></div><p>Choose the best sentence for [S03].</p>",
+      "steps": [
+        "This回指不看说明复述推理；后句If you cannot explain...继续检验。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若前一步不是关掉解释而是一直看答案，This checks whether...的检验还成立吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "本段重点是关掉解释重建，不再分类错因。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "初答保留已在首段完成。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "与主动重建不同。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "新任务尚未引入，跨段关系不如E。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "This回指不看说明复述推理；后句If you cannot explain...继续检验。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "本段不是缩短笔记。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "把具体理解问题归于努力不足，没有依据。"
+        }
+      ],
+      "answer": [
+        "E"
+      ]
+    },
+    {
+      "id": "hs-english2027-S04",
+      "sourceQuestion": "S04",
+      "collection": "english-2027",
+      "passage": "S",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k05",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t03"
+      ],
+      "title": "S04 · Choose the best sentence for [S04].",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S04].",
+      "promptHtml": "<div class=\"english-passage\"><h3>七选五｜Learning from a mistake</h3><p>A mistake can be useful, but only if we do more than look at the correct answer. The next time you review a task, begin by keeping your first response. [S01] Without it, you may forget the idea that led you in the wrong direction.</p><p>Next, explain exactly where the reasoning broke down. Perhaps you understood the words but missed a negative. Perhaps you remembered a rule but applied it to the wrong clause. [S02] A general label such as &quot;carelessness&quot; gives you very little to work on.</p><p>Once you have identified the problem, return to a short explanation or example. Then close it and try to reconstruct the reasoning in your own words. [S03] If you cannot explain the step without looking, return to that step rather than rereading everything.</p><p>After a delay, try a different task involving the same relationship. [S04] A familiar answer may feel easy even when the method has not become available for a new situation.</p><p>Finally, keep the record brief enough to use. Write the error, the evidence and your next action. [S05] The point is to make a useful decision about what to practise next, not to produce a beautiful notebook.</p></div><p>Choose the best sentence for [S04].</p>",
+      "steps": [
+        "That指延时后做不同任务；后句解释熟悉答案不等于可迁移。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若后文不再对照熟悉答案，而是转向笔记长度，D选项的衔接优势还在吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "需要实践虽相关，但这里缺的是新材料与熟悉原题的对比。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "首段记录初答的说明在此重复。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "抄书不检验迁移。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "That指延时后做不同任务；后句解释熟悉答案不等于可迁移。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "可泛指检查，但D更直接建立后句familiar answer的对照。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "未谈记录长度。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "不被支持。"
+        }
+      ],
+      "answer": [
+        "D"
+      ]
+    },
+    {
+      "id": "hs-english2027-S05",
+      "sourceQuestion": "S05",
+      "collection": "english-2027",
+      "passage": "S",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k05",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t03"
+      ],
+      "title": "S05 · Choose the best sentence for [S05].",
+      "type": "single",
+      "prompt": "Choose the best sentence for [S05].",
+      "promptHtml": "<div class=\"english-passage\"><h3>七选五｜Learning from a mistake</h3><p>A mistake can be useful, but only if we do more than look at the correct answer. The next time you review a task, begin by keeping your first response. [S01] Without it, you may forget the idea that led you in the wrong direction.</p><p>Next, explain exactly where the reasoning broke down. Perhaps you understood the words but missed a negative. Perhaps you remembered a rule but applied it to the wrong clause. [S02] A general label such as &quot;carelessness&quot; gives you very little to work on.</p><p>Once you have identified the problem, return to a short explanation or example. Then close it and try to reconstruct the reasoning in your own words. [S03] If you cannot explain the step without looking, return to that step rather than rereading everything.</p><p>After a delay, try a different task involving the same relationship. [S04] A familiar answer may feel easy even when the method has not become available for a new situation.</p><p>Finally, keep the record brief enough to use. Write the error, the evidence and your next action. [S05] The point is to make a useful decision about what to practise next, not to produce a beautiful notebook.</p></div><p>Choose the best sentence for [S05].</p>",
+      "steps": [
+        "与brief、notebook相接，说明记录不必做成第二本教材。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果末段中心改为建立完整资料档案，“不必成为第二本教材”还适合该段吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 2.5,
+      "options": [
+        {
+          "id": "A",
+          "text": "These are different problems and need different kinds of practice.",
+          "feedback": "具体分类已说明，末段重点简短可用。"
+        },
+        {
+          "id": "B",
+          "text": "This makes the earlier reasoning available for inspection.",
+          "feedback": "重复首段目的。"
+        },
+        {
+          "id": "C",
+          "text": "Copying every page is the only reliable way to learn.",
+          "feedback": "和brief enough矛盾。"
+        },
+        {
+          "id": "D",
+          "text": "That is more informative than repeating the original answer from memory.",
+          "feedback": "新旧任务对比已在上一段处理。"
+        },
+        {
+          "id": "E",
+          "text": "This checks whether the explanation has become something you can use.",
+          "feedback": "这里没有关闭解释重建的动作。"
+        },
+        {
+          "id": "F",
+          "text": "You do not need to turn the record into a second textbook.",
+          "feedback": "与brief、notebook相接，说明记录不必做成第二本教材。"
+        },
+        {
+          "id": "G",
+          "text": "All errors are caused by a lack of effort.",
+          "feedback": "与全文错因分析不符。"
+        }
+      ],
+      "answer": [
+        "F"
+      ]
+    },
+    {
+      "id": "hs-english2027-C01",
+      "sourceQuestion": "C01",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C01 · Choose the best word for [C01].",
+      "type": "single",
+      "prompt": "Choose the best word for [C01].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C01].</p>",
+      "steps": [
+        "books、name cards、tea说明准备细节。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若前文说作者临时接手、来不及准备，planned every detail是否仍有依据？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "planned",
+          "feedback": "books、name cards、tea说明准备细节。"
+        },
+        {
+          "id": "B",
+          "text": "avoided",
+          "feedback": "并非回避细节。"
+        },
+        {
+          "id": "C",
+          "text": "forgotten",
+          "feedback": "与列举准备及末段仍认真计划矛盾。"
+        },
+        {
+          "id": "D",
+          "text": "destroyed",
+          "feedback": "没有破坏。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-C02",
+      "sourceQuestion": "C02",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C02 · Choose the best word for [C02].",
+      "type": "single",
+      "prompt": "Choose the best word for [C02].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C02].</p>",
+      "steps": [
+        "only one visitor arrived与预期12席形成落差。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把动作改为“the only visitor left before we began”，事件是到达还是离开？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "disappeared",
+          "feedback": "门开后是访客到达。"
+        },
+        {
+          "id": "B",
+          "text": "arrived",
+          "feedback": "only one visitor arrived与预期12席形成落差。"
+        },
+        {
+          "id": "C",
+          "text": "complained",
+          "feedback": "未提投诉。"
+        },
+        {
+          "id": "D",
+          "text": "returned",
+          "feedback": "没有先前来过的信息。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-C03",
+      "sourceQuestion": "C03",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C03 · Choose the best word for [C03].",
+      "type": "single",
+      "prompt": "Choose the best word for [C03].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C03].</p>",
+      "steps": [
+        "仅一位访客，所以其余椅子空着，对应plenty of room。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若后来来了十二位客人，empty chairs的依据会发生什么变化？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "broken",
+          "feedback": "椅子未损坏。"
+        },
+        {
+          "id": "B",
+          "text": "wooden",
+          "feedback": "材质不是当前语境重点。"
+        },
+        {
+          "id": "C",
+          "text": "empty",
+          "feedback": "仅一位访客，所以其余椅子空着，对应plenty of room。"
+        },
+        {
+          "id": "D",
+          "text": "borrowed",
+          "feedback": "没有借椅情节。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-C04",
+      "sourceQuestion": "C04",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C04 · Choose the best word for [C04].",
+      "type": "single",
+      "prompt": "Choose the best word for [C04].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C04].</p>",
+      "steps": [
+        "作者想因人少取消，但老人转向谈书。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若作者已决定照常开始并打开录音设备，应怎样重新判断record与cancel？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "record",
+          "feedback": "不是准备录制。"
+        },
+        {
+          "id": "B",
+          "text": "advertise",
+          "feedback": "宣传建议在后面。"
+        },
+        {
+          "id": "C",
+          "text": "celebrate",
+          "feedback": "失望不引向此处庆祝。"
+        },
+        {
+          "id": "D",
+          "text": "cancel",
+          "feedback": "作者想因人少取消，但老人转向谈书。"
+        }
+      ],
+      "answer": [
+        "D"
+      ]
+    },
+    {
+      "id": "hs-english2027-C05",
+      "sourceQuestion": "C05",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C05 · Choose the best word for [C05].",
+      "type": "single",
+      "prompt": "Choose the best word for [C05].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C05].</p>",
+      "steps": [
+        "用不断发问填补沉默，后文需要思考、放慢、等待相呼应。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把every silence改成every page，需要配合怎样的动作才语义相容？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "silence",
+          "feedback": "用不断发问填补沉默，后文需要思考、放慢、等待相呼应。"
+        },
+        {
+          "id": "B",
+          "text": "bottle",
+          "feedback": "不能用问题填瓶子。"
+        },
+        {
+          "id": "C",
+          "text": "seat",
+          "feedback": "不是占座。"
+        },
+        {
+          "id": "D",
+          "text": "page",
+          "feedback": "不是往页面写题。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-C06",
+      "sourceQuestion": "C06",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C06 · Choose the best word for [C06].",
+      "type": "single",
+      "prompt": "Choose the best word for [C06].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C06].</p>",
+      "steps": [
+        "给他思考时间，slowed down之后waited自然。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果作者不断打断老人，waited还能总结其动作吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "left",
+          "feedback": "他们继续交谈，并未离开。"
+        },
+        {
+          "id": "B",
+          "text": "waited",
+          "feedback": "给他思考时间，slowed down之后waited自然。"
+        },
+        {
+          "id": "C",
+          "text": "argued",
+          "feedback": "没有争论。"
+        },
+        {
+          "id": "D",
+          "text": "laughed",
+          "feedback": "没有嘲笑或笑的线索。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-C07",
+      "sourceQuestion": "C07",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C07 · Choose the best word for [C07].",
+      "type": "single",
+      "prompt": "Choose the best word for [C07].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C07].</p>",
+      "steps": [
+        "与女儿共同读书的夜晚。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若老人说明故事中的晚间聚会从未发生，shared与imaginary的依据怎样变化？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "dangerous",
+          "feedback": "没有危险。"
+        },
+        {
+          "id": "B",
+          "text": "expensive",
+          "feedback": "没有花费。"
+        },
+        {
+          "id": "C",
+          "text": "shared",
+          "feedback": "与女儿共同读书的夜晚。"
+        },
+        {
+          "id": "D",
+          "text": "imaginary",
+          "feedback": "老人描述真实回忆，不是明确虚构。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-C08",
+      "sourceQuestion": "C08",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C08 · Choose the best word for [C08].",
+      "type": "single",
+      "prompt": "Choose the best word for [C08].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C08].</p>",
+      "steps": [
+        "listening to表示倾听；故事焦点由拯救计划变为听老人分享。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若情境改为会后给老人写信，writing to与listening to各需要什么事实？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "writing",
+          "feedback": "对话正在现场发生，不是在写信。"
+        },
+        {
+          "id": "B",
+          "text": "waving",
+          "feedback": "没有挥手告别或示意的情节。"
+        },
+        {
+          "id": "C",
+          "text": "shouting",
+          "feedback": "安静等待与大喊不符。"
+        },
+        {
+          "id": "D",
+          "text": "listening",
+          "feedback": "listening to表示倾听；故事焦点由拯救计划变为听老人分享。"
+        }
+      ],
+      "answer": [
+        "D"
+      ]
+    },
+    {
+      "id": "hs-english2027-C09",
+      "sourceQuestion": "C09",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C09 · Choose the best word for [C09].",
+      "type": "single",
+      "prompt": "Choose the best word for [C09].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C09].</p>",
+      "steps": [
+        "诊所等待时有空闲时间，to spare与waiting呼应。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把诊所候诊改成书店捐书，to spare前的名词可能变化吗？先补足语境再判断。",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "time",
+          "feedback": "诊所等待时有空闲时间，to spare与waiting呼应。"
+        },
+        {
+          "id": "B",
+          "text": "money",
+          "feedback": "不说明金钱。"
+        },
+        {
+          "id": "C",
+          "text": "seats",
+          "feedback": "等待不等于多余座位。"
+        },
+        {
+          "id": "D",
+          "text": "books",
+          "feedback": "未说明有多余书。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-C10",
+      "sourceQuestion": "C10",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C10 · Choose the best word for [C10].",
+      "type": "single",
+      "prompt": "Choose the best word for [C10].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C10].</p>",
+      "steps": [
+        "从1人到3人再到近满圈，full说明参与人数。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果每周人数减少，nearly full还与人数趋势相符吗？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "silent",
+          "feedback": "人数增长，非沉默程度。"
+        },
+        {
+          "id": "B",
+          "text": "full",
+          "feedback": "从1人到3人再到近满圈，full说明参与人数。"
+        },
+        {
+          "id": "C",
+          "text": "closed",
+          "feedback": "没有封闭。"
+        },
+        {
+          "id": "D",
+          "text": "lost",
+          "feedback": "不是丢失。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-C11",
+      "sourceQuestion": "C11",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C11 · Choose the best word for [C11].",
+      "type": "single",
+      "prompt": "Choose the best word for [C11].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C11].</p>",
+      "steps": [
+        "before joining与先旁听相衔接。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若外侧座位供需要付费的人使用，原先“先旁听”的作用是否仍成立？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "teach",
+          "feedback": "不是先教学。"
+        },
+        {
+          "id": "B",
+          "text": "leave",
+          "feedback": "外侧椅是给想先旁听再加入的人，非离开。"
+        },
+        {
+          "id": "C",
+          "text": "listen",
+          "feedback": "before joining与先旁听相衔接。"
+        },
+        {
+          "id": "D",
+          "text": "pay",
+          "feedback": "活动未设收费。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-C12",
+      "sourceQuestion": "C12",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C12 · Choose the best word for [C12].",
+      "type": "single",
+      "prompt": "Choose the best word for [C12].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C12].</p>",
+      "steps": [
+        "仍认真计划，但明白不能决定每刻，构成转折。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "把后半句改为“so every activity follows it exactly”，however还是therefore更能表达关系？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "otherwise",
+          "feedback": "不是否则的条件结果。"
+        },
+        {
+          "id": "B",
+          "text": "therefore",
+          "feedback": "并非因果直接引出的同一观点，而是认真计划之外的限制。"
+        },
+        {
+          "id": "C",
+          "text": "similarly",
+          "feedback": "不是与前句相似的新增例子。"
+        },
+        {
+          "id": "D",
+          "text": "however",
+          "feedback": "仍认真计划，但明白不能决定每刻，构成转折。"
+        }
+      ],
+      "answer": [
+        "D"
+      ]
+    },
+    {
+      "id": "hs-english2027-C13",
+      "sourceQuestion": "C13",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C13 · Choose the best word for [C13].",
+      "type": "single",
+      "prompt": "Choose the best word for [C13].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C13].</p>",
+      "steps": [
+        "回扣前文填补每段沉默，后文现在愿意wait。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若作者保持安静，fill the space为何不再描述他实际采取的动作？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "fill",
+          "feedback": "回扣前文填补每段沉默，后文现在愿意wait。"
+        },
+        {
+          "id": "B",
+          "text": "measure",
+          "feedback": "不是测量空间。"
+        },
+        {
+          "id": "C",
+          "text": "rent",
+          "feedback": "不是出租。"
+        },
+        {
+          "id": "D",
+          "text": "paint",
+          "feedback": "不是涂刷。"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "hs-english2027-C14",
+      "sourceQuestion": "C14",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C14 · Choose the best word for [C14].",
+      "type": "single",
+      "prompt": "Choose the best word for [C14].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C14].</p>",
+      "steps": [
+        "最初人少令作者失望，看来像失败，后来成为学习。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "若首场来了超出预期的客人，failure的起点判断还需要哪些新证据？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "holiday",
+          "feedback": "不是假期。"
+        },
+        {
+          "id": "B",
+          "text": "failure",
+          "feedback": "最初人少令作者失望，看来像失败，后来成为学习。"
+        },
+        {
+          "id": "C",
+          "text": "promise",
+          "feedback": "不是承诺本身。"
+        },
+        {
+          "id": "D",
+          "text": "competition",
+          "feedback": "没有比赛。"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "hs-english2027-C15",
+      "sourceQuestion": "C15",
+      "collection": "english-2027",
+      "passage": "C",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k01",
+        "english-2027-k02",
+        "english-2027-k13",
+        "english-2027-k16",
+        "english-2027-t04"
+      ],
+      "title": "C15 · Choose the best word for [C15].",
+      "type": "single",
+      "prompt": "Choose the best word for [C15].",
+      "promptHtml": "<div class=\"english-passage\"><h3>完形｜The empty chair</h3><p>On the first afternoon of the community reading club, I placed twelve chairs in a circle. I had [C01] every detail: books, name cards and a pot of tea. Yet when the door opened, only one visitor [C02]. I tried to hide my disappointment.</p><p>The visitor, an older man called Mr Zhou, looked at the [C03] chairs and smiled. &quot;We have plenty of room,&quot; he said. I was about to [C04] the meeting, but he asked which book I had chosen. We began to talk. At first, I filled every [C05] with another question. Then I noticed that he needed time to think. I slowed down and [C06].</p><p>He told me that he had once read this story to his daughter. His voice became softer as he described their [C07] evenings. The discussion was no longer about rescuing my plan. It was about [C08] to a person who had come to share something important.</p><p>Before leaving, he suggested putting a notice in the nearby clinic, where people often waited with [C09] to spare. The next week, three visitors came. A month later, the circle was nearly [C10]. But I kept one chair slightly outside it for anyone who preferred to [C11] before joining.</p><p>I still plan carefully. I now understand, [C12], that a plan should make a meeting possible, not decide every moment of it. When a newcomer speaks slowly, I do not rush to [C13] the space. I remember Mr Zhou and wait. What first looked like a [C14] had taught me the most [C15] part of running the club: making room for other people.</p></div><p>Choose the best word for [C15].</p>",
+      "steps": [
+        "making room for other people是经历带来的重要认识。"
+      ],
+      "hint": "先确定问题要求的对象、信息和关系，再从材料找证据。",
+      "transfer": "如果段落只讨论预算而非对人的关注，important与expensive应怎样重新依上下文比较？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "technical",
+          "feedback": "重点不是技术。"
+        },
+        {
+          "id": "B",
+          "text": "optional",
+          "feedback": "不是可有可无。"
+        },
+        {
+          "id": "C",
+          "text": "important",
+          "feedback": "making room for other people是经历带来的重要认识。"
+        },
+        {
+          "id": "D",
+          "text": "expensive",
+          "feedback": "没有花费昂贵的线索；此处归纳活动组织的重要认识。"
+        }
+      ],
+      "answer": [
+        "C"
+      ]
+    },
+    {
+      "id": "hs-english2027-G01",
+      "sourceQuestion": "G01",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k06",
+        "english-2027-k07"
+      ],
+      "title": "G01 · Last month, our class [G01] (open) a small reading room.",
+      "type": "fill",
+      "prompt": "Last month, our class [G01] (open) a small reading room.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>Last month, our class [G01] (open) a small reading room.</p>",
+      "steps": [
+        "本句缺限定谓语，主语class执行open，last month指已结束过去，用opened；这里不是被动，也不是补一个opening。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把last month改为every Monday，主语仍是our class时，open需要什么限定形式？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "opened"
+      ]
+    },
+    {
+      "id": "hs-english2027-G02",
+      "sourceQuestion": "G02",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k09"
+      ],
+      "title": "G02 · Our teacher asked us [G02] (think) about what readers needed.",
+      "type": "fill",
+      "prompt": "Our teacher asked us [G02] (think) about what readers needed.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>Our teacher asked us [G02] (think) about what readers needed.</p>",
+      "steps": [
+        "ask sb to do sth；us是asked的宾语，后接不定式补足希望我们做什么。仅填think缺to；thinking不符合这里的结构。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把asked us改为made us，think前是否仍有to？再把made改为被动检验。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "to think"
+      ]
+    },
+    {
+      "id": "hs-english2027-G03",
+      "sourceQuestion": "G03",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k11"
+      ],
+      "title": "G03 · We interviewed several students, [G03] ideas helped us choose chairs.",
+      "type": "fill",
+      "prompt": "We interviewed several students, [G03] ideas helped us choose chairs.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>We interviewed several students, [G03] ideas helped us choose chairs.</p>",
+      "steps": [
+        "逗号后为补充说明的关系从句，ideas前缺所有格限定，whose ideas表示这些学生的想法；who不能在此直接限定ideas。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "改成“students, ___ helped us choose chairs”，从句不再有ideas，关系词职责如何变化？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "whose"
+      ]
+    },
+    {
+      "id": "hs-english2027-G04",
+      "sourceQuestion": "G04",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k06",
+        "english-2027-k08",
+        "english-2027-k09"
+      ],
+      "title": "G04 · The books [G04] (donate) by families were placed on low shelves.",
+      "type": "fill",
+      "prompt": "The books [G04] (donate) by families were placed on low shelves.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>The books [G04] (donate) by families were placed on low shelves.</p>",
+      "steps": [
+        "主句谓语were placed已完整，books承受donate动作，donated by families作后置修饰语；不能再填独立谓语were donated。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "改成“The books ___ (donate) last month.”，没有were placed后，空格是否改承担谓语？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "donated"
+      ]
+    },
+    {
+      "id": "hs-english2027-G05",
+      "sourceQuestion": "G05",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k04",
+        "english-2027-k10"
+      ],
+      "title": "G05 · Every visitor can borrow one book at [G05] time.",
+      "type": "fill",
+      "prompt": "Every visitor can borrow one book at [G05] time.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>Every visitor can borrow one book at [G05] time.</p>",
+      "steps": [
+        "at a time表示一次、每次；one book at a time限定每次借一本，不是at the time表示在当时。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "对比one book at a time与I was at home at the time，解释两个短语的不同。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "a"
+      ]
+    },
+    {
+      "id": "hs-english2027-G06",
+      "sourceQuestion": "G06",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k10"
+      ],
+      "title": "G06 · The room has become [G06] (popular) than we expected.",
+      "type": "fill",
+      "prompt": "The room has become [G06] (popular) than we expected.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>The room has become [G06] (popular) than we expected.</p>",
+      "steps": [
+        "than给出比较关系，popular通常用more构成比较级；不能用popularer，也不能把more漏掉。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "去掉than，改成“the ___ (popular) room in our school”，比较范围怎样改变？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "more popular"
+      ]
+    },
+    {
+      "id": "hs-english2027-G07",
+      "sourceQuestion": "G07",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k09"
+      ],
+      "title": "G07 · Others enjoy [G07] (discuss) a story with friends.",
+      "type": "fill",
+      "prompt": "Others enjoy [G07] (discuss) a story with friends.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>Others enjoy [G07] (discuss) a story with friends.</p>",
+      "steps": [
+        "enjoy后以动名词短语作宾语，填discussing；不能因为动作将来可能发生就用to discuss。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把enjoy改为hope，后面的动词形式如何改变，为什么不只根据中文“喜欢”判断？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "discussing"
+      ]
+    },
+    {
+      "id": "hs-english2027-G08",
+      "sourceQuestion": "G08",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k13"
+      ],
+      "title": "G08 · We keep the room not only tidy [G08] also comfortable.",
+      "type": "fill",
+      "prompt": "We keep the room not only tidy [G08] also comfortable.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>We keep the room not only tidy [G08] also comfortable.</p>",
+      "steps": [
+        "not only...but also...连接两个并列性质tidy与comfortable；这里需要成对连接结构中的but，不能任意填so或and。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把not only去掉、so everyone feels welcome保留，还能只靠固定搭配决定连接词吗？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "but"
+      ]
+    },
+    {
+      "id": "hs-english2027-G09",
+      "sourceQuestion": "G09",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k02",
+        "english-2027-k03"
+      ],
+      "title": "G09 · The greatest [G09] (satisfy) comes from seeing the change.",
+      "type": "fill",
+      "prompt": "The greatest [G09] (satisfy) comes from seeing the change.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>The greatest [G09] (satisfy) comes from seeing the change.</p>",
+      "steps": [
+        "the greatest后需要作主语中心的名词，此处抽象的满意感用satisfaction。satisfied/satisfying为形容词，不能在这里单独担当所需名词。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "改成“We felt deeply ___ (satisfy)”，中心由抽象名词变成了什么成分？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "satisfaction"
+      ]
+    },
+    {
+      "id": "hs-english2027-G10",
+      "sourceQuestion": "G10",
+      "collection": "english-2027",
+      "passage": "G",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k02",
+        "english-2027-k10"
+      ],
+      "title": "G10 · The classroom has become a [G10] (use) place.",
+      "type": "fill",
+      "prompt": "The classroom has become a [G10] (use) place.",
+      "promptHtml": "<div class=\"english-passage\"><h3>语法填空｜A small reading room</h3><p>Last month, our class [G01] (open) a small reading room in an unused classroom. Before the room opened, our teacher asked us [G02] (think) about what readers needed. We interviewed several students, [G03] ideas helped us choose comfortable chairs. The books [G04] (donate) by families were placed on low shelves. Every visitor can borrow one book at [G05] time.</p><p>The room has become [G06] (popular) than we expected. Some students come for quiet reading, while others enjoy [G07] (discuss) a story with friends. We keep the room not only tidy [G08] also comfortable, so everyone feels welcome. For us, the greatest [G09] (satisfy) comes from seeing an empty classroom turn into a [G10] (use) place.</p></div><p>The classroom has become a [G10] (use) place.</p>",
+      "steps": [
+        "a与place之间需要形容词修饰，useful强调有用、带来益处；本段由闲置教室变成阅读室，usable（也拼useable）强调可供使用，也与语境相容。本套接受这些形式；useless会改变正面结果。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把语境改为教室仍闲置且无法进入，useful/usable还表达相同结果吗？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 1.5,
+      "answer": [
+        "useful",
+        "usable",
+        "useable"
+      ]
+    },
+    {
+      "id": "hs-english2027-W01",
+      "sourceQuestion": "W01",
+      "collection": "english-2027",
+      "passage": "W1",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k03",
+        "english-2027-k13",
+        "english-2027-k17",
+        "english-2027-t06"
+      ],
+      "title": "W01 · Write the email. Do not copy the model before drafting.",
+      "type": "open",
+      "prompt": "Write the email. Do not copy the model before drafting.",
+      "promptHtml": "<div class=\"english-passage\"><h3>应用文任务｜A suggestion for the school garden</h3><p>假定你是李华，学校英文报向学生征求改善校园花园的建议。请给编辑Alex写一封约80词的邮件，内容包括：<br>1. 提出一项具体改进建议；<br>2. 解释它对学生的好处；<br>3. 说明你愿意承担的工作。</p><p>请以Dear Alex,开头，以Yours, Li Hua结尾。情境为本套原创，不是高考真题。</p></div><p>Write the email. Do not copy the model before drafting.</p>",
+      "steps": [
+        "标签是具体方案；不了解植物名称与养护是理由，标签提供信息形成机制；和生物老师核对资料、设计并测试文字是可执行贡献。参考稿是一种可行写法，不是官方范文或保证得分的模板。"
+      ],
+      "hint": "先确定读者、交际目的和题干要点，再写具体信息。",
+      "transfer": "若收信人改为来校参观的小学生，标签建议的解释和语体应怎样调整？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 15,
+      "rubric": [
+        "建议具体且与校园花园相关",
+        "说明建议怎样帮助学生，而非只说重要",
+        "自荐贡献可执行且与建议有关",
+        "身份、对象、格式、语气及篇幅符合任务",
+        "检查句子、时态、名词数与搭配"
+      ],
+      "stepsHtml": [
+        "<div class=\"english-model\">Dear Alex,<br>I suggest adding simple plant labels to our school garden. Many students enjoy the flowers but do not know their names or how to care for them. Clear labels with a short description would turn a pleasant walk into a chance to learn. I would be happy to collect the information with our biology teacher and help design the labels. We could ask classmates to check whether the wording is easy to understand before putting them up.<br>Yours,<br>Li Hua</div><p>标签是具体方案；不了解植物名称与养护是理由，标签提供信息形成机制；和生物老师核对资料、设计并测试文字是可执行贡献。参考稿是一种可行写法，不是官方范文或保证得分的模板。</p>"
+      ]
+    },
+    {
+      "id": "hs-english2027-W02",
+      "sourceQuestion": "W02",
+      "collection": "english-2027",
+      "passage": "W2",
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k07",
+        "english-2027-k09",
+        "english-2027-k16",
+        "english-2027-k17",
+        "english-2027-t07"
+      ],
+      "title": "W02 · Continue the story in two paragraphs, using the given openings.",
+      "type": "open",
+      "prompt": "Continue the story in two paragraphs, using the given openings.",
+      "promptHtml": "<div class=\"english-passage\"><h3>续写原文｜The model boat</h3><p>Nina had promised to bring a small model boat to the class exhibition. Her grandfather had helped her build it during the summer, and she wanted to show how carefully its wooden pieces fitted together. She had told her classmates that it would be the centre of her display.</p><p>On the morning of the exhibition, Nina placed the boat on a table and went to collect her poster. When she returned, one side of the boat was cracked. A classmate, Tom, stood beside the table with a pale face. He explained that his bag had caught the edge of the boat as he turned around. He had tried to stop it from falling, but he was too late.</p><p>Nina looked at the damage and felt tears rise. For a moment, she wanted to tell Tom to go away. Then she noticed that he had carefully gathered every loose piece on a sheet of paper. He had not hidden the broken boat or left the room.</p><p>The exhibition would open in an hour. Nina&#x27;s teacher offered them a quiet desk and some suitable glue. The boat might not look exactly as it had before, but there was still time to do something. Nina took a slow breath and looked at Tom.</p><p>续写两段，约150词；保留下列两段开头语：<br>Paragraph 1: &quot;Let&#x27;s see what we can do together,&quot; Nina said.<br>Paragraph 2: When the visitors reached their table, Nina began to explain.</p><p>以上原文与开头均为原创。</p></div><p>Continue the story in two paragraphs, using the given openings.</p>",
+      "steps": [
+        "第一段把碎片、胶水、展示前一小时这些已有线索用于合作修复，并用改海报填补等待干胶时间。第二段由给定开头自然进入解释，公开修复处回扣前文不隐藏的责任态度。未把船写成突然恢复完美，也未靠无关奖项强行升华。参考续写不是唯一合理结局。"
+      ],
+      "hint": "列出已知事实、冲突与两个段首要求，补足中间因果。",
+      "transfer": "若第二段开头改为“After the exhibition, Tom returned alone”，第一段必须建立哪些新的时序与动机？",
+      "skills": [
+        "解释表达",
+        "因果与证据"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 25,
+      "rubric": [
+        "保留人物、意外损坏、收集碎片、老师提供材料及一小时时间约束",
+        "第一段从合作推进到可向访客展示，不无因跳过关键事件",
+        "第二段开头与第一段结果相接，回应事故与修复",
+        "情绪变化由对方负责态度及合作行动触发",
+        "叙事时间、指代、语言连贯准确；两段结构清晰"
+      ],
+      "stepsHtml": [
+        "<div class=\"english-model\">&quot;Let&#x27;s see what we can do together,&quot; Nina said. Tom nodded and pulled up a chair. They matched the loose pieces to the damaged side, working slowly enough to avoid another mistake. While the glue dried, Nina changed her poster to show the repair process. Tom wrote a short explanation of what had happened and asked if he could stay to help. Looking at his careful handwriting, Nina felt her anger ease.<br><br>When the visitors reached their table, Nina began to explain. She pointed to the repaired side rather than trying to hide it. Tom described the accident and the steps they had taken afterwards. The boat was not perfect, but the visitors listened closely to their story. Nina realised that the display now showed more than careful building. It showed how people could take responsibility and work together after something went wrong.</div><p>第一段把碎片、胶水、展示前一小时这些已有线索用于合作修复，并用改海报填补等待干胶时间。第二段由给定开头自然进入解释，公开修复处回扣前文不隐藏的责任态度。未把船写成突然恢复完美，也未靠无关奖项强行升华。参考续写不是唯一合理结局。</p>"
+      ]
+    },
+    {
+      "id": "hs-english2027-M01",
+      "sourceQuestion": "M01",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k04"
+      ],
+      "title": "M01 · She gave me ___ useful piece of advice.",
+      "type": "fill",
+      "prompt": "She gave me ___ useful piece of advice.",
+      "promptHtml": "<p>She gave me ___ useful piece of advice.</p>",
+      "steps": [
+        "useful以辅音音素开头；advice不可数，此处piece才是可数中心。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把useful改为unusual，a/an如何改变？依据是字母还是读音？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "a"
+      ]
+    },
+    {
+      "id": "hs-english2027-M02",
+      "sourceQuestion": "M02",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k04"
+      ],
+      "title": "M02 · The two ___ (child) are waiting outside.",
+      "type": "fill",
+      "prompt": "The two ___ (child) are waiting outside.",
+      "promptHtml": "<p>The two ___ (child) are waiting outside.</p>",
+      "steps": [
+        "two要求复数，child是不规则复数children。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把two children改成one child，名词和后面的be需要怎样一致？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "children"
+      ]
+    },
+    {
+      "id": "hs-english2027-M03",
+      "sourceQuestion": "M03",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k05"
+      ],
+      "title": "M03 · The quality of these reports ___ (be) excellent.（描述当前状态）",
+      "type": "fill",
+      "prompt": "The quality of these reports ___ (be) excellent.（描述当前状态）",
+      "promptHtml": "<p>The quality of these reports ___ (be) excellent.（描述当前状态）</p>",
+      "steps": [
+        "主语中心quality为单数；不能被of后reports误导。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把主语改为“The reports from our class”，is还是are？找真正的中心。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "is"
+      ]
+    },
+    {
+      "id": "hs-english2027-M04",
+      "sourceQuestion": "M04",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k07"
+      ],
+      "title": "M04 · We ___ (visit) the museum yesterday.",
+      "type": "fill",
+      "prompt": "We ___ (visit) the museum yesterday.",
+      "promptHtml": "<p>We ___ (visit) the museum yesterday.</p>",
+      "steps": [
+        "yesterday指结束的过去时间，主动谓语用一般过去。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把yesterday改为every year，visited还对应相同时间含义吗？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "visited"
+      ]
+    },
+    {
+      "id": "hs-english2027-M05",
+      "sourceQuestion": "M05",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k07"
+      ],
+      "title": "M05 · By the time we arrived, the meeting ___ (begin).",
+      "type": "fill",
+      "prompt": "By the time we arrived, the meeting ___ (begin).",
+      "promptHtml": "<p>By the time we arrived, the meeting ___ (begin).</p>",
+      "steps": [
+        "arrived是过去参照点，会议在其前已开始，过去完成had begun。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "如果叙述按顺序写“We arrived and the meeting began”，为什么未必使用过去完成？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "had begun"
+      ]
+    },
+    {
+      "id": "hs-english2027-M06",
+      "sourceQuestion": "M06",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k08"
+      ],
+      "title": "M06 · The hall ___ (clean) now; please wait outside.（强调正在清扫）",
+      "type": "fill",
+      "prompt": "The hall ___ (clean) now; please wait outside.（强调正在清扫）",
+      "promptHtml": "<p>The hall ___ (clean) now; please wait outside.（强调正在清扫）</p>",
+      "steps": [
+        "厅承受动作，now及提示强调进行，用现在进行被动。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "若强调每天清扫而非此时正在清扫，进行被动如何变为一般现在被动？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "is being cleaned"
+      ]
+    },
+    {
+      "id": "hs-english2027-M07",
+      "sourceQuestion": "M07",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k09"
+      ],
+      "title": "M07 · The bridge ___ (build) in 2010 is still in use.",
+      "type": "fill",
+      "prompt": "The bridge ___ (build) in 2010 is still in use.",
+      "promptHtml": "<p>The bridge ___ (build) in 2010 is still in use.</p>",
+      "steps": [
+        "主句谓语is，bridge承受build，过去分词后置修饰。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "改成“The bridge ___ (build) in 2010.”，没有is still in use后空格职责如何变化？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "built"
+      ]
+    },
+    {
+      "id": "hs-english2027-M08",
+      "sourceQuestion": "M08",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k08"
+      ],
+      "title": "M08 · She made us ___ (check) every name.",
+      "type": "fill",
+      "prompt": "She made us ___ (check) every name.",
+      "promptHtml": "<p>She made us ___ (check) every name.</p>",
+      "steps": [
+        "主动make sb do，宾语补足语用无to不定式。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把made us改为asked us，宾补中是否需恢复to？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "check"
+      ]
+    },
+    {
+      "id": "hs-english2027-M09",
+      "sourceQuestion": "M09",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k08"
+      ],
+      "title": "M09 · We were made ___ (check) every name.",
+      "type": "fill",
+      "prompt": "We were made ___ (check) every name.",
+      "promptHtml": "<p>We were made ___ (check) every name.</p>",
+      "steps": [
+        "被动be made to do恢复to。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把We were made改为The teacher made us，to如何变化？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "to check"
+      ]
+    },
+    {
+      "id": "hs-english2027-M10",
+      "sourceQuestion": "M10",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k02",
+        "english-2027-k09"
+      ],
+      "title": "M10 · I look forward to ___ (hear) from you.",
+      "type": "fill",
+      "prompt": "I look forward to ___ (hear) from you.",
+      "promptHtml": "<p>I look forward to ___ (hear) from you.</p>",
+      "steps": [
+        "to属于介词短语look forward to，后接动名词。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "比较look forward to hearing与want to hear，两个to承担相同职责吗？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "hearing"
+      ]
+    },
+    {
+      "id": "hs-english2027-M11",
+      "sourceQuestion": "M11",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k10"
+      ],
+      "title": "M11 · The guide spoke ___ (clear), so everyone understood.",
+      "type": "fill",
+      "prompt": "The guide spoke ___ (clear), so everyone understood.",
+      "promptHtml": "<p>The guide spoke ___ (clear), so everyone understood.</p>",
+      "steps": [
+        "修饰spoke的方式，用副词clearly。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把spoke改为gave a ___ explanation，clear是否仍需副词形式？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "clearly"
+      ]
+    },
+    {
+      "id": "hs-english2027-M12",
+      "sourceQuestion": "M12",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k10"
+      ],
+      "title": "M12 · The soup tastes ___ (good).",
+      "type": "fill",
+      "prompt": "The soup tastes ___ (good).",
+      "promptHtml": "<p>The soup tastes ___ (good).</p>",
+      "steps": [
+        "taste为系动词，good是表语；不能因动词后而用well。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "比较tastes good与tasted the soup carefully，taste的系动词和实义动词用法如何不同？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "good"
+      ]
+    },
+    {
+      "id": "hs-english2027-M13",
+      "sourceQuestion": "M13",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k11"
+      ],
+      "title": "M13 · This is the village ___ we visited last year.",
+      "type": "fill",
+      "prompt": "This is the village ___ we visited last year.",
+      "promptHtml": "<p>This is the village ___ we visited last year.</p>",
+      "steps": [
+        "visit缺宾语，关系代词that/which；地点名词不自动选where。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把visited改为stayed，village在从句内是否仍是直接宾语？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "that",
+        "which"
+      ]
+    },
+    {
+      "id": "hs-english2027-M14",
+      "sourceQuestion": "M14",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k11"
+      ],
+      "title": "M14 · This is the village ___ we stayed last year.（只填一个词）",
+      "type": "fill",
+      "prompt": "This is the village ___ we stayed last year.（只填一个词）",
+      "promptHtml": "<p>This is the village ___ we stayed last year.（只填一个词）</p>",
+      "steps": [
+        "stay在此不缺直接宾语，需要地点关系，where相当于in which。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把stayed改为visited，原来的where为何不再合适？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "where"
+      ]
+    },
+    {
+      "id": "hs-english2027-M15",
+      "sourceQuestion": "M15",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k12"
+      ],
+      "title": "M15 · I wonder ___ she needs.（问她需要什么物品，只填一个词）",
+      "type": "fill",
+      "prompt": "I wonder ___ she needs.（问她需要什么物品，只填一个词）",
+      "promptHtml": "<p>I wonder ___ she needs.（问她需要什么物品，只填一个词）</p>",
+      "steps": [
+        "needs缺宾语，what同时连接并承担宾语角色。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把句意改为询问她是否需要帮助，应怎样改写完整宾语从句？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "what"
+      ]
+    },
+    {
+      "id": "hs-english2027-M16",
+      "sourceQuestion": "M16",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k12"
+      ],
+      "title": "M16 · ___ he will come remains uncertain.（表示“是否”）",
+      "type": "fill",
+      "prompt": "___ he will come remains uncertain.（表示“是否”）",
+      "promptHtml": "<p>___ he will come remains uncertain.（表示“是否”）</p>",
+      "steps": [
+        "主语从句表示是否，whether合适；此处不直接用if替代。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把从句放入“I do not know ___ he will come”，if在新的位置是否有可能成立？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "Whether",
+        "whether"
+      ]
+    },
+    {
+      "id": "hs-english2027-M17",
+      "sourceQuestion": "M17",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k13"
+      ],
+      "title": "M17 · Although the task was difficult, ___ continued.（填人称代词，指我们）",
+      "type": "fill",
+      "prompt": "Although the task was difficult, ___ continued.（填人称代词，指我们）",
+      "promptHtml": "<p>Although the task was difficult, ___ continued.（填人称代词，指我们）</p>",
+      "steps": [
+        "although已引让步从句，不再填but；主句需要主语we。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "改写为“The task was difficult, but we continued”，解释为何but前不再需要although。",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "we"
+      ]
+    },
+    {
+      "id": "hs-english2027-M18",
+      "sourceQuestion": "M18",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k07",
+        "english-2027-k13"
+      ],
+      "title": "M18 · If it ___ (rain) tomorrow, we will stay inside.",
+      "type": "fill",
+      "prompt": "If it ___ (rain) tomorrow, we will stay inside.",
+      "promptHtml": "<p>If it ___ (rain) tomorrow, we will stay inside.</p>",
+      "steps": [
+        "真实将来条件，if从句常用一般现在表将来，it为单数。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把语境改成对现在不真实的假设，if从句与主句的时间形式要一起怎样改变？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "rains"
+      ]
+    },
+    {
+      "id": "hs-english2027-M19",
+      "sourceQuestion": "M19",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k14"
+      ],
+      "title": "M19 · If I had more free time now, I ___ (join) the club.",
+      "type": "fill",
+      "prompt": "If I had more free time now, I ___ (join) the club.",
+      "promptHtml": "<p>If I had more free time now, I ___ (join) the club.</p>",
+      "steps": [
+        "与现在实际不同的假设，主句可用would/could/might加原形，分别侧重意愿或假设结果、能力或可能、较弱可能；此短句未进一步排除这些含义。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "分别用would/could/might join解释愿望或结果、能力或可能、较弱可能。短句怎样补充语境才能区分？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "would join",
+        "could join",
+        "might join"
+      ]
+    },
+    {
+      "id": "hs-english2027-M20",
+      "sourceQuestion": "M20",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k14"
+      ],
+      "title": "M20 · The teacher suggested that we ___ (leave) early.（suggest表示建议）",
+      "type": "fill",
+      "prompt": "The teacher suggested that we ___ (leave) early.（suggest表示建议）",
+      "promptHtml": "<p>The teacher suggested that we ___ (leave) early.（suggest表示建议）</p>",
+      "steps": [
+        "suggest表示建议，that从句用原形或should加原形，两个均可。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把主语改为“The evidence”，suggest意为表明时，是否还机械用should？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "leave",
+        "should leave"
+      ]
+    },
+    {
+      "id": "hs-english2027-M21",
+      "sourceQuestion": "M21",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k12",
+        "english-2027-k19"
+      ],
+      "title": "M21 · Mia asked where the station ___ (be).（按过去时叙述当时情况）",
+      "type": "fill",
+      "prompt": "Mia asked where the station ___ (be).（按过去时叙述当时情况）",
+      "promptHtml": "<p>Mia asked where the station ___ (be).（按过去时叙述当时情况）</p>",
+      "steps": [
+        "间接问句用陈述语序，station单数，提示限定过去参照。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "若改回直接问话“Where ...?”，陈述语序如何变为疑问语序？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "was"
+      ]
+    },
+    {
+      "id": "hs-english2027-M22",
+      "sourceQuestion": "M22",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k02",
+        "english-2027-k10"
+      ],
+      "title": "M22 · He is responsible ___ checking the source.",
+      "type": "fill",
+      "prompt": "He is responsible ___ checking the source.",
+      "promptHtml": "<p>He is responsible ___ checking the source.</p>",
+      "steps": [
+        "be responsible for说明负责内容，for后动名词。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "比较be responsible for与depend on，中文意义不能替代哪项搭配检查？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "for"
+      ]
+    },
+    {
+      "id": "hs-english2027-M23",
+      "sourceQuestion": "M23",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k02"
+      ],
+      "title": "M23 · Their first attempt was ___ (success).",
+      "type": "fill",
+      "prompt": "Their first attempt was ___ (success).",
+      "promptHtml": "<p>Their first attempt was ___ (success).</p>",
+      "steps": [
+        "was后说明attempt性质，形容词successful；success是名词。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "改成“The attempt was a great ___”，需要形容词还是名词？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "successful"
+      ]
+    },
+    {
+      "id": "hs-english2027-M24",
+      "sourceQuestion": "M24",
+      "collection": "english-2027",
+      "passage": null,
+      "course": "hs-english",
+      "sections": [
+        "english-2027-k14"
+      ],
+      "title": "M24 · You have finished the task, ___ you?（填缩略形式）",
+      "type": "fill",
+      "prompt": "You have finished the task, ___ you?（填缩略形式）",
+      "promptHtml": "<p>You have finished the task, ___ you?（填缩略形式）</p>",
+      "steps": [
+        "前句为现在完成肯定，附加疑问用haven't you；本题已给出you且要求缩略形式。"
+      ],
+      "hint": "先划分句子结构，判断空格职责，再检查语境与形式。",
+      "transfer": "把陈述部分改成“You have not finished”，附加疑问的肯否怎样变化？",
+      "skills": [
+        "解释表达",
+        "迁移设计"
+      ],
+      "origin": "教学练习",
+      "scoreStructure": 0,
+      "answer": [
+        "haven't"
+      ]
     }
   ]
 }

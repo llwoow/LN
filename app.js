@@ -187,7 +187,7 @@
     const model = course.sections.find((section) => section.kind === 'model');
     const modelActive = model && location.hash.split('/')[2] === model.id;
     const material = course.sections.find(section=>section.supplement);
-    const materialLink = material ? '<a href="#course/'+course.id+'/'+material.id+'">试卷讲解</a>' : '';
+    const materialLink = material ? '<a href="#course/'+course.id+'/'+material.id+'">'+escapeHTML(material.navigationLabel || '试卷讲解')+'</a>' : '';
     const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
     return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + (course.outlineOnly ? '章节目录' : '章节阅读') + '</a>' + modelLink + materialLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
   }
@@ -314,6 +314,7 @@
       if (selected.kind === 'model') await loadWindingAssets();
       if (selected.id.startsWith('transformer-')) await loadStyle('courses/electrical-machines/model/transformer-lesson.css');
       if (selected.supplement === 'physics-001') await Promise.all([loadScript('courses/hs-physics/physics-001/models.js'), loadScript('courses/hs-physics/physics-001/reader.js'), loadStyle('courses/hs-physics/physics-001/reader.css')]);
+      if (selected.supplement === 'english-2027') await Promise.all([loadScript('courses/hs-english/review-2027/reader.js'), loadStyle('courses/hs-english/review-2027/reader.css')]);
       const body = $('#lesson-body');
       if (!body || body.dataset.lessonKey !== key) return;
       const payload = outline ? {} : window.LN_LESSONS[key];
@@ -400,6 +401,7 @@
           }
         }
         if (selected.supplement === 'physics-001') window.LNPhysics001.mount(body, payload);
+        if (selected.supplement === 'english-2027') window.LNEnglish2027.mount(body, payload);
       }
       body.setAttribute('aria-busy', 'false');
       body.classList.toggle('model-lesson', selected.kind === 'model');
@@ -421,6 +423,7 @@
 
   function renderRoute() {
     window.LNPhysics001?.onRoute();
+    window.LNEnglish2027?.onRoute();
     window.LNPractice.onRoute();
     window.LNResources.onRoute();
     window.LNPublication.onRoute();

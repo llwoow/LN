@@ -1910,6 +1910,50 @@
         }
       ],
       "localLesson": "#course/electrical-materials/em-2-4"
+    },
+    {
+      "id": "english2027-verb-roles",
+      "title": "谓语与修饰语对照",
+      "kind": "课程内交互",
+      "repository": null,
+      "checked": "2026-11-14",
+      "targets": [
+        {
+          "course": "hs-english",
+          "section": "english-2027-k06"
+        },
+        {
+          "course": "hs-english",
+          "section": "english-2027-k09"
+        }
+      ],
+      "question": "相同的write为什么会分别写成written、was written和wrote？",
+      "summary": "对照修饰名词、承担完整谓语和并列动作三种关系，先说明句子需要什么，再解释形式。",
+      "steps": [
+        "读The book written by a young teacher became popular，找出主句谓语及written修饰的对象。",
+        "切换完整谓语例句，说明过去、被动和主语单数怎样共同决定was written。",
+        "切换并列谓语例句，说明and为何允许wrote和sent共享主语；另写一个新例子检验。"
+      ],
+      "output": "逐句标明动词的句法职责、逻辑主语和主动被动关系。",
+      "requirements": "浏览器；也可只对照正文中的例句。",
+      "license": "本站编写例句及交互；外部课程标准使用出版社公开链接，不镜像附件。",
+      "links": [
+        {
+          "label": "参考：英语课标",
+          "url": "https://www.pep.com.cn/xw/zt/rjwy/gzkb2020/202205/P020220517522153664167.pdf"
+        }
+      ],
+      "limits": [
+        "形式相同的过去分词与过去式需要根据职责、语境分别判断；不以动词数量机械决定非谓语。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "已核对例句的句法关系；未开展学习者效果或难度标定。",
+        "read": "课程K06、K09的成分、限定谓语及非谓语解释。"
+      },
+      "evidence": [],
+      "downloads": [],
+      "localLesson": "#course/hs-english/english-2027-k09"
     }
   ]
 }

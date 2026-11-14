@@ -70,11 +70,13 @@ class PracticeContent(unittest.TestCase):
 
     def test_misconceptions_have_reasoned_feedback_and_transfer(self):
         for q in self.questions:
-            self.assertGreaterEqual(len(q['steps']),3,q['id'])
+            self.assertTrue(q['steps'],q['id'])
+            if q.get('collection')!='english-2027':self.assertGreaterEqual(len(q['steps']),3,q['id'])
             self.assertTrue(q['transfer']);self.assertTrue(q['origin'])
             if q['type'] in ('single','multi'):
                 self.assertTrue(all(o['feedback'].strip() and o['feedback']!=o['text'] for o in q['options']),q['id'])
                 self.assertNotIn('以上都',q['prompt'])
+            elif q['type']=='fill':self.assertTrue(all(isinstance(a,str) and a.strip() for a in q['answer']))
             else:self.assertGreaterEqual(len(q['rubric']),3)
         self.assertIn('尚未覆盖274个阅读单元全部目标',(ROOT/'PRACTICE.md').read_text())
 

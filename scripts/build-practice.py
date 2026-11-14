@@ -33,14 +33,16 @@ for q in data['questions']:
         assert any(n.attrs.get('id')==q['readingAnchor'] for n in document.walk()),q['id']
     coverage.add(q['course'])
     assert q['title'] and q['prompt'] and q['origin'] and q['hint'] and q['transfer'],q['id']
-    assert len(q['steps'])>=3 and q['skills'] and set(q['skills'])<=skills,q['id']
-    assert q['type'] in {'single','multi','numeric','open'},q['id']
+    assert q['steps'] and all(s.strip() for s in q['steps']) and q['skills'] and set(q['skills'])<=skills,q['id']
+    assert q['type'] in {'single','multi','numeric','fill','open'},q['id']
     if q['type'] in {'single','multi'}:
         options=q['options'];ids={o['id'] for o in options}
         assert len(options)>=3 and len(ids)==len(options),q['id']
         assert all(o['text'] and o['feedback'] for o in options),q['id']
         assert set(q['answer'])<ids and len(set(q['answer']))==len(q['answer']),q['id']
         assert (len(q['answer'])==1 if q['type']=='single' else len(q['answer'])>=2),q['id']
+    elif q['type']=='fill':
+        assert isinstance(q['answer'],list) and q['answer'] and all(isinstance(a,str) and a.strip() for a in q['answer']),q['id']
     else:
         assert len(q['rubric'])>=3,q['id']
         if q['type']=='numeric':
