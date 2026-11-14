@@ -79,7 +79,14 @@
         const power=['msup','msubsup'].includes(node.localName) ? node.lastElementChild : null;
         const exponential=node.localName==='msup' && atom(node.firstElementChild)==='e' && !upperKey(plain(power)) && /[A-Za-zα-ω]/u.test(plain(power));
         const entry = exponential ? null : resolveSymbol(course, section, key, 'symbol', equation);
-        if (entry) list.push({ key, entry, node, inExponent, visible: displayKey(plain(node)) });
+        if (entry) {
+          const variants=[displayKey(plain(node))],parts=[...node.children];
+          // KaTeX's visual stack may serialize a superscript before its subscript,
+          // while MathML always stores the subscript first. Preserve the full atom.
+          if (node.localName==='msubsup') variants.push(displayKey(plain(parts[0])+plain(parts[2])+plain(parts[1])));
+          if (node.localName==='msup' && parts[0]?.localName==='msub') variants.push(displayKey(plain(parts[0].children[0])+plain(parts[1])+plain(parts[0].children[1])));
+          list.push({ key, entry, node, inExponent, visible:variants[0], visibleVariants:variants });
+        }
         else if (['msub','msubsup'].includes(node.localName) && node.children[1]) {
           const sub = clean(plain(node.children[1]));
           const notation = resolveSymbol(course, section, sub, 'subscript', equation);
@@ -205,10 +212,19 @@
       if (wrapper && unique.length === 1 && items.some((item) => displayKey(visual.textContent) === item.visible)) {
         interactive(wrapper, unique[0], true); return;
       }
+      // KaTeX may join adjacent italic variables (e.g. KN) in one text span.
+      // Split that visible text only when MathML confirms a plain single-letter
+      // variable here. The mathematical/accessibility tree remains untouched.
+      visual.querySelectorAll('.mathnormal').forEach(element=>{
+        if (element.children.length || !/^[A-Za-zα-ωΑ-Ω]{2,}$/u.test(element.textContent)) return;
+        const letters=[...element.textContent];
+        if (!letters.some(letter=>items.some(item=>item.node?.localName==='mi' && item.key===letter))) return;
+        element.replaceChildren(...letters.map(letter=>{const span=document.createElement('span');span.className='mathnormal';span.textContent=letter;return span;}));
+      });
       items.forEach((item) => {
         const candidates = [...visual.querySelectorAll('.mord,.mop,.mathnormal,.mathcal')].filter((element) => {
           if (element.closest('[data-definition]') || element.querySelector('[data-definition]')) return false;
-          if (displayKey(element.textContent) !== item.visible) return false;
+          if (!(item.visibleVariants||[item.visible]).includes(displayKey(element.textContent))) return false;
           // A temperature difference and an absolute temperature can coexist.
           // Match the visible delta beside this occurrence, not every T in the formula.
           let leading=element;
