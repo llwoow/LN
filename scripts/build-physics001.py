@@ -100,7 +100,7 @@ for q in D['questions']:
     markup='<section class="physics001" id="question-'+str(i)+'"><h2>第'+str(i)+'题 · '+esc(q['title'])+'</h2><p class="page-meta">'+esc(' / '.join(q['tags']))+'</p><h3>题意与条件</h3>'+rich(q['prompt'])
     if i in [3,5,6]:markup+='<ol type="A">'+''.join('<li>'+esc(t)+'</li>' for t in options[i])+'</ol>'
     if i in extra_tasks:markup+=rich(extra_tasks[i])
-    markup+='<p class="source-citation">来源：《高三物理》试卷001，第'+ '、'.join(map(str,q['source']))+'页，第'+str(i)+'题；命题单位与公开原件链接待核。</p>'
+    markup+='<p class="reading-reference">参考：《高三物理》题稿。</p>'
     if i==15:markup+='<figure id="figure-q15-caliper"><div class="instrument-scroll" tabindex="0" role="region" aria-label="游标刻度示意，可横向查看或点击放大"><a href="'+BASE+'/figures/q15-caliper.svg" target="_blank" rel="noopener"><img src="'+BASE+'/figures/q15-caliper.svg" width="720" height="245" alt="游标零线在主尺2与3毫米之间，第8线重合"></a></div><figcaption>图15.0 · 根据原稿已核对的刻线条件重新绘制，20等分游标的标定精度为0.05mm。</figcaption></figure>'
     markup+='<h3>'+esc(q['foundation']['title'])+'</h3>'+rich(q['foundation']['text'])
     if q.get('figure'):
@@ -129,7 +129,7 @@ links=[{'from':sid(a),'to':sid(b),'label':label,'description':desc} for a,b,labe
 material={'id':'physics-001','group':'试卷001','description':'依据试卷001整理的逐题讲解、物理仿真与复做记录。','sections':sections,'knowledgeLinks':links,'links':[{'label':'试卷001资料与记录','href':'#course/hs-physics/physics-001'}]}
 (ROOT/'courses/hs-physics/supplements.json').write_text(json.dumps({'materials':[material]},ensure_ascii=False,indent=2)+'\n')
 (ROOT/'courses/hs-physics/glossary.json').write_text(json.dumps({'lazy':True,'symbolDefinitions':glossary,'terms':[]},ensure_ascii=False,indent=2)+'\n')
-overview='<section class="physics001"><h2>试卷001</h2><p>第1—18题的逐题讲解与运动模型。来源：《高三物理》用户提供稿，第1—8页；命题单位与公开原件链接待核。</p>'+lst(D['meta']['notes'])+'<ol>'+''.join('<li><a href="'+route(q['id'])+'">第'+str(q['id'])+'题 · '+esc(q['title'])+'</a></li>' for q in D['questions'])+'</ol><h3>学习笔记</h3><p>可导入此前导出的physics-001记录，按更新时间保留较新笔记。笔记与练习首答记录分别保存在当前浏览器，不换算个人成绩。</p><div data-physics-notebook></div><h3>来源与教材定位</h3><p>原稿标题为“高三物理”，按卷面第1—8页与第1—18题定位。讲解、重绘图与仿真是教学整理，不是官方评分细则。原件未核实命题单位与正式出版信息，不据此认定2027官方考纲或教材全文覆盖。</p><p><a href="https://basic.smartedu.cn/tchMaterial" target="_blank" rel="noopener">国家中小学智慧教育平台：教材入口</a> · <a href="#highschool/resources">教材与来源证据</a></p></section>'
+overview='<section class="physics001"><h2>试卷001</h2><p>第1—18题的逐题讲解与运动模型。参考：《高三物理》题稿。</p>'+lst(D['meta']['notes'])+'<ol>'+''.join('<li><a href="'+route(q['id'])+'">第'+str(q['id'])+'题 · '+esc(q['title'])+'</a></li>' for q in D['questions'])+'</ol><h3>学习笔记</h3><p>可导入此前导出的physics-001记录，按更新时间保留较新笔记。笔记与练习首答记录分别保存在当前浏览器，不换算个人成绩。</p><div data-physics-notebook></div><p><a href="https://basic.smartedu.cn/tchMaterial" target="_blank" rel="noopener">国家中小学智慧教育平台：教材入口</a> · <a href="#highschool/resources">教材与来源证据</a></p></section>'
 lesson('physics-001',overview,physics001=0)
 # Derived practice entries link the full original reasoning; preserve all old identities and bank.version.
 bankpath=ROOT/'courses/practice/bank.json';bank=json.loads(bankpath.read_text());bank['questions']=[q for q in bank['questions'] if not q['id'].startswith('hs-physics001-')]

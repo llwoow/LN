@@ -16,7 +16,7 @@ def build():
  assert [q['number'] for q in questions]==EXPECTED,'Original question numbers must remain complete and ordered'
  payload=REF['assignment'](COURSE/'lessons/transformer-homework.js')
  course=REF['assignment'](COURSE/'manifest.js');sections={s['id']:s for s in course['sections']}
- body='<h2>第二章已做习题与详解</h2><p>按原整理保留13道题的题目、解答、图示和差异说明。公式可直接阅读，图可点开放大，来源书目与原题号在文末列出。</p>'
+ body='<h2>第二章已做习题与详解</h2><p>保留13道题的题目、解答、图示和差异说明。公式直接阅读，图可点开放大。</p>'
  body+='<nav class="homework-navigation" aria-label="习题定位"><label for="homework-question">按题定位</label><select id="homework-question" data-homework-jump>'+''.join('<option value="'+q['number']+'">'+html.escape(q['number']+' '+q['title'])+'</option>' for q in questions)+'</select></nav><span id="page-1" class="equation-anchor" aria-label="原PDF第1页"></span>'
  for q in questions:
   number=q['number'];anchor='question-'+number
@@ -30,7 +30,7 @@ def build():
   content=re.sub(r'(<img class="homework-diagram" src="([^"]+)"[^>]*>)',lambda m:'<a class="homework-diagram-link" href="'+m[2]+'" target="_blank" rel="noopener" aria-label="放大查看本题原图">'+m[1]+'</a>',content)
   assert 'katex-error' not in content,number
   body+='<section class="homework-problem" id="problem-'+number+'" data-homework-question="'+number+'"><h3 id="'+anchor+'">'+html.escape(number+' '+q['title'])+'</h3>'+content+'<nav class="homework-knowledge" aria-label="本题知识点">'+''.join(links)+'</nav><p><button type="button" class="secondary-button" data-open-practice data-practice-course="electrical-machines" data-practice-section="transformer-homework" data-practice-question="hw-'+number+'" aria-haspopup="dialog" aria-controls="practice-dialog">本题收藏、标记与重做</button></p></section>'
- body+='<details class="homework-source"><summary>来源与引用</summary><p>来源：用户提供的第二章习题整理稿，按原题号与页码定位。教材：汤蕴璆《电机学》第5版，机械工业出版社，ISBN 9787111447092。<a href="https://www.cmpedu.com/books/book/2027021.htm" target="_blank" rel="noopener">出版社书目</a>。</p><p><a href="assets/practice/homework/reproduce.py" download>数值复算代码</a> · <a href="assets/practice/homework/results.json" download>复算结果</a></p><p>原题号和各小问保留；第2-19题的变比平方与第2-22题的中间舍入已明确说明，第2-19、2-25题所列教材参考差异仍保留。未取得教材完整详解，不把差异擅自判成教材错误。问答题可记录草稿、收藏和手动错题标记，不自动判定推导正确。</p></details>'
+ body+='<details class="homework-source"><summary>参考</summary><p>《电机学》、课堂题稿。<a href="https://www.cmpedu.com/books/book/2027021.htm" target="_blank" rel="noopener">教材</a> · <a href="assets/practice/homework/reproduce.py" download>数值复算代码</a> · <a href="assets/practice/homework/results.json" download>复算结果</a></p></details>'
  body+='<details class="study-symbols"><summary>符号、单位与约定</summary>'+''.join('<p id="'+d['anchor']+'"><strong>'+html.escape(d['title'])+'：</strong>'+html.escape(d['description'])+'</p>' for d in data['definitions'])+'</details>'
  payload.pop('pdf',None);payload.pop('pages',None)
  payload.update(html=body,questions=[{**x,'anchor':'question-'+x['number']} for x in payload['questions']],webSource='courses/electrical-machines/homework-source.json')

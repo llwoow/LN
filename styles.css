@@ -422,8 +422,8 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 /* Single-column scholarly reading, shared by all HTML course material. */
 :root { --reading-font: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Songti SC', 'STSong', 'SimSun', Georgia, serif; }
 .publication-body { max-width: 68ch; font-family: var(--reading-font); font-size: 18px; font-weight: 500; line-height: 1.85; text-rendering: optimizeLegibility; }
-/* Source provenance is metadata, not a full-size teaching paragraph. Keep it readable on narrow screens. */
-.publication-body > p.ln-source-note { margin: .5em 0 1.1em; font: 500 13px/1.7 var(--font); color: var(--muted); text-align: start; overflow-wrap: anywhere; }
+/* Brief references remain secondary and readable; model/assessment caveats stay in normal prose. */
+.publication-body p.reading-reference { margin: .5em 0 1.1em; font: 500 13px/1.7 var(--font); color: var(--muted); text-align: start; overflow-wrap: anywhere; }
 .publication-body p { margin: .85em 0; text-align: justify; text-justify: inter-ideograph; hanging-punctuation: allow-end; }
 .publication-body h2, .publication-body h3, .publication-body h4, .publication-body h5 { font-family: var(--font); text-wrap: pretty; }
 .publication-body h2 { font-size: 24px; line-height: 1.45; margin: 1.5em 0 .8em; }

@@ -32,7 +32,7 @@ for i,l in enumerate(D['lessons'],1):
     if not body.lstrip().startswith('<section'):body='<section class="article-section" id="'+sid+'">'+body+'</section>'
     refs=[sources[k] for k in l.get('sourceIds',[])];notes=''
     if refs:
-        notes='<details class="rd-sources"><summary>核读资料与适用范围</summary><ul>'+''.join('<li><a href="'+html.escape(s['url'],quote=True)+'" target="_blank" rel="noopener">'+html.escape(s['title'])+'</a><p>'+html.escape(s['readScope'])+'</p></li>' for s in refs)+'</ul></details>'
+        notes='<details class="rd-sources"><summary>参考</summary><ul>'+''.join('<li><a href="'+html.escape(s['url'],quote=True)+'" target="_blank" rel="noopener">'+html.escape(s['title'])+'</a></li>' for s in refs)+'</ul></details>'
     payload={'html':body+notes}
     (BASE/'lessons'/(sid+'.js')).write_text('window.LN_LESSONS=window.LN_LESSONS||{};window.LN_LESSONS['+dump(D['course']+'/'+sid)+']='+dump(payload)+';\n')
     sections.append({'id':sid,'title':l['title'],'group':l['group'],'kind':'html','src':'courses/robot-drive-engineering/lessons/'+sid+'.js','teachingIndex':i,'keywords':l.get('keywords',[])})

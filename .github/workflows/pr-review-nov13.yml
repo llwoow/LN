@@ -7,6 +7,8 @@ on:
       - 'output/pdf/**'
       - 'assets/practice/electrical-materials/**'
       - 'app.js'
+      - 'glossary.js'
+      - 'glossary-index.js'
       - 'styles.css'
       - 'practice.js'
       - 'resource-library.js'
@@ -53,6 +55,8 @@ jobs:
         run: python tests/browser_review_nov13.py
       - name: Verify repository Pages subdirectory
         run: python tests/browser_smoke_pages.py
+      - name: Verify brief references and exact formula definitions
+        run: python tests/reading-policy.browser.py
       - name: Preserve screenshots and actual verification scope
         if: always()
         uses: actions/upload-artifact@v4

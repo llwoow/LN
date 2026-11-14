@@ -690,6 +690,5841 @@
       ],
       "match": "初始电容电压为 U₀",
       "description": "开关闭合前电容上保留的初始电压，方向与u꜀参考方向一致。"
+    },
+    {
+      "id": "emc-local-1-1-0",
+      "title": "U_扰",
+      "symbolHtml": "<span>U<sub>扰</sub></span>",
+      "keys": [
+        "U_扰"
+      ],
+      "description": "受扰端口的电压相量。",
+      "unitHtml": "V",
+      "section": "emc-1-1",
+      "sections": [
+        "emc-1-1"
+      ],
+      "equations": [
+        "D.1.1.1"
+      ],
+      "match": "式中，U扰为受扰端口的电压相量（V）；Z共为源与受扰电路共用回流路径的阻抗（Ω）；I回为流过共用回流路径的电流相量（A）；M为邻近回路与受扰回路之间的互感（H）；I邻为相邻干扰回路的电流相量（A）。这里比较同一频率的相量，采用线性集中参数近似；两个电流属于各自路径，不能仅因频率相同就认作同一个电流。",
+      "sourceAnchor": "symbols-D-1-1-1"
+    },
+    {
+      "id": "emc-local-1-1-1",
+      "title": "Z_共",
+      "symbolHtml": "<span>Z<sub>共</sub></span>",
+      "keys": [
+        "Z_共"
+      ],
+      "description": "源与受扰电路共用回流路径的阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-1-1",
+      "sections": [
+        "emc-1-1"
+      ],
+      "equations": [
+        "D.1.1.1"
+      ],
+      "match": "式中，U扰为受扰端口的电压相量（V）；Z共为源与受扰电路共用回流路径的阻抗（Ω）；I回为流过共用回流路径的电流相量（A）；M为邻近回路与受扰回路之间的互感（H）；I邻为相邻干扰回路的电流相量（A）。这里比较同一频率的相量，采用线性集中参数近似；两个电流属于各自路径，不能仅因频率相同就认作同一个电流。",
+      "sourceAnchor": "symbols-D-1-1-1"
+    },
+    {
+      "id": "emc-local-1-1-2",
+      "title": "I_回",
+      "symbolHtml": "<span>I<sub>回</sub></span>",
+      "keys": [
+        "I_回"
+      ],
+      "description": "流过共用回流路径的电流相量。",
+      "unitHtml": "A",
+      "section": "emc-1-1",
+      "sections": [
+        "emc-1-1"
+      ],
+      "equations": [
+        "D.1.1.1"
+      ],
+      "match": "式中，U扰为受扰端口的电压相量（V）；Z共为源与受扰电路共用回流路径的阻抗（Ω）；I回为流过共用回流路径的电流相量（A）；M为邻近回路与受扰回路之间的互感（H）；I邻为相邻干扰回路的电流相量（A）。这里比较同一频率的相量，采用线性集中参数近似；两个电流属于各自路径，不能仅因频率相同就认作同一个电流。",
+      "sourceAnchor": "symbols-D-1-1-1"
+    },
+    {
+      "id": "emc-local-1-1-3",
+      "title": "M",
+      "symbolHtml": "<span>M</span>",
+      "keys": [
+        "M"
+      ],
+      "description": "邻近回路与受扰回路之间的互感。",
+      "unitHtml": "H",
+      "section": "emc-1-1",
+      "sections": [
+        "emc-1-1"
+      ],
+      "equations": [
+        "D.1.1.1"
+      ],
+      "match": "式中，U扰为受扰端口的电压相量（V）；Z共为源与受扰电路共用回流路径的阻抗（Ω）；I回为流过共用回流路径的电流相量（A）；M为邻近回路与受扰回路之间的互感（H）；I邻为相邻干扰回路的电流相量（A）。这里比较同一频率的相量，采用线性集中参数近似；两个电流属于各自路径，不能仅因频率相同就认作同一个电流。",
+      "sourceAnchor": "symbols-D-1-1-1"
+    },
+    {
+      "id": "emc-local-1-1-4",
+      "title": "I_邻",
+      "symbolHtml": "<span>I<sub>邻</sub></span>",
+      "keys": [
+        "I_邻"
+      ],
+      "description": "相邻干扰回路的电流相量。",
+      "unitHtml": "A",
+      "section": "emc-1-1",
+      "sections": [
+        "emc-1-1"
+      ],
+      "equations": [
+        "D.1.1.1"
+      ],
+      "match": "式中，U扰为受扰端口的电压相量（V）；Z共为源与受扰电路共用回流路径的阻抗（Ω）；I回为流过共用回流路径的电流相量（A）；M为邻近回路与受扰回路之间的互感（H）；I邻为相邻干扰回路的电流相量（A）。这里比较同一频率的相量，采用线性集中参数近似；两个电流属于各自路径，不能仅因频率相同就认作同一个电流。",
+      "sourceAnchor": "symbols-D-1-1-1"
+    },
+    {
+      "id": "emc-local-1-2-0",
+      "title": "L_U",
+      "symbolHtml": "<span>L<sub>U</sub></span>",
+      "keys": [
+        "L_U"
+      ],
+      "description": "相对于1微伏的电压电平。",
+      "unitHtml": "dBμV",
+      "section": "emc-1-2",
+      "sections": [
+        "emc-1-2"
+      ],
+      "equations": [
+        "D.1.2.1"
+      ],
+      "match": "式中，LU为相对于1微伏的电压电平（dBμV）；U为按同一幅值口径表示的电压（V）；U1为比较前或基准电压幅值（V）；U2为比较后的电压幅值（V）；ΔL为两个电压电平之差（dB）。",
+      "sourceAnchor": "symbols-D-1-2-1"
+    },
+    {
+      "id": "emc-local-1-2-1",
+      "title": "U",
+      "symbolHtml": "<span>U</span>",
+      "keys": [
+        "U"
+      ],
+      "description": "按同一幅值口径表示的电压。",
+      "unitHtml": "V",
+      "section": "emc-1-2",
+      "sections": [
+        "emc-1-2"
+      ],
+      "equations": [
+        "D.1.2.1"
+      ],
+      "match": "式中，LU为相对于1微伏的电压电平（dBμV）；U为按同一幅值口径表示的电压（V）；U1为比较前或基准电压幅值（V）；U2为比较后的电压幅值（V）；ΔL为两个电压电平之差（dB）。",
+      "sourceAnchor": "symbols-D-1-2-1"
+    },
+    {
+      "id": "emc-local-1-2-2",
+      "title": "U_1",
+      "symbolHtml": "<span>U<sub>1</sub></span>",
+      "keys": [
+        "U_1"
+      ],
+      "description": "比较前或基准电压幅值。",
+      "unitHtml": "V",
+      "section": "emc-1-2",
+      "sections": [
+        "emc-1-2"
+      ],
+      "equations": [
+        "D.1.2.1"
+      ],
+      "match": "式中，LU为相对于1微伏的电压电平（dBμV）；U为按同一幅值口径表示的电压（V）；U1为比较前或基准电压幅值（V）；U2为比较后的电压幅值（V）；ΔL为两个电压电平之差（dB）。",
+      "sourceAnchor": "symbols-D-1-2-1"
+    },
+    {
+      "id": "emc-local-1-2-3",
+      "title": "U_2",
+      "symbolHtml": "<span>U<sub>2</sub></span>",
+      "keys": [
+        "U_2"
+      ],
+      "description": "比较后的电压幅值。",
+      "unitHtml": "V",
+      "section": "emc-1-2",
+      "sections": [
+        "emc-1-2"
+      ],
+      "equations": [
+        "D.1.2.1"
+      ],
+      "match": "式中，LU为相对于1微伏的电压电平（dBμV）；U为按同一幅值口径表示的电压（V）；U1为比较前或基准电压幅值（V）；U2为比较后的电压幅值（V）；ΔL为两个电压电平之差（dB）。",
+      "sourceAnchor": "symbols-D-1-2-1"
+    },
+    {
+      "id": "emc-local-1-2-4",
+      "title": "delta:L",
+      "symbolHtml": "<span>ΔL</span>",
+      "keys": [
+        "delta:L"
+      ],
+      "description": "两个电压电平之差。",
+      "unitHtml": "dB",
+      "section": "emc-1-2",
+      "sections": [
+        "emc-1-2"
+      ],
+      "equations": [
+        "D.1.2.1"
+      ],
+      "match": "式中，LU为相对于1微伏的电压电平（dBμV）；U为按同一幅值口径表示的电压（V）；U1为比较前或基准电压幅值（V）；U2为比较后的电压幅值（V）；ΔL为两个电压电平之差（dB）。",
+      "sourceAnchor": "symbols-D-1-2-1"
+    },
+    {
+      "id": "emc-local-1-3-0",
+      "title": "f_边沿",
+      "symbolHtml": "<span>f<sub>边沿</sub></span>",
+      "keys": [
+        "f_边沿"
+      ],
+      "description": "由边沿时间估计的一阶等效带宽尺度，不是频谱硬截止。",
+      "unitHtml": "Hz",
+      "section": "emc-1-3",
+      "sections": [
+        "emc-1-3"
+      ],
+      "equations": [
+        "D.1.3.1"
+      ],
+      "match": "式中，f边沿为由边沿时间估计的一阶等效带宽尺度，不是频谱硬截止（Hz）；tr为10%至90%的上升时间；0.35关系须采用对应一阶定义（s）。",
+      "sourceAnchor": "symbols-D-1-3-1"
+    },
+    {
+      "id": "emc-local-1-3-1",
+      "title": "t_r",
+      "symbolHtml": "<span>t<sub>r</sub></span>",
+      "keys": [
+        "t_r"
+      ],
+      "description": "10%至90%的上升时间；0.35关系须采用对应一阶定义。",
+      "unitHtml": "s",
+      "section": "emc-1-3",
+      "sections": [
+        "emc-1-3"
+      ],
+      "equations": [
+        "D.1.3.1"
+      ],
+      "match": "式中，f边沿为由边沿时间估计的一阶等效带宽尺度，不是频谱硬截止（Hz）；tr为10%至90%的上升时间；0.35关系须采用对应一阶定义（s）。",
+      "sourceAnchor": "symbols-D-1-3-1"
+    },
+    {
+      "id": "emc-local-1-4-0",
+      "title": "E_C",
+      "symbolHtml": "<span>E<sub>C</sub></span>",
+      "keys": [
+        "E_C"
+      ],
+      "description": "理想带电电容储能。",
+      "unitHtml": "J",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "equations": [
+        "D.1.4.1"
+      ],
+      "match": "式中，EC为理想带电电容储能（J）；C为导体对环境的等效电容（F）；U为该电容两端电压（V）。",
+      "sourceAnchor": "symbols-D-1-4-1"
+    },
+    {
+      "id": "emc-local-1-4-1",
+      "title": "C",
+      "symbolHtml": "<span>C</span>",
+      "keys": [
+        "C"
+      ],
+      "description": "导体对环境的等效电容。",
+      "unitHtml": "F",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "equations": [
+        "D.1.4.1"
+      ],
+      "match": "式中，EC为理想带电电容储能（J）；C为导体对环境的等效电容（F）；U为该电容两端电压（V）。",
+      "sourceAnchor": "symbols-D-1-4-1"
+    },
+    {
+      "id": "emc-local-1-4-2",
+      "title": "U",
+      "symbolHtml": "<span>U</span>",
+      "keys": [
+        "U"
+      ],
+      "description": "该电容两端电压。",
+      "unitHtml": "V",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "equations": [
+        "D.1.4.1"
+      ],
+      "match": "式中，EC为理想带电电容储能（J）；C为导体对环境的等效电容（F）；U为该电容两端电压（V）。",
+      "sourceAnchor": "symbols-D-1-4-1"
+    },
+    {
+      "id": "emc-local-2-1-0",
+      "title": "i_CM",
+      "symbolHtml": "<span>i<sub>CM</sub></span>",
+      "keys": [
+        "i_CM"
+      ],
+      "description": "经寄生电容路径的共模位移电流。",
+      "unitHtml": "A",
+      "section": "emc-2-1",
+      "sections": [
+        "emc-2-1"
+      ],
+      "equations": [
+        "D.2.1.1"
+      ],
+      "match": "式中，iCM为经寄生电容路径的共模位移电流（A）；C寄生为源与参考环境之间的等效寄生电容（F）；vCM为寄生电容两端共模电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-2-1-1"
+    },
+    {
+      "id": "emc-local-2-1-1",
+      "title": "C_寄生",
+      "symbolHtml": "<span>C<sub>寄生</sub></span>",
+      "keys": [
+        "C_寄生"
+      ],
+      "description": "源与参考环境之间的等效寄生电容。",
+      "unitHtml": "F",
+      "section": "emc-2-1",
+      "sections": [
+        "emc-2-1"
+      ],
+      "equations": [
+        "D.2.1.1"
+      ],
+      "match": "式中，iCM为经寄生电容路径的共模位移电流（A）；C寄生为源与参考环境之间的等效寄生电容（F）；vCM为寄生电容两端共模电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-2-1-1"
+    },
+    {
+      "id": "emc-local-2-1-2",
+      "title": "v_CM",
+      "symbolHtml": "<span>v<sub>CM</sub></span>",
+      "keys": [
+        "v_CM"
+      ],
+      "description": "寄生电容两端共模电压。",
+      "unitHtml": "V",
+      "section": "emc-2-1",
+      "sections": [
+        "emc-2-1"
+      ],
+      "equations": [
+        "D.2.1.1"
+      ],
+      "match": "式中，iCM为经寄生电容路径的共模位移电流（A）；C寄生为源与参考环境之间的等效寄生电容（F）；vCM为寄生电容两端共模电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-2-1-1"
+    },
+    {
+      "id": "emc-local-2-1-3",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-2-1",
+      "sections": [
+        "emc-2-1"
+      ],
+      "equations": [
+        "D.2.1.1"
+      ],
+      "match": "式中，iCM为经寄生电容路径的共模位移电流（A）；C寄生为源与参考环境之间的等效寄生电容（F）；vCM为寄生电容两端共模电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-2-1-1"
+    },
+    {
+      "id": "emc-local-2-2-0",
+      "title": "U_G",
+      "symbolHtml": "<span>U<sub>G</sub></span>",
+      "keys": [
+        "U_G"
+      ],
+      "description": "公共返回导体G两端的电压降。",
+      "unitHtml": "V",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.1"
+      ],
+      "match": "式中，UG为公共返回导体G两端的电压降（V）；IA为干扰设备A流过共享返回导体的电流相量（A）；ZG为共享返回导体G的等效复阻抗（Ω）；RG为导体G的电阻分量（Ω）；LG为导体G的等效电感（H）。",
+      "sourceAnchor": "symbols-D-2-2-1"
+    },
+    {
+      "id": "emc-local-2-2-1",
+      "title": "I_A",
+      "symbolHtml": "<span>I<sub>A</sub></span>",
+      "keys": [
+        "I_A"
+      ],
+      "description": "干扰设备A流过共享返回导体的电流相量。",
+      "unitHtml": "A",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.1"
+      ],
+      "match": "式中，UG为公共返回导体G两端的电压降（V）；IA为干扰设备A流过共享返回导体的电流相量（A）；ZG为共享返回导体G的等效复阻抗（Ω）；RG为导体G的电阻分量（Ω）；LG为导体G的等效电感（H）。",
+      "sourceAnchor": "symbols-D-2-2-1"
+    },
+    {
+      "id": "emc-local-2-2-2",
+      "title": "Z_G",
+      "symbolHtml": "<span>Z<sub>G</sub></span>",
+      "keys": [
+        "Z_G"
+      ],
+      "description": "共享返回导体G的等效复阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.1"
+      ],
+      "match": "式中，UG为公共返回导体G两端的电压降（V）；IA为干扰设备A流过共享返回导体的电流相量（A）；ZG为共享返回导体G的等效复阻抗（Ω）；RG为导体G的电阻分量（Ω）；LG为导体G的等效电感（H）。",
+      "sourceAnchor": "symbols-D-2-2-1"
+    },
+    {
+      "id": "emc-local-2-2-3",
+      "title": "R_G",
+      "symbolHtml": "<span>R<sub>G</sub></span>",
+      "keys": [
+        "R_G"
+      ],
+      "description": "导体G的电阻分量。",
+      "unitHtml": "Ω",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.1"
+      ],
+      "match": "式中，UG为公共返回导体G两端的电压降（V）；IA为干扰设备A流过共享返回导体的电流相量（A）；ZG为共享返回导体G的等效复阻抗（Ω）；RG为导体G的电阻分量（Ω）；LG为导体G的等效电感（H）。",
+      "sourceAnchor": "symbols-D-2-2-1"
+    },
+    {
+      "id": "emc-local-2-2-4",
+      "title": "L_G",
+      "symbolHtml": "<span>L<sub>G</sub></span>",
+      "keys": [
+        "L_G"
+      ],
+      "description": "导体G的等效电感。",
+      "unitHtml": "H",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.1"
+      ],
+      "match": "式中，UG为公共返回导体G两端的电压降（V）；IA为干扰设备A流过共享返回导体的电流相量（A）；ZG为共享返回导体G的等效复阻抗（Ω）；RG为导体G的电阻分量（Ω）；LG为导体G的等效电感（H）。",
+      "sourceAnchor": "symbols-D-2-2-1"
+    },
+    {
+      "id": "emc-local-2-2-5",
+      "title": "δ",
+      "symbolHtml": "<span>δ</span>",
+      "keys": [
+        "δ"
+      ],
+      "description": "良导体中场幅度衰减到表面1/e的深度。",
+      "unitHtml": "m",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.2"
+      ],
+      "match": "式中，δ为良导体中场幅度衰减到表面1/e的深度（m）。",
+      "sourceAnchor": "symbols-D-2-2-2"
+    },
+    {
+      "id": "emc-local-2-2-6",
+      "title": "e_2",
+      "symbolHtml": "<span>e<sub>2</sub></span>",
+      "keys": [
+        "e_2"
+      ],
+      "description": "规定方向下受扰回路的瞬时感应电动势。",
+      "unitHtml": "V",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.5"
+      ],
+      "match": "式中，e2为规定方向下受扰回路的瞬时感应电动势（V）；i1为干扰回路瞬时电流（A）；E2为感应电动势的正弦相量（V）；I1为干扰电流的正弦相量（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-2-2-5"
+    },
+    {
+      "id": "emc-local-2-2-7",
+      "title": "i_1",
+      "symbolHtml": "<span>i<sub>1</sub></span>",
+      "keys": [
+        "i_1"
+      ],
+      "description": "干扰回路瞬时电流。",
+      "unitHtml": "A",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.5"
+      ],
+      "match": "式中，e2为规定方向下受扰回路的瞬时感应电动势（V）；i1为干扰回路瞬时电流（A）；E2为感应电动势的正弦相量（V）；I1为干扰电流的正弦相量（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-2-2-5"
+    },
+    {
+      "id": "emc-local-2-2-8",
+      "title": "E_2",
+      "symbolHtml": "<span>E<sub>2</sub></span>",
+      "keys": [
+        "E_2"
+      ],
+      "description": "感应电动势的正弦相量。",
+      "unitHtml": "V",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.5"
+      ],
+      "match": "式中，e2为规定方向下受扰回路的瞬时感应电动势（V）；i1为干扰回路瞬时电流（A）；E2为感应电动势的正弦相量（V）；I1为干扰电流的正弦相量（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-2-2-5"
+    },
+    {
+      "id": "emc-local-2-2-9",
+      "title": "I_1",
+      "symbolHtml": "<span>I<sub>1</sub></span>",
+      "keys": [
+        "I_1"
+      ],
+      "description": "干扰电流的正弦相量。",
+      "unitHtml": "A",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.5"
+      ],
+      "match": "式中，e2为规定方向下受扰回路的瞬时感应电动势（V）；i1为干扰回路瞬时电流（A）；E2为感应电动势的正弦相量（V）；I1为干扰电流的正弦相量（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-2-2-5"
+    },
+    {
+      "id": "emc-local-2-2-10",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "equations": [
+        "D.2.2.5"
+      ],
+      "match": "式中，e2为规定方向下受扰回路的瞬时感应电动势（V）；i1为干扰回路瞬时电流（A）；E2为感应电动势的正弦相量（V）；I1为干扰电流的正弦相量（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-2-2-5"
+    },
+    {
+      "id": "emc-local-2-3-0",
+      "title": "E",
+      "symbolHtml": "<span>E</span>",
+      "keys": [
+        "E"
+      ],
+      "description": "远场平面波电场幅值。",
+      "unitHtml": "V/m",
+      "section": "emc-2-3",
+      "sections": [
+        "emc-2-3"
+      ],
+      "equations": [
+        "D.2.3.1"
+      ],
+      "match": "式中，E为远场平面波电场幅值（V/m）；H为远场平面波磁场强度幅值（A/m）；μ0为真空磁导率（H/m）；ε0为真空介电常数（F/m）。",
+      "sourceAnchor": "symbols-D-2-3-1"
+    },
+    {
+      "id": "emc-local-2-3-1",
+      "title": "H",
+      "symbolHtml": "<span>H</span>",
+      "keys": [
+        "H"
+      ],
+      "description": "远场平面波磁场强度幅值。",
+      "unitHtml": "A/m",
+      "section": "emc-2-3",
+      "sections": [
+        "emc-2-3"
+      ],
+      "equations": [
+        "D.2.3.1"
+      ],
+      "match": "式中，E为远场平面波电场幅值（V/m）；H为远场平面波磁场强度幅值（A/m）；μ0为真空磁导率（H/m）；ε0为真空介电常数（F/m）。",
+      "sourceAnchor": "symbols-D-2-3-1"
+    },
+    {
+      "id": "emc-local-2-3-2",
+      "title": "μ_0",
+      "symbolHtml": "<span>μ<sub>0</sub></span>",
+      "keys": [
+        "μ_0"
+      ],
+      "description": "真空磁导率。",
+      "unitHtml": "H/m",
+      "section": "emc-2-3",
+      "sections": [
+        "emc-2-3"
+      ],
+      "equations": [
+        "D.2.3.1",
+        "D.2.3.2"
+      ],
+      "match": "式中，E为远场平面波电场幅值（V/m）；H为远场平面波磁场强度幅值（A/m）；μ0为真空磁导率（H/m）；ε0为真空介电常数（F/m）。",
+      "sourceAnchor": "symbols-D-2-3-1"
+    },
+    {
+      "id": "emc-local-2-3-3",
+      "title": "ε_0",
+      "symbolHtml": "<span>ε<sub>0</sub></span>",
+      "keys": [
+        "ε_0"
+      ],
+      "description": "真空介电常数。",
+      "unitHtml": "F/m",
+      "section": "emc-2-3",
+      "sections": [
+        "emc-2-3"
+      ],
+      "equations": [
+        "D.2.3.1",
+        "D.2.3.2"
+      ],
+      "match": "式中，E为远场平面波电场幅值（V/m）；H为远场平面波磁场强度幅值（A/m）；μ0为真空磁导率（H/m）；ε0为真空介电常数（F/m）。",
+      "sourceAnchor": "symbols-D-2-3-1"
+    },
+    {
+      "id": "emc-local-2-3-4",
+      "title": "λ",
+      "symbolHtml": "<span>λ</span>",
+      "keys": [
+        "λ"
+      ],
+      "description": "自由空间波长。",
+      "unitHtml": "m",
+      "section": "emc-2-3",
+      "sections": [
+        "emc-2-3"
+      ],
+      "equations": [
+        "D.2.3.2"
+      ],
+      "match": "式中，λ为自由空间波长（m）；c为自由空间传播速度（m/s）；f为频率（Hz）；η0为自由空间平面波本征阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-2-3-2"
+    },
+    {
+      "id": "emc-local-2-3-5",
+      "title": "c",
+      "symbolHtml": "<span>c</span>",
+      "keys": [
+        "c"
+      ],
+      "description": "自由空间传播速度。",
+      "unitHtml": "m/s",
+      "section": "emc-2-3",
+      "sections": [
+        "emc-2-3"
+      ],
+      "equations": [
+        "D.2.3.2"
+      ],
+      "match": "式中，λ为自由空间波长（m）；c为自由空间传播速度（m/s）；f为频率（Hz）；η0为自由空间平面波本征阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-2-3-2"
+    },
+    {
+      "id": "emc-local-2-3-6",
+      "title": "f",
+      "symbolHtml": "<span>f</span>",
+      "keys": [
+        "f"
+      ],
+      "description": "频率。",
+      "unitHtml": "Hz",
+      "section": "emc-2-3",
+      "sections": [
+        "emc-2-3"
+      ],
+      "equations": [
+        "D.2.3.2"
+      ],
+      "match": "式中，λ为自由空间波长（m）；c为自由空间传播速度（m/s）；f为频率（Hz）；η0为自由空间平面波本征阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-2-3-2"
+    },
+    {
+      "id": "emc-local-2-3-7",
+      "title": "η_0",
+      "symbolHtml": "<span>η<sub>0</sub></span>",
+      "keys": [
+        "η_0"
+      ],
+      "description": "自由空间平面波本征阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-2-3",
+      "sections": [
+        "emc-2-3"
+      ],
+      "equations": [
+        "D.2.3.2"
+      ],
+      "match": "式中，λ为自由空间波长（m）；c为自由空间传播速度（m/s）；f为频率（Hz）；η0为自由空间平面波本征阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-2-3-2"
+    },
+    {
+      "id": "emc-local-3-1-0",
+      "title": "delta:U_ref",
+      "symbolHtml": "<span>ΔU<sub>ref</sub></span>",
+      "keys": [
+        "delta:U_ref"
+      ],
+      "description": "共享返回压降造成的参考电位差。",
+      "unitHtml": "V",
+      "section": "emc-3-1",
+      "sections": [
+        "emc-3-1"
+      ],
+      "equations": [
+        "D.3.1.1"
+      ],
+      "match": "式中，ΔUref为共享返回压降造成的参考电位差（V）；Ishared为流经共用返回段的电流（A）；Zshared为共用返回段阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-3-1-1"
+    },
+    {
+      "id": "emc-local-3-1-1",
+      "title": "I_shared",
+      "symbolHtml": "<span>I<sub>shared</sub></span>",
+      "keys": [
+        "I_shared"
+      ],
+      "description": "流经共用返回段的电流。",
+      "unitHtml": "A",
+      "section": "emc-3-1",
+      "sections": [
+        "emc-3-1"
+      ],
+      "equations": [
+        "D.3.1.1"
+      ],
+      "match": "式中，ΔUref为共享返回压降造成的参考电位差（V）；Ishared为流经共用返回段的电流（A）；Zshared为共用返回段阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-3-1-1"
+    },
+    {
+      "id": "emc-local-3-1-2",
+      "title": "Z_shared",
+      "symbolHtml": "<span>Z<sub>shared</sub></span>",
+      "keys": [
+        "Z_shared"
+      ],
+      "description": "共用返回段阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-3-1",
+      "sections": [
+        "emc-3-1"
+      ],
+      "equations": [
+        "D.3.1.1"
+      ],
+      "match": "式中，ΔUref为共享返回压降造成的参考电位差（V）；Ishared为流经共用返回段的电流（A）；Zshared为共用返回段阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-3-1-1"
+    },
+    {
+      "id": "emc-local-3-2-0",
+      "title": "Z_L",
+      "symbolHtml": "<span>Z<sub>L</sub></span>",
+      "keys": [
+        "Z_L"
+      ],
+      "description": "连接线寄生电感的阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-3-2",
+      "sections": [
+        "emc-3-2"
+      ],
+      "equations": [
+        "D.3.2.1"
+      ],
+      "match": "式中，ZL为连接线寄生电感的阻抗（Ω）；L为连接线等效寄生电感（H）；f为正弦频率（Hz）。",
+      "sourceAnchor": "symbols-D-3-2-1"
+    },
+    {
+      "id": "emc-local-3-2-1",
+      "title": "L",
+      "symbolHtml": "<span>L</span>",
+      "keys": [
+        "L"
+      ],
+      "description": "连接线等效寄生电感。",
+      "unitHtml": "H",
+      "section": "emc-3-2",
+      "sections": [
+        "emc-3-2"
+      ],
+      "equations": [
+        "D.3.2.1"
+      ],
+      "match": "式中，ZL为连接线寄生电感的阻抗（Ω）；L为连接线等效寄生电感（H）；f为正弦频率（Hz）。",
+      "sourceAnchor": "symbols-D-3-2-1"
+    },
+    {
+      "id": "emc-local-3-2-2",
+      "title": "f",
+      "symbolHtml": "<span>f</span>",
+      "keys": [
+        "f"
+      ],
+      "description": "正弦频率。",
+      "unitHtml": "Hz",
+      "section": "emc-3-2",
+      "sections": [
+        "emc-3-2"
+      ],
+      "equations": [
+        "D.3.2.1"
+      ],
+      "match": "式中，ZL为连接线寄生电感的阻抗（Ω）；L为连接线等效寄生电感（H）；f为正弦频率（Hz）。",
+      "sourceAnchor": "symbols-D-3-2-1"
+    },
+    {
+      "id": "emc-local-3-3-0",
+      "title": "u_ind",
+      "symbolHtml": "<span>u<sub>ind</sub></span>",
+      "keys": [
+        "u_ind"
+      ],
+      "description": "选定方向下闭合路径感应电动势。",
+      "unitHtml": "V",
+      "section": "emc-3-3",
+      "sections": [
+        "emc-3-3"
+      ],
+      "equations": [
+        "D.3.3.1",
+        "D.3.3.2"
+      ],
+      "match": "式中，uind为选定方向下闭合路径感应电动势（V）；Φ为穿过回路的磁通（Wb）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-3-3-1"
+    },
+    {
+      "id": "emc-local-3-3-1",
+      "title": "Φ",
+      "symbolHtml": "<span>Φ</span>",
+      "keys": [
+        "Φ"
+      ],
+      "description": "穿过回路的磁通。",
+      "unitHtml": "Wb",
+      "section": "emc-3-3",
+      "sections": [
+        "emc-3-3"
+      ],
+      "equations": [
+        "D.3.3.1",
+        "D.3.3.2"
+      ],
+      "match": "式中，uind为选定方向下闭合路径感应电动势（V）；Φ为穿过回路的磁通（Wb）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-3-3-1"
+    },
+    {
+      "id": "emc-local-3-3-4",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-3-3",
+      "sections": [
+        "emc-3-3"
+      ],
+      "equations": [
+        "D.3.3.1",
+        "D.3.3.2"
+      ],
+      "match": "式中，uind为选定方向下闭合路径感应电动势（V）；Φ为穿过回路的磁通（Wb）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-3-3-1"
+    },
+    {
+      "id": "emc-local-3-3-2",
+      "title": "A",
+      "symbolHtml": "<span>A</span>",
+      "keys": [
+        "A"
+      ],
+      "description": "回路面积，固定面积均匀法向场近似。",
+      "unitHtml": "m²",
+      "section": "emc-3-3",
+      "sections": [
+        "emc-3-3"
+      ],
+      "equations": [
+        "D.3.3.2"
+      ],
+      "match": "式中，A为回路面积，固定面积均匀法向场近似（m²）；B为穿过回路法向的磁通密度（T）。",
+      "sourceAnchor": "symbols-D-3-3-2"
+    },
+    {
+      "id": "emc-local-3-3-3",
+      "title": "B",
+      "symbolHtml": "<span>B</span>",
+      "keys": [
+        "B"
+      ],
+      "description": "穿过回路法向的磁通密度。",
+      "unitHtml": "T",
+      "section": "emc-3-3",
+      "sections": [
+        "emc-3-3"
+      ],
+      "equations": [
+        "D.3.3.2"
+      ],
+      "match": "式中，A为回路面积，固定面积均匀法向场近似（m²）；B为穿过回路法向的磁通密度（T）。",
+      "sourceAnchor": "symbols-D-3-3-2"
+    },
+    {
+      "id": "emc-local-3-4-0",
+      "title": "U_internal",
+      "symbolHtml": "<span>U<sub>internal</sub></span>",
+      "keys": [
+        "U_internal"
+      ],
+      "description": "屏蔽电流在内部敏感回路引起的电压量级。",
+      "unitHtml": "V",
+      "section": "emc-3-4",
+      "sections": [
+        "emc-3-4"
+      ],
+      "equations": [
+        "D.3.4.1"
+      ],
+      "match": "式中，Uinternal为屏蔽电流在内部敏感回路引起的电压量级（V）；ZT为单位长度屏蔽转移阻抗，不是电流探头的转移阻抗（Ω/m）；Ishield为屏蔽层共模电流（A）；ℓ为参与耦合的有效屏蔽长度（m）。",
+      "sourceAnchor": "symbols-D-3-4-1"
+    },
+    {
+      "id": "emc-local-3-4-1",
+      "title": "Z_T",
+      "symbolHtml": "<span>Z<sub>T</sub></span>",
+      "keys": [
+        "Z_T"
+      ],
+      "description": "单位长度屏蔽转移阻抗，不是电流探头的转移阻抗。",
+      "unitHtml": "Ω/m",
+      "section": "emc-3-4",
+      "sections": [
+        "emc-3-4"
+      ],
+      "equations": [
+        "D.3.4.1"
+      ],
+      "match": "式中，Uinternal为屏蔽电流在内部敏感回路引起的电压量级（V）；ZT为单位长度屏蔽转移阻抗，不是电流探头的转移阻抗（Ω/m）；Ishield为屏蔽层共模电流（A）；ℓ为参与耦合的有效屏蔽长度（m）。",
+      "sourceAnchor": "symbols-D-3-4-1"
+    },
+    {
+      "id": "emc-local-3-4-2",
+      "title": "I_shield",
+      "symbolHtml": "<span>I<sub>shield</sub></span>",
+      "keys": [
+        "I_shield"
+      ],
+      "description": "屏蔽层共模电流。",
+      "unitHtml": "A",
+      "section": "emc-3-4",
+      "sections": [
+        "emc-3-4"
+      ],
+      "equations": [
+        "D.3.4.1"
+      ],
+      "match": "式中，Uinternal为屏蔽电流在内部敏感回路引起的电压量级（V）；ZT为单位长度屏蔽转移阻抗，不是电流探头的转移阻抗（Ω/m）；Ishield为屏蔽层共模电流（A）；ℓ为参与耦合的有效屏蔽长度（m）。",
+      "sourceAnchor": "symbols-D-3-4-1"
+    },
+    {
+      "id": "emc-local-3-4-3",
+      "title": "ℓ",
+      "symbolHtml": "<span>ℓ</span>",
+      "keys": [
+        "ℓ"
+      ],
+      "description": "参与耦合的有效屏蔽长度。",
+      "unitHtml": "m",
+      "section": "emc-3-4",
+      "sections": [
+        "emc-3-4"
+      ],
+      "equations": [
+        "D.3.4.1"
+      ],
+      "match": "式中，Uinternal为屏蔽电流在内部敏感回路引起的电压量级（V）；ZT为单位长度屏蔽转移阻抗，不是电流探头的转移阻抗（Ω/m）；Ishield为屏蔽层共模电流（A）；ℓ为参与耦合的有效屏蔽长度（m）。",
+      "sourceAnchor": "symbols-D-3-4-1"
+    },
+    {
+      "id": "emc-local-4-1-0",
+      "title": "SE_E",
+      "symbolHtml": "<span>SE<sub>E</sub></span>",
+      "keys": [
+        "SE_E"
+      ],
+      "description": "相同激励/位置下的电场幅值屏蔽效能。",
+      "unitHtml": "dB",
+      "section": "emc-4-1",
+      "sections": [
+        "emc-4-1"
+      ],
+      "equations": [
+        "D.4.1.1"
+      ],
+      "match": "式中，SEE为相同激励/位置下的电场幅值屏蔽效能（dB）；E0为未加屏蔽的参考电场幅值（V/m）；E1为加屏蔽后的电场幅值（V/m）。",
+      "sourceAnchor": "symbols-D-4-1-1"
+    },
+    {
+      "id": "emc-local-4-1-1",
+      "title": "E_0",
+      "symbolHtml": "<span>E<sub>0</sub></span>",
+      "keys": [
+        "E_0"
+      ],
+      "description": "未加屏蔽的参考电场幅值。",
+      "unitHtml": "V/m",
+      "section": "emc-4-1",
+      "sections": [
+        "emc-4-1"
+      ],
+      "equations": [
+        "D.4.1.1"
+      ],
+      "match": "式中，SEE为相同激励/位置下的电场幅值屏蔽效能（dB）；E0为未加屏蔽的参考电场幅值（V/m）；E1为加屏蔽后的电场幅值（V/m）。",
+      "sourceAnchor": "symbols-D-4-1-1"
+    },
+    {
+      "id": "emc-local-4-1-2",
+      "title": "E_1",
+      "symbolHtml": "<span>E<sub>1</sub></span>",
+      "keys": [
+        "E_1"
+      ],
+      "description": "加屏蔽后的电场幅值。",
+      "unitHtml": "V/m",
+      "section": "emc-4-1",
+      "sections": [
+        "emc-4-1"
+      ],
+      "equations": [
+        "D.4.1.1"
+      ],
+      "match": "式中，SEE为相同激励/位置下的电场幅值屏蔽效能（dB）；E0为未加屏蔽的参考电场幅值（V/m）；E1为加屏蔽后的电场幅值（V/m）。",
+      "sourceAnchor": "symbols-D-4-1-1"
+    },
+    {
+      "id": "emc-local-4-2-0",
+      "title": "i_SJ",
+      "symbolHtml": "<span>i<sub>SJ</sub></span>",
+      "keys": [
+        "i_SJ"
+      ],
+      "description": "干扰源S至屏蔽导体J之间的位移电流。",
+      "unitHtml": "A",
+      "section": "emc-4-2",
+      "sections": [
+        "emc-4-2"
+      ],
+      "equations": [
+        "D.4.2.1"
+      ],
+      "match": "式中，iSJ为干扰源S至屏蔽导体J之间的位移电流（A）；CSJ为干扰源S与屏蔽导体J之间的耦合电容（F）；US为干扰源S相对于共同参考导体的电压（V）；UJ为屏蔽导体J相对于共同参考导体的电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-4-2-1"
+    },
+    {
+      "id": "emc-local-4-2-1",
+      "title": "C_SJ",
+      "symbolHtml": "<span>C<sub>SJ</sub></span>",
+      "keys": [
+        "C_SJ"
+      ],
+      "description": "干扰源S与屏蔽导体J之间的耦合电容。",
+      "unitHtml": "F",
+      "section": "emc-4-2",
+      "sections": [
+        "emc-4-2"
+      ],
+      "equations": [
+        "D.4.2.1"
+      ],
+      "match": "式中，iSJ为干扰源S至屏蔽导体J之间的位移电流（A）；CSJ为干扰源S与屏蔽导体J之间的耦合电容（F）；US为干扰源S相对于共同参考导体的电压（V）；UJ为屏蔽导体J相对于共同参考导体的电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-4-2-1"
+    },
+    {
+      "id": "emc-local-4-2-2",
+      "title": "U_S",
+      "symbolHtml": "<span>U<sub>S</sub></span>",
+      "keys": [
+        "U_S"
+      ],
+      "description": "干扰源S相对于共同参考导体的电压。",
+      "unitHtml": "V",
+      "section": "emc-4-2",
+      "sections": [
+        "emc-4-2"
+      ],
+      "equations": [
+        "D.4.2.1"
+      ],
+      "match": "式中，iSJ为干扰源S至屏蔽导体J之间的位移电流（A）；CSJ为干扰源S与屏蔽导体J之间的耦合电容（F）；US为干扰源S相对于共同参考导体的电压（V）；UJ为屏蔽导体J相对于共同参考导体的电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-4-2-1"
+    },
+    {
+      "id": "emc-local-4-2-3",
+      "title": "U_J",
+      "symbolHtml": "<span>U<sub>J</sub></span>",
+      "keys": [
+        "U_J"
+      ],
+      "description": "屏蔽导体J相对于共同参考导体的电压。",
+      "unitHtml": "V",
+      "section": "emc-4-2",
+      "sections": [
+        "emc-4-2"
+      ],
+      "equations": [
+        "D.4.2.1"
+      ],
+      "match": "式中，iSJ为干扰源S至屏蔽导体J之间的位移电流（A）；CSJ为干扰源S与屏蔽导体J之间的耦合电容（F）；US为干扰源S相对于共同参考导体的电压（V）；UJ为屏蔽导体J相对于共同参考导体的电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-4-2-1"
+    },
+    {
+      "id": "emc-local-4-2-8",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-4-2",
+      "sections": [
+        "emc-4-2"
+      ],
+      "equations": [
+        "D.4.2.1",
+        "D.4.2.2"
+      ],
+      "match": "式中，iSJ为干扰源S至屏蔽导体J之间的位移电流（A）；CSJ为干扰源S与屏蔽导体J之间的耦合电容（F）；US为干扰源S相对于共同参考导体的电压（V）；UJ为屏蔽导体J相对于共同参考导体的电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-4-2-1"
+    },
+    {
+      "id": "emc-local-4-2-4",
+      "title": "i_C",
+      "symbolHtml": "<span>i<sub>C</sub></span>",
+      "keys": [
+        "i_C"
+      ],
+      "description": "两导体间电容耦合电流。",
+      "unitHtml": "A",
+      "section": "emc-4-2",
+      "sections": [
+        "emc-4-2"
+      ],
+      "equations": [
+        "D.4.2.2"
+      ],
+      "match": "式中，iC为两导体间电容耦合电流（A）；C12为两导体间等效互电容（F）；v1为干扰导体相对参考点的电压（V）；v2为受扰导体相对参考点的电压（V）。",
+      "sourceAnchor": "symbols-D-4-2-2"
+    },
+    {
+      "id": "emc-local-4-2-5",
+      "title": "C_12",
+      "symbolHtml": "<span>C<sub>12</sub></span>",
+      "keys": [
+        "C_12"
+      ],
+      "description": "两导体间等效互电容。",
+      "unitHtml": "F",
+      "section": "emc-4-2",
+      "sections": [
+        "emc-4-2"
+      ],
+      "equations": [
+        "D.4.2.2"
+      ],
+      "match": "式中，iC为两导体间电容耦合电流（A）；C12为两导体间等效互电容（F）；v1为干扰导体相对参考点的电压（V）；v2为受扰导体相对参考点的电压（V）。",
+      "sourceAnchor": "symbols-D-4-2-2"
+    },
+    {
+      "id": "emc-local-4-2-6",
+      "title": "v_1",
+      "symbolHtml": "<span>v<sub>1</sub></span>",
+      "keys": [
+        "v_1"
+      ],
+      "description": "干扰导体相对参考点的电压。",
+      "unitHtml": "V",
+      "section": "emc-4-2",
+      "sections": [
+        "emc-4-2"
+      ],
+      "equations": [
+        "D.4.2.2"
+      ],
+      "match": "式中，iC为两导体间电容耦合电流（A）；C12为两导体间等效互电容（F）；v1为干扰导体相对参考点的电压（V）；v2为受扰导体相对参考点的电压（V）。",
+      "sourceAnchor": "symbols-D-4-2-2"
+    },
+    {
+      "id": "emc-local-4-2-7",
+      "title": "v_2",
+      "symbolHtml": "<span>v<sub>2</sub></span>",
+      "keys": [
+        "v_2"
+      ],
+      "description": "受扰导体相对参考点的电压。",
+      "unitHtml": "V",
+      "section": "emc-4-2",
+      "sections": [
+        "emc-4-2"
+      ],
+      "equations": [
+        "D.4.2.2"
+      ],
+      "match": "式中，iC为两导体间电容耦合电流（A）；C12为两导体间等效互电容（F）；v1为干扰导体相对参考点的电压（V）；v2为受扰导体相对参考点的电压（V）。",
+      "sourceAnchor": "symbols-D-4-2-2"
+    },
+    {
+      "id": "emc-local-4-3-0",
+      "title": "R_m",
+      "symbolHtml": "<span>R<sub>m</sub></span>",
+      "keys": [
+        "R_m"
+      ],
+      "description": "线性磁路磁阻。",
+      "unitHtml": "A/Wb",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.1"
+      ],
+      "match": "式中，Rm为线性磁路磁阻（A/Wb）；ℓ为近似沿磁通方向的磁路长度（m）；μ为该磁路工作点的有效磁导率（H/m）；S为垂直于磁通的磁路截面积（m²）；Um为磁路两端磁位差/磁势差（A）；Φ为磁通（Wb）。",
+      "sourceAnchor": "symbols-D-4-3-1"
+    },
+    {
+      "id": "emc-local-4-3-1",
+      "title": "ℓ",
+      "symbolHtml": "<span>ℓ</span>",
+      "keys": [
+        "ℓ"
+      ],
+      "description": "近似沿磁通方向的磁路长度。",
+      "unitHtml": "m",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.1"
+      ],
+      "match": "式中，Rm为线性磁路磁阻（A/Wb）；ℓ为近似沿磁通方向的磁路长度（m）；μ为该磁路工作点的有效磁导率（H/m）；S为垂直于磁通的磁路截面积（m²）；Um为磁路两端磁位差/磁势差（A）；Φ为磁通（Wb）。",
+      "sourceAnchor": "symbols-D-4-3-1"
+    },
+    {
+      "id": "emc-local-4-3-2",
+      "title": "μ",
+      "symbolHtml": "<span>μ</span>",
+      "keys": [
+        "μ"
+      ],
+      "description": "该磁路工作点的有效磁导率。",
+      "unitHtml": "H/m",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.1"
+      ],
+      "match": "式中，Rm为线性磁路磁阻（A/Wb）；ℓ为近似沿磁通方向的磁路长度（m）；μ为该磁路工作点的有效磁导率（H/m）；S为垂直于磁通的磁路截面积（m²）；Um为磁路两端磁位差/磁势差（A）；Φ为磁通（Wb）。",
+      "sourceAnchor": "symbols-D-4-3-1"
+    },
+    {
+      "id": "emc-local-4-3-3",
+      "title": "S",
+      "symbolHtml": "<span>S</span>",
+      "keys": [
+        "S"
+      ],
+      "description": "垂直于磁通的磁路截面积。",
+      "unitHtml": "m²",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.1"
+      ],
+      "match": "式中，Rm为线性磁路磁阻（A/Wb）；ℓ为近似沿磁通方向的磁路长度（m）；μ为该磁路工作点的有效磁导率（H/m）；S为垂直于磁通的磁路截面积（m²）；Um为磁路两端磁位差/磁势差（A）；Φ为磁通（Wb）。",
+      "sourceAnchor": "symbols-D-4-3-1"
+    },
+    {
+      "id": "emc-local-4-3-4",
+      "title": "U_m",
+      "symbolHtml": "<span>U<sub>m</sub></span>",
+      "keys": [
+        "U_m"
+      ],
+      "description": "磁路两端磁位差/磁势差。",
+      "unitHtml": "A",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.1"
+      ],
+      "match": "式中，Rm为线性磁路磁阻（A/Wb）；ℓ为近似沿磁通方向的磁路长度（m）；μ为该磁路工作点的有效磁导率（H/m）；S为垂直于磁通的磁路截面积（m²）；Um为磁路两端磁位差/磁势差（A）；Φ为磁通（Wb）。",
+      "sourceAnchor": "symbols-D-4-3-1"
+    },
+    {
+      "id": "emc-local-4-3-5",
+      "title": "Φ",
+      "symbolHtml": "<span>Φ</span>",
+      "keys": [
+        "Φ"
+      ],
+      "description": "磁通。",
+      "unitHtml": "Wb",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.1"
+      ],
+      "match": "式中，Rm为线性磁路磁阻（A/Wb）；ℓ为近似沿磁通方向的磁路长度（m）；μ为该磁路工作点的有效磁导率（H/m）；S为垂直于磁通的磁路截面积（m²）；Um为磁路两端磁位差/磁势差（A）；Φ为磁通（Wb）。",
+      "sourceAnchor": "symbols-D-4-3-1"
+    },
+    {
+      "id": "emc-local-4-3-6",
+      "title": "ψ_1",
+      "symbolHtml": "<span>ψ<sub>1</sub></span>",
+      "keys": [
+        "ψ_1"
+      ],
+      "description": "圆筒空腔磁标势。",
+      "unitHtml": "A",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-7",
+      "title": "ψ_s",
+      "symbolHtml": "<span>ψ<sub>s</sub></span>",
+      "keys": [
+        "ψ_s"
+      ],
+      "description": "圆筒壳体磁标势。",
+      "unitHtml": "A",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-8",
+      "title": "ψ_o",
+      "symbolHtml": "<span>ψ<sub>o</sub></span>",
+      "keys": [
+        "ψ_o"
+      ],
+      "description": "圆筒外部磁标势。",
+      "unitHtml": "A",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-9",
+      "title": "H_0",
+      "symbolHtml": "<span>H<sub>0</sub></span>",
+      "keys": [
+        "H_0"
+      ],
+      "description": "远处施加的均匀横向磁场强度。",
+      "unitHtml": "A/m",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2",
+        "D.4.3.3",
+        "D.4.3.4"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-11",
+      "title": "A",
+      "symbolHtml": "<span>A</span>",
+      "keys": [
+        "A"
+      ],
+      "description": "横向边界解中无量纲系数，等于H1/H0。",
+      "unitHtml": "无量纲",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2",
+        "D.4.3.3"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-12",
+      "title": "B",
+      "symbolHtml": "<span>B</span>",
+      "keys": [
+        "B"
+      ],
+      "description": "磁标势边界解待定系数，不是磁通密度。",
+      "unitHtml": "无量纲",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-13",
+      "title": "C",
+      "symbolHtml": "<span>C</span>",
+      "keys": [
+        "C"
+      ],
+      "description": "磁标势边界解待定系数，不是电容。",
+      "unitHtml": "m²",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-14",
+      "title": "D",
+      "symbolHtml": "<span>D</span>",
+      "keys": [
+        "D"
+      ],
+      "description": "磁标势边界解待定系数。",
+      "unitHtml": "m²",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-15",
+      "title": "r",
+      "symbolHtml": "<span>r</span>",
+      "keys": [
+        "r"
+      ],
+      "description": "圆柱径向坐标。",
+      "unitHtml": "m",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-16",
+      "title": "θ",
+      "symbolHtml": "<span>θ</span>",
+      "keys": [
+        "θ"
+      ],
+      "description": "相对外加横向磁场方向的方位角。",
+      "unitHtml": "rad",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.2"
+      ],
+      "match": "式中，ψ1为圆筒空腔磁标势（A）；ψs为圆筒壳体磁标势（A）；ψo为圆筒外部磁标势（A）；H0为远处施加的均匀横向磁场强度（A/m）；A为横向边界解中无量纲系数，等于H1/H0（无量纲）；B为磁标势边界解待定系数，不是磁通密度（无量纲）；C为磁标势边界解待定系数，不是电容（m²）；D为磁标势边界解待定系数（m²）；r为圆柱径向坐标（m）；θ为相对外加横向磁场方向的方位角（rad）。",
+      "sourceAnchor": "symbols-D-4-3-2"
+    },
+    {
+      "id": "emc-local-4-3-10",
+      "title": "H_1",
+      "symbolHtml": "<span>H<sub>1</sub></span>",
+      "keys": [
+        "H_1"
+      ],
+      "description": "圆筒空腔内磁场强度。",
+      "unitHtml": "A/m",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.3",
+        "D.4.3.4"
+      ],
+      "match": "式中，H1为圆筒空腔内磁场强度（A/m）；r1为空腔半径/壳体内半径（m）；rs为圆筒外半径，不是屏蔽环电阻Rs（m）。",
+      "sourceAnchor": "symbols-D-4-3-3"
+    },
+    {
+      "id": "emc-local-4-3-17",
+      "title": "r_1",
+      "symbolHtml": "<span>r<sub>1</sub></span>",
+      "keys": [
+        "r_1"
+      ],
+      "description": "空腔半径/壳体内半径。",
+      "unitHtml": "m",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.3"
+      ],
+      "match": "式中，H1为圆筒空腔内磁场强度（A/m）；r1为空腔半径/壳体内半径（m）；rs为圆筒外半径，不是屏蔽环电阻Rs（m）。",
+      "sourceAnchor": "symbols-D-4-3-3"
+    },
+    {
+      "id": "emc-local-4-3-18",
+      "title": "r_s",
+      "symbolHtml": "<span>r<sub>s</sub></span>",
+      "keys": [
+        "r_s"
+      ],
+      "description": "圆筒外半径，不是屏蔽环电阻Rs。",
+      "unitHtml": "m",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.3"
+      ],
+      "match": "式中，H1为圆筒空腔内磁场强度（A/m）；r1为空腔半径/壳体内半径（m）；rs为圆筒外半径，不是屏蔽环电阻Rs（m）。",
+      "sourceAnchor": "symbols-D-4-3-3"
+    },
+    {
+      "id": "emc-local-4-3-19",
+      "title": "SE_H,dB",
+      "symbolHtml": "<span>SE<sub>H,dB</sub></span>",
+      "keys": [
+        "SE_H,dB"
+      ],
+      "description": "横向静磁场模型的幅值屏蔽效能。",
+      "unitHtml": "dB",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.4"
+      ],
+      "match": "式中，SEH,dB为横向静磁场模型的幅值屏蔽效能（dB）。",
+      "sourceAnchor": "symbols-D-4-3-4"
+    },
+    {
+      "id": "emc-local-4-3-20",
+      "title": "I_s",
+      "symbolHtml": "<span>I<sub>s</sub></span>",
+      "keys": [
+        "I_s"
+      ],
+      "description": "等效短路屏蔽匝电流相量。",
+      "unitHtml": "A",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.5",
+        "D.4.3.6"
+      ],
+      "match": "式中，Is为等效短路屏蔽匝电流相量（A）；I为干扰线圈电流相量（A）；M为两等效线圈之间互感（H）；Rs为短路屏蔽匝回路电阻（Ω）；Ls为短路屏蔽匝回路自感（H）。",
+      "sourceAnchor": "symbols-D-4-3-5"
+    },
+    {
+      "id": "emc-local-4-3-21",
+      "title": "I",
+      "symbolHtml": "<span>I</span>",
+      "keys": [
+        "I"
+      ],
+      "description": "干扰线圈电流相量。",
+      "unitHtml": "A",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.5",
+        "D.4.3.6"
+      ],
+      "match": "式中，Is为等效短路屏蔽匝电流相量（A）；I为干扰线圈电流相量（A）；M为两等效线圈之间互感（H）；Rs为短路屏蔽匝回路电阻（Ω）；Ls为短路屏蔽匝回路自感（H）。",
+      "sourceAnchor": "symbols-D-4-3-5"
+    },
+    {
+      "id": "emc-local-4-3-22",
+      "title": "M",
+      "symbolHtml": "<span>M</span>",
+      "keys": [
+        "M"
+      ],
+      "description": "两等效线圈之间互感。",
+      "unitHtml": "H",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.5",
+        "D.4.3.6"
+      ],
+      "match": "式中，Is为等效短路屏蔽匝电流相量（A）；I为干扰线圈电流相量（A）；M为两等效线圈之间互感（H）；Rs为短路屏蔽匝回路电阻（Ω）；Ls为短路屏蔽匝回路自感（H）。",
+      "sourceAnchor": "symbols-D-4-3-5"
+    },
+    {
+      "id": "emc-local-4-3-23",
+      "title": "R_s",
+      "symbolHtml": "<span>R<sub>s</sub></span>",
+      "keys": [
+        "R_s"
+      ],
+      "description": "短路屏蔽匝回路电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.5",
+        "D.4.3.6"
+      ],
+      "match": "式中，Is为等效短路屏蔽匝电流相量（A）；I为干扰线圈电流相量（A）；M为两等效线圈之间互感（H）；Rs为短路屏蔽匝回路电阻（Ω）；Ls为短路屏蔽匝回路自感（H）。",
+      "sourceAnchor": "symbols-D-4-3-5"
+    },
+    {
+      "id": "emc-local-4-3-24",
+      "title": "L_s",
+      "symbolHtml": "<span>L<sub>s</sub></span>",
+      "keys": [
+        "L_s"
+      ],
+      "description": "短路屏蔽匝回路自感。",
+      "unitHtml": "H",
+      "section": "emc-4-3",
+      "sections": [
+        "emc-4-3"
+      ],
+      "equations": [
+        "D.4.3.5"
+      ],
+      "match": "式中，Is为等效短路屏蔽匝电流相量（A）；I为干扰线圈电流相量（A）；M为两等效线圈之间互感（H）；Rs为短路屏蔽匝回路电阻（Ω）；Ls为短路屏蔽匝回路自感（H）。",
+      "sourceAnchor": "symbols-D-4-3-5"
+    },
+    {
+      "id": "emc-local-4-4-0",
+      "title": "γ",
+      "symbolHtml": "<span>γ</span>",
+      "keys": [
+        "γ"
+      ],
+      "description": "金属内复传播常数，包含衰减与相位。",
+      "unitHtml": "m⁻¹",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.1",
+        "D.4.4.3"
+      ],
+      "match": "式中，γ为金属内复传播常数，包含衰减与相位（m⁻¹）；μ为良导体磁导率（H/m）；σ为良导体电导率（S/m）。",
+      "sourceAnchor": "symbols-D-4-4-1"
+    },
+    {
+      "id": "emc-local-4-4-1",
+      "title": "μ",
+      "symbolHtml": "<span>μ</span>",
+      "keys": [
+        "μ"
+      ],
+      "description": "良导体磁导率。",
+      "unitHtml": "H/m",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.1"
+      ],
+      "match": "式中，γ为金属内复传播常数，包含衰减与相位（m⁻¹）；μ为良导体磁导率（H/m）；σ为良导体电导率（S/m）。",
+      "sourceAnchor": "symbols-D-4-4-1"
+    },
+    {
+      "id": "emc-local-4-4-2",
+      "title": "σ",
+      "symbolHtml": "<span>σ</span>",
+      "keys": [
+        "σ"
+      ],
+      "description": "良导体电导率。",
+      "unitHtml": "S/m",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.1"
+      ],
+      "match": "式中，γ为金属内复传播常数，包含衰减与相位（m⁻¹）；μ为良导体磁导率（H/m）；σ为良导体电导率（S/m）。",
+      "sourceAnchor": "symbols-D-4-4-1"
+    },
+    {
+      "id": "emc-local-4-4-3",
+      "title": "Γ_01",
+      "symbolHtml": "<span>Γ<sub>01</sub></span>",
+      "keys": [
+        "Γ_01"
+      ],
+      "description": "空气入射金属第一界面的电场振幅反射系数。",
+      "unitHtml": "无量纲",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.2"
+      ],
+      "match": "式中，Γ01为空气入射金属第一界面的电场振幅反射系数（无量纲）；T01为空气进入金属的电场振幅透射系数（无量纲）；ηm为金属内部复波阻抗（Ω）；η0为自由空间平面波阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-4-4-2"
+    },
+    {
+      "id": "emc-local-4-4-4",
+      "title": "T_01",
+      "symbolHtml": "<span>T<sub>01</sub></span>",
+      "keys": [
+        "T_01"
+      ],
+      "description": "空气进入金属的电场振幅透射系数。",
+      "unitHtml": "无量纲",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.2",
+        "D.4.4.3"
+      ],
+      "match": "式中，Γ01为空气入射金属第一界面的电场振幅反射系数（无量纲）；T01为空气进入金属的电场振幅透射系数（无量纲）；ηm为金属内部复波阻抗（Ω）；η0为自由空间平面波阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-4-4-2"
+    },
+    {
+      "id": "emc-local-4-4-7",
+      "title": "η_m",
+      "symbolHtml": "<span>η<sub>m</sub></span>",
+      "keys": [
+        "η_m"
+      ],
+      "description": "金属内部复波阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.2"
+      ],
+      "match": "式中，Γ01为空气入射金属第一界面的电场振幅反射系数（无量纲）；T01为空气进入金属的电场振幅透射系数（无量纲）；ηm为金属内部复波阻抗（Ω）；η0为自由空间平面波阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-4-4-2"
+    },
+    {
+      "id": "emc-local-4-4-8",
+      "title": "η_0",
+      "symbolHtml": "<span>η<sub>0</sub></span>",
+      "keys": [
+        "η_0"
+      ],
+      "description": "自由空间平面波阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.2"
+      ],
+      "match": "式中，Γ01为空气入射金属第一界面的电场振幅反射系数（无量纲）；T01为空气进入金属的电场振幅透射系数（无量纲）；ηm为金属内部复波阻抗（Ω）；η0为自由空间平面波阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-4-4-2"
+    },
+    {
+      "id": "emc-local-4-4-5",
+      "title": "T_10",
+      "symbolHtml": "<span>T<sub>10</sub></span>",
+      "keys": [
+        "T_10"
+      ],
+      "description": "金属进入空气的电场振幅透射系数。",
+      "unitHtml": "无量纲",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.3"
+      ],
+      "match": "式中，T10为金属进入空气的电场振幅透射系数（无量纲）；Γ10为金属内向空气界面的电场振幅反射系数（无量纲）；Et为穿过平板的电场振幅（V/m）；Ei为入射电场振幅（V/m）；t为金属平板厚度，不是时间（m）。",
+      "sourceAnchor": "symbols-D-4-4-3"
+    },
+    {
+      "id": "emc-local-4-4-6",
+      "title": "Γ_10",
+      "symbolHtml": "<span>Γ<sub>10</sub></span>",
+      "keys": [
+        "Γ_10"
+      ],
+      "description": "金属内向空气界面的电场振幅反射系数。",
+      "unitHtml": "无量纲",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.3"
+      ],
+      "match": "式中，T10为金属进入空气的电场振幅透射系数（无量纲）；Γ10为金属内向空气界面的电场振幅反射系数（无量纲）；Et为穿过平板的电场振幅（V/m）；Ei为入射电场振幅（V/m）；t为金属平板厚度，不是时间（m）。",
+      "sourceAnchor": "symbols-D-4-4-3"
+    },
+    {
+      "id": "emc-local-4-4-9",
+      "title": "E_t",
+      "symbolHtml": "<span>E<sub>t</sub></span>",
+      "keys": [
+        "E_t"
+      ],
+      "description": "穿过平板的电场振幅。",
+      "unitHtml": "V/m",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.3"
+      ],
+      "match": "式中，T10为金属进入空气的电场振幅透射系数（无量纲）；Γ10为金属内向空气界面的电场振幅反射系数（无量纲）；Et为穿过平板的电场振幅（V/m）；Ei为入射电场振幅（V/m）；t为金属平板厚度，不是时间（m）。",
+      "sourceAnchor": "symbols-D-4-4-3"
+    },
+    {
+      "id": "emc-local-4-4-10",
+      "title": "E_i",
+      "symbolHtml": "<span>E<sub>i</sub></span>",
+      "keys": [
+        "E_i"
+      ],
+      "description": "入射电场振幅。",
+      "unitHtml": "V/m",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.3"
+      ],
+      "match": "式中，T10为金属进入空气的电场振幅透射系数（无量纲）；Γ10为金属内向空气界面的电场振幅反射系数（无量纲）；Et为穿过平板的电场振幅（V/m）；Ei为入射电场振幅（V/m）；t为金属平板厚度，不是时间（m）。",
+      "sourceAnchor": "symbols-D-4-4-3"
+    },
+    {
+      "id": "emc-local-4-4-11",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "金属平板厚度，不是时间。",
+      "unitHtml": "m",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.3",
+        "D.4.4.4"
+      ],
+      "match": "式中，T10为金属进入空气的电场振幅透射系数（无量纲）；Γ10为金属内向空气界面的电场振幅反射系数（无量纲）；Et为穿过平板的电场振幅（V/m）；Ei为入射电场振幅（V/m）；t为金属平板厚度，不是时间（m）。",
+      "sourceAnchor": "symbols-D-4-4-3"
+    },
+    {
+      "id": "emc-local-4-4-12",
+      "title": "A",
+      "symbolHtml": "<span>A</span>",
+      "keys": [
+        "A"
+      ],
+      "description": "平板传播的吸收损耗，不是整个机壳总屏蔽效能。",
+      "unitHtml": "dB",
+      "section": "emc-4-4",
+      "sections": [
+        "emc-4-4"
+      ],
+      "equations": [
+        "D.4.4.4"
+      ],
+      "match": "式中，A为平板传播的吸收损耗，不是整个机壳总屏蔽效能（dB）。",
+      "sourceAnchor": "symbols-D-4-4-4"
+    },
+    {
+      "id": "emc-local-4-5-0",
+      "title": "f_c",
+      "symbolHtml": "<span>f<sub>c</sub></span>",
+      "keys": [
+        "f_c"
+      ],
+      "description": "理想空气矩形波导TE10截止频率。",
+      "unitHtml": "Hz",
+      "section": "emc-4-5",
+      "sections": [
+        "emc-4-5"
+      ],
+      "equations": [
+        "D.4.5.1"
+      ],
+      "match": "式中，fc为理想空气矩形波导TE10截止频率（Hz）；c为空气中近似取光速的传播速度（m/s）；a为矩形波导宽边尺寸（m）。",
+      "sourceAnchor": "symbols-D-4-5-1"
+    },
+    {
+      "id": "emc-local-4-5-1",
+      "title": "c",
+      "symbolHtml": "<span>c</span>",
+      "keys": [
+        "c"
+      ],
+      "description": "空气中近似取光速的传播速度。",
+      "unitHtml": "m/s",
+      "section": "emc-4-5",
+      "sections": [
+        "emc-4-5"
+      ],
+      "equations": [
+        "D.4.5.1"
+      ],
+      "match": "式中，fc为理想空气矩形波导TE10截止频率（Hz）；c为空气中近似取光速的传播速度（m/s）；a为矩形波导宽边尺寸（m）。",
+      "sourceAnchor": "symbols-D-4-5-1"
+    },
+    {
+      "id": "emc-local-4-5-2",
+      "title": "a",
+      "symbolHtml": "<span>a</span>",
+      "keys": [
+        "a"
+      ],
+      "description": "矩形波导宽边尺寸。",
+      "unitHtml": "m",
+      "section": "emc-4-5",
+      "sections": [
+        "emc-4-5"
+      ],
+      "equations": [
+        "D.4.5.1"
+      ],
+      "match": "式中，fc为理想空气矩形波导TE10截止频率（Hz）；c为空气中近似取光速的传播速度（m/s）；a为矩形波导宽边尺寸（m）。",
+      "sourceAnchor": "symbols-D-4-5-1"
+    },
+    {
+      "id": "emc-local-5-1-0",
+      "title": "IL",
+      "symbolHtml": "<span>IL</span>",
+      "keys": [
+        "IL"
+      ],
+      "description": "相同源/负载/测量配置下的插入损耗。",
+      "unitHtml": "dB",
+      "section": "emc-5-1",
+      "sections": [
+        "emc-5-1"
+      ],
+      "equations": [
+        "D.5.1.1"
+      ],
+      "match": "式中，IL为相同源/负载/测量配置下的插入损耗（dB）；U0为未插入滤波器时的负载电压幅值（V）；UF为插入滤波器后的负载电压幅值（V）。",
+      "sourceAnchor": "symbols-D-5-1-1"
+    },
+    {
+      "id": "emc-local-5-1-1",
+      "title": "U_0",
+      "symbolHtml": "<span>U<sub>0</sub></span>",
+      "keys": [
+        "U_0"
+      ],
+      "description": "未插入滤波器时的负载电压幅值。",
+      "unitHtml": "V",
+      "section": "emc-5-1",
+      "sections": [
+        "emc-5-1"
+      ],
+      "equations": [
+        "D.5.1.1"
+      ],
+      "match": "式中，IL为相同源/负载/测量配置下的插入损耗（dB）；U0为未插入滤波器时的负载电压幅值（V）；UF为插入滤波器后的负载电压幅值（V）。",
+      "sourceAnchor": "symbols-D-5-1-1"
+    },
+    {
+      "id": "emc-local-5-1-2",
+      "title": "U_F",
+      "symbolHtml": "<span>U<sub>F</sub></span>",
+      "keys": [
+        "U_F"
+      ],
+      "description": "插入滤波器后的负载电压幅值。",
+      "unitHtml": "V",
+      "section": "emc-5-1",
+      "sections": [
+        "emc-5-1"
+      ],
+      "equations": [
+        "D.5.1.1"
+      ],
+      "match": "式中，IL为相同源/负载/测量配置下的插入损耗（dB）；U0为未插入滤波器时的负载电压幅值（V）；UF为插入滤波器后的负载电压幅值（V）。",
+      "sourceAnchor": "symbols-D-5-1-1"
+    },
+    {
+      "id": "emc-local-5-2-0",
+      "title": "H",
+      "symbolHtml": "<span>H</span>",
+      "keys": [
+        "H"
+      ],
+      "description": "理想RL低通网络输出电压与输入电压之比。",
+      "unitHtml": "无量纲",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.2"
+      ],
+      "match": "式中，H为理想RL低通网络输出电压与输入电压之比（无量纲）；R为理想串联网络中的输出电阻；带通时须区分负载与总耗散电阻（Ω）；L为相应拓扑的理想电感（H）。",
+      "sourceAnchor": "symbols-D-5-2-2"
+    },
+    {
+      "id": "emc-local-5-2-1",
+      "title": "R",
+      "symbolHtml": "<span>R</span>",
+      "keys": [
+        "R"
+      ],
+      "description": "理想串联网络中的输出电阻；带通时须区分负载与总耗散电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.2",
+        "D.5.2.3",
+        "D.5.2.4"
+      ],
+      "match": "式中，H为理想RL低通网络输出电压与输入电压之比（无量纲）；R为理想串联网络中的输出电阻；带通时须区分负载与总耗散电阻（Ω）；L为相应拓扑的理想电感（H）。",
+      "sourceAnchor": "symbols-D-5-2-2"
+    },
+    {
+      "id": "emc-local-5-2-2",
+      "title": "L",
+      "symbolHtml": "<span>L</span>",
+      "keys": [
+        "L"
+      ],
+      "description": "相应拓扑的理想电感。",
+      "unitHtml": "H",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.2",
+        "D.5.2.1",
+        "D.5.2.4",
+        "D.5.2.5"
+      ],
+      "match": "式中，H为理想RL低通网络输出电压与输入电压之比（无量纲）；R为理想串联网络中的输出电阻；带通时须区分负载与总耗散电阻（Ω）；L为相应拓扑的理想电感（H）。",
+      "sourceAnchor": "symbols-D-5-2-2"
+    },
+    {
+      "id": "emc-local-5-2-3",
+      "title": "C",
+      "symbolHtml": "<span>C</span>",
+      "keys": [
+        "C"
+      ],
+      "description": "相应拓扑的理想电容。",
+      "unitHtml": "F",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.1",
+        "D.5.2.3",
+        "D.5.2.4",
+        "D.5.2.5"
+      ],
+      "match": "式中，C为相应拓扑的理想电容（F）；Zp为LC低通输出节点的电阻和电容并联阻抗（Ω）；RL为LC低通的负载电阻（Ω）；Uout为所指定输出位置的电压相量（V）；Uin为理想源输入电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-2-1"
+    },
+    {
+      "id": "emc-local-5-2-4",
+      "title": "Z_p",
+      "symbolHtml": "<span>Z<sub>p</sub></span>",
+      "keys": [
+        "Z_p"
+      ],
+      "description": "LC低通输出节点的电阻和电容并联阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.1"
+      ],
+      "match": "式中，C为相应拓扑的理想电容（F）；Zp为LC低通输出节点的电阻和电容并联阻抗（Ω）；RL为LC低通的负载电阻（Ω）；Uout为所指定输出位置的电压相量（V）；Uin为理想源输入电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-2-1"
+    },
+    {
+      "id": "emc-local-5-2-5",
+      "title": "R_L",
+      "symbolHtml": "<span>R<sub>L</sub></span>",
+      "keys": [
+        "R_L"
+      ],
+      "description": "LC低通的负载电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.1"
+      ],
+      "match": "式中，C为相应拓扑的理想电容（F）；Zp为LC低通输出节点的电阻和电容并联阻抗（Ω）；RL为LC低通的负载电阻（Ω）；Uout为所指定输出位置的电压相量（V）；Uin为理想源输入电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-2-1"
+    },
+    {
+      "id": "emc-local-5-2-6",
+      "title": "U_out",
+      "symbolHtml": "<span>U<sub>out</sub></span>",
+      "keys": [
+        "U_out"
+      ],
+      "description": "所指定输出位置的电压相量。",
+      "unitHtml": "V",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.1"
+      ],
+      "match": "式中，C为相应拓扑的理想电容（F）；Zp为LC低通输出节点的电阻和电容并联阻抗（Ω）；RL为LC低通的负载电阻（Ω）；Uout为所指定输出位置的电压相量（V）；Uin为理想源输入电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-2-1"
+    },
+    {
+      "id": "emc-local-5-2-7",
+      "title": "U_in",
+      "symbolHtml": "<span>U<sub>in</sub></span>",
+      "keys": [
+        "U_in"
+      ],
+      "description": "理想源输入电压相量。",
+      "unitHtml": "V",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.1"
+      ],
+      "match": "式中，C为相应拓扑的理想电容（F）；Zp为LC低通输出节点的电阻和电容并联阻抗（Ω）；RL为LC低通的负载电阻（Ω）；Uout为所指定输出位置的电压相量（V）；Uin为理想源输入电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-2-1"
+    },
+    {
+      "id": "emc-local-5-2-8",
+      "title": "H_HP",
+      "symbolHtml": "<span>H<sub>HP</sub></span>",
+      "keys": [
+        "H_HP"
+      ],
+      "description": "串联电容、输出取R两端的高通电压传递函数。",
+      "unitHtml": "无量纲",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.3"
+      ],
+      "match": "式中，HHP为串联电容、输出取R两端的高通电压传递函数（无量纲）；fc为该一阶RC高通的截止频率（Hz）。",
+      "sourceAnchor": "symbols-D-5-2-3"
+    },
+    {
+      "id": "emc-local-5-2-9",
+      "title": "f_c",
+      "symbolHtml": "<span>f<sub>c</sub></span>",
+      "keys": [
+        "f_c"
+      ],
+      "description": "该一阶RC高通的截止频率。",
+      "unitHtml": "Hz",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.3"
+      ],
+      "match": "式中，HHP为串联电容、输出取R两端的高通电压传递函数（无量纲）；fc为该一阶RC高通的截止频率（Hz）。",
+      "sourceAnchor": "symbols-D-5-2-3"
+    },
+    {
+      "id": "emc-local-5-2-10",
+      "title": "H_BP",
+      "symbolHtml": "<span>H<sub>BP</sub></span>",
+      "keys": [
+        "H_BP"
+      ],
+      "description": "串联RLC、输出取R两端的带通传递函数。",
+      "unitHtml": "无量纲",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.4"
+      ],
+      "match": "式中，HBP为串联RLC、输出取R两端的带通传递函数（无量纲）；f0为串联RLC的谐振频率（Hz）；ω0为串联RLC的谐振角频率（rad/s）；Q为该串联RLC模型的品质因数（无量纲）；Δf为带通两个半功率频率之差（Hz）。",
+      "sourceAnchor": "symbols-D-5-2-4"
+    },
+    {
+      "id": "emc-local-5-2-11",
+      "title": "f_0",
+      "symbolHtml": "<span>f<sub>0</sub></span>",
+      "keys": [
+        "f_0"
+      ],
+      "description": "串联RLC的谐振频率。",
+      "unitHtml": "Hz",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.4"
+      ],
+      "match": "式中，HBP为串联RLC、输出取R两端的带通传递函数（无量纲）；f0为串联RLC的谐振频率（Hz）；ω0为串联RLC的谐振角频率（rad/s）；Q为该串联RLC模型的品质因数（无量纲）；Δf为带通两个半功率频率之差（Hz）。",
+      "sourceAnchor": "symbols-D-5-2-4"
+    },
+    {
+      "id": "emc-local-5-2-12",
+      "title": "ω_0",
+      "symbolHtml": "<span>ω<sub>0</sub></span>",
+      "keys": [
+        "ω_0"
+      ],
+      "description": "串联RLC的谐振角频率。",
+      "unitHtml": "rad/s",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.4"
+      ],
+      "match": "式中，HBP为串联RLC、输出取R两端的带通传递函数（无量纲）；f0为串联RLC的谐振频率（Hz）；ω0为串联RLC的谐振角频率（rad/s）；Q为该串联RLC模型的品质因数（无量纲）；Δf为带通两个半功率频率之差（Hz）。",
+      "sourceAnchor": "symbols-D-5-2-4"
+    },
+    {
+      "id": "emc-local-5-2-13",
+      "title": "Q",
+      "symbolHtml": "<span>Q</span>",
+      "keys": [
+        "Q"
+      ],
+      "description": "该串联RLC模型的品质因数。",
+      "unitHtml": "无量纲",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.4"
+      ],
+      "match": "式中，HBP为串联RLC、输出取R两端的带通传递函数（无量纲）；f0为串联RLC的谐振频率（Hz）；ω0为串联RLC的谐振角频率（rad/s）；Q为该串联RLC模型的品质因数（无量纲）；Δf为带通两个半功率频率之差（Hz）。",
+      "sourceAnchor": "symbols-D-5-2-4"
+    },
+    {
+      "id": "emc-local-5-2-14",
+      "title": "delta:f",
+      "symbolHtml": "<span>Δf</span>",
+      "keys": [
+        "delta:f"
+      ],
+      "description": "带通两个半功率频率之差。",
+      "unitHtml": "Hz",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.4"
+      ],
+      "match": "式中，HBP为串联RLC、输出取R两端的带通传递函数（无量纲）；f0为串联RLC的谐振频率（Hz）；ω0为串联RLC的谐振角频率（rad/s）；Q为该串联RLC模型的品质因数（无量纲）；Δf为带通两个半功率频率之差（Hz）。",
+      "sourceAnchor": "symbols-D-5-2-4"
+    },
+    {
+      "id": "emc-local-5-2-15",
+      "title": "H_BS",
+      "symbolHtml": "<span>H<sub>BS</sub></span>",
+      "keys": [
+        "H_BS"
+      ],
+      "description": "Rs供电、LC串联支路旁路且后级不加载的带阻传递函数。",
+      "unitHtml": "无量纲",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.5"
+      ],
+      "match": "式中，HBS为Rs供电、LC串联支路旁路且后级不加载的带阻传递函数（无量纲）；ZLC为串联LC支路的复阻抗（Ω）；Rs为带阻电路的串联源电阻（Ω）。",
+      "sourceAnchor": "symbols-D-5-2-5"
+    },
+    {
+      "id": "emc-local-5-2-16",
+      "title": "Z_LC",
+      "symbolHtml": "<span>Z<sub>LC</sub></span>",
+      "keys": [
+        "Z_LC"
+      ],
+      "description": "串联LC支路的复阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.5"
+      ],
+      "match": "式中，HBS为Rs供电、LC串联支路旁路且后级不加载的带阻传递函数（无量纲）；ZLC为串联LC支路的复阻抗（Ω）；Rs为带阻电路的串联源电阻（Ω）。",
+      "sourceAnchor": "symbols-D-5-2-5"
+    },
+    {
+      "id": "emc-local-5-2-17",
+      "title": "R_s",
+      "symbolHtml": "<span>R<sub>s</sub></span>",
+      "keys": [
+        "R_s"
+      ],
+      "description": "带阻电路的串联源电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-5-2",
+      "sections": [
+        "emc-5-2"
+      ],
+      "equations": [
+        "D.5.2.5"
+      ],
+      "match": "式中，HBS为Rs供电、LC串联支路旁路且后级不加载的带阻传递函数（无量纲）；ZLC为串联LC支路的复阻抗（Ω）；Rs为带阻电路的串联源电阻（Ω）。",
+      "sourceAnchor": "symbols-D-5-2-5"
+    },
+    {
+      "id": "emc-local-5-3-0",
+      "title": "Z_bead",
+      "symbolHtml": "<span>Z<sub>bead</sub></span>",
+      "keys": [
+        "Z_bead"
+      ],
+      "description": "给定频率的磁珠等效复阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-5-3",
+      "sections": [
+        "emc-5-3"
+      ],
+      "equations": [
+        "D.5.3.1"
+      ],
+      "match": "式中，Zbead为给定频率的磁珠等效复阻抗（Ω）；Rloss为磁珠对应频率的等效损耗电阻（Ω）；Leff为磁珠对应频率的等效电感（H）。",
+      "sourceAnchor": "symbols-D-5-3-1"
+    },
+    {
+      "id": "emc-local-5-3-1",
+      "title": "R_loss",
+      "symbolHtml": "<span>R<sub>loss</sub></span>",
+      "keys": [
+        "R_loss"
+      ],
+      "description": "磁珠对应频率的等效损耗电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-5-3",
+      "sections": [
+        "emc-5-3"
+      ],
+      "equations": [
+        "D.5.3.1"
+      ],
+      "match": "式中，Zbead为给定频率的磁珠等效复阻抗（Ω）；Rloss为磁珠对应频率的等效损耗电阻（Ω）；Leff为磁珠对应频率的等效电感（H）。",
+      "sourceAnchor": "symbols-D-5-3-1"
+    },
+    {
+      "id": "emc-local-5-3-2",
+      "title": "L_eff",
+      "symbolHtml": "<span>L<sub>eff</sub></span>",
+      "keys": [
+        "L_eff"
+      ],
+      "description": "磁珠对应频率的等效电感。",
+      "unitHtml": "H",
+      "section": "emc-5-3",
+      "sections": [
+        "emc-5-3"
+      ],
+      "equations": [
+        "D.5.3.1"
+      ],
+      "match": "式中，Zbead为给定频率的磁珠等效复阻抗（Ω）；Rloss为磁珠对应频率的等效损耗电阻（Ω）；Leff为磁珠对应频率的等效电感（H）。",
+      "sourceAnchor": "symbols-D-5-3-1"
+    },
+    {
+      "id": "emc-local-5-4-0",
+      "title": "i_L",
+      "symbolHtml": "<span>i<sub>L</sub></span>",
+      "keys": [
+        "i_L"
+      ],
+      "description": "相线电流，正方向电网至设备。",
+      "unitHtml": "A",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.1"
+      ],
+      "match": "式中，iL为相线电流，正方向电网至设备（A）；iN为中性线电流，正方向也为电网至设备（A）；iCM为两导线电流同向部分，即(iL+iN)/2（A）；iDM为两导线电流反向部分，即(iL-iN)/2（A）。",
+      "sourceAnchor": "symbols-D-5-4-1"
+    },
+    {
+      "id": "emc-local-5-4-1",
+      "title": "i_N",
+      "symbolHtml": "<span>i<sub>N</sub></span>",
+      "keys": [
+        "i_N"
+      ],
+      "description": "中性线电流，正方向也为电网至设备。",
+      "unitHtml": "A",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.1"
+      ],
+      "match": "式中，iL为相线电流，正方向电网至设备（A）；iN为中性线电流，正方向也为电网至设备（A）；iCM为两导线电流同向部分，即(iL+iN)/2（A）；iDM为两导线电流反向部分，即(iL-iN)/2（A）。",
+      "sourceAnchor": "symbols-D-5-4-1"
+    },
+    {
+      "id": "emc-local-5-4-2",
+      "title": "i_CM",
+      "symbolHtml": "<span>i<sub>CM</sub></span>",
+      "keys": [
+        "i_CM"
+      ],
+      "description": "两导线电流同向部分，即(iL+iN)/2。",
+      "unitHtml": "A",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.1"
+      ],
+      "match": "式中，iL为相线电流，正方向电网至设备（A）；iN为中性线电流，正方向也为电网至设备（A）；iCM为两导线电流同向部分，即(iL+iN)/2（A）；iDM为两导线电流反向部分，即(iL-iN)/2（A）。",
+      "sourceAnchor": "symbols-D-5-4-1"
+    },
+    {
+      "id": "emc-local-5-4-3",
+      "title": "i_DM",
+      "symbolHtml": "<span>i<sub>DM</sub></span>",
+      "keys": [
+        "i_DM"
+      ],
+      "description": "两导线电流反向部分，即(iL-iN)/2。",
+      "unitHtml": "A",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.1"
+      ],
+      "match": "式中，iL为相线电流，正方向电网至设备（A）；iN为中性线电流，正方向也为电网至设备（A）；iCM为两导线电流同向部分，即(iL+iN)/2（A）；iDM为两导线电流反向部分，即(iL-iN)/2（A）。",
+      "sourceAnchor": "symbols-D-5-4-1"
+    },
+    {
+      "id": "emc-local-5-4-4",
+      "title": "Z_C",
+      "symbolHtml": "<span>Z<sub>C</sub></span>",
+      "keys": [
+        "Z_C"
+      ],
+      "description": "理想电容复阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.2"
+      ],
+      "match": "式中，ZC为理想电容复阻抗（Ω）；C为该理想支路电容量（F）；IX为跨L/N的X电容电流相量（A）；UL为相线对共同参考点电压相量（V）；UN为中性线对共同参考点电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-4-2"
+    },
+    {
+      "id": "emc-local-5-4-5",
+      "title": "C",
+      "symbolHtml": "<span>C</span>",
+      "keys": [
+        "C"
+      ],
+      "description": "该理想支路电容量。",
+      "unitHtml": "F",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.2"
+      ],
+      "match": "式中，ZC为理想电容复阻抗（Ω）；C为该理想支路电容量（F）；IX为跨L/N的X电容电流相量（A）；UL为相线对共同参考点电压相量（V）；UN为中性线对共同参考点电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-4-2"
+    },
+    {
+      "id": "emc-local-5-4-6",
+      "title": "I_X",
+      "symbolHtml": "<span>I<sub>X</sub></span>",
+      "keys": [
+        "I_X"
+      ],
+      "description": "跨L/N的X电容电流相量。",
+      "unitHtml": "A",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.2"
+      ],
+      "match": "式中，ZC为理想电容复阻抗（Ω）；C为该理想支路电容量（F）；IX为跨L/N的X电容电流相量（A）；UL为相线对共同参考点电压相量（V）；UN为中性线对共同参考点电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-4-2"
+    },
+    {
+      "id": "emc-local-5-4-7",
+      "title": "U_L",
+      "symbolHtml": "<span>U<sub>L</sub></span>",
+      "keys": [
+        "U_L"
+      ],
+      "description": "相线对共同参考点电压相量。",
+      "unitHtml": "V",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.2"
+      ],
+      "match": "式中，ZC为理想电容复阻抗（Ω）；C为该理想支路电容量（F）；IX为跨L/N的X电容电流相量（A）；UL为相线对共同参考点电压相量（V）；UN为中性线对共同参考点电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-4-2"
+    },
+    {
+      "id": "emc-local-5-4-8",
+      "title": "U_N",
+      "symbolHtml": "<span>U<sub>N</sub></span>",
+      "keys": [
+        "U_N"
+      ],
+      "description": "中性线对共同参考点电压相量。",
+      "unitHtml": "V",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.2"
+      ],
+      "match": "式中，ZC为理想电容复阻抗（Ω）；C为该理想支路电容量（F）；IX为跨L/N的X电容电流相量（A）；UL为相线对共同参考点电压相量（V）；UN为中性线对共同参考点电压相量（V）。",
+      "sourceAnchor": "symbols-D-5-4-2"
+    },
+    {
+      "id": "emc-local-5-4-9",
+      "title": "I_Y,rms",
+      "symbolHtml": "<span>I<sub>Y,rms</sub></span>",
+      "keys": [
+        "I_Y,rms"
+      ],
+      "description": "单个Y电容支路电流有效值。",
+      "unitHtml": "A",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.3"
+      ],
+      "match": "式中，IY,rms为单个Y电容支路电流有效值（A）；Urms为该Y电容支路两端电压有效值（V）；f为供电正弦频率（Hz）。",
+      "sourceAnchor": "symbols-D-5-4-3"
+    },
+    {
+      "id": "emc-local-5-4-10",
+      "title": "U_rms",
+      "symbolHtml": "<span>U<sub>rms</sub></span>",
+      "keys": [
+        "U_rms"
+      ],
+      "description": "该Y电容支路两端电压有效值。",
+      "unitHtml": "V",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.3"
+      ],
+      "match": "式中，IY,rms为单个Y电容支路电流有效值（A）；Urms为该Y电容支路两端电压有效值（V）；f为供电正弦频率（Hz）。",
+      "sourceAnchor": "symbols-D-5-4-3"
+    },
+    {
+      "id": "emc-local-5-4-11",
+      "title": "f",
+      "symbolHtml": "<span>f</span>",
+      "keys": [
+        "f"
+      ],
+      "description": "供电正弦频率。",
+      "unitHtml": "Hz",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.3"
+      ],
+      "match": "式中，IY,rms为单个Y电容支路电流有效值（A）；Urms为该Y电容支路两端电压有效值（V）；f为供电正弦频率（Hz）。",
+      "sourceAnchor": "symbols-D-5-4-3"
+    },
+    {
+      "id": "emc-local-5-4-12",
+      "title": "f_0",
+      "symbolHtml": "<span>f<sub>0</sub></span>",
+      "keys": [
+        "f_0"
+      ],
+      "description": "差模LDM与CX组成模型的特征频率，非现场实测截止频率。",
+      "unitHtml": "Hz",
+      "section": "emc-5-4",
+      "sections": [
+        "emc-5-4"
+      ],
+      "equations": [
+        "D.5.4.4"
+      ],
+      "match": "式中，f0为差模LDM与CX组成模型的特征频率，非现场实测截止频率（Hz）。",
+      "sourceAnchor": "symbols-D-5-4-4"
+    },
+    {
+      "id": "emc-local-5-5-0",
+      "title": "S",
+      "symbolHtml": "<span>S</span>",
+      "keys": [
+        "S"
+      ],
+      "description": "闭环灵敏度函数，表示所述扰动通道的残余比例。",
+      "unitHtml": "无量纲",
+      "section": "emc-5-5",
+      "sections": [
+        "emc-5-5"
+      ],
+      "equations": [
+        "D.5.5.1"
+      ],
+      "match": "式中，S为闭环灵敏度函数，表示所述扰动通道的残余比例（无量纲）；G为该模型的复数环路增益（无量纲）。",
+      "sourceAnchor": "symbols-D-5-5-1"
+    },
+    {
+      "id": "emc-local-5-5-1",
+      "title": "G",
+      "symbolHtml": "<span>G</span>",
+      "keys": [
+        "G"
+      ],
+      "description": "该模型的复数环路增益。",
+      "unitHtml": "无量纲",
+      "section": "emc-5-5",
+      "sections": [
+        "emc-5-5"
+      ],
+      "equations": [
+        "D.5.5.1"
+      ],
+      "match": "式中，S为闭环灵敏度函数，表示所述扰动通道的残余比例（无量纲）；G为该模型的复数环路增益（无量纲）。",
+      "sourceAnchor": "symbols-D-5-5-1"
+    },
+    {
+      "id": "emc-local-6-1-0",
+      "title": "R_F",
+      "symbolHtml": "<span>R<sub>F</sub></span>",
+      "keys": [
+        "R_F"
+      ],
+      "description": "孔径远场距离判断的量级尺度，不是任意EUT都满足的测距。",
+      "unitHtml": "m",
+      "section": "emc-6-1",
+      "sections": [
+        "emc-6-1"
+      ],
+      "equations": [
+        "D.6.1.1"
+      ],
+      "match": "式中，RF为孔径远场距离判断的量级尺度，不是任意EUT都满足的测距（m）；D为等效辐射孔径的最大尺寸（m）；λ为该频率自由空间波长（m）。",
+      "sourceAnchor": "symbols-D-6-1-1"
+    },
+    {
+      "id": "emc-local-6-1-1",
+      "title": "D",
+      "symbolHtml": "<span>D</span>",
+      "keys": [
+        "D"
+      ],
+      "description": "等效辐射孔径的最大尺寸。",
+      "unitHtml": "m",
+      "section": "emc-6-1",
+      "sections": [
+        "emc-6-1"
+      ],
+      "equations": [
+        "D.6.1.1"
+      ],
+      "match": "式中，RF为孔径远场距离判断的量级尺度，不是任意EUT都满足的测距（m）；D为等效辐射孔径的最大尺寸（m）；λ为该频率自由空间波长（m）。",
+      "sourceAnchor": "symbols-D-6-1-1"
+    },
+    {
+      "id": "emc-local-6-1-2",
+      "title": "λ",
+      "symbolHtml": "<span>λ</span>",
+      "keys": [
+        "λ"
+      ],
+      "description": "该频率自由空间波长。",
+      "unitHtml": "m",
+      "section": "emc-6-1",
+      "sections": [
+        "emc-6-1"
+      ],
+      "equations": [
+        "D.6.1.1"
+      ],
+      "match": "式中，RF为孔径远场距离判断的量级尺度，不是任意EUT都满足的测距（m）；D为等效辐射孔径的最大尺寸（m）；λ为该频率自由空间波长（m）。",
+      "sourceAnchor": "symbols-D-6-1-1"
+    },
+    {
+      "id": "emc-local-6-2-0",
+      "title": "u_oc",
+      "symbolHtml": "<span>u<sub>oc</sub></span>",
+      "keys": [
+        "u_oc"
+      ],
+      "description": "理想电流探头次级开路感应电动势。",
+      "unitHtml": "V",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.1"
+      ],
+      "match": "式中，uoc为理想电流探头次级开路感应电动势（V）；M为电流探头一次导体至次级的互感（H）；i为被测导体瞬时电流（A）；t为时间（s）；n为电流探头次级匝数或小环接收匝数，见具体式（无量纲）；μ为理想环形磁路的磁导率（H/m）；r为理想环形磁路的平均磁路半径（m）；S为理想环形磁芯的截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-1"
+    },
+    {
+      "id": "emc-local-6-2-1",
+      "title": "M",
+      "symbolHtml": "<span>M</span>",
+      "keys": [
+        "M"
+      ],
+      "description": "电流探头一次导体至次级的互感。",
+      "unitHtml": "H",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.1"
+      ],
+      "match": "式中，uoc为理想电流探头次级开路感应电动势（V）；M为电流探头一次导体至次级的互感（H）；i为被测导体瞬时电流（A）；t为时间（s）；n为电流探头次级匝数或小环接收匝数，见具体式（无量纲）；μ为理想环形磁路的磁导率（H/m）；r为理想环形磁路的平均磁路半径（m）；S为理想环形磁芯的截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-1"
+    },
+    {
+      "id": "emc-local-6-2-2",
+      "title": "i",
+      "symbolHtml": "<span>i</span>",
+      "keys": [
+        "i"
+      ],
+      "description": "被测导体瞬时电流。",
+      "unitHtml": "A",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.1"
+      ],
+      "match": "式中，uoc为理想电流探头次级开路感应电动势（V）；M为电流探头一次导体至次级的互感（H）；i为被测导体瞬时电流（A）；t为时间（s）；n为电流探头次级匝数或小环接收匝数，见具体式（无量纲）；μ为理想环形磁路的磁导率（H/m）；r为理想环形磁路的平均磁路半径（m）；S为理想环形磁芯的截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-1"
+    },
+    {
+      "id": "emc-local-6-2-3",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.1",
+        "D.6.2.3"
+      ],
+      "match": "式中，uoc为理想电流探头次级开路感应电动势（V）；M为电流探头一次导体至次级的互感（H）；i为被测导体瞬时电流（A）；t为时间（s）；n为电流探头次级匝数或小环接收匝数，见具体式（无量纲）；μ为理想环形磁路的磁导率（H/m）；r为理想环形磁路的平均磁路半径（m）；S为理想环形磁芯的截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-1"
+    },
+    {
+      "id": "emc-local-6-2-4",
+      "title": "n",
+      "symbolHtml": "<span>n</span>",
+      "keys": [
+        "n"
+      ],
+      "description": "电流探头次级匝数或小环接收匝数，见具体式。",
+      "unitHtml": "无量纲",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.1",
+        "D.6.2.3"
+      ],
+      "match": "式中，uoc为理想电流探头次级开路感应电动势（V）；M为电流探头一次导体至次级的互感（H）；i为被测导体瞬时电流（A）；t为时间（s）；n为电流探头次级匝数或小环接收匝数，见具体式（无量纲）；μ为理想环形磁路的磁导率（H/m）；r为理想环形磁路的平均磁路半径（m）；S为理想环形磁芯的截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-1"
+    },
+    {
+      "id": "emc-local-6-2-5",
+      "title": "μ",
+      "symbolHtml": "<span>μ</span>",
+      "keys": [
+        "μ"
+      ],
+      "description": "理想环形磁路的磁导率。",
+      "unitHtml": "H/m",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.1"
+      ],
+      "match": "式中，uoc为理想电流探头次级开路感应电动势（V）；M为电流探头一次导体至次级的互感（H）；i为被测导体瞬时电流（A）；t为时间（s）；n为电流探头次级匝数或小环接收匝数，见具体式（无量纲）；μ为理想环形磁路的磁导率（H/m）；r为理想环形磁路的平均磁路半径（m）；S为理想环形磁芯的截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-1"
+    },
+    {
+      "id": "emc-local-6-2-6",
+      "title": "r",
+      "symbolHtml": "<span>r</span>",
+      "keys": [
+        "r"
+      ],
+      "description": "理想环形磁路的平均磁路半径。",
+      "unitHtml": "m",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.1"
+      ],
+      "match": "式中，uoc为理想电流探头次级开路感应电动势（V）；M为电流探头一次导体至次级的互感（H）；i为被测导体瞬时电流（A）；t为时间（s）；n为电流探头次级匝数或小环接收匝数，见具体式（无量纲）；μ为理想环形磁路的磁导率（H/m）；r为理想环形磁路的平均磁路半径（m）；S为理想环形磁芯的截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-1"
+    },
+    {
+      "id": "emc-local-6-2-17",
+      "title": "S",
+      "symbolHtml": "<span>S</span>",
+      "keys": [
+        "S"
+      ],
+      "description": "理想环形磁芯的截面积。",
+      "unitHtml": "m²",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.1"
+      ],
+      "match": "式中，uoc为理想电流探头次级开路感应电动势（V）；M为电流探头一次导体至次级的互感（H）；i为被测导体瞬时电流（A）；t为时间（s）；n为电流探头次级匝数或小环接收匝数，见具体式（无量纲）；μ为理想环形磁路的磁导率（H/m）；r为理想环形磁路的平均磁路半径（m）；S为理想环形磁芯的截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-1"
+    },
+    {
+      "id": "emc-local-6-2-7",
+      "title": "U_out",
+      "symbolHtml": "<span>U<sub>out</sub></span>",
+      "keys": [
+        "U_out"
+      ],
+      "description": "校准端接条件下的探头输出电压相量。",
+      "unitHtml": "V",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.2"
+      ],
+      "match": "式中，Uout为校准端接条件下的探头输出电压相量（V）；ZT为规定端接下校准探头的转移阻抗，不是屏蔽层单位长度转移阻抗（Ω）；I为被测电流正弦相量，幅值口径与校准一致（A）。",
+      "sourceAnchor": "symbols-D-6-2-2"
+    },
+    {
+      "id": "emc-local-6-2-8",
+      "title": "Z_T",
+      "symbolHtml": "<span>Z<sub>T</sub></span>",
+      "keys": [
+        "Z_T"
+      ],
+      "description": "规定端接下校准探头的转移阻抗，不是屏蔽层单位长度转移阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.2"
+      ],
+      "match": "式中，Uout为校准端接条件下的探头输出电压相量（V）；ZT为规定端接下校准探头的转移阻抗，不是屏蔽层单位长度转移阻抗（Ω）；I为被测电流正弦相量，幅值口径与校准一致（A）。",
+      "sourceAnchor": "symbols-D-6-2-2"
+    },
+    {
+      "id": "emc-local-6-2-9",
+      "title": "I",
+      "symbolHtml": "<span>I</span>",
+      "keys": [
+        "I"
+      ],
+      "description": "被测电流正弦相量，幅值口径与校准一致。",
+      "unitHtml": "A",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.2"
+      ],
+      "match": "式中，Uout为校准端接条件下的探头输出电压相量（V）；ZT为规定端接下校准探头的转移阻抗，不是屏蔽层单位长度转移阻抗（Ω）；I为被测电流正弦相量，幅值口径与校准一致（A）。",
+      "sourceAnchor": "symbols-D-6-2-2"
+    },
+    {
+      "id": "emc-local-6-2-10",
+      "title": "u_loop",
+      "symbolHtml": "<span>u<sub>loop</sub></span>",
+      "keys": [
+        "u_loop"
+      ],
+      "description": "小环接收天线开路感应电势。",
+      "unitHtml": "V",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.3"
+      ],
+      "match": "式中，uloop为小环接收天线开路感应电势（V）；B为垂直近似均匀穿过接收环的磁通密度（T）；S为小环接收天线所围面积，不是磁芯截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-3"
+    },
+    {
+      "id": "emc-local-6-2-11",
+      "title": "B",
+      "symbolHtml": "<span>B</span>",
+      "keys": [
+        "B"
+      ],
+      "description": "垂直近似均匀穿过接收环的磁通密度。",
+      "unitHtml": "T",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.3"
+      ],
+      "match": "式中，uloop为小环接收天线开路感应电势（V）；B为垂直近似均匀穿过接收环的磁通密度（T）；S为小环接收天线所围面积，不是磁芯截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-3"
+    },
+    {
+      "id": "emc-local-6-2-18",
+      "title": "S",
+      "symbolHtml": "<span>S</span>",
+      "keys": [
+        "S"
+      ],
+      "description": "小环接收天线所围面积，不是磁芯截面积。",
+      "unitHtml": "m²",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.3"
+      ],
+      "match": "式中，uloop为小环接收天线开路感应电势（V）；B为垂直近似均匀穿过接收环的磁通密度（T）；S为小环接收天线所围面积，不是磁芯截面积（m²）。",
+      "sourceAnchor": "symbols-D-6-2-3"
+    },
+    {
+      "id": "emc-local-6-2-12",
+      "title": "L_E",
+      "symbolHtml": "<span>L<sub>E</sub></span>",
+      "keys": [
+        "L_E"
+      ],
+      "description": "按dBμV/m表示的电场强度级。",
+      "unitHtml": "dBμV/m",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.4"
+      ],
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "sourceAnchor": "symbols-D-6-2-4"
+    },
+    {
+      "id": "emc-local-6-2-13",
+      "title": "L_V",
+      "symbolHtml": "<span>L<sub>V</sub></span>",
+      "keys": [
+        "L_V"
+      ],
+      "description": "接收机端口电压电平，正文亦记Vrec。",
+      "unitHtml": "dBμV",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.4"
+      ],
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "sourceAnchor": "symbols-D-6-2-4"
+    },
+    {
+      "id": "emc-local-6-2-14",
+      "title": "AF",
+      "symbolHtml": "<span>AF</span>",
+      "keys": [
+        "AF"
+      ],
+      "description": "校准天线因子。",
+      "unitHtml": "dB/m",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.4"
+      ],
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "sourceAnchor": "symbols-D-6-2-4"
+    },
+    {
+      "id": "emc-local-6-2-15",
+      "title": "L_c",
+      "symbolHtml": "<span>L<sub>c</sub></span>",
+      "keys": [
+        "L_c"
+      ],
+      "description": "同一校准链的线缆损耗。",
+      "unitHtml": "dB",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.4"
+      ],
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "sourceAnchor": "symbols-D-6-2-4"
+    },
+    {
+      "id": "emc-local-6-2-16",
+      "title": "G_p",
+      "symbolHtml": "<span>G<sub>p</sub></span>",
+      "keys": [
+        "G_p"
+      ],
+      "description": "同一校准链的前置放大增益。",
+      "unitHtml": "dB",
+      "section": "emc-6-2",
+      "sections": [
+        "emc-6-2"
+      ],
+      "equations": [
+        "D.6.2.4"
+      ],
+      "match": "式中，LE为按dBμV/m表示的电场强度级（dBμV/m）；LV为接收机端口电压电平，正文亦记Vrec（dBμV）；AF为校准天线因子（dB/m）；Lc为同一校准链的线缆损耗（dB）；Gp为同一校准链的前置放大增益（dB）。",
+      "sourceAnchor": "symbols-D-6-2-4"
+    },
+    {
+      "id": "emc-local-6-3-0",
+      "title": "L_u",
+      "symbolHtml": "<span>L<sub>u</sub></span>",
+      "keys": [
+        "L_u"
+      ],
+      "description": "相对于1微伏的接收机电压电平。",
+      "unitHtml": "dBμV",
+      "section": "emc-6-3",
+      "sections": [
+        "emc-6-3"
+      ],
+      "equations": [
+        "D.6.3.1"
+      ],
+      "match": "式中，Lu为相对于1微伏的接收机电压电平（dBμV）；Umeas为接收机所测电压，检波/幅值口径须一致（V）。",
+      "sourceAnchor": "symbols-D-6-3-1"
+    },
+    {
+      "id": "emc-local-6-3-1",
+      "title": "U_meas",
+      "symbolHtml": "<span>U<sub>meas</sub></span>",
+      "keys": [
+        "U_meas"
+      ],
+      "description": "接收机所测电压，检波/幅值口径须一致。",
+      "unitHtml": "V",
+      "section": "emc-6-3",
+      "sections": [
+        "emc-6-3"
+      ],
+      "equations": [
+        "D.6.3.1"
+      ],
+      "match": "式中，Lu为相对于1微伏的接收机电压电平（dBμV）；Umeas为接收机所测电压，检波/幅值口径须一致（V）。",
+      "sourceAnchor": "symbols-D-6-3-1"
+    },
+    {
+      "id": "emc-local-6-3-2",
+      "title": "E",
+      "symbolHtml": "<span>E</span>",
+      "keys": [
+        "E"
+      ],
+      "description": "电场强度；本式使用dBμV/m刻度表示。",
+      "unitHtml": "dBμV/m",
+      "section": "emc-6-3",
+      "sections": [
+        "emc-6-3"
+      ],
+      "equations": [
+        "D.6.3.2"
+      ],
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "sourceAnchor": "symbols-D-6-3-2"
+    },
+    {
+      "id": "emc-local-6-3-3",
+      "title": "V",
+      "symbolHtml": "<span>V</span>",
+      "keys": [
+        "V"
+      ],
+      "description": "接收机电压电平；不是单位伏特这个字母。",
+      "unitHtml": "dBμV",
+      "section": "emc-6-3",
+      "sections": [
+        "emc-6-3"
+      ],
+      "equations": [
+        "D.6.3.2"
+      ],
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "sourceAnchor": "symbols-D-6-3-2"
+    },
+    {
+      "id": "emc-local-6-3-4",
+      "title": "AF",
+      "symbolHtml": "<span>AF</span>",
+      "keys": [
+        "AF"
+      ],
+      "description": "所用天线的校准天线因子。",
+      "unitHtml": "dB/m",
+      "section": "emc-6-3",
+      "sections": [
+        "emc-6-3"
+      ],
+      "equations": [
+        "D.6.3.2"
+      ],
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "sourceAnchor": "symbols-D-6-3-2"
+    },
+    {
+      "id": "emc-local-6-3-5",
+      "title": "L_cable",
+      "symbolHtml": "<span>L<sub>cable</sub></span>",
+      "keys": [
+        "L_cable"
+      ],
+      "description": "同测量链的电缆损耗。",
+      "unitHtml": "dB",
+      "section": "emc-6-3",
+      "sections": [
+        "emc-6-3"
+      ],
+      "equations": [
+        "D.6.3.2"
+      ],
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "sourceAnchor": "symbols-D-6-3-2"
+    },
+    {
+      "id": "emc-local-6-3-6",
+      "title": "G_preamp",
+      "symbolHtml": "<span>G<sub>preamp</sub></span>",
+      "keys": [
+        "G_preamp"
+      ],
+      "description": "同测量链的前放增益。",
+      "unitHtml": "dB",
+      "section": "emc-6-3",
+      "sections": [
+        "emc-6-3"
+      ],
+      "equations": [
+        "D.6.3.2"
+      ],
+      "match": "式中，E为电场强度；本式使用dBμV/m刻度表示（dBμV/m）；V为接收机电压电平；不是单位伏特这个字母（dBμV）；AF为所用天线的校准天线因子（dB/m）；Lcable为同测量链的电缆损耗（dB）；Gpreamp为同测量链的前放增益（dB）。",
+      "sourceAnchor": "symbols-D-6-3-2"
+    },
+    {
+      "id": "emc-local-6-4-0",
+      "title": "B",
+      "symbolHtml": "<span>B</span>",
+      "keys": [
+        "B"
+      ],
+      "description": "n匝圆线圈轴线上磁通密度。",
+      "unitHtml": "T",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.1"
+      ],
+      "match": "式中，B为n匝圆线圈轴线上磁通密度（T）；x为沿线圈轴线距单线圈中心的位置（m）；n为每一只线圈的匝数，不是两只相加（无量纲）；I为线圈电流（A）；r为线圈半径，两线圈间距也取r（m）；μ0为真空磁导率（H/m）。",
+      "sourceAnchor": "symbols-D-6-4-1"
+    },
+    {
+      "id": "emc-local-6-4-1",
+      "title": "x",
+      "symbolHtml": "<span>x</span>",
+      "keys": [
+        "x"
+      ],
+      "description": "沿线圈轴线距单线圈中心的位置。",
+      "unitHtml": "m",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.1"
+      ],
+      "match": "式中，B为n匝圆线圈轴线上磁通密度（T）；x为沿线圈轴线距单线圈中心的位置（m）；n为每一只线圈的匝数，不是两只相加（无量纲）；I为线圈电流（A）；r为线圈半径，两线圈间距也取r（m）；μ0为真空磁导率（H/m）。",
+      "sourceAnchor": "symbols-D-6-4-1"
+    },
+    {
+      "id": "emc-local-6-4-2",
+      "title": "n",
+      "symbolHtml": "<span>n</span>",
+      "keys": [
+        "n"
+      ],
+      "description": "每一只线圈的匝数，不是两只相加。",
+      "unitHtml": "无量纲",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.1",
+        "D.6.4.2"
+      ],
+      "match": "式中，B为n匝圆线圈轴线上磁通密度（T）；x为沿线圈轴线距单线圈中心的位置（m）；n为每一只线圈的匝数，不是两只相加（无量纲）；I为线圈电流（A）；r为线圈半径，两线圈间距也取r（m）；μ0为真空磁导率（H/m）。",
+      "sourceAnchor": "symbols-D-6-4-1"
+    },
+    {
+      "id": "emc-local-6-4-3",
+      "title": "I",
+      "symbolHtml": "<span>I</span>",
+      "keys": [
+        "I"
+      ],
+      "description": "线圈电流。",
+      "unitHtml": "A",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.1",
+        "D.6.4.2"
+      ],
+      "match": "式中，B为n匝圆线圈轴线上磁通密度（T）；x为沿线圈轴线距单线圈中心的位置（m）；n为每一只线圈的匝数，不是两只相加（无量纲）；I为线圈电流（A）；r为线圈半径，两线圈间距也取r（m）；μ0为真空磁导率（H/m）。",
+      "sourceAnchor": "symbols-D-6-4-1"
+    },
+    {
+      "id": "emc-local-6-4-4",
+      "title": "r",
+      "symbolHtml": "<span>r</span>",
+      "keys": [
+        "r"
+      ],
+      "description": "线圈半径，两线圈间距也取r。",
+      "unitHtml": "m",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.1",
+        "D.6.4.2"
+      ],
+      "match": "式中，B为n匝圆线圈轴线上磁通密度（T）；x为沿线圈轴线距单线圈中心的位置（m）；n为每一只线圈的匝数，不是两只相加（无量纲）；I为线圈电流（A）；r为线圈半径，两线圈间距也取r（m）；μ0为真空磁导率（H/m）。",
+      "sourceAnchor": "symbols-D-6-4-1"
+    },
+    {
+      "id": "emc-local-6-4-5",
+      "title": "μ_0",
+      "symbolHtml": "<span>μ<sub>0</sub></span>",
+      "keys": [
+        "μ_0"
+      ],
+      "description": "真空磁导率。",
+      "unitHtml": "H/m",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.1",
+        "D.6.4.2"
+      ],
+      "match": "式中，B为n匝圆线圈轴线上磁通密度（T）；x为沿线圈轴线距单线圈中心的位置（m）；n为每一只线圈的匝数，不是两只相加（无量纲）；I为线圈电流（A）；r为线圈半径，两线圈间距也取r（m）；μ0为真空磁导率（H/m）。",
+      "sourceAnchor": "symbols-D-6-4-1"
+    },
+    {
+      "id": "emc-local-6-4-6",
+      "title": "B_O",
+      "symbolHtml": "<span>B<sub>O</sub></span>",
+      "keys": [
+        "B_O"
+      ],
+      "description": "亥姆霍兹线圈对中心O处磁通密度。",
+      "unitHtml": "T",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.2"
+      ],
+      "match": "式中，BO为亥姆霍兹线圈对中心O处磁通密度（T）。",
+      "sourceAnchor": "symbols-D-6-4-2"
+    },
+    {
+      "id": "emc-local-6-4-7",
+      "title": "H_0",
+      "symbolHtml": "<span>H<sub>0</sub></span>",
+      "keys": [
+        "H_0"
+      ],
+      "description": "同一发射配置下未加屏蔽壁的参考磁场幅值。",
+      "unitHtml": "A/m",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.3"
+      ],
+      "match": "式中，H0为同一发射配置下未加屏蔽壁的参考磁场幅值（A/m）；H1为加入屏蔽壁后相同接收位置的磁场幅值（A/m）；SEH为磁场幅值屏蔽效能（dB）。",
+      "sourceAnchor": "symbols-D-6-4-3"
+    },
+    {
+      "id": "emc-local-6-4-8",
+      "title": "H_1",
+      "symbolHtml": "<span>H<sub>1</sub></span>",
+      "keys": [
+        "H_1"
+      ],
+      "description": "加入屏蔽壁后相同接收位置的磁场幅值。",
+      "unitHtml": "A/m",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.3"
+      ],
+      "match": "式中，H0为同一发射配置下未加屏蔽壁的参考磁场幅值（A/m）；H1为加入屏蔽壁后相同接收位置的磁场幅值（A/m）；SEH为磁场幅值屏蔽效能（dB）。",
+      "sourceAnchor": "symbols-D-6-4-3"
+    },
+    {
+      "id": "emc-local-6-4-9",
+      "title": "SE_H",
+      "symbolHtml": "<span>SE<sub>H</sub></span>",
+      "keys": [
+        "SE_H"
+      ],
+      "description": "磁场幅值屏蔽效能。",
+      "unitHtml": "dB",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.3"
+      ],
+      "match": "式中，H0为同一发射配置下未加屏蔽壁的参考磁场幅值（A/m）；H1为加入屏蔽壁后相同接收位置的磁场幅值（A/m）；SEH为磁场幅值屏蔽效能（dB）。",
+      "sourceAnchor": "symbols-D-6-4-3"
+    },
+    {
+      "id": "emc-local-6-4-10",
+      "title": "bar:S",
+      "symbolHtml": "<span>平均 S</span>",
+      "keys": [
+        "bar:S"
+      ],
+      "description": "自由空间均匀平面波的平均功率流密度。",
+      "unitHtml": "W/m²",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.4"
+      ],
+      "match": "式中，平均 S为自由空间均匀平面波的平均功率流密度（W/m²）；Erms为该平面波电场有效值（V/m）；η0为自由空间平面波本征阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-6-4-4"
+    },
+    {
+      "id": "emc-local-6-4-11",
+      "title": "E_rms",
+      "symbolHtml": "<span>E<sub>rms</sub></span>",
+      "keys": [
+        "E_rms"
+      ],
+      "description": "该平面波电场有效值。",
+      "unitHtml": "V/m",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.4"
+      ],
+      "match": "式中，平均 S为自由空间均匀平面波的平均功率流密度（W/m²）；Erms为该平面波电场有效值（V/m）；η0为自由空间平面波本征阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-6-4-4"
+    },
+    {
+      "id": "emc-local-6-4-12",
+      "title": "η_0",
+      "symbolHtml": "<span>η<sub>0</sub></span>",
+      "keys": [
+        "η_0"
+      ],
+      "description": "自由空间平面波本征阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-6-4",
+      "sections": [
+        "emc-6-4"
+      ],
+      "equations": [
+        "D.6.4.4"
+      ],
+      "match": "式中，平均 S为自由空间均匀平面波的平均功率流密度（W/m²）；Erms为该平面波电场有效值（V/m）；η0为自由空间平面波本征阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-6-4-4"
+    },
+    {
+      "id": "emc-local-7-1-0",
+      "title": "Q",
+      "symbolHtml": "<span>Q</span>",
+      "keys": [
+        "Q"
+      ],
+      "description": "孤立导体所带电荷。",
+      "unitHtml": "C",
+      "section": "emc-7-1",
+      "sections": [
+        "emc-7-1"
+      ],
+      "equations": [
+        "D.7.1.1"
+      ],
+      "match": "式中，Q为孤立导体所带电荷（C）；C为导体对环境电容（F）；U为该电容的电位差（V）；EC为理想静电储能（J）。",
+      "sourceAnchor": "symbols-D-7-1-1"
+    },
+    {
+      "id": "emc-local-7-1-1",
+      "title": "C",
+      "symbolHtml": "<span>C</span>",
+      "keys": [
+        "C"
+      ],
+      "description": "导体对环境电容。",
+      "unitHtml": "F",
+      "section": "emc-7-1",
+      "sections": [
+        "emc-7-1"
+      ],
+      "equations": [
+        "D.7.1.1"
+      ],
+      "match": "式中，Q为孤立导体所带电荷（C）；C为导体对环境电容（F）；U为该电容的电位差（V）；EC为理想静电储能（J）。",
+      "sourceAnchor": "symbols-D-7-1-1"
+    },
+    {
+      "id": "emc-local-7-1-2",
+      "title": "U",
+      "symbolHtml": "<span>U</span>",
+      "keys": [
+        "U"
+      ],
+      "description": "该电容的电位差。",
+      "unitHtml": "V",
+      "section": "emc-7-1",
+      "sections": [
+        "emc-7-1"
+      ],
+      "equations": [
+        "D.7.1.1"
+      ],
+      "match": "式中，Q为孤立导体所带电荷（C）；C为导体对环境电容（F）；U为该电容的电位差（V）；EC为理想静电储能（J）。",
+      "sourceAnchor": "symbols-D-7-1-1"
+    },
+    {
+      "id": "emc-local-7-1-3",
+      "title": "E_C",
+      "symbolHtml": "<span>E<sub>C</sub></span>",
+      "keys": [
+        "E_C"
+      ],
+      "description": "理想静电储能。",
+      "unitHtml": "J",
+      "section": "emc-7-1",
+      "sections": [
+        "emc-7-1"
+      ],
+      "equations": [
+        "D.7.1.1"
+      ],
+      "match": "式中，Q为孤立导体所带电荷（C）；C为导体对环境电容（F）；U为该电容的电位差（V）；EC为理想静电储能（J）。",
+      "sourceAnchor": "symbols-D-7-1-1"
+    },
+    {
+      "id": "emc-local-7-2-0",
+      "title": "i",
+      "symbolHtml": "<span>i</span>",
+      "keys": [
+        "i"
+      ],
+      "description": "一阶RC模型中的放电电流。",
+      "unitHtml": "A",
+      "section": "emc-7-2",
+      "sections": [
+        "emc-7-2"
+      ],
+      "equations": [
+        "D.7.2.1",
+        "D.7.2.2"
+      ],
+      "match": "式中，i为一阶RC模型中的放电电流（A）；t为从接通放电回路起计的时间（s）；V0为第一种写法的初始电容电压（V）；R为理想放电回路电阻（Ω）；C为模型电容（F）。",
+      "sourceAnchor": "symbols-D-7-2-1"
+    },
+    {
+      "id": "emc-local-7-2-1",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "从接通放电回路起计的时间。",
+      "unitHtml": "s",
+      "section": "emc-7-2",
+      "sections": [
+        "emc-7-2"
+      ],
+      "equations": [
+        "D.7.2.1",
+        "D.7.2.2"
+      ],
+      "match": "式中，i为一阶RC模型中的放电电流（A）；t为从接通放电回路起计的时间（s）；V0为第一种写法的初始电容电压（V）；R为理想放电回路电阻（Ω）；C为模型电容（F）。",
+      "sourceAnchor": "symbols-D-7-2-1"
+    },
+    {
+      "id": "emc-local-7-2-2",
+      "title": "V_0",
+      "symbolHtml": "<span>V<sub>0</sub></span>",
+      "keys": [
+        "V_0"
+      ],
+      "description": "第一种写法的初始电容电压。",
+      "unitHtml": "V",
+      "section": "emc-7-2",
+      "sections": [
+        "emc-7-2"
+      ],
+      "equations": [
+        "D.7.2.1"
+      ],
+      "match": "式中，i为一阶RC模型中的放电电流（A）；t为从接通放电回路起计的时间（s）；V0为第一种写法的初始电容电压（V）；R为理想放电回路电阻（Ω）；C为模型电容（F）。",
+      "sourceAnchor": "symbols-D-7-2-1"
+    },
+    {
+      "id": "emc-local-7-2-4",
+      "title": "R",
+      "symbolHtml": "<span>R</span>",
+      "keys": [
+        "R"
+      ],
+      "description": "理想放电回路电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-7-2",
+      "sections": [
+        "emc-7-2"
+      ],
+      "equations": [
+        "D.7.2.1",
+        "D.7.2.2"
+      ],
+      "match": "式中，i为一阶RC模型中的放电电流（A）；t为从接通放电回路起计的时间（s）；V0为第一种写法的初始电容电压（V）；R为理想放电回路电阻（Ω）；C为模型电容（F）。",
+      "sourceAnchor": "symbols-D-7-2-1"
+    },
+    {
+      "id": "emc-local-7-2-5",
+      "title": "C",
+      "symbolHtml": "<span>C</span>",
+      "keys": [
+        "C"
+      ],
+      "description": "模型电容。",
+      "unitHtml": "F",
+      "section": "emc-7-2",
+      "sections": [
+        "emc-7-2"
+      ],
+      "equations": [
+        "D.7.2.1",
+        "D.7.2.2"
+      ],
+      "match": "式中，i为一阶RC模型中的放电电流（A）；t为从接通放电回路起计的时间（s）；V0为第一种写法的初始电容电压（V）；R为理想放电回路电阻（Ω）；C为模型电容（F）。",
+      "sourceAnchor": "symbols-D-7-2-1"
+    },
+    {
+      "id": "emc-local-7-2-3",
+      "title": "U_0",
+      "symbolHtml": "<span>U<sub>0</sub></span>",
+      "keys": [
+        "U_0"
+      ],
+      "description": "第二种写法的初始电容电压。",
+      "unitHtml": "V",
+      "section": "emc-7-2",
+      "sections": [
+        "emc-7-2"
+      ],
+      "equations": [
+        "D.7.2.2"
+      ],
+      "match": "式中，U0为第二种写法的初始电容电压（V）；uC为放电过程电容端电压（V）。",
+      "sourceAnchor": "symbols-D-7-2-2"
+    },
+    {
+      "id": "emc-local-7-2-6",
+      "title": "u_C",
+      "symbolHtml": "<span>u<sub>C</sub></span>",
+      "keys": [
+        "u_C"
+      ],
+      "description": "放电过程电容端电压。",
+      "unitHtml": "V",
+      "section": "emc-7-2",
+      "sections": [
+        "emc-7-2"
+      ],
+      "equations": [
+        "D.7.2.2"
+      ],
+      "match": "式中，U0为第二种写法的初始电容电压（V）；uC为放电过程电容端电压（V）。",
+      "sourceAnchor": "symbols-D-7-2-2"
+    },
+    {
+      "id": "emc-local-7-3-0",
+      "title": "E_oxide",
+      "symbolHtml": "<span>E<sub>oxide</sub></span>",
+      "keys": [
+        "E_oxide"
+      ],
+      "description": "简化平面氧化层中的平均电场。",
+      "unitHtml": "V/m",
+      "section": "emc-7-3",
+      "sections": [
+        "emc-7-3"
+      ],
+      "equations": [
+        "D.7.3.1"
+      ],
+      "match": "式中，Eoxide为简化平面氧化层中的平均电场（V/m）；Voxide为真正分配到氧化层两端的电压（V）；doxide为氧化层等效厚度（m）。",
+      "sourceAnchor": "symbols-D-7-3-1"
+    },
+    {
+      "id": "emc-local-7-3-1",
+      "title": "V_oxide",
+      "symbolHtml": "<span>V<sub>oxide</sub></span>",
+      "keys": [
+        "V_oxide"
+      ],
+      "description": "真正分配到氧化层两端的电压。",
+      "unitHtml": "V",
+      "section": "emc-7-3",
+      "sections": [
+        "emc-7-3"
+      ],
+      "equations": [
+        "D.7.3.1"
+      ],
+      "match": "式中，Eoxide为简化平面氧化层中的平均电场（V/m）；Voxide为真正分配到氧化层两端的电压（V）；doxide为氧化层等效厚度（m）。",
+      "sourceAnchor": "symbols-D-7-3-1"
+    },
+    {
+      "id": "emc-local-7-3-2",
+      "title": "d_oxide",
+      "symbolHtml": "<span>d<sub>oxide</sub></span>",
+      "keys": [
+        "d_oxide"
+      ],
+      "description": "氧化层等效厚度。",
+      "unitHtml": "m",
+      "section": "emc-7-3",
+      "sections": [
+        "emc-7-3"
+      ],
+      "equations": [
+        "D.7.3.1"
+      ],
+      "match": "式中，Eoxide为简化平面氧化层中的平均电场（V/m）；Voxide为真正分配到氧化层两端的电压（V）；doxide为氧化层等效厚度（m）。",
+      "sourceAnchor": "symbols-D-7-3-1"
+    },
+    {
+      "id": "emc-local-7-4-0",
+      "title": "delta:u_L",
+      "symbolHtml": "<span>Δu<sub>L</sub></span>",
+      "keys": [
+        "delta:u_L"
+      ],
+      "description": "回路寄生电感引起的附加电压。",
+      "unitHtml": "V",
+      "section": "emc-7-4",
+      "sections": [
+        "emc-7-4"
+      ],
+      "equations": [
+        "D.7.4.1"
+      ],
+      "match": "式中，ΔuL为回路寄生电感引起的附加电压（V）；Lpath为所选放电回流路径的等效电感（H）；i为流过该路径的瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-7-4-1"
+    },
+    {
+      "id": "emc-local-7-4-1",
+      "title": "L_path",
+      "symbolHtml": "<span>L<sub>path</sub></span>",
+      "keys": [
+        "L_path"
+      ],
+      "description": "所选放电回流路径的等效电感。",
+      "unitHtml": "H",
+      "section": "emc-7-4",
+      "sections": [
+        "emc-7-4"
+      ],
+      "equations": [
+        "D.7.4.1"
+      ],
+      "match": "式中，ΔuL为回路寄生电感引起的附加电压（V）；Lpath为所选放电回流路径的等效电感（H）；i为流过该路径的瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-7-4-1"
+    },
+    {
+      "id": "emc-local-7-4-2",
+      "title": "i",
+      "symbolHtml": "<span>i</span>",
+      "keys": [
+        "i"
+      ],
+      "description": "流过该路径的瞬态电流。",
+      "unitHtml": "A",
+      "section": "emc-7-4",
+      "sections": [
+        "emc-7-4"
+      ],
+      "equations": [
+        "D.7.4.1"
+      ],
+      "match": "式中，ΔuL为回路寄生电感引起的附加电压（V）；Lpath为所选放电回流路径的等效电感（H）；i为流过该路径的瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-7-4-1"
+    },
+    {
+      "id": "emc-local-7-4-3",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-7-4",
+      "sections": [
+        "emc-7-4"
+      ],
+      "equations": [
+        "D.7.4.1"
+      ],
+      "match": "式中，ΔuL为回路寄生电感引起的附加电压（V）；Lpath为所选放电回流路径的等效电感（H）；i为流过该路径的瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-7-4-1"
+    },
+    {
+      "id": "emc-local-8-1-0",
+      "title": "Z_R",
+      "symbolHtml": "<span>Z<sub>R</sub></span>",
+      "keys": [
+        "Z_R"
+      ],
+      "description": "含引线电感与端间电容的实际电阻端口阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.1"
+      ],
+      "match": "式中，ZR为含引线电感与端间电容的实际电阻端口阻抗（Ω）；Lp为实际电阻引线/结构的寄生电感（H）；Cp为相应器件的并联寄生电容，须随模型区分（F）；R为实际电阻模型中的理想电阻值（Ω）。",
+      "sourceAnchor": "symbols-D-8-1-1"
+    },
+    {
+      "id": "emc-local-8-1-1",
+      "title": "L_p",
+      "symbolHtml": "<span>L<sub>p</sub></span>",
+      "keys": [
+        "L_p"
+      ],
+      "description": "实际电阻引线/结构的寄生电感。",
+      "unitHtml": "H",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.1"
+      ],
+      "match": "式中，ZR为含引线电感与端间电容的实际电阻端口阻抗（Ω）；Lp为实际电阻引线/结构的寄生电感（H）；Cp为相应器件的并联寄生电容，须随模型区分（F）；R为实际电阻模型中的理想电阻值（Ω）。",
+      "sourceAnchor": "symbols-D-8-1-1"
+    },
+    {
+      "id": "emc-local-8-1-2",
+      "title": "C_p",
+      "symbolHtml": "<span>C<sub>p</sub></span>",
+      "keys": [
+        "C_p"
+      ],
+      "description": "相应器件的并联寄生电容，须随模型区分。",
+      "unitHtml": "F",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.1",
+        "D.8.1.4"
+      ],
+      "match": "式中，ZR为含引线电感与端间电容的实际电阻端口阻抗（Ω）；Lp为实际电阻引线/结构的寄生电感（H）；Cp为相应器件的并联寄生电容，须随模型区分（F）；R为实际电阻模型中的理想电阻值（Ω）。",
+      "sourceAnchor": "symbols-D-8-1-1"
+    },
+    {
+      "id": "emc-local-8-1-14",
+      "title": "R",
+      "symbolHtml": "<span>R</span>",
+      "keys": [
+        "R"
+      ],
+      "description": "实际电阻模型中的理想电阻值。",
+      "unitHtml": "Ω",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.1"
+      ],
+      "match": "式中，ZR为含引线电感与端间电容的实际电阻端口阻抗（Ω）；Lp为实际电阻引线/结构的寄生电感（H）；Cp为相应器件的并联寄生电容，须随模型区分（F）；R为实际电阻模型中的理想电阻值（Ω）。",
+      "sourceAnchor": "symbols-D-8-1-1"
+    },
+    {
+      "id": "emc-local-8-1-3",
+      "title": "Z_C",
+      "symbolHtml": "<span>Z<sub>C</sub></span>",
+      "keys": [
+        "Z_C"
+      ],
+      "description": "电容ESR/ESL/C简化串联模型端口阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.2"
+      ],
+      "match": "式中，ZC为电容ESR/ESL/C简化串联模型端口阻抗（Ω）。",
+      "sourceAnchor": "symbols-D-8-1-2"
+    },
+    {
+      "id": "emc-local-8-1-4",
+      "title": "Z_L",
+      "symbolHtml": "<span>Z<sub>L</sub></span>",
+      "keys": [
+        "Z_L"
+      ],
+      "description": "含串联损耗和并联寄生电容的电感端口阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.4"
+      ],
+      "match": "式中，ZL为含串联损耗和并联寄生电容的电感端口阻抗（Ω）；L为实际电感的理想自感（H）；R为实际电感模型的串联损耗电阻（Ω）。",
+      "sourceAnchor": "symbols-D-8-1-4"
+    },
+    {
+      "id": "emc-local-8-1-5",
+      "title": "L",
+      "symbolHtml": "<span>L</span>",
+      "keys": [
+        "L"
+      ],
+      "description": "实际电感的理想自感。",
+      "unitHtml": "H",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.4"
+      ],
+      "match": "式中，ZL为含串联损耗和并联寄生电容的电感端口阻抗（Ω）；L为实际电感的理想自感（H）；R为实际电感模型的串联损耗电阻（Ω）。",
+      "sourceAnchor": "symbols-D-8-1-4"
+    },
+    {
+      "id": "emc-local-8-1-15",
+      "title": "R",
+      "symbolHtml": "<span>R</span>",
+      "keys": [
+        "R"
+      ],
+      "description": "实际电感模型的串联损耗电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.4"
+      ],
+      "match": "式中，ZL为含串联损耗和并联寄生电容的电感端口阻抗（Ω）；L为实际电感的理想自感（H）；R为实际电感模型的串联损耗电阻（Ω）。",
+      "sourceAnchor": "symbols-D-8-1-4"
+    },
+    {
+      "id": "emc-local-8-1-6",
+      "title": "f_0",
+      "symbolHtml": "<span>f<sub>0</sub></span>",
+      "keys": [
+        "f_0"
+      ],
+      "description": "ESL/C或相应器件简化模型的自谐振频率。",
+      "unitHtml": "Hz",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.3"
+      ],
+      "match": "式中，f0为ESL/C或相应器件简化模型的自谐振频率（Hz）。",
+      "sourceAnchor": "symbols-D-8-1-3"
+    },
+    {
+      "id": "emc-local-8-1-7",
+      "title": "i_j",
+      "symbolHtml": "<span>i<sub>j</sub></span>",
+      "keys": [
+        "i_j"
+      ],
+      "description": "TVS结电容的小信号位移电流，不是箝位导通电流。",
+      "unitHtml": "A",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.5"
+      ],
+      "match": "式中，ij为TVS结电容的小信号位移电流，不是箝位导通电流（A）；Cj为工作点的小信号结电容（F）；v为该结电容两端的电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-8-1-5"
+    },
+    {
+      "id": "emc-local-8-1-8",
+      "title": "C_j",
+      "symbolHtml": "<span>C<sub>j</sub></span>",
+      "keys": [
+        "C_j"
+      ],
+      "description": "工作点的小信号结电容。",
+      "unitHtml": "F",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.5"
+      ],
+      "match": "式中，ij为TVS结电容的小信号位移电流，不是箝位导通电流（A）；Cj为工作点的小信号结电容（F）；v为该结电容两端的电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-8-1-5"
+    },
+    {
+      "id": "emc-local-8-1-9",
+      "title": "v",
+      "symbolHtml": "<span>v</span>",
+      "keys": [
+        "v"
+      ],
+      "description": "该结电容两端的电压。",
+      "unitHtml": "V",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.5"
+      ],
+      "match": "式中，ij为TVS结电容的小信号位移电流，不是箝位导通电流（A）；Cj为工作点的小信号结电容（F）；v为该结电容两端的电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-8-1-5"
+    },
+    {
+      "id": "emc-local-8-1-10",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.5",
+        "D.8.1.6"
+      ],
+      "match": "式中，ij为TVS结电容的小信号位移电流，不是箝位导通电流（A）；Cj为工作点的小信号结电容（F）；v为该结电容两端的电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-8-1-5"
+    },
+    {
+      "id": "emc-local-8-1-11",
+      "title": "u_L",
+      "symbolHtml": "<span>u<sub>L</sub></span>",
+      "keys": [
+        "u_L"
+      ],
+      "description": "供电/回流路径寄生电感电压。",
+      "unitHtml": "V",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.6"
+      ],
+      "match": "式中，uL为供电/回流路径寄生电感电压（V）；Lpath为该路径等效寄生电感（H）；i为流经该路径电流（A）。",
+      "sourceAnchor": "symbols-D-8-1-6"
+    },
+    {
+      "id": "emc-local-8-1-12",
+      "title": "L_path",
+      "symbolHtml": "<span>L<sub>path</sub></span>",
+      "keys": [
+        "L_path"
+      ],
+      "description": "该路径等效寄生电感。",
+      "unitHtml": "H",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.6"
+      ],
+      "match": "式中，uL为供电/回流路径寄生电感电压（V）；Lpath为该路径等效寄生电感（H）；i为流经该路径电流（A）。",
+      "sourceAnchor": "symbols-D-8-1-6"
+    },
+    {
+      "id": "emc-local-8-1-13",
+      "title": "i",
+      "symbolHtml": "<span>i</span>",
+      "keys": [
+        "i"
+      ],
+      "description": "流经该路径电流。",
+      "unitHtml": "A",
+      "section": "emc-8-1",
+      "sections": [
+        "emc-8-1"
+      ],
+      "equations": [
+        "D.8.1.6"
+      ],
+      "match": "式中，uL为供电/回流路径寄生电感电压（V）；Lpath为该路径等效寄生电感（H）；i为流经该路径电流（A）。",
+      "sourceAnchor": "symbols-D-8-1-6"
+    },
+    {
+      "id": "emc-local-8-2-0",
+      "title": "L'",
+      "symbolHtml": "<span>L&#x27;</span>",
+      "keys": [
+        "L'"
+      ],
+      "description": "均匀无损线单位长度串联电感。",
+      "unitHtml": "H/m",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.1"
+      ],
+      "match": "式中，L'为均匀无损线单位长度串联电感（H/m）；C'为均匀无损线单位长度并联电容（F/m）；v为沿线行波传播速度，不是电压（m/s）；ℓ为传输线长度（m）。",
+      "sourceAnchor": "symbols-D-8-2-1"
+    },
+    {
+      "id": "emc-local-8-2-1",
+      "title": "C'",
+      "symbolHtml": "<span>C&#x27;</span>",
+      "keys": [
+        "C'"
+      ],
+      "description": "均匀无损线单位长度并联电容。",
+      "unitHtml": "F/m",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.1"
+      ],
+      "match": "式中，L'为均匀无损线单位长度串联电感（H/m）；C'为均匀无损线单位长度并联电容（F/m）；v为沿线行波传播速度，不是电压（m/s）；ℓ为传输线长度（m）。",
+      "sourceAnchor": "symbols-D-8-2-1"
+    },
+    {
+      "id": "emc-local-8-2-2",
+      "title": "v",
+      "symbolHtml": "<span>v</span>",
+      "keys": [
+        "v"
+      ],
+      "description": "沿线行波传播速度，不是电压。",
+      "unitHtml": "m/s",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.1"
+      ],
+      "match": "式中，L'为均匀无损线单位长度串联电感（H/m）；C'为均匀无损线单位长度并联电容（F/m）；v为沿线行波传播速度，不是电压（m/s）；ℓ为传输线长度（m）。",
+      "sourceAnchor": "symbols-D-8-2-1"
+    },
+    {
+      "id": "emc-local-8-2-3",
+      "title": "ℓ",
+      "symbolHtml": "<span>ℓ</span>",
+      "keys": [
+        "ℓ"
+      ],
+      "description": "传输线长度。",
+      "unitHtml": "m",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.1"
+      ],
+      "match": "式中，L'为均匀无损线单位长度串联电感（H/m）；C'为均匀无损线单位长度并联电容（F/m）；v为沿线行波传播速度，不是电压（m/s）；ℓ为传输线长度（m）。",
+      "sourceAnchor": "symbols-D-8-2-1"
+    },
+    {
+      "id": "emc-local-8-2-4",
+      "title": "Z_L",
+      "symbolHtml": "<span>Z<sub>L</sub></span>",
+      "keys": [
+        "Z_L"
+      ],
+      "description": "终端负载阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.2"
+      ],
+      "match": "式中，ZL为终端负载阻抗（Ω）；VL,first为第一束入射波到达时负载端总电压（V）；V+为朝负载传播的入射电压行波（V）；V-为反向传播的反射电压行波（V）。",
+      "sourceAnchor": "symbols-D-8-2-2"
+    },
+    {
+      "id": "emc-local-8-2-5",
+      "title": "V_L,first",
+      "symbolHtml": "<span>V<sub>L,first</sub></span>",
+      "keys": [
+        "V_L,first"
+      ],
+      "description": "第一束入射波到达时负载端总电压。",
+      "unitHtml": "V",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.2"
+      ],
+      "match": "式中，ZL为终端负载阻抗（Ω）；VL,first为第一束入射波到达时负载端总电压（V）；V+为朝负载传播的入射电压行波（V）；V-为反向传播的反射电压行波（V）。",
+      "sourceAnchor": "symbols-D-8-2-2"
+    },
+    {
+      "id": "emc-local-8-2-6",
+      "title": "V^+",
+      "symbolHtml": "<span>V<sup>+</sup></span>",
+      "keys": [
+        "V^+"
+      ],
+      "description": "朝负载传播的入射电压行波。",
+      "unitHtml": "V",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.2",
+        "D.8.2.3"
+      ],
+      "match": "式中，ZL为终端负载阻抗（Ω）；VL,first为第一束入射波到达时负载端总电压（V）；V+为朝负载传播的入射电压行波（V）；V-为反向传播的反射电压行波（V）。",
+      "sourceAnchor": "symbols-D-8-2-2"
+    },
+    {
+      "id": "emc-local-8-2-7",
+      "title": "V^-",
+      "symbolHtml": "<span>V<sup>-</sup></span>",
+      "keys": [
+        "V^-"
+      ],
+      "description": "反向传播的反射电压行波。",
+      "unitHtml": "V",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.2"
+      ],
+      "match": "式中，ZL为终端负载阻抗（Ω）；VL,first为第一束入射波到达时负载端总电压（V）；V+为朝负载传播的入射电压行波（V）；V-为反向传播的反射电压行波（V）。",
+      "sourceAnchor": "symbols-D-8-2-2"
+    },
+    {
+      "id": "emc-local-8-2-8",
+      "title": "V_s",
+      "symbolHtml": "<span>V<sub>s</sub></span>",
+      "keys": [
+        "V_s"
+      ],
+      "description": "驱动源阶跃电压。",
+      "unitHtml": "V",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.3"
+      ],
+      "match": "式中，Vs为驱动源阶跃电压（V）；Zs为驱动源内部等效阻抗（Ω）；Rs为可选源端串联端接电阻（Ω）。",
+      "sourceAnchor": "symbols-D-8-2-3"
+    },
+    {
+      "id": "emc-local-8-2-9",
+      "title": "Z_s",
+      "symbolHtml": "<span>Z<sub>s</sub></span>",
+      "keys": [
+        "Z_s"
+      ],
+      "description": "驱动源内部等效阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.3"
+      ],
+      "match": "式中，Vs为驱动源阶跃电压（V）；Zs为驱动源内部等效阻抗（Ω）；Rs为可选源端串联端接电阻（Ω）。",
+      "sourceAnchor": "symbols-D-8-2-3"
+    },
+    {
+      "id": "emc-local-8-2-10",
+      "title": "R_s",
+      "symbolHtml": "<span>R<sub>s</sub></span>",
+      "keys": [
+        "R_s"
+      ],
+      "description": "可选源端串联端接电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-8-2",
+      "sections": [
+        "emc-8-2"
+      ],
+      "equations": [
+        "D.8.2.3"
+      ],
+      "match": "式中，Vs为驱动源阶跃电压（V）；Zs为驱动源内部等效阻抗（Ω）；Rs为可选源端串联端接电阻（Ω）。",
+      "sourceAnchor": "symbols-D-8-2-3"
+    },
+    {
+      "id": "emc-local-8-3-0",
+      "title": "i_xtalk",
+      "symbolHtml": "<span>i<sub>xtalk</sub></span>",
+      "keys": [
+        "i_xtalk"
+      ],
+      "description": "由互电容注入受扰线的串扰电流。",
+      "unitHtml": "A",
+      "section": "emc-8-3",
+      "sections": [
+        "emc-8-3"
+      ],
+      "equations": [
+        "D.8.3.1"
+      ],
+      "match": "式中，ixtalk为由互电容注入受扰线的串扰电流（A）；Cm为两线总等效互电容（F）；vattack为攻击线电压（V）；vvictim为受扰线电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-8-3-1"
+    },
+    {
+      "id": "emc-local-8-3-1",
+      "title": "C_m",
+      "symbolHtml": "<span>C<sub>m</sub></span>",
+      "keys": [
+        "C_m"
+      ],
+      "description": "两线总等效互电容。",
+      "unitHtml": "F",
+      "section": "emc-8-3",
+      "sections": [
+        "emc-8-3"
+      ],
+      "equations": [
+        "D.8.3.1"
+      ],
+      "match": "式中，ixtalk为由互电容注入受扰线的串扰电流（A）；Cm为两线总等效互电容（F）；vattack为攻击线电压（V）；vvictim为受扰线电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-8-3-1"
+    },
+    {
+      "id": "emc-local-8-3-2",
+      "title": "v_attack",
+      "symbolHtml": "<span>v<sub>attack</sub></span>",
+      "keys": [
+        "v_attack"
+      ],
+      "description": "攻击线电压。",
+      "unitHtml": "V",
+      "section": "emc-8-3",
+      "sections": [
+        "emc-8-3"
+      ],
+      "equations": [
+        "D.8.3.1"
+      ],
+      "match": "式中，ixtalk为由互电容注入受扰线的串扰电流（A）；Cm为两线总等效互电容（F）；vattack为攻击线电压（V）；vvictim为受扰线电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-8-3-1"
+    },
+    {
+      "id": "emc-local-8-3-3",
+      "title": "v_victim",
+      "symbolHtml": "<span>v<sub>victim</sub></span>",
+      "keys": [
+        "v_victim"
+      ],
+      "description": "受扰线电压。",
+      "unitHtml": "V",
+      "section": "emc-8-3",
+      "sections": [
+        "emc-8-3"
+      ],
+      "equations": [
+        "D.8.3.1"
+      ],
+      "match": "式中，ixtalk为由互电容注入受扰线的串扰电流（A）；Cm为两线总等效互电容（F）；vattack为攻击线电压（V）；vvictim为受扰线电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-8-3-1"
+    },
+    {
+      "id": "emc-local-8-3-4",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-8-3",
+      "sections": [
+        "emc-8-3"
+      ],
+      "equations": [
+        "D.8.3.1"
+      ],
+      "match": "式中，ixtalk为由互电容注入受扰线的串扰电流（A）；Cm为两线总等效互电容（F）；vattack为攻击线电压（V）；vvictim为受扰线电压（V）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-8-3-1"
+    },
+    {
+      "id": "emc-local-9-1-0",
+      "title": "u_ind",
+      "symbolHtml": "<span>u<sub>ind</sub></span>",
+      "keys": [
+        "u_ind"
+      ],
+      "description": "所选二次回路方向的开路感应电压。",
+      "unitHtml": "V",
+      "section": "emc-9-1",
+      "sections": [
+        "emc-9-1"
+      ],
+      "equations": [
+        "D.9.1.1"
+      ],
+      "match": "式中，uind为所选二次回路方向的开路感应电压（V）；M为雷电流回路与二次回路等效互感（H）；ilightning为雷电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-1-1"
+    },
+    {
+      "id": "emc-local-9-1-1",
+      "title": "M",
+      "symbolHtml": "<span>M</span>",
+      "keys": [
+        "M"
+      ],
+      "description": "雷电流回路与二次回路等效互感。",
+      "unitHtml": "H",
+      "section": "emc-9-1",
+      "sections": [
+        "emc-9-1"
+      ],
+      "equations": [
+        "D.9.1.1"
+      ],
+      "match": "式中，uind为所选二次回路方向的开路感应电压（V）；M为雷电流回路与二次回路等效互感（H）；ilightning为雷电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-1-1"
+    },
+    {
+      "id": "emc-local-9-1-2",
+      "title": "i_lightning",
+      "symbolHtml": "<span>i<sub>lightning</sub></span>",
+      "keys": [
+        "i_lightning"
+      ],
+      "description": "雷电流。",
+      "unitHtml": "A",
+      "section": "emc-9-1",
+      "sections": [
+        "emc-9-1"
+      ],
+      "equations": [
+        "D.9.1.1"
+      ],
+      "match": "式中，uind为所选二次回路方向的开路感应电压（V）；M为雷电流回路与二次回路等效互感（H）；ilightning为雷电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-1-1"
+    },
+    {
+      "id": "emc-local-9-1-3",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-9-1",
+      "sections": [
+        "emc-9-1"
+      ],
+      "equations": [
+        "D.9.1.1"
+      ],
+      "match": "式中，uind为所选二次回路方向的开路感应电压（V）；M为雷电流回路与二次回路等效互感（H）；ilightning为雷电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-1-1"
+    },
+    {
+      "id": "emc-local-9-2-0",
+      "title": "u_down",
+      "symbolHtml": "<span>u<sub>down</sub></span>",
+      "keys": [
+        "u_down"
+      ],
+      "description": "引下线两端瞬态电压。",
+      "unitHtml": "V",
+      "section": "emc-9-2",
+      "sections": [
+        "emc-9-2"
+      ],
+      "equations": [
+        "D.9.2.1"
+      ],
+      "match": "式中，udown为引下线两端瞬态电压（V）；R为引下线等效串联电阻（Ω）；L为引下线等效电感（H）；i为流经引下线的雷电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-2-1"
+    },
+    {
+      "id": "emc-local-9-2-1",
+      "title": "R",
+      "symbolHtml": "<span>R</span>",
+      "keys": [
+        "R"
+      ],
+      "description": "引下线等效串联电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-9-2",
+      "sections": [
+        "emc-9-2"
+      ],
+      "equations": [
+        "D.9.2.1"
+      ],
+      "match": "式中，udown为引下线两端瞬态电压（V）；R为引下线等效串联电阻（Ω）；L为引下线等效电感（H）；i为流经引下线的雷电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-2-1"
+    },
+    {
+      "id": "emc-local-9-2-2",
+      "title": "L",
+      "symbolHtml": "<span>L</span>",
+      "keys": [
+        "L"
+      ],
+      "description": "引下线等效电感。",
+      "unitHtml": "H",
+      "section": "emc-9-2",
+      "sections": [
+        "emc-9-2"
+      ],
+      "equations": [
+        "D.9.2.1"
+      ],
+      "match": "式中，udown为引下线两端瞬态电压（V）；R为引下线等效串联电阻（Ω）；L为引下线等效电感（H）；i为流经引下线的雷电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-2-1"
+    },
+    {
+      "id": "emc-local-9-2-3",
+      "title": "i",
+      "symbolHtml": "<span>i</span>",
+      "keys": [
+        "i"
+      ],
+      "description": "流经引下线的雷电流。",
+      "unitHtml": "A",
+      "section": "emc-9-2",
+      "sections": [
+        "emc-9-2"
+      ],
+      "equations": [
+        "D.9.2.1",
+        "D.9.2.2"
+      ],
+      "match": "式中，udown为引下线两端瞬态电压（V）；R为引下线等效串联电阻（Ω）；L为引下线等效电感（H）；i为流经引下线的雷电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-2-1"
+    },
+    {
+      "id": "emc-local-9-2-4",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-9-2",
+      "sections": [
+        "emc-9-2"
+      ],
+      "equations": [
+        "D.9.2.1",
+        "D.9.2.2"
+      ],
+      "match": "式中，udown为引下线两端瞬态电压（V）；R为引下线等效串联电阻（Ω）；L为引下线等效电感（H）；i为流经引下线的雷电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-2-1"
+    },
+    {
+      "id": "emc-local-9-2-5",
+      "title": "u_terminal",
+      "symbolHtml": "<span>u<sub>terminal</sub></span>",
+      "keys": [
+        "u_terminal"
+      ],
+      "description": "简单串联估算中的设备端电压。",
+      "unitHtml": "V",
+      "section": "emc-9-2",
+      "sections": [
+        "emc-9-2"
+      ],
+      "equations": [
+        "D.9.2.2"
+      ],
+      "match": "式中，uterminal为简单串联估算中的设备端电压（V）；uclamp为该脉冲工况下保护器件箝位电压（V）；Llead为保护器件连接/回流引线等效电感（H）。",
+      "sourceAnchor": "symbols-D-9-2-2"
+    },
+    {
+      "id": "emc-local-9-2-6",
+      "title": "u_clamp",
+      "symbolHtml": "<span>u<sub>clamp</sub></span>",
+      "keys": [
+        "u_clamp"
+      ],
+      "description": "该脉冲工况下保护器件箝位电压。",
+      "unitHtml": "V",
+      "section": "emc-9-2",
+      "sections": [
+        "emc-9-2"
+      ],
+      "equations": [
+        "D.9.2.2"
+      ],
+      "match": "式中，uterminal为简单串联估算中的设备端电压（V）；uclamp为该脉冲工况下保护器件箝位电压（V）；Llead为保护器件连接/回流引线等效电感（H）。",
+      "sourceAnchor": "symbols-D-9-2-2"
+    },
+    {
+      "id": "emc-local-9-2-7",
+      "title": "L_lead",
+      "symbolHtml": "<span>L<sub>lead</sub></span>",
+      "keys": [
+        "L_lead"
+      ],
+      "description": "保护器件连接/回流引线等效电感。",
+      "unitHtml": "H",
+      "section": "emc-9-2",
+      "sections": [
+        "emc-9-2"
+      ],
+      "equations": [
+        "D.9.2.2"
+      ],
+      "match": "式中，uterminal为简单串联估算中的设备端电压（V）；uclamp为该脉冲工况下保护器件箝位电压（V）；Llead为保护器件连接/回流引线等效电感（H）。",
+      "sourceAnchor": "symbols-D-9-2-2"
+    },
+    {
+      "id": "emc-local-9-3-0",
+      "title": "u_L",
+      "symbolHtml": "<span>u<sub>L</sub></span>",
+      "keys": [
+        "u_L"
+      ],
+      "description": "保护引线寄生电感产生的附加电压。",
+      "unitHtml": "V",
+      "section": "emc-9-3",
+      "sections": [
+        "emc-9-3"
+      ],
+      "equations": [
+        "D.9.3.1"
+      ],
+      "match": "式中，uL为保护引线寄生电感产生的附加电压（V）；Llead为保护引线等效电感（H）；i为保护路径瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-3-1"
+    },
+    {
+      "id": "emc-local-9-3-1",
+      "title": "L_lead",
+      "symbolHtml": "<span>L<sub>lead</sub></span>",
+      "keys": [
+        "L_lead"
+      ],
+      "description": "保护引线等效电感。",
+      "unitHtml": "H",
+      "section": "emc-9-3",
+      "sections": [
+        "emc-9-3"
+      ],
+      "equations": [
+        "D.9.3.1"
+      ],
+      "match": "式中，uL为保护引线寄生电感产生的附加电压（V）；Llead为保护引线等效电感（H）；i为保护路径瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-3-1"
+    },
+    {
+      "id": "emc-local-9-3-2",
+      "title": "i",
+      "symbolHtml": "<span>i</span>",
+      "keys": [
+        "i"
+      ],
+      "description": "保护路径瞬态电流。",
+      "unitHtml": "A",
+      "section": "emc-9-3",
+      "sections": [
+        "emc-9-3"
+      ],
+      "equations": [
+        "D.9.3.1"
+      ],
+      "match": "式中，uL为保护引线寄生电感产生的附加电压（V）；Llead为保护引线等效电感（H）；i为保护路径瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-3-1"
+    },
+    {
+      "id": "emc-local-9-3-3",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-9-3",
+      "sections": [
+        "emc-9-3"
+      ],
+      "equations": [
+        "D.9.3.1"
+      ],
+      "match": "式中，uL为保护引线寄生电感产生的附加电压（V）；Llead为保护引线等效电感（H）；i为保护路径瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-3-1"
+    },
+    {
+      "id": "emc-local-9-3-4",
+      "title": "U_clamp",
+      "symbolHtml": "<span>U<sub>clamp</sub></span>",
+      "keys": [
+        "U_clamp"
+      ],
+      "description": "局部线性化模型的箝位电压。",
+      "unitHtml": "V",
+      "section": "emc-9-3",
+      "sections": [
+        "emc-9-3"
+      ],
+      "equations": [
+        "D.9.3.2"
+      ],
+      "match": "式中，Uclamp为局部线性化模型的箝位电压（V）；Uref为所选器件曲线参考点电压（V）；rd为参考点附近动态斜率dU/dI，不是恒定直流电阻（Ω）；I为保护器件当前工作点电流（A）；Iref为参考点电流（A）。",
+      "sourceAnchor": "symbols-D-9-3-2"
+    },
+    {
+      "id": "emc-local-9-3-5",
+      "title": "U_ref",
+      "symbolHtml": "<span>U<sub>ref</sub></span>",
+      "keys": [
+        "U_ref"
+      ],
+      "description": "所选器件曲线参考点电压。",
+      "unitHtml": "V",
+      "section": "emc-9-3",
+      "sections": [
+        "emc-9-3"
+      ],
+      "equations": [
+        "D.9.3.2"
+      ],
+      "match": "式中，Uclamp为局部线性化模型的箝位电压（V）；Uref为所选器件曲线参考点电压（V）；rd为参考点附近动态斜率dU/dI，不是恒定直流电阻（Ω）；I为保护器件当前工作点电流（A）；Iref为参考点电流（A）。",
+      "sourceAnchor": "symbols-D-9-3-2"
+    },
+    {
+      "id": "emc-local-9-3-6",
+      "title": "r_d",
+      "symbolHtml": "<span>r<sub>d</sub></span>",
+      "keys": [
+        "r_d"
+      ],
+      "description": "参考点附近动态斜率dU/dI，不是恒定直流电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-9-3",
+      "sections": [
+        "emc-9-3"
+      ],
+      "equations": [
+        "D.9.3.2"
+      ],
+      "match": "式中，Uclamp为局部线性化模型的箝位电压（V）；Uref为所选器件曲线参考点电压（V）；rd为参考点附近动态斜率dU/dI，不是恒定直流电阻（Ω）；I为保护器件当前工作点电流（A）；Iref为参考点电流（A）。",
+      "sourceAnchor": "symbols-D-9-3-2"
+    },
+    {
+      "id": "emc-local-9-3-7",
+      "title": "I",
+      "symbolHtml": "<span>I</span>",
+      "keys": [
+        "I"
+      ],
+      "description": "保护器件当前工作点电流。",
+      "unitHtml": "A",
+      "section": "emc-9-3",
+      "sections": [
+        "emc-9-3"
+      ],
+      "equations": [
+        "D.9.3.2"
+      ],
+      "match": "式中，Uclamp为局部线性化模型的箝位电压（V）；Uref为所选器件曲线参考点电压（V）；rd为参考点附近动态斜率dU/dI，不是恒定直流电阻（Ω）；I为保护器件当前工作点电流（A）；Iref为参考点电流（A）。",
+      "sourceAnchor": "symbols-D-9-3-2"
+    },
+    {
+      "id": "emc-local-9-3-8",
+      "title": "I_ref",
+      "symbolHtml": "<span>I<sub>ref</sub></span>",
+      "keys": [
+        "I_ref"
+      ],
+      "description": "参考点电流。",
+      "unitHtml": "A",
+      "section": "emc-9-3",
+      "sections": [
+        "emc-9-3"
+      ],
+      "equations": [
+        "D.9.3.2"
+      ],
+      "match": "式中，Uclamp为局部线性化模型的箝位电压（V）；Uref为所选器件曲线参考点电压（V）；rd为参考点附近动态斜率dU/dI，不是恒定直流电阻（Ω）；I为保护器件当前工作点电流（A）；Iref为参考点电流（A）。",
+      "sourceAnchor": "symbols-D-9-3-2"
+    },
+    {
+      "id": "emc-local-9-4-0",
+      "title": "U_pin",
+      "symbolHtml": "<span>U<sub>pin</sub></span>",
+      "keys": [
+        "U_pin"
+      ],
+      "description": "设备引脚处的瞬态端口电压估算。",
+      "unitHtml": "V",
+      "section": "emc-9-4",
+      "sections": [
+        "emc-9-4"
+      ],
+      "equations": [
+        "D.9.4.1"
+      ],
+      "match": "式中，Upin为设备引脚处的瞬态端口电压估算（V）；Uclamp为给定脉冲条件下器件箝位电压（V）；Llead为器件至受保护端口的连接回流电感（H）；i为保护路径瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-4-1"
+    },
+    {
+      "id": "emc-local-9-4-1",
+      "title": "U_clamp",
+      "symbolHtml": "<span>U<sub>clamp</sub></span>",
+      "keys": [
+        "U_clamp"
+      ],
+      "description": "给定脉冲条件下器件箝位电压。",
+      "unitHtml": "V",
+      "section": "emc-9-4",
+      "sections": [
+        "emc-9-4"
+      ],
+      "equations": [
+        "D.9.4.1"
+      ],
+      "match": "式中，Upin为设备引脚处的瞬态端口电压估算（V）；Uclamp为给定脉冲条件下器件箝位电压（V）；Llead为器件至受保护端口的连接回流电感（H）；i为保护路径瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-4-1"
+    },
+    {
+      "id": "emc-local-9-4-2",
+      "title": "L_lead",
+      "symbolHtml": "<span>L<sub>lead</sub></span>",
+      "keys": [
+        "L_lead"
+      ],
+      "description": "器件至受保护端口的连接回流电感。",
+      "unitHtml": "H",
+      "section": "emc-9-4",
+      "sections": [
+        "emc-9-4"
+      ],
+      "equations": [
+        "D.9.4.1"
+      ],
+      "match": "式中，Upin为设备引脚处的瞬态端口电压估算（V）；Uclamp为给定脉冲条件下器件箝位电压（V）；Llead为器件至受保护端口的连接回流电感（H）；i为保护路径瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-4-1"
+    },
+    {
+      "id": "emc-local-9-4-3",
+      "title": "i",
+      "symbolHtml": "<span>i</span>",
+      "keys": [
+        "i"
+      ],
+      "description": "保护路径瞬态电流。",
+      "unitHtml": "A",
+      "section": "emc-9-4",
+      "sections": [
+        "emc-9-4"
+      ],
+      "equations": [
+        "D.9.4.1"
+      ],
+      "match": "式中，Upin为设备引脚处的瞬态端口电压估算（V）；Uclamp为给定脉冲条件下器件箝位电压（V）；Llead为器件至受保护端口的连接回流电感（H）；i为保护路径瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-4-1"
+    },
+    {
+      "id": "emc-local-9-4-4",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "时间。",
+      "unitHtml": "s",
+      "section": "emc-9-4",
+      "sections": [
+        "emc-9-4"
+      ],
+      "equations": [
+        "D.9.4.1"
+      ],
+      "match": "式中，Upin为设备引脚处的瞬态端口电压估算（V）；Uclamp为给定脉冲条件下器件箝位电压（V）；Llead为器件至受保护端口的连接回流电感（H）；i为保护路径瞬态电流（A）；t为时间（s）。",
+      "sourceAnchor": "symbols-D-9-4-1"
+    },
+    {
+      "id": "emc-local-10-1-0",
+      "title": "THD_I",
+      "symbolHtml": "<span>THD<sub>I</sub></span>",
+      "keys": [
+        "THD_I"
+      ],
+      "description": "谐波电流有效值合成量与基波有效值之比；百分数另乘100。",
+      "unitHtml": "无量纲",
+      "section": "emc-10-1",
+      "sections": [
+        "emc-10-1"
+      ],
+      "equations": [
+        "D.10.1.1"
+      ],
+      "match": "式中，THDI为谐波电流有效值合成量与基波有效值之比；百分数另乘100（无量纲）；n为谐波次数，求和从2开始（无量纲）；In为第n次谐波电流有效值（A）；I1为基波电流有效值（A）。",
+      "sourceAnchor": "symbols-D-10-1-1"
+    },
+    {
+      "id": "emc-local-10-1-1",
+      "title": "n",
+      "symbolHtml": "<span>n</span>",
+      "keys": [
+        "n"
+      ],
+      "description": "谐波次数，求和从2开始。",
+      "unitHtml": "无量纲",
+      "section": "emc-10-1",
+      "sections": [
+        "emc-10-1"
+      ],
+      "equations": [
+        "D.10.1.1"
+      ],
+      "match": "式中，THDI为谐波电流有效值合成量与基波有效值之比；百分数另乘100（无量纲）；n为谐波次数，求和从2开始（无量纲）；In为第n次谐波电流有效值（A）；I1为基波电流有效值（A）。",
+      "sourceAnchor": "symbols-D-10-1-1"
+    },
+    {
+      "id": "emc-local-10-1-2",
+      "title": "I_n",
+      "symbolHtml": "<span>I<sub>n</sub></span>",
+      "keys": [
+        "I_n"
+      ],
+      "description": "第n次谐波电流有效值。",
+      "unitHtml": "A",
+      "section": "emc-10-1",
+      "sections": [
+        "emc-10-1"
+      ],
+      "equations": [
+        "D.10.1.1"
+      ],
+      "match": "式中，THDI为谐波电流有效值合成量与基波有效值之比；百分数另乘100（无量纲）；n为谐波次数，求和从2开始（无量纲）；In为第n次谐波电流有效值（A）；I1为基波电流有效值（A）。",
+      "sourceAnchor": "symbols-D-10-1-1"
+    },
+    {
+      "id": "emc-local-10-1-3",
+      "title": "I_1",
+      "symbolHtml": "<span>I<sub>1</sub></span>",
+      "keys": [
+        "I_1"
+      ],
+      "description": "基波电流有效值。",
+      "unitHtml": "A",
+      "section": "emc-10-1",
+      "sections": [
+        "emc-10-1"
+      ],
+      "equations": [
+        "D.10.1.1",
+        "D.10.1.2"
+      ],
+      "match": "式中，THDI为谐波电流有效值合成量与基波有效值之比；百分数另乘100（无量纲）；n为谐波次数，求和从2开始（无量纲）；In为第n次谐波电流有效值（A）；I1为基波电流有效值（A）。",
+      "sourceAnchor": "symbols-D-10-1-1"
+    },
+    {
+      "id": "emc-local-10-1-4",
+      "title": "I_5",
+      "symbolHtml": "<span>I<sub>5</sub></span>",
+      "keys": [
+        "I_5"
+      ],
+      "description": "5次谐波电流有效值。",
+      "unitHtml": "A",
+      "section": "emc-10-1",
+      "sections": [
+        "emc-10-1"
+      ],
+      "equations": [
+        "D.10.1.2"
+      ],
+      "match": "式中，I5为5次谐波电流有效值（A）；I7为7次谐波电流有效值（A）；Irms为所列正交频率分量合成的电流有效值（A）；PCu为频率无关电阻近似下的铜耗（W）；R为本模型假定与频率无关的电阻（Ω）。",
+      "sourceAnchor": "symbols-D-10-1-2"
+    },
+    {
+      "id": "emc-local-10-1-5",
+      "title": "I_7",
+      "symbolHtml": "<span>I<sub>7</sub></span>",
+      "keys": [
+        "I_7"
+      ],
+      "description": "7次谐波电流有效值。",
+      "unitHtml": "A",
+      "section": "emc-10-1",
+      "sections": [
+        "emc-10-1"
+      ],
+      "equations": [
+        "D.10.1.2"
+      ],
+      "match": "式中，I5为5次谐波电流有效值（A）；I7为7次谐波电流有效值（A）；Irms为所列正交频率分量合成的电流有效值（A）；PCu为频率无关电阻近似下的铜耗（W）；R为本模型假定与频率无关的电阻（Ω）。",
+      "sourceAnchor": "symbols-D-10-1-2"
+    },
+    {
+      "id": "emc-local-10-1-6",
+      "title": "I_rms",
+      "symbolHtml": "<span>I<sub>rms</sub></span>",
+      "keys": [
+        "I_rms"
+      ],
+      "description": "所列正交频率分量合成的电流有效值。",
+      "unitHtml": "A",
+      "section": "emc-10-1",
+      "sections": [
+        "emc-10-1"
+      ],
+      "equations": [
+        "D.10.1.2"
+      ],
+      "match": "式中，I5为5次谐波电流有效值（A）；I7为7次谐波电流有效值（A）；Irms为所列正交频率分量合成的电流有效值（A）；PCu为频率无关电阻近似下的铜耗（W）；R为本模型假定与频率无关的电阻（Ω）。",
+      "sourceAnchor": "symbols-D-10-1-2"
+    },
+    {
+      "id": "emc-local-10-1-7",
+      "title": "P_Cu",
+      "symbolHtml": "<span>P<sub>Cu</sub></span>",
+      "keys": [
+        "P_Cu"
+      ],
+      "description": "频率无关电阻近似下的铜耗。",
+      "unitHtml": "W",
+      "section": "emc-10-1",
+      "sections": [
+        "emc-10-1"
+      ],
+      "equations": [
+        "D.10.1.2"
+      ],
+      "match": "式中，I5为5次谐波电流有效值（A）；I7为7次谐波电流有效值（A）；Irms为所列正交频率分量合成的电流有效值（A）；PCu为频率无关电阻近似下的铜耗（W）；R为本模型假定与频率无关的电阻（Ω）。",
+      "sourceAnchor": "symbols-D-10-1-2"
+    },
+    {
+      "id": "emc-local-10-1-8",
+      "title": "R",
+      "symbolHtml": "<span>R</span>",
+      "keys": [
+        "R"
+      ],
+      "description": "本模型假定与频率无关的电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-10-1",
+      "sections": [
+        "emc-10-1"
+      ],
+      "equations": [
+        "D.10.1.2"
+      ],
+      "match": "式中，I5为5次谐波电流有效值（A）；I7为7次谐波电流有效值（A）；Irms为所列正交频率分量合成的电流有效值（A）；PCu为频率无关电阻近似下的铜耗（W）；R为本模型假定与频率无关的电阻（Ω）。",
+      "sourceAnchor": "symbols-D-10-1-2"
+    },
+    {
+      "id": "emc-local-10-2-0",
+      "title": "J",
+      "symbolHtml": "<span>J</span>",
+      "keys": [
+        "J"
+      ],
+      "description": "距半球电极中心r处径向电流密度。",
+      "unitHtml": "A/m²",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "equations": [
+        "D.10.2.1"
+      ],
+      "match": "式中，J为距半球电极中心r处径向电流密度（A/m²）；r为距电极中心径向距离，r不小于r0（m）；I为恒定入地总电流（A）；E为径向土壤电场（V/m）。",
+      "sourceAnchor": "symbols-D-10-2-1"
+    },
+    {
+      "id": "emc-local-10-2-1",
+      "title": "r",
+      "symbolHtml": "<span>r</span>",
+      "keys": [
+        "r"
+      ],
+      "description": "距电极中心径向距离，r不小于r0。",
+      "unitHtml": "m",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "equations": [
+        "D.10.2.1",
+        "D.10.2.2",
+        "D.10.2.4"
+      ],
+      "match": "式中，J为距半球电极中心r处径向电流密度（A/m²）；r为距电极中心径向距离，r不小于r0（m）；I为恒定入地总电流（A）；E为径向土壤电场（V/m）。",
+      "sourceAnchor": "symbols-D-10-2-1"
+    },
+    {
+      "id": "emc-local-10-2-2",
+      "title": "I",
+      "symbolHtml": "<span>I</span>",
+      "keys": [
+        "I"
+      ],
+      "description": "恒定入地总电流。",
+      "unitHtml": "A",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "equations": [
+        "D.10.2.1",
+        "D.10.2.2",
+        "D.10.2.3",
+        "D.10.2.4"
+      ],
+      "match": "式中，J为距半球电极中心r处径向电流密度（A/m²）；r为距电极中心径向距离，r不小于r0（m）；I为恒定入地总电流（A）；E为径向土壤电场（V/m）。",
+      "sourceAnchor": "symbols-D-10-2-1"
+    },
+    {
+      "id": "emc-local-10-2-3",
+      "title": "E",
+      "symbolHtml": "<span>E</span>",
+      "keys": [
+        "E"
+      ],
+      "description": "径向土壤电场。",
+      "unitHtml": "V/m",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "equations": [
+        "D.10.2.1",
+        "D.10.2.2"
+      ],
+      "match": "式中，J为距半球电极中心r处径向电流密度（A/m²）；r为距电极中心径向距离，r不小于r0（m）；I为恒定入地总电流（A）；E为径向土壤电场（V/m）。",
+      "sourceAnchor": "symbols-D-10-2-1"
+    },
+    {
+      "id": "emc-local-10-2-4",
+      "title": "U",
+      "symbolHtml": "<span>U</span>",
+      "keys": [
+        "U"
+      ],
+      "description": "相对于远地零电位的土壤电位。",
+      "unitHtml": "V",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "equations": [
+        "D.10.2.2",
+        "D.10.2.3",
+        "D.10.2.4"
+      ],
+      "match": "式中，U为相对于远地零电位的土壤电位（V）；s为积分中的径向距离哑变量，不是时间（m）。",
+      "sourceAnchor": "symbols-D-10-2-2"
+    },
+    {
+      "id": "emc-local-10-2-5",
+      "title": "s",
+      "symbolHtml": "<span>s</span>",
+      "keys": [
+        "s"
+      ],
+      "description": "积分中的径向距离哑变量，不是时间。",
+      "unitHtml": "m",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "equations": [
+        "D.10.2.2"
+      ],
+      "match": "式中，U为相对于远地零电位的土壤电位（V）；s为积分中的径向距离哑变量，不是时间（m）。",
+      "sourceAnchor": "symbols-D-10-2-2"
+    },
+    {
+      "id": "emc-local-10-2-6",
+      "title": "R_g",
+      "symbolHtml": "<span>R<sub>g</sub></span>",
+      "keys": [
+        "R_g"
+      ],
+      "description": "半球电极对远地的静态接地电阻。",
+      "unitHtml": "Ω",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "equations": [
+        "D.10.2.3"
+      ],
+      "match": "式中，Rg为半球电极对远地的静态接地电阻（Ω）。",
+      "sourceAnchor": "symbols-D-10-2-3"
+    },
+    {
+      "id": "emc-local-10-2-7",
+      "title": "U_step",
+      "symbolHtml": "<span>U<sub>step</sub></span>",
+      "keys": [
+        "U_step"
+      ],
+      "description": "沿径向相距a两点的跨步电位差。",
+      "unitHtml": "V",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "equations": [
+        "D.10.2.4"
+      ],
+      "match": "式中，Ustep为沿径向相距a两点的跨步电位差（V）；a为该径向两点间距（m）。",
+      "sourceAnchor": "symbols-D-10-2-4"
+    },
+    {
+      "id": "emc-local-10-2-8",
+      "title": "a",
+      "symbolHtml": "<span>a</span>",
+      "keys": [
+        "a"
+      ],
+      "description": "该径向两点间距。",
+      "unitHtml": "m",
+      "section": "emc-10-2",
+      "sections": [
+        "emc-10-2"
+      ],
+      "equations": [
+        "D.10.2.4"
+      ],
+      "match": "式中，Ustep为沿径向相距a两点的跨步电位差（V）；a为该径向两点间距（m）。",
+      "sourceAnchor": "symbols-D-10-2-4"
+    },
+    {
+      "id": "emc-local-10-3-0",
+      "title": "u_c",
+      "symbolHtml": "<span>u<sub>c</sub></span>",
+      "keys": [
+        "u_c"
+      ],
+      "description": "线路等效对地电容端电压。",
+      "unitHtml": "V",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "equations": [
+        "D.10.3.1",
+        "D.10.3.2"
+      ],
+      "match": "式中，uc为线路等效对地电容端电压（V）；t为合闸后时间（s）；E为合闸瞬间及短时间内近似不变的电源电压（V）。",
+      "sourceAnchor": "symbols-D-10-3-1"
+    },
+    {
+      "id": "emc-local-10-3-1",
+      "title": "t",
+      "symbolHtml": "<span>t</span>",
+      "keys": [
+        "t"
+      ],
+      "description": "合闸后时间。",
+      "unitHtml": "s",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "equations": [
+        "D.10.3.1",
+        "D.10.3.2"
+      ],
+      "match": "式中，uc为线路等效对地电容端电压（V）；t为合闸后时间（s）；E为合闸瞬间及短时间内近似不变的电源电压（V）。",
+      "sourceAnchor": "symbols-D-10-3-1"
+    },
+    {
+      "id": "emc-local-10-3-2",
+      "title": "E",
+      "symbolHtml": "<span>E</span>",
+      "keys": [
+        "E"
+      ],
+      "description": "合闸瞬间及短时间内近似不变的电源电压。",
+      "unitHtml": "V",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "equations": [
+        "D.10.3.1",
+        "D.10.3.2"
+      ],
+      "match": "式中，uc为线路等效对地电容端电压（V）；t为合闸后时间（s）；E为合闸瞬间及短时间内近似不变的电源电压（V）。",
+      "sourceAnchor": "symbols-D-10-3-1"
+    },
+    {
+      "id": "emc-local-10-3-3",
+      "title": "ω_0",
+      "symbolHtml": "<span>ω<sub>0</sub></span>",
+      "keys": [
+        "ω_0"
+      ],
+      "description": "无阻尼Ls/Ct模型的固有角频率。",
+      "unitHtml": "rad/s",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "equations": [
+        "D.10.3.2"
+      ],
+      "match": "式中，ω0为无阻尼Ls/Ct模型的固有角频率（rad/s）。",
+      "sourceAnchor": "symbols-D-10-3-2"
+    },
+    {
+      "id": "emc-local-10-3-4",
+      "title": "Γ_V",
+      "symbolHtml": "<span>Γ<sub>V</sub></span>",
+      "keys": [
+        "Γ_V"
+      ],
+      "description": "终端电压行波反射系数。",
+      "unitHtml": "无量纲",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "equations": [
+        "D.10.3.3"
+      ],
+      "match": "式中，ΓV为终端电压行波反射系数（无量纲）；Zt为终端等效阻抗（Ω）；Z0为该行波通道的特征阻抗（Ω）；Uterminal为单束入射波与其首次终端反射合成电压（V）；U+为单束入射电压行波（V）。",
+      "sourceAnchor": "symbols-D-10-3-3"
+    },
+    {
+      "id": "emc-local-10-3-5",
+      "title": "Z_t",
+      "symbolHtml": "<span>Z<sub>t</sub></span>",
+      "keys": [
+        "Z_t"
+      ],
+      "description": "终端等效阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "equations": [
+        "D.10.3.3"
+      ],
+      "match": "式中，ΓV为终端电压行波反射系数（无量纲）；Zt为终端等效阻抗（Ω）；Z0为该行波通道的特征阻抗（Ω）；Uterminal为单束入射波与其首次终端反射合成电压（V）；U+为单束入射电压行波（V）。",
+      "sourceAnchor": "symbols-D-10-3-3"
+    },
+    {
+      "id": "emc-local-10-3-6",
+      "title": "Z_0",
+      "symbolHtml": "<span>Z<sub>0</sub></span>",
+      "keys": [
+        "Z_0"
+      ],
+      "description": "该行波通道的特征阻抗。",
+      "unitHtml": "Ω",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "equations": [
+        "D.10.3.3"
+      ],
+      "match": "式中，ΓV为终端电压行波反射系数（无量纲）；Zt为终端等效阻抗（Ω）；Z0为该行波通道的特征阻抗（Ω）；Uterminal为单束入射波与其首次终端反射合成电压（V）；U+为单束入射电压行波（V）。",
+      "sourceAnchor": "symbols-D-10-3-3"
+    },
+    {
+      "id": "emc-local-10-3-7",
+      "title": "U_terminal",
+      "symbolHtml": "<span>U<sub>terminal</sub></span>",
+      "keys": [
+        "U_terminal"
+      ],
+      "description": "单束入射波与其首次终端反射合成电压。",
+      "unitHtml": "V",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "equations": [
+        "D.10.3.3"
+      ],
+      "match": "式中，ΓV为终端电压行波反射系数（无量纲）；Zt为终端等效阻抗（Ω）；Z0为该行波通道的特征阻抗（Ω）；Uterminal为单束入射波与其首次终端反射合成电压（V）；U+为单束入射电压行波（V）。",
+      "sourceAnchor": "symbols-D-10-3-3"
+    },
+    {
+      "id": "emc-local-10-3-8",
+      "title": "U^+",
+      "symbolHtml": "<span>U<sup>+</sup></span>",
+      "keys": [
+        "U^+"
+      ],
+      "description": "单束入射电压行波。",
+      "unitHtml": "V",
+      "section": "emc-10-3",
+      "sections": [
+        "emc-10-3"
+      ],
+      "equations": [
+        "D.10.3.3"
+      ],
+      "match": "式中，ΓV为终端电压行波反射系数（无量纲）；Zt为终端等效阻抗（Ω）；Z0为该行波通道的特征阻抗（Ω）；Uterminal为单束入射波与其首次终端反射合成电压（V）；U+为单束入射电压行波（V）。",
+      "sourceAnchor": "symbols-D-10-3-3"
+    },
+    {
+      "id": "emc-local-10-4-0",
+      "title": "i_2",
+      "symbolHtml": "<span>i<sub>2</sub></span>",
+      "keys": [
+        "i_2"
+      ],
+      "description": "同轴屏蔽/外皮支路电流。",
+      "unitHtml": "A",
+      "section": "emc-10-4",
+      "sections": [
+        "emc-10-4"
+      ],
+      "equations": [
+        "D.10.4.1"
+      ],
+      "match": "式中，i2为同轴屏蔽/外皮支路电流（A）；i为两条回流支路分流前的总电流（A）；L1为冲击分压器接地引线的等效电感（H）；L2为同轴屏蔽层及返回导体回路的等效电感（H）。",
+      "sourceAnchor": "symbols-D-10-4-1"
+    },
+    {
+      "id": "emc-local-10-4-1",
+      "title": "i",
+      "symbolHtml": "<span>i</span>",
+      "keys": [
+        "i"
+      ],
+      "description": "两条回流支路分流前的总电流。",
+      "unitHtml": "A",
+      "section": "emc-10-4",
+      "sections": [
+        "emc-10-4"
+      ],
+      "equations": [
+        "D.10.4.1"
+      ],
+      "match": "式中，i2为同轴屏蔽/外皮支路电流（A）；i为两条回流支路分流前的总电流（A）；L1为冲击分压器接地引线的等效电感（H）；L2为同轴屏蔽层及返回导体回路的等效电感（H）。",
+      "sourceAnchor": "symbols-D-10-4-1"
+    },
+    {
+      "id": "emc-local-10-4-2",
+      "title": "L_1",
+      "symbolHtml": "<span>L<sub>1</sub></span>",
+      "keys": [
+        "L_1"
+      ],
+      "description": "冲击分压器接地引线的等效电感。",
+      "unitHtml": "H",
+      "section": "emc-10-4",
+      "sections": [
+        "emc-10-4"
+      ],
+      "equations": [
+        "D.10.4.1"
+      ],
+      "match": "式中，i2为同轴屏蔽/外皮支路电流（A）；i为两条回流支路分流前的总电流（A）；L1为冲击分压器接地引线的等效电感（H）；L2为同轴屏蔽层及返回导体回路的等效电感（H）。",
+      "sourceAnchor": "symbols-D-10-4-1"
+    },
+    {
+      "id": "emc-local-10-4-3",
+      "title": "L_2",
+      "symbolHtml": "<span>L<sub>2</sub></span>",
+      "keys": [
+        "L_2"
+      ],
+      "description": "同轴屏蔽层及返回导体回路的等效电感。",
+      "unitHtml": "H",
+      "section": "emc-10-4",
+      "sections": [
+        "emc-10-4"
+      ],
+      "equations": [
+        "D.10.4.1",
+        "D.10.4.2"
+      ],
+      "match": "式中，i2为同轴屏蔽/外皮支路电流（A）；i为两条回流支路分流前的总电流（A）；L1为冲击分压器接地引线的等效电感（H）；L2为同轴屏蔽层及返回导体回路的等效电感（H）。",
+      "sourceAnchor": "symbols-D-10-4-1"
+    },
+    {
+      "id": "emc-local-10-4-4",
+      "title": "C_S",
+      "symbolHtml": "<span>C<sub>S</sub></span>",
+      "keys": [
+        "C_S"
+      ],
+      "description": "机壳至参考环境的寄生电容。",
+      "unitHtml": "F",
+      "section": "emc-10-4",
+      "sections": [
+        "emc-10-4"
+      ],
+      "equations": [
+        "D.10.4.2"
+      ],
+      "match": "式中，CS为机壳至参考环境的寄生电容（F）；f0为该简化L2/CS模型固有频率（Hz）。",
+      "sourceAnchor": "symbols-D-10-4-2"
+    },
+    {
+      "id": "emc-local-10-4-5",
+      "title": "f_0",
+      "symbolHtml": "<span>f<sub>0</sub></span>",
+      "keys": [
+        "f_0"
+      ],
+      "description": "该简化L2/CS模型固有频率。",
+      "unitHtml": "Hz",
+      "section": "emc-10-4",
+      "sections": [
+        "emc-10-4"
+      ],
+      "equations": [
+        "D.10.4.2"
+      ],
+      "match": "式中，CS为机壳至参考环境的寄生电容（F）；f0为该简化L2/CS模型固有频率（Hz）。",
+      "sourceAnchor": "symbols-D-10-4-2"
+    },
+    {
+      "id": "emc-common-imaginary",
+      "title": "j",
+      "keys": [
+        "j"
+      ],
+      "description": "虚数单位，j²=−1。",
+      "unitHtml": "无量纲",
+      "section": "emc-1-1",
+      "sections": [
+        "emc-1-1",
+        "emc-1-2",
+        "emc-1-3",
+        "emc-1-4",
+        "emc-2-1",
+        "emc-2-2",
+        "emc-2-3",
+        "emc-3-1",
+        "emc-3-2",
+        "emc-3-3",
+        "emc-3-4",
+        "emc-4-1",
+        "emc-4-2",
+        "emc-4-3",
+        "emc-4-4",
+        "emc-4-5",
+        "emc-5-1",
+        "emc-5-2",
+        "emc-5-3",
+        "emc-5-4",
+        "emc-5-5",
+        "emc-6-1",
+        "emc-6-2",
+        "emc-6-3",
+        "emc-6-4",
+        "emc-7-1",
+        "emc-7-2",
+        "emc-7-3",
+        "emc-7-4",
+        "emc-8-1",
+        "emc-8-2",
+        "emc-8-3",
+        "emc-9-1",
+        "emc-9-2",
+        "emc-9-3",
+        "emc-9-4",
+        "emc-10-1",
+        "emc-10-2",
+        "emc-10-3",
+        "emc-10-4"
+      ],
+      "match": "这里j为虚数单位，j²=−1；f为正弦频率，单位Hz；ω=2πf为角频率，单位rad/s。采用e的jωt次幂所对应的相量约定时，对时间求导对应乘jω。",
+      "sourceAnchor": "emc-frequency-notation"
+    },
+    {
+      "id": "emc-common-frequency",
+      "title": "f",
+      "keys": [
+        "f"
+      ],
+      "description": "所分析正弦分量的频率。",
+      "unitHtml": "Hz",
+      "section": "emc-1-1",
+      "sections": [
+        "emc-1-1",
+        "emc-1-2",
+        "emc-1-3",
+        "emc-1-4",
+        "emc-2-1",
+        "emc-2-2",
+        "emc-3-1",
+        "emc-3-3",
+        "emc-3-4",
+        "emc-4-1",
+        "emc-4-2",
+        "emc-4-3",
+        "emc-4-4",
+        "emc-4-5",
+        "emc-5-1",
+        "emc-5-2",
+        "emc-5-3",
+        "emc-5-5",
+        "emc-6-1",
+        "emc-6-2",
+        "emc-6-3",
+        "emc-6-4",
+        "emc-7-1",
+        "emc-7-2",
+        "emc-7-3",
+        "emc-7-4",
+        "emc-8-1",
+        "emc-8-2",
+        "emc-8-3",
+        "emc-9-1",
+        "emc-9-2",
+        "emc-9-3",
+        "emc-9-4",
+        "emc-10-1",
+        "emc-10-2",
+        "emc-10-3",
+        "emc-10-4"
+      ],
+      "match": "这里j为虚数单位，j²=−1；f为正弦频率，单位Hz；ω=2πf为角频率，单位rad/s。采用e的jωt次幂所对应的相量约定时，对时间求导对应乘jω。",
+      "sourceAnchor": "emc-frequency-notation"
+    },
+    {
+      "id": "emc-common-angular",
+      "title": "ω",
+      "keys": [
+        "ω"
+      ],
+      "description": "所分析正弦分量的角频率，ω=2πf。",
+      "unitHtml": "rad/s",
+      "section": "emc-1-1",
+      "sections": [
+        "emc-1-1",
+        "emc-1-2",
+        "emc-1-3",
+        "emc-1-4",
+        "emc-2-1",
+        "emc-2-3",
+        "emc-3-1",
+        "emc-3-2",
+        "emc-3-3",
+        "emc-3-4",
+        "emc-4-1",
+        "emc-4-2",
+        "emc-4-3",
+        "emc-4-4",
+        "emc-4-5",
+        "emc-5-1",
+        "emc-5-2",
+        "emc-5-3",
+        "emc-5-4",
+        "emc-5-5",
+        "emc-6-1",
+        "emc-6-2",
+        "emc-6-3",
+        "emc-6-4",
+        "emc-7-1",
+        "emc-7-2",
+        "emc-7-3",
+        "emc-7-4",
+        "emc-8-1",
+        "emc-8-2",
+        "emc-8-3",
+        "emc-9-1",
+        "emc-9-2",
+        "emc-9-3",
+        "emc-9-4",
+        "emc-10-1",
+        "emc-10-2",
+        "emc-10-3",
+        "emc-10-4"
+      ],
+      "match": "这里j为虚数单位，j²=−1；f为正弦频率，单位Hz；ω=2πf为角频率，单位rad/s。采用e的jωt次幂所对应的相量约定时，对时间求导对应乘jω。",
+      "sourceAnchor": "emc-frequency-notation"
     }
   ]
 }

@@ -138,27 +138,7 @@ main{margin:24px auto;max-width:1000px}.sheet{background:white;padding:36px 44px
 <div class="page-no">8 / 9</div>
 </section>
 
-<section class="sheet" id="sources">
-<p class="eyebrow">来源与核验范围</p>
-<h2>教材定位及可复核范围</h2>
-<p class="small">以下“书页”指页面上印出的页码，“PDF页”从文件第一页起按1计数。只核读列出的相关页段、图表及版权页，没有通读三本教材全文。原始文件按用户提供的名称保留在本地被 Git 忽略的资源目录。</p>
-<table><thead><tr><th>编号与教材</th><th>实际采用位置</th><th>支持的内容</th></tr></thead><tbody>
-<tr><td>[B1] B. J. Baliga<br><i>Fundamentals of Power Semiconductor Devices</i>，2008</td><td>§6.2，重点§6.2.2；书页282—285，PDF301—304；图6.3</td><td>VDMOS、双扩散、主结、源体短接、n 型主通路。</td></tr>
-<tr><td>[B2] 同上</td><td>§6.3—6.4：PDF305、308（书页286、289）；§6.4.4，PDF313—314（书页294—295），图6.11—6.12</td><td>体二极管、反向阻断、元胞内等势线与电场集中。</td></tr>
-<tr><td>[B3] 同上</td><td>§3.6.2，书页120—121，PDF141—142，图3.20；书页128—132，PDF149—153，重点§3.6.3及图3.28—3.32</td><td>浮置环、中间电位、界面电荷影响、多环终端；不能先验均分电位。</td></tr>
-<tr><td>[B4] 同上</td><td>§6.6，书页327—329，PDF346—348，图6.38—6.39；§6.6.3—6.6.5，书页331—333，PDF350—352</td><td>沟道、积累、JFET、漂移区和衬底等电阻及相互位置。</td></tr>
-<tr><td>[B5] 同上</td><td>§6.5 开头：书页300，PDF319；§6.12，书页381—384，PDF400—403，图6.70—6.71</td><td>欧姆区、饱和区、真实器件电阻与有限输出电阻。</td></tr>
-<tr><td>[B6] 同上</td><td>§3.2，书页95—97，PDF116—118；图3.2、式(3.11)—(3.15)</td><td>单边均匀结的泊松方程、电场、电势与耗尽宽度。</td></tr>
-<tr><td>[S1] S. M. Sze、Kwok K. Ng<br>《半导体器件物理》第3版</td><td>§6.2.2，书页231—234，PDF242—245；图6.9—6.10、式(23)—(32)；§2.2.1，书页61—62，PDF72—73</td><td>电荷片、渐变沟道、夹断、体电荷修正；结电势。</td></tr>
-<tr><td>[S2] 同上</td><td>§6.5.6，书页263—264，PDF274—275；图6.39(a)</td><td>功率 DMOS 与横向 LDMOS 的结构区别。</td></tr>
-<tr><td>[Q1] Michael Quirk、Julian Serda<br>《半导体制造技术》，2004</td><td>§3.4，书页50—51，PDF65—66，图3.15—3.17</td><td>绝缘栅、多晶硅、反型与电子运动；不是 VDMOS 专用工艺依据。</td></tr>
-<tr><td>[Q2] 同上</td><td>§9.3 末，书页205—207，PDF220—222；图9.28—9.29</td><td>栅氧／层间介质／顶层钝化的区别和保护作用。</td></tr>
-</tbody></table>
-<p class="small"><strong>版本核对：</strong>Sze 文件名虽然以“2007”开头，所附扫描件版权页为中文第3版，2008年6月第1版／第1次印刷；页码按这份扫描件标，不把文件名前缀当中文版出版年。Quirk 的版权页为2004年1月第1次印刷。</p>
-<p class="small"><strong>补充交叉核查：</strong><a href="https://www.infineon.com/assets/row/public/documents/24/54/infineon-power-mosfet-basics-article-en.pdf">International Rectifier / Infineon，Power MOSFET Basics</a> 的“Breakdown Voltage”段用于核对 \(BV_{DSS}\) 的栅源短接测试定义；<a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/eeb94eab00ebb62a3fde0eec1484bc08_MIT6_012F09_lec11_gradual.pdf">MIT 6.012，The Gradual Channel Approximation for the MOSFET</a> 用于核对体电荷因子及模型条件。主要结论依据仍为上列三本教材。</p>
-<p class="small"><strong>原版整理记录（不等于本轮重新取得全部原件）：</strong>逐题按题面核对必画对象与方向；对照教材上述页段审查模型及近似；另以脚本复算式(1)、式(3)、式(6)及等势线位置，并检查文件忽略和成品排版。公式自洽和页面检查不能证明某个真实器件设计已经验证，也不能代替教师评分或独立专家复审。</p>
-<div class="page-no">9 / 9</div>
-</section>
+<section class="sheet" id="sources"><h2>参考</h2><ul><li>[B1–B6] Baliga《Fundamentals of Power Semiconductor Devices》。</li><li>[S1–S2]《半导体器件物理》。</li><li>[Q1–Q2]《半导体制造技术》。</li><li><a href="https://www.infineon.com/assets/row/public/documents/24/54/infineon-power-mosfet-basics-article-en.pdf">Power MOSFET Basics</a>。</li><li><a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/eeb94eab00ebb62a3fde0eec1484bc08_MIT6_012F09_lec11_gradual.pdf">MIT：Gradual Channel Approximation</a>。</li></ul><div class="page-no">9 / 9</div></section>
 </main>
 <script>
 const referenceReturns = new Map();

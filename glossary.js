@@ -5,8 +5,14 @@
   const sectionData = new WeakMap();
   let context = null, origin = null, serial = 0;
   const make = (tag, className, text) => { const e = document.createElement(tag); e.className = className; if (text) e.textContent = text; return e; };
-  const clean = (text) => text.replace(/[\u200b\u200c\u200d\ufeff\s]/g, '').replace(/ϕ/g, 'φ').replace(/µ/g, 'μ');
-  const displayKey = (text) => { const value = clean(text).replace(/′/g, "'"); const primes = (value.match(/'/g) || []).length; return value.replace(/[˙̇⋅¯ˉ‾→⃗']/g, '') + "'".repeat(primes); };
+  const clean = (text) => text.replace(/[\u200b\u200c\u200d\u2061\ufeff\s]/g, '').replace(/ϕ/g, 'φ').replace(/µ/g, 'μ');
+  const displayKey = (text) => { const value = clean(text).replace(/′/g, "'"); const primes = (value.match(/'/g) || []).length; return value.replace(/[˙̇⋅¯ˉ‾→⃗^ˆ̂']/g, '') + "'".repeat(primes); };
+  const equationOf = node => node.closest('.paper-equation')?.dataset.equation || '';
+  const upperKey = value => {
+    const text=clean(value).replace(/[−–]/g,'-').replace(/[∗⋆]/g,'*');
+    if (/^[′']+$/.test(text)) return "'".repeat(text.length);
+    return /^[+*-]$/.test(text) ? '^'+text : '';
+  };
   const popup = make('div', 'definition-popover');
   popup.id = 'definition-popover'; popup.setAttribute('popover', 'auto'); popup.setAttribute('role', 'dialog'); popup.setAttribute('aria-labelledby', 'definition-title');
   document.querySelector('.workspace').append(popup);
@@ -14,8 +20,10 @@
   const entriesFor = (course) => catalog[course.id]?.entries || [];
   const shared = new Set(['B','H','bold:B','bold:H','μ','μ_0','μ_r','λ','cal:R','cal:F','Λ','L_sec','L_diff','M','ω','f']);
 
-  function resolveSymbol(course, section, key, kind = 'symbol') {
-    const entries = entriesFor(course).filter((e) => e.kind === kind && e.keys.includes(key) && (!e.sections || e.sections.includes(section.id)));
+  function resolveSymbol(course, section, key, kind = 'symbol', equation = '') {
+    const entries = entriesFor(course).filter((e) => e.kind === kind && e.keys.includes(key) && (!e.sections || e.sections.includes(section.id)) && (!e.equations || e.equations.includes(equation)));
+    const exact = entries.filter(e=>e.equations?.includes(equation));
+    if (exact.length) return exact.length===1 ? exact[0] : null;
     const scoped = entries.filter((e) => e.sections?.includes(section.id));
     if (scoped.length) return scoped.length === 1 ? scoped[0] : null;
     const local = entries.filter((e) => e.group === section.group);
@@ -52,26 +60,34 @@
       return value;
     }
     if (name === 'msub' && c.length >= 2) return atom(c[0]) + '_' + clean(plain(c[1]));
-    if (name === 'msubsup' && c.length >= 3) return atom(c[0]) + '_' + clean(plain(c[1])) + (/[′']/.test(plain(c[2])) ? "'" : '');
-    if (name === 'msup' && c.length >= 2) return atom(c[0]) + (/[′']/.test(plain(c[1])) ? "'" : '');
-    if (name === 'mover' && c.length >= 2) return (/[˙̇⋅.]/.test(plain(c[1])) ? 'dot:' : /[¯ˉ‾]/.test(plain(c[1])) ? 'bar:' : '') + atom(c[0]);
+    if (name === 'msubsup' && c.length >= 3) return atom(c[0]) + '_' + clean(plain(c[1])) + upperKey(plain(c[2]));
+    if (name === 'msup' && c.length >= 2) return atom(c[0]) + upperKey(plain(c[1]));
+    if (name === 'mover' && c.length >= 2) return (/[˙̇⋅.]/.test(plain(c[1])) ? 'dot:' : /[¯ˉ‾]/.test(plain(c[1])) ? 'bar:' : /[\^ˆ̂]/.test(plain(c[1])) ? 'hat:' : '') + atom(c[0]);
     if (name === 'munder' && c.length >= 2 && /[¯ˉ‾_]/.test(plain(c[1]))) return 'under:' + atom(c[0]);
     if (c.length === 1 && ['mrow','mstyle','mpadded','semantics','math'].includes(name)) return atom(c[0]);
+    if (name==='mrow' && c.length>1 && c.every(n=>n.localName==='mi' && n.getAttribute('mathvariant')==='normal')) return clean(plain(node));
     return '';
   }
   function symbols(math, course, section) {
     const list = [];
-    function visit(node) {
-      if (['mi','mtext','msub','msup','msubsup','mover','munder'].includes(node.localName)) {
+    const equation=equationOf(math);
+    function visit(node, inExponent = false) {
+      if (['mi','mtext','msub','msup','msubsup','mover','munder'].includes(node.localName) || node.localName==='mrow' && node.children.length>1 && atom(node)) {
         const key = atom(node);
         const next = node.nextElementSibling;
         if (/^[fgh]$/.test(key) && next?.localName === 'mo' && next.textContent === '(') return;
-        const entry = resolveSymbol(course, section, key);
-        if (entry) list.push({ key, entry, visible: displayKey(plain(node)) });
+        const power=['msup','msubsup'].includes(node.localName) ? node.lastElementChild : null;
+        const exponential=node.localName==='msup' && atom(node.firstElementChild)==='e' && !upperKey(plain(power)) && /[A-Za-zα-ω]/u.test(plain(power));
+        const entry = exponential ? null : resolveSymbol(course, section, key, 'symbol', equation);
+        if (entry) list.push({ key, entry, node, inExponent, visible: displayKey(plain(node)) });
         else if (['msub','msubsup'].includes(node.localName) && node.children[1]) {
           const sub = clean(plain(node.children[1]));
-          const notation = resolveSymbol(course, section, sub, 'subscript');
-          if (notation) list.push({ key: 'subscript:' + sub, entry: notation, visible: displayKey(sub) });
+          const notation = resolveSymbol(course, section, sub, 'subscript', equation);
+          if (notation) list.push({ key: 'subscript:' + sub, entry: notation, node:node.children[1], inExponent, visible: displayKey(sub) });
+        }
+        if (power && !upperKey(plain(power))) {
+          if (!atom(node.firstElementChild) && !exponential) visit(node.firstElementChild);
+          visit(power, true);
         }
         return;
       }
@@ -79,11 +95,11 @@
       for(let i=0;i<children.length;i++) {
         const child=children[i],next=children[i+1];
         if(plain(child)==='Δ' && next && ['mi','mtext','msub','msup','msubsup','mover','munder'].includes(next.localName)) {
-          const key='delta:'+atom(next),entry=resolveSymbol(course,section,key);
-          if(entry)list.push({key,entry,visible:displayKey(plain(next))});
+          const key='delta:'+atom(next),entry=resolveSymbol(course,section,key,'symbol',equation);
+          if(entry)list.push({key,entry,node:next,inExponent,visible:displayKey(plain(next))});
           i++;continue;
         }
-        visit(child);
+        visit(child,inExponent);
       }
     }
     visit(math); return list;
@@ -98,6 +114,22 @@
       element.setAttribute('aria-label', '查看符号定义：' + entry.title);
     }
     element.title = '点击查看定义';
+  }
+  function equationTool(equation, entries) {
+    const unique=[...new Map(entries.map(entry=>[entry.id,entry])).values()];
+    if (!equation || !unique.length) return;
+    const ids=unique.map(entry=>entry.id).join(' ');
+    const expression=equation.querySelector('.paper-equation-scroll');
+    if (expression) {
+      expression.dataset.definitionList=ids;identity(expression);
+      expression.classList.add('definition-expression');expression.tabIndex=0;
+      expression.setAttribute('role','link');expression.setAttribute('aria-haspopup','dialog');
+      expression.setAttribute('aria-label','查看本式符号与解释');
+    }
+    if (!equation.querySelector('.definition-formula-tool')) {
+      const tool=make('button','definition-formula-tool','符号');tool.type='button';tool.dataset.definitionList=ids;identity(tool);
+      tool.setAttribute('aria-label','查看本公式的符号定义');tool.setAttribute('aria-haspopup','dialog');equation.append(tool);
+    }
   }
   function compositeParent(element, root) {
     for (let parent = element.parentElement; parent && parent !== root; parent = parent.parentElement) {
@@ -117,12 +149,12 @@
     if (tag==='msubsup' && c.length===3) {
       const upper=svgGlyph(c[1]),lower=svgGlyph(c[2]);
       // MathJax SVG orders the visual superscript before the subscript.
-      return svgAtom(c[0])+'_'+lower+(/^[′']$/u.test(upper)?"'":'');
+      return svgAtom(c[0])+'_'+lower+upperKey(upper);
     }
-    if (tag==='msup' && c.length===2) return svgAtom(c[0])+(/[′']/u.test(svgGlyph(c[1]))?"'":'');
+    if (tag==='msup' && c.length===2) return svgAtom(c[0])+upperKey(svgGlyph(c[1]));
     if (['mover','munder'].includes(tag) && c.length===2) {
       const accent=svgGlyph(c[1]);
-      return (/[¯ˉ‾–]/u.test(accent)?'bar:':/[˙̇⋅]/u.test(accent)?'dot:':'')+svgAtom(c[0]);
+      return (/[¯ˉ‾–]/u.test(accent)?'bar:':/[˙̇⋅]/u.test(accent)?'dot:':/[\^ˆ̂]/u.test(accent)?'hat:':'')+svgAtom(c[0]);
     }
     if (c.length===1) return svgAtom(c[0]);
     if (tag==='TeXAtom') return svgGlyph(node);
@@ -134,9 +166,14 @@
       function visit(node) {
         const tag=node.dataset?.mmlNode;
         if (['mi','msub','msubsup','msup','mover','munder'].includes(tag)) {
-          const key=svgAtom(node),entry=resolveSymbol(course,section,key);
+          const key=svgAtom(node),power=['msup','msubsup'].includes(tag)?node.children[1]:null;
+          const exponential=tag==='msup' && svgAtom(node.children[0])==='e' && power && !upperKey(svgGlyph(power)) && /[A-Za-zα-ω]/u.test(svgGlyph(power));
+          const entry=exponential?null:resolveSymbol(course,section,key,'symbol',equationOf(container));
           // The new PDF has different notation; only its explicitly scoped definitions apply.
           if (entry?.sections?.includes(section.id)) { interactive(node,entry,true);node.dataset.definitionKey=key;found.push(entry); }
+          if (tag==='msup' || tag==='msubsup') {
+            if(power && !upperKey(svgGlyph(power))) visit(power);
+          }
           return;
         }
         [...node.children].forEach(visit);
@@ -144,10 +181,7 @@
       visit(container);
       const unique=[...new Map(found.map(entry=>[entry.id,entry])).values()];
       const equation=container.closest('.paper-equation');
-      if (equation && unique.length && !equation.querySelector('.definition-formula-tool')) {
-        const tool=make('button','definition-formula-tool','符号');tool.type='button';tool.dataset.definitionList=unique.map(e=>e.id).join(' ');identity(tool);
-        tool.setAttribute('aria-label','查看本公式的物理符号定义');tool.setAttribute('aria-haspopup','dialog');equation.append(tool);
-      }
+      equationTool(equation,unique);
     });
   }
 
@@ -175,20 +209,27 @@
         const candidates = [...visual.querySelectorAll('.mord,.mop,.mathnormal,.mathcal')].filter((element) => {
           if (element.closest('[data-definition]') || element.querySelector('[data-definition]')) return false;
           if (displayKey(element.textContent) !== item.visible) return false;
+          // A temperature difference and an absolute temperature can coexist.
+          // Match the visible delta beside this occurrence, not every T in the formula.
+          let leading=element;
+          while (leading.parentElement!==visual && !leading.previousElementSibling && leading.parentElement) leading=leading.parentElement;
+          const afterDelta=clean(leading.previousElementSibling?.textContent || '')==='Δ';
+          if (item.key.startsWith('delta:') ? !afterDelta : afterDelta) return false;
           if (!item.key.startsWith('subscript:') && /^[A-Za-z]$/.test(item.visible) && (element.classList.contains('mathrm') || element.querySelector('.mathrm'))) return false;
           const accent = element.classList.contains('accent') || !!element.querySelector('.accent');
           const overline = element.classList.contains('overline') || !!element.querySelector('.overline') || [...element.querySelectorAll('.accent-body')].some(n=>/[¯ˉ‾]/.test(n.textContent));
           const underline = element.classList.contains('underline') || !!element.querySelector('.underline');
           if (item.key.startsWith('under:') ? !underline : underline) return false;
           const dot = accent && [...element.querySelectorAll('.accent-body')].some(n=>/[˙̇⋅]/.test(n.textContent));
-          if (item.key.startsWith('bar:') ? !overline : item.key.startsWith('dot:') ? !dot || overline : dot || overline) return false;
-          const baseKey = item.key.replace(/^(?:delta:)?(?:bar:|dot:|under:)?/, '');
+          const hat = accent && [...element.querySelectorAll('.accent-body')].some(n=>/[\^ˆ̂]/.test(n.textContent));
+          if (item.key.startsWith('bar:') ? !overline : item.key.startsWith('dot:') ? !dot || overline : item.key.startsWith('hat:') ? !hat : dot || overline || hat) return false;
+          const baseKey = item.key.replace(/^(?:delta:)?(?:bar:|dot:|under:|hat:)?/, '');
           const script = element.classList.contains('mathcal') || !!element.querySelector('.mathcal');
           if (baseKey.startsWith('cal:') !== script) return false;
           const bold = element.classList.contains('boldsymbol') || element.classList.contains('mathbf') || !!element.querySelector('.boldsymbol,.mathbf');
           if (baseKey.startsWith('bold:') !== bold) return false;
           if (item.key.startsWith('subscript:')) return !!element.closest('.msupsub');
-          return !compositeParent(element, visual);
+          return !compositeParent(element, visual) || item.inExponent && !!element.closest('.msupsub');
         });
         candidates.forEach((element) => { if (!element.closest('[data-definition]')) interactive(element, item.entry); });
       });
@@ -198,31 +239,15 @@
         wrapper.setAttribute('aria-label','查看表达式中的符号定义');
       }
       const equation = katex.closest('.paper-equation');
-      if (equation && unique.length && !equation.querySelector('.definition-formula-tool')) {
-        const tool = make('button','definition-formula-tool','符号'); tool.type='button'; tool.dataset.definitionList=unique.map((e)=>e.id).join(' ');
-        tool.setAttribute('aria-label','查看本公式的物理符号定义'); tool.setAttribute('aria-haspopup','dialog'); identity(tool); equation.append(tool);
-      }
+      equationTool(equation,unique);
     });
     // Native MathML is visible content, unlike KaTeX's hidden accessibility tree.
     body.querySelectorAll('math').forEach(math => {
       if (math.closest('.katex, mjx-container')) return;
-      const found = [];
-      function visit(node) {
-        if (['mi','mtext','msub','msup','msubsup','mover','munder'].includes(node.localName)) {
-          const entry = resolveSymbol(course, section, atom(node));
-          if (entry) { interactive(node, entry, true); found.push(entry); }
-          return;
-        }
-        [...node.children].filter(child => child.localName !== 'annotation').forEach(visit);
-      }
-      visit(math);
+      const items=symbols(math,course,section);
+      items.forEach(item=>interactive(item.node,item.entry,true));
       const equation = math.closest('.paper-equation');
-      const unique = [...new Map(found.map(entry => [entry.id, entry])).values()];
-      if (equation && unique.length && !equation.querySelector('.definition-formula-tool')) {
-        const tool = make('button', 'definition-formula-tool', '符号'); tool.type = 'button';
-        tool.dataset.definitionList = unique.map(entry => entry.id).join(' '); identity(tool);
-        tool.setAttribute('aria-label', '查看本公式的符号定义'); tool.setAttribute('aria-haspopup', 'dialog'); equation.append(tool);
-      }
+      equationTool(equation,items.map(item=>item.entry));
     });
     prepareSVG(body, course, section);
     const aliases = termAliases(course, section);
@@ -331,7 +356,7 @@
   });
   document.addEventListener('keydown',(event)=>{
     const trigger=event.target.closest('[data-definition],[data-definition-list]');
-    if(trigger&&trigger.tagName!=='BUTTON'&&['Enter',' '].includes(event.key)){event.preventDefault();activate(trigger);}
+    if(trigger===event.target&&trigger.tagName!=='BUTTON'&&['Enter',' '].includes(event.key)){event.preventDefault();activate(trigger);}
   });
   addEventListener('resize',position);
   addEventListener('scroll',(event)=>{

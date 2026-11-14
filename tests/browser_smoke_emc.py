@@ -53,8 +53,8 @@ def main():
                         for svg in fig.locator("svg").all():
                             assert svg.locator("title").count() > 0, (id,"SVG lacks text alternative")
                     if id in VISUAL_REVIEW:
-                        source_note = lesson.locator(".ln-source-note").first
-                        assert source_note.count() == 1, (id,"missing provenance")
+                        source_note = lesson.locator(".reading-reference").first
+                        assert source_note.count() == 1, (id,"missing brief reference")
                         if width <= 390:
                             font = source_note.evaluate("(n) => parseFloat(getComputedStyle(n).fontSize)")
                             assert 12 <= font <= 15, (id,font,"source-note scale")

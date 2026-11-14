@@ -819,6 +819,196 @@
       ],
       "match": "把PNP记作",
       "description": "两管等效模型中T2的共基极电流增益。"
+    },
+    {
+      "id": "psd-density-n",
+      "title": "自由电子浓度 n",
+      "keys": [
+        "n"
+      ],
+      "description": "自由电子的体浓度，不是总原子数或电子速度。",
+      "section": "carrier-basics",
+      "sections": [
+        "carrier-basics",
+        "carrier-transport"
+      ],
+      "unitHtml": "m⁻³或cm⁻³，须与迁移率等单位一致",
+      "match": "用 n,p 表示自由电子和空穴的体浓度"
+    },
+    {
+      "id": "psd-density-p",
+      "title": "空穴浓度 p",
+      "keys": [
+        "p"
+      ],
+      "description": "空穴的体浓度，不是压力或极对数。",
+      "section": "carrier-basics",
+      "sections": [
+        "carrier-basics",
+        "carrier-transport"
+      ],
+      "unitHtml": "m⁻³或cm⁻³，须与迁移率等单位一致",
+      "match": "用 n,p 表示自由电子和空穴的体浓度"
+    },
+    {
+      "id": "psd-doping-n-d",
+      "title": "施主浓度 Nᴅ",
+      "keys": [
+        "N_D"
+      ],
+      "description": "非简并、浅杂质近似下的施主体浓度；与电离施主浓度Nᴅ⁺区分，不能在未完全电离时直接替换。",
+      "section": "carrier-basics",
+      "sections": [
+        "carrier-basics",
+        "pn-junction"
+      ],
+      "unitHtml": "m⁻³或cm⁻³",
+      "match": "N_D、N_A分别为施主、受主体浓度；N_D⁺、N_A⁻分别为其中已电离的部分。只有明确采用完全电离近似时，才以N_D、N_A代替相应电离浓度。",
+      "sourceAnchor": "def-dopant-densities"
+    },
+    {
+      "id": "psd-doping-n-a",
+      "title": "受主浓度 Nᴀ",
+      "keys": [
+        "N_A"
+      ],
+      "description": "受主体浓度；与电离受主浓度Nᴀ⁻区分。",
+      "section": "carrier-basics",
+      "sections": [
+        "carrier-basics",
+        "pn-junction"
+      ],
+      "unitHtml": "m⁻³或cm⁻³",
+      "match": "N_D、N_A分别为施主、受主体浓度；N_D⁺、N_A⁻分别为其中已电离的部分。只有明确采用完全电离近似时，才以N_D、N_A代替相应电离浓度。",
+      "sourceAnchor": "def-dopant-densities"
+    },
+    {
+      "id": "psd-elementary-charge",
+      "title": "元电荷大小 q",
+      "keys": [
+        "q"
+      ],
+      "description": "元电荷的正值，约1.602×10⁻¹⁹ C；电子的电荷为−q。",
+      "section": "carrier-transport",
+      "sections": [
+        "carrier-transport",
+        "pn-junction",
+        "vdmos-blocking"
+      ],
+      "unitHtml": "C",
+      "match": "其中 q 是元电荷的正值"
+    },
+    {
+      "id": "psd-transport-μ-p",
+      "title": "空穴迁移率 μₚ",
+      "keys": [
+        "μ_p"
+      ],
+      "description": "低场近似下空穴漂移速度与电场的比例系数。",
+      "section": "carrier-transport",
+      "sections": [
+        "carrier-transport"
+      ],
+      "unitHtml": "m²/(V·s)或cm²/(V·s)",
+      "match": "电子和空穴的迁移率分别为"
+    },
+    {
+      "id": "psd-transport-D-n",
+      "title": "电子扩散系数 Dₙ",
+      "keys": [
+        "D_n"
+      ],
+      "description": "电子由浓度梯度引起的粒子输运系数。",
+      "section": "carrier-transport",
+      "sections": [
+        "carrier-transport"
+      ],
+      "unitHtml": "m²/s或cm²/s",
+      "match": "电子和空穴的迁移率分别为"
+    },
+    {
+      "id": "psd-transport-D-p",
+      "title": "空穴扩散系数 Dₚ",
+      "keys": [
+        "D_p"
+      ],
+      "description": "空穴由浓度梯度引起的粒子输运系数。",
+      "section": "carrier-transport",
+      "sections": [
+        "carrier-transport"
+      ],
+      "unitHtml": "m²/s或cm²/s",
+      "match": "电子和空穴的迁移率分别为"
+    },
+    {
+      "id": "psd-scr-i-a",
+      "title": "SCR阳极电流 Iᴀ",
+      "keys": [
+        "I_A"
+      ],
+      "description": "按本页方向流入阳极A的电流，也是两管等效中PNP的发射极电流。",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "unitHtml": "A",
+      "match": "把PNP记作T₁、NPN记作T₂"
+    },
+    {
+      "id": "psd-scr-i-g",
+      "title": "SCR门极电流 Iɢ",
+      "keys": [
+        "I_G"
+      ],
+      "description": "按本页方向流入门极G的电流，注入两管等效的NPN基极节点。",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "unitHtml": "A",
+      "match": "把PNP记作T₁、NPN记作T₂"
+    },
+    {
+      "id": "psd-scr-i-k",
+      "title": "SCR阴极电流 Iᴋ",
+      "keys": [
+        "I_K"
+      ],
+      "description": "按本页方向流出阴极K的电流；由端口守恒Iᴋ=Iᴀ+Iɢ。",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "unitHtml": "A",
+      "match": "把PNP记作T₁、NPN记作T₂"
+    },
+    {
+      "id": "psd-scr-i-cbo1",
+      "title": "T₁集电结漏电项 IＣＢＯ₁",
+      "keys": [
+        "I_CBO1"
+      ],
+      "description": "两管静态等效中PNP集电结的漏电项，与α₁Iᴀ项分开。",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "unitHtml": "A",
+      "match": "把PNP记作T₁、NPN记作T₂"
+    },
+    {
+      "id": "psd-scr-i-cbo2",
+      "title": "T₂集电结漏电项 IＣＢＯ₂",
+      "keys": [
+        "I_CBO2"
+      ],
+      "description": "两管静态等效中NPN集电结的漏电项，与α₂Iᴋ项分开。",
+      "section": "thyristors",
+      "sections": [
+        "thyristors"
+      ],
+      "unitHtml": "A",
+      "match": "把PNP记作T₁、NPN记作T₂"
     }
   ]
 }

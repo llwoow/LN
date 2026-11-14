@@ -32,13 +32,15 @@ class EMCCourseIntegrity(unittest.TestCase):
             self.assertEqual(section["kind"], "html")
             self.assertEqual(section["textbookSection"], entry["number"])
 
-    def test_lesson_files_have_source_page_and_subsection_anchors(self):
+    def test_lesson_files_have_brief_references_and_subsection_anchors(self):
         for entry in self.curriculum["sections"]:
             with self.subTest(section=entry["id"]):
                 section = next(s for s in self.course["sections"] if s["id"] == entry["id"])
                 payload = ASSIGN(ROOT / section["src"])
                 content = payload["html"]
-                self.assertIn("印刷第" + str(entry["page"]) + "页", content)
+                self.assertIn('class="reading-reference"', content)
+                self.assertNotIn("印刷第", content)
+                self.assertNotIn("课件对应", content)
                 self.assertIn(entry["number"] + " " + entry["title"], content)
                 for item in entry["subsections"]:
                     anchor = "part-" + item["number"].replace(".", "-")

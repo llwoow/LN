@@ -11,8 +11,12 @@ REF = runpy.run_path(str(ROOT/'scripts/build-reference-index.py'))
 Element, Document, assignment = REF['Element'], REF['Document'], REF['assignment']
 
 def raw(node): return ''.join(raw(c) if isinstance(c,Element) else c for c in node.children)
-def clean(text): return re.sub('[\u200b\u200c\u200d\ufeff]', '', text).strip()
+def clean(text): return re.sub('[\u200b\u200c\u200d\u2061\ufeff]', '', text).strip()
 def canonical(text): return clean(text).replace('ϕ','φ').replace('′',"'").replace('˙','dot:')
+def upper_key(text):
+    text=clean(text).replace('−','-').replace('∗','*').replace('⋆','*')
+    if re.fullmatch(r"[′']+",text):return "'"*len(text)
+    return '^'+text if text in ['+','-','*'] else ''
 def atom(node):
     children=[c for c in node.children if isinstance(c,Element)]
     if node.tag in {'mi','mtext'}:
@@ -21,12 +25,12 @@ def atom(node):
         if variant in {'script','double-struck'}:return 'cal:'+value
         return 'bold:'+value if 'bold' in variant else value
     if node.tag=='msub' and len(children)>=2:return atom(children[0])+'_'+canonical(raw(children[1])).replace(' ','')
-    if node.tag=='msubsup' and len(children)>=3:return atom(children[0])+'_'+canonical(raw(children[1])).replace(' ','')+("'" if '′' in raw(children[2]) or "'" in raw(children[2]) else '')
+    if node.tag=='msubsup' and len(children)>=3:return atom(children[0])+'_'+canonical(raw(children[1])).replace(' ','')+upper_key(raw(children[2]))
     if node.tag=='msup' and len(children)>=2:
-        base=atom(children[0]);power=raw(children[1]);return base+"'" if '′' in power or "'" in power else base
+        return atom(children[0])+upper_key(raw(children[1]))
     if node.tag=='mover' and len(children)>=2:
         accent=raw(children[1])
-        return ('dot:' if any(c in accent for c in ['˙','̇','⋅','.']) else 'bar:' if any(c in accent for c in ['¯','ˉ','‾']) else '')+atom(children[0])
+        return ('dot:' if any(c in accent for c in ['˙','̇','⋅','.']) else 'bar:' if any(c in accent for c in ['¯','ˉ','‾']) else 'hat:' if any(c in accent for c in ['^','ˆ','̂']) else '')+atom(children[0])
     if node.tag=='mrow' and len(children)>1 and all(c.tag in {'mi','mtext'} and c.attrs.get('mathvariant')=='normal' for c in children):return ''.join(canonical(raw(c)) for c in children)
     if node.tag in {'mrow','mstyle','mpadded','semantics','math'} and len(children)==1:return atom(children[0])
     return ''
@@ -86,7 +90,11 @@ def build():
                 entries.append({'id':identifier,'kind':kind,'title':clean(cells[0].text()),'symbolHtml':inner(cells[0]),'keys':list(dict.fromkeys(keys)),'description':description,'definitionHtml':inner(cells[1]),'unitHtml':inner(cells[2]) if len(cells)>2 else '', 'group':section['group'],'source':source})
         for spec in config.get('symbolDefinitions',[]):
             nodes=[n for n in document(spec['section']).walk() if n.tag in {'p','h2','h3','h4','li','td'}]
-            i,node=next((i,n) for i,n in enumerate(nodes) if spec['match'] in clean(n.text()))
+            matching=[(i,n) for i,n in enumerate(nodes) if spec['match'] in clean(n.text()) and (not spec.get('sourceAnchor') or n.attrs.get('id')==spec['sourceAnchor'])]
+            if len(matching)!=1 and spec.get('sourceAnchor'):
+                raise ValueError('Definition requires one exact source passage: '+spec['id'])
+            if not matching:raise ValueError('Definition source not found: '+spec['id'])
+            i,node=matching[0]
             source={'section':spec['section'],'anchor':anchors.get(spec['id']) or node.attrs.get('id') or 'definition-passage-'+str(i),'passage':i}
             entries.append({**spec,'kind':'symbol','symbolHtml':spec.get('symbolHtml','<span>'+html.escape(spec['title'])+'</span>'),'definitionHtml':inner(node),'source':source,'group':sections[spec['section']]['group']})
         for term in config.get('terms',[]):

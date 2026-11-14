@@ -33,7 +33,7 @@ class SolvedHomework(unittest.TestCase):
     def test_wiring_diagrams_and_source_citation_are_retained(self):
         metadata=json.loads((ROOT/'courses/electrical-machines/homework-figures.json').read_text())
         self.assertNotIn('pdf',self.payload)
-        self.assertIn('出版社书目',self.payload['html'])
+        self.assertIn('https://www.cmpedu.com/books/book/2027021.htm',self.payload['html'])
         self.assertEqual(len(metadata['figures']),7)
         for figure in metadata['figures']:
             content=(ROOT/'courses/electrical-machines/assets/homework'/figure['file']).read_bytes()

@@ -75,8 +75,10 @@ class AutomaticControlTests(unittest.TestCase):
 
     def test_root_locus_lesson_and_bank(self):
         lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-4-2-2.js")["html"]
-        for fact in ("4.3315704160", "−71.565", "8.16", "204−25K", "data-ac-root-locus", "错误连接"):
+        for fact in ("4.3315704160", "8.16", "data-ac-root-locus", "错误连接"):
             self.assertIn(fact, lesson)
+        self.assertIn("-71.565", lesson)
+        self.assertIn("204-25K", lesson)
         lesson_math = Parser();lesson_math.feed(lesson)
         self.assertEqual(lesson_math.math_open, lesson_math.math_close)
         root_ids = {"ac-root-poles", "ac-root-real", "ac-root-asym", "ac-root-break",

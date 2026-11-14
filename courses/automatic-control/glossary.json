@@ -242,6 +242,1198 @@
         "ac-3-3"
       ],
       "match": "阻尼振荡频率"
+    },
+    {
+      "id": "ac-reference-signal",
+      "title": "给定输入 r(t)、R(s)",
+      "keys": [
+        "r",
+        "R"
+      ],
+      "description": "r(t)是给定输入，R(s)是其拉普拉斯变换；二者不是两个独立输入。",
+      "section": "ac-3-2",
+      "sections": [
+        "ac-3-1",
+        "ac-3-2",
+        "ac-3-3",
+        "ac-3-4",
+        "ac-3-6",
+        "ac-homework3",
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-2-4",
+        "ac-4-3"
+      ],
+      "unitHtml": "随输入的物理量与变换约定",
+      "match": "这里r(t)表示给定输入，c(t)表示所讨论的输出，R(s)、C(s)分别为它们在零初始条件下的拉普拉斯变换；t是时间，s是拉普拉斯复频率，量纲为时间的倒数。传递函数Φ(s)=C(s)/R(s)的单位取决于输入与输出的标度，不能一律当成无量纲。",
+      "sourceAnchor": "ac-model-symbols"
+    },
+    {
+      "id": "ac-output-signal",
+      "title": "系统输出 c(t)、C(s)",
+      "keys": [
+        "c",
+        "C"
+      ],
+      "description": "c(t)是所讨论的输出，C(s)是其拉普拉斯变换。不要与动态误差展开系数c₀、c₁、c₂混淆。",
+      "section": "ac-3-2",
+      "sections": [
+        "ac-3-1",
+        "ac-3-2",
+        "ac-3-3",
+        "ac-3-4",
+        "ac-3-6",
+        "ac-homework3",
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-2-4",
+        "ac-4-3"
+      ],
+      "unitHtml": "随输出的物理量与变换约定",
+      "match": "这里r(t)表示给定输入，c(t)表示所讨论的输出，R(s)、C(s)分别为它们在零初始条件下的拉普拉斯变换；t是时间，s是拉普拉斯复频率，量纲为时间的倒数。传递函数Φ(s)=C(s)/R(s)的单位取决于输入与输出的标度，不能一律当成无量纲。",
+      "sourceAnchor": "ac-model-symbols"
+    },
+    {
+      "id": "ac-time",
+      "title": "时间 t",
+      "keys": [
+        "t"
+      ],
+      "description": "自指定起点计的时间。",
+      "section": "ac-3-2",
+      "sections": [
+        "ac-3-1",
+        "ac-3-2",
+        "ac-3-3",
+        "ac-3-4",
+        "ac-3-6",
+        "ac-homework3",
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-2-4",
+        "ac-4-3"
+      ],
+      "unitHtml": "s",
+      "match": "这里r(t)表示给定输入，c(t)表示所讨论的输出，R(s)、C(s)分别为它们在零初始条件下的拉普拉斯变换；t是时间，s是拉普拉斯复频率，量纲为时间的倒数。传递函数Φ(s)=C(s)/R(s)的单位取决于输入与输出的标度，不能一律当成无量纲。",
+      "sourceAnchor": "ac-model-symbols"
+    },
+    {
+      "id": "ac-complex-frequency",
+      "title": "拉普拉斯复频率 s",
+      "keys": [
+        "s"
+      ],
+      "description": "拉普拉斯域的复变量；特征根s=σ+jω代入指数模态e^(st)，实部决定增长/衰减，虚部决定振荡。",
+      "section": "ac-3-2",
+      "sections": [
+        "ac-3-1",
+        "ac-3-2",
+        "ac-3-3",
+        "ac-3-4",
+        "ac-3-6",
+        "ac-homework3",
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-2-4",
+        "ac-4-3"
+      ],
+      "unitHtml": "s⁻¹",
+      "match": "这里r(t)表示给定输入，c(t)表示所讨论的输出，R(s)、C(s)分别为它们在零初始条件下的拉普拉斯变换；t是时间，s是拉普拉斯复频率，量纲为时间的倒数。传递函数Φ(s)=C(s)/R(s)的单位取决于输入与输出的标度，不能一律当成无量纲。",
+      "sourceAnchor": "ac-model-symbols"
+    },
+    {
+      "id": "ac-closed-transfer",
+      "title": "闭环传递函数 Φ(s)",
+      "keys": [
+        "Φ"
+      ],
+      "description": "零初始条件下输出C(s)与给定输入R(s)之比；本节一阶例子为1/(Ts+1)。",
+      "section": "ac-3-2",
+      "sections": [
+        "ac-3-2",
+        "ac-3-3",
+        "ac-3-4"
+      ],
+      "unitHtml": "输出单位/输入单位",
+      "match": "这里r(t)表示给定输入，c(t)表示所讨论的输出，R(s)、C(s)分别为它们在零初始条件下的拉普拉斯变换；t是时间，s是拉普拉斯复频率，量纲为时间的倒数。传递函数Φ(s)=C(s)/R(s)的单位取决于输入与输出的标度，不能一律当成无量纲。",
+      "sourceAnchor": "ac-model-symbols"
+    },
+    {
+      "id": "ac-imaginary-unit",
+      "title": "虚数单位 j",
+      "keys": [
+        "j"
+      ],
+      "description": "j²=−1；用于表示复频率、复极点与相角，不是物理电流。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-1",
+        "ac-3-2",
+        "ac-3-3",
+        "ac-3-4",
+        "ac-3-6",
+        "ac-homework3",
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-2-4",
+        "ac-4-3"
+      ],
+      "unitHtml": "无量纲",
+      "match": "复频率写为s=σ+jω，其中j²=−1，σ为实部，ω为虚部对应的角频率；角频率用rad/s，复频率用s⁻¹。",
+      "sourceAnchor": "ac-complex-symbols"
+    },
+    {
+      "id": "ac-angular-frequency",
+      "title": "角频率 ω",
+      "keys": [
+        "ω"
+      ],
+      "description": "正弦分量或纯虚特征根s=jω的角频率；ω不等于一般模型中的自然频率ωₙ。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-1",
+        "ac-3-5",
+        "ac-4-2-1",
+        "ac-4-2-2"
+      ],
+      "unitHtml": "rad/s",
+      "match": "复频率写为s=σ+jω，其中j²=−1，σ为实部，ω为虚部对应的角频率；角频率用rad/s，复频率用s⁻¹。",
+      "sourceAnchor": "ac-complex-symbols"
+    },
+    {
+      "id": "ac-overshoot",
+      "title": "相对超调量 Mₚ",
+      "keys": [
+        "M_p"
+      ],
+      "description": "响应最大峰值超过正最终值的相对量。本处乘100%时以百分数表示；不是最大峰值本身。",
+      "section": "ac-3-1",
+      "sections": [
+        "ac-3-1",
+        "ac-3-3"
+      ],
+      "unitHtml": "无量纲或%",
+      "match": "最大峰值超过最终值的相对量"
+    },
+    {
+      "id": "ac-settling-time",
+      "title": "调节时间 tₛ",
+      "keys": [
+        "t_s"
+      ],
+      "description": "响应进入并持续保持在指定误差带内所需的时间；2%带与5%带给出不同数值。",
+      "section": "ac-3-1",
+      "sections": [
+        "ac-3-1",
+        "ac-3-2",
+        "ac-3-3"
+      ],
+      "unitHtml": "s",
+      "match": "响应进入并始终保持在规定误差带内所需时间"
+    },
+    {
+      "id": "ac-rise-time",
+      "title": "上升时间 tᵣ",
+      "keys": [
+        "t_r"
+      ],
+      "description": "响应首次从规定起点到达规定终点所需的时间，须注明0—100%或10%—90%约定。",
+      "section": "ac-3-1",
+      "sections": [
+        "ac-3-1"
+      ],
+      "unitHtml": "s",
+      "match": "第一次从规定起点到达规定终点所需的时间"
+    },
+    {
+      "id": "ac-peak-time",
+      "title": "峰值时间 tₚ",
+      "keys": [
+        "t_p"
+      ],
+      "description": "响应第一次达到最大峰值的时间；单调响应通常没有有限峰值时间。",
+      "section": "ac-3-1",
+      "sections": [
+        "ac-3-1",
+        "ac-3-3"
+      ],
+      "unitHtml": "s",
+      "match": "第一次到达最大峰值的时间"
+    },
+    {
+      "id": "ac-maximum-response",
+      "title": "最大响应 cmax",
+      "keys": [
+        "c_max"
+      ],
+      "description": "相对于本次初始条件与输入定义的响应最大值，与最终输出c(∞)分开。",
+      "section": "ac-3-1",
+      "sections": [
+        "ac-3-1"
+      ],
+      "unitHtml": "与输出c相同",
+      "match": "在超调量公式中，c_max是响应的最大值，c(∞)是最终值；这里假定c(∞)>0。",
+      "sourceAnchor": "ac-response-extrema"
+    },
+    {
+      "id": "ac-second-order-roots",
+      "title": "二阶特征根 s₁、s₂",
+      "keys": [
+        "s_1,2",
+        "s_1",
+        "s_2"
+      ],
+      "description": "标准二阶特征方程的两个根；欠阻尼时为−ξωₙ±jωd。",
+      "section": "ac-3-3",
+      "sections": [
+        "ac-3-3"
+      ],
+      "unitHtml": "s⁻¹",
+      "match": "s₁、s₂表示二阶特征方程的两个根，其实部和虚部决定自然模态的衰减与振荡。",
+      "sourceAnchor": "ac-second-order-root-symbols"
+    },
+    {
+      "id": "ac-characteristic-poly",
+      "title": "特征多项式 D(s)",
+      "keys": [
+        "D"
+      ],
+      "description": "令齐次指数运动满足D(s)=0所得的特征多项式；它的根是系统自然模态的指数率。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "equations": [
+        "U.3.5.1"
+      ],
+      "match": "便得到 D(s)=0，称为特征方程"
+    },
+    {
+      "id": "ac-stability-gain",
+      "title": "可变增益 K",
+      "keys": [
+        "K"
+      ],
+      "description": "课堂3-13开环模型中的实增益；本模型渐近稳定范围为0<K<3√5−5，不能只检查K>0。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "unitHtml": "依该模型标度",
+      "equations": [
+        "U.3.5.4",
+        "U.3.5.5",
+        "U.3.5.6"
+      ],
+      "match": "首先由末行"
+    },
+    {
+      "id": "ac-routh-a-0",
+      "title": "多项式常数项 a₀",
+      "keys": [
+        "a_0"
+      ],
+      "description": "在U.3.5.1—3的升序下标约定中，a₀为常数项；后文赫尔维茨另用a₀作最高次项系数，不可混用。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "equations": [
+        "U.3.5.1",
+        "U.3.5.2",
+        "U.3.5.3"
+      ],
+      "match": "式U.3.5.1按s的降幂写成首一多项式，a₀是常数项、a₁是s项系数，aₙ₋₁是sⁿ⁻¹项系数。对于后面的首一四阶式，a₃、a₂、a₁、a₀按s³、s²、s、常数项排列；b₁、b₂是劳斯表s²行的两个元素，c₁是s¹行首元素。",
+      "sourceAnchor": "ac-routh-coefficient-symbols"
+    },
+    {
+      "id": "ac-routh-a-1",
+      "title": "一次项系数 a₁",
+      "keys": [
+        "a_1"
+      ],
+      "description": "U.3.5.1—3中乘在s上的系数。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "equations": [
+        "U.3.5.1",
+        "U.3.5.2",
+        "U.3.5.3"
+      ],
+      "match": "式U.3.5.1按s的降幂写成首一多项式，a₀是常数项、a₁是s项系数，aₙ₋₁是sⁿ⁻¹项系数。对于后面的首一四阶式，a₃、a₂、a₁、a₀按s³、s²、s、常数项排列；b₁、b₂是劳斯表s²行的两个元素，c₁是s¹行首元素。",
+      "sourceAnchor": "ac-routh-coefficient-symbols"
+    },
+    {
+      "id": "ac-routh-a-2",
+      "title": "二次项系数 a₂",
+      "keys": [
+        "a_2"
+      ],
+      "description": "首一四阶多项式中乘在s²上的系数。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "equations": [
+        "U.3.5.1",
+        "U.3.5.2",
+        "U.3.5.3"
+      ],
+      "match": "式U.3.5.1按s的降幂写成首一多项式，a₀是常数项、a₁是s项系数，aₙ₋₁是sⁿ⁻¹项系数。对于后面的首一四阶式，a₃、a₂、a₁、a₀按s³、s²、s、常数项排列；b₁、b₂是劳斯表s²行的两个元素，c₁是s¹行首元素。",
+      "sourceAnchor": "ac-routh-coefficient-symbols"
+    },
+    {
+      "id": "ac-routh-a-3",
+      "title": "三次项系数 a₃",
+      "keys": [
+        "a_3"
+      ],
+      "description": "首一四阶多项式中乘在s³上的系数。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "equations": [
+        "U.3.5.1",
+        "U.3.5.2",
+        "U.3.5.3"
+      ],
+      "match": "式U.3.5.1按s的降幂写成首一多项式，a₀是常数项、a₁是s项系数，aₙ₋₁是sⁿ⁻¹项系数。对于后面的首一四阶式，a₃、a₂、a₁、a₀按s³、s²、s、常数项排列；b₁、b₂是劳斯表s²行的两个元素，c₁是s¹行首元素。",
+      "sourceAnchor": "ac-routh-coefficient-symbols"
+    },
+    {
+      "id": "ac-routh-a-nminus1",
+      "title": "sⁿ⁻¹项系数 aₙ₋₁",
+      "keys": [
+        "a_n-1"
+      ],
+      "description": "首一n阶多项式中紧接最高次项的系数。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "equations": [
+        "U.3.5.1",
+        "U.3.5.2",
+        "U.3.5.3"
+      ],
+      "match": "式U.3.5.1按s的降幂写成首一多项式，a₀是常数项、a₁是s项系数，aₙ₋₁是sⁿ⁻¹项系数。对于后面的首一四阶式，a₃、a₂、a₁、a₀按s³、s²、s、常数项排列；b₁、b₂是劳斯表s²行的两个元素，c₁是s¹行首元素。",
+      "sourceAnchor": "ac-routh-coefficient-symbols"
+    },
+    {
+      "id": "ac-routh-b-1",
+      "title": "劳斯表元素 b₁",
+      "keys": [
+        "b_1"
+      ],
+      "description": "本处首一四阶多项式的劳斯表s²行首元素。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "equations": [
+        "U.3.5.1",
+        "U.3.5.2",
+        "U.3.5.3"
+      ],
+      "match": "式U.3.5.1按s的降幂写成首一多项式，a₀是常数项、a₁是s项系数，aₙ₋₁是sⁿ⁻¹项系数。对于后面的首一四阶式，a₃、a₂、a₁、a₀按s³、s²、s、常数项排列；b₁、b₂是劳斯表s²行的两个元素，c₁是s¹行首元素。",
+      "sourceAnchor": "ac-routh-coefficient-symbols"
+    },
+    {
+      "id": "ac-routh-b-2",
+      "title": "劳斯表元素 b₂",
+      "keys": [
+        "b_2"
+      ],
+      "description": "本处首一四阶多项式的劳斯表s²行第二元素，等于常数项a₀。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "equations": [
+        "U.3.5.1",
+        "U.3.5.2",
+        "U.3.5.3"
+      ],
+      "match": "式U.3.5.1按s的降幂写成首一多项式，a₀是常数项、a₁是s项系数，aₙ₋₁是sⁿ⁻¹项系数。对于后面的首一四阶式，a₃、a₂、a₁、a₀按s³、s²、s、常数项排列；b₁、b₂是劳斯表s²行的两个元素，c₁是s¹行首元素。",
+      "sourceAnchor": "ac-routh-coefficient-symbols"
+    },
+    {
+      "id": "ac-routh-c-1",
+      "title": "劳斯表元素 c₁",
+      "keys": [
+        "c_1"
+      ],
+      "description": "本处首一四阶多项式的劳斯表s¹行首元素，区别于后文动态误差的c₁。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "equations": [
+        "U.3.5.1",
+        "U.3.5.2",
+        "U.3.5.3"
+      ],
+      "match": "式U.3.5.1按s的降幂写成首一多项式，a₀是常数项、a₁是s项系数，aₙ₋₁是sⁿ⁻¹项系数。对于后面的首一四阶式，a₃、a₂、a₁、a₀按s³、s²、s、常数项排列；b₁、b₂是劳斯表s²行的两个元素，c₁是s¹行首元素。",
+      "sourceAnchor": "ac-routh-coefficient-symbols"
+    },
+    {
+      "id": "ac-feedback-parameter",
+      "title": "反馈参数 τ",
+      "keys": [
+        "τ"
+      ],
+      "description": "课堂3-14结构图中的反馈参数；其稳定范围在给定框图下为τ>0，不能按字母外形当成一阶时间常数T。",
+      "section": "ac-3-5",
+      "sections": [
+        "ac-3-5"
+      ],
+      "unitHtml": "依框图信号标度",
+      "equations": [
+        "U.3.5.7"
+      ],
+      "match": "代入 a=1+10τ"
+    },
+    {
+      "id": "ac-comparison-error",
+      "title": "单位反馈误差 E(s)",
+      "keys": [
+        "E"
+      ],
+      "description": "单位反馈且同标定时的比较点误差E(s)=R(s)−C(s)；非单位反馈时不自动等于实际输出偏差。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6",
+        "ac-homework3"
+      ],
+      "match": "单位负反馈结构定义 E(s)=R(s)-C(s)"
+    },
+    {
+      "id": "ac-steady-error-value",
+      "title": "稳态误差 eₛₛ",
+      "keys": [
+        "e_ss"
+      ],
+      "description": "误差e(t)存在有限极限时的最终值；写∞只是误差无界的简记，不能据此宣称终值定理适用。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "unitHtml": "与误差信号相同",
+      "match": "当误差因斜坡或抛物线信号持续增长时"
+    },
+    {
+      "id": "ac-static-k-p",
+      "title": "位置误差系数 Kₚ",
+      "keys": [
+        "K_p"
+      ],
+      "description": "单位反馈模型的lim(s→0)G(s)，用于恒值输入的误差关系；不是PI控制器比例增益。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "unitHtml": "无量纲（单位反馈同标定）",
+      "equations": [
+        "U.3.6.3"
+      ],
+      "match": "单位负反馈的静态位置、速度、加速度误差系数分别为K_p=lim G(s)、K_v=lim sG(s)、K_a=lim s²G(s)（s→0）。这里K_p是位置误差系数，不是3-18中PI控制器的比例增益；使用它们计算误差前还要检查闭环稳定性与输入形式。",
+      "sourceAnchor": "ac-static-error-symbols"
+    },
+    {
+      "id": "ac-static-k-v",
+      "title": "速度误差系数 Kᵥ",
+      "keys": [
+        "K_v"
+      ],
+      "description": "单位反馈模型的lim(s→0)sG(s)，用于斜坡输入误差。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "unitHtml": "s⁻¹（单位反馈同标定）",
+      "equations": [
+        "U.3.6.3"
+      ],
+      "match": "单位负反馈的静态位置、速度、加速度误差系数分别为K_p=lim G(s)、K_v=lim sG(s)、K_a=lim s²G(s)（s→0）。这里K_p是位置误差系数，不是3-18中PI控制器的比例增益；使用它们计算误差前还要检查闭环稳定性与输入形式。",
+      "sourceAnchor": "ac-static-error-symbols"
+    },
+    {
+      "id": "ac-static-k-a",
+      "title": "加速度误差系数 Kₐ",
+      "keys": [
+        "K_a"
+      ],
+      "description": "单位反馈模型的lim(s→0)s²G(s)，用于抛物线输入误差。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "unitHtml": "s⁻²（单位反馈同标定）",
+      "equations": [
+        "U.3.6.3"
+      ],
+      "match": "单位负反馈的静态位置、速度、加速度误差系数分别为K_p=lim G(s)、K_v=lim sG(s)、K_a=lim s²G(s)（s→0）。这里K_p是位置误差系数，不是3-18中PI控制器的比例增益；使用它们计算误差前还要检查闭环稳定性与输入形式。",
+      "sourceAnchor": "ac-static-error-symbols"
+    },
+    {
+      "id": "ac-open-error-loop",
+      "title": "开环传递函数 G(s)",
+      "keys": [
+        "G"
+      ],
+      "description": "在给定输入误差分析中，C=GE，G为前向通道的总传递函数，单位反馈的误差传递函数为1/(1+G)。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "equations": [
+        "U.3.6.1",
+        "U.3.6.3"
+      ],
+      "match": "单位负反馈结构定义 E(s)=R(s)-C(s)"
+    },
+    {
+      "id": "ac-disturbance-g-1",
+      "title": "扰动前环节 G₁(s)",
+      "keys": [
+        "G_1"
+      ],
+      "description": "从比较点误差到扰动加入点之前的串联环节。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "equations": [
+        "U.3.6.4",
+        "U.3.6.5",
+        "U.3.6.6"
+      ],
+      "match": "扰动 N(s) 以正号加在两个环节之间"
+    },
+    {
+      "id": "ac-disturbance-g-2",
+      "title": "扰动后环节 G₂(s)",
+      "keys": [
+        "G_2"
+      ],
+      "description": "从扰动加入点到输出端的串联环节。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "equations": [
+        "U.3.6.4",
+        "U.3.6.5",
+        "U.3.6.6"
+      ],
+      "match": "扰动 N(s) 以正号加在两个环节之间"
+    },
+    {
+      "id": "ac-disturbance-n",
+      "title": "加在两环节间的扰动 N(s)",
+      "keys": [
+        "N"
+      ],
+      "description": "以正号加在G₁、G₂之间的扰动拉普拉斯变换，不是分子多项式N(s)。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "equations": [
+        "U.3.6.4",
+        "U.3.6.5",
+        "U.3.6.6"
+      ],
+      "match": "扰动 N(s) 以正号加在两个环节之间"
+    },
+    {
+      "id": "ac-step-disturbance-amplitude",
+      "title": "阶跃扰动幅值 A",
+      "keys": [
+        "A"
+      ],
+      "description": "N(s)=A/s所表示的阶跃扰动幅值，单位与扰动加入点的信号相同。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "equations": [
+        "U.3.6.6"
+      ],
+      "match": "对于阶跃扰动 N(s)=A/s"
+    },
+    {
+      "id": "ac-disturbance-steady-error",
+      "title": "扰动稳态误差 eₛₛ,N",
+      "keys": [
+        "e_ss,N"
+      ],
+      "description": "给定输入置零时，由该扰动单独造成的误差最终值；本式要求闭环稳定且终值存在。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "unitHtml": "与误差信号相同",
+      "equations": [
+        "U.3.6.6"
+      ],
+      "match": "对于阶跃扰动 N(s)=A/s"
+    },
+    {
+      "id": "ac-pi-model-g",
+      "title": "PI控制器 G(s)",
+      "keys": [
+        "G"
+      ],
+      "description": "3-18模型中位于对象之前的PI控制器，G(s)=Kₚ+K/s，不是前面给定误差分析中的总开环G。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6",
+        "ac-homework3"
+      ],
+      "equations": [
+        "U.3.6.7",
+        "U.3.18.1"
+      ],
+      "match": "3-18模型中位于对象之前的PI控制器，G(s)=Kₚ+K/s，不是前面给定误差分析中的总开环G。",
+      "sourceAnchor": "definition-ac-pi-model-g"
+    },
+    {
+      "id": "ac-pi-model-f",
+      "title": "对象 F(s)",
+      "keys": [
+        "F"
+      ],
+      "description": "3-18给出的线性对象1/(Js)；不补推未声明的传感器或物理标定。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6",
+        "ac-homework3"
+      ],
+      "equations": [
+        "U.3.6.7",
+        "U.3.18.1"
+      ],
+      "match": "3-18给出的线性对象1/(Js)；不补推未声明的传感器或物理标定。",
+      "sourceAnchor": "definition-ac-pi-model-f"
+    },
+    {
+      "id": "ac-pi-model-n-1",
+      "title": "对象输入处扰动 N₁(s)",
+      "keys": [
+        "N_1"
+      ],
+      "description": "以正号加在控制器输出与对象输入之间的扰动变换，单位与该加入点信号相同。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6",
+        "ac-homework3"
+      ],
+      "equations": [
+        "U.3.6.7",
+        "U.3.18.1"
+      ],
+      "match": "以正号加在控制器输出与对象输入之间的扰动变换，单位与该加入点信号相同。",
+      "sourceAnchor": "definition-ac-pi-model-n-1"
+    },
+    {
+      "id": "ac-pi-model-n-2",
+      "title": "输出处扰动 N₂(s)",
+      "keys": [
+        "N_2"
+      ],
+      "description": "以正号加在对象输出之后的扰动变换，单位与输出信号相同。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6",
+        "ac-homework3"
+      ],
+      "equations": [
+        "U.3.6.7",
+        "U.3.18.1"
+      ],
+      "match": "以正号加在对象输出之后的扰动变换，单位与输出信号相同。",
+      "sourceAnchor": "definition-ac-pi-model-n-2"
+    },
+    {
+      "id": "ac-sensitivity",
+      "title": "单位反馈灵敏度 S(s)",
+      "keys": [
+        "S"
+      ],
+      "description": "本处E(s)/R(s)=1/[1+G(s)]，描述给定输入到比较点误差的传递关系。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "unitHtml": "无量纲（单位反馈同标定）",
+      "equations": [
+        "U.3.6.8",
+        "U.3.6.10"
+      ],
+      "match": "误差传递函数是 S(s)=E(s)/R(s)"
+    },
+    {
+      "id": "ac-dynamic-c-0",
+      "title": "动态误差展开系数 c₀",
+      "keys": [
+        "c_0"
+      ],
+      "description": "S(s)在s=0附近升幂展开的常数项；乘给定输入r(t)。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "unitHtml": "无量纲",
+      "equations": [
+        "U.3.6.8",
+        "U.3.6.9"
+      ],
+      "match": "这里用 c₀、c₁、c₂ 表示展开系数"
+    },
+    {
+      "id": "ac-dynamic-c-1",
+      "title": "动态误差展开系数 c₁",
+      "keys": [
+        "c_1"
+      ],
+      "description": "S(s)的s项系数；在长期误差近似中乘r′(t)，不是劳斯表元素c₁。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "unitHtml": "s",
+      "equations": [
+        "U.3.6.8",
+        "U.3.6.9"
+      ],
+      "match": "这里用 c₀、c₁、c₂ 表示展开系数"
+    },
+    {
+      "id": "ac-dynamic-c-2",
+      "title": "动态误差展开系数 c₂",
+      "keys": [
+        "c_2"
+      ],
+      "description": "S(s)的s²项系数；在长期误差近似中乘r″(t)，不是Ka的别名。",
+      "section": "ac-3-6",
+      "sections": [
+        "ac-3-6"
+      ],
+      "unitHtml": "s²",
+      "equations": [
+        "U.3.6.8",
+        "U.3.6.9"
+      ],
+      "match": "这里用 c₀、c₁、c₂ 表示展开系数"
+    },
+    {
+      "id": "ac-root-loop",
+      "title": "开环环路传递函数 L(s)",
+      "keys": [
+        "L",
+        "L_0"
+      ],
+      "description": "L(s)=G(s)H(s)=K N(s)/D(s)是包含可变增益的环路传递函数；L₀通常表示尚未乘K的固定部分，应按本页特征方程确认。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-3",
+        "ac-4-4"
+      ],
+      "match": "令开环传递函数 L(s)=G(s)H(s)"
+    },
+    {
+      "id": "ac-root-gain",
+      "title": "根轨迹增益 K",
+      "keys": [
+        "K"
+      ],
+      "description": "根轨迹研究中变化的非负实增益；是模型增益，不是整数分支编号k。其单位/数值标度由具体传递函数定义。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-3",
+        "ac-4-4"
+      ],
+      "unitHtml": "依模型标度",
+      "match": "K 是物理上调节的增益"
+    },
+    {
+      "id": "ac-root-n",
+      "title": "分子多项式 N(s)",
+      "keys": [
+        "N"
+      ],
+      "description": "约定首一且与D互素的分子多项式，其根zⱼ为所研究开环零点。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-3",
+        "ac-4-4"
+      ],
+      "match": "先约定 N、D 均为首一多项式"
+    },
+    {
+      "id": "ac-root-d",
+      "title": "分母多项式 D(s)",
+      "keys": [
+        "D"
+      ],
+      "description": "约定首一且与N互素的分母多项式，其根pᵢ为所研究开环极点。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-3",
+        "ac-4-4"
+      ],
+      "match": "先约定 N、D 均为首一多项式"
+    },
+    {
+      "id": "ac-root-p-i",
+      "title": "开环极点 pᵢ",
+      "keys": [
+        "p_i"
+      ],
+      "description": "分母D(s)的第i个根，按重数计数；不是任意增益下的闭环极点。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-3",
+        "ac-4-4"
+      ],
+      "unitHtml": "与s同单位",
+      "match": "先约定 N、D 均为首一多项式"
+    },
+    {
+      "id": "ac-root-z-j",
+      "title": "开环零点 zⱼ",
+      "keys": [
+        "z_j"
+      ],
+      "description": "分子N(s)的第j个根，按重数计数。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-3",
+        "ac-4-4"
+      ],
+      "unitHtml": "与s同单位",
+      "match": "先约定 N、D 均为首一多项式"
+    },
+    {
+      "id": "ac-root-count-n",
+      "title": "开环极点个数 n",
+      "keys": [
+        "n"
+      ],
+      "description": "约去不影响所研究特征方程的公共因子后，分母阶数/开环极点总数，按重数计数。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-3",
+        "ac-4-4"
+      ],
+      "unitHtml": "无量纲整数",
+      "match": "若极点数 n 大于零点数 m"
+    },
+    {
+      "id": "ac-root-count-m",
+      "title": "有限开环零点个数 m",
+      "keys": [
+        "m"
+      ],
+      "description": "分子阶数/有限开环零点总数，按重数计数。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3",
+        "ac-4-3",
+        "ac-4-4"
+      ],
+      "unitHtml": "无量纲整数",
+      "match": "若极点数 n 大于零点数 m"
+    },
+    {
+      "id": "ac-root-index-q",
+      "title": "相角绕转整数 q",
+      "keys": [
+        "q"
+      ],
+      "description": "使相角条件包含整周角的整数，不是可调物理增益；参数根轨迹页的q另有含义。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3"
+      ],
+      "unitHtml": "无量纲整数",
+      "match": "K 是物理上调节的增益"
+    },
+    {
+      "id": "ac-root-index-k",
+      "title": "渐近线编号 k",
+      "keys": [
+        "k"
+      ],
+      "description": "从0到n−m−1的渐近线整数编号；不能代替控制增益K。",
+      "section": "ac-4-1",
+      "sections": [
+        "ac-4-1",
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3"
+      ],
+      "unitHtml": "无量纲整数",
+      "match": "K 是物理上调节的增益"
+    },
+    {
+      "id": "ac-root-asym-N-a",
+      "title": "渐近线条数 Nₐ",
+      "keys": [
+        "N_a"
+      ],
+      "description": "n>m时通向无穷远的渐近线数，等于n−m。",
+      "section": "ac-4-2-1",
+      "sections": [
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3"
+      ],
+      "unitHtml": "无量纲整数",
+      "match": "这里Nₐ=n−m是通向无穷远的渐近线条数；σₐ是它们在实轴上的交点坐标；φₖ为第k条渐近线相对实轴正向的角度。零极点均按重数求和。",
+      "sourceAnchor": "ac-root-asymptote-symbols"
+    },
+    {
+      "id": "ac-root-asym-σ-a",
+      "title": "渐近线实轴交点 σₐ",
+      "keys": [
+        "σ_a"
+      ],
+      "description": "渐近线在实轴相交的坐标，按极点之和减零点之和再除以n−m计算；不是每条分支的分离点。",
+      "section": "ac-4-2-1",
+      "sections": [
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3"
+      ],
+      "unitHtml": "与s相同",
+      "match": "这里Nₐ=n−m是通向无穷远的渐近线条数；σₐ是它们在实轴上的交点坐标；φₖ为第k条渐近线相对实轴正向的角度。零极点均按重数求和。",
+      "sourceAnchor": "ac-root-asymptote-symbols"
+    },
+    {
+      "id": "ac-root-asym-φ-k",
+      "title": "第k条渐近线角度 φₖ",
+      "keys": [
+        "φ_k"
+      ],
+      "description": "渐近线相对于实轴正向的角度，正增益负反馈与零度条件的公式不同。",
+      "section": "ac-4-2-1",
+      "sections": [
+        "ac-4-2-1",
+        "ac-4-2-2",
+        "ac-4-2-3"
+      ],
+      "unitHtml": "度",
+      "match": "这里Nₐ=n−m是通向无穷远的渐近线条数；σₐ是它们在实轴上的交点坐标；φₖ为第k条渐近线相对实轴正向的角度。零极点均按重数求和。",
+      "sourceAnchor": "ac-root-asymptote-symbols"
+    },
+    {
+      "id": "ac-root-angle-p-r",
+      "title": "所考察复极点 pᵣ",
+      "keys": [
+        "p_r"
+      ],
+      "description": "计算出射角时选定的复开环极点；向量相角要按本节约定从其他点指向该点。",
+      "section": "ac-4-2-1",
+      "sections": [
+        "ac-4-2-1",
+        "ac-4-2-2"
+      ],
+      "unitHtml": "与s同单位",
+      "match": "在复极点 pᵣ 附近令"
+    },
+    {
+      "id": "ac-root-angle-z-r",
+      "title": "所考察复零点 zᵣ",
+      "keys": [
+        "z_r"
+      ],
+      "description": "计算到达角时选定的复开环零点。",
+      "section": "ac-4-2-1",
+      "sections": [
+        "ac-4-2-1",
+        "ac-4-2-2"
+      ],
+      "unitHtml": "与s同单位",
+      "match": "在复零点 zᵣ 附近取"
+    },
+    {
+      "id": "ac-root-angle-θ-出",
+      "title": "复极点出射角 θ出",
+      "keys": [
+        "θ_出"
+      ],
+      "description": "沿增益增大方向离开选定复极点的局部切线角，按模360°解释。",
+      "section": "ac-4-2-1",
+      "sections": [
+        "ac-4-2-1",
+        "ac-4-2-2"
+      ],
+      "unitHtml": "度",
+      "match": "在复极点 pᵣ 附近令"
+    },
+    {
+      "id": "ac-root-angle-θ-到",
+      "title": "复零点到达位置角 θ到",
+      "keys": [
+        "θ_到"
+      ],
+      "description": "本式定义为从零点指向附近轨迹的位置向量角；与沿增益增大驶入的切向角相差180°。",
+      "section": "ac-4-2-1",
+      "sections": [
+        "ac-4-2-1",
+        "ac-4-2-2"
+      ],
+      "unitHtml": "度",
+      "match": "若将“到达角”定义为从零点指向附近轨迹的位置向量角"
+    },
+    {
+      "id": "ac-parameter-q",
+      "title": "参数根轨迹的参数 q",
+      "keys": [
+        "q"
+      ],
+      "description": "A(s)+qB(s)=0中单独变化的实参数；此处q不是相角条件的绕转整数。",
+      "section": "ac-4-2-4",
+      "sections": [
+        "ac-4-2-4"
+      ],
+      "unitHtml": "依具体参数的物理意义",
+      "match": "则把 q 视为变化参数"
+    },
+    {
+      "id": "ac-parameter-a",
+      "title": "参数分离后的固定部分 A(s)",
+      "keys": [
+        "A"
+      ],
+      "description": "参数q为0时保留的固定多项式，其根为等效根轨迹的出发极点。",
+      "section": "ac-4-2-4",
+      "sections": [
+        "ac-4-2-4"
+      ],
+      "match": "A(s)=s²+2s+6，B(s)=s"
+    },
+    {
+      "id": "ac-parameter-b",
+      "title": "参数分离后的系数 B(s)",
+      "keys": [
+        "B"
+      ],
+      "description": "乘在q上的固定多项式；等效环路的零极点来自B/A。",
+      "section": "ac-4-2-4",
+      "sections": [
+        "ac-4-2-4"
+      ],
+      "match": "A(s)=s²+2s+6，B(s)=s"
+    },
+    {
+      "id": "ac-modal-σ",
+      "title": "模态极点实部 σ",
+      "keys": [
+        "σ"
+      ],
+      "description": "所选闭环特征根的实部；负值对应衰减，正值对应增长。",
+      "section": "ac-4-3",
+      "sections": [
+        "ac-4-3"
+      ],
+      "unitHtml": "s⁻¹",
+      "match": "把所选共轭闭环极点写成s=σ±jωd时，σ为实部，ωd为虚部绝对值。等效二阶参数定义为ωₙ=√(σ²+ωd²)、ξ=−σ/ωₙ；若σ>0，则ξ<0，对应增长模态，不能套用稳定二阶阶跃指标。",
+      "sourceAnchor": "ac-modal-pole-symbols"
+    },
+    {
+      "id": "ac-modal-ω-d",
+      "title": "模态振荡角频率 ωd",
+      "keys": [
+        "ω_d"
+      ],
+      "description": "所选共轭特征根虚部的绝对值，衰减还是增长另由σ决定。",
+      "section": "ac-4-3",
+      "sections": [
+        "ac-4-3"
+      ],
+      "unitHtml": "rad/s",
+      "match": "把所选共轭闭环极点写成s=σ±jωd时，σ为实部，ωd为虚部绝对值。等效二阶参数定义为ωₙ=√(σ²+ωd²)、ξ=−σ/ωₙ；若σ>0，则ξ<0，对应增长模态，不能套用稳定二阶阶跃指标。",
+      "sourceAnchor": "ac-modal-pole-symbols"
+    },
+    {
+      "id": "ac-modal-ω-n",
+      "title": "等效二阶自然频率 ωₙ",
+      "keys": [
+        "ω_n"
+      ],
+      "description": "由所选共轭极点模长√(σ²+ωd²)定义的等效二阶频率；二阶主导近似还需检查其他模态/留数。",
+      "section": "ac-4-3",
+      "sections": [
+        "ac-4-3"
+      ],
+      "unitHtml": "rad/s",
+      "match": "把所选共轭闭环极点写成s=σ±jωd时，σ为实部，ωd为虚部绝对值。等效二阶参数定义为ωₙ=√(σ²+ωd²)、ξ=−σ/ωₙ；若σ>0，则ξ<0，对应增长模态，不能套用稳定二阶阶跃指标。",
+      "sourceAnchor": "ac-modal-pole-symbols"
+    },
+    {
+      "id": "ac-modal-ξ",
+      "title": "等效二阶阻尼比 ξ",
+      "keys": [
+        "ξ"
+      ],
+      "description": "由所选共轭极点计算的−σ/ωₙ；σ>0时为负，不可误套稳定欠阻尼阶跃公式。",
+      "section": "ac-4-3",
+      "sections": [
+        "ac-4-3"
+      ],
+      "unitHtml": "无量纲",
+      "match": "把所选共轭闭环极点写成s=σ±jωd时，σ为实部，ωd为虚部绝对值。等效二阶参数定义为ωₙ=√(σ²+ωd²)、ξ=−σ/ωₙ；若σ>0，则ξ<0，对应增长模态，不能套用稳定二阶阶跃指标。",
+      "sourceAnchor": "ac-modal-pole-symbols"
     }
   ]
 }

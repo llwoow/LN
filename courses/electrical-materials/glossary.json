@@ -1096,7 +1096,8 @@
       "id": "emat-strain-epsilon",
       "title": "工程应变 ε",
       "keys": [
-        "ε"
+        "ε",
+        "ϵ"
       ],
       "unitHtml": "1",
       "section": "em-2-5",
@@ -1191,6 +1192,120 @@
       ],
       "match": "热平衡电子系统的化学势",
       "description": "热平衡电子系统的化学势。"
+    },
+    {
+      "id": "materials-potential-A",
+      "title": "有效势吸引系数 A",
+      "keys": [
+        "A"
+      ],
+      "description": "U(r)=−A/r+B/rˢ中的正吸引系数，配合所选长度和能量单位使用。",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "unitHtml": "能量×长度",
+      "match": "其中A、B为正的模型参数，s>1是排斥指数"
+    },
+    {
+      "id": "materials-potential-B",
+      "title": "有效势排斥系数 B",
+      "keys": [
+        "B"
+      ],
+      "description": "U(r)=−A/r+B/rˢ中的正排斥系数；不能与别处的磁感应强度B混同。",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "unitHtml": "能量×长度ˢ",
+      "match": "其中A、B为正的模型参数，s>1是排斥指数"
+    },
+    {
+      "id": "materials-potential-s",
+      "title": "排斥指数 s",
+      "keys": [
+        "s"
+      ],
+      "description": "有效势中排斥项B/rˢ的指数，本例规定s>1；不是拉普拉斯复频率。",
+      "section": "em-2-2",
+      "sections": [
+        "em-2-2"
+      ],
+      "unitHtml": "无量纲",
+      "match": "其中A、B为正的模型参数，s>1是排斥指数"
+    },
+    {
+      "id": "materials-chain-spring",
+      "title": "原子链弹性常量 K",
+      "keys": [
+        "K"
+      ],
+      "description": "最近邻一维谐链中连接相邻原子的弹性常量；不是温度单位K。",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "unitHtml": "N/m",
+      "match": "相邻原子由弹性常量 K 连接"
+    },
+    {
+      "id": "materials-temperature",
+      "title": "温度 T",
+      "keys": [
+        "T"
+      ],
+      "description": "局部热平衡近似下定义的连续介质温度场。",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "unitHtml": "K；温差数值也可用℃",
+      "match": "傅里叶定律把热流密度与温度梯度联系起来"
+    },
+    {
+      "id": "materials-temperature-difference",
+      "title": "两端温差 ΔT",
+      "keys": [
+        "delta:T"
+      ],
+      "description": "平板一维稳态模型中两端温度之差；不是绝对温度。",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "unitHtml": "K",
+      "match": "令两端温差为"
+    },
+    {
+      "id": "materials-adjacent-plus",
+      "title": "u_n+1",
+      "keys": [
+        "u_n+1"
+      ],
+      "description": "第n+1个原子相对其平衡位置的位移。",
+      "unitHtml": "m",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "uₙ₊₁和uₙ₋₁分别是第n+1与第n−1个原子相对各自平衡位置的位移，与中心原子的uₙ一起决定两侧弹簧的伸长差。",
+      "sourceAnchor": "adjacent-atom-displacements"
+    },
+    {
+      "id": "materials-adjacent-minus",
+      "title": "u_n−1",
+      "keys": [
+        "u_n−1"
+      ],
+      "description": "第n−1个原子相对其平衡位置的位移。",
+      "unitHtml": "m",
+      "section": "em-2-4",
+      "sections": [
+        "em-2-4"
+      ],
+      "match": "uₙ₊₁和uₙ₋₁分别是第n+1与第n−1个原子相对各自平衡位置的位移，与中心原子的uₙ一起决定两侧弹簧的伸长差。",
+      "sourceAnchor": "adjacent-atom-displacements"
     }
   ]
 }

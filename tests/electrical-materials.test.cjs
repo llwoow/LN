@@ -26,7 +26,7 @@ for(const s of course.sections) {
   vm.runInContext(lesson,child,{filename:s.src});
   const html = child.window.LN_LESSONS[course.id+'/'+s.id].html;
   assert(/<h2[ >]/.test(html), s.id+' lacks a real reading title');
-  if(s.textbookSection)assert(html.includes('ln-source-note'), s.id+' lacks source note');
+  if(s.textbookSection)assert(html.includes('reading-reference'), s.id+' lacks brief reference');
 }
 assert.equal(map.nodes.length,course.sections.length);
 for(const n of map.nodes) assert(found.has(n.section));

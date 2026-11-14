@@ -1,0 +1,21 @@
+{
+  "ac-time-constant": "definition-passage-3",
+  "ac-damping-ratio": "definition-passage-3",
+  "ac-natural-frequency": "definition-passage-4",
+  "ac-damped-frequency": "definition-passage-5",
+  "ac-characteristic": "definition-passage-3",
+  "ac-routh": "definition-passage-22",
+  "ac-stability": "definition-passage-22",
+  "ac-type": "definition-passage-20",
+  "ac-error": "definition-passage-1",
+  "ac-disturbance": "definition-passage-35",
+  "ac-final": "definition-passage-17",
+  "ac-damping": "definition-passage-1",
+  "ac-constant": "definition-passage-10",
+  "ac-root-locus": "definition-passage-1",
+  "ac-root-asymptote": "definition-passage-8",
+  "ac-root-breakaway": "definition-passage-10",
+  "ac-root-departure": "definition-passage-13",
+  "ac-root-arrival": "definition-passage-14",
+  "ac-root-zero-degree": "definition-passage-1"
+}

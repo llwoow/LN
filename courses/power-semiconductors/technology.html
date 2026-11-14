@@ -6,7 +6,7 @@
 <p>晶棒定向后切片，经过研磨、去损伤、抛光与清洗。化学机械抛光（CMP）利用化学反应与机械作用共同得到平整表面。晶圆缺口用来标明取向，切片标称厚度与后续漂移层的厚度是两份规格。对 4H-SiC，常用物理气相传输（PVT）生长晶体，再把抛光衬底作为外延的起点。</p>
 <p id="def-epitaxy">外延是在已定向的单晶表面继续生长晶体层。对典型垂直 MOSFET，可在 n⁺ 衬底上生长控制过的 n⁻ 层，用它承载阻断电场。降低外延层掺杂，给定反偏下耗尽层变宽，导通电阻也会增加。只改变衬底厚度，不能等同于改变漂移层厚度。</p>
 <p>以均匀、低场的 n 型外延为例，令 \(N_D=2.0\times10^{15}\,\mathrm{cm^{-3}}\)、\(\mu_n=1000\,\mathrm{cm^2/(V\,s)}\)、厚度 \(20\,\mu\mathrm m\)。用式（1.2）的漂移项得 \(\rho\approx3.12\,\Omega\mathrm{\,cm}\)，层的比电阻约 \(6.24\,\mathrm{m\Omega\,cm^2}\)。这是漂移层的估计，不能当作整个芯片的导通电阻或阻断额定值。</p>
-<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 21–24 页。Quirk §4.5、§4.7–4.9 的单晶硅、晶圆制备与外延。<a href="https://www-pub.iaea.org/MTCD/Publications/PDF/TE_1681_web.pdf" target="_blank" rel="noopener">IAEA-TECDOC-1681 的中子嬗变掺杂</a>及 <a href="https://www.csp.fraunhofer.de/en/areas-of-research/crystallization.html" target="_blank" rel="noopener">Fraunhofer CSP 的 SiC 晶体生长</a>。<a href="https://assets.wolfspeed.com/uploads/2020/12/materials_catalog.pdf" target="_blank" rel="noopener">Wolfspeed 衬底与外延目录</a> 的晶向、导电型、厚度与浓度条目，用来核对这些是独立规格。</p></details>
+<details class="reading-references"><summary>参考</summary><p>《半导体制造技术》 · <a href="https://www-pub.iaea.org/MTCD/Publications/PDF/TE_1681_web.pdf" target="_blank" rel="noopener">IAEA-TECDOC-1681 的中子嬗变掺杂</a> · <a href="https://www.csp.fraunhofer.de/en/areas-of-research/crystallization.html" target="_blank" rel="noopener">Fraunhofer CSP 的 SiC 晶体生长</a> · <a href="https://assets.wolfspeed.com/uploads/2020/12/materials_catalog.pdf" target="_blank" rel="noopener">Wolfspeed 衬底与外延目录</a></p></details>
 </section>
 <section data-lesson="wafer-fabrication">
 <h2>把元胞截面变成晶圆上的工艺步骤</h2>
@@ -25,7 +25,7 @@
 <p>在需要开窗的介质膜上涂正性光刻胶，经对准和曝光后，显影除去曝光区的胶。到这一步只是胶上出现开口，下面的膜仍在。刻蚀通过开口移除相应薄膜，去胶后图形才保留在介质里。若将开口用于掺杂，注入后的退火用于激活杂质并修复部分晶格损伤。离子能量主要改变深度分布，剂量决定单位面积注入的离子数，温度和时间还会改变最终剖面。</p>
 <p id="def-cvd">化学气相淀积（CVD）通过气态前驱物在表面反应形成膜。热氧化则由氧化剂与硅反应，生长氧化层时消耗一部分硅。笔记的微米级 CVD 氧化物示例可用来理解介质开窗。薄栅氧、厚层间介质和表面钝化负责不同的工作，应分别标注。</p>
 <p>若某一轮光刻错位，最直接的风险随其任务而变。源接触孔偏向栅时先看源栅短路和接触不良；场环掩模偏移时先看终端间距与边缘击穿。同一个测量项目无法同时排除两类问题。表3.1是教学流程，各代器件的掩模数量、薄膜材料和工序顺序会变。</p>
-<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 24–25 页。Quirk §9.3 的介质与钝化层结构及第 10–17 章的工艺分类。<a href="https://www.asml.com/en/company/stories/2021/semiconductor-manufacturing-process-steps" target="_blank" rel="noopener">ASML 的淀积、曝光、刻蚀与注入流程</a>核对各步骤的作用。这里的元胞流程是 LN 教学重构。</p></details>
+<details class="reading-references"><summary>参考</summary><p>《半导体制造技术》 · <a href="https://www.asml.com/en/company/stories/2021/semiconductor-manufacturing-process-steps" target="_blank" rel="noopener">ASML 的淀积、曝光、刻蚀与注入流程</a></p></details>
 </section>
 <section data-lesson="junction-termination">
 <h2>从结终端到封装与电热测试</h2>
@@ -35,7 +35,7 @@
 <p>晶圆探针阶段可在可接触的焊盘上做规定的漏电、阈值和电阻筛查。切割后，芯片贴装到导热且可提供电连接的基座，用键合线、铜夹等连接正面电极，再用塑封、模块或压接方式形成产品。终测还需验证端子连接与成品规格。键合、基板和外部回路加入电阻、电感、热阻，所以静态芯片合格与系统动态表现是两层证据。</p>
 <p id="def-thermal-impedance">热阻 \(R_{\theta}\) 表示给定稳态热路径上的温升除以耗散功率，单位 \(\mathrm{K/W}\)。瞬态热阻抗 \(Z_{\theta}(t)\) 描述阶跃功率作用到时间 \(t\) 的温升响应。以固定壳温 60 ℃、单次矩形脉冲耗散 80 W 为例，若该脉宽的结到壳 \(Z_{\theta JC}=0.30\,\mathrm{K/W}\)，估计脉冲末结温约 84 ℃。若重复脉冲之间未完全冷却，应考虑累积温升，不能反复从 60 ℃起算。</p>
 <p>查看热参数时先定位测温点和边界。结到壳热阻对应规定的壳面和导热条件，结到环境热阻包含特定板与环境。若走「结 → 壳 → 散热器 → 环境」的串联近似，只加这条路径的热阻，不能再加一遍包含整条路径的 \(R_{\theta JA}\)。</p>
-<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 21 页。Baliga §3.6 的场环、场板与 JTE；Quirk §9.3 及第 19–20 章的测试与封装分类。<a href="https://www.ti.com/lit/an/spra953d/spra953d.pdf" target="_blank" rel="noopener">TI SPRA953D §1–3</a>，以及 <a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-an2011-05-igbt-modules-explanation-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon AN 2011-05 §3.13</a>核对测温点与热阻抗条件。</p></details>
+<details class="reading-references"><summary>参考</summary><p>《Fundamentals of Power Semiconductor Devices》 · 《半导体制造技术》 · <a href="https://www.ti.com/lit/an/spra953d/spra953d.pdf" target="_blank" rel="noopener">TI SPRA953D</a> · <a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-an2011-05-igbt-modules-explanation-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon AN 2011-05</a></p></details>
 </section>
 <section data-lesson="device-selection">
 <h2>把数据手册读成一份损耗和结温账</h2>
@@ -57,5 +57,5 @@
 <h3 id="worked-datasheet">读一次真实数据手册</h3>
 <p>以 STW40N65M2（DS10858 Rev. 2）为例。厂家表 4 在 \(V_{GS}=0\)、\(I_D=1\,\mathrm{mA}\) 下给出漏源击穿电压最小值 650 V。阈值典型 3 V，判据是 \(I_D=250\,\mu\mathrm A\)。导通电阻则是在 \(V_{GS}=10\,\mathrm V\)、\(I_D=16\,\mathrm A\)、壳温 25 ℃ 下给出，典型 87 mΩ、最大 99 mΩ。三个数对应三个不同测试条件，3 V 的阈值不能作为按 99 mΩ 计算的驱动电压。</p>
 <p>按上述通态测试点的最大电阻复算，16 A 时的导通压降约 1.58 V，瞬时导通损耗约 25.3 W。这里用的是冷壳条件下的电阻，连续运行要重新校核热态电阻。厂家表 5 的总栅电荷典型值 56.5 nC 来自 520 V、32 A 的门极充电测试，不能拿它反推上述 16 A 测试下的开关能量。把数值连同测试条件抄到选型表，才能判断哪些数据可以放进同一个模型。</p>
-<details class="review-notes"><summary>资料出处（备查）</summary><p>Baliga §6.15–6.16 和第 9 章开关特性。<a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-an2011-05-igbt-modules-explanation-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon AN 2011-05 的 SOA、能量和热参数</a>用于定义比较条件。真实规格摘自 <a href="https://www.st.com/resource/en/datasheet/stw40n65m2.pdf" target="_blank" rel="noopener">STW40N65M2 数据手册表 4–5</a>。表3.2为原创教学数据。</p></details>
+<details class="reading-references"><summary>参考</summary><p>《Fundamentals of Power Semiconductor Devices》 · <a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-an2011-05-igbt-modules-explanation-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon AN 2011-05 的 SOA、能量和热参数</a> · <a href="https://www.st.com/resource/en/datasheet/stw40n65m2.pdf" target="_blank" rel="noopener">STW40N65M2 数据手册表 4–5</a></p></details>
 </section>

@@ -5,11 +5,12 @@
 <p>硅是金刚石立方结构，可看成面心立方晶格加上两个原子的基元。4H-SiC 的「4H」描述特定的六方堆垛周期。晶面 \((hkl)\) 和方向 \([uvw]\) 分别描述平面和向量。立方晶体中 \([100]\) 垂直于 \((100)\)。六方晶体常用四指数晶面记号 \((hkil)\)，其中 \(i=-(h+k)\)，方向的四指数转换另有规则。标明晶面是因为外延、界面和刻蚀可能随取向改变，不能从晶面编号直接推断掺杂。</p>
 <p id="def-bandgap">大量原子成晶体后，能量状态形成允许带。导带底记 \(E_C\)，价带顶记 \(E_V\)，禁带宽度 \(E_g=E_C-E_V\)。导带电子可参与导电，价带缺少一个电子时可用带正电的空穴描述。热平衡的费米能级 \(E_F\) 决定能级的占据概率。它是能量参考，不表示样品中每个电子都具有这一个能量。</p>
 <p id="def-carrier-density">用 \(n,p\) 表示自由电子和空穴的体浓度，\(n_i\) 表示该温度下的本征载流子浓度。本征材料在平衡时 \(n=p=n_i\)。在热平衡、非简并的近似下，电子与空穴的浓度乘积恒为 \(n_i^2\)。掺杂提高一种载流子的浓度，另一种浓度会相应降低。升温会改变 \(n_i\)，乘积随温度变化。</p>
+<p id="def-dopant-densities">N_D、N_A分别为施主、受主体浓度；N_D⁺、N_A⁻分别为其中已电离的部分。只有明确采用完全电离近似时，才以N_D、N_A代替相应电离浓度。</p>
 <p id="def-compensation">浅施主电离后贡献电子，留下正离子。浅受主俘获电子后产生空穴，留下负离子。用 \(N_D^+\) 和 \(N_A^-\) 表示电离施主与受主浓度。体内远离界面的准中性区近似满足正负电荷密度相等。</p>
 <div class="math-block" id="eq-carrier-neutrality" data-equation="1.1">\[p+N_D^+=n+N_A^-,\qquad np=n_i^2.\]</div>
 <p>例如取 300 K 的教学近似 \(n_i=10^{10}\,\mathrm{cm^{-3}}\)。同一均匀区域的施主为 \(10^{16}\,\mathrm{cm^{-3}}\)，受主为 \(2\times10^{15}\,\mathrm{cm^{-3}}\)，假定完全电离。式（1.1）给出 \(n-p=8\times10^{15}\,\mathrm{cm^{-3}}\)，远大于 \(n_i\)。于是 \(n\approx8\times10^{15}\,\mathrm{cm^{-3}}\)，\(p\approx1.25\times10^4\,\mathrm{cm^{-3}}\)。补偿改变的是净掺杂，计算时不能把两种杂质浓度直接相加。在高温本征区、低温冻结区或重掺杂简并区，应回到适用的载流子统计。</p>
 <p>把这套语言带入<a href="#course/power-semiconductors/carrier-transport">载流子输运</a>。浓度告诉我们有多少载流子，迁移率和浓度梯度才告诉我们它们怎样形成电流。</p>
-<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 1–3、24 页。Sze 第 3 版第 1 章中晶体结构、能带与载流子浓度部分。4H-SiC 晶体结构对照 <a href="https://assets.wolfspeed.com/uploads/2020/12/materials_catalog.pdf" target="_blank" rel="noopener">Wolfspeed 材料目录的物理性质表</a>。</p></details>
+<details class="reading-references"><summary>参考</summary><p>《半导体器件物理》 · <a href="https://assets.wolfspeed.com/uploads/2020/12/materials_catalog.pdf" target="_blank" rel="noopener">Wolfspeed 材料目录的物理性质表</a></p></details>
 </section>
 <section data-lesson="carrier-transport">
 <h2>漂移、扩散与载流子寿命</h2>
@@ -21,7 +22,7 @@
 <h3>撤去注入之后，为什么电荷还在</h3>
 <p id="def-lifetime">载流子寿命 \(\tau\) 衡量过剩载流子消失的时间尺度。只考虑均匀、低注入、单一有效寿命的复合，撤去注入后过剩浓度 \(\Delta n\) 满足 \(d\Delta n/dt=-\Delta n/\tau\)，解为 \(\Delta n(0)e^{-t/\tau}\)。经过一倍寿命还剩约 37%，并不会马上清零。缺陷辅助复合、辐射复合、俄歇复合可在不同注入条件下主导，有效寿命未必固定。</p>
 <p>在器件中，过剩电荷既能复合，也能被外部电场抽出。这是<a href="#course/power-semiconductors/power-diodes/def-recovery">二极管反向恢复</a>与<a href="#course/power-semiconductors/igbt/def-tail">IGBT 尾电流</a>的共同前提，两个波形仍由各自的结构和电路决定。</p>
-<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 3–4 页。Sze 第 3 版第 1 章载流子输运部分。<a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/d65b60631ae1d84dce7c0051412f0b7a_MIT6_012F09_lec03_five_eqn.pdf" target="_blank" rel="noopener">MIT 6.012 漂移扩散与基本方程</a>。</p></details>
+<details class="reading-references"><summary>参考</summary><p>《半导体器件物理》 · <a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/d65b60631ae1d84dce7c0051412f0b7a_MIT6_012F09_lec03_five_eqn.pdf" target="_blank" rel="noopener">MIT 6.012 漂移扩散与基本方程</a></p></details>
 </section>
 <section data-lesson="pn-junction">
 <h2>PN 结怎样从平衡变成阻断</h2>
@@ -37,5 +38,5 @@
 <div class="math-block" id="eq-junction-width" data-equation="1.3">\[x_p+x_n=\sqrt{\frac{2\varepsilon_s}{q}\left(\frac{1}{N_A}+\frac{1}{N_D}\right)(V_{bi}-V_A)}.\]</div>
 <p>若 \(N_A=100N_D\)，p 侧宽度只有 n 侧的 1%。以硅、\(N_D=10^{15}\,\mathrm{cm^{-3}}\)、反偏 100 V 为教学条件，忽略不足 1 V 量级的内建势垒，取 \(\varepsilon_s\approx1.04\times10^{-12}\,\mathrm{F/cm}\)。式（1.3）给出总耗尽宽度约 \(11.45\,\mu\mathrm m\)。电压提高四倍，理想宽度约翻倍。若轻掺杂层不足这一厚度，先触及背面的边界，单边未穿通解不再适用。<a href="#course/power-semiconductors/vdmos-blocking">第二章的 1200 V 等势线</a>用的是同一套方程。</p>
 <p id="def-avalanche">雪崩击穿源于载流子在高场中获得足够能量，碰撞电离产生新的电子空穴对并继续倍增。重掺杂窄耗尽层中还可能出现带间隧穿。单凭反向电压数值无法区分机制，需看掺杂、结结构和温度特性。结边缘曲率会改变场分布，因而器件还需要<a href="#course/power-semiconductors/junction-termination">终端结构</a>。</p>
-<details class="review-notes"><summary>资料出处（备查）</summary><p>笔记 PDF 第 5–8 页。Sze 第 3 版 §2.2.1 的突变结及第 2 章注入内容。Baliga §3.1–3.2 的碰撞电离与一维突变结。<a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/resources/mit6_012f09_lec04/" target="_blank" rel="noopener">MIT 6.012 PN 结静电学</a>。</p></details>
+<details class="reading-references"><summary>参考</summary><p>《Fundamentals of Power Semiconductor Devices》 · 《半导体器件物理》 · <a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/resources/mit6_012f09_lec04/" target="_blank" rel="noopener">MIT 6.012 PN 结静电学</a></p></details>
 </section>
