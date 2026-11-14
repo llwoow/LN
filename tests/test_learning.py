@@ -37,4 +37,11 @@ class ContentIntegration(unittest.TestCase):
             if section=='transformer-homework':continue  # Separately transcribed and covered by homework conversion tests.
             h=REF['assignment'](ROOT/'courses/electrical-machines/lessons'/(section+'.js'))['html']
             actual=[hashlib.sha256(s.encode()).hexdigest() for s in re.findall(r'<svg\b.*?</svg>',h,re.S)]
-            self.assertEqual(actual,expected,section)
+            if section=='transformer-quickref':
+                # Raster quickref withdrawn; the stable route now uses the existing native formula index.
+                canonical=REF['assignment'](ROOT/'courses/electrical-machines/lessons/transformer-formulas.js')['html']
+                self.assertTrue(h.startswith(canonical))
+                expected_native=[hashlib.sha256(x.encode()).hexdigest() for x in re.findall(r'<svg\b.*?</svg>',canonical,re.S)]
+                self.assertEqual(actual,expected_native)
+            else:
+                self.assertEqual(actual,expected,section)

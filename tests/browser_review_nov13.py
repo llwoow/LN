@@ -66,10 +66,9 @@ def main():
     saved=page.evaluate('(id)=>JSON.parse(localStorage.getItem("ln.practice.v1"))[id]',qid);assert saved['favorite'] and saved['selfMistake'];assert saved['attempts'][0]['correct'] is None
     preserved=page.evaluate('(id)=>JSON.parse(localStorage.getItem("ln.practice.v1"))[id]',legacy['id']);assert preserved==original,('legacy record changed',preserved)
     assert not errors,errors;assert not http,http;page.close()
-   # Print the reviewed standalone answer in CI. The source PDF remains untouched locally.
+   # Verify the authored standalone HTML; no document exports are uploaded.
    page=browser.new_page(viewport={'width':1440,'height':1100});page.goto(base+'answers/power-semiconductors/chapter-2/答案.html',wait_until='networkidle');page.evaluate('document.fonts.ready');assert page.locator('.sheet').count()==9;assert not page.locator('.katex-error').count();assert '未重新核分' in page.locator('#review').inner_text()
    page.screenshot(path=str(OUT/'standalone-answer-desktop.png'),full_page=True)
-   page.pdf(path=str(OUT/'answer-reviewed.pdf'),prefer_css_page_size=True,print_background=True)
    browser.close()
  finally:server.shutdown();server.server_close()
  (OUT/'audit.json').write_text(json.dumps({'commit':__import__('subprocess').check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'readings':audit,'legacyRecordsPreserved':True,'nativeCollections':True,'openManualReview':True},ensure_ascii=False,indent=2))

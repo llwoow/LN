@@ -1,6 +1,5 @@
 {
   "title": "第二章已做习题与详解",
-  "pdf": "courses/electrical-machines/files/transformer-homework.pdf",
   "sourceScope": "用户提供的13页整理稿，按原题号转写；网页复算并显式保留原整理列出的教材参考差异。",
   "questions": [
     {
@@ -561,5 +560,12 @@
       "title": "复功率",
       "description": "第2-7题带下划线的S₂为复功率，定义为端电压相量乘以电流相量的共轭，单位VA；它与视在功率幅值U₂I₂的标记分开，归算保持对应复功率不变。"
     }
-  ]
+  ],
+  "citation": {
+    "title": "汤蕴璆《电机学》第5版",
+    "publisher": "机械工业出版社",
+    "isbn": "9787111447092",
+    "url": "https://www.cmpedu.com/books/book/2027021.htm",
+    "scope": "第1—3章；习题整理稿按原题号及原页码引用。"
+  }
 }

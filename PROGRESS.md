@@ -29,7 +29,7 @@ python -m http.server 4173 --bind 127.0.0.1
 - 五套配色，日间 / 夜间 / 跟随系统。
 - 原生 HTML、CSS、JavaScript，无需安装依赖。
 - 已整合电机学：磁路、变压器、直流电机、第二章作业及直流电机 3D 交互模型；新增《电磁兼容原理及应用》10章40节正文、8节较完整原理样章（其余32节为首轮扩写，尚未通过深入审校；详见 `courses/electromagnetic-compatibility/REVIEW.md`）。不含音频。
-- 课程正文、公式字体和模型按需加载；保留原讲义 PDF。仅展示已有真实材料的课程。
+- 课程正文、公式字体和模型按需加载；原讲义以书目与官方来源链接引用，不发布PDF。仅展示已有真实材料的课程。
 
 `/` 或 `Ctrl/Cmd + K` 搜索，`Esc` 关闭设置或手机侧栏。
 
@@ -76,10 +76,12 @@ python tests/highschool.browser.py
 
 内容、验收与合并要求见 [REQUIREMENTS.md](REQUIREMENTS.md)，执行入口见 [AGENTS.md](AGENTS.md)。变压器正文采用用户二次整理的PDF网页版，阅读框架、高中资料与练习系统来自切换前完整版本；构建不再插入固定七段正文。
 
-物理001的迁入范围、辨读限制与验证证据见 [PHYSICS001-REVIEW.md](PHYSICS001-REVIEW.md)。常规PDF保留关键帧，播放链接指向LN；这次PR合并并部署后链接才对应上线内容。
+物理001的迁入范围、辨读限制与验证证据见 [PHYSICS001-REVIEW.md](PHYSICS001-REVIEW.md)。逐题网页保留静态图、动画与交互；原卷照片/PDF/表格不再公开，引用定位保留。
 
 ## 构建与部署
 
 推送或合并到 `main` 后，GitHub Actions 运行检查、执行 `python scripts/build-static.py` 并发布 `dist/` 到 GitHub Pages。工作流失败时保留前一版站点。现有 LN 站点采用独立发布流程；两个域名的浏览器学习记录不自动互通。
 
 [Pages 工作流](https://github.com/llwoow/LN/actions/workflows/pages.yml)支持手动重新运行。公开发布的隐私、许可与历史审查按 [PUBLICATION.md](PUBLICATION.md)执行。
+
+2026-11-14：按用户要求将PDF等原始资料改为来源链接和引用，移除当前公开文件中的57份原件/整页副本；[本次发布记录](PUBLICATION-REVIEW-2026-11-14.md)。旧Git历史与旧发布留档尚未清理，不把当前文件撤下称为历史已清除。

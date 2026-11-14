@@ -55,5 +55,25 @@ class PublicationBoundaries(unittest.TestCase):
         self.assertEqual(result.returncode, 1)
         self.assertIn('credentials.json', result.stdout)
 
+    def test_source_documents_and_disguised_pdf_are_blocked(self):
+        self.track('notes.pdf', '%PDF-1.7 example')
+        self.track('renamed.txt', '%PDF-1.7 example')
+        self.track('sheet.xlsx', 'example')
+        result = self.check_gate()
+        self.assertEqual(result.returncode, 1)
+        for name in ['notes.pdf', 'renamed.txt', 'sheet.xlsx']:
+            self.assertIn(name, result.stdout)
+
+    def test_external_pdf_citation_is_allowed(self):
+        self.track('source.html', '<a href="https://docs.example.org/reference.pdf">Source</a>')
+        self.assertEqual(self.check_gate().returncode, 0)
+
+    def test_full_page_scans_are_blocked_in_public_output(self):
+        name = 'courses/hs-physics/physics-001/originals/page.jpg'
+        self.track(name, 'example image payload')
+        result = self.check_gate()
+        self.assertEqual(result.returncode, 1)
+        self.assertIn('source scan or full-page mirror', result.stdout)
+
 if __name__ == '__main__':
     unittest.main()

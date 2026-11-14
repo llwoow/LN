@@ -30,10 +30,10 @@ class SolvedHomework(unittest.TestCase):
         self.assertGreater(sum(n.tag=='math' for n in self.doc.walk()),80)
         self.assertNotIn('katex-error',self.payload['html'])
         self.assertTrue(all(n.attrs['data-equation'].startswith('H.2.') for n in self.doc.walk() if 'data-equation' in n.attrs))
-    def test_original_wiring_diagrams_and_pdf_are_retained(self):
+    def test_wiring_diagrams_and_source_citation_are_retained(self):
         metadata=json.loads((ROOT/'courses/electrical-machines/homework-figures.json').read_text())
-        pdf=(ROOT/'courses/electrical-machines/files/transformer-homework.pdf').read_bytes()
-        self.assertEqual(hashlib.sha256(pdf).hexdigest(),metadata['pdfSHA256'])
+        self.assertNotIn('pdf',self.payload)
+        self.assertIn('出版社书目',self.payload['html'])
         self.assertEqual(len(metadata['figures']),7)
         for figure in metadata['figures']:
             content=(ROOT/'courses/electrical-machines/assets/homework'/figure['file']).read_bytes()

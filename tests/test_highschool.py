@@ -59,8 +59,10 @@ class HighSchoolIntegrity(unittest.TestCase):
         data = json.loads((ROOT/'courses/highschool/catalog.json').read_text(encoding='utf-8'))
         for key, count in [('教材册次与知识',104), ('外研七册单元',42), ('来源目录',28), ('待核事项',5)]:
             self.assertEqual(len(data[key]), count)
-        for name in ['hainan-2027-report.pdf', 'hainan-2027-index.xlsx']:
-            self.assertTrue((ROOT/'courses/highschool/assets'/name).is_file())
+        sources=data['来源目录']
+        self.assertTrue(all(s['网址'].startswith('https://') for s in sources))
+        self.assertIn('source-citation',(ROOT/'highschool-library.js').read_text())
+        self.assertNotIn('hainan-2027-report.pdf',(ROOT/'highschool-library.js').read_text())
 
     def test_learning_paths_keep_their_titles_and_valid_ordered_nodes(self):
         self.assertEqual(sum(len(c['knowledgeMap']['paths']) for c in self.courses), 17)

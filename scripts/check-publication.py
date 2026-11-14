@@ -26,6 +26,12 @@ for path in paths:
     rel = path.relative_to(base)
     parts = set(rel.parts)
     name = path.name.lower()
+    with path.open('rb') as stream:
+        signature = stream.read(8)
+    if path.suffix.lower() in {'.pdf', '.xlsx', '.xls', '.doc', '.docx', '.ppt', '.pptx', '.zip', '.7z', '.rar'} or signature.startswith((b'%PDF-', b'PK\x03\x04')):
+        issues.append((str(rel), 'source document/archive must stay private; use citation or external link'))
+    if rel.as_posix().startswith(('courses/hs-physics/physics-001/originals/', 'courses/electrical-machines/assets/homework/page-', 'courses/electrical-machines/assets/quickref/page-')):
+        issues.append((str(rel), 'source scan or full-page mirror must stay private'))
     if (name == '.env' or name.startswith('.env.') and not name.endswith(('.example', '.sample'))
         or name in {'id_rsa', 'id_ed25519', 'cookies.sqlite', 'cookies.txt', 'credentials.json'}
         or path.suffix.lower() in {'.pem', '.p12', '.pfx', '.key'}

@@ -92,7 +92,7 @@ symbols={
 18:[('μ','μ','滑块与水平地面的动摩擦因数，本题为0.2，无量纲。'),('m_A','m_A','滑块A的质量，为1 kg。'),('m_B','m_B','第一、二问滑块B的质量，为3 kg；第三问另换成未知质量的C。')]
 }
 extra_tasks={14:'依次求弹簧原长（保留1位有效数字）、劲度系数（保留3位有效数字）及图线末端弯曲的可能原因；选主要实验方法；研究角速度时选相同或不同半径的塔轮；研究质量时选槽位，并由标尺4格与3格求质量比。',15:'依次求：①游标卡尺读出的遮光片宽度d（mm）；②给定挡光时间时的速度v（保留2位有效数字）；③F、m、g、h、v满足的关系；④用h、k表示m，用h、k、F₀表示g。'}
-sections=[{'id':'physics-001','title':'试卷001：原件、详解与学习记录','group':'试卷001','kind':'html','supplement':'physics-001','src':'courses/hs-physics/lessons/physics-001.js'}]
+sections=[{'id':'physics-001','title':'试卷001：讲解与学习记录','group':'试卷001','kind':'html','supplement':'physics-001','src':'courses/hs-physics/lessons/physics-001.js'}]
 glossary=[]
 for q in D['questions']:
     i=q['id'];identifier=sid(i)
@@ -100,7 +100,7 @@ for q in D['questions']:
     markup='<section class="physics001" id="question-'+str(i)+'"><h2>第'+str(i)+'题 · '+esc(q['title'])+'</h2><p class="page-meta">'+esc(' / '.join(q['tags']))+'</p><h3>题意与条件</h3>'+rich(q['prompt'])
     if i in [3,5,6]:markup+='<ol type="A">'+''.join('<li>'+esc(t)+'</li>' for t in options[i])+'</ol>'
     if i in extra_tasks:markup+=rich(extra_tasks[i])
-    markup+='<details><summary>回查原题照片（第'+ '、'.join(map(str,q['source']))+'页）</summary>'+''.join('<a href="'+BASE+'/originals/'+esc(sorted((FOLDER/'originals').glob('*.jpg'))[n-1].name)+'" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="'+BASE+'/originals/'+esc(sorted((FOLDER/'originals').glob('*.jpg'))[n-1].name)+'" alt="原试卷第'+str(n)+'页"></a>' for n in q['source'])+'</details>'
+    markup+='<p class="source-citation">来源：《高三物理》试卷001，第'+ '、'.join(map(str,q['source']))+'页，第'+str(i)+'题；命题单位与公开原件链接待核。</p>'
     markup+='<h3>'+esc(q['foundation']['title'])+'</h3>'+rich(q['foundation']['text'])
     if q.get('figure'):
         markup+='<figure id="figure-q'+str(i)+'"><img loading="lazy" decoding="async" src="'+BASE+'/figures/'+q['figure']+'.svg" alt="第'+str(i)+'题受力、过程或图像示意"><figcaption>图 '+str(i)+'.1 · '+esc(q.get('figure_note','依据题意重绘的教学示意图。'))+'</figcaption></figure>'
@@ -125,10 +125,10 @@ links=[{'from':sid(a),'to':sid(b),'label':label,'description':desc} for a,b,labe
  (9,13,'静摩擦的上限','第9题所需向心力与最大静摩擦比较；第13题中间阶段静摩擦随弹力增加，不能始终取μmg。'),
  (16,18,'停止距离与事件','第16题由减速求停止距离；第18题每次碰撞后重新判断停止位置和下一事件。'),
  (4,17,'斜面功与圆弧','第17题斜面有摩擦、圆弧光滑，先求A点状态再推进到B，不能全程套机械能守恒。')]]
-material={'id':'physics-001','group':'试卷001','description':'用户提供8页原卷；逐题详解、物理仿真与复做记录。','sections':sections,'knowledgeLinks':links,'links':[{'label':'试卷001资料与记录','href':'#course/hs-physics/physics-001'},{'label':'详解 PDF（84页）','href':BASE+'/files/physics001-solutions.pdf'},{'label':'排序原卷','href':BASE+'/files/physics001-original.pdf'}]}
+material={'id':'physics-001','group':'试卷001','description':'依据试卷001整理的逐题讲解、物理仿真与复做记录。','sections':sections,'knowledgeLinks':links,'links':[{'label':'试卷001资料与记录','href':'#course/hs-physics/physics-001'}]}
 (ROOT/'courses/hs-physics/supplements.json').write_text(json.dumps({'materials':[material]},ensure_ascii=False,indent=2)+'\n')
 (ROOT/'courses/hs-physics/glossary.json').write_text(json.dumps({'lazy':True,'symbolDefinitions':glossary,'terms':[]},ensure_ascii=False,indent=2)+'\n')
-overview='<section class="physics001"><h2>试卷001</h2><p>8页原卷，18题。按原页码排序，题号连续。第3题与第10、15题跨页，阅读时已接续。</p><p><a href="'+BASE+'/files/physics001-original.pdf">排序原卷 PDF</a> · <a href="'+BASE+'/files/physics001-solutions.pdf">详细解答 PDF（84页）</a> · <a href="'+BASE+'/files/physics001-learning-records.xlsx" download>记录表 XLSX</a></p><p>常规PDF不能可靠播放GIF，详解PDF保留静态关键帧和对应网页播放链接。网页视频可暂停、拖动查看；GIF由读者主动展开。</p>'+lst(D['meta']['notes'])+'<ol>'+''.join('<li><a href="'+route(q['id'])+'">第'+str(q['id'])+'题 · '+esc(q['title'])+'</a></li>' for q in D['questions'])+'</ol><h3>学习笔记</h3><p>导入独立讲解页此前导出的 physics-001 JSON记录，按更新时间保留较新单题笔记。自评、笔记与练习答题记录分开；不换算分数或独立首答。</p><div data-physics-notebook></div><h3>来源与教材定位</h3><p>原件来自用户提供的8张照片，原卷标题为“高三物理”。照片右上角2/12至8/12是图片查看器序号；核对依据是卷面第1—8页与第1—18题，不能据此推断试卷缺4页。详解、图与仿真是依据题意独立推导的教学材料，不是官方评分细则。</p><p>原有海南九科教材目录、版本证据和待核事项保留。此卷未核实命题单位与正式出版信息；不将试卷当作2027年官方考纲，也不把所涉章节当作已经核读的教材全文。</p><p><a href="#highschool/resources">教材与来源证据</a></p></section>'
+overview='<section class="physics001"><h2>试卷001</h2><p>第1—18题的逐题讲解与运动模型。来源：《高三物理》用户提供稿，第1—8页；命题单位与公开原件链接待核。</p>'+lst(D['meta']['notes'])+'<ol>'+''.join('<li><a href="'+route(q['id'])+'">第'+str(q['id'])+'题 · '+esc(q['title'])+'</a></li>' for q in D['questions'])+'</ol><h3>学习笔记</h3><p>可导入此前导出的physics-001记录，按更新时间保留较新笔记。笔记与练习首答记录分别保存在当前浏览器，不换算个人成绩。</p><div data-physics-notebook></div><h3>来源与教材定位</h3><p>原稿标题为“高三物理”，按卷面第1—8页与第1—18题定位。讲解、重绘图与仿真是教学整理，不是官方评分细则。原件未核实命题单位与正式出版信息，不据此认定2027官方考纲或教材全文覆盖。</p><p><a href="https://basic.smartedu.cn/tchMaterial" target="_blank" rel="noopener">国家中小学智慧教育平台：教材入口</a> · <a href="#highschool/resources">教材与来源证据</a></p></section>'
 lesson('physics-001',overview,physics001=0)
 # Derived practice entries link the full original reasoning; preserve all old identities and bank.version.
 bankpath=ROOT/'courses/practice/bank.json';bank=json.loads(bankpath.read_text());bank['questions']=[q for q in bank['questions'] if not q['id'].startswith('hs-physics001-')]
@@ -150,7 +150,7 @@ for q in D['questions']:
             math=re.search(r'<math\b.*?</math>',markup,re.S)[0]
             return linear(ET.fromstring(math))
         return MATH.sub(replace,t)
-    entry={'id':'hs-physics001-'+str(i).zfill(2),'course':COURSE,'sections':[sid(i)],'title':f'原卷第{i}题 · '+q['title'],'type':typ,'hintHtml':rich(q['foundation']['text']),'transferHtml':rich(q['transfer'][0]),'promptHtml':rich(q['prompt'])+'<details><summary>回查原题照片</summary>'+''.join('<a href="'+BASE+'/originals/'+sorted((FOLDER/'originals').glob('*.jpg'))[n-1].name+'" target="_blank" rel="noopener">原卷第'+str(n)+'页</a> ' for n in q['source'])+'</details>','stepsHtml':[rich(s['text']).replace('id="equation-', 'id="practice-equation-') for s in q['sections']],'prompt':plain(q['prompt'])+((' '+extra_tasks[i]) if i in extra_tasks else ''),'hint':q['foundation']['text'],'steps':[plain(s['text']) for s in q['sections']],'transfer':plain(q['transfer'][0]),'skills':['建模','推导计算'] if i!=2 else ['建模','边界与反例'],'origin':'用户提供高三物理试卷001，第'+str(i)+'题；原题选项稳定ID保留原字母，显示顺序打乱。本站独立推导解答，非官方评分；未有学生答卷。'}
+    entry={'id':'hs-physics001-'+str(i).zfill(2),'course':COURSE,'sections':[sid(i)],'title':f'原卷第{i}题 · '+q['title'],'type':typ,'hintHtml':rich(q['foundation']['text']),'transferHtml':rich(q['transfer'][0]),'promptHtml':rich(q['prompt']),'stepsHtml':[rich(s['text']).replace('id="equation-', 'id="practice-equation-') for s in q['sections']],'prompt':plain(q['prompt'])+((' '+extra_tasks[i]) if i in extra_tasks else ''),'hint':q['foundation']['text'],'steps':[plain(s['text']) for s in q['sections']],'transfer':plain(q['transfer'][0]),'skills':['建模','推导计算'] if i!=2 else ['建模','边界与反例'],'origin':'用户提供高三物理试卷001，第'+str(i)+'题；原题选项稳定ID保留原字母，显示顺序打乱。本站独立推导解答，非官方评分；未有学生答卷。'}
     if typ!='open':entry.update(options=[{'id':chr(65+j),'text':t,'feedback':feedback[i][j]} for j,t in enumerate(options[i])],answer=list(answers[i]))
     else:
         entry['rubric']=[plain(q['foundation']['text']),plain(q['method']),q['answer']]

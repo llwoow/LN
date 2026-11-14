@@ -1,0 +1,29 @@
+{
+  "policy": "Public source materials are referenced by links and bibliographic locators; raw files stay private.",
+  "electrical-machines": {
+    "title": "汤蕴璆《电机学》第5版",
+    "publisher": "机械工业出版社",
+    "isbn": "9787111447092",
+    "url": "https://www.cmpedu.com/books/book/2027021.htm",
+    "scope": "第1—3章；习题整理稿按原题号及原页码引用。"
+  },
+  "physics-001": {
+    "title": "《高三物理》试卷001",
+    "provenance": "用户提供的8页原卷",
+    "scope": "第1—18题；原题页码保留为来源定位",
+    "url": null,
+    "status": "未核实命题单位和公开原件链接"
+  },
+  "hainan-2027": {
+    "title": "海南2027届九科教材与知识分布核验报告及索引表",
+    "provenance": "用户提供的研究整理",
+    "scope": "仅引用目录、版本核验结果及原报告所列28项来源",
+    "url": null,
+    "sourcesRoute": "#highschool/resources"
+  },
+  "power-semiconductors": {
+    "title": "功率半导体器件第二章教学答卷",
+    "scope": "原创网页讲解和作图；教材/厂商资料见各节引用",
+    "html": "answers/power-semiconductors/chapter-2/答案.html"
+  }
+}

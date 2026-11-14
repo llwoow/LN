@@ -31,3 +31,18 @@ dist/
 *.pfx
 /gitleaks-report*
 /*-secrets-report.json
+
+# Reference-only publication: raw documents/archives stay private
+*.[pP][dD][fF]
+*.xlsx
+*.xls
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.zip
+*.7z
+*.rar
+/courses/hs-physics/physics-001/originals/
+/courses/electrical-machines/assets/homework/page-*
+/courses/electrical-machines/assets/quickref/page-*

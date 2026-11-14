@@ -3,11 +3,11 @@
     {
       "id": "physics-001",
       "group": "试卷001",
-      "description": "用户提供8页原卷；逐题详解、物理仿真与复做记录。",
+      "description": "依据试卷001整理的逐题讲解、物理仿真与复做记录。",
       "sections": [
         {
           "id": "physics-001",
-          "title": "试卷001：原件、详解与学习记录",
+          "title": "试卷001：讲解与学习记录",
           "group": "试卷001",
           "kind": "html",
           "supplement": "physics-001",
@@ -278,14 +278,6 @@
         {
           "label": "试卷001资料与记录",
           "href": "#course/hs-physics/physics-001"
-        },
-        {
-          "label": "详解 PDF（84页）",
-          "href": "courses/hs-physics/physics-001/files/physics001-solutions.pdf"
-        },
-        {
-          "label": "排序原卷",
-          "href": "courses/hs-physics/physics-001/files/physics001-original.pdf"
         }
       ]
     }

@@ -853,8 +853,8 @@
     },
     {
       "id": "physics001-original-and-models",
-      "title": "试卷001原件、详解与运动模型",
-      "kind": "用户原卷与本站教学仿真",
+      "title": "试卷001讲解与运动模型",
+      "kind": "题目讲解与本站教学仿真",
       "repository": null,
       "checked": "2026-11-10",
       "targets": [
@@ -936,16 +936,21 @@
         }
       ],
       "question": "如何从受力与运动约束建立模型，并检查分段运动和碰撞事件？",
-      "summary": "8页照片按卷面页码排序；独立推导逐题解答，附同源GIF、可控视频和交互。",
+      "summary": "依据试卷001的逐题讲解，附同源GIF、可控视频和交互。",
       "steps": [
-        "先回查对应原题照片，分清可读条件与裁切说明。",
+        "先核对网页题意与条件，按来源页码/题号定位，注意裁切条件的说明。",
         "把运动按受力改变、约束改变或碰撞分段，先写预测再播放。",
         "暂停在阶段交界处，核对方向、位移关系和能量收支，再改变交互参数。"
       ],
       "output": "逐题推理、静态关键帧与播放链接；学习笔记和复做记录独立保存。",
       "requirements": "浏览器即可阅读与播放；源码复算使用Python、NumPy、SciPy和Pillow，媒体检查另需ffmpeg。",
       "license": "用户提供试卷仅按本项目学习用途整理，原权利归权利人；解答、重绘图和模型为本站教学整理，不冒称官方评分。",
-      "links": [],
+      "links": [
+        {
+          "label": "国家中小学智慧教育平台：教材入口",
+          "url": "https://basic.smartedu.cn/tchMaterial"
+        }
+      ],
       "evidence": [],
       "limits": [
         "未核实本卷命题单位与正式出版信息，不能标为海南官方高考题或2027正式考纲。",
@@ -959,16 +964,8 @@
       },
       "downloads": [
         {
-          "label": "排序原卷PDF",
-          "path": "courses/hs-physics/physics-001/files/physics001-original.pdf"
-        },
-        {
-          "label": "详解PDF（关键帧与播放链接）",
-          "path": "courses/hs-physics/physics-001/files/physics001-solutions.pdf"
-        },
-        {
-          "label": "记录表",
-          "path": "courses/hs-physics/physics-001/files/physics001-learning-records.xlsx"
+          "label": "运动模型源代码",
+          "path": "courses/hs-physics/physics-001/verification/motion_models.py"
         }
       ],
       "localLesson": "#course/hs-physics/physics-001"
@@ -1818,10 +1815,6 @@
           "label": "第二章完整网页答卷（含此前参考评分说明）",
           "path": "answers/power-semiconductors/chapter-2/答案.html",
           "view": true
-        },
-        {
-          "label": "第二章完整PDF答卷",
-          "path": "output/pdf/功率半导体器件-第二章测试答案-完整版.pdf"
         }
       ],
       "localLesson": "#course/power-semiconductors/vdmos-output/worked-output-plot"

@@ -34,8 +34,8 @@ with sync_playwright() as p:
         page.locator('[data-practice-mode="local"]').wait_for()
         page.goto(BASE+'#highschool/resources')
         page.locator('h1', has_text='教材与来源').wait_for()
-        assert page.locator('a[href$="hainan-2027-report.pdf"]').count() == 1
-        assert page.locator('a[href$="hainan-2027-index.xlsx"]').count() == 1
+        assert page.locator('.source-citation').count() == 1
+        assert page.locator('a[href^="https:"]').count() >= 28
         assert not any('/hs-' in url and '/lessons/' in url for url in requests)
         assert not errors, errors
         page.close()

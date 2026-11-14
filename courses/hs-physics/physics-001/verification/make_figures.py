@@ -8,7 +8,7 @@ R=Path(__file__).resolve().parent.parent/'figures';R.mkdir(exist_ok=True)
 plt.rcParams.update({'font.family':'Noto Sans CJK JP','font.size':10,'axes.unicode_minus':False,'svg.fonttype':'path','mathtext.fontset':'stix','axes.spines.top':False,'axes.spines.right':False,'axes.edgecolor':'#9aabb4','axes.labelcolor':'#334955','text.color':'#203540','xtick.color':'#566b76','ytick.color':'#566b76','figure.facecolor':'white','axes.facecolor':'white','savefig.facecolor':'white'})
 B='#205b82';T='#107b79';A='#c1832f';RED='#b04b42';G='#91a0a8'
 def save(name,fig):
- fig.savefig(R/(name+'.pdf'),bbox_inches='tight');fig.savefig(R/(name+'.svg'),bbox_inches='tight');fig.savefig(R/(name+'.png'),dpi=160,bbox_inches='tight');plt.close(fig)
+ fig.savefig(R/(name+'.svg'),bbox_inches='tight');fig.savefig(R/(name+'.png'),dpi=160,bbox_inches='tight');plt.close(fig)
 def arr(ax,xy,d,label='',color=B,offset=(.03,.03),ls='-'):
  ax.annotate('',xy=(xy[0]+d[0],xy[1]+d[1]),xytext=xy,arrowprops=dict(arrowstyle='-|>',lw=2,color=color,linestyle=ls,mutation_scale=13));ax.text(xy[0]+d[0]+offset[0],xy[1]+d[1]+offset[1],label,color=color)
 def clean(ax,xlim,ylim):ax.set_aspect('equal');ax.set_xlim(*xlim);ax.set_ylim(*ylim);ax.axis('off')
@@ -74,4 +74,4 @@ fig,axs=plt.subplots(1,2,figsize=(9,3.5));tt=np.linspace(0,tf+.3,600);p=np.array
 for t,txt in [(.5,'撞墙'),(1,'B停'),(tc,'互撞'),(tf,'终止')]:ax.axvline(t,color=G,ls=':',lw=.7);ax.text(t,3.05,txt,fontsize=8,rotation=45)
 ax.set(xlabel='时间 / s',ylabel='位置 x / m',ylim=(-2,3.8));ax.legend(frameon=False,fontsize=9,loc='lower left');ax.set_title('按事件连接轨迹，碰撞时位置连续',loc='left',fontsize=11)
 ax=axs[1];rat=np.linspace(1.05,3,150);gap=5.5-10.5*(1-1/rat);ax.plot(rat,gap,color=T);ax.axhline(0,color=G,lw=.8);ax.scatter([2.1],[0],color=RED);ax.text(2.15,.4,'M=2.1kg');ax.fill_between(rat,0,gap,where=gap<0,color='#f1dedb');ax.text(2.3,-1.7,'负间距表示假想轨迹穿越\n实际必已互撞',fontsize=9,color=RED);ax.set(xlabel='第三问C质量 / kg',ylabel='假设不互撞时的最终间距 / m');ax.set_title('临界：最小间距恰为0',loc='left',fontsize=11);fig.tight_layout();save('q18',fig)
-print('figures',len(list(R.glob('*.pdf'))))
+print('figures',len(list(R.glob('*.svg'))))

@@ -58,9 +58,29 @@ def main():
                     page.goto(base + '#' + route, wait_until='networkidle')
                     # Both catalogs are loaded relative to the repository path.
                     assert title in page.locator('main').inner_text(), route
-                # Downloaded program and PDF are real files at the same /LN/ prefix.
+                # References replace source files across affected readers and small viewports.
+                affected = ['#course/electrical-machines/transformer-homework',
+                            '#course/electrical-machines/transformer-quickref',
+                            '#highschool/resources', '#course/hs-physics/physics-001',
+                            '#course/hs-physics/physics-001-q15']
+                evidence = ROOT / 'nov13-browser-artifacts'
+                evidence.mkdir(exist_ok=True)
+                for width in [1280, 390, 320]:
+                    page.set_viewport_size({'width': width, 'height': 900})
+                    for route in affected:
+                        page.goto(base + route, wait_until='networkidle')
+                        if route.startswith('#course/'):
+                            page.locator('#lesson-body[aria-busy="false"]').wait_for()
+                        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth'), (width, route)
+                        assert not page.locator('img[src*="/originals/"]').count(), route
+                        local_documents = page.locator('a[href]').evaluate_all(r"""nodes => nodes.map(a => new URL(a.href, location.href)).filter(u => u.origin === location.origin && /\.(pdf|xlsx?|docx?|pptx?|zip|7z|rar)$/i.test(u.pathname)).map(u => u.href)""")
+                        assert not local_documents, (route, local_documents)
+                        if width == 390 and route in ['#course/electrical-machines/transformer-quickref', '#highschool/resources', '#course/hs-physics/physics-001']:
+                            page.screenshot(path=str(evidence / ('references-' + route.split('/')[-1] + '-390.png')), full_page=True)
+                page.set_viewport_size({'width': 1280, 'height': 900})
+                # Authored program downloads work at the /LN/ prefix. Source documents are external citations.
                 for artifact in ['courses/robot-drive-engineering/files/c_foundations.c',
-                                 'courses/electrical-machines/files/transformer-guide.pdf']:
+                                 'assets/practice/homework/reproduce.py']:
                     res = page.request.get(base + artifact)
                     assert res.ok, (artifact, res.status)
                     assert len(res.body()) > 100, artifact

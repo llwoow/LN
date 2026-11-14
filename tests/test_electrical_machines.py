@@ -79,12 +79,10 @@ class CourseIntegrity(unittest.TestCase):
     def test_homework_is_complete(self):
         payload = self.payloads['transformer-homework']
         self.assertEqual(len(payload['questions']), 13)
-        self.assertEqual(len(payload['pages']), 13)
         self.assertEqual([q['number'] for q in payload['questions']], ['2-2', '2-3', '2-4', '2-6', '2-7', '2-12', '2-13', '2-17', '2-19', '2-20', '2-22', '2-25', '2-26'])
-        for page in payload['pages']:
-            self.assertTrue((ROOT / page['src']).is_file())
-            self.assertGreater(page['width'], 1000)
-        self.assertTrue((ROOT / payload['pdf']).is_file())
+        self.assertNotIn('pdf', payload)
+        self.assertNotIn('pages', payload)
+        self.assertIn('https://www.cmpedu.com/books/book/2027021.htm', payload['html'])
 
     def test_shared_fonts_and_no_broken_math(self):
         css = (ROOT / 'assets/katex/katex.min.css').read_text('utf-8')
@@ -94,11 +92,13 @@ class CourseIntegrity(unittest.TestCase):
             self.assertNotIn('katex-error', payload.get('html', ''), key)
         self.assertTrue((ROOT / 'assets/katex/LICENSE').is_file())
 
-    def test_quick_reference_pages_work_without_pdf_plugin(self):
-        pages = self.payloads['transformer-quickref']['pages']
-        self.assertEqual(len(pages), 6)
-        for page in pages:
-            self.assertTrue((ROOT / page['src']).is_file())
+    def test_quick_reference_is_native_math_with_source_links(self):
+        payload = self.payloads['transformer-quickref']
+        self.assertEqual(self.sections['transformer-quickref']['kind'], 'html')
+        self.assertNotIn('pdf', payload)
+        self.assertNotIn('pages', payload)
+        self.assertIn('data-mml-node', payload['html'])
+        self.assertIn('#course/electrical-machines/', payload['html'])
 
 
 class HomeworkCalculations(unittest.TestCase):
