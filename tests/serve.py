@@ -31,4 +31,5 @@ class Handler(SimpleHTTPRequestHandler):
     output.write(block);remaining-=len(block)
   except (BrokenPipeError,ConnectionResetError):pass
  def log_message(self,*args):pass
-ThreadingHTTPServer(('127.0.0.1',int(sys.argv[1]) if len(sys.argv)>1 else 4173),Handler).serve_forever()
+if __name__=='__main__':
+ ThreadingHTTPServer(('127.0.0.1',int(sys.argv[1]) if len(sys.argv)>1 else 4173),Handler).serve_forever()

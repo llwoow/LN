@@ -52,6 +52,8 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Verify site assets and navigation under the Pages subdirectory
         run: python tests/browser_smoke_pages.py
+      - name: Verify English reading, records and listening under the Pages path
+        run: python tests/english2027.browser.py --dist
       - name: Upload the verified static site
         uses: actions/upload-pages-artifact@v3
         with:

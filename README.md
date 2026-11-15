@@ -8,3 +8,5 @@
 - [隐私与资料发布规范](PUBLICATION.md) · [公开审查记录](PUBLICATION-REVIEW-2026-11-14.md)
 
 推送或合并到 `main` 后自动更新 GitHub Pages。[部署记录](https://github.com/llwoow/LN/actions/workflows/pages.yml)。
+
+高中英语新增[知识、方法与训练讲义](https://llwoow.github.io/LN/#course/hs-english/english-2027-home)，可从“高中 → 英语 → 英语讲义”进入。

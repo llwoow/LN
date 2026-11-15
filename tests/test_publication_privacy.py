@@ -1,6 +1,8 @@
 """Exercise release boundaries with isolated repositories and real deployment files."""
 from pathlib import Path
 import shutil
+import hashlib
+import json
 import subprocess
 import tempfile
 import unittest
@@ -67,6 +69,56 @@ class PublicationBoundaries(unittest.TestCase):
     def test_external_pdf_citation_is_allowed(self):
         self.track('source.html', '<a href="https://docs.example.org/reference.pdf">Source</a>')
         self.assertEqual(self.check_gate().returncode, 0)
+
+    def clear_document(self, name, rights='user_owned', publish=True):
+        self.track('lesson.html', '<article><h1>Explanation</h1><p>A complete teaching example lives here.</p></article>')
+        entry={'path':name,'rights':rights,'owner':'Example author','evidence':'Explicit ownership and public supplement decision for this synthetic fixture.',
+               'publish':publish,'reviewed':True,'web_path':'lesson.html',
+               'sha256':hashlib.sha256((self.root/name).read_bytes()).hexdigest()}
+        self.track('publication-rights.json', json.dumps({'documents':[entry]}))
+
+    def test_owned_pdf_is_not_rejected_for_its_format(self):
+        self.track('notes.pdf', '%PDF-1.7 owned synthetic fixture')
+        self.clear_document('notes.pdf')
+        self.assertEqual(self.check_gate().returncode, 0)
+
+    def test_authorization_must_be_explicit_and_match_actual_content(self):
+        self.track('notes.pdf', '%PDF-1.7 authorized synthetic fixture')
+        self.clear_document('notes.pdf', rights='authorized')
+        self.assertEqual(self.check_gate().returncode, 0)
+        self.track('notes.pdf', '%PDF-1.7 changed after review')
+        self.assertEqual(self.check_gate().returncode, 1)
+
+    def test_owned_document_does_not_replace_the_converted_page(self):
+        self.track('notes.pdf', '%PDF-1.7 owned synthetic fixture')
+        self.clear_document('notes.pdf')
+        (self.root/'lesson.html').unlink()
+        self.assertEqual(self.check_gate().returncode, 1)
+
+    def test_rights_record_does_not_grant_publication_by_itself(self):
+        self.track('notes.pdf', '%PDF-1.7 owned synthetic fixture')
+        self.clear_document('notes.pdf', publish=False)
+        self.assertEqual(self.check_gate().returncode, 1)
+
+    def test_ownership_does_not_bypass_privacy_or_disguised_formats(self):
+        self.track('renamed.txt', '%PDF-1.7 synthetic fixture')
+        self.clear_document('renamed.txt')
+        self.assertEqual(self.check_gate().returncode, 1)
+        self.assertIn('disguised',self.check_gate().stdout)
+        self.track('private/notes.pdf', '%PDF-1.7 synthetic private fixture')
+        self.clear_document('private/notes.pdf')
+        self.assertIn('private file/path',self.check_gate().stdout)
+
+    def test_rights_cleared_artifact_is_checked_in_built_output(self):
+        self.track('notes.pdf', '%PDF-1.7 owned synthetic fixture')
+        self.clear_document('notes.pdf')
+        (self.root/'dist').mkdir()
+        for name in ['notes.pdf','lesson.html']:
+            shutil.copy2(self.root/name,self.root/'dist'/name)
+        (self.root/'dist/index.html').write_text('<title>LN</title>')
+        self.assertEqual(self.check_gate('--dist').returncode, 0)
+        (self.root/'dist/notes.pdf').write_text('%PDF-1.7 substituted bytes')
+        self.assertEqual(self.check_gate('--dist').returncode, 1)
 
     def test_full_page_scans_are_blocked_in_public_output(self):
         name = 'courses/hs-physics/physics-001/originals/page.jpg'

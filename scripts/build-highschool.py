@@ -79,9 +79,9 @@ def build():
                 manifest['resources'][material['group']] = {'links': material['links']}
                 manifest['knowledgeMap']['chapters'].append({'group': material['group'], 'description': material['description']})
                 manifest['knowledgeMap'].setdefault('links', []).extend(material.get('knowledgeLinks', []))
-            manifest['knowledgeMap']['nodes'] = [{'section': s['id'], 'title': s['title'], 'note': s.get('curriculum') or ('原卷与学习记录' if s['id']=='physics-001' else '逐题讲解与运动模型')} for s in manifest['sections']]
+            manifest['knowledgeMap']['nodes'] = [{'section': s['id'], 'title': s['title'], 'note': s.get('curriculum') or s.get('note') or ('原卷与学习记录' if s['id']=='physics-001' else '逐题讲解与运动模型')} for s in manifest['sections']]
             manifest['outlineOnly'] = False
-            manifest['topics'] = ['教材目录', '试卷讲解']
+            manifest['topics'] = ['教材目录', *dict.fromkeys(m.get('label','试卷讲解') for m in extras['materials'])]
             manifest['glossary'] = 'courses/' + course_id + '/glossary-index.js'
         (folder / 'manifest.js').write_text('window.LN_HS_' + slug.upper() + '=' + dump(manifest) + ';\n', encoding='utf-8', newline='\n')
         courses.append(manifest)

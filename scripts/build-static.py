@@ -8,12 +8,14 @@ import sys
 root = Path(__file__).resolve().parents[1]
 subprocess.run([sys.executable, str(root / 'scripts/build-transformer-homework.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-physics001.py')], check=True)
+subprocess.run([sys.executable, str(root / 'scripts/build-english2027.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-highschool.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-robot-drive.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-power-semiconductors.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/check-teaching.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-resource-library.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-practice.py')], check=True)
+subprocess.run([sys.executable, str(root / 'scripts/check-publication.py')], check=True)
 out = root / 'dist'
 if out.exists():
     shutil.rmtree(out)
@@ -32,6 +34,17 @@ shutil.copytree(answer_source / 'assets', answer_out / 'assets')
 model = Path('courses/hs-physics/physics-001/verification/motion_models.py')
 (out/model).parent.mkdir(parents=True,exist_ok=True)
 shutil.copy2(root/model,out/model)
+# Original documents never replace the HTML reader. Only a separately reviewed,
+# explicitly approved optional supplement may bypass the default document ignore.
+rights = json.loads((root / 'publication-rights.json').read_text())
+shutil.copy2(root / 'publication-rights.json', out / 'publication-rights.json')
+for entry in rights['documents']:
+    path = Path(entry['path'])
+    if path.is_absolute() or '..' in path.parts:
+        raise ValueError('Invalid document supplement path')
+    if entry.get('publish') is True and entry.get('reviewed') is True:
+        (out / path).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(root / path, out / path)
 # Source-tree existence is insufficient: every advertised download must ship.
 resources = json.loads((root / 'courses/resources/catalog.json').read_text())
 for resource in resources['resources']:

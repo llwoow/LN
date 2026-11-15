@@ -31,7 +31,7 @@ class HighSchoolIntegrity(unittest.TestCase):
         index = assignment(ROOT/'reference-index.js')
         for course in self.courses:
             folder = ROOT/'courses'/course['id']
-            if course['id']=='hs-physics':
+            if course['id'] in {'hs-physics','hs-english'}:
                 self.assertFalse(course['outlineOnly'])
                 for section in course['sections']:
                     if section['kind']=='outline':

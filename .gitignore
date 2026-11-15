@@ -32,7 +32,8 @@ dist/
 /gitleaks-report*
 /*-secrets-report.json
 
-# Reference-only publication: raw documents/archives stay private
+# Working documents are ignored by default; reviewed rights-cleared supplements
+# may be explicitly tracked and listed in publication-rights.json.
 *.[pP][dD][fF]
 *.xlsx
 *.xls
