@@ -1,6 +1,7 @@
 """Check real lesson targets, source assets and compatibility of the English adapter."""
 from pathlib import Path
 import json,re,runpy,unittest
+import html
 
 ROOT=Path(__file__).resolve().parents[1]
 assignment=runpy.run_path(str(ROOT/'scripts/build-reference-index.py'))['assignment']
@@ -55,5 +56,26 @@ class English2027(unittest.TestCase):
         self.assertNotIn('88/150',(folder/'manuscript.json').read_text())
         home=assignment(ROOT/'courses/hs-english/lessons/english-2027-home.js')
         self.assertIn('data-english-records',home['html'])
+
+    def test_conversion_keeps_teaching_and_question_material_in_html(self):
+        for s in self.course['sections']:
+            if s.get('supplement')!='english-2027':continue
+            body=assignment(ROOT/s['src'])['html']
+            self.assertNotRegex(body,r'<(?:iframe|embed|object)\b')
+            self.assertNotRegex(body,r'(?i)(?:src|href)="courses/[^"#]*\.pdf')
+        knowledge=assignment(ROOT/'courses/hs-english/lessons/english-2027-k09.js')['html']
+        self.assertIn('became承担主句谓语',knowledge)
+        self.assertIn('book是write的承受者',knowledge)
+        original=json.loads((ROOT/'courses/hs-english/review-2027/practice.json').read_text())
+        tidy=lambda s:re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',s))).strip()
+        byid={q['sourceQuestion']:q for q in self.qs}
+        for q in original['questions']:
+            adapted=byid[q['id']]
+            self.assertIn(q['prompt'],html.unescape(adapted['promptHtml']))
+            passage=original['passages'].get(q.get('passage'))
+            if passage:self.assertIn(tidy(passage['text']),tidy(adapted['promptHtml']),q['id'])
+            if q.get('options'):self.assertEqual(adapted['options'],q['options'])
+            if q.get('analysis'):self.assertIn(q['analysis'],adapted['steps'])
+            if q.get('model'):self.assertIn(tidy(q['model']),tidy(adapted['stepsHtml'][0]))
 
 if __name__=='__main__':unittest.main()
