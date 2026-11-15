@@ -43,10 +43,25 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 57)
+        self.assertEqual(len(self.sections), 58)
+        self.assertIn('dc-homework-review', self.sections)
         self.assertEqual(len({section['group'] for section in self.sections.values()}), 3)
         self.assertIn('transformer-homework', self.sections)
         self.assertIn('winding-model', self.sections)
+
+    def test_dc_handwritten_homework_native_review(self):
+        html = self.payloads['dc-homework-review']['html']
+        ids = ('3-6', '3-7', '3-9', '3-11', '3-13', '3-15', '3-16', '3-17', '3-18')
+        for number in ids:
+            self.assertIn('id="dc-hw-' + number + '"', html)
+            self.assertIn('#course/electrical-machines/dc-homework-review/dc-hw-' + number, html)
+        self.assertEqual(html.count('<h4>原题</h4>'), len(ids))
+        self.assertEqual(html.count('更优解法与迁移'), len(ids))
+        self.assertNotIn('<img', html)
+        self.assertNotIn('.pdf', html)
+        self.assertIn('0.02891627', html)
+        self.assertIn('0.07 Ω', html)
+        self.assertIn('196 V', html)
 
     def test_local_links_and_reference_targets(self):
         for key, document in self.markup.items():
