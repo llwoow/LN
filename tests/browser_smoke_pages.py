@@ -95,6 +95,15 @@ def main():
                 page.locator('.audit-stat').first.wait_for(timeout=15000)
                 assert page.locator('.audit-stat').count() == 4
                 assert '章节完成度' in page.locator('main').inner_text()
+                # A claim imported from README/PR-style documentation never counts as verification.
+                page.evaluate("""() => localStorage.setItem('ln.audit.records.v1',
+                    JSON.stringify([{id:'ac-3-5',courseId:'automatic-control',status:'已验证',
+                      sourceKind:'文档声明',evidenceType:'文档描述',evidenceUrl:'https://example.org/plan',
+                      revision:'89fde344661ea22751b1ff87880f9433087224eb'}]))""")
+                page.reload(wait_until='networkidle')
+                assert page.locator('.audit-stat').first.locator('strong').inner_text() == '0'
+                page.evaluate("() => localStorage.removeItem('ln.audit.records.v1')")
+                page.reload(wait_until='networkidle')
                 page.screenshot(path=str(evidence / 'audit-1280.png'), full_page=True)
                 page.locator('#audit-nav [data-view="catalog"]').click()
                 assert page.locator('a[href*="/map"]').count(), 'knowledge map links must exist'
