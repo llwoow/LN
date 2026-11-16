@@ -76,6 +76,13 @@ def run():
                 assert page.locator(".dc-hw-card").count() == 9
                 assert page.locator(".dc-hw-card h4", has_text="原题").count() == 9
                 assert page.locator(".dc-hw-toc").evaluate("(e) => getComputedStyle(e).display") == "flex"
+                formulas = page.locator("[data-dc-tex]")
+                assert formulas.count() >= 50
+                assert page.locator("[data-dc-tex] .katex").count() == formulas.count()
+                assert page.locator("[data-dc-tex] math").count() == formulas.count()
+                assert page.locator(".katex-error").count() == 0
+                assert not page.evaluate("Array.from(document.querySelectorAll('[data-dc-tex]')).some(el => el.scrollWidth > el.clientWidth && getComputedStyle(el).overflowX !== 'auto')")
+
                 assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
                 page.evaluate("window.scrollTo(0, 0)")
                 page.screenshot(path=str(OUT / ("dc-homework-opening-" + label + ".png")))
