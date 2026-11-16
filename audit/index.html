@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-palette="ink">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>课程验收 · LN</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+    try {
+      const p = JSON.parse(localStorage.getItem('ln.preferences') || '{}');
+      const mode = ['light', 'dark', 'system'].includes(p.mode) ? p.mode : 'system';
+      document.documentElement.dataset.theme = mode === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : mode;
+      document.documentElement.dataset.palette = ['ink', 'sage', 'indigo', 'sand', 'rose'].includes(p.palette) ? p.palette : 'ink';
+    } catch {}
+  </script>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="audit.css">
+  <script src="audit.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#audit-main">跳到内容</a>
+  <div class="audit-layout">
+    <aside class="audit-sidebar" aria-label="验收台导航">
+      <a class="audit-brand" href="../#overview">LN</a>
+      <p class="audit-sidebar-label">持续课程建设与验收</p>
+      <nav id="audit-nav" aria-label="视图">
+        <button type="button" data-view="progress" aria-current="page">章节完成度</button>
+        <button type="button" data-view="catalog">内容清单与知识结构</button>
+        <button type="button" data-view="skeleton">骨架内容清单</button>
+        <button type="button" data-view="derivation">推导与例题验收</button>
+        <button type="button" data-view="practice">习题与测试入口</button>
+        <button type="button" data-view="visual">图示与交互组件</button>
+        <button type="button" data-view="standards">规范差异</button>
+        <button type="button" data-view="gaps">题库与交互缺口</button>
+        <button type="button" data-view="blockers">发布阻断问题</button>
+        <button type="button" data-view="priority">按影响排序的补齐清单</button>
+        <button type="button" data-view="sequence">最小修改顺序</button>
+        <button type="button" data-view="edit">登记验收证据</button>
+      </nav>
+      <a class="audit-back" href="../#overview">返回课程站点</a>
+    </aside>
+    <div class="audit-workspace">
+      <header class="audit-topbar">
+        <strong>LN / 课程验收</strong>
+        <span id="revision" class="audit-muted">正在读取仓库清单</span>
+        <a href="../#overview">学习站点</a>
+      </header>
+      <main id="audit-main" tabindex="-1">
+        <div class="audit-heading"><div><h1 id="view-title">章节完成度</h1><p id="view-description">区分仓库文件接入与真正的验收结论。</p></div></div>
+        <div id="audit-summary" class="audit-summary" aria-live="polite"></div>
+        <div class="audit-controls">
+          <label>课程
+            <select id="course-filter"><option value="">全部范围</option></select>
+          </label>
+          <label>检索章节、条目或代码路径
+            <input id="audit-search" type="search" placeholder="如：劳斯、变压器、emc-5-4">
+          </label>
+        </div>
+        <div id="audit-body" aria-live="polite"></div>
+      </main>
+    </div>
+  </div>
+  <template id="record-form-template">
+    <form id="record-form" class="audit-form">
+      <p class="audit-notice">这里的记录是人工声明，只有填写可复现的独立证据并审核范围后才能登记“已验证”。保存到本机不等于已写入仓库。</p>
+      <div class="audit-form-grid">
+        <label>条目 <select name="id" required></select></label>
+        <label>验收状态 <select name="status" required>
+          <option value="部分接入">部分接入</option><option value="骨架状态">骨架状态</option>
+          <option value="明确存在的问题">明确存在的问题</option><option value="已验证">已验证</option>
+        </select></label>
+        <label>信息性质 <select name="sourceKind"><option value="仓库实际内容">仓库实际内容</option>
+          <option value="文档声明">文档声明</option><option value="推测">推测</option>
+          <option value="未确认内容">未确认内容</option></select></label>
+        <label>影响级别 <select name="impact">
+          <option value="一般">一般</option><option value="重要">重要</option><option value="严重">严重</option></select></label>
+        <label>证据类型 <select name="evidenceType">
+          <option value="未提供">未提供</option><option value="代码静态核对">代码静态核对</option>
+          <option value="测试运行">测试运行</option><option value="浏览器实际操作">浏览器实际操作</option>
+          <option value="学科人工核读">学科人工核读</option><option value="文档描述">文档描述</option>
+        </select></label>
+        <label>审查提交 SHA <input name="revision" placeholder="精确提交哈希"></label>
+        <label>代码位置 <input name="codePath" placeholder="courses/.../lessons/...js"></label>
+        <label>构建/测试结果 <input name="buildResult" placeholder="具体命令、通过/失败与运行环境"></label>
+        <label>证据 URL <input name="evidenceUrl" type="url" placeholder="https://.../actions/runs/... 或截图链接"></label>
+        <label>验证范围 <input name="verifiedScope" placeholder="实测行为或核读段落，不写笼统全部通过"></label>
+        <label>审查者 <input name="reviewer" placeholder="审查者标识（公开仓库避免个人信息）"></label>
+        <label class="audit-checkbox"><input type="checkbox" name="blocker">发布阻断</label>
+      </div>
+      <label>实际内容/发现 <textarea name="actualContent" rows="3" placeholder="与仓库文件相符的具体观察"></textarea></label>
+      <label>复现步骤 <textarea name="reproduction" rows="3" placeholder="运行命令、操作路径、预期与实际结果"></textarea></label>
+      <label>缺失的推导/例题/图示/交互 <textarea name="missing" rows="3"></textarea></label>
+      <label>影响范围 <textarea name="scope" rows="2"></textarea></label>
+      <label>验收标准 <textarea name="acceptance" rows="3" placeholder="可以客观复核的完成条件"></textarea></label>
+      <div class="audit-actions">
+        <button type="submit" class="audit-primary">保存本机记录</button>
+        <button type="button" id="audit-export">导出版本化 JSON</button>
+        <label class="audit-import">导入 JSON <input type="file" id="audit-import" accept=".json,application/json"></label>
+        <button type="button" id="audit-delete">删除选中记录</button>
+      </div>
+      <p id="form-message" role="status"></p>
+    </form>
+  </template>
+</body>
+</html>
