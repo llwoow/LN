@@ -90,6 +90,18 @@ def main():
                     res = page.request.get(base + artifact)
                     assert res.ok, (artifact, res.status)
                     assert len(res.body()) > 100, artifact
+                # Source-backed audit remains under the same Pages subdirectory.
+                page.goto(base + 'audit/', wait_until='networkidle')
+                page.locator('.audit-stat').first.wait_for(timeout=15000)
+                assert page.locator('.audit-stat').count() == 4
+                assert '章节完成度' in page.locator('main').inner_text()
+                page.locator('#audit-nav [data-view="skeleton"]').click()
+                assert '骨架内容清单' in page.locator('h1').inner_text()
+                page.locator('#audit-nav [data-view="edit"]').click()
+                assert page.locator('#record-form select[name="id"] option').count() > 100
+                page.set_viewport_size({'width': 390, 'height': 900})
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), 'audit viewport overflow'
+                page.set_viewport_size({'width': 1280, 'height': 900})
                 assert not errors, errors
                 assert not failures, failures
                 assert not outside_prefix, outside_prefix
