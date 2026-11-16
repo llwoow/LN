@@ -371,6 +371,27 @@
             } catch (error) { /* Keep the static calculation readable. */ }
           }
         }
+        if (course.id === 'electrical-machines' && selected.id === 'dc-homework-review') {
+          // Only this reviewed homework lesson needs the KaTeX runtime; other lessons remain static.
+          try {
+            await loadScript('assets/katex/katex.runtime.js');
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            if (!window.katex?.render) throw new Error('KaTeX unavailable');
+            body.querySelectorAll('[data-dc-tex]').forEach(element => {
+              window.katex.render(element.dataset.dcTex, element, {
+                displayMode: element.dataset.dcDisplay === 'block',
+                throwOnError: true, strict: 'error',
+                trust: false, output: 'htmlAndMathml'
+              });
+            });
+          } catch (error) {
+            // Original explanatory steps stay readable if the math library is unavailable.
+            body.querySelectorAll('.dc-hw-math-fallback').forEach(el => {
+              el.textContent = '公式暂未完成排版，请参考相邻的文字计算过程';
+            });
+            console.error('LN DC homework KaTeX rendering failed', error);
+          }
+        }
         bindInlineModels(body);
         // Keep the original winding 3D model intact; the comparison lab is a separate idealized model.
         if (course.id === 'electrical-machines' && body.querySelector('.dc-reasoning')) {
