@@ -68,6 +68,25 @@ def run():
                 section.wait_for(timeout=20000)
                 assert "356.52" in section.inner_text()
                 assert "待确认" in section.inner_text()
+
+                # Capture the newly authored native-HTML homework review on this PR branch.
+                page.goto(url + "#course/electrical-machines/dc-homework-review", wait_until="domcontentloaded")
+                review = page.locator("#dc-homework-review")
+                review.wait_for(timeout=20000)
+                assert page.locator(".dc-hw-card").count() == 9
+                assert page.locator(".dc-hw-card h4", has_text="原题").count() == 9
+                assert page.locator(".dc-hw-toc").evaluate("(e) => getComputedStyle(e).display") == "flex"
+                assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
+                page.evaluate("window.scrollTo(0, 0)")
+                page.screenshot(path=str(OUT / ("dc-homework-opening-" + label + ".png")))
+                for number in ("3-9", "3-13", "3-17", "3-18"):
+                    card = page.locator("#dc-hw-" + number)
+                    card.evaluate("(e) => window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 110)")
+                    page.screenshot(path=str(OUT / ("dc-homework-" + number + "-" + label + ".png")))
+                for number in ("3-13", "3-17"):
+                    note = page.locator("#dc-hw-" + number + " h4", has_text="原稿疑问与澄清")
+                    note.evaluate("(e) => window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 110)")
+                    page.screenshot(path=str(OUT / ("dc-homework-" + number + "-notes-" + label + ".png")))
                 page.close()
             browser.close()
     finally:

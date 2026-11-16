@@ -748,3 +748,21 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .instrument-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; }
 .instrument-scroll img { display:block; width:100%; min-width:680px; max-width:none; height:auto; }
 .instrument-scroll:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+/* DC chapter 3 reviewed homework: native HTML reader */
+
+.dc-hw{--dc-hw-ok:#166534;--dc-hw-warn:#a16207;--dc-hw-bad:#b42318}
+:root[data-theme='dark'] .dc-hw{--dc-hw-ok:#8ee0a0;--dc-hw-warn:#f0ca75;--dc-hw-bad:#ffaca4}
+.dc-hw .dc-hw-ok{color:var(--dc-hw-ok)}.dc-hw .dc-hw-warn{color:var(--dc-hw-warn)}.dc-hw .dc-hw-bad{color:var(--dc-hw-bad)}
+.dc-hw .dc-hw-card{border-top:2px solid var(--border);padding:1.4rem 0;margin:1.8rem 0;scroll-margin-top:90px}
+.dc-hw .dc-hw-card h3{font-size:1.4em;line-height:1.5}
+.dc-hw .dc-hw-grade,.dc-hw .dc-hw-related{font-family:var(--font);font-size:.9em;color:var(--muted)}
+.dc-hw .dc-hw-source{border-left:3px solid var(--accent);padding:12px 16px;background:var(--subtle);border-radius:0 8px 8px 0}
+.dc-hw .dc-hw-card ol{padding-left:1.4em}.dc-hw .dc-hw-card li{margin:1rem 0;padding-bottom:.65rem;border-bottom:1px solid var(--border)}
+.dc-hw .dc-hw-card li p{margin:.3em 0}.dc-hw .dc-hw-card h4{margin:1.2rem 0 .5rem}
+.dc-hw .dc-hw-toc{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:12px 0 20px}
+.dc-hw .dc-hw-toc a{display:inline-flex;padding:6px 10px;border:1px solid var(--border);border-radius:7px;background:var(--subtle);font:600 14px/1.5 var(--font)}
+.dc-hw .dc-hw-top,.dc-hw .dc-hw-related{font-size:.85em}
+.dc-hw a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:640px){.dc-hw .dc-hw-card{padding:1rem 0;margin:1rem 0}.dc-hw .dc-hw-source{padding:10px 12px}.dc-hw .dc-hw-card h3{font-size:1.22em}}
+
