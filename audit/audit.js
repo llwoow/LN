@@ -26,10 +26,12 @@
   const STORAGE_KEY = 'ln.audit.records.v1';
   const SOURCE_CLASSES = ['仓库实际内容', '文档声明', '推测', '未确认内容'];
   const statuses = ['已验证', '部分接入', '骨架状态', '明确存在的问题'];
-  const recordFor = (row) => state.records.find((r) => r.id === row.id && r.courseId === row.courseId);
+  const recordFor = (row, anchor = '') => state.records.find((r) =>
+    r.id === row.id && r.courseId === row.courseId && (r.anchor || '') === anchor);
+  const recordKey = (rec) => rec.courseId + '/' + rec.id + (rec.anchor ? '#' + rec.anchor : '');
   const allRows = () => state.inventory ? state.inventory.sections : [];
   const lookup = (id, courseId) => allRows().find((row) => row.id === id && row.courseId === courseId);
-  const fullId = (row) => row.courseId + '/' + row.id;
+  const fullId = (row, anchor = '') => row.courseId + '/' + row.id + (anchor ? '#' + anchor : '');
   const validUrl = (value) => /^https:\/\/[^\s/]+(?:\/|$)/i.test(value || '');
   const independent = (type) => ['测试运行', '浏览器实际操作', '学科人工核读'].includes(type);
 
@@ -88,7 +90,10 @@
       ')</summary><ul class="audit-section-list">' +
       row.subsections.map((s) => '<li><a class="audit-link" href="' +
       escape(courseLink(row, s.id)) + '" target="_blank" rel="noopener">' +
-      compact(s.title) + '</a> <span class="audit-code">#' + escape(s.id) + '</span></li>').join('') +
+      compact(s.title) + '</a> <span class="audit-code">#' + escape(s.id) +
+      '</span> ' + (verified(row, recordFor(row, s.id)) ? tag('已验证') : '') +
+      ' <button type="button" class="audit-link" data-review="' +
+      escape(fullId(row, s.id)) + '">核验本小节</button></li>').join('') +
       '</ul></details>' : '';
     let signals = '';
     if (type === 'derivation' || type === 'visual' || type === 'practice') {
@@ -254,8 +259,13 @@
     $('#audit-body').innerHTML = content;
     if (state.view === 'edit') renderEditor();
   }
-  function fillEditor(form, row) {
-    const rec = recordFor(row) || {};
+  function fillEditor(form, row, anchor = '') {
+    const anchors = form.elements.anchor;
+    anchors.innerHTML = '<option value="">整个阅读单元</option>' +
+      row.subsections.map((s) => '<option value="' + escape(s.id) + '">' +
+        compact(s.title) + '</option>').join('');
+    anchors.value = anchor;
+    const rec = recordFor(row, anchor) || {};
     form.elements.id.value = fullId(row);
     fields.forEach((name) => {
       const field = form.elements[name];
@@ -276,12 +286,20 @@
       '</option>').join('');
     $('#audit-body').append(form);
     const node = $('#record-form');
-    let selected = allRows().find((r) => fullId(r) === state.selected);
+    const selection = state.selected.split('#');
+    let selected = allRows().find((r) => fullId(r) === selection[0]);
     if (!selected) selected = visibleRows()[0] || allRows()[0];
-    if (selected) fillEditor(node, selected);
+    if (selected) fillEditor(node, selected, selection[1] || '');
     select.addEventListener('change', () => {
       const row = allRows().find((r) => fullId(r) === select.value);
       if (row) { state.selected = fullId(row); fillEditor(node, row); }
+    });
+    node.elements.anchor.addEventListener('change', () => {
+      const row = allRows().find((r) => fullId(r) === select.value);
+      if (row) {
+        state.selected = fullId(row, node.elements.anchor.value);
+        fillEditor(node, row, node.elements.anchor.value);
+      }
     });
     node.addEventListener('submit', saveRecord);
     $('#audit-export').addEventListener('click', exportRecords);
@@ -293,7 +311,7 @@
     const form = event.currentTarget;
     const row = allRows().find((r) => fullId(r) === form.elements.id.value);
     if (!row) return;
-    const rec = { id: row.id, courseId: row.courseId, sourceDigest: row.sourceDigest || '',
+    const rec = { id: row.id, courseId: row.courseId, anchor: form.elements.anchor.value, sourceDigest: row.sourceDigest || '',
       updatedAt: new Date().toISOString() };
     fields.forEach((name) => {
       if (name === 'sourceDigest') return;
@@ -312,7 +330,7 @@
       $('#form-message').textContent = '明确问题需要仓库代码位置、实际现象和可复现步骤；否则改为部分接入或未确认。';
       return;
     }
-    const old = state.records.findIndex((r) => r.id === rec.id && r.courseId === rec.courseId);
+    const old = state.records.findIndex((r) => recordKey(r) === recordKey(rec));
     if (old >= 0) state.records[old] = rec;
     else state.records.push(rec);
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state.records)); }
@@ -340,15 +358,15 @@
       const incoming = data.records.filter((r) => r && typeof r === 'object' &&
         lookup(r.id, r.courseId) && statuses.includes(r.status) &&
         SOURCE_CLASSES.includes(r.sourceKind));
-      const unique = new Map(state.records.map((r) => [r.courseId + '/' + r.id, r]));
-      incoming.forEach((r) => unique.set(r.courseId + '/' + r.id,
+      const unique = new Map(state.records.map((r) => [recordKey(r), r]));
+      incoming.forEach((r) => unique.set(recordKey(r),
         Object.fromEntries(Object.entries(r).filter(([key]) =>
-          ['id','courseId','updatedAt',...fields].includes(key)))));
+          ['id','courseId','anchor','updatedAt',...fields].includes(key)))));
       state.records = [...unique.values()];
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state.records));
       $('#form-message').textContent = '导入 ' + incoming.length + ' 条记录。旧版本证据仅在源码摘要和条件匹配时显示已验证。';
       const row = allRows().find((r) => fullId(r) === $('#record-form').elements.id.value);
-      if (row) fillEditor($('#record-form'), row);
+      if (row) fillEditor($('#record-form'), row, $('#record-form').elements.anchor.value);
       renderSummary(visibleRows());
     } catch (err) {
       $('#form-message').textContent = '导入失败：' + err.message;
@@ -356,11 +374,12 @@
     event.target.value = '';
   }
   function deleteRecord() {
-    const key = $('#record-form').elements.id.value;
-    state.records = state.records.filter((r) => r.courseId + '/' + r.id !== key);
+    const form = $('#record-form');
+    const key = form.elements.id.value + (form.elements.anchor.value ? '#' + form.elements.anchor.value : '');
+    state.records = state.records.filter((r) => recordKey(r) !== key);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state.records));
     const row = allRows().find((r) => fullId(r) === key);
-    if (row) fillEditor($('#record-form'), row);
+    if (row) fillEditor($('#record-form'), row, form.elements.anchor.value);
     $('#form-message').textContent = '仅删除本机记录；仓库记录仍需通过 Git 变更。';
     renderSummary(visibleRows());
   }
@@ -382,11 +401,11 @@
         throw new Error('审查数据格式不符合 v1');
       }
       state.inventory = inventory;
-      const merged = new Map(records.records.map((rec) => [rec.courseId + '/' + rec.id, rec]));
+      const merged = new Map(records.records.map((rec) => [recordKey(rec), rec]));
       try {
         const local = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
         if (Array.isArray(local)) local.forEach((rec) => {
-          if (rec && lookup(rec.id, rec.courseId)) merged.set(rec.courseId + '/' + rec.id, rec);
+          if (rec && lookup(rec.id, rec.courseId)) merged.set(recordKey(rec), rec);
         });
       } catch {}
       state.records = [...merged.values()];
