@@ -76,6 +76,24 @@ def run():
                 assert page.locator(".dc-hw-card").count() == 9
                 assert page.locator(".dc-hw-card h4", has_text="原题").count() == 9
                 assert page.locator(".dc-hw-toc").evaluate("(e) => getComputedStyle(e).display") == "flex"
+                formulas = page.locator("[data-dc-tex]")
+                assert formulas.count() >= 50
+                rendered_count = page.locator("[data-dc-tex] .katex").count()
+                if rendered_count != formulas.count():
+                    report = page.evaluate("""() => ({
+                        loaded: !!window.katex,
+                        total: document.querySelectorAll('[data-dc-tex]').length,
+                        rendered: document.querySelectorAll('[data-dc-tex] .katex').length,
+                        firstUnrendered: [...document.querySelectorAll('[data-dc-tex]')]
+                          .filter(el => !el.querySelector('.katex')).slice(0, 6)
+                          .map(el => ({tex:el.dataset.dcTex, text:el.textContent.slice(0,120)}))
+                    })""")
+                    print("KaTeX render diagnostic:", report, flush=True)
+                assert rendered_count == formulas.count()
+                assert page.locator("[data-dc-tex] math").count() == formulas.count()
+                assert page.locator(".katex-error").count() == 0
+                assert not page.evaluate("Array.from(document.querySelectorAll('[data-dc-tex]')).some(el => el.scrollWidth > el.clientWidth && getComputedStyle(el).overflowX !== 'auto')")
+
                 assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
                 page.evaluate("window.scrollTo(0, 0)")
                 page.screenshot(path=str(OUT / ("dc-homework-opening-" + label + ".png")))

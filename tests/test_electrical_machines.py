@@ -57,6 +57,12 @@ class CourseIntegrity(unittest.TestCase):
             self.assertIn('#course/electrical-machines/dc-homework-review/dc-hw-' + number, html)
         self.assertEqual(html.count('<h4>原题</h4>'), len(ids))
         self.assertEqual(html.count('更优解法与迁移'), len(ids))
+        # Every reviewed numerical solution is backed by accessible KaTeX source.
+        self.assertGreaterEqual(html.count('data-dc-tex='), 50)
+        self.assertIn(chr(92) + 'frac', html)
+        self.assertIn(chr(92) + 'Phi', html)
+        self.assertIn(chr(92) + 'eta', html)
+        self.assertIn('data-dc-display="block"', html)
         self.assertNotIn('<img', html)
         self.assertNotIn('.pdf', html)
         self.assertIn('0.02891627', html)
