@@ -8,6 +8,7 @@ from __future__ import annotations
 from html.parser import HTMLParser
 from pathlib import Path
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -22,7 +23,9 @@ CHECKS = ("知识结构", "推导", "例题", "习题/测试入口", "图示", "
 
 
 def assignment(source: str):
-    match = re.search(r"window\.[A-Z_][A-Z_0-9]*(?:\[[^\]]+\])?\s*=\s*", source)
+    match = re.search(r"window\.LN_LESSONS\[[^\]]+\]\s*=\s*", source)
+    if not match:
+        match = re.search(r"window\.[A-Z_][A-Z_0-9]*(?:\[[^\]]+\])?\s*=\s*", source)
     if not match:
         raise ValueError("No LN JSON assignment")
     return json.JSONDecoder().raw_decode(source[match.end():])[0]
@@ -120,6 +123,7 @@ def inspect_section(root: Path, course_id: str, section: dict):
         "statusReason": reason,
         "evidenceClass": "仓库实际内容",
         "sourceSizeBytes": path.stat().st_size if exists else 0,
+        "sourceDigest": hashlib.sha256(path.read_bytes()).hexdigest() if exists else "",
         "subsections": headings,
         "signals": signals,
         "checks": list(CHECKS),
