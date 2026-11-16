@@ -165,9 +165,18 @@
       ['发布与来源', '复查链接、许可、隐私、附件类型、构建目录与发布版本；检查不等于权利授权。', 'PUBLICATION.md'],
       ['技术与学科证据隔离', 'CI 测试通过只证实测试范围内的代码行为；文档、README、PR 说明不作为已验证证据。', 'REQUIREMENTS.md']
     ];
+    const skeleton = rows.filter((r) => status(r) === '骨架状态');
+    const problems = rows.filter((r) => status(r) === '明确存在的问题');
+    const undocumented = rows.filter((r) => status(r) === '部分接入');
+    const concrete = '<section class="audit-panel"><h2>仓库实际内容与目标的差距</h2>' +
+      '<p>尚只有目录/骨架：' + skeleton.length + ' 项；存在代码但尚无独立验收证据：' +
+      undocumented.length + ' 项；已定位或复现问题：' + problems.length + ' 项。</p>' +
+      '<p class="audit-secondary">来源：manifest 类型、源文件存在性及人工复现记录。缺少学科核读证据不等于已经发现学术错误。</p>' +
+      skeleton.slice(0, 12).map((row) => renderRow(row, 'standards')).join('') +
+      (skeleton.length > 12 ? '<p class="audit-secondary">其余骨架请切换“骨架内容清单”查看。</p>' : '') + '</section>';
     return '<p class="audit-notice">当前选中 ' + rows.length +
       ' 个条目。以下为适用验收标准，不表示已经逐项人工核查。</p>' +
-      items.map(([title, detail, file]) => '<section class="audit-panel"><h2>' + escape(title) +
+      concrete + items.map(([title, detail, file]) => '<section class="audit-panel"><h2>' + escape(title) +
         '</h2><p>' + escape(detail) + '</p><p class="audit-secondary">标准依据：' +
         escape(file) + ' · 逐项实际差异：待审查记录</p></section>').join('');
   }
