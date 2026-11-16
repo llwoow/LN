@@ -1,0 +1,35 @@
+/* Chapter 4.7: idealized three-phase rotating MMF lesson. */
+.reader-section .mmf-eq{overflow-x:auto;max-width:100%;padding:.85rem 1rem;margin:.85rem 0;border-left:3px solid var(--accent);background:var(--subtle);border-radius:6px;line-height:2;font-family:Georgia,"Times New Roman",serif;text-align:center;font-size:1.05rem;white-space:normal}
+.reader-section .mmf-eq-result{border:1px solid var(--border);border-left:4px solid var(--accent);background:var(--surface);font-weight:650}
+.reader-section .mmf-caveat{padding:.75rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--subtle)}
+.rotating-mmf-lab{border:1px solid var(--border);border-radius:12px;padding:1rem;margin:1.2rem 0;background:var(--subtle);color:var(--text);font:inherit}
+.rotating-mmf-lab *{box-sizing:border-box}
+.rotating-mmf-lab .mmf-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.35rem;margin-bottom:.8rem}
+.rotating-mmf-lab button,.rotating-mmf-lab select{border:1px solid var(--border);border-radius:7px;background:var(--surface);color:var(--text);font:inherit;font-size:.83rem;padding:.52rem .55rem;cursor:pointer}
+.rotating-mmf-lab button[aria-pressed=true]{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.rotating-mmf-lab button:focus-visible,.rotating-mmf-lab select:focus-visible,.rotating-mmf-lab input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.rotating-mmf-lab .mmf-grid{display:grid;grid-template-columns:minmax(185px,1fr) minmax(0,1.4fr);gap:.8rem}
+.rotating-mmf-lab .mmf-panel{min-width:0;border:1px solid var(--border);border-radius:9px;padding:.75rem;background:var(--surface)}
+.rotating-mmf-lab .mmf-heading{font-weight:700;font-size:.89rem;margin:.1rem 0 .65rem}
+.rotating-mmf-lab svg{display:block;width:100%;height:auto}
+.rotating-mmf-lab .mmf-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+.rotating-mmf-lab .mmf-scroll svg{min-width:670px;width:100%;height:auto}
+.rotating-mmf-lab .mmf-tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:.6rem 0}
+.rotating-mmf-lab .mmf-slider{width:100%;accent-color:var(--accent);cursor:pointer}
+.rotating-mmf-lab .mmf-phase{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.rotating-mmf-lab .mmf-phase output{font-variant-numeric:tabular-nums;font-weight:700}
+.rotating-mmf-lab .mmf-current{display:grid;grid-template-columns:35px minmax(0,1fr) 48px;align-items:center;gap:.6rem;font-size:.8rem;margin:.55rem 0;font-variant-numeric:tabular-nums}
+.rotating-mmf-lab .mmf-track{position:relative;height:12px;background:var(--subtle);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.rotating-mmf-lab .mmf-track:after{content:"";position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--muted);opacity:.65}
+.rotating-mmf-lab .mmf-bar{position:absolute;top:0;height:100%}
+.rotating-mmf-lab .mmf-legend{display:flex;flex-wrap:wrap;gap:.5rem 1rem;font-size:.78rem;color:var(--muted);margin-top:.5rem}
+.rotating-mmf-lab .mmf-key{display:inline-flex;align-items:center;gap:.3rem}
+.rotating-mmf-lab .mmf-swatch{width:16px;height:3px;border-radius:3px;display:inline-block}
+.rotating-mmf-lab .mmf-note{border-left:3px solid var(--accent);padding:.7rem .9rem;margin-top:.9rem;border-radius:0 8px 8px 0;background:var(--surface);font-size:.88rem;line-height:1.65}
+.rotating-mmf-lab .mmf-note strong{display:block}
+.rotating-mmf-lab .mmf-note p{margin:.35rem 0;text-align:left}
+.rotating-mmf-lab .mmf-legend-label{font-size:.78rem;color:var(--muted);margin:.45rem 0 .2rem;text-align:start}
+.rotating-mmf-lab .mmf-axis-select{display:flex;align-items:center;gap:.5rem;justify-content:space-between;flex-wrap:wrap}
+.rotating-mmf-lab .mmf-small{font-size:.76rem;color:var(--muted);line-height:1.45}
+@media(max-width:760px){.rotating-mmf-lab{padding:.7rem}.rotating-mmf-lab .mmf-grid{grid-template-columns:1fr}.rotating-mmf-lab .mmf-rotor{max-width:275px;margin:0 auto}.rotating-mmf-lab .mmf-stages button{padding:.48rem .2rem;font-size:.75rem}}
+@media(prefers-reduced-motion:reduce){.rotating-mmf-lab *{animation:none!important;transition:none!important}}
