@@ -780,3 +780,9 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .dc-hw .dc-hw-katex-inline {white-space:nowrap}
 .dc-hw .dc-hw-math-fallback {color:var(--muted);font-size:13px}
 @media(max-width:640px){.dc-hw .dc-hw-katex-math{padding:9px 8px}}
+
+
+/* Keep short handwritten-step notes from being stretched by reader justification. */
+.dc-hw .dc-hw-source,
+.dc-hw .dc-hw-card li p,
+.dc-hw .dc-hw-card > p { text-align:left; }
