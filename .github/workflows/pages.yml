@@ -52,6 +52,14 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Verify site assets and navigation under the Pages subdirectory
         run: python tests/browser_smoke_pages.py
+      - name: Attach audit review screenshots to the PR run
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ln-audit-preview-${{ github.event.pull_request.number }}
+          path: nov13-browser-artifacts/audit-*.png
+          if-no-files-found: ignore
+          retention-days: 14
       - name: Upload the verified static site
         uses: actions/upload-pages-artifact@v3
         with:
