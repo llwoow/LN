@@ -129,6 +129,7 @@
     if (!courses.size) return empty('没有符合当前筛选的条目。');
     return [...courses].map(([course, cr]) =>
       '<section class="audit-panel"><h2>' + escape(courseLabel(course)) + ' · ' + cr.length + '项</h2>' +
+      '<a class="audit-link" href="../#course/' + escape(course) + '/map" target="_blank" rel="noopener">打开 LN 知识图谱</a>' +
       [...groupBy(cr, (r) => r.group)].map(([group, gr]) =>
         '<details class="audit-panel" ' + (rows.length < 30 ? 'open' : '') +
         '><summary>' + escape(group) + ' · ' + gr.length + '项</summary>' +
