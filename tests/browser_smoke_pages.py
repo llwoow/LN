@@ -95,12 +95,18 @@ def main():
                 page.locator('.audit-stat').first.wait_for(timeout=15000)
                 assert page.locator('.audit-stat').count() == 4
                 assert '章节完成度' in page.locator('main').inner_text()
+                page.screenshot(path=str(evidence / 'audit-1280.png'), full_page=True)
+                page.locator('#audit-nav [data-view="catalog"]').click()
+                assert page.locator('a[href*="/map"]').count(), 'knowledge map links must exist'
                 page.locator('#audit-nav [data-view="skeleton"]').click()
                 assert '骨架内容清单' in page.locator('h1').inner_text()
                 page.locator('#audit-nav [data-view="edit"]').click()
                 assert page.locator('#record-form select[name="id"] option').count() > 100
+                page.locator('#record-form select[name="id"]').select_option('electrical-machines/transformer-sec27')
+                assert page.locator('#record-form select[name="anchor"] option').count() > 1
                 page.set_viewport_size({'width': 390, 'height': 900})
                 assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), 'audit viewport overflow'
+                page.screenshot(path=str(evidence / 'audit-390.png'), full_page=True)
                 page.set_viewport_size({'width': 1280, 'height': 900})
                 assert not errors, errors
                 assert not failures, failures
