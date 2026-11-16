@@ -766,3 +766,17 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .dc-hw a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:640px){.dc-hw .dc-hw-card{padding:1rem 0;margin:1rem 0}.dc-hw .dc-hw-source{padding:10px 12px}.dc-hw .dc-hw-card h3{font-size:1.22em}}
 
+
+
+/* Chapter 3 homework: KaTeX formulas are scrollable on narrow screens. */
+.dc-hw .dc-hw-katex-math {
+  max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain;
+  margin:9px 0 12px; padding:10px 12px;
+  background:var(--subtle); border-left:2px solid var(--border);
+  border-radius:0 6px 6px 0; text-align:left;
+}
+.dc-hw .dc-hw-katex-math .katex-display {margin:0;text-align:left}
+.dc-hw .dc-hw-katex-math .katex-display > .katex {text-align:left;white-space:nowrap}
+.dc-hw .dc-hw-katex-inline {white-space:nowrap}
+.dc-hw .dc-hw-math-fallback {color:var(--muted);font-size:13px}
+@media(max-width:640px){.dc-hw .dc-hw-katex-math{padding:9px 8px}}
