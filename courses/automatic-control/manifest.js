@@ -433,9 +433,10 @@ window.LN_AUTO_CONTROL={
       "id": "ac-4-3-1",
       "title": "4.3.1 在根轨迹上确定特征根",
       "group": "第4章 根轨迹法",
-      "kind": "outline",
+      "kind": "html",
       "textbookSection": "4.3.1",
-      "teachingIndex": 51
+      "teachingIndex": 51,
+      "src": "courses/automatic-control/lessons/ac-4-3-1.js"
     },
     {
       "id": "ac-4-3-2",
