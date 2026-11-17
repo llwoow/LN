@@ -87,6 +87,22 @@ def run() -> None:
                 assert page.locator("[data-ac-root-moving] circle[fill='#1676b5']").count() == 2
                 page.locator("[data-ac-set-k='5']").click()
                 page.screenshot(path=str(OUT / ("automatic-control-" + name + "-root-locus.png")), full_page=True)
+                page.goto(base + "#course/automatic-control/ac-4-3-1", wait_until="domcontentloaded")
+                page.locator("[data-ac-synthesis][data-mounted='true']").wait_for(timeout=20000)
+                page.locator("[data-ac-syn-status]").wait_for()
+                assert "临界稳定" in page.locator("[data-ac-syn-status]").inner_text()
+                assert page.locator("[data-ac-tex] .katex").count() >= 7
+                assert page.locator("[data-ac-syn-question]").count() == 6
+                page.locator("[data-ac-syn-preset='2']").click()
+                assert "渐近稳定" in page.locator("[data-ac-syn-status]").inner_text()
+                page.locator("[data-ac-syn-preset='6']").click()
+                assert "不稳定" in page.locator("[data-ac-syn-status]").inner_text()
+                page.locator("[data-ac-syn-question]").first.locator("[data-ac-syn-choice='1']").click()
+                assert "正确" in page.locator("[data-ac-syn-question]").first.locator("[data-ac-syn-feedback]").inner_text()
+                if width < 560:
+                    assert page.locator(".ac-syn-plot-wrap").evaluate('(n)=>n.scrollWidth>n.clientWidth')
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+                page.screenshot(path=str(OUT / ("automatic-control-" + name + "-cubic-geometry.png")), full_page=True)
                 page.close()
             browser.close()
     finally:
