@@ -139,6 +139,11 @@ h1 { font-size: 28px; line-height: 1.4; font-weight: 750; letter-spacing: -.5px;
 .lesson-tools { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; color: var(--muted); font-size: 11px; margin-bottom: 24px; }
 .lesson-tools span { margin-right: auto; }
 .lesson-tools a:hover { color: var(--text); text-decoration: underline; }
+.lesson-tools .lesson-source-tool { flex: 0 0 100%; min-width: 0; max-width: 100%; box-sizing: border-box; border: 1px solid var(--border); border-radius: 8px; padding: 7px 11px; color: var(--text); font-size: 12px; }
+.lesson-tools .lesson-source-tool > summary { cursor: pointer; font-weight: 600; }
+.lesson-tools .lesson-source-tool p, .lesson-tools .lesson-source-tool ul { margin: 7px 0 0; padding-left: 18px; overflow-wrap: anywhere; line-height: 1.65; }
+.lesson-tools .lesson-source-tool a { color: var(--accent); overflow-wrap: anywhere; }
+
 .lesson { max-width: 72ch; font-size: 17px; font-weight: 500; overflow-wrap: break-word; }
 .lesson h2 { font-size: 22px; font-weight: 700; margin: 38px 0 20px; line-height: 1.5; }
 .lesson > h2:first-child, .lesson > section > h2:first-child { margin-top: 0; }
