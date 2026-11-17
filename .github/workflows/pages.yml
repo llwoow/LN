@@ -7,6 +7,9 @@ on:
     paths:
       - '.github/workflows/pages.yml'
       - 'tests/browser_smoke_pages.py'
+      - 'tests/practice-v2.browser.py'
+      - 'practice.js'
+      - 'practice-v2.css'
       - 'scripts/build-static.py'
       - 'scripts/check-publication.py'
       - '.gitleaks.toml'
@@ -51,7 +54,9 @@ jobs:
           python -m pip install --disable-pip-version-check playwright
           python -m playwright install --with-deps chromium
       - name: Verify site assets and navigation under the Pages subdirectory
-        run: python tests/browser_smoke_pages.py
+        run: |
+          python tests/browser_smoke_pages.py
+          python tests/practice-v2.browser.py
       - name: Upload the verified static site
         uses: actions/upload-pages-artifact@v3
         with:

@@ -31,7 +31,7 @@ def run():
                 panel=page.locator("#practice-dialog:modal [data-practice-panel]")
                 panel.wait_for(timeout=25000)
                 assert panel.locator("[data-p-question] option").count()==60
-                assert "60 题" in panel.locator("[data-p-scope]").inner_text()
+                assert "60题" in panel.locator("[data-p-scope]").inner_text()
                 # Confirm correct/incorrect answer feedback, first-attempt preservation,
                 # open questions not marked automatically, and every diagram loads.
                 for q in QUESTIONS:
