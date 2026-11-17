@@ -41,6 +41,7 @@ def main():
                     lesson.wait_for(timeout=30000)
                     page.evaluate("document.fonts.ready")
                     assert lesson.locator("h2").count() > 0, (id,"missing title")
+                    assert lesson.locator(".reading-reference").count() == 0, (id,"repeated source notice")
                     assert lesson.locator('.katex-error').count() == 0, (id,"math parse")
                     assert lesson.locator('p[role="alert"]').count() == 0, (id,"load failed")
                     assert not page.evaluate("document.documentElement.scrollWidth > innerWidth"), (id,width,"horizontal overflow")
@@ -53,11 +54,7 @@ def main():
                         for svg in fig.locator("svg").all():
                             assert svg.locator("title").count() > 0, (id,"SVG lacks text alternative")
                     if id in VISUAL_REVIEW:
-                        source_note = lesson.locator(".reading-reference").first
-                        assert source_note.count() == 1, (id,"missing brief reference")
                         if width <= 390:
-                            font = source_note.evaluate("(n) => parseFloat(getComputedStyle(n).fontSize)")
-                            assert 12 <= font <= 15, (id,font,"source-note scale")
                             for pan in lesson.locator(".emc-figure-scroll").all():
                                 sizes = pan.evaluate("(n)=>({content:n.scrollWidth,viewport:n.clientWidth})")
                                 assert sizes["content"] > sizes["viewport"], (id,width,"diagram not pannable",sizes)
@@ -72,6 +69,11 @@ def main():
                         slider.evaluate("(el)=>{el.value = el.max; el.dispatchEvent(new Event('input',{bubbles:true}));}")
                         assert status.inner_text() != original, (id,"interactive model does not respond")
                     audit.append({"section":id, "viewport":name, "ok":True})
+                page.goto(base + "#course/electromagnetic-compatibility/map", wait_until="domcontentloaded")
+                course_reference = page.locator(".course-reference")
+                course_reference.wait_for()
+                assert course_reference.count() == 1, ("course reference should occur once", name)
+                assert course_reference.inner_text() == "参考：《电磁兼容原理及应用》及课程资料"
                 assert not errors, errors
                 assert not http_errors, http_errors
                 # Native symbol definitions must open, locate the actual source, and return.
