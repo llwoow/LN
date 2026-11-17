@@ -13,7 +13,7 @@ with sync_playwright() as p:
         page=context.new_page();errors=[]
         page.on('pageerror',lambda e:errors.append(str(e)))
         page.goto('http://127.0.0.1:8765/#practice/electrical-machines')
-        assert page.locator('[data-practice-mode="sources"]').get_attribute('aria-pressed')=='true'
+        assert page.locator('[data-practice-mode="local"]').get_attribute('aria-pressed')=='true'
         page.locator('[data-practice-mode="local"]').click()
         panel=page.locator('main [data-practice-panel]')
         panel.locator('[data-p-submit]').click();assert panel.locator('[data-p-error]').inner_text()
@@ -67,7 +67,7 @@ with sync_playwright() as p:
         assert panel.locator('[data-p-reason]').input_value()==before['reason']
         assert panel.locator('[data-p-rubric]:checked').count()==1
         # Filter by kind and capability rather than awarding a fake mastery score.
-        panel.locator('[data-p-type]').select_option('open');panel.locator('[data-p-skill]').select_option('迁移设计')
+        panel.locator('[data-p-filter-box] summary').click();panel.locator('[data-p-type]').select_option('open');panel.locator('[data-p-skill]').select_option('迁移设计')
         assert panel.locator('[data-p-question] option').count()>0
         # Hints/direct reference analysis do not create independent first-answer evidence.
         page.goto('http://127.0.0.1:8765/#practice/electrical-machines');page.evaluate('localStorage.removeItem("ln.practice.v1")');page.reload();page.locator('[data-practice-mode="local"]').click()
