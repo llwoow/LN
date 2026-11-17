@@ -38,6 +38,7 @@ def check():
                 assert panel.locator('[data-p-option-state="wrong"]').count()==1
                 assert panel.locator('[data-p-option-state="missed"]').count()==1
                 assert panel.locator(".practice-answer-line").count()==1
+                assert panel.locator("[data-p-overview]").count()==1
                 assert panel.locator(".practice-choice-detail").count()==2
                 page.screenshot(path=str(OUT/("practice-choice-"+name+".png")))
                 panel.locator('[name="p-answer"][value="1"]').check()

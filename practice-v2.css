@@ -333,3 +333,13 @@
   .practice-hub .practice-modes,.practice-pagination,.practice-question-tools,.practice-workspace-tools,.practice-number-map{display:none!important;}
   .practice-question{break-inside:avoid;}
 }
+.practice-result-overview{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 14px;
+  margin:5px 0 17px;padding:13px 16px;border:1px solid var(--border);border-radius:11px;
+  background:var(--subtle);scroll-margin-top:110px;line-height:1.55;
+}
+.practice-result-overview strong{font-size:15px;font-weight:790;}
+.practice-result-overview span{font-size:14px;font-weight:600;overflow-wrap:anywhere;}
+.practice-result-overview[data-p-overview-tone="correct"]{border-color:var(--practice-positive);background:var(--practice-positive-soft);}
+.practice-result-overview[data-p-overview-tone="wrong"]{border-color:var(--practice-negative);background:var(--practice-negative-soft);}
+.practice-result-overview:focus{outline:none;}

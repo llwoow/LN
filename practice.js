@@ -96,10 +96,17 @@
     const reason='<label class="practice-reason">'+(q.type==='open'?'写下推理过程（必填）':'推导、判断依据或草稿（选填）')+
       '<textarea data-p-reason rows="'+(q.type==='open'?7:4)+'" placeholder="写下自己的分析；本地自动保存">'+escape(r.reason)+'</textarea></label>';
     const reasoning=q.type==='open'?reason:'<details class="practice-thinking"'+((r.reason||q.type==='numeric')?' open':'')+'><summary>写下自己的推导或理由（可选）</summary>'+reason+'</details>';
+    const briefTone=!graded||!r.submitted?'review':q.type==='open'?'review':r.lastCorrect?'correct':'wrong';
+    const briefStatus=!r.submitted?'已查看参考答案':q.type==='open'?'推理过程待自行对照':r.lastCorrect?'已吻合':'需要修正';
+    const briefAnswer=q.options?'你的选择 '+answerLabel(q,r,r.selected)+' · 正确答案 '+answerLabel(q,r,q.answer):
+      q.type==='numeric'?'参考数值 '+formattedNumber(q.answer,q.tolerance)+' '+q.unit:
+      '参考推导与评分要点在题目下方';
+    const overview=graded?'<div class="practice-result-overview" data-p-overview data-p-overview-tone="'+briefTone+'" tabindex="-1" role="status">'+
+      '<strong>'+briefStatus+'</strong><span>'+escape(briefAnswer)+'</span></div>':'';
     return '<article class="practice-question" data-question-id="'+escape(q.id)+'">'+
       '<div class="practice-question-meta"><span>'+kinds[q.type]+'</span><span>'+q.skills.map(escape).join(' · ')+'</span></div>'+
       '<h2 tabindex="-1" data-p-title>'+escape(q.title)+'</h2>'+
-      '<div class="practice-prompt">'+(q.promptHtml||escape(q.prompt))+'</div>'+options+reasoning+
+      '<div class="practice-prompt">'+(q.promptHtml||escape(q.prompt))+'</div>'+overview+options+reasoning+
       '<div class="practice-question-tools"><label class="practice-confidence">把握度 <select data-p-confidence><option value="unsure"'+(r.confidence==='unsure'?' selected':'')+'>不确定</option><option value="sure"'+(r.confidence==='sure'?' selected':'')+'>有把握</option></select></label>'+
       '<button type="button" class="practice-subtle-button" data-p-favorite aria-pressed="'+Boolean(r.favorite)+'">'+(r.favorite?'★ 已收藏':'☆ 收藏')+'</button>'+
       '<button type="button" class="practice-subtle-button" data-p-mistake aria-pressed="'+Boolean(r.selfMistake)+'">'+(r.selfMistake?'✓ 已标记':'标记不会')+'</button></div>'+
@@ -174,11 +181,12 @@
       else if(t.matches('[data-p-confidence]'))r.confidence=t.value;
       else if(t.matches('[data-p-rubric]'))r.checks=Array.from(body.querySelectorAll('[data-p-rubric]:checked'),e=>Number(e.value));
       else return;
-      if(!t.matches('[data-p-rubric]')&&t.matches('[name="p-answer"],[data-p-value]')){
+      if(!t.matches('[data-p-rubric]')&&t.matches('[name="p-answer"],[data-p-value],[data-p-reason]')){
         r.submitted=false;r.checks=[];
         // Keep the option appearance in sync without replacing the active input or caret.
         body.querySelectorAll('[data-p-option-state]').forEach(label=>{label.dataset.pOptionState='';label.querySelector('.practice-choice-detail')?.remove();});
         body.querySelector('[data-p-feedback]').innerHTML='';
+        body.querySelector('[data-p-overview]')?.remove();
       }
       if(t.matches('[data-p-rubric]')){ /* the answer remains in review mode */ }
       body.querySelector('[data-p-error]').textContent='';
@@ -198,11 +206,16 @@
         r.attempts.push({correct:value,assisted:r.hinted||r.revealed||Boolean(r.feedbackSeen),confidence:r.confidence});
         r.feedbackSeen=true;if(r.attempts.length>100)r.attempts=[r.attempts[0],...r.attempts.slice(-99)];
         render();
-        body.querySelector('.practice-verdict h3')?.focus({preventScroll:true});
+        const resultAnchor=body.querySelector(q.type==='open'?'.practice-verdict':'[data-p-overview]');
+        resultAnchor?.scrollIntoView({block:'start',behavior:'instant'});
+        resultAnchor?.focus({preventScroll:true});
       }else if(target.closest('[data-p-hint]')){
         r.hinted=true;body.querySelector('[data-p-hint-text]').hidden=false;save();summary();
       }else if(target.closest('[data-p-reveal]')){
-        r.revealed=true;render();body.querySelector('.practice-verdict h3')?.focus({preventScroll:true});
+        r.revealed=true;render();
+        const revealAnchor=body.querySelector(q.type==='open'?'.practice-verdict':'[data-p-overview]');
+        revealAnchor?.scrollIntoView({block:'start',behavior:'instant'});
+        revealAnchor?.focus({preventScroll:true});
       }else if(target.closest('[data-p-redo]')){
         r.submitted=false;r.revealed=false;r.selected=[];r.value='';r.reason='';r.checks=[];render();
       }else if(target.closest('[data-p-favorite]')){
