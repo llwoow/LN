@@ -38,7 +38,7 @@ for i,l in enumerate(D['lessons'],1):
     sections.append({'id':sid,'title':l['title'],'group':l['group'],'kind':'html','src':'courses/robot-drive-engineering/lessons/'+sid+'.js','teachingIndex':i,'keywords':l.get('keywords',[])})
 groups=list(dict.fromkeys(s['group'] for s in sections))
 manifest={'id':D['course'],'title':D['title'],'category':'工学','topics':['电路与测量','C与DSP','功率电子','FOC','关节控制','仿真辨识','边缘AI','电赛'],
-          'sections':sections,'resources':{g:{'links':[{'label':'学习主线','href':'#course/'+D['course']+'/rd-start'},{'label':'知识图谱','href':'#course/'+D['course']+'/map'}]} for g in groups},'glossary':'courses/robot-drive-engineering/glossary-index.js'}
+          'sections':sections,'resources':{g:{'links':[{'label':'学习主线','href':'#course/'+D['course']+'/rd-start'},{'label':'知识图谱','href':'#course/'+D['course']+'/map'}]} for g in groups},'glossary':'courses/robot-drive-engineering/glossary-index.js','reference':'公开技术文档与原创教学模型'}
 (BASE/'manifest.js').write_text('window.LN_ROBOT_DRIVE='+dump(manifest)+';\n')
 # Positions are computed by the shared fixed-layout graph; relations are authored.
 notes={
