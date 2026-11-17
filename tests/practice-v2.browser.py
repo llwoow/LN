@@ -127,6 +127,11 @@ def check():
                 bbox=dialog.bounding_box()
                 assert bbox["x"]>=-1 and bbox["x"]+bbox["width"]<=width+1,(width,bbox)
                 page.evaluate("document.documentElement.dataset.theme='dark'")
+                page.wait_for_timeout(220)
+                # Verify cards are readable with the actual dark theme, not in a transition frame.
+                dark_rgb=dialog.locator(".practice-choice").first.evaluate(
+                    "(e) => getComputedStyle(e).backgroundColor.match(/\\d+/g).map(Number)")
+                assert max(dark_rgb[:3])<150,(width,dark_rgb)
                 page.screenshot(path=str(OUT/("practice-dialog-dark-"+name+".png")))
                 assert not page.evaluate("document.documentElement.scrollWidth>innerWidth")
                 dialog.locator("[data-close-practice]").click()
