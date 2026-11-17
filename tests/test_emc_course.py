@@ -32,13 +32,13 @@ class EMCCourseIntegrity(unittest.TestCase):
             self.assertEqual(section["kind"], "html")
             self.assertEqual(section["textbookSection"], entry["number"])
 
-    def test_lesson_files_have_brief_references_and_subsection_anchors(self):
+    def test_lesson_files_have_no_repeated_course_references_and_keep_subsection_anchors(self):
         for entry in self.curriculum["sections"]:
             with self.subTest(section=entry["id"]):
                 section = next(s for s in self.course["sections"] if s["id"] == entry["id"])
                 payload = ASSIGN(ROOT / section["src"])
                 content = payload["html"]
-                self.assertIn('class="reading-reference"', content)
+                self.assertNotIn('class="reading-reference"', content)
                 self.assertNotIn("印刷第", content)
                 self.assertNotIn("课件对应", content)
                 self.assertIn(entry["number"] + " " + entry["title"], content)
@@ -46,6 +46,9 @@ class EMCCourseIntegrity(unittest.TestCase):
                     anchor = "part-" + item["number"].replace(".", "-")
                     self.assertIn('id="' + anchor + '"', content)
                     self.assertIn(item["number"] + " " + item["title"], content)
+
+    def test_course_source_is_declared_once_in_course_metadata(self):
+        self.assertEqual(self.course["reference"], "《电磁兼容原理及应用》及课程资料")
 
     def test_knowledge_map_only_links_real_reading_sections(self):
         ids = {s["id"] for s in self.course["sections"]}
