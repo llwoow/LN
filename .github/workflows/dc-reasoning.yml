@@ -10,6 +10,12 @@ on:
       - 'courses/electrical-machines/model/dc-reaction-lab.*'
       - 'tests/dc-reaction-lab*'
       - 'tests/dc-reasoning*'
+      - 'tests/test_dc_chapter.py'
+      - 'tests/dc-chapter.browser.py'
+      - 'courses/electrical-machines/assessment/**'
+      - 'courses/electrical-machines/manifest.js'
+      - 'courses/practice/sources.json'
+      - 'scripts/build-dc-chapter.py'
   workflow_dispatch:
 
 permissions:
@@ -32,6 +38,8 @@ jobs:
           set -e
           python scripts/build-reference-index.py --check
           python scripts/build-glossary.py --check
+          python scripts/build-dc-chapter.py --check
+          python scripts/build-practice.py
           python -m unittest discover -s tests -v
           node tests/motor-winding.test.cjs
           node tests/dc-reasoning.test.cjs
@@ -45,6 +53,7 @@ jobs:
         run: |
           python tests/dc-reasoning.browser.py
           python tests/dc-reaction-lab.browser.py
+          python tests/dc-chapter.browser.py
       - name: Preserve review screenshots
         if: always()
         uses: actions/upload-artifact@v4
