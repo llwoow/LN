@@ -8,3 +8,19 @@
 .practice-prompt .dc-test-figure svg {display:block;width:100%;height:auto;max-height:250px;overflow:visible;color:var(--text);}
 .practice-prompt .dc-test-figure figcaption{color:var(--text);font-size:.87em;margin-top:.4rem;line-height:1.65;}
 @media(max-width:420px){.dc-chapter-assessment .dc-test-topic{padding:.7rem;}.practice-prompt .dc-test-figure{padding:.35rem;}}
+/* On narrow screens preserve legible diagram labels; only the image area scrolls. */
+@media (max-width: 520px) {
+  .practice-prompt .dc-test-figure {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .practice-prompt .dc-test-figure svg {
+    width: 620px;
+    min-width: 620px;
+    max-width: none;
+    max-height: none;
+  }
+}

@@ -41,6 +41,9 @@ def run():
                     if "promptHtml" in q:
                         assert panel.locator(".dc-test-figure svg[role=img]").count()==1,q["id"]
                         assert panel.locator(".dc-test-figure figcaption").count()==1,q["id"]
+                        if width <= 520:
+                            # Preserve roughly native 15px SVG labels and use localized horizontal panning.
+                            assert panel.locator(".dc-test-figure").evaluate("(e)=>e.scrollWidth>e.clientWidth"),q["id"]
                     if q["type"] in ("single","multi"):
                         for option in q["answer"]:
                             panel.locator('[name="p-answer"][value="'+option+'"]').check()
