@@ -135,6 +135,11 @@ window.LN_AUTO_CONTROL_MAP={
       "note": "闭环极点、衰减振荡和稳定边界"
     },
     {
+      "section": "ac-4-3-1",
+      "title": "4.3.1 三阶根轨迹与阻尼几何",
+      "note": "实轴分离候选检验、出射与入射角、虚轴交点、ωn/ωd、K 滑块及6题自测"
+    },
+    {
       "section": "ac-4-4",
       "title": "4.4 MATLAB求根轨迹",
       "note": "数值求根与rlocus复算"
@@ -230,6 +235,24 @@ window.LN_AUTO_CONTROL_MAP={
       "to": "ac-4-3",
       "label": "阻尼关系",
       "description": "由复根位置得到阻尼频率和二阶近似"
+    },
+    {
+      "from": "ac-4-2-1",
+      "to": "ac-4-3-1",
+      "label": "法则与三阶综合应用",
+      "description": "完整推导并与数值根轨迹核对"
+    },
+    {
+      "from": "ac-4-3-1",
+      "to": "ac-3-3",
+      "label": "极点与二阶动态参数",
+      "description": "共轭极点模长 ωn、阻尼角 β 与振荡频率 ωd 的几何关系"
+    },
+    {
+      "from": "ac-4-3-1",
+      "to": "ac-4-3",
+      "label": "从例题到动态性能",
+      "description": "由根轨迹上闭环极点判断稳定与动态响应"
     }
   ]
 };
