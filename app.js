@@ -407,6 +407,19 @@
             // Keep the noninteractive reasoning and equations readable when an asset fails.
           }
         }
+        if (course.id === 'electrical-machines' && ['dc-sec32', 'dc-sec33'].includes(selected.id)) {
+          try {
+            await loadStyle('courses/electrical-machines/model/dc-reaction-lab.css');
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            if (selected.id === 'dc-sec33' && body.querySelector('[data-dc-reaction-lab]')) {
+              await loadScript('courses/electrical-machines/model/dc-reaction-lab.js');
+              if (!body.isConnected || body.dataset.lessonKey !== key) return;
+              window.LN_DCReactionLab?.mount(body);
+            }
+          } catch (error) {
+            // Without JavaScript the declared model and reading guidance remain visible.
+          }
+        }
         if (course.id === 'electromagnetic-compatibility' && body.querySelector('[data-emc-lab]')) {
           // Educational models are optional; keep the static lesson readable if loading fails.
           try {
