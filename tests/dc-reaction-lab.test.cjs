@@ -1,0 +1,15 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {calculate,F,B}=require('../courses/electrical-machines/model/dc-reaction-lab.js');
+const close=(a,b,t=1e-6)=>assert.ok(Math.abs(a-b)<t,a+' != '+b);
+close(F(Math.PI/2,.4),1);
+close(B(0,.4,false),.4);
+close(calculate(0,false).relativeFlux,1);
+close(calculate(.6,false).relativeFlux,1,1e-5);
+close(calculate(.6,true).neutralShiftDeg,-Math.atan(.6)*180/Math.PI);
+assert.ok(calculate(.6,true).relativeFlux<1);
+assert.ok(calculate(.6,true).relativeFlux>0);
+assert.throws(()=>calculate(-.1,false),RangeError);
+assert.throws(()=>calculate(NaN,true),RangeError);
+assert.throws(()=>calculate(1,true),RangeError);
+console.log('DC reaction: 10 model checks passed');

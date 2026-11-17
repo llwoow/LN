@@ -436,6 +436,32 @@
             // Keep the noninteractive reasoning and equations readable when an asset fails.
           }
         }
+        if (course.id === 'electrical-machines' && ['dc-sec31', 'dc-sec32', 'dc-sec33'].includes(selected.id)) {
+          try {
+            await loadStyle('courses/electrical-machines/model/dc-reaction-lab.css');
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            if (body.querySelector('[data-dc-supp-tex]')) {
+              await loadScript('assets/katex/katex.runtime.js');
+              if (!body.isConnected || body.dataset.lessonKey !== key) return;
+              if (window.katex?.render) {
+                body.querySelectorAll('[data-dc-supp-tex]').forEach((element) => {
+                  try { window.katex.render(element.dataset.dcSuppTex, element, {
+                    displayMode: false, throwOnError: true, strict: 'error',
+                    trust: false, output: 'htmlAndMathml'
+                  }); } catch (error) { console.error('DC supplement math:', error); }
+                });
+                window.LNGlossary.prepare(body, course, selected);
+              }
+            }
+            if (selected.id === 'dc-sec33' && body.querySelector('[data-dc-reaction-lab]')) {
+              await loadScript('courses/electrical-machines/model/dc-reaction-lab.js');
+              if (!body.isConnected || body.dataset.lessonKey !== key) return;
+              window.LN_DCReactionLab?.mount(body);
+            }
+          } catch (error) {
+            // Without JavaScript the declared model and reading guidance remain visible.
+          }
+        }
         if (course.id === 'electromagnetic-compatibility' && body.querySelector('[data-emc-lab]')) {
           // Educational models are optional; keep the static lesson readable if loading fails.
           try {
