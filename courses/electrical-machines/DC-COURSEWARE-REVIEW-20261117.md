@@ -15,3 +15,10 @@
 - 新增Node科学模型测试 `node tests/dc-reaction-lab.test.cjs`，还需要真实执行。
 - 发布前需跑 `python -m unittest discover -s tests -v`、`python scripts/build-reference-index.py --check`、`python scripts/build-glossary.py --check`、`python scripts/check-publication.py`及dist检查，并浏览器查看桌面/窄屏/深色、键盘和按需加载。未运行即不能声称通过。
 - 需要复核新插入HTML与现有来源/公式/术语索引兼容性；需单独评审参考资料再分发许可。本次不改main，不自动上线。
+
+## 2026-11-17 合并前规范审查补丁
+- 发现并修复：补讲中的原始 HTML 下标与数学式未沿用 KaTeX；改为本地 KaTeX 按需排版、失败时保留可阅读的文本。解析后重新挂载准确的共享符号释义。
+- 发现并修复：交轴电枢反应互动图尚缺正式图注及稳定编号；新增图 W.3.3.1 与索引。将3.2补讲移至旧正文之后，避免旧文字和术语定义按顺序映射错位。
+- 发现并修复：主分支于本PR创建后纳入自动控制课程PR #22。此次以最新main文件树为基线，保留其app.js和reference-index.js新逻辑，再整合本PR的新增内容。保留两个父提交，不强推或覆盖main。
+- 2026-11-17较早版本的专项浏览器、Node、综合审查与隐私工作流全部通过；本补丁还需对新头提交重新运行，不能套用较早验证结论。
+- 此次仍仅是既有第三章的增量补讲，未核读课件164页逐页内容，没有取得P160仅引用的教材例题题面；不声称全章质量全部验收。

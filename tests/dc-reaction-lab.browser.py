@@ -23,6 +23,10 @@ def run():
                 page.goto(url + "#course/electrical-machines/dc-sec32", wait_until="domcontentloaded")
                 page.locator("#dc-courseware-16").wait_for(timeout=25000)
                 assert page.locator("#dc-winding16-figure svg").count() == 1
+                assert page.locator("[data-dc-winding-lab]").count() == 1
+                assert page.locator("#dc-winding16-figure figcaption").count() == 1
+                assert page.locator("#dc-courseware-16").inner_text()
+                assert page.locator("#lesson-body [data-dc-supp-tex] .katex").count() >= 5
                 page.locator("#dc-courseware-16 + p").count()  # content follows heading
                 details = page.locator("#dc-courseware-16").locator("xpath=following-sibling::details[1]")
                 details.locator("summary").click()
@@ -33,6 +37,8 @@ def run():
                 slider = page.locator("[data-dc-reaction-lab] [data-q]")
                 slider.wait_for(timeout=25000)
                 assert page.locator("[data-dc-reaction-lab] svg").count() == 1
+                assert page.locator("#dc-reaction-figure figcaption").count() == 1
+                assert page.locator("#lesson-body [data-dc-supp-tex] .katex").count() >= 2
                 assert page.locator("[data-dc-reaction-lab] [data-result]").inner_text()
                 slider.evaluate("(e)=>{e.value='0.6';e.dispatchEvent(new Event('input',{bubbles:true}));}")
                 saturated = page.locator("[data-dc-reaction-lab] [data-result]").inner_text()

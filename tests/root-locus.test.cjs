@@ -35,3 +35,42 @@ for(const k of [0,1,5,8.16,20]){
  for(const z of [g.leftReal,g.rightReal,g.leftUpper,g.leftLower].filter(Boolean))assert.equal(api.originFamily(k,z),'real');
  for(const z of [g.rightUpper,g.rightLower])assert.equal(api.originFamily(k,z),'complex');
 }
+
+
+const synthCtx=vm.createContext({window:{}});
+vm.runInContext(fs.readFileSync(path.join(__dirname,'../courses/automatic-control/root-locus-synthesis.js'),'utf8'),synthCtx);
+const cubic=synthCtx.window.LN_AC_SYNTHESIS;
+assert(cubic, 'cubic root-locus model unavailable');
+for(const k of [0,0.1,2,3.9,4,4.1,6,10,20]){
+ const rs=cubic.roots(k);
+ assert.equal(rs.length,3);
+ assert(Math.abs(rs[1].re-rs[2].re)<1e-10,'real conjugacy');
+ assert(Math.abs(rs[1].im+rs[2].im)<1e-10,'imaginary conjugacy');
+ for (const z of rs) {
+   const p=cubic.polynomial(z,k);
+   assert(Math.hypot(p.re,p.im)<1e-9,'cubic residual K='+k+' at '+JSON.stringify(z));
+ }
+}
+const k0=cubic.roots(0);
+assert(k0.some(z=>distance(z,{re:0,im:0})<1e-10));
+assert(k0.some(z=>distance(z,{re:-1,im:1})<1e-10));
+assert(k0.some(z=>distance(z,{re:-1,im:-1})<1e-10));
+const k1=cubic.roots(1);
+assert(k1.some(z=>distance(z,{re:-1,im:0})<1e-10));
+assert(k1.some(z=>distance(z,{re:-0.5,im:Math.sqrt(3)/2})<1e-10));
+assert(k1.some(z=>distance(z,{re:-0.5,im:-Math.sqrt(3)/2})<1e-10));
+assert(Math.abs(-k1[1].re/Math.hypot(k1[1].re,k1[1].im)-0.5)<1e-10,'zeta=0.5 at K=1');
+const k4=cubic.roots(4);
+assert(k4.some(z=>distance(z,{re:-2,im:0})<1e-10));
+assert(k4.some(z=>distance(z,{re:0,im:Math.sqrt(2)})<1e-10));
+assert(k4.some(z=>distance(z,{re:0,im:-Math.sqrt(2)})<1e-10));
+assert(cubic.roots(3.9).every(z=>z.re<0));
+assert(cubic.roots(4.1).some(z=>z.re>0));
+// Cubic breakaway candidate: non-real K invalidates real positive-gain root locus.
+for(const sign of [-1,1]){
+ const root={re:-2/3,im:sign*Math.sqrt(2)/3};
+ const kp={re:20/27,im:-sign*4*Math.sqrt(2)/27};
+ const p=cubic.polynomial(root,kp.re);
+ assert(Math.abs(p.im+kp.im)<1e-9,'nonreal gain candidate not accounted for');
+}
+console.log('Cubic 4.3.1 roots, conjugacy, imaginary crossing, and candidate exclusion verified.');

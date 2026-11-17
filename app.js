@@ -341,7 +341,10 @@
       placeQuestionNavigation();
       if (payload.html) {
         window.LNPublication.prepare(body, course, selected);
-        window.LNGlossary.prepare(body, course, selected);
+        // This lesson renders TeX after loading; attach definitions only to real KaTeX atoms.
+        if (!(course.id === 'automatic-control' && selected.id === 'ac-4-3-1')) {
+          window.LNGlossary.prepare(body, course, selected);
+        }
         window.LNResources.mountLesson(body);
         if (course.id === 'automatic-control') {
           await loadStyle('courses/automatic-control/control-lab.css');
@@ -350,6 +353,32 @@
             await loadScript('courses/automatic-control/control-lab.js');
             if (!body.isConnected || body.dataset.lessonKey !== key) return;
             window.LN_MOUNT_CONTROL_LABS?.(body);
+          }
+
+          if (selected.id === 'ac-4-3-1') {
+            await Promise.all([
+              loadStyle('courses/automatic-control/root-locus-synthesis.css'),
+              loadScript('courses/automatic-control/root-locus-synthesis.js'),
+              loadScript('assets/katex/katex.runtime.js')
+            ]);
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            // Render this supplement's original TeX on demand; preserve readable fallback
+            // when KaTeX is unavailable or a formula cannot be rendered.
+            if (window.katex?.render) {
+              body.querySelectorAll('[data-ac-tex]').forEach(element => {
+                try {
+                  window.katex.render(element.dataset.acTex, element, {
+                    displayMode: element.dataset.acDisplay === 'true',
+                    throwOnError: true, strict: 'error',
+                    trust: false, output: 'htmlAndMathml'
+                  });
+                } catch (error) {
+                  console.error('Automatic-control synthesis formula:', error);
+                }
+              });
+            }
+            window.LNGlossary.prepare(body, course, selected);
+            window.LN_MOUNT_AC_SYNTHESIS?.(body);
           }
           if (selected.id === 'ac-4-2-2') {
             await Promise.all([
@@ -407,10 +436,23 @@
             // Keep the noninteractive reasoning and equations readable when an asset fails.
           }
         }
-        if (course.id === 'electrical-machines' && ['dc-sec32', 'dc-sec33'].includes(selected.id)) {
+        if (course.id === 'electrical-machines' && ['dc-sec31', 'dc-sec32', 'dc-sec33'].includes(selected.id)) {
           try {
             await loadStyle('courses/electrical-machines/model/dc-reaction-lab.css');
             if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            if (body.querySelector('[data-dc-supp-tex]')) {
+              await loadScript('assets/katex/katex.runtime.js');
+              if (!body.isConnected || body.dataset.lessonKey !== key) return;
+              if (window.katex?.render) {
+                body.querySelectorAll('[data-dc-supp-tex]').forEach((element) => {
+                  try { window.katex.render(element.dataset.dcSuppTex, element, {
+                    displayMode: false, throwOnError: true, strict: 'error',
+                    trust: false, output: 'htmlAndMathml'
+                  }); } catch (error) { console.error('DC supplement math:', error); }
+                });
+                window.LNGlossary.prepare(body, course, selected);
+              }
+            }
             if (selected.id === 'dc-sec33' && body.querySelector('[data-dc-reaction-lab]')) {
               await loadScript('courses/electrical-machines/model/dc-reaction-lab.js');
               if (!body.isConnected || body.dataset.lessonKey !== key) return;

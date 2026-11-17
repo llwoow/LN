@@ -1434,6 +1434,201 @@
       "unitHtml": "无量纲",
       "match": "把所选共轭闭环极点写成s=σ±jωd时，σ为实部，ωd为虚部绝对值。等效二阶参数定义为ωₙ=√(σ²+ωd²)、ξ=−σ/ωₙ；若σ>0，则ξ<0，对应增长模态，不能套用稳定二阶阶跃指标。",
       "sourceAnchor": "ac-modal-pole-symbols"
+    },
+    {
+      "id": "ac-syn-gain",
+      "title": "比例增益 K",
+      "keys": [
+        "K"
+      ],
+      "description": "本题取 K≥0 的实数；K 改变闭环特征方程的根，不是一般的复数调节参数。",
+      "unitHtml": "无量纲（按本题归一化）",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节增益约定：",
+      "sourceAnchor": "ac-syn-gain-symbols"
+    },
+    {
+      "id": "ac-syn-s",
+      "title": "复频率 s",
+      "keys": [
+        "s"
+      ],
+      "description": "闭环极点 s=实部+j虚部；实部决定指数模态增长或衰减。",
+      "unitHtml": "s⁻¹",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节增益约定：",
+      "sourceAnchor": "ac-syn-gain-symbols"
+    },
+    {
+      "id": "ac-syn-j",
+      "title": "虚数单位 j",
+      "keys": [
+        "j"
+      ],
+      "description": "j²=−1，用于复数极点和频率表达；不是电流。",
+      "unitHtml": "无量纲",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节增益约定：",
+      "sourceAnchor": "ac-syn-gain-symbols"
+    },
+    {
+      "id": "ac-syn-N-a",
+      "title": "渐近线条数 Nₐ",
+      "keys": [
+        "N_a"
+      ],
+      "description": "n−m：开环极点数减有限零点数（计重数）。",
+      "unitHtml": "条",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节渐近线符号：",
+      "sourceAnchor": "ac-syn-asym-symbols"
+    },
+    {
+      "id": "ac-syn-sigma-a",
+      "title": "渐近线交点 σₐ",
+      "keys": [
+        "σ_a"
+      ],
+      "description": "渐近线在实轴的交点位置，区别于实轴分离点。",
+      "unitHtml": "s⁻¹",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节渐近线符号：",
+      "sourceAnchor": "ac-syn-asym-symbols"
+    },
+    {
+      "id": "ac-syn-theta-k",
+      "title": "渐近线角 θₖ",
+      "keys": [
+        "θ_k"
+      ],
+      "description": "正增益根轨迹的渐近线角，相对正实轴逆时针计。",
+      "unitHtml": "度",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节渐近线符号：",
+      "sourceAnchor": "ac-syn-asym-symbols"
+    },
+    {
+      "id": "ac-syn-theta-d",
+      "title": "复极点出射角 θd",
+      "keys": [
+        "θ_d"
+      ],
+      "description": "随 K 增大离开复极点的切线方向，相对正实轴逆时针量取。",
+      "unitHtml": "度",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节角度约定：",
+      "sourceAnchor": "ac-syn-angle-symbols"
+    },
+    {
+      "id": "ac-syn-theta-a",
+      "title": "复零点入射角 θa",
+      "keys": [
+        "θ_a"
+      ],
+      "description": "角度公式中由复零点指向附近轨迹点的向量角，与实际驶入零点的方向相差180°。",
+      "unitHtml": "度",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节角度约定：",
+      "sourceAnchor": "ac-syn-angle-symbols"
+    },
+    {
+      "id": "ac-syn-decay-sigma",
+      "title": "衰减系数 σ",
+      "keys": [
+        "σ"
+      ],
+      "description": "对左半平面极点 s=−σ±jωd，σ>0 是实部的绝对值，单位 s⁻¹；不是带符号的极点实部。",
+      "unitHtml": "s⁻¹",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节极点几何符号：",
+      "sourceAnchor": "ac-syn-pole-symbols"
+    },
+    {
+      "id": "ac-syn-omega-n",
+      "title": "自然角频率 ωₙ",
+      "keys": [
+        "ω_n"
+      ],
+      "description": "所选共轭极点到原点的距离；是对应二阶因子的自然角频率，不自动等于高阶系统的整体响应频率。",
+      "unitHtml": "rad/s",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节极点几何符号：",
+      "sourceAnchor": "ac-syn-pole-symbols"
+    },
+    {
+      "id": "ac-syn-omega-d",
+      "title": "阻尼振荡角频率 ωd",
+      "keys": [
+        "ω_d"
+      ],
+      "description": "所选共轭复极点虚部绝对值；描述振荡快慢。",
+      "unitHtml": "rad/s",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节极点几何符号：",
+      "sourceAnchor": "ac-syn-pole-symbols"
+    },
+    {
+      "id": "ac-syn-zeta",
+      "title": "阻尼比 ζ",
+      "keys": [
+        "ζ"
+      ],
+      "description": "对应二阶因子的无量纲阻尼比，左半平面共轭极点 ζ=σ/ωₙ。",
+      "unitHtml": "无量纲",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节极点几何符号：",
+      "sourceAnchor": "ac-syn-pole-symbols"
+    },
+    {
+      "id": "ac-syn-beta",
+      "title": "阻尼角 β",
+      "keys": [
+        "β"
+      ],
+      "description": "左半平面共轭极点相对负实轴的夹角，满足 cosβ=ζ，不是从正实轴量出的标准辐角。",
+      "unitHtml": "度",
+      "section": "ac-4-3-1",
+      "sections": [
+        "ac-4-3-1"
+      ],
+      "match": "本节极点几何符号：",
+      "sourceAnchor": "ac-syn-pole-symbols"
     }
   ]
 }
