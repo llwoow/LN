@@ -228,10 +228,10 @@
     return '<h3>原站题目 · '+items.length+' 道</h3>'+items.map(item=>{const s=bank.sources.find(s=>s.id===item.sourceId);return '<section class="external-review" data-external-record="'+escape(item.key)+'"><h4>'+escape(s.title+' · '+item.ref)+'</h4><p>'+escape(item.note||'尚未记录分析')+'</p><p>'+sourceLinks(s)+'</p><p>'+knowledgeLinks(s)+'</p><p>状态：'+(item.reviewed?'已手动标记复习，原错题记录保留':'待复习')+'</p><button class="resource-nav-button" data-external-review>标记已复习</button><button class="resource-nav-button" data-external-favorite>'+ (item.favorite?'取消收藏':'收藏此题')+'</button></section>';}).join('');
   }
 
-  const EXAM_STORAGE_KEY='ln.practice.exam.v1';
+  const examRecordName='ln.practice.exam.v1';
   let examStore={};
-  try{const saved=JSON.parse(localStorage.getItem(EXAM_STORAGE_KEY)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))examStore=saved;}catch{}
-  function persistExams(){try{localStorage.setItem(EXAM_STORAGE_KEY,JSON.stringify(examStore));}catch{}}
+  try{const saved=JSON.parse(localStorage.getItem(examRecordName)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))examStore=saved;}catch{}
+  function persistExams(){try{localStorage.setItem(examRecordName,JSON.stringify(examStore));}catch{}}
   function examScope(course,section){
     const items=questions.filter(q=>q.course===course);
     if(section){

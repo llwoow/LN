@@ -121,9 +121,9 @@
 .practice-options .practice-choice:hover{border-color:var(--accent);background:var(--subtle);}
 .practice-options .practice-choice:has(input:checked){border-color:var(--accent);background:var(--accent-soft);}
 .practice-options .practice-choice input{
-  flex:0 0 auto;appearance:none;width:18px;height:18px;margin:7px 0 0;
-  border:1.5px solid var(--muted);border-radius:50%;position:absolute;
-  clip-path:inset(50%);overflow:hidden;
+  flex:0 0 18px;position:static;appearance:auto;clip-path:none;
+  width:18px;height:18px;margin:7px 0 0;accent-color:var(--accent);
+  cursor:pointer;
 }
 .practice-options .practice-choice:focus-within{outline:2px solid var(--accent);outline-offset:2px;}
 .practice-choice-letter{
