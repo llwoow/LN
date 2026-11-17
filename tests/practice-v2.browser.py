@@ -53,6 +53,11 @@ def check():
                 assert panel.locator(".practice-numeric-compare").count()==1
                 assert "参考答案" in panel.locator(".practice-numeric-compare").inner_text()
                 assert "88" in panel.locator(".practice-numeric-compare").inner_text()
+                panel.locator("[data-p-question]").select_option("em-flux")
+                panel.locator('[name="p-answer"][value="0"]').check()
+                panel.locator("[data-p-submit]").click()
+                assert "部分选项吻合" in panel.locator(".practice-verdict h3").inner_text()
+                assert panel.locator('[data-p-option-state="missed"]').count()==1
                 panel.locator("[data-p-question]").select_option("em-test-design")
                 panel.locator("[data-p-reason]").fill("我的假设和验证方案会测量不同转速和负载。")
                 panel.locator("[data-p-submit]").click()

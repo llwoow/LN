@@ -68,4 +68,5 @@ jobs:
           path: |
             nov13-browser-artifacts/*.png
             nov13-browser-artifacts/*.json
+            practice-v2-artifacts/*.png
           if-no-files-found: warn
