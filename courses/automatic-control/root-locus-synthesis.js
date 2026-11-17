@@ -58,6 +58,10 @@
         const length=8;
         html+=segment(from,{re:from.re+length*Math.cos(angle),im:from.im+length*Math.sin(angle)});
       }
+      html+='</g><g class="ac-syn-zeta">';
+      // ζ=0.5, tan β=√3: the two fixed-angle rays meet the cubic locus at K=1.
+      html+=segment({re:0,im:0},{re:-1.8,im:Math.sqrt(3)*1.8});
+      html+=segment({re:0,im:0},{re:-1.8,im:-Math.sqrt(3)*1.8});
       html+='</g><g class="ac-syn-curves">';
       for(let part=0;part<3;part++){
         let d='';
@@ -74,7 +78,7 @@
       }
       html+='</g><g class="ac-syn-current">';
       for(const z of rs)html+='<circle cx="'+X(z.re)+'" cy="'+Y(z.im)+'" r="5.5"/>';
-      html+='</g><text class="ac-syn-plot-note" x="15" y="23">实线：根轨迹　虚线：渐近线</text>';
+      html+='</g><text class="ac-syn-plot-note" x="15" y="23">蓝色实线：根轨迹　橙虚线：渐近线　紫点线：ζ=0.5</text>';
       svg.innerHTML=html;
       output.textContent=k.toFixed(1);
       const stable=k>0+1e-8 && k<4-1e-8;
