@@ -65,7 +65,7 @@ class AutomaticControlTests(unittest.TestCase):
         self.assertIn("4.3.1", lesson)
         self.assertEqual(lesson.count("<svg"), 3)  # two native SVG figures + one interactive graph
         self.assertEqual(lesson.count("<figure"), 2)
-        self.assertEqual(lesson.count("data-equation=\\"U.4.3.1."), 17)
+        self.assertEqual(lesson.count('data-equation="U.4.3.1.'), 17)
         refs = self.index["automatic-control"]["sections"]["ac-4-3-1"]
         self.assertEqual(len(refs["equations"]), 17)
         self.assertEqual(len(refs["figures"]), 2)
