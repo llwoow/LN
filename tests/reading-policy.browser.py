@@ -66,6 +66,16 @@ def main():
      body=visit(cid,sid);text=body.inner_text()
      for forbidden in ['教材依据：','课件对应：','原创教学讲解','核读资料与适用范围','ISBN','印刷第']:
       assert forbidden not in text,(sid,forbidden)
+    # Real technical citations remain one click away, but not in the end of the teaching article.
+    for cid,sid,selector in [(RD,'rd-start','details.rd-sources'),('power-semiconductors','carrier-basics','details.reading-references')]:
+     body=visit(cid,sid)
+     assert body.locator(':scope > '+selector).count()==0,(cid,sid,'reference footer still in lesson')
+     sources=page.locator('#lesson-tools '+selector)
+     assert sources.count()==1 and sources.locator('a').count()>=1,(cid,sid,'technical source links lost')
+     assert sources.locator('summary').inner_text()=='本节资料'
+     sources.locator('summary').click()
+     assert sources.evaluate('(node)=>node.open'),(cid,sid,'source details cannot open')
+     assert not page.evaluate('document.documentElement.scrollWidth>innerWidth'),(cid,sid,width,'source panel overflow')
     assert not errors,errors;page.close()
    browser.close()
  finally:server.shutdown();server.server_close()
