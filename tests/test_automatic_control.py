@@ -63,7 +63,20 @@ class AutomaticControlTests(unittest.TestCase):
             self.assertIn(phrase, lesson)
         self.assertEqual(lesson.count("data-ac-syn-question"), 6)
         self.assertIn("4.3.1", lesson)
-        self.assertEqual(lesson.count("<svg"), 3)  # two inline figures + one interactive graph
+        self.assertEqual(lesson.count("<svg"), 3)  # two native SVG figures + one interactive graph
+        self.assertEqual(lesson.count("<figure"), 2)
+        self.assertEqual(lesson.count("data-equation=\\"U.4.3.1."), 17)
+        refs = self.index["automatic-control"]["sections"]["ac-4-3-1"]
+        self.assertEqual(len(refs["equations"]), 17)
+        self.assertEqual(len(refs["figures"]), 2)
+        self.assertEqual(refs["equations"][-1]["number"], "U.4.3.1.17")
+        glossary = assignment(ROOT / "courses/automatic-control/glossary-index.js")
+        scoped = [e for e in glossary["entries"] if e.get("source", {}).get("section") == "ac-4-3-1"]
+        self.assertGreaterEqual(len(scoped), 13)
+        self.assertEqual(len({e["id"] for e in scoped}), len(scoped))
+        css = (ROOT / "courses/automatic-control/root-locus-synthesis.css").read_text(encoding="utf-8")
+        self.assertIn(".ac-syn-curves{stroke:", css)
+        self.assertNotIn(r"\\n.ac-syn-curves", css)
         self.assertNotIn("<script", lesson)
         root = (ROOT / "courses/automatic-control/root-locus-synthesis.js").read_text(encoding="utf-8")
         self.assertIn("LN_MOUNT_AC_SYNTHESIS", root)
