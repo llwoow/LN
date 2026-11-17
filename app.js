@@ -351,6 +351,31 @@
             if (!body.isConnected || body.dataset.lessonKey !== key) return;
             window.LN_MOUNT_CONTROL_LABS?.(body);
           }
+
+          if (selected.id === 'ac-4-3-1') {
+            await Promise.all([
+              loadStyle('courses/automatic-control/root-locus-synthesis.css'),
+              loadScript('courses/automatic-control/root-locus-synthesis.js'),
+              loadScript('assets/katex/katex.runtime.js')
+            ]);
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            // Render this supplement's original TeX on demand; preserve readable fallback
+            // when KaTeX is unavailable or a formula cannot be rendered.
+            if (window.katex?.render) {
+              body.querySelectorAll('[data-ac-tex]').forEach(element => {
+                try {
+                  window.katex.render(element.dataset.acTex, element, {
+                    displayMode: element.dataset.acDisplay === 'true',
+                    throwOnError: true, strict: 'error',
+                    trust: false, output: 'htmlAndMathml'
+                  });
+                } catch (error) {
+                  console.error('Automatic-control synthesis formula:', error);
+                }
+              });
+            }
+            window.LN_MOUNT_AC_SYNTHESIS?.(body);
+          }
           if (selected.id === 'ac-4-2-2') {
             await Promise.all([
               loadStyle('courses/automatic-control/root-locus-lab.css'),
