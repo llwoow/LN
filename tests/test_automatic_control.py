@@ -63,7 +63,7 @@ class AutomaticControlTests(unittest.TestCase):
             self.assertIn(phrase, lesson)
         self.assertEqual(lesson.count("data-ac-syn-question"), 6)
         self.assertIn("4.3.1", lesson)
-        self.assertEqual(lesson.count("<svg"), 2)
+        self.assertEqual(lesson.count("<svg"), 3)  # two inline figures + one interactive graph
         self.assertNotIn("<script", lesson)
         root = (ROOT / "courses/automatic-control/root-locus-synthesis.js").read_text(encoding="utf-8")
         self.assertIn("LN_MOUNT_AC_SYNTHESIS", root)
