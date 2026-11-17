@@ -341,7 +341,10 @@
       placeQuestionNavigation();
       if (payload.html) {
         window.LNPublication.prepare(body, course, selected);
-        window.LNGlossary.prepare(body, course, selected);
+        // This lesson renders TeX after loading; attach definitions only to real KaTeX atoms.
+        if (!(course.id === 'automatic-control' && selected.id === 'ac-4-3-1')) {
+          window.LNGlossary.prepare(body, course, selected);
+        }
         window.LNResources.mountLesson(body);
         if (course.id === 'automatic-control') {
           await loadStyle('courses/automatic-control/control-lab.css');
@@ -374,6 +377,7 @@
                 }
               });
             }
+            window.LNGlossary.prepare(body, course, selected);
             window.LN_MOUNT_AC_SYNTHESIS?.(body);
           }
           if (selected.id === 'ac-4-2-2') {
