@@ -482,6 +482,18 @@
       body.classList.toggle('pdf-lesson', selected.kind === 'pdf' || selected.kind === 'document');
       const resource = course.resources[selected.group];
       $('#lesson-tools').innerHTML = resource.links ? '<span>' + escapeHTML(selected.group) + '</span>' + resource.links.map(link => '<a href="' + escapeHTML(link.href) + '"' + (link.href.startsWith('https:') ? ' target="_blank" rel="noopener"' : '') + '>' + escapeHTML(link.label) + '</a>').join('') : '<span>' + escapeHTML(selected.group) + '</span><a href="courses/electrical-machines/files/' + resource.guide + '" target="_blank" rel="noopener">' + escapeHTML(resource.guideLabel || '讲义 PDF') + '</a><a href="courses/electrical-machines/files/' + resource.quickref + '" target="_blank" rel="noopener">速查 PDF</a>';
+      // Keep exact per-lesson technical URLs accessible without repeating a references footer in the teaching article.
+      // The original elements are MOVED, not hidden or duplicated, so links and provenance remain intact.
+      const specificSources = [...body.querySelectorAll(':scope > details.reading-references, :scope > details.rd-sources')];
+      if (specificSources.length) {
+        const toolShelf = $('#lesson-tools');
+        specificSources.forEach(source => {
+          source.classList.add('lesson-source-tool');
+          const summary = source.querySelector(':scope > summary');
+          if (summary) summary.textContent = '本节资料';
+          toolShelf.append(source);
+        });
+      }
       const sequence=readingSections(course,selected),index = sequence.indexOf(selected);
       $('#lesson-pagination').innerHTML = (index > 0 ? '<a href="#course/' + course.id + '/' + sequence[index - 1].id + '">' + icon('back') + '上一节</a>' : '<span></span>') + (index < sequence.length - 1 ? '<a href="#course/' + course.id + '/' + sequence[index + 1].id + '">下一节' + icon('chevron') + '</a>' : '');
       window.LNPublication.settle(body, anchor);
