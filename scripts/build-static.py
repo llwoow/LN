@@ -19,7 +19,7 @@ out = root / 'dist'
 if out.exists():
     shutil.rmtree(out)
 out.mkdir()
-for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.js', 'publication.js', 'glossary.js', 'highschool-library.js', 'resource-library.js', 'practice.js'):
+for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.js', 'publication.js', 'glossary.js', 'highschool-library.js', 'resource-library.js', 'practice.js', 'practice-ui.css'):
     shutil.copy2(root / name, out / name)
 for name in ('assets', 'courses'):
     shutil.copytree(root / name, out / name,

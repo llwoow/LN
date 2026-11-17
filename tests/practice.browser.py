@@ -13,7 +13,7 @@ with sync_playwright() as p:
         page=context.new_page();errors=[]
         page.on('pageerror',lambda e:errors.append(str(e)))
         page.goto('http://127.0.0.1:8765/#practice/electrical-machines')
-        assert page.locator('[data-practice-mode="sources"]').get_attribute('aria-pressed')=='true'
+        assert page.locator('[data-practice-mode="local"]').get_attribute('aria-pressed')=='true'
         page.locator('[data-practice-mode="local"]').click()
         panel=page.locator('main [data-practice-panel]')
         panel.locator('[data-p-submit]').click();assert panel.locator('[data-p-error]').inner_text()
@@ -24,6 +24,7 @@ with sync_playwright() as p:
         panel.locator('[name="p-answer"][value="1"]').check();panel.locator('[data-p-submit]').click()
         r=page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["em-start"]')
         assert r['attempts'][0]['correct'] is False and r['attempts'][1]['assisted'] is True
+        panel.locator('.practice-filter-drawer summary').click()
         panel.locator('[data-p-review]').check();assert '自信误判' in panel.locator('[data-p-question]').inner_text()
         panel.locator('[data-p-review]').uncheck()
         panel.locator('[data-p-favorite]').click()
@@ -36,6 +37,7 @@ with sync_playwright() as p:
         assert page.locator('[data-p-question] option').count()==1
         page.locator('[data-practice-mode="local"]').click()
         panel=page.locator('main [data-practice-panel]')
+        panel.locator('.practice-filter-drawer summary').click()
         # Every authored question is answerable with its exact target and feedback.
         for q in questions:
             panel.locator('[data-p-course]').select_option(q['course'])
@@ -63,6 +65,7 @@ with sync_playwright() as p:
         # Selection order, drafts and self-check survive reload without changing the result.
         before=page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["em-test-design"]')
         page.reload();page.locator('[data-practice-mode="local"]').click();panel=page.locator('main [data-practice-panel]')
+        panel.locator('.practice-filter-drawer summary').click()
         panel.locator('[data-p-course]').select_option('electrical-machines');panel.locator('[data-p-question]').select_option('em-test-design')
         assert panel.locator('[data-p-reason]').input_value()==before['reason']
         assert panel.locator('[data-p-rubric]:checked').count()==1
