@@ -62,6 +62,7 @@ def check():
                 panel.locator("[data-p-type]").select_option("numeric")
                 assert panel.locator("[data-p-question] option").count()>0
                 panel.locator("[data-p-type]").select_option("")
+                panel.locator("[data-p-map] summary").click()
                 panel.locator("[data-p-number-state]").first.click()
                 assert panel.locator("[data-question-id]").count()==1
                 assert not page.evaluate("document.documentElement.scrollWidth>innerWidth"),("practice",width)
