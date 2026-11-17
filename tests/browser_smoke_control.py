@@ -92,6 +92,18 @@ def run() -> None:
                 page.locator("[data-ac-syn-status]").wait_for()
                 assert "临界稳定" in page.locator("[data-ac-syn-status]").inner_text()
                 assert page.locator("[data-ac-tex] .katex").count() >= 7
+                assert page.locator(".ac-syn .paper-equation.is-numbered").count() == 17
+                assert page.locator(".ac-syn figure.paper-figure").count() == 2
+                curve_fill = page.locator(".ac-syn-curves path").first.evaluate(
+                    '(n) => getComputedStyle(n).fill')
+                assert curve_fill == "none", "actual root locus must not have solid path fill"
+                zeta_symbol = page.locator('.ac-syn [data-definition="ac-syn-zeta"]').first
+                zeta_symbol.wait_for(timeout=10000)
+                zeta_symbol.click(force=True)
+                page.locator('#definition-popover:popover-open').wait_for(timeout=10000)
+                assert "阻尼比" in page.locator('#definition-popover:popover-open').inner_text()
+                page.keyboard.press("Escape")
+
                 assert page.locator("[data-ac-syn-question]").count() == 6
                 page.locator("[data-ac-syn-preset='1']").click()
                 assert "ζ=0.5" in page.locator("[data-ac-syn-preset='1']").inner_text()
