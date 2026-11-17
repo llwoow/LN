@@ -192,6 +192,106 @@
         "迁移到本站低压理想ADC例子，改用半个LSB误差比例，并指出外部电容和运放动态何时使单RC近似失效。"
       ],
       "ready": true
+    },
+    {
+      "id": "dc-mit-ps8",
+      "title": "MIT 6.685 电机学 · Problem Set 8 与官方解答",
+      "targets": [
+        {
+          "course": "electrical-machines",
+          "section": "dc-sec36"
+        },
+        {
+          "course": "electrical-machines",
+          "section": "dc-sec37"
+        },
+        {
+          "course": "electrical-machines",
+          "section": "dc-chapter-test"
+        }
+      ],
+      "links": [
+        {
+          "label": "Problem Set 8（官方题面）",
+          "url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/c050bcf86815cbccb6f34d20139c285d_MIT6_685F13_ps08.pdf"
+        },
+        {
+          "label": "Problem Set 8 官方解答",
+          "url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/b37ca24c5573d1a3945497519b107eb3_MIT6_685F13_ps08ans.pdf"
+        }
+      ],
+      "focus": "串励机转速—牵引负载、并励发电机励磁工作点的模型分析",
+      "selection": "建议优先阅读Problem 2直流机负载工况与Problem 4自励发电机的题设，再核对官方解答中的电势、转矩、励磁与负载关系；本站60题不复印这些题。",
+      "answers": "同套资料有官方答案PDF；已核读题面相关页面及答案的相关推导段落，未对该题集所有数字和每道题完整重新复算。",
+      "evidenceLevel": "MIT 研究生正式电机学课程作业及教师答案",
+      "evidence": "MIT 2013年秋季 Electric Machines 6.685 课程作业与官方答案，可以核实正式课程使用，但不意味着本站原创题已获难度或测量学验证。",
+      "evidenceLinks": [
+        {
+          "label": "MIT 课程作业页面",
+          "url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/pages/assignments/"
+        },
+        {
+          "label": "MIT OCW 使用条款",
+          "url": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/"
+        }
+      ],
+      "access": "MIT OpenCourseWare 官网公开PDF，可在原站查看。",
+      "license": "只链接MIT官方文件，不镜像或原样转载题干/图和答案；遵循原课程许可及例外。",
+      "limit": "MIT题涉及更完整的牵引与磁化模型，LN原创题使用简化可解的单机模型，两者不可直接当作同一道试测题。",
+      "readScope": "核读PS8题面及答案的有关部分，非整套独立详解。",
+      "checked": "2026-11-17",
+      "guide": [
+        "先把电枢、励磁和机械负载的约束逐条列出，不先代入机械特性结论。",
+        "对照解答逐步检查两工作点的电势/磁通与电磁转矩关系。",
+        "改变励磁饱和或负载条件，说明原假设失效后不能沿用哪些比例关系。"
+      ],
+      "ready": true
+    },
+    {
+      "id": "dc-nptel-lesson41",
+      "title": "NPTEL/IIT Kharagpur：Lesson 41 直流电机计算例题",
+      "targets": [
+        {
+          "course": "electrical-machines",
+          "section": "dc-sec35"
+        },
+        {
+          "course": "electrical-machines",
+          "section": "dc-sec37"
+        },
+        {
+          "course": "electrical-machines",
+          "section": "dc-chapter-test"
+        }
+      ],
+      "links": [
+        {
+          "label": "Lesson 41 Problem Solving on DC Machines（含例题解答）",
+          "url": "https://archive.nptel.ac.in/content/storage2/courses/108105053/pdf/L-41%28TB%29%28ET%29%20%28%28EE%29NPTEL%29.pdf"
+        }
+      ],
+      "focus": "直流机电压方程、电枢与励磁电流分流、跨工况转速和转矩计算",
+      "selection": "重点比较Lesson 41前部并励电动机问题的运行点分析及后续发电机例题，优先学习如何处理电压/转矩条件而非记例题答案。",
+      "answers": "原始公开讲义含题设和推导解答；已核读前部并励电动机例题与部分解法，不声称独立核验整本讲义所有例题。",
+      "evidenceLevel": "NPTEL/IIT 正式课程公开讲义与解题示范",
+      "evidence": "NPTEL IIT Kharagpur的直流机教学讲义中给出具体数值、问题和运算示例，为本章工况分析提供来源依据。",
+      "evidenceLinks": [
+        {
+          "label": "NPTEL 官方公开课程档案",
+          "url": "https://archive.nptel.ac.in/content/storage2/courses/108105053/pdf/L-41%28TB%29%28ET%29%20%28%28EE%29NPTEL%29.pdf"
+        }
+      ],
+      "access": "NPTEL 官方公开英文PDF，无需在LN重新上传。",
+      "license": "仅外链官方页面；不公开搬运原题或重绘受限讲义图。",
+      "limit": "原例题的数值和运行假设与本站原创练习不同，答案仅用于对照分析方法；课程使用依据不是统计学效度证明。",
+      "readScope": "核读Lesson41的直流机题设、前部计算案例与相关解答段落，未逐题复算整份。",
+      "checked": "2026-11-17",
+      "guide": [
+        "先标注题目中给的电压、电阻、电枢电流/线电流和励磁联结。",
+        "由两个工作点的电压关系与电磁转矩关系联立，不把电枢电流和线电流混用。",
+        "核查答案的速度和损耗物理数量级，并将改变条件作为独立迁移练习。"
+      ],
+      "ready": true
     }
   ],
   "excluded": [

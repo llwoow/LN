@@ -14,6 +14,7 @@ subprocess.run([sys.executable, str(root / 'scripts/build-power-semiconductors.p
 subprocess.run([sys.executable, str(root / 'scripts/check-teaching.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-resource-library.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-practice.py')], check=True)
+subprocess.run([sys.executable, str(root / 'scripts/build-dc-chapter.py'), '--check'], check=True)
 out = root / 'dist'
 if out.exists():
     shutil.rmtree(out)

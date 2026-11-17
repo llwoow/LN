@@ -43,7 +43,9 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 58)
+        self.assertEqual(len(self.sections), 59)
+        self.assertIn('dc-chapter-test', self.sections)
+        self.assertIn('data-open-practice', self.payloads['dc-chapter-test']['html'])
         self.assertIn('dc-homework-review', self.sections)
         self.assertEqual(len({section['group'] for section in self.sections.values()}), 3)
         self.assertIn('transformer-homework', self.sections)
