@@ -22,6 +22,7 @@ def run():
                 page = browser.new_page(viewport={"width": width, "height": height})
                 page.goto(url + "#course/electrical-machines/dc-sec32", wait_until="domcontentloaded")
                 page.locator("#dc-courseware-16").wait_for(timeout=25000)
+                page.locator('#lesson-body[data-lesson-key="electrical-machines/dc-sec32"][aria-busy="false"]').wait_for(timeout=25000)
                 assert page.locator("#dc-winding16-figure svg").count() == 1
                 assert page.locator("[data-dc-winding-lab]").count() == 1
                 assert page.locator("#dc-winding16-figure figcaption").count() == 1
@@ -36,6 +37,7 @@ def run():
                 page.goto(url + "#course/electrical-machines/dc-sec33", wait_until="domcontentloaded")
                 slider = page.locator("[data-dc-reaction-lab] [data-q]")
                 slider.wait_for(timeout=25000)
+                page.locator('#lesson-body[data-lesson-key="electrical-machines/dc-sec33"][aria-busy="false"]').wait_for(timeout=25000)
                 assert page.locator("[data-dc-reaction-lab] svg").count() == 1
                 assert page.locator("#dc-reaction-figure figcaption").count() == 1
                 assert page.locator("#lesson-body [data-dc-supp-tex] .katex").count() >= 2
