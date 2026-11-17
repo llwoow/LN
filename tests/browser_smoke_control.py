@@ -93,6 +93,9 @@ def run() -> None:
                 assert "临界稳定" in page.locator("[data-ac-syn-status]").inner_text()
                 assert page.locator("[data-ac-tex] .katex").count() >= 7
                 assert page.locator("[data-ac-syn-question]").count() == 6
+                page.locator("[data-ac-syn-preset='1']").click()
+                assert "ζ=0.5" in page.locator("[data-ac-syn-preset='1']").inner_text()
+                assert "渐近稳定" in page.locator("[data-ac-syn-status]").inner_text()
                 page.locator("[data-ac-syn-preset='2']").click()
                 assert "渐近稳定" in page.locator("[data-ac-syn-status]").inner_text()
                 page.locator("[data-ac-syn-preset='6']").click()
