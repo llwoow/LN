@@ -4969,6 +4969,783 @@
       "readingAnchor": "dc-branch-reasoning"
     },
     {
+      "id": "english-day-1-q1",
+      "course": "english",
+      "sections": [
+        "day-1"
+      ],
+      "readingSection": "day-1",
+      "readingAnchor": "eng-day-1-q1",
+      "type": "single",
+      "title": "Day 1 · 第1题 · 调整见面时间",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "你原本约好下午两点见面，但突然有事，想改到三点。哪句话最自然？",
+      "hint": "辨认接受、提前和推迟的措辞。",
+      "transfer": "把约见地点和日期分别换掉，再口头确认新的安排。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "I have a thing. You must change the time.",
+          "feedback": "语气强硬且 I have a thing 不自然地表达临时变故。"
+        },
+        {
+          "id": "B",
+          "text": "Something came up. Can we push it back to three?",
+          "feedback": "先解释临时状况，再礼貌请求推迟，准确。"
+        },
+        {
+          "id": "C",
+          "text": "I am not free. You should wait for me.",
+          "feedback": "把改变计划的责任强加给对方，不够自然。"
+        },
+        {
+          "id": "D",
+          "text": "Something happened. Let's cancel everything.",
+          "feedback": "题目只要改时间，并非取消全部计划。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "先解释临时状况，再礼貌请求推迟，准确。",
+        "语气强硬且 I have a thing 不自然地表达临时变故。",
+        "把改变计划的责任强加给对方，不够自然。",
+        "题目只要改时间，并非取消全部计划。"
+      ]
+    },
+    {
+      "id": "english-day-1-q2",
+      "course": "english",
+      "sections": [
+        "day-1"
+      ],
+      "readingSection": "day-1",
+      "readingAnchor": "eng-day-1-q2",
+      "type": "single",
+      "title": "Day 1 · 第2题 · 调整见面时间",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "朋友说：I'm down for that, but can we move it up to 10? 这是什么意思？",
+      "hint": "辨认接受、提前和推迟的措辞。",
+      "transfer": "把约见地点和日期分别换掉，再口头确认新的安排。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "我不想参加，能取消吗？",
+          "feedback": "down for that 是接受邀请。"
+        },
+        {
+          "id": "B",
+          "text": "我愿意参加，但能推迟到十点吗？",
+          "feedback": "move up 表示提前，不是推迟。"
+        },
+        {
+          "id": "C",
+          "text": "我愿意参加，但能提前到十点吗？",
+          "feedback": "正确。move it up to 10 指更早改到十点。"
+        },
+        {
+          "id": "D",
+          "text": "我还没决定，十点再说。",
+          "feedback": "down for that 已明确表示愿意参加。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "steps": [
+        "正确。move it up to 10 指更早改到十点。",
+        "down for that 是接受邀请。",
+        "move up 表示提前，不是推迟。",
+        "down for that 已明确表示愿意参加。"
+      ]
+    },
+    {
+      "id": "english-day-1-q3",
+      "course": "english",
+      "sections": [
+        "day-1"
+      ],
+      "readingSection": "day-1",
+      "readingAnchor": "eng-day-1-q3",
+      "type": "open",
+      "title": "Day 1 · 第3题 · 调整见面时间",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句英语自然表达：“嘿，明天下午你有空吗？我想约你一起去图书馆学习。如果你没空，我们也可以改到周五。”",
+      "hint": "辨认接受、提前和推迟的措辞。",
+      "transfer": "把约见地点和日期分别换掉，再口头确认新的安排。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Hey, are you free tomorrow afternoon? Are you up for studying together at the library? If tomorrow doesn't work for you, we could do Friday instead.",
+        "核心是邀请、给出地点、提供备选日期。不需要逐字翻译；Friday instead 可自然表达“改到周五”。",
+        "4分参考量规：准确完整传意2分；语法和句型1分；场景适用、自然表达1分。其他语法正确且意思等效的表达亦可得分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-2-q1",
+      "course": "english",
+      "sections": [
+        "day-2"
+      ],
+      "readingSection": "day-2",
+      "readingAnchor": "eng-day-2-q1",
+      "type": "single",
+      "title": "Day 2 · 第1题 · 描述故障并求助",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "“这个程序总是崩溃，我还没弄清原因。”哪句最自然？",
+      "hint": "区分出现的问题、预期效果和实际结果。",
+      "transfer": "改用实验设备的故障作为情境，说明预期、症状和需要哪种帮助。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "The program always falls down. I don't understand it.",
+          "feedback": "程序崩溃一般说 crash，而非 fall down。"
+        },
+        {
+          "id": "B",
+          "text": "The program keeps crashing, and I haven't figured out why.",
+          "feedback": "keep + -ing 表反复发生；haven't figured out 强调尚未找到原因。"
+        },
+        {
+          "id": "C",
+          "text": "The program is broken forever. I can't know why.",
+          "feedback": "broken forever 过于绝对；can't know 也不自然。"
+        },
+        {
+          "id": "D",
+          "text": "The program crashes one time. I can't find it.",
+          "feedback": "one time 与“总是”矛盾，find it 也不指找原因。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "keep + -ing 表反复发生；haven't figured out 强调尚未找到原因。",
+        "程序崩溃一般说 crash，而非 fall down。",
+        "broken forever 过于绝对；can't know 也不自然。",
+        "one time 与“总是”矛盾，find it 也不指找原因。"
+      ]
+    },
+    {
+      "id": "english-day-2-q2",
+      "course": "english",
+      "sections": [
+        "day-2"
+      ],
+      "readingSection": "day-2",
+      "readingAnchor": "eng-day-2-q2",
+      "type": "open",
+      "title": "Day 2 · 第2题 · 描述故障并求助",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改正两处错误：It's suppose to showing the results, but nothing appears.",
+      "hint": "区分出现的问题、预期效果和实际结果。",
+      "transfer": "改用实验设备的故障作为情境，说明预期、症状和需要哪种帮助。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：It's supposed to show the results, but nothing appears.",
+        "be supposed to 是固定结构：supposed 有 -d；to 后接动词原形 show，而不是 showing。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-2-q3",
+      "course": "english",
+      "sections": [
+        "day-2"
+      ],
+      "readingSection": "day-2",
+      "readingAnchor": "eng-day-2-q3",
+      "type": "open",
+      "title": "Day 2 · 第3题 · 描述故障并求助",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句英语向客服描述：“你好，我遇到了一个问题。这个应用本来应该自动保存我的学习进度，但它似乎没有正常工作。你能帮我看看吗？”",
+      "hint": "区分出现的问题、预期效果和实际结果。",
+      "transfer": "改用实验设备的故障作为情境，说明预期、症状和需要哪种帮助。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Hi, I ran into a problem with the app. It's supposed to save my progress automatically, but it doesn't seem to be working. Could you give me a hand?",
+        "描述障碍 → 预期与实际 → 求助。还可说 Could you take a look?；不要用 you must fix it 作为普通求助。",
+        "4分参考量规：准确完整传意2分；语法和句型1分；场景适用、自然表达1分。其他语法正确且意思等效的表达亦可得分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-3-q1",
+      "course": "english",
+      "sections": [
+        "day-3"
+      ],
+      "readingSection": "day-3",
+      "readingAnchor": "eng-day-3-q1",
+      "type": "single",
+      "title": "Day 3 · 第1题 · 礼貌表达异议",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "想礼貌地表达与同学不同的看法，哪句最合适？",
+      "hint": "先厘清对方的观点，再说清自己的理由。",
+      "transfer": "改为支持对方的方案，同时提出一个让方案更稳妥的条件。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "You're completely wrong.",
+          "feedback": "直接指责，不符合礼貌讨论。"
+        },
+        {
+          "id": "B",
+          "text": "I see your point, but I'm not sure I agree.",
+          "feedback": "理解对方后表示不同意，最符合要求。"
+        },
+        {
+          "id": "C",
+          "text": "I don't care about your opinion.",
+          "feedback": "表达漠不关心，会破坏沟通。"
+        },
+        {
+          "id": "D",
+          "text": "Your idea makes no sense.",
+          "feedback": "否定对方想法而不解释理由。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "理解对方后表示不同意，最符合要求。",
+        "直接指责，不符合礼貌讨论。",
+        "表达漠不关心，会破坏沟通。",
+        "否定对方想法而不解释理由。"
+      ]
+    },
+    {
+      "id": "english-day-3-q2",
+      "course": "english",
+      "sections": [
+        "day-3"
+      ],
+      "readingSection": "day-3",
+      "readingAnchor": "eng-day-3-q2",
+      "type": "single",
+      "title": "Day 3 · 第2题 · 礼貌表达异议",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "Ben 认为边开发边测试的主要好处是什么？",
+      "hint": "先厘清对方的观点，再说清自己的理由。",
+      "transfer": "改为支持对方的方案，同时提出一个让方案更稳妥的条件。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "It would make the app look better.",
+          "feedback": "对话没有提界面外观。"
+        },
+        {
+          "id": "B",
+          "text": "It would eliminate the need for testing.",
+          "feedback": "恰好相反，方案要求持续测试。"
+        },
+        {
+          "id": "C",
+          "text": "It could save time.",
+          "feedback": "正确。原话 would save us time。"
+        },
+        {
+          "id": "D",
+          "text": "It would require more developers.",
+          "feedback": "对话没有提人员数量。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "steps": [
+        "正确。原话 would save us time。",
+        "对话没有提界面外观。",
+        "恰好相反，方案要求持续测试。",
+        "对话没有提人员数量。"
+      ]
+    },
+    {
+      "id": "english-day-3-q3",
+      "course": "english",
+      "sections": [
+        "day-3"
+      ],
+      "readingSection": "day-3",
+      "readingAnchor": "eng-day-3-q3",
+      "type": "open",
+      "title": "Day 3 · 第3题 · 礼貌表达异议",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句自然英语表达：“我理解你的想法，但我不太赞同。我认为我们应该先完成一个简单的版本，然后逐步改进。”",
+      "hint": "先厘清对方的观点，再说清自己的理由。",
+      "transfer": "改为支持对方的方案，同时提出一个让方案更稳妥的条件。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：I see your point, but I'm not sure I agree. I'd argue that we should build a simple version first and improve it step by step.",
+        "清楚表明异议即可；不用强迫自己使用所有短语。也可以说 I think it would be better to start with a simple version.",
+        "4分参考量规：准确完整传意2分；语法和句型1分；场景适用、自然表达1分。其他语法正确且意思等效的表达亦可得分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-4-q1",
+      "course": "english",
+      "sections": [
+        "day-4"
+      ],
+      "readingSection": "day-4",
+      "readingAnchor": "eng-day-4-q1",
+      "type": "single",
+      "title": "Day 4 · 第1题 · 澄清讲解步骤",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "老师的每个单词你都听清了，但没有理解推导过程。哪句更合适？",
+      "hint": "说清哪里跟不上，区分请求解释与表达反对。",
+      "transfer": "假设你只没听懂最后一步，礼貌请对方用一个例子说明。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "I didn't hear any words.",
+          "feedback": "与“每个词都听清”矛盾。"
+        },
+        {
+          "id": "B",
+          "text": "I'm not sure I follow. Could you explain that step?",
+          "feedback": "正确，明确表示跟不上思路，并请求解释某一步。"
+        },
+        {
+          "id": "C",
+          "text": "You should speak louder.",
+          "feedback": "问题不在音量。"
+        },
+        {
+          "id": "D",
+          "text": "I don't agree with your explanation.",
+          "feedback": "没理解不等于明确不同意。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "正确，明确表示跟不上思路，并请求解释某一步。",
+        "与“每个词都听清”矛盾。",
+        "问题不在音量。",
+        "没理解不等于明确不同意。"
+      ]
+    },
+    {
+      "id": "english-day-4-q2",
+      "course": "english",
+      "sections": [
+        "day-4"
+      ],
+      "readingSection": "day-4",
+      "readingAnchor": "eng-day-4-q2",
+      "type": "open",
+      "title": "Day 4 · 第2题 · 澄清讲解步骤",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改写：Could you explain me how this system works?",
+      "hint": "说清哪里跟不上，区分请求解释与表达反对。",
+      "transfer": "假设你只没听懂最后一步，礼貌请对方用一个例子说明。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Could you explain to me how this system works?",
+        "explain something to someone；也可说 Could you explain how this system works to me? 先解释内容、再接收话者，不能说 explain me… 。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-4-q3",
+      "course": "english",
+      "sections": [
+        "day-4"
+      ],
+      "readingSection": "day-4",
+      "readingAnchor": "eng-day-4-q3",
+      "type": "open",
+      "title": "Day 4 · 第3题 · 澄清讲解步骤",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "写两句英语：“我大概明白你的意思了，但能不能一步步给我讲一下？我想确认自己没有遗漏重要步骤。”",
+      "hint": "说清哪里跟不上，区分请求解释与表达反对。",
+      "transfer": "假设你只没听懂最后一步，礼貌请对方用一个例子说明。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：I think I get the idea, but could you walk me through it step by step? I just want to make sure I haven't missed any important steps.",
+        "表达部分理解 → 请求分步说明 → 说明核对目的；haven't missed 表示截至现在未漏掉任何步骤。",
+        "4分参考量规：准确完整传意2分；语法和句型1分；场景适用、自然表达1分。其他语法正确且意思等效的表达亦可得分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-5-q1",
+      "course": "english",
+      "sections": [
+        "day-5"
+      ],
+      "readingSection": "day-5",
+      "readingAnchor": "eng-day-5-q1",
+      "type": "single",
+      "title": "Day 5 · 第1题 · 汇报项目进度",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "Ben 对项目进度的判断是什么？",
+      "hint": "留意已结束的过去时间与截至现在的成果。",
+      "transfer": "把已经处理的问题改成仍在发生的问题，再检查时态和进度表述。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "The project has already been completed.",
+          "feedback": "硬件完成不等于整个项目完成。"
+        },
+        {
+          "id": "B",
+          "text": "The project has been cancelled.",
+          "feedback": "没有取消项目。"
+        },
+        {
+          "id": "C",
+          "text": "The project is mostly on track, despite a technical issue.",
+          "feedback": "正确。总体可按计划，但存在传感器读数问题。"
+        },
+        {
+          "id": "D",
+          "text": "The project will definitely be delayed by a week.",
+          "feedback": "Ben 只是认为可能延误，并未确定延迟一周。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "steps": [
+        "正确。总体可按计划，但存在传感器读数问题。",
+        "硬件完成不等于整个项目完成。",
+        "没有取消项目。",
+        "Ben 只是认为可能延误，并未确定延迟一周。"
+      ]
+    },
+    {
+      "id": "english-day-5-q2",
+      "course": "english",
+      "sections": [
+        "day-5"
+      ],
+      "readingSection": "day-5",
+      "readingAnchor": "eng-day-5-q2",
+      "type": "open",
+      "title": "Day 5 · 第2题 · 汇报项目进度",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改写原句：We've finished the hardware setup yesterday, and we're on track to finishing the project by Friday.",
+      "hint": "留意已结束的过去时间与截至现在的成果。",
+      "transfer": "把已经处理的问题改成仍在发生的问题，再检查时态和进度表述。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：We finished the hardware setup yesterday, and we're on track to finish the project by Friday.",
+        "两处修改：yesterday 是明确的已结束时间，通常用 finished；on track to finish 中的 to 是不定式标记，后面接动词原形。补充：若写 We had finished… yesterday，在没有另一个过去参照事件的独立进度汇报中也不合适；更自然的是 We finished… yesterday。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-5-q3",
+      "course": "english",
+      "sections": [
+        "day-5"
+      ],
+      "readingSection": "day-5",
+      "readingAnchor": "eng-day-5-q3",
+      "type": "open",
+      "title": "Day 5 · 第3题 · 汇报项目进度",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句自然英语：“我们已经完成了大部分工作，但测试时遇到了一点问题。如果今天能解决，我们应该可以在周一前完成。”",
+      "hint": "留意已结束的过去时间与截至现在的成果。",
+      "transfer": "把已经处理的问题改成仍在发生的问题，再检查时态和进度表述。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：We've finished most of the work, but we ran into a snag during testing. If we can fix it today, we should be able to wrap things up by Monday.",
+        "截至现在的成果：we've finished；之前测试出现障碍：ran into；条件与预计：If we can fix it today, we should be able to… 。by Monday 是最迟周一。",
+        "4分参考量规：意义完整2分，语法与形式1分，表达自然和场景契合1分；其他意义等效的表达也可能满分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-6-q1",
+      "course": "english",
+      "sections": [
+        "day-6"
+      ],
+      "readingSection": "day-6",
+      "readingAnchor": "eng-day-6-q1",
+      "type": "single",
+      "title": "Day 6 · 第1题 · 处理过去事件的先后关系",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "By the time the teacher arrived, we _____ the experiment.",
+      "hint": "先找叙述的参照时间，再判断事件发生在它之前还是之后。",
+      "transfer": "添加一个后来发生的事件，重写两句，说明何处需要过去完成时。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "finish",
+          "feedback": "finish 原形既不符合这一叙述时态，也无必要助动词。"
+        },
+        {
+          "id": "B",
+          "text": "have finished",
+          "feedback": "have finished 参照现在；这里到达发生在过去。"
+        },
+        {
+          "id": "C",
+          "text": "had finished",
+          "feedback": "正确。到达之前已经完成。"
+        },
+        {
+          "id": "D",
+          "text": "are finishing",
+          "feedback": "are finishing 是现在进行时，与过去叙事不匹配。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "steps": [
+        "正确。到达之前已经完成。",
+        "finish 原形既不符合这一叙述时态，也无必要助动词。",
+        "have finished 参照现在；这里到达发生在过去。",
+        "are finishing 是现在进行时，与过去叙事不匹配。"
+      ]
+    },
+    {
+      "id": "english-day-6-q2",
+      "course": "english",
+      "sections": [
+        "day-6"
+      ],
+      "readingSection": "day-6",
+      "readingAnchor": "eng-day-6-q2",
+      "type": "open",
+      "title": "Day 6 · 第2题 · 处理过去事件的先后关系",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改写：We have completed the testing last night, but we still need to fix a few bugs.",
+      "hint": "先找叙述的参照时间，再判断事件发生在它之前还是之后。",
+      "transfer": "添加一个后来发生的事件，重写两句，说明何处需要过去完成时。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：We completed the testing last night, but we still need to fix a few bugs.",
+        "last night 是明确而结束的过去时间，此处将 have completed 改为 completed。后半句 still need 保留，因为说的是现在仍需处理的问题。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-6-q3",
+      "course": "english",
+      "sections": [
+        "day-6"
+      ],
+      "readingSection": "day-6",
+      "readingAnchor": "eng-day-6-q3",
+      "type": "open",
+      "title": "Day 6 · 第3题 · 处理过去事件的先后关系",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句自然英语：“测试比预期花了更长时间，所以我们落后于计划。不过我们已经解决了主要问题，我会随时告诉你最新进展。”",
+      "hint": "先找叙述的参照时间，再判断事件发生在它之前还是之后。",
+      "transfer": "添加一个后来发生的事件，重写两句，说明何处需要过去完成时。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Testing took longer than expected, so we're behind schedule. However, we've fixed the main issue, and I'll keep you posted.",
+        "took：过去实际耗时；we're behind：现在的进度状态；we've fixed：截至现在的修复成果；I'll keep：未来沟通承诺。",
+        "4分参考量规：意义完整2分，语法与形式1分，表达自然和场景契合1分；其他意义等效的表达也可能满分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-7-q1",
+      "course": "english",
+      "sections": [
+        "day-7"
+      ],
+      "readingSection": "day-7",
+      "readingAnchor": "eng-day-7-q1",
+      "type": "single",
+      "title": "Day 7 · 第1题 · 提出建议与偏好",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "想委婉建议同学先测试程序，哪句话最自然？",
+      "hint": "检查 worth、would rather 和建议句型后接的形式。",
+      "transfer": "同一个建议分别用 How about 和 Why don’t we 表达，再补一句理由。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "You must test it because my idea is better.",
+          "feedback": "语气强硬，强调自己更好并不适合建议。"
+        },
+        {
+          "id": "B",
+          "text": "It might be worth testing it first.",
+          "feedback": "正确。be worth + -ing，语气委婉。"
+        },
+        {
+          "id": "C",
+          "text": "It might be worth to test it first.",
+          "feedback": "典型错误：worth 后不接 to test。"
+        },
+        {
+          "id": "D",
+          "text": "You should be worth testing it.",
+          "feedback": "把主语 you 当成“值得被测试”的对象，句意也改变。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "正确。be worth + -ing，语气委婉。",
+        "语气强硬，强调自己更好并不适合建议。",
+        "典型错误：worth 后不接 to test。",
+        "把主语 you 当成“值得被测试”的对象，句意也改变。"
+      ]
+    },
+    {
+      "id": "english-day-7-q2",
+      "course": "english",
+      "sections": [
+        "day-7"
+      ],
+      "readingSection": "day-7",
+      "readingAnchor": "eng-day-7-q2",
+      "type": "open",
+      "title": "Day 7 · 第2题 · 提出建议与偏好",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改写：Why don't we to start with a simpler design? I'd rather testing it first.",
+      "hint": "检查 worth、would rather 和建议句型后接的形式。",
+      "transfer": "同一个建议分别用 How about 和 Why don’t we 表达，再补一句理由。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Why don't we start with a simpler design? I'd rather test it first.",
+        "Why don't we + 动词原形 start；would rather + 动词原形 test。不要混淆另一结构 How about starting…?；正确搭配不是靠是否表达建议来决定。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-7-q3",
+      "course": "english",
+      "sections": [
+        "day-7"
+      ],
+      "readingSection": "day-7",
+      "readingAnchor": "eng-day-7-q3",
+      "type": "open",
+      "title": "Day 7 · 第3题 · 提出建议与偏好",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句英语：“要不先做一个简单的版本？这样做的好处是我们可以更早发现问题。我宁愿先确保它能正常运行。”",
+      "hint": "检查 worth、would rather 和建议句型后接的形式。",
+      "transfer": "同一个建议分别用 How about 和 Why don’t we 表达，再补一句理由。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：How about starting with a simpler version? The upside is that we can catch problems earlier. I'd rather make sure it works properly first.",
+        "可得分要点：提议小版本（1分）；更早发现问题（1分）；偏好先确保正确运行（1分）；语法和自然度（1分）。不必与示例完全一致。",
+        "4分参考量规：意义完整2分，语法与形式1分，表达自然和场景契合1分；其他意义等效的表达也可能满分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
       "id": "hw-2-2",
       "course": "electrical-machines",
       "sections": [

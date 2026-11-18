@@ -1910,6 +1910,51 @@
         }
       ],
       "localLesson": "#course/electrical-materials/em-2-4"
+    },
+    {
+      "id": "english-bc-keep-conversation",
+      "title": "保持对话推进",
+      "kind": "British Council · B1 口语",
+      "repository": null,
+      "checked": "2026-11-18",
+      "targets": [
+        {
+          "course": "english",
+          "section": "day-4"
+        }
+      ],
+      "question": "什么时候可以用追问让对方把事情解释清楚？",
+      "summary": "原站提供口语示范和理解练习。",
+      "steps": [
+        "打开原站，完成准备任务，找出与追问有关的表达。",
+        "观看或阅读原站示范，记录两处对方回答后继续追问的方式。",
+        "替换成自己没听懂实验步骤的情境，写出一问一答，再读一遍。"
+      ],
+      "output": "一组适用于实际澄清场景的问答。",
+      "requirements": "可打开 British Council 网页，按需播放原站媒体。",
+      "license": "仅链接 British Council 原站内容，使用遵循原站条款。",
+      "links": [
+        {
+          "label": "Keeping a conversation going",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/b1-speaking/keeping-conversation-going"
+        }
+      ],
+      "downloads": [],
+      "localLesson": null,
+      "limits": [
+        "用于口语追问和衔接练习，可按需结合 Day 4；不判定口语水平。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "已打开课程页并核对课程主题和准备、理解练习入口。",
+        "read": "B1 口语课程页及练习说明。"
+      },
+      "evidence": [
+        {
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/b1-speaking/keeping-conversation-going",
+          "summary": "官方课程页"
+        }
+      ]
     }
   ]
 }

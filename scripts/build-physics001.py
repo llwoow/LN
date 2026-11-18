@@ -100,7 +100,6 @@ for q in D['questions']:
     markup='<section class="physics001" id="question-'+str(i)+'"><h2>第'+str(i)+'题 · '+esc(q['title'])+'</h2><p class="page-meta">'+esc(' / '.join(q['tags']))+'</p><h3>题意与条件</h3>'+rich(q['prompt'])
     if i in [3,5,6]:markup+='<ol type="A">'+''.join('<li>'+esc(t)+'</li>' for t in options[i])+'</ol>'
     if i in extra_tasks:markup+=rich(extra_tasks[i])
-    markup+='<p class="reading-reference">参考：《高三物理》题稿。</p>'
     if i==15:markup+='<figure id="figure-q15-caliper"><div class="instrument-scroll" tabindex="0" role="region" aria-label="游标刻度示意，可横向查看或点击放大"><a href="'+BASE+'/figures/q15-caliper.svg" target="_blank" rel="noopener"><img src="'+BASE+'/figures/q15-caliper.svg" width="720" height="245" alt="游标零线在主尺2与3毫米之间，第8线重合"></a></div><figcaption>图15.0 · 根据原稿已核对的刻线条件重新绘制，20等分游标的标定精度为0.05mm。</figcaption></figure>'
     markup+='<h3>'+esc(q['foundation']['title'])+'</h3>'+rich(q['foundation']['text'])
     if q.get('figure'):
