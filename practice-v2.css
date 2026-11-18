@@ -368,6 +368,8 @@
   .practice-exam-progress>small{font-size:12px;}
   .practice-exam-metrics{grid-template-columns:repeat(2,minmax(0,1fr));}
   .practice-exam-metrics>div{padding:12px;}
+  .practice-exam-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));}
+  .practice-exam-filters button{padding-inline:3px;font-size:12px;}
 }
 @media(prefers-reduced-motion:reduce){
   .practice-progress-track>span,.practice-options .practice-choice{transition:none;}
