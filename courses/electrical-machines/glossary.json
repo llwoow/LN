@@ -2393,6 +2393,220 @@
       ],
       "match": "功率关系与转矩系数可以相互检验",
       "description": "按本节Te=CTΦIa定义的系数。"
+    },
+    {
+      "id": "mmf-i",
+      "keys": [
+        "i_A",
+        "i_B",
+        "i_C"
+      ],
+      "title": "i_A、i_B、i_C",
+      "description": "三相瞬时电流。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "A",
+      "match": "三相瞬时电流"
+    },
+    {
+      "id": "mmf-irms",
+      "keys": [
+        "I_φ"
+      ],
+      "title": "I_φ",
+      "description": "相电流有效值。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "A",
+      "match": "相电流有效值，单位均"
+    },
+    {
+      "id": "mmf-omega",
+      "keys": [
+        "ω"
+      ],
+      "title": "ω",
+      "description": "电流的电角频率，等于 2πf。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "rad/s",
+      "match": "电流的电角频率"
+    },
+    {
+      "id": "mmf-t",
+      "keys": [
+        "t"
+      ],
+      "title": "t",
+      "description": "距所选时刻的时间。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "s",
+      "match": "距所选时刻的时间"
+    },
+    {
+      "id": "mmf-theta",
+      "keys": [
+        "θ"
+      ],
+      "title": "θ",
+      "description": "相对于 A 相轴线、沿顺时针为正的空间电角度。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "° 或 rad",
+      "match": "选 A 相绕组轴线"
+    },
+    {
+      "id": "mmf-fphi",
+      "keys": [
+        "F_φ1"
+      ],
+      "title": "F_φ1",
+      "description": "单相基波磁动势的空间峰值，取相电流达到峰值时的幅值。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "安匝",
+      "match": "单相基波磁动势随电流"
+    },
+    {
+      "id": "mmf-phase",
+      "keys": [
+        "f_A1",
+        "f_B1",
+        "f_C1"
+      ],
+      "title": "f_A1、f_B1、f_C1",
+      "description": "指定位置和时刻各相的基波磁动势。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "安匝",
+      "match": "指定位置和时刻给出"
+    },
+    {
+      "id": "mmf-total",
+      "keys": [
+        "f_1"
+      ],
+      "title": "f_1",
+      "description": "指定位置与时刻的三相合成基波磁动势。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "安匝",
+      "match": "因此三相合成基波磁动势"
+    },
+    {
+      "id": "mmf-p",
+      "keys": [
+        "p"
+      ],
+      "title": "p",
+      "description": "磁极对数，四极电机的 p 为 2。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "无量纲",
+      "match": "对 p 对极电机"
+    },
+    {
+      "id": "mmf-mech",
+      "keys": [
+        "Ω_s"
+      ],
+      "title": "Ω_s",
+      "description": "合成磁场波峰的机械同步角速度。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "rad/s",
+      "match": "机械同步角速度"
+    },
+    {
+      "id": "mmf-ns",
+      "keys": [
+        "n_s"
+      ],
+      "title": "n_s",
+      "description": "合成磁场波峰每分钟的机械转数。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "r/min",
+      "match": "每分钟的机械转数"
+    },
+    {
+      "id": "mmf-freq",
+      "keys": [
+        "f"
+      ],
+      "title": "f",
+      "description": "相电流频率。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "Hz",
+      "match": "电流频率（Hz）"
+    },
+    {
+      "id": "mmf-turns",
+      "keys": [
+        "N_φ"
+      ],
+      "title": "N_φ",
+      "description": "每相串联匝数。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "匝",
+      "match": "按每相串联匝数"
+    },
+    {
+      "id": "mmf-kw",
+      "keys": [
+        "k_w1"
+      ],
+      "title": "k_w1",
+      "description": "基波绕组系数。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "无量纲",
+      "match": "按每相串联匝数"
+    },
+    {
+      "id": "mmf-peak",
+      "keys": [
+        "F_1"
+      ],
+      "title": "F_1",
+      "description": "三相合成基波磁动势的空间峰值。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "安匝",
+      "match": "合成波最大值恒为"
     }
   ]
 }

@@ -462,6 +462,18 @@
             // Without JavaScript the declared model and reading guidance remain visible.
           }
         }
+        if (course.id === 'electrical-machines' && body.querySelector('[data-mmf-lab]')) {
+          try {
+            await Promise.all([
+              loadScript('courses/electrical-machines/model/rotating-mmf-lab.js'),
+              loadStyle('courses/electrical-machines/model/rotating-mmf-lab.css')
+            ]);
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            window.LN_RotatingMMFLab?.mount(body);
+          } catch {
+            // The static derivation stays usable if the optional model fails to load.
+          }
+        }
         if (course.id === 'electromagnetic-compatibility' && body.querySelector('[data-emc-lab]')) {
           // Educational models are optional; keep the static lesson readable if loading fails.
           try {

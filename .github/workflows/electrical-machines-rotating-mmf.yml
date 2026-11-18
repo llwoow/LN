@@ -1,0 +1,23 @@
+name: Electrical machines rotating MMF
+
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'courses/electrical-machines/**'
+      - 'tests/rotating-mmf.test.cjs'
+      - '.github/workflows/electrical-machines-rotating-mmf.yml'
+
+jobs:
+  rotating-mmf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and mathematical regression checks
+        run: |
+          node --check courses/electrical-machines/lessons/mmf-sec47.js
+          node --check courses/electrical-machines/model/rotating-mmf-lab.js
+          node tests/rotating-mmf.test.cjs
