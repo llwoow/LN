@@ -42,7 +42,7 @@ class AutomaticControlTests(unittest.TestCase):
         self.assertEqual(len(set(s["group"] for s in sections)),8)
         self.assertEqual([s["id"] for s in sections if s["kind"] != "outline"],[
             "ac-3-1","ac-3-2","ac-3-3","ac-3-4","ac-3-5","ac-3-6","ac-3-7","ac-homework3",
-            "ac-4-1","ac-4-2","ac-4-2-1","ac-4-2-2","ac-4-2-3","ac-4-2-4","ac-4-3","ac-4-3-1","ac-4-4,"ac-homework4"
+            "ac-4-1","ac-4-2","ac-4-2-1","ac-4-2-2","ac-4-2-3","ac-4-2-4","ac-4-3","ac-4-3-1","ac-4-4","ac-homework4"
         ])
         self.assertEqual(self.course["textbook"]["isbn"],"9787302665564")
         self.assertEqual(self.course["textbook"]["edition"],3)
