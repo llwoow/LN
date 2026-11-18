@@ -66,8 +66,8 @@ class AutomaticControlTests(unittest.TestCase):
         for number in ("4-7","4-10","4-12","4-14","4-18"):
             self.assertIn("question-"+number, parser.ids)
             self.assertIn("problem-"+number, parser.ids)
-        self.assertEqual(html.count("<figure "), 7)
-        self.assertEqual(html.count("<svg "), 7)
+        self.assertEqual(html.count("<figure "), 10)
+        self.assertEqual(html.count("<svg "), 10)
         self.assertEqual(parser.math_open, parser.math_close)
         for marker in ("−2±j√6", "K*=100", "K*=260",
                        "K*=32", "K*=91/4", "b=40/3",
@@ -76,7 +76,7 @@ class AutomaticControlTests(unittest.TestCase):
         self.assertAlmostEqual((4+4*math.sqrt(5)),12.94427190999916)
         self.assertAlmostEqual((4-2*math.sqrt(3)),0.5358983848622456)
         self.assertAlmostEqual((91/4),22.75)
-        self.assertEqual(len(self.index["automatic-control"]["sections"]["ac-homework4"]["figures"]), 7)
+        self.assertEqual(len(self.index["automatic-control"]["sections"]["ac-homework4"]["figures"]), 10)
 
     def test_cubic_synthesis_lesson(self):
         lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-4-3-1.js")["html"]
