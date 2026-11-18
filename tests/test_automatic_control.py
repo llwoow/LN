@@ -76,6 +76,30 @@ class AutomaticControlTests(unittest.TestCase):
         self.assertAlmostEqual((4+4*math.sqrt(5)),12.94427190999916)
         self.assertAlmostEqual((4-2*math.sqrt(3)),0.5358983848622456)
         self.assertAlmostEqual((91/4),22.75)
+        # Independently verify characteristic equations, not just published labels.
+        p47=lambda s,k:s**4+8*s**3+36*s**2+80*s+k
+        dp47=lambda s:4*s**3+24*s**2+72*s+80
+        self.assertAlmostEqual(abs(p47(-2,64)),0,places=9)
+        self.assertAlmostEqual(abs(dp47(-2)),0,places=9)
+        for s in (-2+1j*math.sqrt(6), -2-1j*math.sqrt(6)):
+            self.assertAlmostEqual(abs(p47(s,100)),0,places=8)
+            self.assertAlmostEqual(abs(dp47(s)),0,places=8)
+        for s in (1j*math.sqrt(10), -1j*math.sqrt(10)):
+            self.assertAlmostEqual(abs(p47(s,260)),0,places=8)
+        p410=lambda s,k,h2:s**4+7*s**3+10*s**2+(2*k*s if h2 else 0)+k
+        self.assertAlmostEqual(abs(p410(-4,32,False)),0,places=9)
+        self.assertAlmostEqual(abs(4*(-4)**3+21*(-4)**2+20*(-4)),0,places=9)
+        for s in (1j*math.sqrt(13/2), -1j*math.sqrt(13/2)):
+            self.assertAlmostEqual(abs(p410(s,91/4,True)),0,places=8)
+        b=4+4*math.sqrt(5)
+        self.assertAlmostEqual((b-4)**2-80,0,places=9)
+        self.assertAlmostEqual(400-30*(40/3),0,places=9)
+        for k in (4-2*math.sqrt(3),4+2*math.sqrt(3)):
+            s=(k-2)/2
+            self.assertAlmostEqual(s*s+(2-k)*s+k,0,places=9)
+        for s in (1j*math.sqrt(2),-1j*math.sqrt(2)):
+            self.assertAlmostEqual(abs(s**3+s**2+2*s+2),0,places=9)
+        self.assertEqual(1/2,0.5)
         self.assertEqual(len(self.index["automatic-control"]["sections"]["ac-homework4"]["figures"]), 10)
 
     def test_cubic_synthesis_lesson(self):
