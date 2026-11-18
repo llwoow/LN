@@ -193,7 +193,7 @@
       let base=questions.filter(q=>q.course===course&&(!collection||(collection==='mistakes'?isMistake(record(q)):record(q).favorite))),exact=section?base.filter(q=>q.sections.includes(section)):[];
       const fallback=Boolean(section&&!exact.length);
       if(exact.length)base=exact;
-      panel.querySelector('[data-p-scope]').textContent=(section?(fallback?'本节暂无题，显示全课':'本节关联'):'全课')+' · '+base.length+'题';
+      panel.querySelector('[data-p-scope]').textContent=(section?(fallback?'本节暂无题，显示全课':'本节关联练习'):'全课')+' · '+base.length+'题';
       matches=base.filter(q=>(!type||q.type===type)&&(!skill||q.skills.includes(skill))&&(!review||needsReview(q,record(q))));
       if(!matches.some(q=>q.id===selected))selected=matches[0]?.id||'';
       render();
