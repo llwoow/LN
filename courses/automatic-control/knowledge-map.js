@@ -147,7 +147,7 @@ window.LN_AUTO_CONTROL_MAP={
     {
       "section": "ac-homework4",
       "title": "第4章五道根轨迹课堂题",
-      "note": "完整题干、逐步推导、七幅就地根轨迹图与两题手稿批改"
+      "note": "完整题干、逐步推导、七幅根轨迹、结构图与两幅时域曲线及两题手稿批改"
     }
   ],
   "links": [
