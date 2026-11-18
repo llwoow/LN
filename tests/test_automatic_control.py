@@ -42,7 +42,7 @@ class AutomaticControlTests(unittest.TestCase):
         self.assertEqual(len(set(s["group"] for s in sections)),8)
         self.assertEqual([s["id"] for s in sections if s["kind"] != "outline"],[
             "ac-3-1","ac-3-2","ac-3-3","ac-3-4","ac-3-5","ac-3-6","ac-3-7","ac-homework3",
-            "ac-4-1","ac-4-2","ac-4-2-1","ac-4-2-2","ac-4-2-3","ac-4-2-4","ac-4-3","ac-4-3-1","ac-4-4"
+            "ac-4-1","ac-4-2","ac-4-2-1","ac-4-2-2","ac-4-2-3","ac-4-2-4","ac-4-3","ac-4-3-1","ac-4-4,"ac-homework4"
         ])
         self.assertEqual(self.course["textbook"]["isbn"],"9787302665564")
         self.assertEqual(self.course["textbook"]["edition"],3)
@@ -55,6 +55,28 @@ class AutomaticControlTests(unittest.TestCase):
             self.assertIn("reader-section",html)
             parser=Parser(); parser.feed(html)
             self.assertEqual(parser.math_open,parser.math_close,section["id"])
+
+    def test_root_locus_five_classroom_problems(self):
+        lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-homework4.js")
+        self.assertEqual({q["number"] for q in lesson["questions"]},
+                         {"4-7", "4-10", "4-12", "4-14", "4-18"})
+        html = lesson["html"]
+        parser = Parser()
+        parser.feed(html)
+        for number in ("4-7","4-10","4-12","4-14","4-18"):
+            self.assertIn("question-"+number, parser.ids)
+            self.assertIn("problem-"+number, parser.ids)
+        self.assertEqual(html.count("<figure "), 7)
+        self.assertEqual(html.count("<svg "), 7)
+        self.assertEqual(parser.math_open, parser.math_close)
+        for marker in ("−2±j√6", "K*=100", "K*=260",
+                       "K*=32", "K*=91/4", "b=40/3",
+                       "K*=4±2√3", "cₙ(∞)=lim"):
+            self.assertIn(marker, html)
+        self.assertAlmostEqual((4+4*math.sqrt(5)),12.94427190999916)
+        self.assertAlmostEqual((4-2*math.sqrt(3)),0.5358983848622456)
+        self.assertAlmostEqual((91/4),22.75)
+        self.assertEqual(len(self.index["automatic-control"]["sections"]["ac-homework4"]["figures"]), 7)
 
     def test_cubic_synthesis_lesson(self):
         lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-4-3-1.js")["html"]
@@ -99,7 +121,7 @@ class AutomaticControlTests(unittest.TestCase):
         self.assertEqual(len(course_questions),13)
         self.assertEqual({q["id"] for q in course_questions},{q["id"] for q in self.compiled["questions"] if q["course"]=="automatic-control"})
         self.assertIn("automatic-control",self.index)
-        self.assertEqual(len(self.index["automatic-control"]["sections"]),17)
+        self.assertEqual(len(self.index["automatic-control"]["sections"]),18)
 
     def test_root_locus_lesson_and_bank(self):
         lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-4-2-2.js")["html"]
