@@ -24,6 +24,18 @@ def run() -> None:
             browser = pw.chromium.launch(channel="chrome", headless=True, args=["--no-sandbox"])
             for name, width, height in [("desktop", 1366, 900), ("mobile", 390, 844)]:
                 page = browser.new_page(viewport={"width": width, "height": height}, device_scale_factor=1)
+                for course, sections in {
+                    'electrical-machines': ['transformer-homework', 'dc-homework-review'],
+                    'automatic-control': ['ac-homework3', 'ac-homework4'],
+                    'power-semiconductors': ['chapter-2-test'],
+                }.items():
+                    page.goto(base + '#course/' + course, wait_until='domcontentloaded')
+                    page.locator('.course-view-nav a').filter(has_text='已做题详解').click()
+                    links = page.locator('ul[aria-label="已做题详解"] a')
+                    assert links.count() == len(sections)
+                    assert [link.get_attribute('href') for link in links.all()] == [
+                        '#course/' + course + '/' + section for section in sections]
+                    assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
                 page.goto(base + "#course/automatic-control/ac-3-6", wait_until="domcontentloaded")
                 page.locator("#ac-dynamic-error").wait_for(timeout=20000)
                 page.evaluate('document.fonts.ready')
@@ -57,6 +69,36 @@ def run() -> None:
                 page.locator('#question-3-16.reference-target').wait_for()
                 assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
                 page.screenshot(path=str(OUT / ("automatic-control-" + name + "-homework.png")), full_page=True)
+
+                # Chapter 4 classroom homework: verify the NEW reader content, not only old lessons.
+                page.goto(base + "#course/automatic-control/ac-homework4", wait_until="domcontentloaded")
+                page.locator("#question-4-7").wait_for(timeout=20000)
+                page.locator("#question-4-18").wait_for()
+                assert page.locator("figure").count() == 10
+                assert page.locator("#problem-4-7 svg").count() == 1
+                assert page.locator("#problem-4-10 svg").count() == 2
+                assert page.locator("#problem-4-12 svg").count() == 2
+                assert page.locator("#problem-4-14 svg").count() == 1
+                assert page.locator("#problem-4-18 svg").count() == 4
+                assert "91/4" in page.locator("#problem-4-10").inner_text()
+                assert "±j√6" in page.locator("#problem-4-7").inner_text()
+                assert "单位阶跃扰动" in page.locator("#problem-4-18").inner_text()
+                assert "0<K*<2" in page.locator("#problem-4-14 table").last.inner_text()
+                assert "0<K<1" in page.locator("#problem-4-18 table").last.inner_text()
+                assert "0<K*<91/4" in page.locator("#problem-4-10").inner_text()
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+                if width < 560:
+                    assert page.locator("#ac-hw4-fig-1 [role='region']").evaluate(
+                        "(el) => el.scrollWidth > el.clientWidth")
+                page.locator("#problem-4-7").screenshot(
+                    path=str(OUT / ("automatic-control-" + name + "-classroom-47.png")))
+                page.locator("#problem-4-18").screenshot(
+                    path=str(OUT / ("automatic-control-" + name + "-classroom-418.png")))
+                if not page.locator('[data-homework-jump]').is_visible():
+                    page.locator('[data-reader-directory]').click()
+                page.locator('[data-homework-jump]').select_option('4-14')
+                page.locator('#question-4-14.reference-target').wait_for(timeout=10000)
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
 
                 page.goto(base + "#course/automatic-control/ac-3-3", wait_until="domcontentloaded")
                 symbol = page.locator('math [data-definition="ac-natural-frequency"]').first

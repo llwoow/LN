@@ -177,6 +177,7 @@
       return '课程';
     }
     if (!sectionId || sectionId === 'map') renderKnowledgeMap(course);
+    else if (sectionId === 'worked-exercises') renderWorkedExercises(course);
     else renderReader(course, sectionId, anchor);
     return course.title;
   }
@@ -189,8 +190,15 @@
     const modelActive = model && location.hash.split('/')[2] === model.id;
     const material = course.sections.find(section=>section.supplement);
     const materialLink = material ? '<a href="#course/'+course.id+'/'+material.id+'">试卷讲解</a>' : '';
+    const workedLink = course.workedExercises?.length ? '<a href="#course/' + course.id + '/worked-exercises"' + (active === 'worked' ? ' aria-current="page"' : '') + '>已做题详解</a>' : '';
     const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
-    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + (course.outlineOnly ? '章节目录' : '章节阅读') + '</a>' + modelLink + materialLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
+    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + (course.outlineOnly ? '章节目录' : '章节阅读') + '</a>' + workedLink + modelLink + materialLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
+  }
+
+  function renderWorkedExercises(course) {
+    main.classList.add('course-main');
+    const sections = (course.workedExercises || []).map(id => course.sections.find(section => section.id === id)).filter(Boolean);
+    main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + '课程</a><section class="course-heading"><h1>' + escapeHTML(course.title) + ' · 已做题详解</h1></section>' + courseViewNav(course, 'worked') + '<ul class="course-list" aria-label="已做题详解">' + sections.map(section => '<li class="course-row"><a class="course-link" href="#course/' + course.id + '/' + section.id + '"><span class="course-symbol">' + icon('book') + '</span><div class="course-text"><h2>' + escapeHTML(section.title) + '</h2><p>' + escapeHTML(section.group) + '</p></div></a></li>').join('') + '</ul>';
   }
 
   function renderKnowledgeMap(course) {

@@ -18,6 +18,7 @@ dist/
 /nov13-browser-artifacts/
 /electrical-materials-browser-artifacts/
 /dc-browser-artifacts/
+/control-browser-artifacts/
 
 # Private source materials, credentials and raw audit reports
 /private/
