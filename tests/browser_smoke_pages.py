@@ -6,7 +6,7 @@ absolute root paths that work on the existing host but fail on GitHub Pages.
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-import json, runpy, tempfile, threading
+import json, os, runpy, shutil, tempfile, threading
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,7 +16,10 @@ assignment = runpy.run_path(str(ROOT / 'scripts/build-reference-index.py'))['ass
 def main():
     with tempfile.TemporaryDirectory(prefix='ln-pages-smoke-') as folder:
         mount = Path(folder)
-        (mount / 'LN').symlink_to(ROOT / 'dist', target_is_directory=True)
+        try:
+            (mount / 'LN').symlink_to(ROOT / 'dist', target_is_directory=True)
+        except OSError:
+            shutil.copytree(ROOT / 'dist', mount / 'LN')
         server = ThreadingHTTPServer(('127.0.0.1', 0), partial(SimpleHTTPRequestHandler, directory=str(mount)))
         threading.Thread(target=server.serve_forever, daemon=True).start()
         origin = 'http://127.0.0.1:' + str(server.server_address[1])
@@ -25,7 +28,7 @@ def main():
         checked = []
         try:
             with sync_playwright() as pw:
-                browser = pw.chromium.launch(headless=True, args=['--no-sandbox'])
+                browser = pw.chromium.launch(headless=True, channel=os.environ.get('LN_BROWSER_CHANNEL') or None, args=['--no-sandbox'])
                 page = browser.new_page(viewport={'width': 1280, 'height': 900}, reduced_motion='reduce')
                 page.on('pageerror', lambda error: errors.append(str(error)))
                 def response(res):
@@ -90,6 +93,44 @@ def main():
                     res = page.request.get(base + artifact)
                     assert res.ok, (artifact, res.status)
                     assert len(res.body()) > 100, artifact
+                # Source-backed audit remains under the same Pages subdirectory.
+                page.goto(base + 'audit/', wait_until='networkidle')
+                page.locator('.audit-stat').first.wait_for(timeout=15000)
+                assert page.locator('.audit-stat').count() == 4
+                assert '章节完成度' in page.locator('main').inner_text()
+                # A claim imported from README/PR-style documentation never counts as verification.
+                page.evaluate("""() => localStorage.setItem('ln.audit.records.v1',
+                    JSON.stringify([{id:'ac-3-5',courseId:'automatic-control',status:'已验证',
+                      sourceKind:'文档声明',evidenceType:'文档描述',evidenceUrl:'https://example.org/plan',
+                      revision:'89fde344661ea22751b1ff87880f9433087224eb'}]))""")
+                page.reload(wait_until='networkidle')
+                assert page.locator('.audit-stat').first.locator('strong').inner_text() == '0'
+                page.evaluate("() => localStorage.removeItem('ln.audit.records.v1')")
+                page.reload(wait_until='networkidle')
+                page.screenshot(path=str(evidence / 'audit-1280.png'), full_page=True)
+                page.locator('#audit-nav [data-view="catalog"]').click()
+                assert page.locator('a[href*="/map"]').count(), 'knowledge map links must exist'
+                page.locator('#audit-nav [data-view="skeleton"]').click()
+                assert '骨架内容清单' in page.locator('h1').inner_text()
+                page.locator('#audit-nav [data-view="edit"]').click()
+                assert page.locator('#record-form select[name="id"] option').count() > 100
+                page.locator('#record-form select[name="id"]').select_option('electrical-machines/transformer-sec27')
+                assert page.locator('#record-form select[name="anchor"] option').count() > 1
+                assert page.locator('#record-form select[name="impact"]').input_value() == '一般'
+                assert page.locator('#record-form select[name="evidenceType"]').input_value() == '未提供'
+                page.locator('#record-form select[name="anchor"]').select_option(index=1)
+                page.locator('#record-form select[name="status"]').select_option('明确存在的问题')
+                page.locator('#record-form textarea[name="actualContent"]').fill('Browser test fixture, not a course finding.')
+                page.locator('#record-form textarea[name="reproduction"]').fill('Browser fixture: save then delete this local record.')
+                page.locator('#record-form button[type="submit"]').click()
+                assert page.evaluate("JSON.parse(localStorage.getItem('ln.audit.records.v1')).length") == 1
+                page.locator('#audit-delete').click()
+                assert page.evaluate("JSON.parse(localStorage.getItem('ln.audit.records.v1')).length") == 0
+                assert page.locator('#record-form select[name="status"]').input_value() == '部分接入'
+                page.set_viewport_size({'width': 390, 'height': 900})
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), 'audit viewport overflow'
+                page.screenshot(path=str(evidence / 'audit-390.png'), full_page=True)
+                page.set_viewport_size({'width': 1280, 'height': 900})
                 assert not errors, errors
                 assert not failures, failures
                 assert not outside_prefix, outside_prefix

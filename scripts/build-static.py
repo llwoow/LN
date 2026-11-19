@@ -21,6 +21,8 @@ if out.exists():
 out.mkdir()
 for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.js', 'publication.js', 'glossary.js', 'highschool-library.js', 'resource-library.js', 'practice.js', 'practice-v2.css'):
     shutil.copy2(root / name, out / name)
+shutil.copytree(root / 'audit', out / 'audit', ignore=shutil.ignore_patterns('*.md', 'inventory.json'))
+subprocess.run([sys.executable, str(root / 'scripts/build-course-audit.py'), '--output', str(out / 'audit/inventory.json')], check=True)
 for name in ('assets', 'courses'):
     shutil.copytree(root / name, out / name,
                     ignore=shutil.ignore_patterns('*.md', '*.pdf', '*.xlsx', '*.xls', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.zip', '*.7z', '*.rar', '__pycache__', 'verification', 'originals'))
