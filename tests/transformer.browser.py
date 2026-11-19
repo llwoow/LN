@@ -45,10 +45,10 @@ with sync_playwright() as p:
 
         page.locator('#reader-dock [data-reader-directory]').click()
         page.locator('#reader-directory [data-open-practice]').click()
-        page.locator('#practice-dialog [data-practice-mode="local"]').click()
-        assert '本节关联练习' in page.locator('#practice-dialog [data-p-scope]').inner_text()
-        assert page.locator('#practice-dialog [data-p-question] option').count()>=1
-        page.keyboard.press('Escape');assert abs(page.evaluate('scrollY')-position)<3
+        page.locator('main.practice-main [data-practice-mode="local"]').click()
+        assert '本节关联练习' in page.locator('main.practice-main [data-p-scope]').inner_text()
+        assert page.locator('main.practice-main [data-p-question] option').count()>=1
+        page.locator('[data-practice-return]').click();page.wait_for_function('y => Math.abs(scrollY-y)<3 && document.activeElement.hasAttribute("data-reader-directory")',arg=position)
         page.goto('http://127.0.0.1:4173/#course/electrical-machines/transformer-9')
         page.locator('#lesson-body[aria-busy="false"]').wait_for()
         assert page.locator('#reader-outline .outline-references').evaluate('e=>e.open')

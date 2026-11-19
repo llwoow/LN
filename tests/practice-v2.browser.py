@@ -169,32 +169,65 @@ def check():
                     assert panel.locator("[data-p-question] option").count()>0,course
                     assert panel.locator(".practice-question").count()==1,course
                     assert not page.evaluate("document.documentElement.scrollWidth>innerWidth"),(course,width)
-                # Reader opening must preserve focus/scroll and not trap the entire page horizontally.
-                page.goto(base+"#course/electrical-machines/dc-sec35",wait_until="domcontentloaded")
-                page.locator('#lesson-body[aria-busy="false"]').wait_for(timeout=16000)
+                # The directory opens a section-scoped exercise in the same main area as the reader.
+                section="#course/electrical-machines/dc-sec35"
+                page.goto(base+section,wait_until="domcontentloaded")
+                lesson=page.locator('#lesson-body[aria-busy="false"]')
+                lesson.wait_for(timeout=16000)
+                reader_width=page.locator('main').bounding_box()['width']
+                position=page.evaluate("() => { scrollTo(0, 500); return scrollY; }")
+                assert position>0
                 page.locator("#reader-dock [data-reader-directory]").click()
                 page.locator('#reader-directory [data-open-practice]').click()
-                dialog=page.locator("#practice-dialog:modal")
-                dialog.wait_for(timeout=10000)
-                assert dialog.locator("[data-practice-mode=local]").get_attribute("aria-pressed")=="true"
-                bbox=dialog.bounding_box()
+                practice=page.locator("main.course-main.practice-main")
+                practice.wait_for(timeout=10000)
+                assert page.url.endswith('#practice/electrical-machines/dc-sec35')
+                assert not page.locator('dialog:modal').count()
+                assert practice.locator("[data-practice-mode=local]").get_attribute("aria-pressed")=="true"
+                assert '本节关联练习' in practice.locator('[data-p-scope]').inner_text()
+                bbox=practice.bounding_box()
+                assert abs(bbox['width']-reader_width)<1
                 assert bbox["x"]>=-1 and bbox["x"]+bbox["width"]<=width+1,(width,bbox)
                 page.evaluate("document.documentElement.dataset.theme='dark'")
                 page.wait_for_timeout(220)
                 # Verify cards are readable with the actual dark theme, not in a transition frame.
-                dark_rgb=dialog.locator(".practice-choice").first.evaluate(
+                dark_rgb=practice.locator(".practice-choice").first.evaluate(
                     "(e) => getComputedStyle(e).backgroundColor.match(/\\d+/g).map(Number)")
                 assert max(dark_rgb[:3])<150,(width,dark_rgb)
-                page.screenshot(path=str(OUT/("practice-dialog-dark-"+name+".png")))
-                dialog.locator("[data-practice-mode=exam]").click()
-                assert dialog.locator("[data-e-start]").evaluate_all("(buttons)=>buttons.map(b=>b.dataset.eStart)")==["10","14"]
-                dialog.locator('[data-e-start="10"]').click()
-                dialog.locator('[data-e-finish]').click()
-                assert dialog.locator(".practice-exam-confirm:modal").count()==1
-                dialog.locator('[data-e-cancel]').click()
-                assert dialog.count()==1
+                page.screenshot(path=str(OUT/("practice-page-dark-"+name+".png")))
+                practice.locator("[data-practice-mode=exam]").click()
+                assert practice.locator("[data-e-start]").evaluate_all("(buttons)=>buttons.map(b=>b.dataset.eStart)")==["10","14"]
+                practice.locator('[data-e-start="10"]').click()
+                practice.locator('[data-e-finish]').click()
+                assert practice.locator(".practice-exam-confirm:modal").count()==1
+                practice.locator('[data-e-cancel]').click()
+                assert practice.count()==1
                 assert not page.evaluate("document.documentElement.scrollWidth>innerWidth")
-                dialog.locator("[data-close-practice]").click()
+                back=page.get_by_role('link',name='返回正文')
+                assert back.get_attribute('href')==section
+                assert back.bounding_box()['y']<64
+                back.click()
+                page.wait_for_function('y => Math.abs(scrollY-y)<3 && document.activeElement.hasAttribute("data-reader-directory")',arg=position)
+
+                # A specific exercise has a reloadable URL. Browser Back returns to the inline entry.
+                source='#course/electrical-machines/dc-answers'
+                page.goto(base+source,wait_until='domcontentloaded')
+                lesson.wait_for()
+                question='dc-branch-wave-six'
+                trigger=lesson.locator(f'a[data-practice-question="{question}"]')
+                trigger.evaluate("el => el.scrollIntoView({block:'center'})")
+                offset=trigger.bounding_box()['y']
+                target='#practice/electrical-machines/dc-answers/'+question
+                assert trigger.get_attribute('href')==target
+                assert trigger.get_attribute('aria-haspopup') is None
+                trigger.click()
+                assert page.url.endswith(target)
+                page.reload(wait_until='domcontentloaded')
+                assert practice.locator('[data-p-question]').input_value()==question
+                page.go_back()
+                trigger.wait_for()
+                page.wait_for_function('([id,y]) => document.activeElement.dataset.practiceQuestion===id && Math.abs(document.activeElement.getBoundingClientRect().top-y)<4',arg=[question,offset])
+                assert page.url.endswith(source)
                 assert not errors,errors
                 context.close()
             browser.close()

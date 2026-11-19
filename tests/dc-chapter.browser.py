@@ -28,7 +28,7 @@ def run():
                 page.locator("#dc-chapter-test").wait_for(timeout=25000)
                 assert page.locator(".dc-test-topic").count()==10
                 page.locator(".dc-test-launch [data-open-practice]").click()
-                panel=page.locator("#practice-dialog:modal [data-practice-panel]")
+                panel=page.locator("main.practice-main [data-practice-panel]")
                 panel.wait_for(timeout=25000)
                 assert panel.locator("[data-p-question] option").count()==60
                 assert "60题" in panel.locator("[data-p-scope]").inner_text()
@@ -65,10 +65,11 @@ def run():
                         page.screenshot(path=str(OUT/("dc-60-"+q["id"]+"-"+label+".png")))
                 assert len(page.evaluate("Object.keys(JSON.parse(localStorage.getItem('ln.practice.v1'))).filter(k=>k.startsWith('dc-test-'))"))==60
                 # Existing API records remain in place; a test record is not wiped on reload.
-                page.locator("#practice-dialog [data-close-practice]").click()
+                page.locator("[data-practice-return]").click()
+                page.locator('#lesson-body[aria-busy=false]').wait_for()
                 page.reload(wait_until="domcontentloaded")
                 page.locator(".dc-test-launch [data-open-practice]").click()
-                assert page.locator("#practice-dialog:modal [data-p-question] option").count()==60
+                assert page.locator("main.practice-main [data-p-question] option").count()==60
                 r=page.evaluate("JSON.parse(localStorage.getItem('ln.practice.v1'))['dc-test-31-01']")
                 assert len(r["attempts"])==1 and r["attempts"][0]["correct"] is True
                 assert not page.evaluate("document.documentElement.scrollWidth>innerWidth")

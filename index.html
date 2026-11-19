@@ -110,7 +110,7 @@
       <div class="topbar-left"><button class="icon-button sidebar-toggle" id="sidebar-toggle" aria-label="展开侧栏" aria-controls="sidebar" aria-expanded="true" title="展开侧栏"><svg class="icon"><use href="#i-panel"/></svg></button><span id="breadcrumb-current">课程</span></div>
       <div id="reader-question-slot" hidden></div>
       <nav class="reader-dock" id="reader-dock" aria-label="阅读快捷操作" hidden></nav>
-      <div class="topbar-actions"><button class="icon-button" id="quick-theme" aria-label="切换到夜间模式" title="切换日间 / 夜间"><svg class="icon"><use href="#i-moon"/></svg></button><button class="icon-button" id="top-settings" aria-label="外观设置" title="外观"><svg class="icon"><use href="#i-sliders"/></svg></button></div>
+      <div class="topbar-actions"><a class="reader-dock-item practice-return" data-practice-return hidden><svg class="icon" aria-hidden="true"><use href="#i-back"/></svg><span>返回正文</span></a><button class="icon-button" id="quick-theme" aria-label="切换到夜间模式" title="切换日间 / 夜间"><svg class="icon"><use href="#i-moon"/></svg></button><button class="icon-button" id="top-settings" aria-label="外观设置" title="外观"><svg class="icon"><use href="#i-sliders"/></svg></button></div>
     </header>
     <main id="main" tabindex="-1"></main>
   </div>
@@ -125,11 +125,6 @@
   <dialog class="resource-dialog" id="resource-dialog" aria-labelledby="resource-dialog-title">
     <div class="dialog-heading"><h2 id="resource-dialog-title">实作与资料</h2><button class="icon-button" data-close-resources aria-label="关闭实作资料">×</button></div>
     <div id="resource-dialog-content"></div>
-  </dialog>
-
-  <dialog class="practice-dialog" id="practice-dialog" aria-labelledby="practice-dialog-title">
-    <div class="dialog-heading"><h2 id="practice-dialog-title">练习</h2><button class="icon-button" data-close-practice aria-label="关闭练习">×</button></div>
-    <div id="practice-dialog-content"></div>
   </dialog>
 
   <dialog class="settings-dialog" id="settings-dialog" aria-labelledby="settings-title">

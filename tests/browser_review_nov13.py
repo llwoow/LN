@@ -49,20 +49,20 @@ def main():
      page.locator('.definition-source-link').click();page.locator('.reference-target[data-definition-source]').wait_for();page.locator('.reference-return').click();page.wait_for_function('document.querySelector(".reference-return").hidden')
     # All five DC diagnostics use native records rather than an unpersisted local answer checker.
     body=visit(DC,'dc-answers');assert body.locator('[data-practice-question]').count()==5
-    q=allq['dc-branch-wave-six'];body.locator('[data-practice-question="'+q['id']+'"]').click();dialog=page.locator('#practice-dialog:modal');panel=dialog.locator('[data-practice-panel]');assert panel.locator('[data-p-question]').input_value()==q['id']
+    q=allq['dc-branch-wave-six'];body.locator('[data-practice-question="'+q['id']+'"]').click();practice=page.locator('main.practice-main');panel=practice.locator('[data-practice-panel]');assert panel.locator('[data-p-question]').input_value()==q['id']
     wrong=next(o['id'] for o in q['options'] if o['id'] not in q['answer']);panel.locator('[name=p-answer][value="'+wrong+'"]').check();panel.locator('[data-p-submit]').click()
     assert panel.locator('.practice-feedback h3').inner_text()=='答案尚不吻合，检查下面的推理'
     panel.locator('[data-p-favorite]').click();panel.locator('[data-p-redo]').click();panel.locator('[name=p-answer][value="'+q['answer'][0]+'"]').check();panel.locator('[data-p-submit]').click()
     assert panel.locator('.practice-feedback h3').inner_text()=='选择吻合，请继续核对理由'
-    dialog.locator('[data-close-practice]').click();page.reload();page.locator('#lesson-body[aria-busy=false]').wait_for();page.locator('[data-practice-question="'+q['id']+'"]').click();dialog=page.locator('#practice-dialog:modal')
+    page.locator('[data-practice-return]').click();page.locator('#lesson-body[aria-busy=false]').wait_for();page.reload();page.locator('#lesson-body[aria-busy=false]').wait_for();page.locator('[data-practice-question="'+q['id']+'"]').click();practice=page.locator('main.practice-main')
     saved=page.evaluate('(id)=>JSON.parse(localStorage.getItem("ln.practice.v1"))[id]',q['id']);assert saved['favorite'];assert saved['attempts'][0]['correct'] is False;assert saved['attempts'][-1]['correct'] is True;assert saved['attempts'][-1]['assisted'] is True
-    dialog.locator('[data-practice-mode=mistakes]').click();dialog.locator('[data-p-question]').select_option(q['id']);assert dialog.locator('[data-question-id="'+q['id']+'"]').count()==1
-    dialog.locator('[data-practice-mode=favorites]').click();dialog.locator('[data-p-question]').select_option(q['id']);assert dialog.locator('[data-question-id="'+q['id']+'"]').count()==1
-    dialog.locator('[data-close-practice]').click()
+    practice.locator('[data-practice-mode=mistakes]').click();practice.locator('[data-p-question]').select_option(q['id']);assert practice.locator('[data-question-id="'+q['id']+'"]').count()==1
+    practice.locator('[data-practice-mode=favorites]').click();practice.locator('[data-p-question]').select_option(q['id']);assert practice.locator('[data-question-id="'+q['id']+'"]').count()==1
+    page.locator('[data-practice-return]').click();page.locator('#lesson-body[aria-busy=false]').wait_for()
     # Supplied open questions retain manual review, source anchors and collection persistence.
-    body=visit(MATERIAL,'em-test-fill');qid='materials-photo-fill-1';body.locator('[data-practice-question="'+qid+'"]').click();dialog=page.locator('#practice-dialog:modal');panel=dialog.locator('[data-practice-panel]');assert panel.locator('[data-p-question]').input_value()==qid
+    body=visit(MATERIAL,'em-test-fill');qid='materials-photo-fill-1';body.locator('[data-practice-question="'+qid+'"]').click();practice=page.locator('main.practice-main');panel=practice.locator('[data-practice-panel]');assert panel.locator('[data-p-question]').input_value()==qid
     panel.locator('[data-p-reason]').fill('从势能极小与稳定性条件分析，并与参考解释核对。');panel.locator('[data-p-submit]').click();assert panel.locator('.practice-feedback h3').inner_text()=='请逐项自评论证'
-    panel.locator('[data-p-favorite]').click();panel.locator('[data-p-mistake]').click();dialog.locator('[data-close-practice]').click();page.reload();page.locator('#lesson-body[aria-busy=false]').wait_for()
+    panel.locator('[data-p-favorite]').click();panel.locator('[data-p-mistake]').click();page.locator('[data-practice-return]').click();page.locator('#lesson-body[aria-busy=false]').wait_for();page.reload();page.locator('#lesson-body[aria-busy=false]').wait_for()
     saved=page.evaluate('(id)=>JSON.parse(localStorage.getItem("ln.practice.v1"))[id]',qid);assert saved['favorite'] and saved['selfMistake'];assert saved['attempts'][0]['correct'] is None
     preserved=page.evaluate('(id)=>JSON.parse(localStorage.getItem("ln.practice.v1"))[id]',legacy['id']);assert preserved==original,('legacy record changed',preserved)
     assert not errors,errors;assert not http,http;page.close()

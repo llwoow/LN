@@ -36,6 +36,7 @@
   const dialog = $('#settings-dialog');
   const readerDock = $('#reader-dock');
   const readerDirectory = $('#reader-directory');
+  const practiceReturn = $('[data-practice-return]');
   const wideReader = matchMedia('(min-width: 1100px)');
   let questionNavigation = null;
   let collapsed = document.documentElement.dataset.sidebar === 'collapsed';
@@ -322,6 +323,7 @@
       else if (selected.kind === 'document') {
         body.innerHTML = (payload.html || '') + '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
       } else body.innerHTML = payload.html;
+      window.LNPractice.prepareLesson(body);
       body.querySelectorAll(':scope > [role="tabpanel"][hidden]').forEach(panel => { panel.hidden = false; });
       if (selected.id === 'transformer-sec21' || selected.id === 'transformer-sec28') {
         await loadScript('courses/electrical-machines/model/transformer-structure.js');
@@ -509,6 +511,7 @@
       const sequence=readingSections(course,selected),index = sequence.indexOf(selected);
       $('#lesson-pagination').innerHTML = (index > 0 ? '<a href="#course/' + course.id + '/' + sequence[index - 1].id + '">' + icon('back') + '上一节</a>' : '<span></span>') + (index < sequence.length - 1 ? '<a href="#course/' + course.id + '/' + sequence[index + 1].id + '">下一节' + icon('chevron') + '</a>' : '');
       window.LNPublication.settle(body, anchor);
+      restorePracticePosition(body);
     } catch (error) {
       const body = $('#lesson-body');
       if (body?.dataset.lessonKey === key) {
@@ -519,9 +522,44 @@
     }
   }
 
+  function restorePracticePosition(root) {
+    const frame = history.state?.practiceReadingPosition;
+    if (frame?.hash !== location.hash) return;
+    document.fonts.ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (!root.isConnected || history.state?.practiceReadingPosition?.hash !== frame.hash || location.hash !== frame.hash) return;
+      const trigger = frame.directory ? $('[data-reader-directory]', readerDock) : $$('[data-open-practice]', main)[frame.triggerIndex];
+      if (trigger && !frame.directory) {
+        for (let parent = trigger.parentElement; parent && parent !== main; parent = parent.parentElement) {
+          if (parent instanceof HTMLDetailsElement) parent.open = true;
+        }
+      }
+      if (trigger?.getClientRects().length && !frame.directory) {
+        window.scrollBy({ top: trigger.getBoundingClientRect().top - frame.offset, behavior: 'instant' });
+      } else {
+        window.scrollTo({ left: frame.x, top: frame.y, behavior: 'instant' });
+      }
+      if (trigger?.getClientRects().length) trigger.focus({ preventScroll: true });
+    })));
+  }
+
+  function renderPractice(id, sectionId, questionId) {
+    const course = courses.find(course => course.id === id);
+    const section = course?.sections.find(section => section.id === sectionId);
+    const origin = history.state?.practiceReadingOrigin;
+    const destination = origin || (course ? '#course/' + id + '/' + (section?.id || 'map') : '');
+    practiceReturn.hidden = !destination;
+    if (destination) {
+      practiceReturn.href = destination;
+      const originSection = destination.split('/')[2];
+      $('span', practiceReturn).textContent = originSection && originSection !== 'map' ? '返回正文' : '返回课程';
+    }
+    main.classList.add('course-main', 'practice-main');
+    main.innerHTML = window.LNPractice.pageHtml();
+    window.LNPractice.mount(main, id, section?.id, questionId);
+  }
+
   function renderRoute() {
     window.LNPhysics001?.onRoute();
-    window.LNPractice.onRoute();
     window.LNResources.onRoute();
     window.LNPublication.onRoute();
     window.LNGlossary.onRoute();
@@ -529,6 +567,7 @@
     let anchor = rawAnchor;
     try { anchor = rawAnchor ? decodeURIComponent(rawAnchor) : ''; } catch { anchor = ''; }
     if (readerDirectory.open) readerDirectory.close();
+    practiceReturn.hidden = true;
     readerDock.hidden = true;
     readerDock.innerHTML = '';
     questionNavigation = null;
@@ -536,7 +575,7 @@
       slot.replaceChildren(); slot.hidden = true;
     }
     document.body.classList.remove('is-reading', 'directory-open');
-    main.classList.remove('course-main', 'map-main');
+    main.classList.remove('course-main', 'map-main', 'practice-main');
     currentView = ['favorites', 'course', 'highschool', 'resources', 'practice'].includes(view) ? view : 'overview';
     if (currentView !== 'course' && currentView !== 'favorites') {
       if (lastLibrary !== currentView) query = '';
@@ -550,7 +589,7 @@
       title = outlineCourse.title;
       main.innerHTML = '<h1>' + escapeHTML(title) + '</h1><p>当前仅保留目录。</p><a class="secondary-button" href="#course/' + id + '">打开目录</a>';
     }
-    else if (currentView === 'practice') { main.innerHTML = window.LNPractice.pageHtml(id); window.LNPractice.mount(main, id, sectionId); title = '练习'; }
+    else if (currentView === 'practice') { renderPractice(id, sectionId, anchor); title = '练习'; }
     else if (currentView === 'resources') { main.innerHTML = window.LNResources.pageHtml(id); window.LNResources.bindPage(main, id, sectionId); title = '实作与资料'; }
     else if (currentView === 'highschool' && id === 'resources') { main.innerHTML = window.LNHighSchool.resourcesHtml(); title = '教材与来源'; }
     else renderOverview();
@@ -566,6 +605,13 @@
     renderSidebarCourses();
     mobileOpen = false;
     updateSidebar();
+    if (currentView === 'course' && !$('#lesson-body', main)) restorePracticePosition(main.firstElementChild);
+  }
+
+  function navigateRoute() {
+    renderRoute();
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    main.focus({ preventScroll: true });
   }
 
   function openSettings() {
@@ -666,8 +712,30 @@
       $('#course-search').focus();
     }
   });
+  document.addEventListener('click', (event) => {
+    if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    if (event.target.closest('[data-practice-return]') && history.state?.practiceReadingOrigin === practiceReturn.hash) {
+      event.preventDefault();
+      history.back();
+      return;
+    }
+    const trigger = event.target.closest('a[data-open-practice]');
+    if (!trigger || currentView !== 'course') return;
+    event.preventDefault();
+    const position = {
+      hash: location.hash,
+      x: window.scrollX,
+      y: window.scrollY,
+      offset: trigger.getBoundingClientRect().top,
+      directory: readerDirectory.contains(trigger),
+      triggerIndex: $$('[data-open-practice]', main).indexOf(trigger)
+    };
+    history.replaceState({ ...history.state, practiceReadingPosition: position }, '');
+    history.pushState({ practiceReadingOrigin: location.hash }, '', trigger.hash);
+    navigateRoute();
+  });
   document.addEventListener('keydown', (event) => {
-    if (dialog.open || readerDirectory.open || $('#resource-dialog').open || $('#practice-dialog').open) return;
+    if (dialog.open || readerDirectory.open || $('#resource-dialog').open || $('dialog.practice-exam-confirm:modal')) return;
     if (event.key === 'Escape' && mobileOpen) { setSidebar(false); return; }
     if (event.target.closest('input, textarea, select, [contenteditable]')) return;
     if (event.key === '/' || ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k')) {
@@ -681,7 +749,7 @@
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     }
   });
-  addEventListener('hashchange', () => { renderRoute(); window.scrollTo(0, 0); main.focus({ preventScroll: true }); });
+  addEventListener('hashchange', navigateRoute);
   systemTheme.addEventListener('change', () => { if (preferences.mode === 'system') applyTheme(); });
   mobile.addEventListener('change', () => {
     mobileOpen = false;

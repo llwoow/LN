@@ -49,9 +49,25 @@
   }
   function needsReview(q,r){return Boolean(r&&(r.hinted||r.revealed||(!r.attempts.length&&r.feedbackSeen)||r.attempts.some(a=>a.correct===false)||(q.type==='open'&&r.submitted&&r.checks.length<q.rubric.length)));}
   function isMistake(r){return Boolean(r&&(r.selfMistake||r.attempts?.some(a=>a.correct===false)));}
+  function practiceHref(course,section,question){
+    return '#practice/'+course+(section||question?'/'+(section||''):'')+(question?'/'+encodeURIComponent(question):'');
+  }
   function button(course,section,label='练习'){
     if(course.outlineOnly||section?.kind==='outline')return '';
-    return '<button type="button" class="resource-nav-button" data-open-practice data-practice-course="'+escape(course.id)+'"'+(section?' data-practice-section="'+escape(section.id)+'"':'')+' aria-haspopup="dialog" aria-controls="practice-dialog">'+escape(label)+'</button>';
+    return '<a class="resource-nav-button" data-open-practice href="'+escape(practiceHref(course.id,section?.id))+'">'+escape(label)+'</a>';
+  }
+  function prepareLesson(body){
+    // Previously published lesson content embeds exercise buttons with course, section and question IDs.
+    for(const trigger of body.querySelectorAll('button[data-open-practice]')){
+      const {practiceCourse,practiceSection,practiceQuestion}=trigger.dataset;
+      const link=document.createElement('a');
+      for(const {name,value} of trigger.attributes){
+        if(!['type','aria-haspopup','aria-controls'].includes(name))link.setAttribute(name,value);
+      }
+      link.href=practiceHref(practiceCourse,practiceSection,practiceQuestion);
+      link.append(...trigger.childNodes);
+      trigger.replaceWith(link);
+    }
   }
 
   // Shared learning workspace: every course reuses the same editor, navigation and feedback.
@@ -141,11 +157,11 @@
       '<button type="button" class="practice-primary-button" data-p-submit>'+(q.type==='open'?'保存并对照要点':r.submitted?'重新提交':'提交答案')+'</button>'+
       '<button type="button" class="practice-page-button" data-p-next>下一题</button></div></article>';
   }
-  function mount(root,initialCourse,initialSection,collection=''){
+  function mount(root,initialCourse,initialSection,collection='',initialQuestion=''){
     if(questions.some(q=>q.promptHtml)&&!document.querySelector('link[href="assets/katex/katex.min.css"]')){
       const link=document.createElement('link');link.rel='stylesheet';link.href='assets/katex/katex.min.css';document.head.append(link);
     }
-    let selected='',matches=[],section=initialSection;
+    let selected=initialQuestion,matches=[],section=initialSection;
     const panel=root.querySelector('[data-practice-panel]'),body=panel.querySelector('[data-p-body]'),picker=panel.querySelector('[data-p-question]');
     const tools=panel.querySelector('.practice-workspace-tools');
     const disclosures=[...tools.querySelectorAll('details')];
@@ -618,7 +634,7 @@
     });
     render();
   }
-  function hubHtml(course){
+  function hubHtml(){
     return '<section class="practice-hub" data-practice-hub><nav class="practice-modes" aria-label="练习与题集">'+
       '<button type="button" data-practice-mode="local" aria-pressed="true">逐题练习</button>'+
       '<button type="button" data-practice-mode="exam" aria-pressed="false">章节测试</button>'+
@@ -627,14 +643,14 @@
       '<button type="button" data-practice-mode="favorites" aria-pressed="false">收藏集</button></nav>'+
       '<div data-practice-content></div></section>';
   }
-  function mountHub(root,initialCourse,section){
+  function mountHub(root,initialCourse,section,initialQuestion){
     const hub=root.querySelector('[data-practice-hub]'),content=hub.querySelector('[data-practice-content]');
     let course=courses.some(c=>c.id===initialCourse)?initialCourse:courses[0].id;
     let mode=questions.some(q=>q.course===course)?'local':'sources';
     function render(){
       hub.querySelectorAll('[data-practice-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.practiceMode===mode)));
       if(mode==='local'){
-        content.innerHTML=shell(course,section);mount(content,course,section);return;
+        content.innerHTML=shell(course,section);mount(content,course,section,'',initialQuestion);initialQuestion='';return;
       }
       if(mode==='exam'){
         content.innerHTML='<div data-exam-content></div>';
@@ -686,30 +702,5 @@
     });
     render();
   }
-  const dialog=document.querySelector('#practice-dialog');let origin=null;
-  document.addEventListener('click',event=>{
-    const trigger=event.target.closest('[data-open-practice]');if(!trigger)return;
-    const directory=document.querySelector('#reader-directory');
-    origin={element:directory.contains(trigger)?document.querySelector('[data-reader-directory]'):trigger,x:scrollX,y:scrollY};
-    if(directory.open)directory.close();
-    const course=trigger.dataset.practiceCourse,section=trigger.dataset.practiceSection;
-    document.querySelector('#practice-dialog-content').innerHTML=hubHtml(course);mountHub(dialog,course,section);
-    document.body.classList.add('practice-open');dialog.showModal();
-    const questionId=trigger.dataset.practiceQuestion;
-    if(questionId&&questions.some(q=>q.id===questionId&&q.course===course)){
-      dialog.querySelector('[data-practice-mode="local"]').click();
-      const picker=dialog.querySelector('[data-p-question]');
-      if([...picker.options].some(option=>option.value===questionId)){picker.value=questionId;picker.dispatchEvent(new Event('change',{bubbles:true}));}
-    }
-  });
-  dialog.addEventListener('click',event=>{
-    if(event.target.closest('[data-close-practice]')){dialog.close();return;}
-    const readingLink=event.target.closest('.practice-reading a');
-    if(!readingLink||event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||readingLink.hash!==location.hash)return;
-    event.preventDefault();origin=null;dialog.close();
-    const body=document.querySelector('#lesson-body'),anchor=decodeURIComponent(readingLink.hash.split('/').slice(3).join('/'));
-    if(body)window.LNPublication.settle(body,anchor);
-  });
-  dialog.addEventListener('close',()=>{document.body.classList.remove('practice-open');if(origin?.element?.isConnected){scrollTo({left:origin.x,top:origin.y,behavior:'instant'});origin.element.focus({preventScroll:true});}origin=null;});
-  window.LNPractice={noteReferenceUse: id=>{const q=questions.find(q=>q.id===id);if(q){const r=record(q);r.revealed=true;r.feedbackSeen=true;save();}},button,pageHtml:course=>'<h1 class="practice-page-title">练习</h1>'+hubHtml(course),mount:mountHub,onRoute:()=>{origin=null;if(dialog.open)dialog.close();}};
+  window.LNPractice={noteReferenceUse: id=>{const q=questions.find(q=>q.id===id);if(q){const r=record(q);r.revealed=true;r.feedbackSeen=true;save();}},button,prepareLesson,pageHtml:()=>'<h1 class="practice-page-title">练习</h1>'+hubHtml(),mount:mountHub};
 })();

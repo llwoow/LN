@@ -45,8 +45,8 @@ def run():
 
                 page.goto(url + "#course/electrical-machines/dc-answers", wait_until="domcontentloaded")
                 page.locator('[data-practice-question="dc-branch-wave-six"]').click()
-                dialog = page.locator('#practice-dialog:modal')
-                panel = dialog.locator('[data-practice-panel]')
+                practice = page.locator('main.practice-main')
+                panel = practice.locator('[data-practice-panel]')
                 panel.locator('input[value="divide-poles"]').check()
                 panel.locator('[data-p-submit]').click()
                 assert panel.locator('.practice-feedback h3').inner_text() == '答案尚不吻合，检查下面的推理'
@@ -58,7 +58,8 @@ def run():
                 state = page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["dc-branch-wave-six"]')
                 assert state['favorite'] and state['attempts'][0]['correct'] is False
                 assert state['attempts'][-1]['correct'] is True
-                dialog.locator('[data-close-practice]').click()
+                page.locator('[data-practice-return]').click()
+                page.locator('#lesson-body[aria-busy=false]').wait_for()
                 assert page.locator('#dc-concept-diagnostics [data-practice-question]').count() == 5
                 assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
                 page.screenshot(path=str(OUT / ("dc-diagnostics-" + label + ".png")), full_page=True)

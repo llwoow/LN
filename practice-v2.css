@@ -9,20 +9,8 @@
   --practice-negative:#ffb4ad;--practice-negative-soft:#422b2b;
   --practice-partial:#ffda90;--practice-partial-soft:#403629;
 }
-.practice-dialog{
-  width:min(1080px,calc(100vw - 28px));max-height:min(94dvh,1080px);
-  padding:0;border:1px solid var(--border);border-radius:18px;
-  background:var(--surface);color:var(--text);box-shadow:0 22px 70px #0002;
-  overscroll-behavior:contain;
-}
-.practice-dialog::backdrop{background:#1517198c;backdrop-filter:blur(2px);}
-.practice-dialog>.dialog-heading{
-  top:0;margin:0;padding:14px 24px;z-index:4;
-  border-bottom:1px solid var(--border);background:var(--surface);
-}
-.practice-dialog>.dialog-heading h2{font-size:18px;letter-spacing:-.02em;}
-.practice-dialog #practice-dialog-content{padding:18px 24px 26px;}
-.practice-hub{max-width:1080px;margin:0 auto;min-width:0;}
+.practice-hub,.practice-page-title{max-width:900px;margin-inline:auto;min-width:0;}
+.practice-page-title{margin-bottom:12px;}
 .practice-hub .practice-modes{
   display:flex;align-items:center;gap:4px;overflow-x:auto;flex-wrap:nowrap;
   border-bottom:1px solid var(--border);padding:0 0 10px;margin:0 0 18px;
@@ -339,11 +327,6 @@
 .practice-hub .source-practice>summary{padding:13px;}
 .practice-prompt .math.display{max-width:100%;overflow-x:auto;overflow-y:hidden;}
 @media(max-width:650px){
-  .practice-dialog{
-    width:100vw;max-width:none;height:100dvh;max-height:100dvh;border:0;border-radius:0;margin:0;
-  }
-  .practice-dialog>.dialog-heading{padding:9px 16px;}
-  .practice-dialog #practice-dialog-content{padding:12px 14px 24px;}
   .practice-page-title{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
   .practice-hub .practice-modes{
     display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;
@@ -375,7 +358,6 @@
   .practice-progress-track>span,.practice-options .practice-choice{transition:none;}
 }
 @media print{
-  .practice-dialog{width:100%;height:auto;max-height:none;box-shadow:none;}
   .practice-hub .practice-modes,.practice-pagination,.practice-question-tools,.practice-workspace-tools,.practice-number-map{display:none!important;}
   .practice-question{break-inside:avoid;}
 }
