@@ -406,7 +406,7 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .reader-directory-content .outline-group > summary { padding: 9px 4px; font-size: 14px; }
 .reader-directory-content .outline-group a { min-height: 40px; font-size: 14px; }
 @media (max-width: 960px) { .reader-outline { position: static; max-height: none; } }
-@media (max-width: 1099px) { .reader-dock-item span { display: none; } }
+@media (max-width: 1099px) { .reader-dock .reader-dock-item span { display: none; } }
 @media (max-width: 720px) {
   :root { --topbar-height: 58px; }
   .topbar { left: 0; }
