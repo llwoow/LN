@@ -26,6 +26,7 @@ def run() -> None:
                 page = browser.new_page(viewport={"width": width, "height": height}, device_scale_factor=1)
                 for course, sections in {
                     'electrical-machines': ['transformer-homework', 'dc-homework-review'],
+                    'electrical-materials': ['em-test-summary', 'em-test-fill', 'em-test-short', 'em-test-review'],
                     'automatic-control': ['ac-homework3', 'ac-homework4'],
                     'power-semiconductors': ['chapter-2-test'],
                 }.items():
