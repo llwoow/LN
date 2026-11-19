@@ -31,6 +31,7 @@ def run() -> None:
                 }.items():
                     page.goto(base + '#course/' + course, wait_until='domcontentloaded')
                     page.locator('.course-view-nav a').filter(has_text='已做题详解').click()
+                    page.locator('ul[aria-label="已做题详解"]').wait_for()
                     links = page.locator('ul[aria-label="已做题详解"] a')
                     assert links.count() == len(sections)
                     assert [link.get_attribute('href') for link in links.all()] == [
