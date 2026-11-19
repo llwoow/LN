@@ -143,6 +143,11 @@ window.LN_AUTO_CONTROL_MAP={
       "section": "ac-4-4",
       "title": "4.4 MATLAB求根轨迹",
       "note": "数值求根与rlocus复算"
+    },
+    {
+      "section": "ac-homework4",
+      "title": "第4章五道根轨迹课堂题",
+      "note": "完整题干、逐步推导、七幅根轨迹、结构图与两幅时域曲线及两题手稿批改"
     }
   ],
   "links": [
@@ -253,6 +258,18 @@ window.LN_AUTO_CONTROL_MAP={
       "to": "ac-4-3",
       "label": "从例题到动态性能",
       "description": "由根轨迹上闭环极点判断稳定与动态响应"
+    },
+    {
+      "from": "ac-4-2-1",
+      "to": "ac-homework4",
+      "label": "法则用于课堂题",
+      "description": "分离点、复重根、相角、渐近线和虚轴交点在五道原题中逐项验证"
+    },
+    {
+      "from": "ac-4-2-4",
+      "to": "ac-homework4",
+      "label": "参数根轨迹实算",
+      "description": "4-12 以 b 为参数，先把特征方程整理为等效开环形式"
     }
   ]
 };
