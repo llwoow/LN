@@ -7,6 +7,9 @@ on:
     paths:
       - '.github/workflows/pages.yml'
       - 'tests/browser_smoke_pages.py'
+      - 'audit/**'
+      - 'scripts/build-course-audit.py'
+      - 'tests/test_course_audit.py'
       - 'tests/practice-v2.browser.py'
       - 'practice.js'
       - 'practice-v2.css'
@@ -57,6 +60,14 @@ jobs:
         run: |
           python tests/browser_smoke_pages.py
           python tests/practice-v2.browser.py
+      - name: Attach audit review screenshots to the PR run
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ln-audit-preview-${{ github.event.pull_request.number }}
+          path: nov13-browser-artifacts/audit-*.png
+          if-no-files-found: ignore
+          retention-days: 14
       - name: Upload the verified static site
         uses: actions/upload-pages-artifact@v3
         with:

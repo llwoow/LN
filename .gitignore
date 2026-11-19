@@ -19,6 +19,7 @@ dist/
 /electrical-materials-browser-artifacts/
 /dc-browser-artifacts/
 /control-browser-artifacts/
+/practice-v2-artifacts/
 
 # Private source materials, credentials and raw audit reports
 /private/
