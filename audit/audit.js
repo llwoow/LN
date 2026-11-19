@@ -9,7 +9,7 @@
     'buildResult','evidenceUrl','verifiedScope','reviewer','blocker','actualContent',
     'reproduction','missing','scope','acceptance','sourceDigest'];
   const labels = {
-    progress: ['章节完成度', '源码接入率与人工核验率分开统计。接入数量不代表教学质量。'],
+    progress: ['接入与验收', '源码接入率与人工核验率分开统计。接入数量不代表教学质量。'],
     catalog: ['内容清单与知识结构', '按课程、章节与实际存在的正文锚点逐级定位。'],
     skeleton: ['骨架内容清单', '明确标记 outline 或未找到登记正文入口的条目。'],
     derivation: ['推导与例题验收', '检查公式的假设、连等推理、单位与逐步例题；标记计数仅供定位。'],

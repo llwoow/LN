@@ -383,6 +383,18 @@
         "mosfet-resistance"
       ],
       "match": "控制栅本身是 PN 结"
+    },
+    {
+      "id": "dynamic-ron",
+      "title": "动态导通电阻",
+      "aliases": [
+        "动态导通电阻",
+        "dynamic on-resistance"
+      ],
+      "english": "Dynamic On-Resistance",
+      "description": "经历指定开关应力后的导通电阻，随器件工况与取样时刻而变。",
+      "section": "wide-bandgap",
+      "match": "动态导通电阻是器件经历给定关断应力后"
     }
   ],
   "symbolDefinitions": [

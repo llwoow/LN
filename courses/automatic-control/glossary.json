@@ -1629,6 +1629,27 @@
       ],
       "match": "本节极点几何符号：",
       "sourceAnchor": "ac-syn-pole-symbols"
+    },
+    {
+      "id": "ac-dominant-symbols",
+      "title": "y_ε、ε、t",
+      "keys": [
+        "y_ε",
+        "ε",
+        "ϵ",
+        "t",
+        "y_ϵ"
+      ],
+      "section": "ac-3-4",
+      "sections": [
+        "ac-3-4"
+      ],
+      "sourceAnchor": "definition-dominant-response",
+      "match": "本例符号：y_ε 是单位阶跃作用下的输出",
+      "description": "单位阶跃输出、极零间距（s⁻¹）、时间（s）。",
+      "equations": [
+        "U.3.4.1"
+      ]
     }
   ]
 }

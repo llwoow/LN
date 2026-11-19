@@ -36,6 +36,7 @@ class PracticeContent(unittest.TestCase):
             'emc-magnetic-cylinder':20*math.log10((201**2-199**2*(20/22)**2)/(4*200)),
             'emc-probe-emf':2*math.pi*100000*.5e-6*.1*1000,
             'emc-capacitor-resonance':1/(2*math.pi*math.sqrt(1e-9*1e-6))/1e6,
+            'emc-lc-natural-frequency-gain':20*math.log10(20*math.sqrt(1e-6/100e-6)),
             'emc-ground-step':100*100*.8/(2*math.pi*2*(2+.8)),
             'emc-lightning-lead-voltage':.6e-6*(1000/1e-6),
             'emc-impulse-shield-current':1/(1+3)*100,

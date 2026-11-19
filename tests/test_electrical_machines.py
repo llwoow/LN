@@ -79,10 +79,16 @@ class CourseIntegrity(unittest.TestCase):
                     self.assertNotIn('chatgpt.site', url)
                 elif url.startswith(('#course/', '#practice/')):
                     parts = unquote(url).split('/')
-                    self.assertEqual(parts[1], 'electrical-machines')
-                    self.assertTrue(parts[2] in self.sections, (key, url))
+                    if parts[1] == self.manifest['id']:
+                        self.assertIn(parts[2], self.sections, (key, url))
+                        destination = self.markup[parts[2]]
+                    else:
+                        course = assignment(ROOT / 'courses' / parts[1] / 'manifest.js')
+                        section = next((s for s in course['sections'] if s['id'] == parts[2]), None)
+                        self.assertIsNotNone(section, (key, url))
+                        destination = Elements(assignment(ROOT / section['src']).get('html', ''))
                     if len(parts) > 3:
-                        self.assertTrue(parts[3] in self.markup[parts[2]].ids, (key, url))
+                        self.assertIn(parts[3], destination.ids, (key, url))
                 else:
                     self.assertTrue((ROOT / unquote(urlsplit(url).path)).is_file(), (key, url))
 

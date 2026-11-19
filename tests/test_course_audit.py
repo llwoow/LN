@@ -14,10 +14,12 @@ class CourseAuditTests(unittest.TestCase):
         cls.rows = cls.data['sections']
 
     def test_exact_scope(self):
-        ids = {row['courseId'] for row in self.rows}
-        self.assertEqual(ids, {'automatic-control', 'electromagnetic-compatibility', 'electrical-machines'})
-        self.assertTrue(all(row['group'].startswith(('第2章', '第3章'))
-                            for row in self.rows if row['courseId'] == 'electrical-machines'))
+        manifests = [inventory['assignment'](p.read_text(encoding='utf-8'))
+                     for p in (ROOT / 'courses').glob('*/manifest.js')]
+        expected = {(course['id'], section['id']) for course in manifests for section in course['sections']}
+        self.assertEqual({(row['courseId'], row['id']) for row in self.rows}, expected)
+        self.assertIn(('electrical-machines', 'mmf-sec47'), expected)
+        self.assertIn(('hs-physics', 'physics-001-q11'), expected)
 
     def test_automatic_control_outline_is_not_verified(self):
         control = [row for row in self.rows if row['courseId'] == 'automatic-control']

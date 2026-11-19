@@ -45,6 +45,11 @@
   let category = '全部';
   let query = '';
   let lastLibrary = 'overview';
+  const knowledgeKinds = ['概念', '公式', '方法', '习题', '难点', '跨学科', '研究'];
+  const knowledgePageSize = 12;
+  let knowledgeEntries;
+  let knowledgeKind = '';
+  let knowledgeLimit = knowledgePageSize;
   const isHighSchool = (course) => course.level === 'highschool';
   const courseHome = (course) => isHighSchool(course) ? '#highschool' : '#overview';
   const inHighSchool = () => currentView === 'highschool' || (['course','resources','practice'].includes(currentView) && isHighSchool(courses.find(c => c.id === location.hash.split('/')[1]) || {}));
@@ -147,11 +152,67 @@
     return '<li class="course-row"><a class="course-link" href="#course/' + course.id + '"><span class="course-symbol">' + icon('book') + '</span><div class="course-text"><h2>' + escapeHTML(course.title) + '</h2><p>' + course.topics.map(escapeHTML).join(' · ') + '</p></div><span class="course-category">' + escapeHTML(isHighSchool(course) ? course.track : course.category) + '</span></a><a class="course-map-shortcut" href="#course/' + course.id + '/map" aria-label="打开' + escapeHTML(course.title) + '知识图谱">' + icon('network') + '<span>图谱</span></a>' + favoriteButton(course) + '</li>';
   }
 
+  function buildKnowledgeEntries() {
+    const index = window.LN_PUBLICATION_INDEX || {};
+    const questions = window.LN_PRACTICE_BANK.questions;
+    const questionKinds = { single: '单选 选择题', multi: '多选 选择题', numeric: '计算 数值', open: '问答 分析' };
+    return courses.flatMap(course => {
+      const rows = [];
+      const sections = new Map(course.sections.map(section => [section.id, section]));
+      const add = (section, kind, title, route, terms = '') => {
+        const label = section.kind === 'outline' ? '目录' : kind;
+        rows.push({ course, section, kind, label, title, route,
+          titleKey: title.normalize('NFKC').toLowerCase(),
+          search: [title, kind, terms, section.title, section.group, course.title].join(' ').normalize('NFKC').toLowerCase() });
+      };
+      for (const section of course.sections) {
+        const route = '#course/' + course.id + '/' + section.id;
+        add(section, '概念', section.title, route, (section.keywords || []).join(' '));
+        const reading = index[course.id]?.sections[section.id];
+        for (const item of reading?.headings || []) {
+          if (item.title !== section.title || item.kind !== '概念') add(section, item.kind, item.title, route + '/' + encodeURIComponent(item.anchor), item.terms);
+        }
+        for (const formula of reading?.equations || []) {
+          if (formula.number) add(section, '公式', formula.number, route + '/' + encodeURIComponent(formula.anchor), [formula.terms || '', formula.number.replaceAll('.', '-')].join(' '));
+        }
+      }
+      for (const question of questions.filter(item => item.course === course.id)) {
+        const section = sections.get(question.readingSection || question.sections[0]);
+        if (!section) continue;
+        add(section, '习题', question.title, '#practice/' + course.id + '/' + section.id + '/' + encodeURIComponent(question.id),
+          [questionKinds[question.type], ...question.skills, question.prompt].join(' '));
+      }
+      return rows;
+    });
+  }
+
+  function renderKnowledgeResults() {
+    const results = $('#knowledge-search-results');
+    const text = query.trim().normalize('NFKC').toLowerCase();
+    results.hidden = !text;
+    if (!text) return 0;
+    knowledgeEntries ||= buildKnowledgeEntries();
+    const tokens = text.split(/\s+/);
+    const matches = knowledgeEntries.filter(row =>
+      (currentView !== 'favorites' || favorites.has(row.course.id)) &&
+      (currentView !== 'highschool' || isHighSchool(row.course)) &&
+      (category === '全部' || category === (currentView === 'highschool' ? row.course.track : row.course.category)) &&
+      (!knowledgeKind || row.kind === knowledgeKind) && tokens.every(token => row.search.includes(token)));
+    const rank = row => row.titleKey === text ? 0 : row.titleKey.includes(text) ? 1 : row.route.endsWith('/' + row.section.id) ? 3 : 2;
+    matches.sort((a, b) => rank(a) - rank(b));
+    $('#knowledge-result-count').textContent = matches.length ? '找到 ' + matches.length + ' 项' : '没有匹配的知识项';
+    $('#knowledge-result-list').innerHTML = matches.slice(0, knowledgeLimit).map(row => '<li><a href="' + escapeHTML(row.route) + '"><span class="knowledge-result-kind">' + escapeHTML(row.label) + '</span><span><strong>' + escapeHTML(row.title) + '</strong><small>' + escapeHTML(row.course.title + ' · ' + row.section.title) + '</small></span></a></li>').join('');
+    $('[data-more-knowledge]', results).hidden = matches.length <= knowledgeLimit;
+    return matches.length;
+  }
+
   function renderRows() {
     const matching = courses.filter((course) => (currentView === 'favorites' || isHighSchool(course) === (currentView === 'highschool')) && (currentView !== 'favorites' || favorites.has(course.id)) && (category === '全部' || (currentView === 'highschool' ? course.track : course.category) === category) && [course.title, course.category, ...course.topics, ...(course.sections || []).flatMap((section) => [section.title, ...(section.keywords || [])])].join(' ').toLowerCase().includes(query.toLowerCase().trim()));
     $('#result-count').textContent = matching.length + ' 门' + (currentView === 'highschool' ? ' · 海南2027届' : '');
     const emptyFavorites = currentView === 'favorites' && !favorites.size;
-    $('#course-list').innerHTML = matching.length ? matching.map(courseRow).join('') : '<li class="empty-state">' + icon(emptyFavorites ? 'star' : 'search') + '<h2>' + (emptyFavorites ? '暂无收藏' : '没有匹配的课程') + '</h2>' + (emptyFavorites ? '<a class="secondary-button" href="#overview">浏览课程</a>' : '<button class="secondary-button" data-clear-search>清除筛选</button>') + '</li>';
+    const knowledgeMatches = renderKnowledgeResults();
+    $('#result-count').hidden = !matching.length && !!knowledgeMatches;
+    $('#course-list').innerHTML = matching.length ? matching.map(courseRow).join('') : knowledgeMatches ? '' : '<li class="empty-state">' + icon(emptyFavorites ? 'star' : 'search') + '<h2>' + (emptyFavorites ? '暂无收藏' : '没有匹配的课程') + '</h2>' + (emptyFavorites ? '<a class="secondary-button" href="#overview">浏览课程</a>' : '<button class="secondary-button" data-clear-search>清除筛选</button>') + '</li>';
     $$('.filter-button').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
     $$('[data-category]').forEach((link) => {
       const active = currentView === 'overview' && link.dataset.category === category;
@@ -165,9 +226,17 @@
     const title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : '课程';
     const filters = currentView === 'highschool' ? ['全部', '语言', '数理化生', '政史地'] : ['全部', ...Object.values(categories)];
     const libraryLink = currentView === 'highschool' ? '<a class="library-link" href="#highschool/resources">教材与来源</a>' : '';
-    main.innerHTML = '<section aria-labelledby="page-title"><div class="page-heading"><div><h1 id="page-title">' + title + '</h1><p class="page-meta" id="result-count"></p></div>' + libraryLink + '<label class="course-search">' + icon('search') + '<input id="course-search" type="search" aria-label="搜索课程或知识点" placeholder="搜索课程…" value="' + escapeHTML(query) + '" autocomplete="off"></label></div><div class="filter-row"' + (filters.length < 3 ? ' hidden' : '') + ' aria-label="筛选学科">' + filters.map((name) => '<button class="filter-button" data-filter="' + name + '" aria-pressed="' + (name === category) + '">' + name + '</button>').join('') + '</div><ul class="course-list" id="course-list" aria-live="polite" aria-label="课程列表"></ul></section>';
+    main.innerHTML = '<section aria-labelledby="page-title"><div class="page-heading"><div><h1 id="page-title">' + title + '</h1><p class="page-meta" id="result-count"></p></div>' + libraryLink + '<label class="course-search">' + icon('search') + '<input id="course-search" type="search" aria-label="搜索课程或知识点" placeholder="搜索课程、知识点…" value="' + escapeHTML(query) + '" autocomplete="off"></label></div><div class="filter-row"' + (filters.length < 3 ? ' hidden' : '') + ' aria-label="筛选学科">' + filters.map((name) => '<button class="filter-button" data-filter="' + name + '" aria-pressed="' + (name === category) + '">' + name + '</button>').join('') + '</div><section id="knowledge-search-results" aria-labelledby="knowledge-results-title" hidden><div class="knowledge-results-head"><h2 id="knowledge-results-title">相关知识</h2><select id="knowledge-kind" aria-label="知识类型"><option value="">所有类型</option>' + knowledgeKinds.map(kind => '<option>' + kind + '</option>').join('') + '</select></div><p id="knowledge-result-count" class="page-meta" role="status"></p><ul id="knowledge-result-list"></ul><button class="secondary-button" data-more-knowledge hidden>显示更多</button></section><ul class="course-list" id="course-list" aria-live="polite" aria-label="课程列表"></ul></section>';
+    $('#knowledge-kind').value = knowledgeKind;
     renderRows();
-    $('#course-search').addEventListener('input', (event) => { query = event.target.value; renderRows(); });
+    $('#course-search').addEventListener('input', (event) => { query = event.target.value; knowledgeLimit = knowledgePageSize; renderRows(); });
+    $('#knowledge-kind').addEventListener('change', (event) => { knowledgeKind = event.target.value; knowledgeLimit = knowledgePageSize; renderRows(); });
+    $('[data-more-knowledge]').addEventListener('click', () => {
+      const firstNewRow = knowledgeLimit;
+      knowledgeLimit += knowledgePageSize;
+      renderKnowledgeResults();
+      $$('#knowledge-result-list a')[firstNewRow]?.focus();
+    });
   }
 
   function renderCourse(id, sectionId, anchor) {
@@ -585,8 +654,8 @@
     document.body.classList.remove('is-reading', 'directory-open');
     main.classList.remove('course-main', 'map-main', 'practice-main');
     currentView = ['favorites', 'course', 'highschool', 'resources', 'practice'].includes(view) ? view : 'overview';
-    if (currentView !== 'course' && currentView !== 'favorites') {
-      if (lastLibrary !== currentView) query = '';
+    if (['overview', 'highschool', 'favorites'].includes(currentView) && !(view === 'highschool' && id === 'resources')) {
+      if (lastLibrary !== currentView) { query = ''; knowledgeKind = ''; knowledgeLimit = knowledgePageSize; }
       lastLibrary = currentView;
     }
     category = view === 'category' ? (categories[id] || '全部') : '全部';
@@ -694,7 +763,7 @@
   });
   main.addEventListener('click', (event) => {
     const filter = event.target.closest('[data-filter]');
-    if (filter) { category = filter.dataset.filter; renderRows(); }
+    if (filter) { category = filter.dataset.filter; knowledgeLimit = knowledgePageSize; renderRows(); }
     const button = event.target.closest('[data-favorite]');
     if (button) {
       const course = courses.find((course) => course.id === button.dataset.favorite);
@@ -715,7 +784,10 @@
     if (event.target.closest('[data-clear-search]')) {
       category = '全部';
       query = '';
+      knowledgeKind = '';
+      knowledgeLimit = knowledgePageSize;
       $('#course-search').value = '';
+      $('#knowledge-kind').value = '';
       renderRows();
       $('#course-search').focus();
     }

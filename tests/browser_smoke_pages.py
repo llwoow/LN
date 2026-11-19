@@ -39,6 +39,44 @@ def main():
                 page.on('response', response)
                 page.goto(base + '#overview', wait_until='networkidle')
                 assert page.locator('#course-list').count() == 1
+                search = page.get_by_role('searchbox', name='搜索课程或知识点')
+                for width in (1280, 390, 320):
+                    page.set_viewport_size({'width': width, 'height': 900})
+                    search.fill('极零相消')
+                    page.get_by_label('知识类型').select_option('公式')
+                    result = page.get_by_role('link', name='公式 U.3.4.1', exact=False)
+                    assert result.get_attribute('href') == '#course/automatic-control/ac-3-4/dominant-pole-response'
+                    assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), width
+                    result.click()
+                    page.locator('#dominant-pole-response.reference-target .equation-number').wait_for()
+                    image = page.get_by_role('link', name='放大三项暂态贡献图').locator('img')
+                    assert image.evaluate('img => img.getBoundingClientRect().width <= img.closest("figure").clientWidth')
+                    assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), width
+                    page.locator('#dominant-pole-response [data-definition]').first.click()
+                    page.locator('#definition-popover:popover-open').wait_for()
+                    page.go_back()
+                    assert search.input_value() == '极零相消'
+                    page.get_by_label('知识类型').select_option('研究')
+                    search.fill('GaN 动态导通电阻')
+                    page.get_by_role('link', name='GaN 器件研究', exact=False).click()
+                    page.locator('#gan-dynamic-ron.reference-target').wait_for()
+                    page.go_back()
+                    page.get_by_label('知识类型').select_option('习题')
+                    search.fill('LC 低通 谐振电压增益')
+                    page.get_by_role('link', name='计算 LC 低通的谐振电压增益', exact=False).click()
+                    assert page.locator('[data-p-question]').input_value() == 'emc-lc-natural-frequency-gain'
+                    page.locator('[data-p-value]').fill('6.02')
+                    page.locator('[data-p-submit]').click()
+                    assert '吻合' in page.locator('.practice-verdict').inner_text()
+                    page.get_by_role('link', name='回查 · 5.2 反射式滤波器').click()
+                    page.locator('#emc-lc-peaking.reference-target').wait_for()
+                    page.goto(base + '#overview', wait_until='networkidle')
+                page.set_viewport_size({'width': 1280, 'height': 900})
+                page.goto(base + '#practice/automatic-control/ac-3-4')
+                page.locator('[data-practice-mode="sources"]').click()
+                source = page.locator('[data-source-id="mit-dynamics-2-004-ps6"]')
+                assert source.get_by_role('link', name='原题').get_attribute('href').endswith('/ps6/')
+                assert source.get_by_role('link', name='课程解答').get_attribute('href').endswith('/ps6soln/')
                 # All actual HTML courses are selected from source, including future merges.
                 for path in sorted((ROOT / 'courses').glob('*/manifest.js')):
                     course = assignment(path)
@@ -97,7 +135,8 @@ def main():
                 page.goto(base + 'audit/', wait_until='networkidle')
                 page.locator('.audit-stat').first.wait_for(timeout=15000)
                 assert page.locator('.audit-stat').count() == 4
-                assert '章节完成度' in page.locator('main').inner_text()
+                assert '接入与验收' in page.locator('main').inner_text()
+                assert page.locator('option[value="hs-chinese"]').count()
                 # A claim imported from README/PR-style documentation never counts as verification.
                 page.evaluate("""() => localStorage.setItem('ln.audit.records.v1',
                     JSON.stringify([{id:'ac-3-5',courseId:'automatic-control',status:'已验证',

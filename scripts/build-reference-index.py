@@ -81,12 +81,21 @@ def build_index():
                 suffix = section['id'].split('-',1)[1]; prefix = suffix if suffix.isdigit() else ('S' if suffix == 'symbols' else 'A')
             if section.get('textbookSection'): prefix = section['textbookSection']
             current = {'equations': [], 'figures': [], 'tables': []}
+            headings = [
+                {'anchor': n.attrs['id'], 'title': ' '.join(n.text().split()),
+                 'kind': n.attrs.get('data-knowledge-kind', '概念'),
+                 'terms': n.attrs.get('data-knowledge-terms', '')}
+                for n in nodes if n.tag in {'h2', 'h3', 'h4'} and n.attrs.get('id') and n.text().strip()
+            ]
+            if headings: current['headings'] = headings
             def append(kind, node, number, index, aliases=()):
                 existing = node.attrs.get('id')
                 anchor = existing or (kind + '-' + re.sub(r'[^a-zA-Z0-9_-]', '-', number) if number else kind + '-unnumbered-' + str(index + 1))
                 used = {target['anchor'] for target in output['targets'] if target['section'] == section['id']}
                 if anchor in used: anchor += '-' + str(index + 1)
                 target = {'kind': kind, 'number': number, 'anchor': anchor, 'section': section['id'], 'group': section['group'], 'aliases': list(aliases)}
+                if node.attrs.get('data-knowledge-terms'):
+                    target['terms'] = node.attrs['data-knowledge-terms']
                 current[{'equation':'equations','figure':'figures','table':'tables'}[kind]].append(target); output['targets'].append(target)
             source_equation_index = 0
             for i, node in enumerate(displays):

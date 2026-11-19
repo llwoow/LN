@@ -112,6 +112,7 @@ for q in D['questions']:
             markup+='<p id="'+definition+'">本题符号 '+esc(title)+'：'+esc(desc)+'</p>'
             glossary.append({'id':definition,'title':title,'keys':[key],'description':desc,'section':identifier,'sections':[identifier],'match':'本题符号 '+title+'：'})
     for j,block in enumerate(q['sections']):markup+='<section id="step-'+str(j+1)+'"><h3>'+esc(block['title'])+'</h3>'+rich(block['text'])+'</section>'
+    if q.get('modelNote'):markup+=rich(q['modelNote'])
     markup+='<p class="physics-answer"><strong>结论：</strong>'+esc(q['answer'])+'</p><h3>把解法连起来</h3>'+rich(q['method'])
     if str(i) in map(str,[3,7,8,9,10,11,12,13,15,16,17,18]):markup+='<section class="physics-lab" data-physics-lab="'+str(i)+'"></section>'
     markup+='<h3>相关知识与易错处</h3>'+lst(q['knowledge'])+lst(q['pitfalls'])

@@ -87,5 +87,11 @@
 </table>
 <p id="def-dead-time">死区是半桥互补开关之间故意留出的同时关断时间，用于减小直通风险。假设两次死区均为 100 ns，反向电流均为 10 A，压降近似 2 V，频率 100 kHz。单次能量约 \(2\,\mu\mathrm J\)，平均共 0.4 W。若每次加到 200 ns 且其他量近似不变，损耗加倍。实际两个换流方向、反向电流和结电容充放电未必相同，所需的死区下限也受驱动延迟差影响。</p>
 <p>若看到「没有反向恢复」，可以追问关断状态下的反向压降与输出电荷 \(Q_{\mathrm{oss}}\) 是否仍需计算。选型时还要核对栅极允许电压、共源电感和驱动回路、漏极峰值、动态导通电阻与热路径。不要把一种 GaN 结构的驱动方式套到所有 GaN 器件。</p>
+<h3 id="gan-dynamic-ron" data-knowledge-kind="研究" data-knowledge-terms="GaN p-GaN HEMT dynamic RON 动态导通电阻 电荷俘获 双脉冲">GaN 器件研究：开通后的导通电阻为何会变？</h3>
+<p id="def-dynamic-ron">动态导通电阻是器件经历给定关断应力后，在已开通的指定时刻用漏源电压与漏极电流之比估计的导通电阻。器件内部电荷俘获与释放会改变沟道或接入区的导电状态，温升也会改变电阻。测量时必须记录关断电压、持续时间、结温估计、取样延迟和电流，才有条件比较。</p>
+<p>2025 年 Cusumano 等人在特定商用增强型 GaN-on-Si HEMT 上采用不同持续时间的栅脉冲，观察到导通电阻随脉冲持续时间和电流变化。论文还报告了关断应力测试，并与感性负载双脉冲的部分结果对照。这里的结论适用于论文器件和试验条件。换成另一种沟道、封装或持续换流工况，仍需回答俘获、电热和测量误差各贡献多少。参考 <a href="https://doi.org/10.3390/electronics14142791" target="_blank" rel="noopener">Cusumano 等（2025）</a>。</p>
+<p>用一个独立的教学数值看损耗为什么会变。电流取恒定 10 A，导通占周期 40%。若导通电阻一直为 50 mΩ，平均欧姆损耗为 2 W。若每次导通的前四分之一为 90 mΩ、其余为 50 mΩ，则导通窗平均电阻为 60 mΩ，周期平均损耗成为 2.4 W。电流也明显变化时，要按时段对 \(i_D^2(t)R_{\mathrm{on}}(t)\) 做平均，其中 \(i_D\) 是瞬时漏极电流，\(R_{\mathrm{on}}\) 是当时的导通电阻。</p>
+<p>比较波形时，还应交代探头对齐和小压降测量的不确定度。导通损耗与开通瞬态的 \(v_{DS}i_D\) 积分使用各自的时窗，避免重计。参见<a href="#course/power-semiconductors/switching/def-switching-energy">硬开关损耗的积分定义</a>和<a href="#course/robot-drive-engineering/rd-measurement">探头加载与测量误差</a>。</p>
+<p><a class="secondary-button" data-open-practice href="#practice/power-semiconductors/wide-bandgap/psd-gan-loss-window">练一题：设计动态导通电阻的对照</a></p>
 <details class="reading-references"><summary>参考</summary><p>《Fundamentals of Power Semiconductor Devices》 · <a href="https://www.ti.com/document-viewer/lit/html/SLUAAM0" target="_blank" rel="noopener">TI SLUAAM0 的 GaN 栅驱与反向恢复说明</a> · <a href="https://www.ti.com/document-viewer/lit/html/sluaam1" target="_blank" rel="noopener">TI SLUAAM1 的死区说明</a> · <a href="https://www.infineon.com/products/power/diodes-thyristors/coolsic-schottky-diodes/1200v-g5" target="_blank" rel="noopener">Infineon SiC 肖特基产品说明</a></p></details>
 </section>

@@ -14,11 +14,6 @@ import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-TARGETS = (
-    ("automatic-control", "自动控制原理", None),
-    ("electromagnetic-compatibility", "电磁兼容原理及应用", None),
-    ("electrical-machines", "电机学：变压器与直流电机", ("第2章", "第3章")),
-)
 CHECKS = ("知识结构", "推导", "例题", "习题/测试入口", "图示", "交互组件", "知识链接/参考")
 
 
@@ -134,16 +129,12 @@ def inspect_section(root: Path, course_id: str, section: dict):
 def make_inventory(root: Path = ROOT):
     courses = []
     rows = []
-    for course_id, label, chapter_prefixes in TARGETS:
-        manifest_path = "courses/" + course_id + "/manifest.js"
-        manifest = assignment((root / manifest_path).read_text(encoding="utf-8"))
-        picked = [
-            section for section in manifest["sections"]
-            if not chapter_prefixes or section.get("group", "").startswith(chapter_prefixes)
-        ]
-        courses.append({"id": course_id, "label": label, "manifest": manifest_path,
-                        "sections": len(picked)})
-        rows.extend(inspect_section(root, course_id, item) for item in picked)
+    for path in sorted((root / 'courses').glob('*/manifest.js')):
+        manifest = assignment(path.read_text(encoding='utf-8'))
+        course_id = manifest['id']
+        courses.append({'id': course_id, 'label': manifest['title'],
+                        'manifest': path.relative_to(root).as_posix(), 'sections': len(manifest['sections'])})
+        rows.extend(inspect_section(root, course_id, item) for item in manifest['sections'])
     return {
         "schemaVersion": 1,
         "sourceRevision": git_revision(root),
