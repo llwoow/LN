@@ -1,0 +1,9 @@
+<section class="reader-section">
+<h2>正弦稳态为什么可以用一个复数表示</h2>
+<p>用同样大小的正弦输入驱动一个 RC 低通，把频率从每秒缓慢几次升到每秒许多次。稳态下输出仍是该频率，变化的是幅度与相位；刚切换时的暂态需要等它衰减。频率法分析的是每个正弦输入在指定端口的这两种变化。</p>
+<h3 id="control-frequency-rc" data-knowledge-kind="方法" data-knowledge-terms="频响 伯德 一阶 RC 低通 幅值 相位">先从电路写出分压，再把实部和虚部读出来</h3>
+<p id="control-frequency-symbols">设串联电阻为 \(R\)（Ω）、并接输出电容为 \(C\)（F），输入和输出电压同一参考地，无额外负载。\(H(j\omega)\) 是输出对输入的复相量比，\(\omega\) 是角频率（rad/s），\(j\) 是虚数单位，\(\tau=RC\) 为时间常数（s）。</p>
+\[H(j\omega)=\frac{1/(j\omega C)}{R+1/(j\omega C)}=\frac{1}{1+j\omega\tau}.\]
+<p>分母是一个直角三角形，模为 \(\sqrt{1+(\omega\tau)^2}\)，角为 \(\arctan(\omega\tau)\)。因此输出幅值缩为模的倒数，且相位取角的负值。若 \(R=10\,\mathrm{k\Omega}\)、\(C=1\,\mu\mathrm F\)，则 \(\tau=0.01\,\mathrm s\)。在 \(\omega=100\,\mathrm{rad/s}\) 时，输出幅值为输入的 \(1/\sqrt2\)，相位滞后 45°；这相当于约 15.9 Hz，别直接把 rad/s 当 Hz。</p>
+<p>高频时电容阻抗很小，电压大多落在串联电阻上，幅值约随频率升高十倍而缩小十倍，即 −20 dB/十倍频。测量时若探头与电容并联加载，应使用实际输出节点阻抗；滤波器再接电感还可能出现<a href="#course/electromagnetic-compatibility/emc-5-2/emc-lc-peaking">二阶谐振抬升</a>。下一步把同样的幅相测量用到<a href="#course/automatic-control/ac-5-6-9/control-margin-example">开环回路稳定裕度</a>，两处的“交越”指向的对象不同。</p>
+</section>

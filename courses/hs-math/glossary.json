@@ -1,0 +1,21 @@
+{
+  "lazy": true,
+  "symbolDefinitions": [
+    {
+      "id": "study-math-symbols",
+      "title": "D、A、P",
+      "keys": [
+        "D",
+        "A",
+        "P"
+      ],
+      "section": "study-conditional-probability",
+      "sections": [
+        "study-conditional-probability"
+      ],
+      "sourceAnchor": "study-math-symbols",
+      "match": "为“有缺陷”",
+      "description": "D、A、P 的含义与约定见本节定义。"
+    }
+  ]
+}

@@ -1306,6 +1306,126 @@
       ],
       "match": "uₙ₊₁和uₙ₋₁分别是第n+1与第n−1个原子相对各自平衡位置的位移，与中心原子的uₙ一起决定两侧弹簧的伸长差。",
       "sourceAnchor": "adjacent-atom-displacements"
+    },
+    {
+      "id": "materials-dielectric-symbols",
+      "section": "em-3-1",
+      "sections": [
+        "em-3-1"
+      ],
+      "sourceAnchor": "materials-dielectric-symbols",
+      "match": "定义为损耗角正切",
+      "title": "G、C、U、f、ω、δ、P",
+      "keys": [
+        "G",
+        "C",
+        "U",
+        "f",
+        "ω",
+        "δ",
+        "P"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-junction-symbols",
+      "section": "em-4-4",
+      "sections": [
+        "em-4-4"
+      ],
+      "sourceAnchor": "materials-junction-symbols",
+      "match": "包含内建势与外加反偏",
+      "title": "q、N_D、ε、W、E_pk、V_dep",
+      "keys": [
+        "q",
+        "N_D",
+        "ε",
+        "ϵ",
+        "W",
+        "E_pk",
+        "V_dep"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-transport-symbols",
+      "section": "em-5-1",
+      "sections": [
+        "em-5-1"
+      ],
+      "sourceAnchor": "materials-transport-symbols",
+      "match": "这段电流路径的长度",
+      "title": "ρ、ℓ、A、I、R、ΔU、P",
+      "keys": [
+        "ρ",
+        "ℓ",
+        "A",
+        "I",
+        "R",
+        "delta:U",
+        "P"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-magnetic-symbols",
+      "section": "em-6-3",
+      "sections": [
+        "em-6-3"
+      ],
+      "sourceAnchor": "materials-magnetic-symbols",
+      "match": "每单位体积的能量损失",
+      "title": "B、H、w_cyc",
+      "keys": [
+        "B",
+        "H",
+        "w_cyc"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-capacitor-symbols",
+      "section": "em-7-1",
+      "sections": [
+        "em-7-1"
+      ],
+      "sourceAnchor": "materials-capacitor-symbols",
+      "match": "是相对介电常数",
+      "title": "ε、ε_r、A、d、U、C、E、w",
+      "keys": [
+        "ε",
+        "ϵ",
+        "ε_r",
+        "ϵ_r",
+        "A",
+        "d",
+        "U",
+        "C",
+        "E",
+        "w"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-battery-symbols",
+      "section": "em-7-3",
+      "sections": [
+        "em-7-3"
+      ],
+      "sourceAnchor": "materials-battery-symbols",
+      "match": "当前温度和荷电状态",
+      "title": "I、U_oc、R_0、v_p、R_p、C_p、U_term",
+      "keys": [
+        "I",
+        "U_oc",
+        "R_0",
+        "v_p",
+        "dot:v_p",
+        "R_p",
+        "C_p",
+        "U_term"
+      ],
+      "description": "本算例的量、参考方向与单位。"
     }
   ]
 }

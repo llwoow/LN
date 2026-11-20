@@ -1,0 +1,9 @@
+<section class="reader-section">
+<h2>从耗尽层的电荷到器件的阻断能力</h2>
+<p>把 n 型和 p 型半导体接触，多数载流子在接面附近扩散，剩下固定离化杂质，建立能抵消继续扩散的电场。反向偏置增加势垒对应的总电压，自由载流子稀少的区段展宽。要解释掺杂影响，先把固定电荷如何生成电场画出来。</p>
+<h3 id="materials-depletion-charge" data-knowledge-kind="方法" data-knowledge-terms="PN结 金属半导体接触 耗尽区 电场 分布 掺杂 肖特基">同一反偏，轻掺杂一侧为什么更宽</h3>
+<p id="materials-junction-symbols">考虑突变平面 \(p^+n\) 结，把电荷主要放到轻掺杂 n 侧。\(q\) 为基本电荷量（C），\(N_D\) 为近似均匀的施主浓度（m⁻³），\(\varepsilon\) 是介电率（F/m），\(W\) 是 n 侧耗尽宽度（m），\(V_\mathrm{dep}\) 表示耗尽层承担的电压（V），包含内建势与外加反偏。以峰值场强 \(E_\mathrm{pk}\)（V/m）的大小讨论，从耗尽区边缘走向接面，坡度近似为 \(qN_D/\varepsilon\)。</p>
+\[E_\mathrm{pk}=\frac{qN_DW}{\varepsilon},\qquad V_\mathrm{dep}=\tfrac12 E_\mathrm{pk}W.\]
+<p>后一式是三角形电场分布下的面积。消去峰值场强得到 \(W=\sqrt{2\varepsilon V_\mathrm{dep}/(qN_D)}\)。若保持总势降近似不变，把施主掺杂提高至 4 倍，宽度减为一半，峰值却变为 2 倍。这说明提高掺杂可改善<a href="#course/electrical-materials/em-2-3/conductivity-drift-layer">导通电阻</a>，却可能使关断电场更难分散。真实电场还受结终端、层厚以及材料击穿机制影响。</p>
+<p>金属接触也可能形成整流或近似欧姆行为。判断要看材料配对、势垒、掺杂和输运，而非仅凭存在金属就认定没有结。器件应用见<a href="#course/power-semiconductors/vdmos-blocking">功率 MOSFET 阻断</a>。参考 <a href="https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/resources/mit6_012f09_lec04/" target="_blank" rel="noopener">MIT 6.012 · p-n Junctions</a>。</p>
+</section>

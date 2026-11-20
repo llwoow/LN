@@ -2,11 +2,11 @@ window.LN_AUTO_CONTROL_MAP={
   "chapters": [
     {
       "group": "第1章 自动控制系统的基本概念",
-      "description": "教材原目录框架，正文尚待补全"
+      "description": "反馈、扰动与测量偏差"
     },
     {
       "group": "第2章 自动控制系统的数学模型",
-      "description": "教材原目录框架，正文尚待补全"
+      "description": "已接入电气与机械建模示例，其他条目沿用原目录"
     },
     {
       "group": "第3章 自动控制系统的时域分析",
@@ -18,31 +18,31 @@ window.LN_AUTO_CONTROL_MAP={
     },
     {
       "group": "第5章 频率法",
-      "description": "教材原目录框架，正文尚待补全"
+      "description": "幅相响应与稳定裕度"
     },
     {
       "group": "第6章 控制系统的校正及综合",
-      "description": "教材原目录框架，正文尚待补全"
+      "description": "比例与积分的平衡、限幅和恢复"
     },
     {
       "group": "第7章 非线性系统分析",
-      "description": "教材原目录框架，正文尚待补全"
+      "description": "单环饱和的分段判断"
     },
     {
       "group": "第8章 线性离散系统的理论基础",
-      "description": "教材原目录框架，正文尚待补全"
+      "description": "采样保持与数值近似"
     }
   ],
   "nodes": [
     {
       "section": "ac-1-1",
       "title": "自动控制系统的基本概念",
-      "note": "本章目录入口，正文待补全"
+      "note": "画清反馈测量、实际量和执行器"
     },
     {
       "section": "ac-2-1",
       "title": "自动控制系统的数学模型",
-      "note": "本章目录入口，正文待补全"
+      "note": "两条守恒式接起电气和机械对象"
     },
     {
       "section": "ac-4-1",
@@ -52,7 +52,7 @@ window.LN_AUTO_CONTROL_MAP={
     {
       "section": "ac-5-1",
       "title": "频率法",
-      "note": "本章目录入口，正文待补全"
+      "note": "从RC得到幅值和相位"
     },
     {
       "section": "ac-6-1",
@@ -62,7 +62,7 @@ window.LN_AUTO_CONTROL_MAP={
     {
       "section": "ac-7-1",
       "title": "非线性系统分析",
-      "note": "本章目录入口，正文待补全"
+      "note": "按实际饱和区间判断平衡"
     },
     {
       "section": "ac-8-1",
@@ -148,6 +148,21 @@ window.LN_AUTO_CONTROL_MAP={
       "section": "ac-homework4",
       "title": "第4章五道根轨迹课堂题",
       "note": "完整题干、逐步推导、七幅根轨迹、结构图与两幅时域曲线及两题手稿批改"
+    },
+    {
+      "section": "ac-5-6-9",
+      "note": "在两处不同的交越计算两种裕度",
+      "title": "5.6.9 系统的稳定裕度"
+    },
+    {
+      "section": "ac-6-5",
+      "note": "用平衡解判断积分与限幅",
+      "title": "6.5 比例—积分—微分校正"
+    },
+    {
+      "section": "ac-8-5-2",
+      "note": "零阶保持与欧拉步长的对照",
+      "title": "8.5.2 脉冲传递函数的推导"
     }
   ],
   "links": [
@@ -270,6 +285,42 @@ window.LN_AUTO_CONTROL_MAP={
       "to": "ac-homework4",
       "label": "参数根轨迹实算",
       "description": "4-12 以 b 为参数，先把特征方程整理为等效开环形式"
+    },
+    {
+      "from": "ac-1-1",
+      "to": "ac-2-1",
+      "label": "反馈需要对象模型",
+      "description": "知道测量量之后，用电压与转矩平衡把执行作用和负载建立为不同输入。"
+    },
+    {
+      "from": "ac-2-1",
+      "to": "ac-3-4",
+      "label": "状态决定可见暂态",
+      "description": "选择观测端口和零初始条件后再判断哪些模态可忽略。"
+    },
+    {
+      "from": "ac-5-1",
+      "to": "ac-5-6-9",
+      "label": "幅相到交越",
+      "description": "把一次正弦比值推广到开环回路，分别寻找单位增益与负实轴交越。"
+    },
+    {
+      "from": "ac-5-6-9",
+      "to": "ac-6-5",
+      "label": "稳定与校正",
+      "description": "积分和实现延迟会改变开环幅相，需要重新检查交越。"
+    },
+    {
+      "from": "ac-6-5",
+      "to": "ac-7-1",
+      "label": "积分器遇到限幅",
+      "description": "达到执行器上限后按饱和区重求平衡，避免在不可达指令下继续累积。"
+    },
+    {
+      "from": "ac-7-1",
+      "to": "ac-8-5-2",
+      "label": "区间模型与数字执行",
+      "description": "先明确一个采样间隔中对象实际受到的输入，再求更新式。"
     }
   ]
 };

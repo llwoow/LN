@@ -1650,6 +1650,144 @@
       "equations": [
         "U.3.4.1"
       ]
+    },
+    {
+      "id": "control-loop-symbols",
+      "section": "ac-1-1",
+      "sections": [
+        "ac-1-1"
+      ],
+      "sourceAnchor": "control-loop-symbols",
+      "match": "传感器输出为",
+      "title": "r、y、y_m、e、b",
+      "keys": [
+        "r",
+        "y",
+        "y_m",
+        "e",
+        "b"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "control-motor-symbols",
+      "section": "ac-2-1",
+      "sections": [
+        "ac-2-1"
+      ],
+      "sourceAnchor": "control-motor-symbols",
+      "match": "为状态",
+      "title": "i、ω、u、T_L、R、L、J、b、k_e、k_t",
+      "keys": [
+        "i",
+        "dot:i",
+        "ω",
+        "dot:ω",
+        "u",
+        "T_L",
+        "R",
+        "L",
+        "J",
+        "b",
+        "k_e",
+        "k_t"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "control-frequency-symbols",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1"
+      ],
+      "sourceAnchor": "control-frequency-symbols",
+      "match": "输出对输入的复相量比",
+      "title": "R、C、H、ω、τ",
+      "keys": [
+        "R",
+        "C",
+        "H",
+        "ω",
+        "τ"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "control-margin-symbols",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-margin-symbols",
+      "match": "指增益交越频率",
+      "title": "L、s、ω、ω_c、ω_180",
+      "keys": [
+        "L",
+        "s",
+        "ω",
+        "ω_c",
+        "ω_180"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "control-pi-symbols",
+      "section": "ac-6-5",
+      "sections": [
+        "ac-6-5"
+      ],
+      "sourceAnchor": "control-pi-symbols",
+      "match": "是积分状态",
+      "title": "y、u、r、d、e、x、K_p、K_i",
+      "keys": [
+        "y",
+        "dot:y",
+        "u",
+        "r",
+        "d",
+        "e",
+        "x",
+        "dot:x",
+        "K_p",
+        "K_i"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "control-saturation-symbols",
+      "section": "ac-7-1",
+      "sections": [
+        "ac-7-1"
+      ],
+      "sourceAnchor": "control-saturation-symbols",
+      "match": "再裁剪到",
+      "title": "y、r、u",
+      "keys": [
+        "y",
+        "dot:y",
+        "r",
+        "u"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "control-zoh-symbols",
+      "section": "ac-8-5-2",
+      "sections": [
+        "ac-8-5-2"
+      ],
+      "sourceAnchor": "control-zoh-symbols",
+      "match": "为采样间隔",
+      "title": "R、L、T_s、i_k、u_k",
+      "keys": [
+        "R",
+        "L",
+        "T_s",
+        "i_k",
+        "u_k",
+        "i_k+1"
+      ],
+      "description": "本算例的量、参考方向与单位。"
     }
   ]
 }

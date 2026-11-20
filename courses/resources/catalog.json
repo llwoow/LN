@@ -1955,6 +1955,411 @@
           "summary": "官方课程页"
         }
       ]
+    },
+    {
+      "id": "hs-study-source-chinese",
+      "title": "《全唐诗》中的写景次序",
+      "kind": "教材与原始资料阅读",
+      "repository": null,
+      "checked": "2026-11-20",
+      "targets": [
+        {
+          "course": "hs-chinese",
+          "section": "study-poetry"
+        }
+      ],
+      "question": "把“竹喧”“莲动”与相应的原因对齐，诗句提供了怎样的观看顺序？",
+      "summary": "王维原诗与卷次可核。可讨论不同解读，但应说明它们各自依靠哪些词句。",
+      "steps": [
+        "在卷一百二十六定位《山居秋暝》，圈出听觉与视觉线索。",
+        "分别把诗句改写成人物动作在前的句子，比较读者先知道的是什么。",
+        "用两处诗句写一段鉴赏，另列出一个不能只凭这两句断定的结论。"
+      ],
+      "output": "完成一份含推理、资料位置与判断边界的自查记录。",
+      "requirements": "打开原站和对应讲解。使用纸笔或浏览器作答。",
+      "license": "保留原站权利，本站提供链接及独立学习任务。",
+      "links": [
+        {
+          "label": "打开参考",
+          "url": "https://www.chinakongzi.org/kzsf/wxxs/mingpian/quantangshi/200705/t20070522_12896.htm"
+        }
+      ],
+      "limits": [
+        "王维原诗与卷次可核。可讨论不同解读，但应说明它们各自依靠哪些词句。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "王维原诗与卷次可核。可讨论不同解读，但应说明它们各自依靠哪些词句。",
+        "read": "王维原诗与卷次可核。可讨论不同解读，但应说明它们各自依靠哪些词句。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.chinakongzi.org/kzsf/wxxs/mingpian/quantangshi/200705/t20070522_12896.htm",
+          "summary": "王维原诗与卷次可核。可讨论不同解读，但应说明它们各自依靠哪些词句。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/hs-chinese/study-poetry/study-poetry-evidence"
+    },
+    {
+      "id": "hs-study-source-english",
+      "title": "British Council · 关系从句范围练习",
+      "kind": "教材与原始资料阅读",
+      "repository": null,
+      "checked": "2026-11-20",
+      "targets": [
+        {
+          "course": "hs-english",
+          "section": "study-relative-clauses"
+        }
+      ],
+      "question": "在原站语法材料里找一个限定性和一个非限定性关系从句，删掉后的信息范围有什么变化？",
+      "summary": "原站讲解区区分定义对象的限制性信息与补充信息。练习表现仅用于自查。",
+      "steps": [
+        "先划出关系从句边界和它修饰的名词。",
+        "检查删掉从句后名词还指同一组对象，还是失去了筛选条件。",
+        "摘录一例并用自己的英文改写，做原站练习后回到正文对照。"
+      ],
+      "output": "完成一份含推理、资料位置与判断边界的自查记录。",
+      "requirements": "打开原站和对应讲解。使用纸笔或浏览器作答。",
+      "license": "保留原站权利，本站提供链接及独立学习任务。",
+      "links": [
+        {
+          "label": "打开参考",
+          "url": "https://learnenglishteens.britishcouncil.org/grammar/b1-b2-grammar/relative-clauses"
+        }
+      ],
+      "limits": [
+        "原站讲解区区分定义对象的限制性信息与补充信息。练习表现仅用于自查。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "原站讲解区区分定义对象的限制性信息与补充信息。练习表现仅用于自查。",
+        "read": "原站讲解区区分定义对象的限制性信息与补充信息。练习表现仅用于自查。"
+      },
+      "evidence": [
+        {
+          "url": "https://learnenglishteens.britishcouncil.org/grammar/b1-b2-grammar/relative-clauses",
+          "summary": "原站讲解区区分定义对象的限制性信息与补充信息。练习表现仅用于自查。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/hs-english/study-relative-clauses/study-clause-scope"
+    },
+    {
+      "id": "hs-study-source-math",
+      "title": "OpenStax · 列联表读法",
+      "kind": "教材与原始资料阅读",
+      "repository": null,
+      "checked": "2026-11-20",
+      "targets": [
+        {
+          "course": "hs-math",
+          "section": "study-conditional-probability"
+        }
+      ],
+      "question": "在一个真实教材算例里，怎样根据题意从同一张表读出不同的条件概率？",
+      "summary": "3.4 节包含列联表、条件问题与解答；外链保留原题。",
+      "steps": [
+        "读 3.4 的一道 worked example，把 given that 后面的条件写成事件。",
+        "圈出指定行或列，分别求一次原条件和倒过来的条件概率。",
+        "核对算例结果；若两数不同，说明分母为何变。"
+      ],
+      "output": "完成一份含推理、资料位置与判断边界的自查记录。",
+      "requirements": "打开原站和对应讲解。使用纸笔或浏览器作答。",
+      "license": "保留原站权利，本站提供链接及独立学习任务。",
+      "links": [
+        {
+          "label": "打开参考",
+          "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables"
+        }
+      ],
+      "limits": [
+        "3.4 节包含列联表、条件问题与解答；外链保留原题。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "3.4 节包含列联表、条件问题与解答；外链保留原题。",
+        "read": "3.4 节包含列联表、条件问题与解答；外链保留原题。"
+      },
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables",
+          "summary": "3.4 节包含列联表、条件问题与解答；外链保留原题。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/hs-math/study-conditional-probability/study-conditional-denominator"
+    },
+    {
+      "id": "hs-study-source-physics",
+      "title": "OpenStax · 电容储能与能量账",
+      "kind": "教材与原始资料阅读",
+      "repository": null,
+      "checked": "2026-11-20",
+      "targets": [
+        {
+          "course": "hs-physics",
+          "section": "study-capacitor"
+        }
+      ],
+      "question": "同一个电容器状态能否用三种等价形式复算储能？",
+      "summary": "原节提供储能推导及示例；线性与缓慢变化为教学条件。",
+      "steps": [
+        "按原节的充电推导重新写出小份电荷对应的功。",
+        "用 QV/2、CV²/2、Q²/(2C) 核对同一状态。",
+        "回到 LN 的两种连线，列出每种情况下能量从哪里来、到哪里去。"
+      ],
+      "output": "完成一份含推理、资料位置与判断边界的自查记录。",
+      "requirements": "打开原站和对应讲解。使用纸笔或浏览器作答。",
+      "license": "保留原站权利，本站提供链接及独立学习任务。",
+      "links": [
+        {
+          "label": "打开参考",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/8-3-energy-stored-in-a-capacitor"
+        }
+      ],
+      "limits": [
+        "原节提供储能推导及示例；线性与缓慢变化为教学条件。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "原节提供储能推导及示例；线性与缓慢变化为教学条件。",
+        "read": "原节提供储能推导及示例；线性与缓慢变化为教学条件。"
+      },
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/8-3-energy-stored-in-a-capacitor",
+          "summary": "原节提供储能推导及示例；线性与缓慢变化为教学条件。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/hs-physics/study-capacitor/study-capacitor-constraint"
+    },
+    {
+      "id": "hs-study-source-chemistry",
+      "title": "OpenStax · 反应商算例与自查",
+      "kind": "教材与原始资料阅读",
+      "repository": null,
+      "checked": "2026-11-20",
+      "targets": [
+        {
+          "course": "hs-chemistry",
+          "section": "study-equilibrium"
+        }
+      ],
+      "question": "在原节选一个 Q 与 K 不同的算例，能否独立判断净反应方向？",
+      "summary": "13.2 节实际列出反应商定义、例题和 Check Your Learning；未复制原题。",
+      "steps": [
+        "抄出配平系数和给定温度，用系数决定反应商的幂。",
+        "分别计算当前 Q 和同温度的 K，比较之后才写净方向。",
+        "用原站答案对照，随后改成 LN 的恒容惰性气体情形并解释为什么条件不同。"
+      ],
+      "output": "完成一份含推理、资料位置与判断边界的自查记录。",
+      "requirements": "打开原站和对应讲解。使用纸笔或浏览器作答。",
+      "license": "保留原站权利，本站提供链接及独立学习任务。",
+      "links": [
+        {
+          "label": "打开参考",
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-2-equilibrium-constants"
+        }
+      ],
+      "limits": [
+        "13.2 节实际列出反应商定义、例题和 Check Your Learning；未复制原题。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "13.2 节实际列出反应商定义、例题和 Check Your Learning；未复制原题。",
+        "read": "13.2 节实际列出反应商定义、例题和 Check Your Learning；未复制原题。"
+      },
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-2-equilibrium-constants",
+          "summary": "13.2 节实际列出反应商定义、例题和 Check Your Learning；未复制原题。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/hs-chemistry/study-equilibrium/study-reaction-quotient"
+    },
+    {
+      "id": "hs-study-source-biology",
+      "title": "OpenStax · 测交的两种预测",
+      "kind": "教材与原始资料阅读",
+      "repository": null,
+      "checked": "2026-11-20",
+      "targets": [
+        {
+          "course": "hs-biology",
+          "section": "study-testcross"
+        }
+      ],
+      "question": "同样表现为显性的两个亲本，哪些后代观测可以区分它们？",
+      "summary": "原节说明隐性亲本固定一个配子，以及两个候选基因型各自的分离预期。",
+      "steps": [
+        "读 Test Cross 段落，对两个候选亲本分别画配子组合。",
+        "用 4 个和 8 个后代各算一次“全显性”的条件概率。",
+        "写出哪种观测在模型下排除一个候选，再列出一个影响模型的识别或取样条件。"
+      ],
+      "output": "完成一份含推理、资料位置与判断边界的自查记录。",
+      "requirements": "打开原站和对应讲解。使用纸笔或浏览器作答。",
+      "license": "保留原站权利，本站提供链接及独立学习任务。",
+      "links": [
+        {
+          "label": "打开参考",
+          "url": "https://openstax.org/books/biology-2e/pages/12-2-characteristics-and-traits"
+        }
+      ],
+      "limits": [
+        "原节说明隐性亲本固定一个配子，以及两个候选基因型各自的分离预期。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "原节说明隐性亲本固定一个配子，以及两个候选基因型各自的分离预期。",
+        "read": "原节说明隐性亲本固定一个配子，以及两个候选基因型各自的分离预期。"
+      },
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/12-2-characteristics-and-traits",
+          "summary": "原节说明隐性亲本固定一个配子，以及两个候选基因型各自的分离预期。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/hs-biology/study-testcross/study-testcross-evidence"
+    },
+    {
+      "id": "hs-study-source-politics",
+      "title": "官方法条 · 核对校园报名的用处与字段",
+      "kind": "教材与原始资料阅读",
+      "repository": null,
+      "checked": "2026-11-20",
+      "targets": [
+        {
+          "course": "hs-politics",
+          "section": "study-personal-data"
+        }
+      ],
+      "question": "报名表只用于核验与通知时，能否说明每一项信息的必要性？",
+      "summary": "使用官方转载法条来做课堂材料分析。具体实际合规判断还需完整情境。",
+      "steps": [
+        "读第六、十三和十七条，分开抄读“依据”“范围”“说明”。",
+        "写下教学报名场景的目的，把姓名、联系渠道和地址分别与目的对应。",
+        "给出少字段版本，注明真实情形改变时需要重新判断哪些事实。"
+      ],
+      "output": "完成一份含推理、资料位置与判断边界的自查记录。",
+      "requirements": "打开原站和对应讲解。使用纸笔或浏览器作答。",
+      "license": "保留原站权利，本站提供链接及独立学习任务。",
+      "links": [
+        {
+          "label": "打开参考",
+          "url": "https://www.samr.gov.cn/wljys/gzzd/art/2023/art_3ef1e889c1e644d4b65b5f5c7f432386.html"
+        }
+      ],
+      "limits": [
+        "使用官方转载法条来做课堂材料分析。具体实际合规判断还需完整情境。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "使用官方转载法条来做课堂材料分析。具体实际合规判断还需完整情境。",
+        "read": "使用官方转载法条来做课堂材料分析。具体实际合规判断还需完整情境。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.samr.gov.cn/wljys/gzzd/art/2023/art_3ef1e889c1e644d4b65b5f5c7f432386.html",
+          "summary": "使用官方转载法条来做课堂材料分析。具体实际合规判断还需完整情境。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/hs-politics/study-personal-data/study-privacy-basis"
+    },
+    {
+      "id": "hs-study-source-history",
+      "title": "联合国条约集 · 对证宪章的生效",
+      "kind": "教材与原始资料阅读",
+      "repository": null,
+      "checked": "2026-11-20",
+      "targets": [
+        {
+          "course": "hs-history",
+          "section": "study-charter"
+        }
+      ],
+      "question": "条约页面提供的字段能怎样证实组织成立日期？",
+      "summary": "条约集给出 1945 年 10 月 24 日并指向第 110 条；签署和生效分别核对。",
+      "steps": [
+        "在条约集查看 Entry into force 字段，辨认其所依据的《宪章》第 110 条。",
+        "再核对正文所链旧金山会议史料中的通过和签署，写成三个事件。",
+        "对一个只给出签署日期的材料，说明其证据范围和还缺哪一项资料。"
+      ],
+      "output": "完成一份含推理、资料位置与判断边界的自查记录。",
+      "requirements": "打开原站和对应讲解。使用纸笔或浏览器作答。",
+      "license": "保留原站权利，本站提供链接及独立学习任务。",
+      "links": [
+        {
+          "label": "打开参考",
+          "url": "https://treaties.un.org/Pages/ViewDetails.aspx?chapter=1&mtdsg_no=I-1&src=IND"
+        }
+      ],
+      "limits": [
+        "条约集给出 1945 年 10 月 24 日并指向第 110 条；签署和生效分别核对。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "条约集给出 1945 年 10 月 24 日并指向第 110 条；签署和生效分别核对。",
+        "read": "条约集给出 1945 年 10 月 24 日并指向第 110 条；签署和生效分别核对。"
+      },
+      "evidence": [
+        {
+          "url": "https://treaties.un.org/Pages/ViewDetails.aspx?chapter=1&mtdsg_no=I-1&src=IND",
+          "summary": "条约集给出 1945 年 10 月 24 日并指向第 110 条；签署和生效分别核对。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/hs-history/study-charter/study-charter-evidence"
+    },
+    {
+      "id": "hs-study-source-geography",
+      "title": "USGS · 从下渗读到小流域径流",
+      "kind": "教材与原始资料阅读",
+      "repository": null,
+      "checked": "2026-11-20",
+      "targets": [
+        {
+          "course": "hs-geography",
+          "section": "study-runoff"
+        }
+      ],
+      "question": "为什么用地面积变化能影响径流总量，却不够单独解释洪峰时刻？",
+      "summary": "USGS 提供径流和城市化机制说明；本站教学数值不是当地监测数据。",
+      "steps": [
+        "读地表径流与城市铺装段落，画出地表、土壤、排水沟和出口。",
+        "按 LN 题设把毫米乘面积换成立方米，标出使用的是合成系数。",
+        "画同总量但不同峰值的两条流量过程线，并注明调蓄或入流假设。"
+      ],
+      "output": "完成一份含推理、资料位置与判断边界的自查记录。",
+      "requirements": "打开原站和对应讲解。使用纸笔或浏览器作答。",
+      "license": "保留原站权利，本站提供链接及独立学习任务。",
+      "links": [
+        {
+          "label": "打开参考",
+          "url": "https://www.usgs.gov/water-science-school/science/runoff-surface-and-overland-water-runoff"
+        }
+      ],
+      "limits": [
+        "USGS 提供径流和城市化机制说明；本站教学数值不是当地监测数据。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "USGS 提供径流和城市化机制说明；本站教学数值不是当地监测数据。",
+        "read": "USGS 提供径流和城市化机制说明；本站教学数值不是当地监测数据。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.usgs.gov/water-science-school/science/runoff-surface-and-overland-water-runoff",
+          "summary": "USGS 提供径流和城市化机制说明；本站教学数值不是当地监测数据。"
+        }
+      ],
+      "downloads": [],
+      "localLesson": "#course/hs-geography/study-runoff/study-runoff-volume"
     }
   ]
 }

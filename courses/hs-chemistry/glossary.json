@@ -1,0 +1,21 @@
+{
+  "lazy": true,
+  "symbolDefinitions": [
+    {
+      "id": "study-chemistry-symbols",
+      "title": "Q_c、K_c、c°",
+      "keys": [
+        "Q_c",
+        "K_c",
+        "c"
+      ],
+      "section": "study-equilibrium",
+      "sections": [
+        "study-equilibrium"
+      ],
+      "sourceAnchor": "study-chemistry-symbols",
+      "match": "当前组成的浓度反应商",
+      "description": "Q_c、K_c、c° 的含义与约定见本节定义。"
+    }
+  ]
+}

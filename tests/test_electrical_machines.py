@@ -43,11 +43,13 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 60)
+        self.assertEqual(len(self.sections), 62)
+        self.assertIn('ac-induction-slip', self.sections)
+        self.assertIn('ac-synchronous-angle', self.sections)
         self.assertIn('dc-chapter-test', self.sections)
         self.assertIn('data-open-practice', self.payloads['dc-chapter-test']['html'])
         self.assertIn('dc-homework-review', self.sections)
-        self.assertEqual(len({section['group'] for section in self.sections.values()}), 4)
+        self.assertEqual(len({section['group'] for section in self.sections.values()}), 5)
         self.assertEqual(self.sections['mmf-sec47']['textbookSection'], '4.7')
         self.assertIn('transformer-homework', self.sections)
         self.assertIn('winding-model', self.sections)
@@ -73,12 +75,18 @@ class CourseIntegrity(unittest.TestCase):
         self.assertIn('196 V', html)
 
     def test_local_links_and_reference_targets(self):
+        questions = {q['id']: q for q in json.loads((ROOT / 'courses/practice/bank.json').read_text())['questions']}
         for key, document in self.markup.items():
             for url in document.urls:
                 if url.startswith('https://'):
                     self.assertNotIn('chatgpt.site', url)
                 elif url.startswith(('#course/', '#practice/')):
                     parts = unquote(url).split('/')
+                    if parts[0] == '#practice' and len(parts) > 3:
+                        question = questions[parts[3]]
+                        self.assertEqual(question['course'], parts[1], url)
+                        self.assertIn(parts[2], question['sections'], url)
+                        continue
                     if parts[1] == self.manifest['id']:
                         self.assertIn(parts[2], self.sections, (key, url))
                         destination = self.markup[parts[2]]

@@ -1,0 +1,9 @@
+<section class="reader-section">
+<h2>从电阻率走到回路压降与发热</h2>
+<p>导体的电阻随长度增加而上升，截面越大可以容纳的并行电流通路越多。因此选导线既要核查材料电阻率，也要画实际去、回路径和连接。题给“一米电缆”可能对应两米导体。</p>
+<h3 id="materials-copper-loop" data-knowledge-kind="方法" data-knowledge-terms="导电材料 铜线 电阻率 电流密度 回路 电压降 温度">先算单程，再按连接得到整个回路</h3>
+<p id="materials-transport-symbols">\(\rho\) 是指定温度的电阻率（Ω·m），\(\ell\) 是这段电流路径的长度（m），\(A\) 是均匀截面积（m²），\(I\) 是直流电流（A）。\(R\) 是路径电阻（Ω），\(\Delta U\) 为压降（V），\(P\) 为损耗功率（W）。忽略接头、集肤效应及电流非均匀分布。</p>
+\[R=\rho\frac{\ell}{A},\qquad \Delta U=IR,\qquad P=I^2 R.\]
+<p>以 20 °C 的退火铜教学值 \(\rho\approx1.72\times10^{-8}\,\Omega\mathrm m\) 估算。相距 1 m 的电源、负载按去回各 1 m，线径规格给截面积 1 mm²，即 \(10^{-6}\,\mathrm{m^2}\)。回路电阻约 34.4 mΩ；10 A 时导线压降约 0.344 V，功率约 3.44 W。</p>
+<p>若铜近似承受统一 80 °C、按 20 °C 线性温度系数约 \(0.0039\,\mathrm K^{-1}\)，电阻约为原来的 1.234 倍。恒流电源下导线耗散跟着增大；恒压系统中电流也可能变化，需要把负载一起列入。大频率下应考虑交流电阻；任何放热估算还需散热和绝缘条件才能推允许载流量。参考 <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/hb/nbshandbook100.pdf" target="_blank" rel="noopener">NBS · Copper Wire Tables</a>。</p>
+</section>

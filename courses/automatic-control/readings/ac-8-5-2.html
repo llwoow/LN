@@ -1,0 +1,10 @@
+<section class="reader-section">
+<h2>精确采样模型为什么不等同于欧拉近似</h2>
+<p>电驱中的数字控制器每隔固定时间更新命令。若被控对象连续演化，沿时间轴画出两次更新之间真正加在对象上的量，再决定离散系数。下面把固定转子的 RL 绕组当成一阶对象，忽略电刷和驱动限流，假定在相邻采样之间端电压恒定。</p>
+<h3 id="control-zoh-current" data-knowledge-kind="方法" data-knowledge-terms="零阶保持 ZOH 精确离散化 欧拉法 采样 RL 单位圆">跟着一个采样间隔把电流从初值推到下一刻</h3>
+<p id="control-zoh-symbols">\(R,L\) 分别是绕组电阻（Ω）和电感（H），\(T_s\) 为采样间隔（s），\(i_k\) 是第 \(k\) 次采样的电流（A），\(u_k\) 为该间隔内保持的端电压（V）。该间隔若无限延长，电流会趋向 \(u_k/R\)；距它的差按时间常数 \(L/R\) 指数缩小。</p>
+\[i_{k+1}=a i_k+(1-a)\frac{u_k}{R},\qquad a=e^{-RT_s/L}.\]
+<p>取 \(R=2\,\Omega,L=4\,\mathrm{mH},u_0=6\,\mathrm V,i_0=0\)。保持 1 ms 时，\(a=e^{-0.5}\approx0.6065\)，故 \(i_1\approx1.18\,\mathrm A\)。逐步迭代还会趋近 3 A。对同一微分方程采用前向欧拉，则用 \(1-RT_s/L\) 代替指数系数。1 ms 时该系数为 0.5，一步预测成了 1.5 A。</p>
+<p>若增大到 5 ms，精确保持模型的系数为 \(e^{-2.5}\approx0.0821\)，原开环绕组仍会衰减；而显式欧拉系数为 −1.5，数值误差不仅变号而且放大。这里的发散来自积分步长，闭环是否稳定则要另建真实的更新、计算延迟、量化和反馈模型。采样稳定性分析应用单位圆判据；实时环节的时序见<a href="#course/robot-drive-engineering/rd-sampling-time">采样到 PWM 生效的延迟</a>。</p>
+<p><a class="secondary-button" data-open-practice href="#practice/automatic-control/ac-8-5-2/ac-core-zoh-vs-euler">练一题：区分数值发散和实际不稳定</a></p>
+</section>

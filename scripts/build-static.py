@@ -9,6 +9,7 @@ root = Path(__file__).resolve().parents[1]
 subprocess.run([sys.executable, str(root / 'scripts/build-transformer-homework.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-physics001.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-highschool.py')], check=True)
+subprocess.run([sys.executable, str(root / 'scripts/build-course-readings.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-robot-drive.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-power-semiconductors.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/check-teaching.py')], check=True)
@@ -25,7 +26,7 @@ shutil.copytree(root / 'audit', out / 'audit', ignore=shutil.ignore_patterns('*.
 subprocess.run([sys.executable, str(root / 'scripts/build-course-audit.py'), '--output', str(out / 'audit/inventory.json')], check=True)
 for name in ('assets', 'courses'):
     shutil.copytree(root / name, out / name,
-                    ignore=shutil.ignore_patterns('*.md', '*.pdf', '*.xlsx', '*.xls', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.zip', '*.7z', '*.rar', '__pycache__', 'verification', 'originals'))
+                    ignore=shutil.ignore_patterns('*.md', '*.pdf', '*.xlsx', '*.xls', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.zip', '*.7z', '*.rar', '__pycache__', 'verification', 'originals', 'readings', 'studies'))
 # The authored standalone answer is a separate reading/print artifact, not source PDFs.
 answer_source = root / 'answers/power-semiconductors/chapter-2'
 answer_out = out / 'answers/power-semiconductors/chapter-2'

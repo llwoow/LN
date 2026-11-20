@@ -1,0 +1,12 @@
+<section class="reader-section">
+<h2>相位裕度与增益裕度从两处不同的交越读出</h2>
+<p>负反馈系统的特征方程为 \(1+L(s)=0\)。当开环频率响应靠近 \(-1\) 时，返回的一周信号可能接近“同相且一样大”。裕度刻画从两种指定方向接近该点还有多远。先把观测对象固定为沿回路一周的传递函数，别从闭环输出曲线上随手读一个 −3 dB 点。</p>
+<h3 id="control-margin-example" data-knowledge-kind="难点" data-knowledge-terms="增益裕度 相位裕度 奈奎斯特 伯德 交越 额外延迟">在一个能手算的三阶回路上分别读两种裕度</h3>
+<p id="control-margin-symbols">取开环 \(L(s)=4/(1+s)^3\)，其中 \(s\) 为复频率（以每秒为尺度），三段时间常数各 1 s。\(\omega\) 为角频率（rad/s）；\(\omega_c\) 指增益交越频率，\(\omega_{180}\) 指相位到 −180° 的频率。</p>
+\[|L(j\omega)|=\frac{4}{(1+\omega^2)^{3/2}},\qquad \angle L(j\omega)=-3\arctan\omega.\]
+<p>先看相位。当每段滞后 60°，三段合为 180°，所以 \(\omega_{180}=\sqrt 3\)。此时模为 4/8=0.5，再把增益乘 2 才抵达临界点。因此增益裕度为 2 倍，也就是约 6.02 dB。</p>
+<p>再看幅值。令模为 1，可得 \(\omega_c=\sqrt{4^{2/3}-1}\approx1.233\,\mathrm{rad/s}\)。代回相位，在此频率还离 −180° 约 27°。额外纯延迟 \(T_d\) 不改变模，它在这一点多引入 \(-\omega_c T_d\) 弧度的相位。以原稳定、单一交越的回路估算首个临界延迟约 0.38 s。实际设计需保留余量。</p>
+<figure id="loop-margin-plot"><a class="plot-zoom" href="courses/automatic-control/assets/loop-margins.png" target="_blank" rel="noopener" aria-label="放大稳定裕度图"><img loading="lazy" src="courses/automatic-control/assets/loop-margins.png" width="1078" height="682" alt="增益交越处先读相位距离，相位交越处读幅值距离，两条竖线分别标出频率。"></a><figcaption>三阶回路的幅相曲线。先分别找到两条交越竖线，幅值间隔与相位间隔在不同频点读。</figcaption></figure>
+<p>可用特征方程交叉检查增益边界。把分子 4 改作 \(K\)，分母特征式为 \(s^3+3s^2+3s+1+K\)。三阶劳斯条件给正增益 \(K&lt;8\)；到 8 确有共轭虚轴根。若开环有右半平面极点、虚轴极点或多个交越，应检查完整奈奎斯特轨迹和开环不稳定极点数，不能凭一对正裕度判定稳定。参见<a href="#course/automatic-control/ac-3-5">劳斯判据</a>与<a href="#course/robot-drive-engineering/rd-cascade-control">电驱采样和执行延迟</a>。</p>
+<p><a class="secondary-button" data-open-practice href="#practice/automatic-control/ac-5-6-9/ac-core-gain-margin">练一题：从相位交越复算增益裕度</a></p>
+</section>

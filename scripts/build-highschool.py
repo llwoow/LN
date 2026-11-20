@@ -1,43 +1,22 @@
 """Build the high-school outline from the supplied Hainan textbook index."""
 from pathlib import Path
-import html
 import json
-import re
-import subprocess
+from lesson_math import render
 
 ROOT = Path(__file__).resolve().parents[1]
 ORDER = ['chinese','math','english','physics','chemistry','biology','politics','history','geography']
 TRACKS = {'chinese':'语言','english':'语言','math':'数理化生','physics':'数理化生','chemistry':'数理化生','biology':'数理化生','politics':'政史地','history':'政史地','geography':'政史地'}
-MATH = re.compile(r'\\\[(.*?)\\\]|\\\((.*?)\\\)', re.S)
 
 
 def dump(value):
     return json.dumps(value, ensure_ascii=False, separators=(',', ':'))
 
 
-def render(markup, prefix):
-    matches = list(MATH.finditer(markup))
-    if not matches:
-        return markup
-    expressions = [{'tex': html.unescape(m[1] if m[1] is not None else m[2]), 'display': m[1] is not None} for m in matches]
-    proc = subprocess.run(['node', str(ROOT/'scripts/render-math.cjs')], input=dump(expressions), text=True, capture_output=True)
-    if proc.returncode:
-        raise ValueError('Math rendering failed in '+prefix+': '+proc.stderr[-1800:])
-    rendered = iter(json.loads(proc.stdout)); sequence = 0
-    def substitute(match):
-        nonlocal sequence
-        formula = next(rendered)
-        if match[1] is not None:
-            sequence += 1
-            return '<div class="math display" data-equation="'+prefix+'.'+str(sequence)+'">'+formula+'</div>'
-        return '<span class="math inline">'+formula+'</span>'
-    return MATH.sub(substitute, markup)
-
-
 def build():
     courses = []
     directory = ROOT / 'courses/highschool'
     learning_paths = json.loads((directory / 'learning-paths.json').read_text(encoding='utf-8'))
+    studies = json.loads((directory / 'studies/catalog.json').read_text(encoding='utf-8'))
     for slug in ORDER:
         course_id = 'hs-' + slug
         folder = ROOT / 'courses' / course_id
@@ -68,21 +47,49 @@ def build():
             'knowledgeMap': {'chapters': chapters, 'paths': paths},
         }
         supplemental = folder / 'supplements.json'
+        materials = []
         if supplemental.exists():
-            extras = json.loads(supplemental.read_text(encoding='utf-8'))
-            for material in extras['materials']:
+            materials.extend(json.loads(supplemental.read_text(encoding='utf-8'))['materials'])
+        study_sections, study_links = [], []
+        material_group = '专题学习'
+        for study in studies.get(slug, []):
+            section_id, title = study['id'], study['title']
+            source = folder / 'lessons' / (section_id + '.js')
+            source.parent.mkdir(exist_ok=True)
+            document = (directory / 'studies' / study['file']).read_text(encoding='utf-8')
+            source.write_text('window.LN_LESSONS=window.LN_LESSONS||{};window.LN_LESSONS[' + dump(course_id + '/' + section_id) + ']=' + dump({'html': render(document, study['equationPrefix'])}) + ';\n', encoding='utf-8')
+            study_sections.append({'id': section_id, 'title': title, 'group': material_group,
+                                   'kind': 'html', 'supplement': 'study', 'keywords': study['keywords'],
+                                   'src': source.relative_to(ROOT).as_posix()})
+            for link in study['connections']:
+                if link['section'] not in ids:
+                    raise ValueError('Study link does not refer to a textbook node: ' + link['section'])
+                study_links.append({'from': link['section'], 'to': section_id,
+                                    'label': link['label'], 'description': link['description']})
+        if study_sections:
+            materials.append({'group': material_group, 'description': '从具体问题进入教材知识',
+                              'links': [{'label': '教材与来源', 'href': '#highschool/resources'}],
+                              'sections': study_sections, 'knowledgeLinks': study_links})
+        if materials:
+            for material in materials:
                 for section in material['sections']:
                     if section['id'] in ids or not (ROOT / section['src']).is_file():
                         raise ValueError('Invalid supplementary section: ' + section['id'])
                     ids.add(section['id'])
                     manifest['sections'].append(section)
                 manifest['resources'][material['group']] = {'links': material['links']}
-                manifest['knowledgeMap']['chapters'].append({'group': material['group'], 'description': material['description']})
+                if material['group'] not in {chapter['group'] for chapter in manifest['knowledgeMap']['chapters']}:
+                    manifest['knowledgeMap']['chapters'].append({'group': material['group'], 'description': material['description']})
                 manifest['knowledgeMap'].setdefault('links', []).extend(material.get('knowledgeLinks', []))
-            manifest['knowledgeMap']['nodes'] = [{'section': s['id'], 'title': s['title'], 'note': s.get('curriculum') or ('原卷与学习记录' if s['id']=='physics-001' else '逐题讲解与运动模型')} for s in manifest['sections']]
+            def map_note(section):
+                if section.get('supplement') == 'study':
+                    return ' · '.join(section['keywords'])
+                return section.get('curriculum') or ('试卷讲解与学习记录' if section['id'] == 'physics-001' else '逐题讲解与运动模型')
+            manifest['knowledgeMap']['nodes'] = [{'section': s['id'], 'title': s['title'], 'note': map_note(s)} for s in manifest['sections']]
             manifest['outlineOnly'] = False
-            manifest['topics'] = ['教材目录', '试卷讲解']
-            manifest['glossary'] = 'courses/' + course_id + '/glossary-index.js'
+            manifest['topics'] = ['教材目录', *[m['group'] for m in materials]]
+            if (folder / 'glossary.json').is_file():
+                manifest['glossary'] = 'courses/' + course_id + '/glossary-index.js'
         (folder / 'manifest.js').write_text('window.LN_HS_' + slug.upper() + '=' + dump(manifest) + ';\n', encoding='utf-8', newline='\n')
         courses.append(manifest)
     (directory / 'courses.js').write_text('window.LN_HIGH_SCHOOL_COURSES=' + dump(courses) + ';\n', encoding='utf-8', newline='\n')

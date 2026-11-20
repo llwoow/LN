@@ -256,12 +256,17 @@
       ? (course.sections.find(section => section.kind !== 'outline') || course.sections[0])
       : course.sections[0]);
     const model = course.sections.find((section) => section.kind === 'model');
-    const modelActive = model && location.hash.split('/')[2] === model.id;
-    const material = course.sections.find(section=>section.supplement);
-    const materialLink = material ? '<a href="#course/'+course.id+'/'+material.id+'">试卷讲解</a>' : '';
+    const selectedId = location.hash.split('/')[2];
+    const modelActive = model && selectedId === model.id;
+    const material = course.sections.find(section=>section.supplement === 'physics-001');
+    const study = course.sections.find(section=>section.supplement === 'study');
+    const supplement = course.sections.find(section=>section.id === selectedId)?.supplement;
+    const supplementalLink = (section, label) => section ? '<a href="#course/' + course.id + '/' + section.id + '"' + (supplement === section.supplement ? ' aria-current="page"' : '') + '>' + label + '</a>' : '';
+    const materialLink = supplementalLink(material, '试卷讲解');
+    const studyLink = supplementalLink(study, '专题学习');
     const workedLink = course.workedExercises?.length ? '<a href="#course/' + course.id + '/worked-exercises"' + (active === 'worked' ? ' aria-current="page"' : '') + '>已做题详解</a>' : '';
     const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
-    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive ? ' aria-current="page"' : '') + '>' + icon('book') + (course.outlineOnly ? '章节目录' : '章节阅读') + '</a>' + workedLink + modelLink + materialLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
+    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive && !supplement ? ' aria-current="page"' : '') + '>' + icon('book') + (first.kind === 'outline' ? '章节目录' : '章节阅读') + '</a>' + workedLink + modelLink + studyLink + materialLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
   }
 
   function renderWorkedExercises(course) {

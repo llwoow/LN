@@ -1,0 +1,10 @@
+<section class="reader-section">
+<h2>电介质为什么能储能，又为什么在交流下发热</h2>
+<p>把绝缘片夹在两块金属板中间。外电场使材料内部束缚电荷重排，称为极化，等电压下极板可以容纳更多自由电荷。若电压反复换向，部分极化过程来不及跟上，电场做的功有一部分变成热；此外仍可能有漏导电流。电容值本身说不清这些损耗。</p>
+<h3 id="materials-loss-tangent" data-knowledge-kind="难点" data-knowledge-terms="电介质 介电常数 介质损耗 损耗角 正切 极化 漏电">把同相电流和正交电流分开量</h3>
+<p id="materials-dielectric-symbols">在固定频率、小信号正弦稳态，用电导 \(G\)（S）和电容 \(C\)（F）并联描述端口。\(U\) 是有效值电压（V），\(\omega=2\pi f\) 是角频率（rad/s），\(f\) 是频率（Hz）。同相电流为 \(GU\)，超前 90° 的电容电流为 \(\omega C U\)。把两者的比定义为损耗角正切 \(\tan\delta\)，有功损耗为 \(P\)（W）。</p>
+\[\tan\delta=\frac{G}{\omega C},\qquad P=U^2G=\omega C U^2\tan\delta.\]
+<p>教学参数 \(C=1\,\mu\mathrm F\)、\(f=20\,\mathrm{kHz}\)、\(U=10\,\mathrm V\)、\(\tan\delta=0.02\) 时，正交电流约 1.257 A，同相电流约 0.0251 A，损耗约 0.251 W。直接拿 1.257 A 乘电压，只会把主要储能交换误算为平均耗散。若电压翻倍且材料仍在同一线性状态，平均损耗会变为四倍。</p>
+<p>参数应在指定频率、温度、偏置和电场强度下核对。直流漏电需单独记录；有脉冲和谐波时不同频率的损耗参数也可能不同。这里的同相/正交分解可回查<a href="#course/automatic-control/ac-5-1/control-frequency-rc">相量与复阻抗</a>。允许储能还受<a href="#course/electrical-materials/em-7-1/study-capacitor-energy-density">击穿与工程降额</a>限制。</p>
+<p><a class="secondary-button" data-open-practice href="#practice/electrical-materials/em-3-1/emat-core-dielectric-loss">练一题：从损耗角推有功</a></p>
+</section>

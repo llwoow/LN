@@ -12,7 +12,7 @@ const course = ctx.window.LN_ELECTRICAL_MATERIALS;
 const map = ctx.window.LN_ELECTRICAL_MATERIALS_MAP;
 const bookIds=new Set(course.sections.filter(s=>s.textbookSection).map(s=>s.id));
 assert.equal(bookIds.size,29);
-assert.equal(course.sections.filter(s=>s.kind==='outline').length,24);
+assert.equal(course.sections.filter(s=>s.kind==='outline').length,17);
 for(const id of ['em-test-summary','em-test-fill','em-test-short','em-test-review'])assert(course.sections.some(s=>s.id===id&&s.kind==='html'));
 assert.equal(course.sections.length,33);
 const found = new Set();

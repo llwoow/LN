@@ -1,0 +1,22 @@
+{
+  "lazy": true,
+  "symbolDefinitions": [
+    {
+      "id": "study-geo-symbols",
+      "title": "A、h、C_e、V_r",
+      "keys": [
+        "A",
+        "h",
+        "C_e",
+        "V_r"
+      ],
+      "section": "study-runoff",
+      "sections": [
+        "study-runoff"
+      ],
+      "sourceAnchor": "study-geo-symbols",
+      "match": "直接径流体积与降水总体积",
+      "description": "A、h、C_e、V_r 的含义与约定见本节定义。"
+    }
+  ]
+}

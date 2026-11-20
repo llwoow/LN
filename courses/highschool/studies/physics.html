@@ -1,0 +1,16 @@
+<section class="reader-section">
+<h2>同一个电容，接着电源与断开电源有什么不同</h2>
+<p>平行板电容器中完全插入绝缘介质。假定板间距离和有效面积不变，忽略边缘场和漏电。实验里只差一处操作：一个电容器接在理想恒压源上，另一个充好电后断开电源。两者的电容都变大，储能会不会同样增大？</p>
+<h3 id="study-capacitor-constraint" data-knowledge-kind="难点" data-knowledge-terms="电容 电介质 储能 固定电压 固定电荷 电场">先由连线决定哪个量能交换</h3>
+<p id="study-capacitor-symbols">电容 \(C\) 的单位是 F，极板自由电荷量的大小 \(Q\) 用 C 作单位，板间电压 \(V\) 用 V，电场储能 \(W\) 用 J。线性电容的关系为 \(Q=CV\)。缓慢从零充电时，电压随电荷从零增加到 \(V\)，平均为 \(V/2\)，每一小份电荷接收功，合计为下面的能量。</p>
+\[W=\frac{QV}{2}=\frac{CV^2}{2}=\frac{Q^2}{2C}.\]
+<p>用一组共同的初值 \(C=2\,\mu\mathrm F\)、\(V=10\,\mathrm V\)，此时 \(Q=20\,\mu\mathrm C\)，\(W=100\,\mu\mathrm J\)。插入后电容变为 4 μF。</p>
+<table id="study-capacitor-cases">
+<caption>电容翻倍时的两种边界</caption>
+<thead><tr><th scope="col">连接</th><th scope="col">变化后</th><th scope="col">储能</th></tr></thead>
+<tbody><tr><th scope="row">接恒压源</th><td>10 V，40 μC</td><td>200 μJ</td></tr><tr><th scope="row">断开且忽略漏电</th><td>5 V，20 μC</td><td>50 μJ</td></tr></tbody>
+</table>
+<p>恒压情况电源还送入额外电荷，并做功 \(10\,\mathrm V\times20\,\mu\mathrm C=200\,\mu\mathrm J\)，大于增加的 100 μJ 电场能。其余在理想缓慢过程中与介质位移的机械功有关；断开时没有电源供能，电场能降低也可转成机械功。遇到类似题先在图上圈出电源及仍相连的极板，再看哪个量恒定。</p>
+<p>器件为何不能只为了储能选高介电常数，看<a href="#course/electrical-materials/em-7-1/study-capacitor-energy-density">介质的击穿场强与允许储能</a>。参考 <a href="https://openstax.org/books/university-physics-volume-2/pages/8-3-energy-stored-in-a-capacitor" target="_blank" rel="noopener">OpenStax · 电容储能</a>。</p>
+<p><a class="secondary-button" data-open-practice href="#practice/hs-physics/study-capacitor/hs-core-capacitor-boundary">练一题：用连线判断能量变化</a></p>
+</section>

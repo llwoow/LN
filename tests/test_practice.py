@@ -42,7 +42,12 @@ class PracticeContent(unittest.TestCase):
             'emc-impulse-shield-current':1/(1+3)*100,
             # New electrical materials keys independently recomputed from SI units and Hooke/Fourier relations.
             'emat-2-thermal':Fraction(4,1000)/(Fraction(1,5)*Fraction(1,100)),
-            'emat-2-modulus':(400/(2e-6))/(0.1/100)/1e9}
+            'emat-2-modulus':(400/(2e-6))/(0.1/100)/1e9,
+            'hs-core-conditional-denominator':100*Fraction(8,8+12),
+            'hs-core-capacitor-boundary':Fraction((3*6)**2,2*9),
+            'ac-core-gain-margin':1/abs(2/(1+math.sqrt(3)*1j)**3),
+            'emat-core-dielectric-loss':100*(2*math.pi*1e4*1e-6)*.02,
+            'em-core-induction-loss':8000*Fraction(1500-1425,1500)}
         # Robot-drive keys have an independent calculation registry in test_robot_drive.py.
         numeric={q['id'] for q in self.questions if q['type']=='numeric' and q['course']!='robot-drive-engineering'}
         self.assertEqual(numeric,set(expected))

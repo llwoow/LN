@@ -1021,6 +1021,24 @@
       ],
       "unitHtml": "A",
       "match": "把PNP记作T₁、NPN记作T₂"
+    },
+    {
+      "id": "psd-pulse-symbols",
+      "section": "device-selection",
+      "sections": [
+        "device-selection"
+      ],
+      "sourceAnchor": "psd-pulse-symbols",
+      "match": "是结温超过壳温的部分",
+      "title": "R_θ、τ、P、ΔT、a",
+      "keys": [
+        "R_θ",
+        "τ",
+        "P",
+        "delta:T",
+        "a"
+      ],
+      "description": "本算例的量、参考方向与单位。"
     }
   ]
 }

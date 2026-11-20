@@ -40,10 +40,12 @@ class AutomaticControlTests(unittest.TestCase):
         ids=[s["id"] for s in sections]
         self.assertEqual(len(ids),len(set(ids)))
         self.assertEqual(len(set(s["group"] for s in sections)),8)
-        self.assertEqual([s["id"] for s in sections if s["kind"] != "outline"],[
+        self.assertEqual([s["id"] for s in sections if s["kind"] != "outline" and "manuscript" not in s],[
             "ac-3-1","ac-3-2","ac-3-3","ac-3-4","ac-3-5","ac-3-6","ac-3-7","ac-homework3",
             "ac-4-1","ac-4-2","ac-4-2-1","ac-4-2-2","ac-4-2-3","ac-4-2-4","ac-4-3","ac-4-3-1","ac-4-4","ac-homework4"
         ])
+        self.assertEqual({s['id'] for s in sections if 'manuscript' in s},
+                         {'ac-1-1', 'ac-2-1', 'ac-5-1', 'ac-5-6-9', 'ac-6-5', 'ac-7-1', 'ac-8-5-2'})
         self.assertEqual(self.course["textbook"]["isbn"],"9787302665564")
         self.assertEqual(self.course["textbook"]["edition"],3)
         for section in sections:
@@ -143,10 +145,10 @@ class AutomaticControlTests(unittest.TestCase):
     def test_practice_bank(self):
         course_questions=[q for q in self.bank["questions"] if q["course"]=="automatic-control"]
         self.assertIn('ac-dominant-pole-window', {q['id'] for q in course_questions})
-        self.assertEqual(len(course_questions),14)
+        self.assertEqual(len(course_questions),18)
         self.assertEqual({q["id"] for q in course_questions},{q["id"] for q in self.compiled["questions"] if q["course"]=="automatic-control"})
         self.assertIn("automatic-control",self.index)
-        self.assertEqual(len(self.index["automatic-control"]["sections"]),18)
+        self.assertEqual(len(self.index["automatic-control"]["sections"]),25)
 
     def test_root_locus_lesson_and_bank(self):
         lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-4-2-2.js")["html"]

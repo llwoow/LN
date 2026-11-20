@@ -2607,6 +2607,62 @@
       ],
       "unitHtml": "安匝",
       "match": "合成波最大值恒为"
+    },
+    {
+      "id": "induction-slip-symbols",
+      "section": "ac-induction-slip",
+      "sections": [
+        "ac-induction-slip"
+      ],
+      "sourceAnchor": "induction-slip-symbols",
+      "match": "是转子机械转速",
+      "title": "f_1、p、n_s、n、s、f_2",
+      "keys": [
+        "f_1",
+        "p",
+        "n_s",
+        "n",
+        "s",
+        "f_2"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "induction-power-symbols",
+      "section": "ac-induction-slip",
+      "sections": [
+        "ac-induction-slip"
+      ],
+      "sourceAnchor": "induction-power-symbols",
+      "match": "以流入转子为正",
+      "title": "P_g、P_conv、P_Cu2、T_e、ω_s、ω",
+      "keys": [
+        "P_g",
+        "P_conv",
+        "P_Cu2",
+        "T_e",
+        "ω_s",
+        "ω"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "synchronous-angle-symbols",
+      "section": "ac-synchronous-angle",
+      "sections": [
+        "ac-synchronous-angle"
+      ],
+      "sourceAnchor": "synchronous-angle-symbols",
+      "match": "是每相同步电抗",
+      "title": "V、E、δ、X_s、I",
+      "keys": [
+        "V",
+        "E",
+        "δ",
+        "X_s",
+        "I"
+      ],
+      "description": "本算例的量、参考方向与单位。"
     }
   ]
 }
