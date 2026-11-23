@@ -1955,6 +1955,55 @@
           "summary": "官方课程页"
         }
       ]
+    },
+    {
+      "id": "new-energy-energy-chain-review",
+      "title": "能源形式与储能方式：画出转换链并判定存储介质",
+      "kind": "LN 站内知识推演",
+      "repository": null,
+      "checked": "2026-11-23",
+      "targets": [
+        {
+          "course": "new-energy-materials",
+          "section": "nem-1-2"
+        },
+        {
+          "course": "new-energy-materials",
+          "section": "nem-2-2"
+        },
+        {
+          "course": "new-energy-materials",
+          "section": "nem-2-3"
+        },
+        {
+          "course": "new-energy-materials",
+          "section": "nem-homework"
+        }
+      ],
+      "question": "同样是储电，为何抽水蓄能、锂电池与超级电容器的实际储存形式不同？",
+      "summary": "依据课程已有能量形式、守恒与储能章节，逐步划分能量输入、储存位置、输出和可能的不可逆损失。",
+      "steps": [
+        "先在能量形式章节确认机械、热、电、辐射、化学和核能六类，不要把动能、势能另列为同级。",
+        "选择抽水蓄能、锂离子电池和超级电容器，各写出输入电能、内部储存形态以及释能时的输出路径。",
+        "将机械、热、电、化学四类教材组织与工程上机械、电化学、电磁、热、化学分类对照，说明分类口径区别。",
+        "独立回答课堂的两道习题，再展开参考答案核对实际遗漏。"
+      ],
+      "output": "三条能量转换链、不同分类口径比较和课堂两题的自主作答。",
+      "requirements": "只需 LN 站内课程正文与纸笔，不需要安装软件、购买材料或提供个人学习记录。",
+      "license": "本站知识整理和教学任务；不提供教材扫描原件或学生私人手写材料。",
+      "links": [],
+      "limits": [
+        "未经过课堂学习效果试验或难度标定。",
+        "仅是基本机制辨析，不代表储能设备效率与经济性完整设计。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "课程内可读的概念推演任务，未作为实验或真实系统验证。",
+        "read": "按教材第1章能量形式、第2章能量储存和转换相关段落及本次课堂两题核对。"
+      },
+      "evidence": [],
+      "downloads": [],
+      "localLesson": "#course/new-energy-materials/nem-homework"
     }
   ]
 }
