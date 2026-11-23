@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-2-1"]={"html":"<section class=\"article-section\" id=\"nem-2-1\"><h2>2.1 能量定律</h2><p>能量守恒给出数量约束，而能量贬值反映真实过程的方向性。摩擦造成的热不是“消失的能量”，但它通常比有序机械功更难全部回收。评价转换装置必须同时看能量平衡和效率。</p><dl class=\"nem-subtopics\"><dt id=\"nem-2-1-1\"><strong>2.1.1 能量守恒定律</strong></dt><dd>对选定边界做输入、输出、储存变化的能量账；切勿只统计有用输出。</dd><dt id=\"nem-2-1-2\"><strong>2.1.2 能量转换定律</strong></dt><dd>转换、传输与储存需要过程和设备，形式变化不代表总量增加。</dd><dt id=\"nem-2-1-3\"><strong>2.1.3 能量贬值原理</strong></dt><dd>不可逆过程使可用于做功的能力下降；热量不会自发从低温流向高温。</dd></dl></section>"};

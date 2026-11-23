@@ -1,7 +1,0 @@
-window.LN_LESSONS=window.LN_LESSONS||{};
-window.LN_LESSONS["new-energy-materials/nem-1-1"]={"html":"<section class=\"article-section\" id=\"nem-1-1\"><h2>1.1 能</h2><p>能量描述系统做功或发生变化的能力，能源则是可以提供有用能量的载体或资源。比较能源不能只数“有多少”，还要看可获得性、可转换性和利用条件。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-1-2"]={"html":"<section class=\"article-section\" id=\"nem-1-2\"><h2>1.2 能量形式</h2><p>教材采用机械能、热能、电能、辐射能、化学能、核能六大类。动能和势能属于机械能；光属于电磁辐射。储能时应问清楚：输入是什么能，真正存在哪里，最终输出什么能。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-1-3"]={"html":"<section class=\"article-section\" id=\"nem-1-3\"><h2>1.3 能源发展史</h2><p>能源利用经历薪柴、化石燃料、电力与多元能源技术的发展。技术变化不仅是能源品种的替换，还改变转换设备、运输方式与终端用能结构。阅读历史叙述时要区分历史阶段和今天的实际能源构成。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-1-4"]={"html":"<section class=\"article-section\" id=\"nem-1-4\"><h2>1.4 常规能源</h2><p>煤、石油、天然气、水能、核能等在一定时期内被广泛开发利用，属于教材讨论的常规能源。能源是否“常规”取决于技术与历史背景，不能简单等同于是否可再生。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-1-5"]={"html":"<section class=\"article-section\" id=\"nem-1-5\"><h2>1.5 新能源</h2><p>教材讨论太阳能、风能、生物质能、地热能与海洋能等。需要从资源特性进入系统问题：太阳与风的功率随自然条件变化，必须与电网、转换设备、储能和用能需求协调。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-1-6"]={"html":"<section class=\"article-section\" id=\"nem-1-6\"><h2>1.6 思考题</h2><p>自检：用“煤炭燃烧—蒸汽轮机—发电机”的链条逐段写出能量形式；再解释为什么“光能、太阳能、太阳能电池”不是同一层级的概念。</p><p><a href=\"#course/new-energy-materials/nem-homework\">回看课堂的两道储能基础习题</a></p></section>"};

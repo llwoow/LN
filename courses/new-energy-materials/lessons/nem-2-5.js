@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-2-5"]={"html":"<section class=\"article-section\" id=\"nem-2-5\"><h2>2.5 电极过程动力学导论</h2><p>热力学能判断反应是否有驱动力，但不直接给出反应速度。电极反应速率还受活化极化、电荷转移和传质限制。即使材料具有理想平衡电位，高电流工作时也可能因极化损失效率。</p><dl class=\"nem-subtopics\"><dt id=\"nem-2-5-1\"><strong>2.5.1 电极过程动力学的发展</strong></dt><dd>从平衡电位转向过电位、电流密度和速率控制的研究。</dd><dt id=\"nem-2-5-2\"><strong>2.5.2 电池反应与电极过程</strong></dt><dd>将整体电池反应分解为两极半反应与传质步骤。</dd></dl></section>"};

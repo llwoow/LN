@@ -1,8 +1,0 @@
-window.LN_LESSONS=window.LN_LESSONS||{};
-window.LN_LESSONS["new-energy-materials/nem-7-1"]={"html":"<section class=\"article-section\" id=\"nem-7-1\"><h2>7.1 导论</h2><p>能源经济研究能源资源、技术与社会活动如何相互制约。同一能量转换技术可能在不同地区有不同成本和可行性，因此设备性能参数不能单独决定能源政策与投资选择。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-7-2"]={"html":"<section class=\"article-section\" id=\"nem-7-2\"><h2>7.2 能源需求</h2><p>能源需求由人口、产业结构、设备效率和能源价格等共同决定。应区分一次能源消费、最终能源消费与有用能需求；提高终端效率可能改变相同服务量所需的输入能源。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-7-3"]={"html":"<section class=\"article-section\" id=\"nem-7-3\"><h2>7.3 能源供给</h2><p>能源供给不仅是储量，还包含开采或发电能力、运输网络、供应链与调节能力。供应冲击会通过成本、价格和产业链传导，分析时要明确短期与长期反应不同。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-7-4"]={"html":"<section class=\"article-section\" id=\"nem-7-4\"><h2>7.4 能源市场</h2><p>能源市场通过价格和制度组织供需，但电力的实时平衡、网络约束和可靠性要求使其不同于易仓储商品。储能可以转移电能使用时间，却不能消除转换损失和系统约束。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-7-5"]={"html":"<section class=\"article-section\" id=\"nem-7-5\"><h2>7.5 能源效率</h2><p>效率必须标明系统边界：电池单次放电效率、往返效率、发电机效率和全链条效率不是同一个指标。输入输出口径不一致时，比较不同能源路线容易产生虚假的优劣结论。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-7-6"]={"html":"<section class=\"article-section\" id=\"nem-7-6\"><h2>7.6 能源保障</h2><p>能源保障涉及资源可得性、进口依赖、能源运输、技术储备与应急能力。能源结构多样化、储能和需求响应可提高灵活性，但各有成本与技术限制。</p></section>"};
-window.LN_LESSONS["new-energy-materials/nem-7-7"]={"html":"<section class=\"article-section\" id=\"nem-7-7\"><h2>7.7 思考题</h2><p>自检：解释为何储能站能改善峰谷调度却可能增加总能量损耗；分析不同用能服务的能效边界；区分能源资源丰富与能源供应可靠。</p><p><a href=\"#course/new-energy-materials/nem-homework\">回看课堂的两道储能基础习题</a></p></section>"};

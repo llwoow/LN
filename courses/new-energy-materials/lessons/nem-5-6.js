@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-5-6"]={"html":"<section class=\"article-section\" id=\"nem-5-6\"><h2>5.6 其他储能电池</h2><p>液流电池把活性物质储存在外部电解液储罐，通过电堆进行电化学转化，容量与功率可在一定程度上独立设计。钠硫电池涉及高温液态活性物质与离子导体，系统热管理不可忽视。</p><dl class=\"nem-subtopics\"><dt id=\"nem-5-6-1\"><strong>5.6.1 全钒液流电池</strong></dt><dd>电解液的价态变化储能，储罐决定能量规模、电堆决定功率规模。</dd><dt id=\"nem-5-6-2\"><strong>5.6.2 钠硫电池</strong></dt><dd>高温工作，离子陶瓷隔膜和热管理关系到安全与寿命。</dd></dl></section>"};

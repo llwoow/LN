@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-4-2"]={"html":"<section class=\"article-section\" id=\"nem-4-2\"><h2>4.2 电化学催化</h2><p>电催化剂通过改变电极反应速率和过电位影响电解与燃料电池性能。催化剂不能改变反应的热力学平衡要求；活性、稳定性、价格及膜电极结构必须协同考虑。</p><dl class=\"nem-subtopics\"><dt id=\"nem-4-2-1\"><strong>4.2.1 催化原理</strong></dt><dd>活性位点与反应中间体吸附共同影响反应动力学。</dd><dt id=\"nem-4-2-2\"><strong>4.2.2 电催化剂材料及其制备</strong></dt><dd>催化剂活性还受分散度、导电性和结构稳定性制约。</dd><dt id=\"nem-4-2-3\"><strong>4.2.3 膜电极技术</strong></dt><dd>气体、电解质和电子在反应界面相遇，传质与离子传导同样关键。</dd></dl></section>"};
