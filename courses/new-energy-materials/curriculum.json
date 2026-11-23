@@ -1,0 +1,754 @@
+{
+  "source": {
+    "title": "新能源材料与器件",
+    "authors": "王新东、王萌",
+    "publisher": "化学工业出版社",
+    "year": 2019,
+    "isbn": "9787122335494",
+    "tocPdfPages": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "scope": "全书七章目录及分节知识系统；内容为概念梳理，不声称逐页替代教材"
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": "能源概述",
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "能",
+          "printedStartPage": 1,
+          "subsections": []
+        },
+        {
+          "number": "1.2",
+          "title": "能量形式",
+          "printedStartPage": 1,
+          "subsections": []
+        },
+        {
+          "number": "1.3",
+          "title": "能源发展史",
+          "printedStartPage": 2,
+          "subsections": []
+        },
+        {
+          "number": "1.4",
+          "title": "常规能源",
+          "printedStartPage": 3,
+          "subsections": []
+        },
+        {
+          "number": "1.5",
+          "title": "新能源",
+          "printedStartPage": 6,
+          "subsections": []
+        },
+        {
+          "number": "1.6",
+          "title": "思考题",
+          "printedStartPage": 6,
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "能源物理化学",
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "能量定律",
+          "printedStartPage": 8,
+          "subsections": [
+            {
+              "number": "2.1.1",
+              "title": "能量守恒定律"
+            },
+            {
+              "number": "2.1.2",
+              "title": "能量转换定律"
+            },
+            {
+              "number": "2.1.3",
+              "title": "能量贬值原理"
+            }
+          ]
+        },
+        {
+          "number": "2.2",
+          "title": "能量储存技术",
+          "printedStartPage": 12,
+          "subsections": [
+            {
+              "number": "2.2.1",
+              "title": "机械能的储存"
+            },
+            {
+              "number": "2.2.2",
+              "title": "热能的储存"
+            },
+            {
+              "number": "2.2.3",
+              "title": "电能的储存"
+            },
+            {
+              "number": "2.2.4",
+              "title": "化学能的储存"
+            }
+          ]
+        },
+        {
+          "number": "2.3",
+          "title": "能量的转换过程",
+          "printedStartPage": 16,
+          "subsections": [
+            {
+              "number": "2.3.1",
+              "title": "概述"
+            },
+            {
+              "number": "2.3.2",
+              "title": "化学能转换为热能"
+            },
+            {
+              "number": "2.3.3",
+              "title": "热能转换为机械能"
+            },
+            {
+              "number": "2.3.4",
+              "title": "机械能转换为电能"
+            },
+            {
+              "number": "2.3.5",
+              "title": "光能转换为电能"
+            },
+            {
+              "number": "2.3.6",
+              "title": "化学能转换为电能"
+            },
+            {
+              "number": "2.3.7",
+              "title": "电能转换为化学能"
+            }
+          ]
+        },
+        {
+          "number": "2.4",
+          "title": "原电池与电解池",
+          "printedStartPage": 20,
+          "subsections": [
+            {
+              "number": "2.4.1",
+              "title": "原电池"
+            },
+            {
+              "number": "2.4.2",
+              "title": "电解池"
+            },
+            {
+              "number": "2.4.3",
+              "title": "界面双电层"
+            }
+          ]
+        },
+        {
+          "number": "2.5",
+          "title": "电极过程动力学导论",
+          "printedStartPage": 24,
+          "subsections": [
+            {
+              "number": "2.5.1",
+              "title": "电极过程动力学的发展"
+            },
+            {
+              "number": "2.5.2",
+              "title": "电池反应与电极过程"
+            }
+          ]
+        },
+        {
+          "number": "2.6",
+          "title": "思考题",
+          "printedStartPage": 26,
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "太阳能电池材料与器件",
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "光电转换理论",
+          "printedStartPage": 28,
+          "subsections": []
+        },
+        {
+          "number": "3.2",
+          "title": "太阳能电池的分类",
+          "printedStartPage": 29,
+          "subsections": []
+        },
+        {
+          "number": "3.3",
+          "title": "硅太阳能电池",
+          "printedStartPage": 31,
+          "subsections": [
+            {
+              "number": "3.3.1",
+              "title": "晶体硅太阳能电池"
+            },
+            {
+              "number": "3.3.2",
+              "title": "太阳能电池片封装成太阳能电池组件"
+            },
+            {
+              "number": "3.3.3",
+              "title": "光伏系统"
+            },
+            {
+              "number": "3.3.4",
+              "title": "多晶硅太阳能电池"
+            },
+            {
+              "number": "3.3.5",
+              "title": "非晶硅太阳能电池"
+            }
+          ]
+        },
+        {
+          "number": "3.4",
+          "title": "化合物半导体太阳能电池",
+          "printedStartPage": 49,
+          "subsections": [
+            {
+              "number": "3.4.1",
+              "title": "CdTe系薄膜太阳能电池"
+            },
+            {
+              "number": "3.4.2",
+              "title": "CuInSe₂薄膜太阳能电池"
+            },
+            {
+              "number": "3.4.3",
+              "title": "GaAs太阳能电池"
+            },
+            {
+              "number": "3.4.4",
+              "title": "InP系列太阳能电池"
+            }
+          ]
+        },
+        {
+          "number": "3.5",
+          "title": "有机薄膜太阳能电池",
+          "printedStartPage": 51,
+          "subsections": []
+        },
+        {
+          "number": "3.6",
+          "title": "染料敏化太阳能电池",
+          "printedStartPage": 52,
+          "subsections": [
+            {
+              "number": "3.6.1",
+              "title": "染料敏化太阳能电池的结构"
+            },
+            {
+              "number": "3.6.2",
+              "title": "染料敏化太阳能电池的工作原理"
+            }
+          ]
+        },
+        {
+          "number": "3.7",
+          "title": "钙钛矿太阳能电池",
+          "printedStartPage": 60,
+          "subsections": [
+            {
+              "number": "3.7.1",
+              "title": "钙钛矿太阳能电池发展史"
+            },
+            {
+              "number": "3.7.2",
+              "title": "钙钛矿太阳能电池组成部分"
+            },
+            {
+              "number": "3.7.3",
+              "title": "钙钛矿膜的制备方法"
+            },
+            {
+              "number": "3.7.4",
+              "title": "钙钛矿太阳能电池原理和结构类型"
+            }
+          ]
+        },
+        {
+          "number": "3.8",
+          "title": "太阳能光热发电",
+          "printedStartPage": 70,
+          "subsections": [
+            {
+              "number": "3.8.1",
+              "title": "太阳能光热发电技术"
+            },
+            {
+              "number": "3.8.2",
+              "title": "斯特林太阳能光热发电系统"
+            },
+            {
+              "number": "3.8.3",
+              "title": "太阳能热电站的发展趋势及相关科学问题"
+            }
+          ]
+        },
+        {
+          "number": "3.9",
+          "title": "思考题",
+          "printedStartPage": 74,
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "氢能材料与器件",
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "概述",
+          "printedStartPage": 75,
+          "subsections": []
+        },
+        {
+          "number": "4.2",
+          "title": "电化学催化",
+          "printedStartPage": 77,
+          "subsections": [
+            {
+              "number": "4.2.1",
+              "title": "催化原理"
+            },
+            {
+              "number": "4.2.2",
+              "title": "电催化剂材料及其制备"
+            },
+            {
+              "number": "4.2.3",
+              "title": "膜电极技术"
+            }
+          ]
+        },
+        {
+          "number": "4.3",
+          "title": "氢的制取",
+          "printedStartPage": 83,
+          "subsections": [
+            {
+              "number": "4.3.1",
+              "title": "化石燃料制氢"
+            },
+            {
+              "number": "4.3.2",
+              "title": "生物及生物质制氢"
+            },
+            {
+              "number": "4.3.3",
+              "title": "太阳能光解水制氢"
+            },
+            {
+              "number": "4.3.4",
+              "title": "热化学分解水制氢"
+            },
+            {
+              "number": "4.3.5",
+              "title": "金属及化合物分解制氢"
+            },
+            {
+              "number": "4.3.6",
+              "title": "氢气提纯"
+            }
+          ]
+        },
+        {
+          "number": "4.4",
+          "title": "电解水制氢",
+          "printedStartPage": 96,
+          "subsections": [
+            {
+              "number": "4.4.1",
+              "title": "碱性电解水制氢"
+            },
+            {
+              "number": "4.4.2",
+              "title": "质子交换膜电解水制氢"
+            },
+            {
+              "number": "4.4.3",
+              "title": "固体氧化物电解水"
+            }
+          ]
+        },
+        {
+          "number": "4.5",
+          "title": "氢的储存与提取",
+          "printedStartPage": 101,
+          "subsections": [
+            {
+              "number": "4.5.1",
+              "title": "物理储氢"
+            },
+            {
+              "number": "4.5.2",
+              "title": "金属氢化物储氢"
+            },
+            {
+              "number": "4.5.3",
+              "title": "配位氢化物储氢"
+            },
+            {
+              "number": "4.5.4",
+              "title": "有机物储氢"
+            },
+            {
+              "number": "4.5.5",
+              "title": "金属氢化物电池"
+            }
+          ]
+        },
+        {
+          "number": "4.6",
+          "title": "燃料电池",
+          "printedStartPage": 105,
+          "subsections": [
+            {
+              "number": "4.6.1",
+              "title": "概述"
+            },
+            {
+              "number": "4.6.2",
+              "title": "电催化剂"
+            },
+            {
+              "number": "4.6.3",
+              "title": "膜电极"
+            },
+            {
+              "number": "4.6.4",
+              "title": "双极板"
+            },
+            {
+              "number": "4.6.5",
+              "title": "质子交换膜燃料电池"
+            },
+            {
+              "number": "4.6.6",
+              "title": "固体氧化物燃料电池"
+            }
+          ]
+        },
+        {
+          "number": "4.7",
+          "title": "氢冶金",
+          "printedStartPage": 139,
+          "subsections": []
+        },
+        {
+          "number": "4.8",
+          "title": "思考题",
+          "printedStartPage": 140,
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "电化学能源材料与器件",
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "概述",
+          "printedStartPage": 142,
+          "subsections": []
+        },
+        {
+          "number": "5.2",
+          "title": "锂离子二次电池",
+          "printedStartPage": 144,
+          "subsections": [
+            {
+              "number": "5.2.1",
+              "title": "电化学原理"
+            },
+            {
+              "number": "5.2.2",
+              "title": "“摇椅”式工作原理"
+            },
+            {
+              "number": "5.2.3",
+              "title": "锂离子电池的结构"
+            },
+            {
+              "number": "5.2.4",
+              "title": "锂离子电池材料"
+            }
+          ]
+        },
+        {
+          "number": "5.3",
+          "title": "固态锂电池",
+          "printedStartPage": 162,
+          "subsections": [
+            {
+              "number": "5.3.1",
+              "title": "固态电解质"
+            },
+            {
+              "number": "5.3.2",
+              "title": "正极材料"
+            },
+            {
+              "number": "5.3.3",
+              "title": "负极材料"
+            }
+          ]
+        },
+        {
+          "number": "5.4",
+          "title": "电化学超级电容器",
+          "printedStartPage": 167,
+          "subsections": [
+            {
+              "number": "5.4.1",
+              "title": "超级电容器的特点"
+            },
+            {
+              "number": "5.4.2",
+              "title": "超级电容器的原理"
+            },
+            {
+              "number": "5.4.3",
+              "title": "超级电容器电极材料"
+            },
+            {
+              "number": "5.4.4",
+              "title": "超级电容器的应用"
+            }
+          ]
+        },
+        {
+          "number": "5.5",
+          "title": "金属-空气电池",
+          "printedStartPage": 175,
+          "subsections": [
+            {
+              "number": "5.5.1",
+              "title": "锌-空气电池"
+            },
+            {
+              "number": "5.5.2",
+              "title": "铝-空气电池"
+            },
+            {
+              "number": "5.5.3",
+              "title": "锂-空气电池"
+            }
+          ]
+        },
+        {
+          "number": "5.6",
+          "title": "其他储能电池",
+          "printedStartPage": 184,
+          "subsections": [
+            {
+              "number": "5.6.1",
+              "title": "全钒液流电池"
+            },
+            {
+              "number": "5.6.2",
+              "title": "钠硫电池"
+            }
+          ]
+        },
+        {
+          "number": "5.7",
+          "title": "思考题",
+          "printedStartPage": 186,
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "其他新能源技术",
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "生物质能转化技术",
+          "printedStartPage": 187,
+          "subsections": [
+            {
+              "number": "6.1.1",
+              "title": "直接燃烧法"
+            },
+            {
+              "number": "6.1.2",
+              "title": "生物化学转化"
+            },
+            {
+              "number": "6.1.3",
+              "title": "热化学转化"
+            },
+            {
+              "number": "6.1.4",
+              "title": "固体成型技术"
+            },
+            {
+              "number": "6.1.5",
+              "title": "生物柴油制取"
+            }
+          ]
+        },
+        {
+          "number": "6.2",
+          "title": "风能技术",
+          "printedStartPage": 191,
+          "subsections": [
+            {
+              "number": "6.2.1",
+              "title": "风能的特点"
+            },
+            {
+              "number": "6.2.2",
+              "title": "我国的风能资源"
+            },
+            {
+              "number": "6.2.3",
+              "title": "风能资源的利用"
+            }
+          ]
+        },
+        {
+          "number": "6.3",
+          "title": "核能技术",
+          "printedStartPage": 196,
+          "subsections": [
+            {
+              "number": "6.3.1",
+              "title": "核裂变能发电"
+            },
+            {
+              "number": "6.3.2",
+              "title": "核聚变能发电"
+            }
+          ]
+        },
+        {
+          "number": "6.4",
+          "title": "海洋能技术",
+          "printedStartPage": 199,
+          "subsections": [
+            {
+              "number": "6.4.1",
+              "title": "潮汐能"
+            },
+            {
+              "number": "6.4.2",
+              "title": "海水动能"
+            },
+            {
+              "number": "6.4.3",
+              "title": "海水温差能"
+            },
+            {
+              "number": "6.4.4",
+              "title": "海水盐差能"
+            }
+          ]
+        },
+        {
+          "number": "6.5",
+          "title": "地热能技术",
+          "printedStartPage": 205,
+          "subsections": [
+            {
+              "number": "6.5.1",
+              "title": "发电利用"
+            },
+            {
+              "number": "6.5.2",
+              "title": "直接利用"
+            }
+          ]
+        },
+        {
+          "number": "6.6",
+          "title": "页岩油气技术",
+          "printedStartPage": 208,
+          "subsections": []
+        },
+        {
+          "number": "6.7",
+          "title": "思考题",
+          "printedStartPage": 210,
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "能源经济",
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "导论",
+          "printedStartPage": 212,
+          "subsections": []
+        },
+        {
+          "number": "7.2",
+          "title": "能源需求",
+          "printedStartPage": 213,
+          "subsections": []
+        },
+        {
+          "number": "7.3",
+          "title": "能源供给",
+          "printedStartPage": 215,
+          "subsections": []
+        },
+        {
+          "number": "7.4",
+          "title": "能源市场",
+          "printedStartPage": 217,
+          "subsections": []
+        },
+        {
+          "number": "7.5",
+          "title": "能源效率",
+          "printedStartPage": 220,
+          "subsections": []
+        },
+        {
+          "number": "7.6",
+          "title": "能源保障",
+          "printedStartPage": 221,
+          "subsections": []
+        },
+        {
+          "number": "7.7",
+          "title": "思考题",
+          "printedStartPage": 223,
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}
