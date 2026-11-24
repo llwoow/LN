@@ -205,6 +205,7 @@
     main.classList.add('course-main', 'map-main');
     main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.filter(s=>!s.supplement).map((section) => section.group)).size + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'map') + (course.reference ? '<p class="page-meta course-reference">参考：' + escapeHTML(course.reference) + '</p>' : '') + '<ln-knowledge-map></ln-knowledge-map>';
     $('ln-knowledge-map', main).course = course;
+    if (window.LNCrossKnowledge.hasCourse(course.id)) main.insertAdjacentHTML('beforeend', window.LNCrossKnowledge.coursePanel(course));
   }
 
   function renderReader(course, sectionId, anchor) {
@@ -331,6 +332,7 @@
       else if (selected.kind === 'document') {
         body.innerHTML = (payload.html || '') + '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
       } else body.innerHTML = payload.html;
+      window.LNCrossKnowledge.mountLesson(body, course, selected);
       window.LNPractice.prepareLesson(body);
       body.querySelectorAll(':scope > [role="tabpanel"][hidden]').forEach(panel => { panel.hidden = false; });
       if (selected.id === 'transformer-sec21' || selected.id === 'transformer-sec28') {
@@ -584,7 +586,7 @@
     }
     document.body.classList.remove('is-reading', 'directory-open');
     main.classList.remove('course-main', 'map-main', 'practice-main');
-    currentView = ['favorites', 'course', 'highschool', 'resources', 'practice'].includes(view) ? view : 'overview';
+    currentView = ['favorites', 'course', 'highschool', 'resources', 'practice', 'knowledge'].includes(view) ? view : 'overview';
     if (currentView !== 'course' && currentView !== 'favorites') {
       if (lastLibrary !== currentView) query = '';
       lastLibrary = currentView;
@@ -597,6 +599,7 @@
       title = outlineCourse.title;
       main.innerHTML = '<h1>' + escapeHTML(title) + '</h1><p>当前仅保留目录。</p><a class="secondary-button" href="#course/' + id + '">打开目录</a>';
     }
+    else if (currentView === 'knowledge') { window.LNCrossKnowledge.render(main,id); title = '跨课程知识网络'; }
     else if (currentView === 'practice') { renderPractice(id, sectionId, anchor); title = '练习'; }
     else if (currentView === 'resources') { main.innerHTML = window.LNResources.pageHtml(id); window.LNResources.bindPage(main, id, sectionId); title = '实作与资料'; }
     else if (currentView === 'highschool' && id === 'resources') { main.innerHTML = window.LNHighSchool.resourcesHtml(); title = '教材与来源'; }

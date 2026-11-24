@@ -17,6 +17,7 @@
   class KnowledgeMap extends HTMLElement {
     set course(value) { this._course = value; if (this.isConnected) this.mount(); }
     get course() { return this._course; }
+    routeFor(section) { return this.course.crossKnowledge ? section.href : '#course/' + this.course.id + '/' + section.id; }
     connectedCallback() { if (this.course) this.mount(); }
     disconnectedCallback() { this.release(); }
 
@@ -53,7 +54,7 @@
       });
       this.byNode = new Map(this.nodes.map((node) => [node.id, node]));
       this.edges = [];
-      this.groups.forEach((_, index) => {
+      if (!course.crossKnowledge) this.groups.forEach((_, index) => {
         const lane = this.nodes.filter((node) => node.group === index);
         lane.slice(1).forEach((node, i) => this.edges.push({ from: lane[i].id, to: node.id, type: 'order', label: '阅读顺序' }));
       });
@@ -69,18 +70,18 @@
       this.uid = 'ln-map-' + (++sequence);
       this.controller = new AbortController();
       const signal = this.controller.signal;
-      const link = (section, text) => '<a href="#course/' + escape(course.id) + '/' + escape(section.id) + '">' + escape(text || section.title) + '</a>';
+      const link = (section, text) => '<a href="' + escape(this.routeFor(section)) + '">' + escape(text || section.title) + '</a>';
       const paths=(metadata?.paths||[]).map(path=>'<section><h3>'+escape(path.title)+'</h3>'+(path.summary?'<p>'+escape(path.summary)+'</p>':'')+'<ol>'+path.steps.map(step=>'<li>'+link(byId.get(step.section))+(step.focus?'<span>'+escape(step.focus)+'</span>':'')+'</li>').join('')+'</ol></section>').join('');
       this.innerHTML = '<section class="knowledge-map" aria-label="' + escape(course.title) + '知识图谱">' +
         (paths?'<details class="map-study-paths"><summary>学习主线 <span>'+metadata.paths.length+'条</span></summary><div class="map-path-list">'+paths+'</div></details>':'')+
-        '<div class="map-toolbar"><div class="map-groups" role="group" aria-label="图谱章节"><button data-map-group="-1">全部</button>' + this.groups.map((group, i) => '<button title="' + escape(group) + '" data-map-group="' + i + '">' + escape(group.replace(/^第\d+章\s*/, '')) + '</button>').join('') + '</div>' +
+        '<div class="map-toolbar"><div class="map-groups" role="group" aria-label="' + (course.crossKnowledge ? '知识主题' : '图谱章节') + '"><button data-map-group="-1">全部</button>' + this.groups.map((group, i) => '<button title="' + escape(group) + '" data-map-group="' + i + '">' + escape(group.replace(/^第\d+章\s*/, '')) + '</button>').join('') + '</div>' +
         '<label class="map-relation-toggle"><input type="checkbox" aria-label="显示全部知识联系">全部联系</label><label class="map-search"><span class="map-search-label">查找节点</span><input type="search" aria-label="查找图谱知识点" placeholder="查找知识点…"></label></div>' +
         '<div class="map-canvas-wrap"><svg class="map-canvas" tabindex="0" role="group" aria-label="可交互知识图谱，拖动画布移动，滚轮或双指缩放，点击节点阅读。方向键移动，加减号缩放，Home 适应全图。"></svg>' +
         '<div class="map-zoom" role="group" aria-label="图谱缩放"><button data-map-action="out" aria-label="缩小图谱" title="缩小">−</button><output aria-label="缩放比例">100%</output><button data-map-action="in" aria-label="放大图谱" title="放大">+</button><button data-map-action="fit" class="map-fit">适应全图</button><button data-map-action="reset" title="回到当前章节起点">归位</button></div></div>' +
-        '<div class="map-footer"><p>拖动平移 · 滚轮 / 双指缩放 · 点击'+(course.outlineOnly?'打开章节':'进入正文')+'</p><div class="map-legend"><span class="map-order-key">阅读顺序</span><span class="map-relation-key">知识联系</span></div></div>' +
+        '<div class="map-footer"><p>拖动平移 · 滚轮 / 双指缩放 · 点击'+(course.outlineOnly?'打开章节':'进入正文')+'</p><div class="map-legend">' + (course.crossKnowledge ? '' : '<span class="map-order-key">阅读顺序</span>') + '<span class="map-relation-key">知识联系</span></div></div>' +
         '<p class="map-status" role="status" aria-live="polite"></p><div class="map-node-context" aria-live="polite"><span>指向或聚焦节点，查看它与其他知识的联系。</span></div>' +
-        '<details class="map-connections"><summary>跨知识联系 <span>' + (metadata?.links?.length || 0) + '</span></summary><ul>' + (metadata?.links || []).map((edge) => '<li><div>' + link(byId.get(edge.from), this.byNode.get(edge.from).title) + '<span aria-hidden="true"> → </span>' + link(byId.get(edge.to), this.byNode.get(edge.to).title) + '</div><p>' + escape(edge.description) + '</p></li>').join('') + '</ul></details>' +
-        '<details class="map-directory"><summary>全部章节与资料 <span>' + course.sections.length + '</span></summary><div class="map-directory-groups">' + this.groups.map((group) => '<section><h3>' + escape(group) + '</h3><ul>' + course.sections.filter((section) => section.group === group).map((section) => '<li>' + link(section) + '</li>').join('') + '</ul></section>').join('') + '</div></details></section>';
+        '<details class="map-connections"><summary>跨知识联系 <span>' + (metadata?.links?.length || 0) + '</span></summary><ul>' + (metadata?.links || []).map((edge) => '<li><div>' + link(byId.get(edge.from), this.byNode.get(edge.from).title) + '<span aria-hidden="true">' + (course.crossKnowledge ? ' ↔ ' : ' → ') + '</span>' + link(byId.get(edge.to), this.byNode.get(edge.to).title) + '</div><p>' + escape(edge.description) + '</p></li>').join('') + '</ul></details>' +
+        '<details class="map-directory"><summary>' + (course.crossKnowledge ? '知识点与正文入口' : '全部章节与资料') + ' <span>' + course.sections.length + '</span></summary><div class="map-directory-groups">' + this.groups.map((group) => '<section><h3>' + escape(group) + '</h3><ul>' + course.sections.filter((section) => section.group === group).map((section) => '<li>' + link(section) + '</li>').join('') + '</ul></section>').join('') + '</div></details></section>';
       if (!metadata?.links?.length) this.querySelector('.map-connections').hidden = true;
       this.canvas = this.querySelector('.map-canvas');
       this.layer = svg('g', { class: 'map-world' });
@@ -96,13 +97,13 @@
       const tree = svg('path', { class: 'map-hierarchy-edge', d: 'M' + rootCenter + ' 70 V90' + this.groups.map((_, index) => ' M' + rootCenter + ' 90 H' + (187 + index * 400) + ' V112').join('') });
       this.rootElement.append(tree, svg('rect', { x: rootX, y: 12, width: 278, height: 58, rx: 10 }));
       this.rootElement.append(svg('text', { x: rootCenter, y: 37, 'text-anchor': 'middle', class: 'map-root-title' }, course.title));
-      this.rootElement.append(svg('text', { x: rootCenter, y: 56, 'text-anchor': 'middle', class: 'map-root-note' }, this.groups.length + (course.level === 'highschool' ? ' 册 · ' : ' 章 · ') + this.nodes.length + ' 个知识点'));
+      this.rootElement.append(svg('text', { x: rootCenter, y: 56, 'text-anchor': 'middle', class: 'map-root-note' }, this.groups.length + (course.crossKnowledge ? ' 个主题 · ' : course.level === 'highschool' ? ' 册 · ' : ' 章 · ') + this.nodes.length + ' 个知识点'));
       this.layer.append(this.rootElement);
       this.groupElements = this.groups.map((title, index) => {
         const heading = svg('g', { class: 'map-group-heading' });
         const x = 48 + index * 400;
         const description = metadata?.chapters?.find((chapter) => chapter.group === title)?.description || this.nodes.filter((node) => node.group === index).length + ' 个知识点 · 按章节阅读';
-        heading.append(svg('path', { class: 'map-hierarchy-edge', d: 'M' + (x + 139) + ' 184 V222', 'marker-end': 'url(#' + this.uid + '-order)' }));
+        heading.append(svg('path', { class: 'map-hierarchy-edge', d: 'M' + (x + 139) + ' 184 V222', ...(course.crossKnowledge ? {} : {'marker-end': 'url(#' + this.uid + '-order)'}) }));
         heading.append(svg('rect', { x, y: 112, width: 278, height: 72, rx: 10 }));
         heading.append(svg('text', { x: x + 16, y: 140 }, title));
         heading.append(svg('text', { x: x + 16, y: 164, class: 'map-group-count' }, short(description, 21)));
@@ -110,12 +111,12 @@
       });
       this.edges.forEach((edge) => {
         edge.element = svg('g', { class: 'map-edge map-edge-' + edge.type });
-        edge.path = svg('path', { 'marker-end': 'url(#' + this.uid + '-' + edge.type + ')', 'vector-effect': 'non-scaling-stroke' });
+        edge.path = svg('path', { ...(course.crossKnowledge ? {} : {'marker-end': 'url(#' + this.uid + '-' + edge.type + ')'}), 'vector-effect': 'non-scaling-stroke' });
         edge.label = svg('text', { class: 'map-edge-label', 'text-anchor': 'middle' }, edge.label);
         edge.element.append(edge.path, edge.label); this.layer.append(edge.element);
       });
       this.nodes.forEach((node) => {
-        const anchor = svg('a', { href: '#course/' + course.id + '/' + node.id, class: 'map-node', 'data-node': node.id, tabindex: 0, 'aria-label': node.title + '，打开' + node.section.title });
+        const anchor = svg('a', { href: this.routeFor(node.section), class: 'map-node', 'data-node': node.id, tabindex: 0, 'aria-label': node.title + '，打开' + node.section.title });
         anchor.append(svg('title', {}, node.title + '：' + (node.note || node.section.title) + '。点击阅读；拖动平移整张图，节点位置固定。'));
         anchor.append(svg('rect', { width: 278, height: 78, rx: 11 }));
         anchor.append(svg('text', { x: 16, y: 22, class: 'map-node-number' }, String(node.order).padStart(2, '0')));
@@ -285,7 +286,7 @@
       const relations = this.edges.filter((edge) => edge.type === 'relation' && (edge.from === id || edge.to === id));
       context.innerHTML = '<strong>' + escape(node.title) + '</strong>' + (relations.length ? '<ul>' + relations.map((edge) => {
         const other = this.byNode.get(edge.from === id ? edge.to : edge.from);
-        return '<li><a href="#course/' + escape(this.course.id) + '/' + escape(other.id) + '">' + escape(other.title) + '</a><span>' + escape(edge.description) + '</span></li>';
+        return '<li><a href="' + escape(this.routeFor(other.section)) + '">' + escape(other.title) + '</a><span>' + escape(edge.description) + '</span></li>';
       }).join('') + '</ul>' : '<span>' + escape(node.note || node.section.title) + '，沿实线按章节顺序学习。</span>');
     }
 
@@ -330,7 +331,7 @@
       const gesture = this.gesture;
       this.pointers.delete(event.pointerId);
       if (this.canvas.hasPointerCapture(event.pointerId)) this.canvas.releasePointerCapture(event.pointerId);
-      if (!cancelled && this.pointers.size === 0 && gesture?.id && !gesture.moved) location.hash = 'course/' + this.course.id + '/' + gesture.id;
+      if (!cancelled && this.pointers.size === 0 && gesture?.id && !gesture.moved) location.hash = this.routeFor(this.byNode.get(gesture.id).section);
       if (this.pointers.size === 1) {
         this.gesture = { start: [...this.pointers.values()][0], view: { ...this.view }, moved: true };
       } else if (!this.pointers.size) {
