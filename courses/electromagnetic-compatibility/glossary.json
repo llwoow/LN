@@ -6525,6 +6525,261 @@
       ],
       "match": "这里j为虚数单位，j²=−1；f为正弦频率，单位Hz；ω=2πf为角频率，单位rad/s。采用e的jωt次幂所对应的相量约定时，对时间求导对应乘jω。",
       "sourceAnchor": "emc-frequency-notation"
+    },
+    {
+      "id": "emc-nov24-0-E_ox",
+      "title": "E_ox",
+      "keys": [
+        "E_ox"
+      ],
+      "unitHtml": "V/m",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "match": "式中，Eox 为氧化层平均场强",
+      "description": "氧化层平均场强",
+      "sourceAnchor": "emc-def-oxide"
+    },
+    {
+      "id": "emc-nov24-0-U_ox",
+      "title": "U_ox",
+      "keys": [
+        "U_ox"
+      ],
+      "unitHtml": "V",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "match": "式中，Eox 为氧化层平均场强",
+      "description": "氧化层实际电压",
+      "sourceAnchor": "emc-def-oxide"
+    },
+    {
+      "id": "emc-nov24-0-d_ox",
+      "title": "d_ox",
+      "keys": [
+        "d_ox"
+      ],
+      "unitHtml": "m",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "match": "式中，Eox 为氧化层平均场强",
+      "description": "氧化层厚度",
+      "sourceAnchor": "emc-def-oxide"
+    },
+    {
+      "id": "emc-nov24-0-r",
+      "title": "r",
+      "keys": [
+        "r"
+      ],
+      "unitHtml": "m",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "match": "式中，r 为积分回路半径",
+      "description": "积分回路半径",
+      "sourceAnchor": "emc-def-induction"
+    },
+    {
+      "id": "emc-nov24-0-f",
+      "title": "f",
+      "keys": [
+        "f"
+      ],
+      "unitHtml": "Hz",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "match": "式中，r 为积分回路半径",
+      "description": "磁场频率",
+      "sourceAnchor": "emc-def-induction"
+    },
+    {
+      "id": "emc-nov24-0-B_m",
+      "title": "B_m",
+      "keys": [
+        "B_m"
+      ],
+      "unitHtml": "T",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "match": "式中，r 为积分回路半径",
+      "description": "磁感应强度幅值",
+      "sourceAnchor": "emc-def-induction"
+    },
+    {
+      "id": "emc-nov24-0-E_m",
+      "title": "E_m",
+      "keys": [
+        "E_m"
+      ],
+      "unitHtml": "V/m",
+      "section": "emc-1-4",
+      "sections": [
+        "emc-1-4"
+      ],
+      "match": "式中，r 为积分回路半径",
+      "description": "感应电场幅值",
+      "sourceAnchor": "emc-def-induction"
+    },
+    {
+      "id": "emc-nov24-1-U_s",
+      "title": "U_s",
+      "keys": [
+        "U_s"
+      ],
+      "unitHtml": "V",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "Us 是等效干扰源开路电压",
+      "description": "等效干扰源开路电压",
+      "sourceAnchor": "emc-def-equivalent"
+    },
+    {
+      "id": "emc-nov24-1-R_s",
+      "title": "R_s",
+      "keys": [
+        "R_s"
+      ],
+      "unitHtml": "Ω",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "Us 是等效干扰源开路电压",
+      "description": "等效源内阻",
+      "sourceAnchor": "emc-def-equivalent"
+    },
+    {
+      "id": "emc-nov24-1-R_t",
+      "title": "R_t",
+      "keys": [
+        "R_t"
+      ],
+      "unitHtml": "Ω",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "Us 是等效干扰源开路电压",
+      "description": "单根传输线电阻",
+      "sourceAnchor": "emc-def-equivalent"
+    },
+    {
+      "id": "emc-nov24-1-R_L",
+      "title": "R_L",
+      "keys": [
+        "R_L"
+      ],
+      "unitHtml": "Ω",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "Us 是等效干扰源开路电压",
+      "description": "接收端负载",
+      "sourceAnchor": "emc-def-equivalent"
+    },
+    {
+      "id": "emc-nov24-1-U_L",
+      "title": "U_L",
+      "keys": [
+        "U_L"
+      ],
+      "unitHtml": "V",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "Us 是等效干扰源开路电压",
+      "description": "负载干扰电压",
+      "sourceAnchor": "emc-def-equivalent"
+    },
+    {
+      "id": "emc-nov24-1-J_y",
+      "title": "J_y",
+      "keys": [
+        "J_y"
+      ],
+      "unitHtml": "A/m²",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "Jy 是 y 向电流密度相量",
+      "description": "y 向电流密度相量",
+      "sourceAnchor": "emc-def-skin"
+    },
+    {
+      "id": "emc-nov24-1-J_0",
+      "title": "J_0",
+      "keys": [
+        "J_0"
+      ],
+      "unitHtml": "A/m²",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "Jy 是 y 向电流密度相量",
+      "description": "表面电流密度相量",
+      "sourceAnchor": "emc-def-skin"
+    },
+    {
+      "id": "emc-nov24-1-x",
+      "title": "x",
+      "keys": [
+        "x"
+      ],
+      "unitHtml": "m",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "Jy 是 y 向电流密度相量",
+      "description": "距表面深度",
+      "sourceAnchor": "emc-def-skin"
+    },
+    {
+      "id": "emc-nov24-1-R_AC",
+      "title": "R_AC",
+      "keys": [
+        "R_AC"
+      ],
+      "unitHtml": "Ω",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "由 P′＝",
+      "description": "长度 l 的交流电阻",
+      "sourceAnchor": "emc-def-effective"
+    },
+    {
+      "id": "emc-nov24-1-S_eff",
+      "title": "S_eff",
+      "keys": [
+        "S_eff"
+      ],
+      "unitHtml": "m²",
+      "section": "emc-2-2",
+      "sections": [
+        "emc-2-2"
+      ],
+      "match": "由 P′＝",
+      "description": "等效导电截面积",
+      "sourceAnchor": "emc-def-effective"
     }
   ]
 }
