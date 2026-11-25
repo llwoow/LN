@@ -1,0 +1,99 @@
+{
+  "lazy": true,
+  "terms": [
+    {
+      "id": "dsp-fir",
+      "title": "FIR",
+      "english": "有限长单位冲激响应",
+      "aliases": [
+        "FIR",
+        "有限长单位冲激响应"
+      ],
+      "section": "dsp-7-1",
+      "match": "FIR（有限长单位冲激响应）滤波器",
+      "description": "有限个系数确定的离散滤波器，绝对和有限。"
+    },
+    {
+      "id": "dsp-phase-delay",
+      "title": "相位延迟",
+      "english": "Phase delay",
+      "aliases": [
+        "相位延迟",
+        "Phase delay"
+      ],
+      "section": "dsp-7-2",
+      "match": "相位延迟描述单个正弦分量",
+      "description": "展开相位的负值除以数字角频率。"
+    },
+    {
+      "id": "dsp-group-delay",
+      "title": "群延迟",
+      "english": "Group delay",
+      "aliases": [
+        "群延迟",
+        "Group delay"
+      ],
+      "section": "dsp-7-2",
+      "match": "群延迟描述窄带包络",
+      "description": "展开相位对数字角频率的负导数。"
+    },
+    {
+      "id": "dsp-hilbert",
+      "title": "希尔伯特变换器",
+      "english": "Hilbert transformer",
+      "aliases": [
+        "希尔伯特变换器",
+        "Hilbert transformer"
+      ],
+      "section": "dsp-7-3-special",
+      "match": "理想希尔伯特变换器在",
+      "description": "正负频率分别施加−90°和+90°相移的变换。"
+    }
+  ],
+  "symbolDefinitions": [
+    {
+      "id": "dsp-symbol-N",
+      "title": "N",
+      "keys": [
+        "N"
+      ],
+      "section": "dsp-7-1",
+      "sections": [
+        "dsp-overview",
+        "dsp-7-1",
+        "dsp-7-2",
+        "dsp-7-3",
+        "dsp-7-3-special",
+        "dsp-7-4",
+        "dsp-7-5",
+        "dsp-7-6",
+        "dsp-7-review"
+      ],
+      "match": "令 N 为系数长度",
+      "sourceAnchor": "fir-definition",
+      "description": "系数长度，名义阶数N−1。"
+    },
+    {
+      "id": "dsp-symbol-omega",
+      "title": "ω",
+      "keys": [
+        "ω"
+      ],
+      "section": "dsp-7-1",
+      "sections": [
+        "dsp-overview",
+        "dsp-7-1",
+        "dsp-7-2",
+        "dsp-7-3",
+        "dsp-7-3-special",
+        "dsp-7-4",
+        "dsp-7-5",
+        "dsp-7-6",
+        "dsp-7-review"
+      ],
+      "match": "ω 为数字角频率",
+      "sourceAnchor": "fir-definition",
+      "description": "数字角频率，rad/采样。"
+    }
+  ]
+}

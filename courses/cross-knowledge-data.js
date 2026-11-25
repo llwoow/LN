@@ -24,6 +24,11 @@ window.LN_CROSS_KNOWLEDGE_DATA={
       "id": "control",
       "title": "采样与闭环误差",
       "description": "传导干扰怎样进入测量和控制"
+    },
+    {
+      "id": "filter-response",
+      "title": "频响、数字滤波与控制延迟",
+      "description": "连续/离散频响、采样与抗混叠的边界"
     }
   ],
   "nodes": [
@@ -197,6 +202,42 @@ window.LN_CROSS_KNOWLEDGE_DATA={
       "title": "测量与实际误差",
       "match": "可直接测得的比较点误差与输出相对期望值的偏差",
       "note": "信号标定与误差定义"
+    },
+    {
+      "id": "dsp-linear-phase",
+      "topic": "filter-response",
+      "course": "digital-signal-processing",
+      "section": "dsp-7-2",
+      "title": "线性相位与时间延迟",
+      "match": "相位延迟描述单个正弦分量",
+      "note": "相位斜率、数字频率与采样周期"
+    },
+    {
+      "id": "dsp-filter-engineering",
+      "topic": "filter-response",
+      "course": "digital-signal-processing",
+      "section": "dsp-7-6",
+      "title": "数字滤波、采样与反馈",
+      "match": "即使测量 FIR 本身稳定",
+      "note": "群延迟和闭环相位裕度"
+    },
+    {
+      "id": "control-frequency-measure",
+      "topic": "filter-response",
+      "course": "automatic-control",
+      "section": "ac-5-1",
+      "title": "从正弦测量到伯德图",
+      "match": "在这个线性电路里，稳态输出和输入同频",
+      "note": "幅值比和相位差"
+    },
+    {
+      "id": "emc-filter-insertion",
+      "topic": "filter-response",
+      "course": "electromagnetic-compatibility",
+      "section": "emc-5-1",
+      "title": "滤波频率选择性",
+      "match": "滤波器的通带、阻带与截止频率描述频率选择性",
+      "note": "端接与实际插入损耗"
     }
   ],
   "links": [
@@ -295,6 +336,24 @@ window.LN_CROSS_KNOWLEDGE_DATA={
       "to": "compare-error",
       "label": "反馈误差的定义",
       "description": "比较点、实际输出、对象输入扰动与测量噪声位置不同，对应的传递关系不同；不由开环型别单独判断所有误差。"
+    },
+    {
+      "from": "dsp-linear-phase",
+      "to": "control-frequency-measure",
+      "label": "正弦稳态与相位",
+      "description": "同一 LTI 特征函数关系；连续Ω与离散ω需用采样周期转换，不能把数字群延迟直接当秒。"
+    },
+    {
+      "from": "dsp-filter-engineering",
+      "to": "emc-filter-insertion",
+      "label": "模拟抑制与数字滤波",
+      "description": "都按有用/干扰频段选通阻带；数字 FIR 无法消除已混叠分量，模拟插入损耗则随真实端接和耦合变化。"
+    },
+    {
+      "from": "dsp-filter-engineering",
+      "to": "control-frequency-measure",
+      "label": "滤波延迟与反馈",
+      "description": "恒定群延迟不代表闭环稳定，必须计入测量链总相位并重新判断裕度。"
     }
   ],
   "pending": [

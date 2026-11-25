@@ -4,6 +4,7 @@ window.LN_COURSES = Object.freeze([
   { ...window.LN_ELECTRICAL_MATERIALS, knowledgeMap: window.LN_ELECTRICAL_MATERIALS_MAP, workedExercises: ['em-test-summary', 'em-test-fill', 'em-test-short', 'em-test-review'] },
   { ...window.LN_NEW_ENERGY_MATERIALS, knowledgeMap: window.LN_NEW_ENERGY_MATERIALS_MAP, workedExercises: ['nem-homework'] },
   { ...window.LN_ELECTROMAGNETIC_COMPATIBILITY, knowledgeMap: window.LN_ELECTROMAGNETIC_COMPATIBILITY_MAP },
+  { ...window.LN_DIGITAL_SIGNAL_PROCESSING, knowledgeMap: window.LN_DIGITAL_SIGNAL_PROCESSING_MAP },
   { ...window.LN_AUTO_CONTROL, knowledgeMap: window.LN_AUTO_CONTROL_MAP, workedExercises: ['ac-homework3', 'ac-homework4'] },
   { ...window.LN_ROBOT_DRIVE, knowledgeMap: window.LN_ROBOT_DRIVE_MAP },
   { ...window.LN_ENGLISH, knowledgeMap: window.LN_ENGLISH_MAP },
