@@ -2,6 +2,37 @@
   "lazy": true,
   "terms": [
     {
+      "id": "control-term-bode",
+      "title": "伯德图",
+      "english": "Bode plot",
+      "aliases": [
+        "伯德图",
+        "Bode plot"
+      ],
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-5-6-9"
+      ],
+      "match": "按对数排刻度时",
+      "description": "使用同一条对数频率轴，把系统的幅值（通常用 dB）和相位分别画成两条曲线。"
+    },
+    {
+      "id": "control-term-nyquist",
+      "title": "奈奎斯特图",
+      "english": "Nyquist plot",
+      "aliases": [
+        "奈奎斯特图",
+        "Nyquist plot"
+      ],
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "match": "复平面上的一个点",
+      "description": "把回路复数频响随频率描在复平面上，读出它相对 −1 点的轨迹。完整的稳定性判据还要知道开环不稳定极点数。"
+    },
+    {
       "id": "ac-characteristic",
       "aliases": [
         "特征方程",
@@ -187,6 +218,118 @@
     }
   ],
   "symbolDefinitions": [
+    {
+      "id": "control-zoh-feedback-gain",
+      "section": "ac-8-5-2",
+      "sections": [
+        "ac-8-5-2"
+      ],
+      "sourceAnchor": "control-zoh-feedback-symbols",
+      "match": "闭环离散极点",
+      "title": "电流反馈增益 K",
+      "keys": [
+        "K"
+      ],
+      "description": "电流反馈的比例系数，单位 V/A。连续回路按读数连续更新电压，采样回路只在更新时把读数乘 −K，再保持到下次更新。"
+    },
+    {
+      "id": "control-zoh-feedback-pole",
+      "section": "ac-8-5-2",
+      "sections": [
+        "ac-8-5-2"
+      ],
+      "sourceAnchor": "control-zoh-feedback-symbols",
+      "match": "闭环离散极点",
+      "title": "离散闭环极点 z_cl",
+      "keys": [
+        "z_cl"
+      ],
+      "description": "电流偏差每经过一次采样所乘的系数，模小于 1 时该偏差收敛。"
+    },
+    {
+      "id": "control-zoh-retained-current",
+      "section": "ac-8-5-2",
+      "sections": [
+        "ac-8-5-2"
+      ],
+      "sourceAnchor": "control-zoh-symbols",
+      "match": "步内方程",
+      "title": "保持区间的保留系数 a",
+      "keys": [
+        "a"
+      ],
+      "description": "一个采样区间后，电流距恒压平衡值的偏差还剩原来的多少。"
+    },
+    {
+      "id": "control-zoh-interval-current",
+      "section": "ac-8-5-2",
+      "sections": [
+        "ac-8-5-2"
+      ],
+      "sourceAnchor": "control-zoh-symbols",
+      "match": "步内方程",
+      "title": "区间内电流 i",
+      "keys": [
+        "i"
+      ],
+      "description": "采样点之间连续变化的绕组电流，单位 A。"
+    },
+    {
+      "id": "control-zoh-interval-time",
+      "section": "ac-8-5-2",
+      "sections": [
+        "ac-8-5-2"
+      ],
+      "sourceAnchor": "control-zoh-symbols",
+      "match": "步内方程",
+      "title": "时间 t",
+      "keys": [
+        "t"
+      ],
+      "description": "采样点之间的连续时间，单位 s。"
+    },
+    {
+      "id": "control-pi-y-deviation",
+      "section": "ac-6-5",
+      "sections": [
+        "ac-6-5"
+      ],
+      "sourceAnchor": "control-pi-deviation",
+      "match": "参照平衡点",
+      "title": "输出偏差 Δy",
+      "keys": [
+        "delta:y"
+      ],
+      "description": "输出 y 相对所求平衡值的变化。上点表示随时间变化率。"
+    },
+    {
+      "id": "control-pi-x-deviation",
+      "section": "ac-6-5",
+      "sections": [
+        "ac-6-5"
+      ],
+      "sourceAnchor": "control-pi-deviation",
+      "match": "参照平衡点",
+      "title": "积分偏差 Δx",
+      "keys": [
+        "delta:x"
+      ],
+      "description": "积分状态 x 相对所求平衡积分值的变化。"
+    },
+    {
+      "id": "control-pi-uncapped",
+      "section": "ac-6-5",
+      "sections": [
+        "ac-6-5"
+      ],
+      "sourceAnchor": "control-pi-command",
+      "match": "未限幅命令记为",
+      "title": "未限幅命令 u*",
+      "keys": [
+        "u^*"
+      ],
+      "description": "比例与积分相加的命令，可能超出 0 到 1；实际对象输入 u 是它经过限幅的结果。"
+    },
     {
       "id": "ac-time-constant",
       "title": "时间常数 T",
@@ -1702,15 +1845,86 @@
       ],
       "sourceAnchor": "control-frequency-symbols",
       "match": "输出对输入的复相量比",
-      "title": "R、C、H、ω、τ",
+      "title": "复相量比 H",
       "keys": [
-        "R",
-        "C",
-        "H",
-        "ω",
+        "H"
+      ],
+      "description": "同一频率下，输出电压复相量除以输入电压复相量。模是幅值比，角是输出相对输入的相位。"
+    },
+    {
+      "id": "control-freq-r",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-frequency-symbols",
+      "match": "输出对输入的复相量比",
+      "title": "串联电阻 R",
+      "keys": [
+        "R"
+      ],
+      "description": "输入与输出节点之间的串联电阻，单位 Ω。"
+    },
+    {
+      "id": "control-freq-c",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-frequency-symbols",
+      "match": "输出对输入的复相量比",
+      "title": "电容 C",
+      "keys": [
+        "C"
+      ],
+      "description": "跨接输出与参考地的电容，单位 F。"
+    },
+    {
+      "id": "control-freq-omega",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-8-5-2"
+      ],
+      "sourceAnchor": "control-frequency-symbols",
+      "match": "输出对输入的复相量比",
+      "title": "角频率 ω",
+      "keys": [
+        "ω"
+      ],
+      "description": "正弦信号相位每秒前进的弧度数，单位 rad/s。"
+    },
+    {
+      "id": "control-freq-tau",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1"
+      ],
+      "sourceAnchor": "control-frequency-symbols",
+      "match": "输出对输入的复相量比",
+      "title": "时间常数 τ",
+      "keys": [
         "τ"
       ],
-      "description": "本算例的量、参考方向与单位。"
+      "description": "本电路中 τ=RC，单位 s；幅值降至低频值的 1/√2 时，角频率为 1/τ。"
+    },
+    {
+      "id": "control-freq-j",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-5-6-9",
+        "ac-8-5-2"
+      ],
+      "sourceAnchor": "control-frequency-symbols",
+      "match": "输出对输入的复相量比",
+      "title": "虚数单位 j",
+      "keys": [
+        "j"
+      ],
+      "description": "j²=−1，用复平面上的实轴和虚轴共同表示相位和幅值。"
     },
     {
       "id": "control-margin-symbols",
@@ -1719,16 +1933,325 @@
         "ac-5-6-9"
       ],
       "sourceAnchor": "control-margin-symbols",
-      "match": "指增益交越频率",
-      "title": "L、s、ω、ω_c、ω_180",
+      "match": "指幅值到",
+      "title": "开环回路传递函数 L",
       "keys": [
-        "L",
-        "s",
-        "ω",
-        "ω_c",
+        "L"
+      ],
+      "description": "从误差到比较点反馈信号的整个回路传递函数。比较点的负号单独计入，特征方程是 1+L(s)=0。"
+    },
+    {
+      "id": "control-margin-s",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-margin-symbols",
+      "match": "指幅值到",
+      "title": "复频率 s",
+      "keys": [
+        "s"
+      ],
+      "description": "复频率，以 s⁻¹ 为单位。在频响中取 s=jω。"
+    },
+    {
+      "id": "control-margin-omega",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-margin-symbols",
+      "match": "指幅值到",
+      "title": "角频率 ω",
+      "keys": [
+        "ω"
+      ],
+      "description": "正弦扰动相位每秒改变的弧度数，单位 rad/s。"
+    },
+    {
+      "id": "control-margin-gain-crossing",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-margin-symbols",
+      "match": "指幅值到",
+      "title": "增益交越频率 ω_c",
+      "keys": [
+        "ω_c"
+      ],
+      "description": "回路幅值到 1（0 dB）的角频率。在这里读相位到 −180° 的余量，单位 rad/s。"
+    },
+    {
+      "id": "control-margin-phase-crossing",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-margin-symbols",
+      "match": "指幅值到",
+      "title": "相位交越频率 ω₁₈₀",
+      "keys": [
         "ω_180"
       ],
-      "description": "本算例的量、参考方向与单位。"
+      "description": "回路相位到 −180° 的角频率。在这里读幅值到 0 dB 的余量，单位 rad/s。"
+    },
+    {
+      "id": "control-margin-delay",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-delay-symbol",
+      "match": "额外纯延迟",
+      "title": "纯延迟 T_d",
+      "keys": [
+        "T_d"
+      ],
+      "description": "波形整体后移的时间（s）。幅值不变，在角频率 ω 处增加 ωT_d 弧度的相位滞后。"
+    },
+    {
+      "id": "control-margin-gain",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-gain-symbol",
+      "match": "把低频增益记为",
+      "title": "低频回路增益 K",
+      "keys": [
+        "K"
+      ],
+      "description": "本三阶例子的开环分子，等于零频处的无量纲幅值比。"
+    },
+    {
+      "id": "control-rc-cutoff-hz",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-rc-cutoff-symbols",
+      "match": "对应角频率为",
+      "title": "RC 截止频率 f_c",
+      "keys": [
+        "f_c"
+      ],
+      "description": "无负载一阶 RC 低通的截止频率，单位 Hz。此处幅值相对直流值降至 1/√2。"
+    },
+    {
+      "id": "control-frequency-hz",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-rc-cutoff-symbols",
+      "match": "对应角频率为",
+      "title": "频率 f",
+      "keys": [
+        "f"
+      ],
+      "description": "每秒周期数，单位 Hz。角频率 ω=2πf，单位 rad/s。"
+    },
+    {
+      "id": "control-rc-cutoff-rad",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1"
+      ],
+      "sourceAnchor": "control-rc-cutoff-symbols",
+      "match": "对应角频率为",
+      "title": "RC 截止角频率 ω_RC",
+      "keys": [
+        "ω_RC"
+      ],
+      "description": "无负载一阶 RC 低通的截止角频率 1/(RC)，单位 rad/s。"
+    },
+    {
+      "id": "control-scope-input",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-bode-measurement",
+      "match": "用同一种口径",
+      "title": "输入电压幅值 A_i",
+      "keys": [
+        "A_i"
+      ],
+      "description": "示波器记录的输入稳态正弦幅值（V）。与输出必须使用同一种幅值口径。"
+    },
+    {
+      "id": "control-scope-output",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-bode-measurement",
+      "match": "用同一种口径",
+      "title": "输出电压幅值 A_o",
+      "keys": [
+        "A_o"
+      ],
+      "description": "示波器记录的输出稳态正弦幅值（V）。与输入的比值给出线性幅值比。"
+    },
+    {
+      "id": "control-scope-offset",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1",
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-bode-measurement",
+      "match": "用同一种口径",
+      "title": "波峰时间差 Δt",
+      "keys": [
+        "delta:t"
+      ],
+      "description": "输出与输入对应波峰之间的时间差（s）。输出峰晚到取正；相位只看这一测量时相差整周等价。"
+    },
+    {
+      "id": "control-scope-phase",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1"
+      ],
+      "sourceAnchor": "control-bode-measurement",
+      "match": "用同一种口径",
+      "title": "相位差 φ",
+      "keys": [
+        "φ"
+      ],
+      "description": "输出相对输入的相位（°）。输出峰晚到时，按负相位表示滞后。"
+    },
+    {
+      "id": "control-scope-decibels",
+      "section": "ac-5-1",
+      "sections": [
+        "ac-5-1"
+      ],
+      "sourceAnchor": "control-bode-measurement",
+      "match": "用同一种口径",
+      "title": "分贝幅值 M_dB",
+      "keys": [
+        "M_dB"
+      ],
+      "description": "电压幅值比取常用对数后乘 20，单位 dB。0 dB 对应幅值比为 1。"
+    },
+    {
+      "id": "control-phase-margin",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-phase-margin-symbol",
+      "match": "是该处相位到",
+      "title": "相位裕度 φ_m",
+      "keys": [
+        "φ_m"
+      ],
+      "description": "0 dB 的增益交越处，开环相位距离 −180° 的余量。代入延迟公式时换成弧度。"
+    },
+    {
+      "id": "control-gain-margin",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-gain-margin-symbols",
+      "match": "记临界倍数为",
+      "title": "增益裕度 G_m",
+      "keys": [
+        "G_m"
+      ],
+      "description": "在 −180° 交越处，开环幅值的倒数。它表示正的比例增益要乘多少倍才能达到临界。"
+    },
+    {
+      "id": "control-gain-margin-db",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-gain-margin-symbols",
+      "match": "记临界倍数为",
+      "title": "分贝增益裕度 G_m,dB",
+      "keys": [
+        "G_m,dB"
+      ],
+      "description": "增益裕度的分贝表示，等于在 −180° 交越处读得的开环幅值分贝数取负号。"
+    },
+    {
+      "id": "control-first-critical-delay",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-delay-symbol",
+      "match": "首次临界延迟为",
+      "title": "首次临界延迟 T_d,crit",
+      "keys": [
+        "T_d,crit"
+      ],
+      "description": "本例由原稳定状态出发，恰好耗完相位裕度的额外纯延迟，单位 s。"
+    },
+    {
+      "id": "control-time-domain-t",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-delay-symbol",
+      "match": "首次临界延迟为",
+      "title": "时间 t",
+      "keys": [
+        "t"
+      ],
+      "description": "这里指波形的时间坐标，单位 s。纯延迟把波形的自变量换为 t−T_d。"
+    },
+    {
+      "id": "control-nyquist-open-poles",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-nyquist-counts",
+      "match": "净顺时针圈数",
+      "title": "开环右半平面极点数 P",
+      "keys": [
+        "P"
+      ],
+      "description": "开环 L(s) 在右半平面的极点总数，重根按重数计。"
+    },
+    {
+      "id": "control-nyquist-closed-poles",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-nyquist-counts",
+      "match": "净顺时针圈数",
+      "title": "闭环右半平面极点数 Z",
+      "keys": [
+        "Z"
+      ],
+      "description": "在本分析条件下，1+L(s) 在右半平面的零点数，即闭环右半平面极点数，重根计重数。"
+    },
+    {
+      "id": "control-nyquist-windings",
+      "section": "ac-5-6-9",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "sourceAnchor": "control-nyquist-counts",
+      "match": "净顺时针圈数",
+      "title": "净顺时针圈数 N",
+      "keys": [
+        "N"
+      ],
+      "description": "奈奎斯特轨迹绕 −1 的净顺时针圈数，逆时针记负。本节的 s 平面路径也是顺时针。"
     },
     {
       "id": "control-pi-symbols",

@@ -2,6 +2,20 @@
   "lazy": true,
   "terms": [
     {
+      "id": "materials-term-esr",
+      "section": "em-3-1",
+      "sections": [
+        "em-3-1"
+      ],
+      "aliases": [
+        "ESR"
+      ],
+      "title": "等效串联电阻",
+      "english": "Equivalent Series Resistance",
+      "match": "就是这个阻抗的实部",
+      "description": "同一频率下，端口复阻抗的实部。实测值可能包括介质、电极和引线损耗。"
+    },
+    {
       "id": "emat-pauli",
       "title": "泡利不相容原理",
       "english": "Pauli Exclusion Principle",
@@ -630,6 +644,48 @@
     }
   ],
   "symbolDefinitions": [
+    {
+      "id": "materials-copper-source-voltage",
+      "section": "em-5-1",
+      "sections": [
+        "em-5-1"
+      ],
+      "sourceAnchor": "materials-copper-supply-symbols",
+      "match": "导线去回总电阻",
+      "title": "电源电压 U_s",
+      "keys": [
+        "U_s"
+      ],
+      "description": "理想恒压源的端电压，单位 V。"
+    },
+    {
+      "id": "materials-copper-resistive-load",
+      "section": "em-5-1",
+      "sections": [
+        "em-5-1"
+      ],
+      "sourceAnchor": "materials-copper-supply-symbols",
+      "match": "导线去回总电阻",
+      "title": "负载电阻 R_L",
+      "keys": [
+        "R_L"
+      ],
+      "description": "与去回导线串联的电阻性负载，单位 Ω。"
+    },
+    {
+      "id": "materials-dielectric-esr",
+      "section": "em-3-1",
+      "sections": [
+        "em-3-1"
+      ],
+      "sourceAnchor": "materials-dielectric-esr-definition",
+      "match": "就是这个阻抗的实部",
+      "title": "等效串联电阻 R_s",
+      "keys": [
+        "R_s"
+      ],
+      "description": "在指定频率下，端口复阻抗的实部，单位 Ω。"
+    },
     {
       "id": "emat-quantum-n",
       "title": "主量子数 n",

@@ -10,7 +10,10 @@
 <thead><tr><th scope="col">连接</th><th scope="col">变化后</th><th scope="col">储能</th></tr></thead>
 <tbody><tr><th scope="row">接恒压源</th><td>10 V，40 μC</td><td>200 μJ</td></tr><tr><th scope="row">断开且忽略漏电</th><td>5 V，20 μC</td><td>50 μJ</td></tr></tbody>
 </table>
-<p>恒压情况电源还送入额外电荷，并做功 \(10\,\mathrm V\times20\,\mu\mathrm C=200\,\mu\mathrm J\)，大于增加的 100 μJ 电场能。其余在理想缓慢过程中与介质位移的机械功有关；断开时没有电源供能，电场能降低也可转成机械功。遇到类似题先在图上圈出电源及仍相连的极板，再看哪个量恒定。</p>
+<h3 id="study-capacitor-work" data-knowledge-kind="方法" data-knowledge-terms="电容 电场力 机械功 恒压 恒电荷 能量守恒">电场能反向变化，介质为什么都被吸入？</h3>
+<p>假设插入很慢，介质动能的变化和发热都忽略。<strong>电源送入的能量等于电场能增量加上电场对外做的机械功。</strong> 恒压时电源送入额外电荷，做功 \(10\,\mathrm V\times20\,\mu\mathrm C=200\,\mu\mathrm J\)。电场能增加 100 μJ，留下 100 μJ 作为电场做的机械功。断开时没有电源做功，电场能降低 50 μJ，电场便做了 50 μJ 的机械功。介质每深入一点，电容都增大；对这一步做同样的能量比较，两种情况下机械功均为正，因此电场力朝插入方向。</p>
+<p id="study-capacitor-source-charge"><strong>做能量题先画连线。</strong> 接理想恒压源就固定 \(V\)，在式（S.1.1）中用 \(CV^2/2\)。记极板电荷量的增量为 \(\Delta Q\)，另算电源做功 \(V\Delta Q\)。断开且无漏电就固定 \(Q\)，用 \(Q^2/(2C)\)。想判断电场力的方向，要把电源交换的能量也放进同一本账。</p>
+<p>如果固定介质位置，换成交流电源，理想电容在每个完整周期后回到原场能。真实材料仍可能发热，这时用<a href="#course/electrical-materials/em-3-1/materials-energy-to-heat">一周期的能量收支</a>区分往返的场能和实际损耗。</p>
 <p>器件为何不能只为了储能选高介电常数，看<a href="#course/electrical-materials/em-7-1/study-capacitor-energy-density">介质的击穿场强与允许储能</a>。参考 <a href="https://openstax.org/books/university-physics-volume-2/pages/8-3-energy-stored-in-a-capacitor" target="_blank" rel="noopener">OpenStax · 电容储能</a>。</p>
 <p><a class="secondary-button" data-open-practice href="#practice/hs-physics/study-capacitor/hs-core-capacitor-boundary">练一题：用连线判断能量变化</a></p>
 </section>

@@ -3,7 +3,16 @@
 <p>导体的电阻随长度增加而上升，截面越大可以容纳的并行电流通路越多。因此选导线既要核查材料电阻率，也要画实际去、回路径和连接。题给“一米电缆”可能对应两米导体。</p>
 <h3 id="materials-copper-loop" data-knowledge-kind="方法" data-knowledge-terms="导电材料 铜线 电阻率 电流密度 回路 电压降 温度">先算单程，再按连接得到整个回路</h3>
 <p id="materials-transport-symbols">\(\rho\) 是指定温度的电阻率（Ω·m），\(\ell\) 是这段电流路径的长度（m），\(A\) 是均匀截面积（m²），\(I\) 是直流电流（A）。\(R\) 是路径电阻（Ω），\(\Delta U\) 为压降（V），\(P\) 为损耗功率（W）。忽略接头、集肤效应及电流非均匀分布。</p>
-\[R=\rho\frac{\ell}{A},\qquad \Delta U=IR,\qquad P=I^2 R.\]
+\[\begin{aligned}
+ R&=\rho\frac{\ell}{A},\\
+ \Delta U&=IR,\\
+ P&=I^2R.
+\end{aligned}\]
 <p>以 20 °C 的退火铜教学值 \(\rho\approx1.72\times10^{-8}\,\Omega\mathrm m\) 估算。相距 1 m 的电源、负载按去回各 1 m，线径规格给截面积 1 mm²，即 \(10^{-6}\,\mathrm{m^2}\)。回路电阻约 34.4 mΩ；10 A 时导线压降约 0.344 V，功率约 3.44 W。</p>
 <p>若铜近似承受统一 80 °C、按 20 °C 线性温度系数约 \(0.0039\,\mathrm K^{-1}\)，电阻约为原来的 1.234 倍。恒流电源下导线耗散跟着增大；恒压系统中电流也可能变化，需要把负载一起列入。大频率下应考虑交流电阻；任何放热估算还需散热和绝缘条件才能推允许载流量。参考 <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/hb/nbshandbook100.pdf" target="_blank" rel="noopener">NBS · Copper Wire Tables</a>。</p>
+<h3 id="materials-copper-hot-voltage" data-knowledge-kind="方法" data-knowledge-terms="恒压 线损 载流 热态电阻 选线">电源恒压，为什么线热了以后还可能更热？</h3>
+<p id="materials-copper-supply-symbols">用 24 V 理想电源和 2.4 Ω 固定电阻负载再算一次。记电源电压为 \(U_s\)、负载电阻为 \(R_L\)，导线去回总电阻仍记为 \(R\)。负载与导线串联，所以总电流由 \(R_L+R\) 决定。代入式（M.5.1.1）的线损式：</p>
+\[P=\frac{U_s^2 R}{(R_L+R)^2}.\]
+<p>冷态和热态的线电阻分别约为 34.4 mΩ、42.45 mΩ。电流略降，从 9.86 A 到 9.83 A；线损却从约 3.34 W 升到 4.10 W，因为负载电阻远大于线电阻，电流变化很小。若短路后电源仍能维持恒压，式（M.5.1.2）取 \(R_L=0\)，反倒变成 \(P=U_s^2/R\)。实际电源的限流及保护此时就是决定条件。</p>
+<p><strong>选线回查。</strong> 首先数清去、回导体，再用对应温度和频率下的电阻算压降、损耗。恒流可直接用 \(I^2R\)；恒压需和负载一起算新的 \(I\)。允许载流量还由散热条件和绝缘温度上限决定。</p>
 </section>

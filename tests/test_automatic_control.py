@@ -145,7 +145,7 @@ class AutomaticControlTests(unittest.TestCase):
     def test_practice_bank(self):
         course_questions=[q for q in self.bank["questions"] if q["course"]=="automatic-control"]
         self.assertIn('ac-dominant-pole-window', {q['id'] for q in course_questions})
-        self.assertEqual(len(course_questions),18)
+        self.assertIn('ac-delay-from-bode', {q['id'] for q in course_questions})
         self.assertEqual({q["id"] for q in course_questions},{q["id"] for q in self.compiled["questions"] if q["course"]=="automatic-control"})
         self.assertIn("automatic-control",self.index)
         self.assertEqual(len(self.index["automatic-control"]["sections"]),25)

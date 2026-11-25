@@ -2,6 +2,34 @@
   "lazy": true,
   "symbolDefinitions": [
     {
+      "id": "study-geography-peak-flow",
+      "section": "study-runoff",
+      "sections": [
+        "study-runoff"
+      ],
+      "sourceAnchor": "study-runoff-triangle-symbols",
+      "match": "扣除基流后的过程线",
+      "title": "洪峰流量 Q_p",
+      "keys": [
+        "Q_p"
+      ],
+      "description": "扣除基流后，过程线上的最高流量，单位 m³/s。"
+    },
+    {
+      "id": "study-geography-flow-duration",
+      "section": "study-runoff",
+      "sections": [
+        "study-runoff"
+      ],
+      "sourceAnchor": "study-runoff-triangle-symbols",
+      "match": "扣除基流后的过程线",
+      "title": "径流持续时间 Δt",
+      "keys": [
+        "delta:t"
+      ],
+      "description": "简化过程线从起涨到直接径流结束的时间，单位 s。"
+    },
+    {
       "id": "study-geo-symbols",
       "title": "A、h、C_e、V_r",
       "keys": [

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "study-capacitor-capacitance",
+    "section": "study-capacitor",
+    "sections": ["study-capacitor"],
+    "sourceAnchor": "study-capacitor-symbols",
+    "match": "极板自由电荷量",
+    "title": "电容 C",
+    "keys": ["C"],
+    "description": "线性电容器的电荷量与板间电压之比，单位 F。"
+  },
+  {
+    "id": "study-capacitor-plate-charge",
+    "section": "study-capacitor",
+    "sections": ["study-capacitor"],
+    "sourceAnchor": "study-capacitor-symbols",
+    "match": "极板自由电荷量",
+    "title": "自由电荷量 Q",
+    "keys": ["Q"],
+    "description": "一块极板上自由电荷量的大小，单位库仑。"
+  },
+  {
+    "id": "study-capacitor-voltage",
+    "section": "study-capacitor",
+    "sections": ["study-capacitor"],
+    "sourceAnchor": "study-capacitor-symbols",
+    "match": "极板自由电荷量",
+    "title": "板间电压 V",
+    "keys": ["V"],
+    "description": "两块极板间的电压，单位伏。"
+  },
+  {
+    "id": "study-capacitor-energy",
+    "section": "study-capacitor",
+    "sections": ["study-capacitor"],
+    "sourceAnchor": "study-capacitor-symbols",
+    "match": "极板自由电荷量",
+    "title": "电场储能 W",
+    "keys": ["W"],
+    "description": "线性电容器电场储能，等于 QV/2，单位 J。"
+  },
+  {
+    "id": "study-capacitor-charge-change",
+    "section": "study-capacitor",
+    "sections": ["study-capacitor"],
+    "sourceAnchor": "study-capacitor-source-charge",
+    "match": "极板电荷量的增量",
+    "title": "极板电荷增量 ΔQ",
+    "keys": ["delta:Q"],
+    "description": "相对初始状态增加的极板自由电荷量，单位库仑。恒压时电源做功为 VΔQ。"
+  }
+]

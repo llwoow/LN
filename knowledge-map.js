@@ -34,11 +34,12 @@
       this.classList.toggle('school-map', course.level === 'highschool');
       this.classList.toggle('outline-map', Boolean(course.outlineOnly));
       this.mountedCourseId = course.id;
-      const byId = new Map(course.sections.map((section) => [section.id, section]));
-      this.groups = [...new Set(course.sections.map((section) => section.group))];
+      const sections = course.hideOutlineEntries ? course.sections.filter(section => section.kind !== 'outline') : course.sections;
+      const byId = new Map(sections.map((section) => [section.id, section]));
+      this.groups = [...new Set(sections.map((section) => section.group))];
       const metadata = course.knowledgeMap;
       // Without authored semantic links, use an honest chapter/reading-order map.
-      const definitions = metadata?.nodes?.length ? metadata.nodes : course.sections.map((section) => ({ section: section.id, title: section.title, note: section.group }));
+      const definitions = metadata?.nodes?.length ? metadata.nodes : sections.map((section) => ({ section: section.id, title: section.title, note: section.group }));
       this.nodes = definitions.filter((node) => byId.has(node.section)).map((node) => ({ ...node, id: node.section, section: byId.get(node.section), group: this.groups.indexOf(byId.get(node.section).group) }));
       const counters = new Map();
       this.nodes.forEach((node) => {
@@ -80,7 +81,7 @@
         '<div class="map-footer"><p>拖动平移 · 滚轮 / 双指缩放 · 点击'+(course.outlineOnly?'打开章节':'进入正文')+'</p><div class="map-legend"><span class="map-order-key">阅读顺序</span><span class="map-relation-key">知识联系</span></div></div>' +
         '<p class="map-status" role="status" aria-live="polite"></p><div class="map-node-context" aria-live="polite"><span>指向或聚焦节点，查看它与其他知识的联系。</span></div>' +
         '<details class="map-connections"><summary>跨知识联系 <span>' + (metadata?.links?.length || 0) + '</span></summary><ul>' + (metadata?.links || []).map((edge) => '<li><div>' + link(byId.get(edge.from), this.byNode.get(edge.from).title) + '<span aria-hidden="true"> → </span>' + link(byId.get(edge.to), this.byNode.get(edge.to).title) + '</div><p>' + escape(edge.description) + '</p></li>').join('') + '</ul></details>' +
-        '<details class="map-directory"><summary>全部章节与资料 <span>' + course.sections.length + '</span></summary><div class="map-directory-groups">' + this.groups.map((group) => '<section><h3>' + escape(group) + '</h3><ul>' + course.sections.filter((section) => section.group === group).map((section) => '<li>' + link(section) + '</li>').join('') + '</ul></section>').join('') + '</div></details></section>';
+        '<details class="map-directory"><summary>全部章节与资料 <span>' + sections.length + '</span></summary><div class="map-directory-groups">' + this.groups.map((group) => '<section><h3>' + escape(group) + '</h3><ul>' + sections.filter((section) => section.group === group).map((section) => '<li>' + link(section) + '</li>').join('') + '</ul></section>').join('') + '</div></details></section>';
       if (!metadata?.links?.length) this.querySelector('.map-connections').hidden = true;
       this.canvas = this.querySelector('.map-canvas');
       this.layer = svg('g', { class: 'map-world' });

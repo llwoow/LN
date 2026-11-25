@@ -439,6 +439,34 @@
   ],
   "symbolDefinitions": [
     {
+      "id": "rd-axis-electrical-error",
+      "section": "rd-foc",
+      "sections": [
+        "rd-foc"
+      ],
+      "sourceAnchor": "rd-axis-error-def",
+      "match": "超前的电角误差",
+      "title": "估计电角超前量 δ",
+      "keys": [
+        "δ"
+      ],
+      "description": "编码器或估计坐标相对真实转子坐标的超前电角度。"
+    },
+    {
+      "id": "rd-axis-current-magnitude",
+      "section": "rd-foc",
+      "sections": [
+        "rd-foc"
+      ],
+      "sourceAnchor": "rd-axis-error-def",
+      "match": "超前的电角误差",
+      "title": "命令电流幅值 I",
+      "keys": [
+        "I"
+      ],
+      "description": "沿估计 q 轴给定的矢量幅值，单位 A。"
+    },
+    {
       "id": "rd-base-beta",
       "title": "反馈系数 β",
       "keys": [

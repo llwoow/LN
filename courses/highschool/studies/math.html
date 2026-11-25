@@ -8,9 +8,16 @@
 </table>
 <h3 id="study-conditional-denominator" data-knowledge-kind="方法" data-knowledge-terms="条件概率 贝叶斯 基准率 阳性 误报 列联表">分子相同，分母为什么会不同？</h3>
 <p id="study-math-symbols">令 \(D\) 为“有缺陷”，\(A\) 为“报警”，\(P(D\mid A)\) 表示已知报警后抽到缺陷件的概率。此处按题意在指定范围内等可能抽取，“且”的两个条件共同落在同一个交叉格。</p>
-\[P(D\mid A)=\frac{P(D\cap A)}{P(A)}=\frac{18/200}{36/200}=0.50.\]
+\[\begin{aligned}
+ P(D\mid A)&=\frac{P(D\cap A)}{P(A)}\\
+ &=\frac{18/200}{36/200}=0.50.
+\end{aligned}\]
 <p>若题目反过来问“已知有缺陷，检测会报警的概率”，分母就换成全部缺陷件，计算 \(P(A\mid D)=18/20=0.90\)。两问的 18 来自同一个格子，但 50% 与 90% 分别回答报警值不值得信和缺陷容易不容易漏掉。第二个数很高，不能推出第一个也很高。</p>
 <p>保持缺陷件报警率 90%、合格件误报率 10%，把缺陷率降为 1%。用 1000 件作新的计数例子，缺陷报警 9 件、合格报警 99 件，因此报警后有缺陷的比例变为 9/108，约 8.33%。这是改变来料构成而保持检测条件的计算，不能用原 200 件直接证明换批后的真实误报仍为 10%。</p>
-<p>在<a href="#course/hs-biology/study-testcross/study-testcross-evidence">生物测交</a>里，“杂合亲本产生隐性后代的概率”也不能倒过来当成“看到后代后亲本为杂合的概率”。参考 <a href="https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables" target="_blank" rel="noopener">OpenStax · Contingency Tables</a>。</p>
+<h3 id="study-conditional-threshold" data-knowledge-kind="方法" data-knowledge-terms="贝叶斯 条件概率 基准率 报警 目标值">反过来算：至少八成报警是真的，需要怎样的来料？</h3>
+<p id="study-math-prevalence">令 \(p=P(D)\) 为来料缺陷比例。把所有零件分成有缺陷和合格两组：前一组占 \(p\)，贡献 \(0.90p\) 的报警比例；后一组占 \(1-p\)，贡献 \(0.10(1-p)\)。将这两条路径相加就是全部报警，相同思路也适用于更多组：</p>
+\[P(D\mid A)=\frac{0.90p}{0.10+0.80p}.\]
+<p>要让式（S.1.2）至少为 80%，分母为正，可以直接交叉相乘：\(0.90p\ge0.80[0.90p+0.10(1-p)]\)。移项得到 \(0.26p\ge0.08\)，所以缺陷比例至少 \(4/13\)，约 30.77%。这表示在更低的缺陷率下，现有检测达不到这个报警可信度目标；能改变的是误报、检测策略或复核流程。<strong>回查时画两行。</strong> 所有报警来自各行报警数之和，已知哪一列就用哪一列的合计作分母；检测灵敏度与报警后可信度是两个问题。</p>
+<p>同一张表也能用到<a href="#course/hs-biology/study-testcross/study-testcross-denominator">测交中用全紫后代反推亲本</a>。把「缺陷／合格」换成两类可能的亲本，把「报警」换成你实际观察到的结果。若两行都可能给出该结果，反推就要计入各行原先的比例。若其中一行在模型里绝无可能给出该结果，则可以直接排除它。参考 <a href="https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables" target="_blank" rel="noopener">OpenStax · Contingency Tables</a>。</p>
 <p><a class="secondary-button" data-open-practice href="#practice/hs-math/study-conditional-probability/hs-core-conditional-denominator">练一题：给定报警后重新选分母</a></p>
 </section>

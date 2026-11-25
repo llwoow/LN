@@ -2,6 +2,20 @@
   "lazy": true,
   "symbolDefinitions": [
     {
+      "id": "study-chemistry-extent",
+      "section": "study-equilibrium",
+      "sections": [
+        "study-equilibrium"
+      ],
+      "sourceAnchor": "study-chemistry-extent-symbol",
+      "match": "为新增的 B 浓度除以",
+      "title": "反应进程增量 x",
+      "keys": [
+        "x"
+      ],
+      "description": "体积不再变化时，B 的新增浓度除以参考浓度。A 的归一化浓度同期减少 2x。"
+    },
+    {
       "id": "study-chemistry-symbols",
       "title": "Q_c、K_c、c°",
       "keys": [

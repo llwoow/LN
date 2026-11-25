@@ -128,7 +128,8 @@ links=[{'from':sid(a),'to':sid(b),'label':label,'description':desc} for a,b,labe
  (4,17,'斜面功与圆弧','第17题斜面有摩擦、圆弧光滑，先求A点状态再推进到B，不能全程套机械能守恒。')]]
 material={'id':'physics-001','group':'试卷001','description':'依据试卷001整理的逐题讲解、物理仿真与复做记录。','sections':sections,'knowledgeLinks':links,'links':[{'label':'试卷001资料与记录','href':'#course/hs-physics/physics-001'}]}
 (ROOT/'courses/hs-physics/supplements.json').write_text(json.dumps({'materials':[material]},ensure_ascii=False,indent=2)+'\n')
-(ROOT/'courses/hs-physics/glossary.json').write_text(json.dumps({'lazy':True,'symbolDefinitions':glossary,'terms':[]},ensure_ascii=False,indent=2)+'\n')
+study_definitions = json.loads((ROOT/'courses/highschool/studies/physics-glossary.json').read_text(encoding='utf-8'))
+(ROOT/'courses/hs-physics/glossary.json').write_text(json.dumps({'lazy':True,'symbolDefinitions':glossary+study_definitions,'terms':[]},ensure_ascii=False,indent=2)+'\n')
 overview='<section class="physics001"><h2>试卷001</h2><p>第1—18题的逐题讲解与运动模型。参考：《高三物理》题稿。</p>'+lst(D['meta']['notes'])+'<ol>'+''.join('<li><a href="'+route(q['id'])+'">第'+str(q['id'])+'题 · '+esc(q['title'])+'</a></li>' for q in D['questions'])+'</ol><h3>学习笔记</h3><p>可导入此前导出的physics-001记录，按更新时间保留较新笔记。笔记与练习首答记录分别保存在当前浏览器，不换算个人成绩。</p><div data-physics-notebook></div><p><a href="https://basic.smartedu.cn/tchMaterial" target="_blank" rel="noopener">国家中小学智慧教育平台：教材入口</a> · <a href="#highschool/resources">教材与来源证据</a></p></section>'
 lesson('physics-001',overview,physics001=0)
 # Derived practice entries link the full original reasoning; preserve all old identities and bank.version.

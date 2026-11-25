@@ -399,6 +399,48 @@
   ],
   "symbolDefinitions": [
     {
+      "id": "psd-periodic-on-duration",
+      "section": "device-selection",
+      "sections": [
+        "device-selection"
+      ],
+      "sourceAnchor": "psd-pulse-period-symbols",
+      "match": "通电时长记为",
+      "title": "通电时长 t_on",
+      "keys": [
+        "t_on"
+      ],
+      "description": "一个矩形功率脉冲持续加热的时间，单位 s。"
+    },
+    {
+      "id": "psd-periodic-period",
+      "section": "device-selection",
+      "sections": [
+        "device-selection"
+      ],
+      "sourceAnchor": "psd-pulse-period-symbols",
+      "match": "通电时长记为",
+      "title": "重复周期 T",
+      "keys": [
+        "T"
+      ],
+      "description": "从一个脉冲开始到下一个开始的时间，单位 s；含通电段和关断段。"
+    },
+    {
+      "id": "psd-periodic-peak-rise",
+      "section": "device-selection",
+      "sections": [
+        "device-selection"
+      ],
+      "sourceAnchor": "psd-pulse-period-symbols",
+      "match": "通电时长记为",
+      "title": "峰值温升 ΔT_pk",
+      "keys": [
+        "delta:T_pk"
+      ],
+      "description": "重复脉冲达到周期稳定以后，通电段末尾的结温相对于固定壳温的升高量，单位 K。"
+    },
+    {
       "id": "gate-source-voltage",
       "keys": [
         "V_GS"

@@ -3,8 +3,22 @@
 <p>把绝缘片夹在两块金属板中间。外电场使材料内部束缚电荷重排，称为极化，等电压下极板可以容纳更多自由电荷。若电压反复换向，部分极化过程来不及跟上，电场做的功有一部分变成热；此外仍可能有漏导电流。电容值本身说不清这些损耗。</p>
 <h3 id="materials-loss-tangent" data-knowledge-kind="难点" data-knowledge-terms="电介质 介电常数 介质损耗 损耗角 正切 极化 漏电">把同相电流和正交电流分开量</h3>
 <p id="materials-dielectric-symbols">在固定频率、小信号正弦稳态，用电导 \(G\)（S）和电容 \(C\)（F）并联描述端口。\(U\) 是有效值电压（V），\(\omega=2\pi f\) 是角频率（rad/s），\(f\) 是频率（Hz）。同相电流为 \(GU\)，超前 90° 的电容电流为 \(\omega C U\)。把两者的比定义为损耗角正切 \(\tan\delta\)，有功损耗为 \(P\)（W）。</p>
-\[\tan\delta=\frac{G}{\omega C},\qquad P=U^2G=\omega C U^2\tan\delta.\]
-<p>教学参数 \(C=1\,\mu\mathrm F\)、\(f=20\,\mathrm{kHz}\)、\(U=10\,\mathrm V\)、\(\tan\delta=0.02\) 时，正交电流约 1.257 A，同相电流约 0.0251 A，损耗约 0.251 W。直接拿 1.257 A 乘电压，只会把主要储能交换误算为平均耗散。若电压翻倍且材料仍在同一线性状态，平均损耗会变为四倍。</p>
+\[\begin{aligned}
+ \tan\delta&=\frac{G}{\omega C},\\
+ P&=U^2G=\omega C U^2\tan\delta.
+\end{aligned}\]
+<p>教学参数 \(C=1\,\mu\mathrm F\)、\(f=20\,\mathrm{kHz}\)、\(U=10\,\mathrm V\)、\(\tan\delta=0.02\) 时，正交电流约 1.257 A，同相电流约 0.0251 A，损耗约 0.251 W。瞬时的电容电流可以较大，但它交替把能量送入电场再送回电源；只有同相电流的周期平均功率留在材料里。若电压翻倍且材料仍在同一线性状态，平均损耗会变为四倍。</p>
+<h3 id="materials-dielectric-series" data-knowledge-kind="方法" data-knowledge-terms="等效串联电阻 ESR 损耗角 并联换算 介质损耗">仪器读的是 ESR，怎样和损耗角核对？</h3>
+<p id="materials-dielectric-esr-definition">先选择同一个频率，把并联导纳 \(G+j\omega C\) 取倒数得到端口阻抗。等效串联电阻 \(R_s\)（ESR，单位 Ω）就是这个阻抗的实部。分子分母同乘复共轭后得到下式第一行；当 \(\tan\delta\ll1\) 时可略去分母中较小的 \(G^2\)，得到第二行。</p>
+\[\begin{aligned}
+ R_s&=\frac{G}{G^2+(\omega C)^2}\\
+ &\approx\frac{\tan\delta}{\omega C}.
+\end{aligned}\]
+<p>上面的假设算例中，\(G\approx0.00251\,\mathrm S\)，所以 \(R_s\approx0.159\,\Omega\)。总电流有效值由同相分量和正交分量的平方和开方，约 1.257 A。用总电流平方乘 \(R_s\) 也得到约 0.251 W，与并联模型相符。仪表测到的实际 ESR 还可能含电极、引线等损耗；这里只把给定的介质模型换了等效表示。</p>
 <p>参数应在指定频率、温度、偏置和电场强度下核对。直流漏电需单独记录；有脉冲和谐波时不同频率的损耗参数也可能不同。这里的同相/正交分解可回查<a href="#course/automatic-control/ac-5-1/control-frequency-rc">相量与复阻抗</a>。允许储能还受<a href="#course/electrical-materials/em-7-1/study-capacitor-energy-density">击穿与工程降额</a>限制。</p>
+<h3 id="materials-energy-to-heat" data-knowledge-kind="跨学科" data-knowledge-terms="电容 储能 耗散 损耗角 ESR 周期能量 温升 热时间常数">顺着能量走，从电容储能到器件温升</h3>
+<p><a href="#course/hs-physics/study-capacitor/study-capacitor-work">电容插入介质的能量分析</a>先把电源送来的能量、场能变化和机械功分开。把同一思路用到本节的交流电容，并固定介质位置。理想电容每个完整周期都回到原来的电压和场能，存进去的能量也就全部送了回来。在本节 \(1\,\mu\mathrm F\)、有效值 10 V 的例子中，峰值电压是有效值的 \(\sqrt2\) 倍，最高场能是 \(CU^2=100\,\mu\mathrm J\)。</p>
+<p>接着看损耗支路。按式（M.3.1.1），0.251 W 在 20 kHz 的一个周期内留下约 <strong>12.6 μJ 的热</strong>。这部分来自同相电流，与可往返的 100 μJ 峰值场能有不同的去向。拿串联模型算时，式（M.3.1.2）先根据同一个频率换成 \(R_s\)，再用总有效值电流的平方乘它，得到的是同一份耗散。</p>
+<p>再问会不会过热，就要追踪这份耗散何时发生、热又来不来得及流出去。<a href="#course/power-semiconductors/device-selection/psd-pulse-train-thermal">功率器件的重复脉冲算例</a>把同为 5 W 的平均损耗放到两种脉冲周期下，峰值温升分别为 10.25 K 和 19.87 K。这里热路径是线性的，壳温固定。达到周期稳定后，平均损耗决定平均温升，脉冲时长与散热时间的相对大小决定温度波动。问能储多少时看场能，问每周期损失多少时看有功，问最高温度时保留损耗随时间的变化。</p>
 <p><a class="secondary-button" data-open-practice href="#practice/electrical-materials/em-3-1/emat-core-dielectric-loss">练一题：从损耗角推有功</a></p>
 </section>

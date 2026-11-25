@@ -165,7 +165,7 @@
           titleKey: title.normalize('NFKC').toLowerCase(),
           search: [title, kind, terms, section.title, section.group, course.title].join(' ').normalize('NFKC').toLowerCase() });
       };
-      for (const section of course.sections) {
+      for (const section of listedSections(course)) {
         const route = '#course/' + course.id + '/' + section.id;
         add(section, '概念', section.title, route, (section.keywords || []).join(' '));
         const reading = index[course.id]?.sections[section.id];
@@ -277,17 +277,22 @@
 
   function renderKnowledgeMap(course) {
     main.classList.add('course-main', 'map-main');
-    main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.filter(s=>!s.supplement).map((section) => section.group)).size + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'map') + (course.reference ? '<p class="page-meta course-reference">参考：' + escapeHTML(course.reference) + '</p>' : '') + '<ln-knowledge-map></ln-knowledge-map>';
+    const reference = escapeHTML(course.reference || '');
+    const referenceLabel = course.referenceUrl
+      ? '<a href="' + escapeHTML(course.referenceUrl) + '" target="_blank" rel="noopener">' + reference + '</a>'
+      : reference;
+    main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.filter(s=>!s.supplement).map((section) => section.group)).size + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'map') + (referenceLabel ? '<p class="page-meta course-reference">参考：' + referenceLabel + '</p>' : '') + '<ln-knowledge-map></ln-knowledge-map>';
     $('ln-knowledge-map', main).course = course;
   }
 
   function renderReader(course, sectionId, anchor) {
     const selected = course.sections.find((section) => section.id === sectionId) || (!sectionId ? course.sections[0] : null);
-    const groups = [...new Set(course.sections.map((section) => section.group))];
+    const sections = listedSections(course);
+    const groups = [...new Set(sections.map((section) => section.group))];
     main.classList.add('course-main');
     const sectionLink = section => '<a href="#course/' + course.id + '/' + section.id + '"' + (selected?.id === section.id ? ' aria-current="page"' : '') + '>' + escapeHTML(section.title) + '</a>';
     const outline = groups.map(group => {
-      const items=course.sections.filter(s=>s.group===group),references=items.filter(s=>s.referenceOnly);
+      const items=sections.filter(s=>s.group===group),references=items.filter(s=>s.referenceOnly);
       return '<details class="outline-group"'+(selected?.group===group?' open':'')+'><summary>'+escapeHTML(group)+'</summary><nav aria-label="'+escapeHTML(group)+'">'+items.filter(s=>!s.referenceOnly).map(sectionLink).join('')+'</nav>'+(references.length?'<details class="outline-references"'+(selected?.group===group&&selected.referenceOnly?' open':'')+'><summary>专题、原题与资料</summary><nav aria-label="专题与资料">'+references.map(sectionLink).join('')+'</nav></details>':'')+'</details>';
     }).join('');
     main.innerHTML = '<a class="back-link" href="' + courseHome(course) + '">' + icon('back') + (isHighSchool(course) ? '高中' : '课程') + '</a><section class="course-heading"><div><h1>' + escapeHTML(course.title) + '</h1><p class="page-meta">' + escapeHTML(course.category) + ' · ' + new Set(course.sections.filter(s=>!s.supplement).map(s=>s.group)).size + (isHighSchool(course) ? '册' : '章') + '</p></div>' + favoriteButton(course, true) + '</section>' + courseViewNav(course, 'reader') + '<div class="reader-layout"><details class="reader-outline" id="reader-outline"' + (matchMedia('(min-width: 961px)').matches ? ' open' : '') + '><summary>目录</summary>' + outline + '</details><section class="lesson-column"><div class="lesson-tools" id="lesson-tools"></div><article class="lesson" id="lesson-body" data-lesson-key="' + (selected ? course.id + '/' + selected.id : '') + '" aria-busy="true">' + (selected ? '<p class="loading-state" role="status">加载中…</p>' : '<h2>章节不存在</h2>') + '</article><nav class="lesson-pagination" id="lesson-pagination" aria-label="章节翻页"></nav></section></div>';
@@ -298,12 +303,20 @@
     else $('#lesson-body').setAttribute('aria-busy', 'false');
   }
 
-  function readingSections(course, selected) { return selected.supplement ? course.sections.filter(s=>s.supplement===selected.supplement) : selected.referenceOnly ? course.sections : course.sections.filter(s=>!s.referenceOnly&&!s.supplement); }
+  function listedSections(course) {
+    return course.hideOutlineEntries ? course.sections.filter(section => section.kind !== 'outline') : course.sections;
+  }
+
+  function readingSections(course, selected) {
+    const sections = listedSections(course);
+    if (selected.supplement) return sections.filter(section => section.supplement === selected.supplement);
+    return selected.referenceOnly ? sections : sections.filter(section => !section.referenceOnly && !section.supplement);
+  }
 
   function renderReaderDock(course, selected, outline) {
     const sequence=readingSections(course,selected),index = sequence.indexOf(selected);
     const step = (section, label, symbol) => section ? '<a class="reader-dock-item" href="#course/' + course.id + '/' + section.id + '" aria-label="' + label + '：' + escapeHTML(section.title) + '" title="' + escapeHTML(section.title) + '">' + icon(symbol) + '<span>' + label + '</span></a>' : '<button class="reader-dock-item" disabled aria-label="' + label + '，已到课程边界">' + icon(symbol) + '<span>' + label + '</span></button>';
-    readerDock.innerHTML = '<button class="reader-dock-item" data-reader-directory aria-label="目录与选题" title="目录与选题" aria-haspopup="dialog" aria-controls="reader-directory">' + icon('list') + '<span>目录</span></button><a class="reader-dock-item" href="#course/' + course.id + '/map" aria-label="知识图谱" title="知识图谱">' + icon('network') + '<span>图谱</span></a>' + step(sequence[index - 1], '上一节', 'back') + step(sequence[index + 1], '下一节', 'chevron') + '<button class="reader-dock-item" data-reader-top aria-label="回到顶部" title="回到顶部">' + icon('up') + '<span>顶部</span></button>';
+    readerDock.innerHTML = '<button class="reader-dock-item" data-reader-directory aria-label="目录与选题" title="目录与选题" aria-haspopup="dialog" aria-controls="reader-directory">' + icon('list') + '<span>目录</span></button><a class="reader-dock-item" href="#course/' + course.id + '/map" aria-label="知识图谱" title="知识图谱">' + icon('network') + '<span>图谱</span></a>' + step(sequence[index - 1], '上一节', 'back') + step(index >= 0 && sequence[index + 1], '下一节', 'chevron') + '<button class="reader-dock-item" data-reader-top aria-label="回到顶部" title="回到顶部">' + icon('up') + '<span>顶部</span></button>';
     readerDock.hidden = false;
     document.body.classList.add('is-reading');
     $('#reader-directory-title').textContent = course.title + ' · 目录';
@@ -400,7 +413,15 @@
       const body = $('#lesson-body');
       if (!body || body.dataset.lessonKey !== key) return;
       const payload = outline ? {} : window.LN_LESSONS[key];
-      if (outline) body.innerHTML = '<h2>' + escapeHTML(selected.title) + '</h2>';
+      if (outline) {
+        body.innerHTML = '<h2>' + escapeHTML(selected.title) + '</h2>';
+        if (course.hideOutlineEntries) {
+          const first = listedSections(course).find(section => section.group === selected.group);
+          body.insertAdjacentHTML('beforeend', '<p>这是旧目录条目。' + (first
+            ? '当前主题从<a href="#course/' + course.id + '/' + first.id + '">' + escapeHTML(first.title) + '</a>开始。'
+            : '<a href="#course/' + course.id + '/map">查看课程图谱</a>。') + '</p>');
+        }
+      }
       else if (selected.kind === 'pdf') renderPdf(payload, body, anchor);
       else if (selected.kind === 'document') {
         body.innerHTML = (payload.html || '') + '<h2>' + escapeHTML(selected.title) + '</h2><p><a class="secondary-button" href="' + payload.pdf + '" target="_blank" rel="noopener">原 PDF</a> <a class="secondary-button" href="' + payload.pdf + '" download>下载</a></p>' + payload.pages.map((page, index) => '<figure class="pdf-page pdf-reference-page"><a href="' + page.src + '" target="_blank" rel="noopener" aria-label="打开原尺寸速查页"><img src="' + page.src + '" width="' + page.width + '" height="' + page.height + '" loading="lazy" decoding="async" alt="变压器公式速查，第' + (index + 1) + '页"></a></figure>').join('');
@@ -591,7 +612,7 @@
         });
       }
       const sequence=readingSections(course,selected),index = sequence.indexOf(selected);
-      $('#lesson-pagination').innerHTML = (index > 0 ? '<a href="#course/' + course.id + '/' + sequence[index - 1].id + '">' + icon('back') + '上一节</a>' : '<span></span>') + (index < sequence.length - 1 ? '<a href="#course/' + course.id + '/' + sequence[index + 1].id + '">下一节' + icon('chevron') + '</a>' : '');
+      $('#lesson-pagination').innerHTML = index < 0 ? '' : (index > 0 ? '<a href="#course/' + course.id + '/' + sequence[index - 1].id + '">' + icon('back') + '上一节</a>' : '<span></span>') + (index < sequence.length - 1 ? '<a href="#course/' + course.id + '/' + sequence[index + 1].id + '">下一节' + icon('chevron') + '</a>' : '');
       window.LNPublication.settle(body, anchor);
       restorePracticePosition(body);
     } catch (error) {

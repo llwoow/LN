@@ -6,7 +6,7 @@ window.LN_AUTO_CONTROL_MAP={
     },
     {
       "group": "第2章 自动控制系统的数学模型",
-      "description": "已接入电气与机械建模示例，其他条目沿用原目录"
+      "description": "从电压、转矩和负载建立动力学模型"
     },
     {
       "group": "第3章 自动控制系统的时域分析",
@@ -17,8 +17,8 @@ window.LN_AUTO_CONTROL_MAP={
       "description": "根轨迹原理、完整法则、用户课堂题与实数增益交互验证"
     },
     {
-      "group": "第5章 频率法",
-      "description": "幅相响应与稳定裕度"
+      "group": "第5章 频响与反馈稳定性",
+      "description": "从正弦测量读出反馈回路的增益和相位裕度"
     },
     {
       "group": "第6章 控制系统的校正及综合",
@@ -51,23 +51,13 @@ window.LN_AUTO_CONTROL_MAP={
     },
     {
       "section": "ac-5-1",
-      "title": "频率法",
-      "note": "从RC得到幅值和相位"
-    },
-    {
-      "section": "ac-6-1",
-      "title": "控制系统的校正及综合",
-      "note": "本章目录入口，正文待补全"
+      "title": "从正弦测量到伯德图",
+      "note": "分压、相位滞后与伯德图"
     },
     {
       "section": "ac-7-1",
       "title": "非线性系统分析",
       "note": "按实际饱和区间判断平衡"
-    },
-    {
-      "section": "ac-8-1",
-      "title": "线性离散系统的理论基础",
-      "note": "本章目录入口，正文待补全"
     },
     {
       "section": "ac-3-1",
@@ -151,8 +141,8 @@ window.LN_AUTO_CONTROL_MAP={
     },
     {
       "section": "ac-5-6-9",
-      "note": "在两处不同的交越计算两种裕度",
-      "title": "5.6.9 系统的稳定裕度"
+      "note": "两种交越、稳定边界与延迟",
+      "title": "读稳定裕度，判断延迟风险"
     },
     {
       "section": "ac-6-5",
@@ -309,6 +299,12 @@ window.LN_AUTO_CONTROL_MAP={
       "to": "ac-6-5",
       "label": "稳定与校正",
       "description": "积分和实现延迟会改变开环幅相，需要重新检查交越。"
+    },
+    {
+      "from": "ac-5-6-9",
+      "to": "ac-8-5-2",
+      "label": "纯延迟与采样保持",
+      "description": "同一绕组的纯延迟只改变连续回路相位。采样保持改变每步反馈，需要由递推式判断闭环极点。"
     },
     {
       "from": "ac-6-5",

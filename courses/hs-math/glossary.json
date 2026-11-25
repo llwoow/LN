@@ -2,6 +2,20 @@
   "lazy": true,
   "symbolDefinitions": [
     {
+      "id": "study-math-defect-prevalence",
+      "section": "study-conditional-probability",
+      "sections": [
+        "study-conditional-probability"
+      ],
+      "sourceAnchor": "study-math-prevalence",
+      "match": "为来料缺陷比例",
+      "title": "来料缺陷率 p",
+      "keys": [
+        "p"
+      ],
+      "description": "抽到缺陷件的先验概率 P(D)。"
+    },
+    {
       "id": "study-math-symbols",
       "title": "D、A、P",
       "keys": [

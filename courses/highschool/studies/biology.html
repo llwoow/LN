@@ -8,6 +8,11 @@
 </table>
 <h3 id="study-testcross-evidence" data-knowledge-kind="难点" data-knowledge-terms="测交 分离定律 样本 证据 基因型 表型">观察到一株白花，与全是紫花，证据力度不同</h3>
 <p>在上述假设且亲本、后代识别无误的条件下，一株白花就需要未知亲本也给出 a，由此能排除 AA。另一方面，“理论上各一半”是概率，可以连续观察到紫花。只记录 4 个独立后代时，若亲本为 Aa，仍全紫的概率为 \((1/2)^4=1/16\)。若 8 个都全紫，这个概率降到 1/256，但两个数都不是“亲本为 Aa 的概率”。若要讨论后者，还需要群体中两类亲本的先验构成。</p>
-<p>数量明显偏离 1∶1 时，既要考虑随机波动，也要核对授粉和识别流程，判断是否有某类种子更难萌发、不能独立观察，或者单基因完全显性的模型本身不合适。给定某个亲本求后代概率，与看后代反推亲本，需要像<a href="#course/hs-math/study-conditional-probability/study-conditional-denominator">条件概率题</a>一样明确条件在哪一边。参考 <a href="https://openstax.org/books/biology-2e/pages/12-2-characteristics-and-traits" target="_blank" rel="noopener">OpenStax · 测交</a>。</p>
+<h3 id="study-testcross-size" data-knowledge-kind="方法" data-knowledge-terms="测交 样本量 遗传推断 全显性">想把漏判杂合的机会压到 5% 以下</h3>
+<p id="study-testcross-size-definition">若判断规则是“至少看到一个白花就判为杂合”，只有在杂合亲本碰巧全生出紫花时才会漏判。令 \(n\) 为独立观察的后代数，在本题模型下，漏判概率就是 \((1/2)^n\)。4 个后代仍有 6.25% 的漏判机会；5 个时降为 3.125%，所以按这个目标至少需要 <strong>5 个独立后代</strong>。这个 5% 是在已知亲本为杂合的假设下约束漏判，复习时可回到<a href="#course/hs-biology/study-testcross/study-testcross-evidence">表型证据怎样反推亲本</a>，核对概率的条件写在哪一边。</p>
+<h3 id="study-testcross-denominator" data-knowledge-kind="跨学科" data-knowledge-terms="测交 条件概率 贝叶斯 基准率 样本 反推">同样看见全紫，为什么对亲本的判断会不同？</h3>
+<p>用数学里<a href="#course/hs-math/study-conditional-probability/study-conditional-denominator">从报警结果反推缺陷的列联表</a>来处理。把亲本按 AA 和 Aa 分两组，再把分母缩到「测交后代连续 5 株全紫」的亲本。如果一开始假设两类各有 160 株，预计 AA 组的 160 株都满足全紫，Aa 组预计只有 \(160/32=5\) 株满足。于是，在后代全紫的亲本里，模型给出的 Aa 比例是 \(5/(160+5)\)，约 <strong>3.03%</strong>。</p>
+<p>如果起初 AA 只有 32 株、Aa 有 288 株，观察规则照旧，符合全紫的预计数分别为 32 和 9。反推 Aa 的比例变成 \(9/(32+9)\)，约 <strong>21.95%</strong>。两种构成中，Aa 产生全紫后代的概率都是 \(1/32\)。反推的结果变了，因为两种亲本在观察前的构成变了。这些数值是模型的预期，实际样本数会波动。</p>
+<p>归纳这两类证据。看到白花时，在模型和记录无误的前提下，AA 给出这种结果的概率为零，可以排除。看到全紫时，两组都可能给出这一结果，要用全部符合观察的样本作分母。数量明显偏离 1∶1 时，先考虑随机波动，再核对授粉、表型记录以及不同种子能否同样被观察到。参考 <a href="https://openstax.org/books/biology-2e/pages/12-2-characteristics-and-traits" target="_blank" rel="noopener">OpenStax · 测交</a>。</p>
 <p><a class="secondary-button" data-open-practice href="#practice/hs-biology/study-testcross/hs-core-testcross-evidence">练一题：全显性后代能排除杂合吗</a></p>
 </section>

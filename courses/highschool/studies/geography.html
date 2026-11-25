@@ -5,6 +5,9 @@
 <p id="study-geo-symbols">教学例子取面积 \(A=1\,\mathrm{km^2}\)、总降雨深 \(h=50\,\mathrm{mm}\)。把雨深换成米、面积换成平方米可得降水总体积 \(Ah=50000\,\mathrm{m^3}\)。令 \(C_e\) 为这一次降雨产生的直接径流体积与降水总体积之比，\(V_r\) 是直接径流体积。算例把其他入流和基流剔除：</p>
 \[V_r=C_eAh.\]
 <p>假设前后 \(C_e\) 分别为 0.25 和 0.55，总直接径流体积为 12500 与 27500 m³，差 15000 m³。这里的系数是题设的事件比例，并非海南某地实测。要比较出口洪峰还需知道这些体积集中在哪一段时间：从流量—时间图上看，曲线面积给体积，最高点是峰值，横坐标给峰现时刻。同样体积可以对应不同峰值。</p>
+<h3 id="study-runoff-same-volume" data-knowledge-kind="方法" data-knowledge-terms="水文 流量过程线 同体积 洪峰 三角形 面积">都流出 27 500 m³，为什么洪峰能差一倍？</h3>
+<p id="study-runoff-triangle-symbols">把两条扣除基流后的过程线简化为三角形，峰值为 \(Q_p\)（m³/s），持续时间为 \(\Delta t\)（s）。面积 \(V_r=Q_p\Delta t/2\)。若体积都是 27 500 m³，持续 2 小时的一场，峰值约 7.64 m³/s；持续 4 小时的一场，峰值约 3.82 m³/s。两次数值来自同一个面积，三角形底边拉长一倍，高度减半。三角形不规定顶点必须在中间，因此持续时间相同也不能推出峰现时刻相同。</p>
+<p><strong>过程线看三处。</strong> 面积给体积，最高的纵坐标给峰值，最高点的横坐标给峰现时间。真实曲线用实测点求面积；三角形只是演示为什么体积无法单独决定洪峰。</p>
 <p>铺装与管网连通常缩短入河时间；若同时建设调蓄池，可能把峰值推迟或削低，径流总量仍可能较大。比较两场实测雨时还要核对雨强过程、前期土壤湿润和出口水位。图下面积的思路也用于<a href="#course/hs-physics/physics-001-q11">速度—时间图求位移</a>。参考 <a href="https://www.usgs.gov/water-science-school/science/runoff-surface-and-overland-water-runoff" target="_blank" rel="noopener">USGS · 地表径流</a>。</p>
 <p><a class="secondary-button" data-open-practice href="#practice/hs-geography/study-runoff/hs-core-runoff-peak">练一题：有总量时能不能推出洪峰</a></p>
 </section>

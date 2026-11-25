@@ -5,6 +5,10 @@
 <p id="study-chemistry-symbols">用参考浓度 \(c^\circ=1\,\mathrm{mol/L}\) 把每个浓度无量纲化。\(Q_c\) 是当前组成的浓度反应商，\(K_c\) 是相同反应、相同温度下到达平衡时的反应商。若 \(Q_c&lt;K_c\)，净反应方向应增加产物，使反应商趋向平衡值。</p>
 \[Q_c=\frac{[B]/c^\circ}{([A]/c^\circ)^2}.\]
 <p>压缩前取 \([A]=0.40\,\mathrm{mol/L}\)、\([B]=0.32\,\mathrm{mol/L}\)，因此 \(K_c=0.32/0.40^2=2\)。体积减半、物质的量瞬时不变，两个浓度都翻倍；分子翻两倍，分母翻四倍，得到 \(Q_c=1\)。它小于 2，净反应向 B 生成的一侧进行。温度不变，重新平衡时反应商会回到 2，两个浓度不会回到压缩前的数值。</p>
-<p>同一方法可避免对“加压”一概而论。恒温恒容加入理想惰性气体，总压虽上升，参与反应的各物质的分压和浓度都未变，\(Q_c\) 不变。若恒压加入，体系膨胀，反应物浓度下降，就需重新计算。催化剂可影响到达平衡的速度；在给定温度下它不改变这个反应的平衡常数。参考 <a href="https://openstax.org/books/chemistry-2e/pages/13-2-equilibrium-constants" target="_blank" rel="noopener">OpenStax · 平衡常数</a>。</p>
+<h3 id="study-equilibrium-extent" data-knowledge-kind="方法" data-knowledge-terms="反应商 新平衡 浓度变化 计量系数 合理根">知道向右以后，怎样求出新平衡？</h3>
+<p id="study-chemistry-extent-symbol">保持压缩后的体积。令 \(x\) 为新增的 B 浓度除以 \(c^\circ\) 后的数值。生成一份 B 就消耗两份 A，所以归一化后的浓度分别是 \(0.64+x\) 和 \(0.80-2x\)，要求 \(0\le x&lt;0.40\)。\(Q_c\) 回到 \(K_c=2\) 时满足：</p>
+\[\frac{0.64+x}{(0.80-2x)^2}=2.\]
+<p>展开式（S.1.2）得到 \(8x^2-7.4x+0.64=0\)。较大的根约 0.828，会让 A 的浓度为负；取较小根约 0.0966，得到新平衡浓度 \([A]\approx0.607\,\mathrm{mol/L}\)、\([B]\approx0.737\,\mathrm{mol/L}\)。两数代回式（S.1.1），反应商约为 2。<strong>方向靠压完那一刻的 \(Q_c\)，最终组成要再用计量关系求。</strong></p>
+<p>恒温恒容加入理想惰性气体，总压虽上升，参与反应的各物质的分压和浓度都未变，\(Q_c\) 不变。若恒温恒压加入，体系膨胀，可重新计算每种反应物的浓度。本例 \(2A\rightleftharpoons B\) 膨胀后 \(Q_c\) 增大，净反应向左。催化剂改变达到平衡的速度，但在给定温度下平衡常数保持不变。参考 <a href="https://openstax.org/books/chemistry-2e/pages/13-2-equilibrium-constants" target="_blank" rel="noopener">OpenStax · 平衡常数</a>。</p>
 <p><a class="secondary-button" data-open-practice href="#practice/hs-chemistry/study-equilibrium/hs-core-equilibrium-quotient">练一题：区分膨胀和新增惰性气体</a></p>
 </section>
