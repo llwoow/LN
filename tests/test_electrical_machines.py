@@ -225,6 +225,14 @@ class ExamReviewCalculations(unittest.TestCase):
         self.assertAlmostEqual(e0, 346.4064794496)
         self.assertAlmostEqual(p, 3*(u*i.conjugate()).real)
 
+    def test_grid_excitation_at_fixed_active_power(self):
+        u, xs, p, e = 230, 2, 20700, 260
+        component = p * xs / (3 * u)
+        q = 3 * u / xs * (math.sqrt(e**2-component**2)-u)
+        self.assertAlmostEqual(q, 7928.863420647267)
+        self.assertAlmostEqual(math.hypot(u, component), 237.69728648009422)
+        self.assertAlmostEqual(p/(3*u), 30)
+
     def test_thermal_cycle(self):
         a = math.exp(-1)
         peak = 50*(1-a)/(1-a*a)
