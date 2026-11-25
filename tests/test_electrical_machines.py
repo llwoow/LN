@@ -43,7 +43,7 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 132)
+        self.assertEqual(len(self.sections), 142)
         self.assertIn('ac-induction-slip', self.sections)
         self.assertIn('ac-synchronous-angle', self.sections)
         self.assertIn('induction-frequency-reduction', self.sections)
@@ -59,6 +59,11 @@ class CourseIntegrity(unittest.TestCase):
                 key = 'mmf-sec47' if (chapter, number) == (4, 7) else f'book-{chapter}-{number}'
                 self.assertIn(key, self.sections)
                 self.assertEqual(self.sections[key]['textbookSection'], f'{chapter}.{number}')
+        for chapter in range(1, 11):
+            key = f'exam-ch{chapter}'
+            self.assertIn(key, self.sections)
+            self.assertIn('katex-mathml', self.payloads[key]['html'])
+            self.assertIn('典型题：', self.payloads[key]['html'])
         for letter in 'abcdefgh':
             self.assertIn('book-' + letter, self.sections)
 

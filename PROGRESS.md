@@ -129,3 +129,7 @@ python tests/highschool.browser.py
 
 ## 2026-11-25 电机学全书结构与核心知识补齐（略读版）
 新增绪论、4–10章缺节及A–H附录主题总览，保留前三章和现有专题。具体范围、目录依据、限制及验证状态见 [电机学全书审查](courses/electrical-machines/FULL-BOOK-REVIEW-20261125.md)。
+
+
+## 2026-11-25 电机学考试复习增补
+新增10章考试公式与典型题单元，56个核心计算主题、14道演算例、70个KaTeX公式块。保留原有试题和课程内容。见 [覆盖记录](courses/electrical-machines/EXAM-COVERAGE-20261125.md)。
