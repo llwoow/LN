@@ -132,4 +132,4 @@ python tests/highschool.browser.py
 
 
 ## 2026-11-25 电机学考试复习增补
-新增10章考试公式与典型题单元，63个核心计算主题、19道演算例、82个KaTeX公式块。保留原有试题和课程内容。见 [覆盖记录](courses/electrical-machines/EXAM-COVERAGE-20261125.md)。
+新增10章考试公式与典型题单元，66个核心计算主题、20道演算例、86个KaTeX公式块。保留原有试题和课程内容。见 [覆盖记录](courses/electrical-machines/EXAM-COVERAGE-20261125.md)。

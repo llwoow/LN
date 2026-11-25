@@ -217,6 +217,23 @@ class ExamReviewCalculations(unittest.TestCase):
         self.assertAlmostEqual(tmax, 190.98593171, places=7)
         self.assertAlmostEqual(tmax * 2 / (5 + .2), 73.45612758, places=6)
 
+
+    def test_induction_exact_t_network(self):
+        u = 220
+        z1 = .5+1j
+        zm = 1/(1/400+1/(20j))
+        z2 = .4/.04+1j
+        zin = z1+zm*z2/(zm+z2)
+        i1 = u/zin
+        e = u-z1*i1
+        i2 = e/z2
+        p1 = 3*(u*i1.conjugate()).real
+        pg = 3*abs(i2)**2*.4/.04
+        self.assertAlmostEqual(p1, 12713.41953703038)
+        self.assertAlmostEqual(pg, 11606.119565337533)
+        self.assertAlmostEqual(p1-3*abs(i1)**2*.5-3*abs(e)**2/400, pg)
+        self.assertAlmostEqual((.96*pg-200)/p1, .8606555263006644)
+
     def test_salient_pole_matches_terminal_power(self):
         u, i, xd, xq = 230, 32-24j, 4, 2
         delta = cmath.phase(u + 1j*xq*i)
