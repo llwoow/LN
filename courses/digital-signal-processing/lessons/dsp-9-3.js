@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-9-3"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-9-3\">9.3 ADC量化误差</h2><p>学习提纲 · 重点。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>9.3.1 量化非线性</li><li>9.3.2 输入范围</li><li>9.3.3 量化台阶</li><li>9.3.4 误差统计</li><li>9.3.5 量化噪声谱</li></ul><p><strong>重点与判断：</strong>均匀量化在无过载且误差可近似均匀、与信号不相关等假设下，舍入噪声方差 Δ²/12；弱周期输入等情况不一定满足白噪声模型。</p></section>"};

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-3-6"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-3-6\">3.6 DFT的计算与频谱分析应用</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>3.6.1 线性卷积</li><li>3.6.2 线性相关</li><li>3.6.3 用DFT逼近连续信号傅里叶表示</li><li>3.6.4 模拟信号谱分析</li><li>3.6.5 fs、观测长度、频点间隔的选择</li><li>3.6.6 混叠、泄漏、栅栏效应与幅值标定</li></ul><p><strong>重点与判断：</strong>补零缩小频点间距但不增加真实观测时长，不能凭补零提高本征分辨能力；窗函数与第7章共享时域乘积/频域卷积。</p></section>"};

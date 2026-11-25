@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-2-1"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-2-1\">2.1 序列的Z变换与反变换</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>2.1.1 双边Z变换</li><li>2.1.2 收敛域ROC</li><li>2.1.3 典型左右边及双边序列的ROC</li><li>2.1.4 留数、部分分式、长除反变换</li><li>2.1.5 移位、卷积等性质</li><li>2.1.6 用Z变换解差分方程</li></ul><p><strong>重点与判断：</strong>同一有理式可对应不同序列，必须结合ROC。因果有理系统的ROC在最外极点之外；稳定要求单位圆在ROC内。</p></section>"};

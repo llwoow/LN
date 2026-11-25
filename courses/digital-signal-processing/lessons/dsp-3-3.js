@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-3-3"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-3-3\">3.3 离散傅里叶变换（DFT）</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>3.3.1 DFT/IDFT及其与DFS、DTFT、Z变换的联系</li><li>3.3.2 fk=kfs/N与频率间隔</li><li>3.3.3 DFT隐含的N周期延拓</li></ul><p><strong>重点与判断：</strong>N点DFT可理解为有限序列DTFT在等间隔频点的取样；负频率对应后半频点，不能把所有 k 当正频率。</p></section>"};

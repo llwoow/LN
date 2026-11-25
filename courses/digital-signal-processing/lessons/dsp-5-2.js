@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-5-2"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-5-2\">5.2 IIR基本结构</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>5.2.1 递归、极点及无限冲激响应</li><li>5.2.2 直接型I/II</li><li>5.2.3 二阶节级联</li><li>5.2.4 部分分式并联</li><li>5.2.5 转置结构</li></ul><p><strong>重点与判断：</strong>从 H(z) 写差分方程，再数延迟和乘法器；高阶IIR常采用二阶节以控制数值敏感性。</p></section>"};

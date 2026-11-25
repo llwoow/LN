@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-2-4"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-2-4\">2.4 LSI系统的频域表征</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>2.4.1 差分方程、冲激响应与系统函数</li><li>2.4.2 因果稳定判据</li><li>2.4.3 幅频和相频响应</li><li>2.4.4 用单位圆到零极点的距离及辐角读频响</li><li>2.4.5 FIR与IIR的区别</li></ul><p><strong>重点与判断：</strong>频域卷积关系 Y=HX；复指数是LSI特征函数。零点决定频率抑制、极点影响响应和稳定性，为第5至7章铺垫。</p></section>"};

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-2-3"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-2-3\">2.3 离散时间傅里叶变换（DTFT）</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>2.3.1 DTFT与逆变换</li><li>2.3.2 存在条件（绝对可和是充分条件）</li><li>2.3.3 线性、时移、卷积等性质</li><li>2.3.4 实序列的共轭对称和奇偶性</li><li>2.3.5 周期序列的广义冲激谱</li><li>2.3.6 连续、抽样和离散信号各变换的关系</li></ul><p><strong>重点与判断：</strong>DTFT 是连续数字频率的 2π 周期函数；单位圆属于ROC时可由Z变换取 z=e^(jω) 得到。不要把DTFT的频域变量当作DFT的离散下标。</p></section>"};

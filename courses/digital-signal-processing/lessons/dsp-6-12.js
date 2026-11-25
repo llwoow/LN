@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-6-12"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-6-12\">6.12 数字频带变换</h2><p>学习提纲 · 重点。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>6.12.1 数字频带变换约束</li><li>6.12.2 低通→低通</li><li>6.12.3 →高通</li><li>6.12.4 →带通</li><li>6.12.5 →带阻</li><li>6.12.6 →多通带</li></ul><p><strong>重点与判断：</strong>直接在z域对数字低通原型作满足单位圆映射和稳定性的有理代换，不直接套模拟s域公式。</p></section>"};

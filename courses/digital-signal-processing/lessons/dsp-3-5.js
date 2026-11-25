@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-3-5"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-3-5\">3.5 频域抽样与插值重构</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>3.5.1 由X(k)重构有限长序列：IDFT与时域混叠条件</li><li>3.5.2 用插值核从频率样点重建连续DTFT/Z变换</li></ul><p><strong>重点与判断：</strong>采样点吻合不表示点间无误差；原序列有效长度不超过N时可由IDFT恢复，超过则出现周期叠加。第7章频率抽样法直接复用此理论。</p></section>"};

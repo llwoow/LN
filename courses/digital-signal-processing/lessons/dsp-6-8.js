@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-6-8"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-6-8\">6.8 模拟到数字的映射</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>6.8.1 冲激响应不变：时域抽样、频谱混叠</li><li>6.8.2 双线性变换：s=(2/Ts)(1−z⁻¹)/(1+z⁻¹)，频率非线性与预畸变</li></ul><p><strong>重点与判断：</strong>双线性把虚轴一一映到单位圆，避免周期谱叠加；预畸变 Ω=(2/Ts)tan(ω/2)。冲激响应不变法对高频谱未衰减的目标要慎用。</p></section>"};
