@@ -474,6 +474,9 @@
             // Without JavaScript the declared model and reading guidance remain visible.
           }
         }
+        if (course.id === 'electrical-machines' && body.querySelector('[data-induction-lab]')) {
+          try { await loadScript('courses/electrical-machines/model/induction-frequency-lab.js'); if (!body.isConnected || body.dataset.lessonKey !== key) return; window.LN_InductionLab?.mount(body); } catch { /* Static derivation remains available. */ }
+        }
         if (course.id === 'electrical-machines' && body.querySelector('[data-mmf-lab]')) {
           try {
             await Promise.all([
