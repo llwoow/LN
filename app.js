@@ -246,6 +246,7 @@
       return '课程';
     }
     if (!sectionId || sectionId === 'map') renderKnowledgeMap(course);
+    else if (sectionId === 'exam-review' && course.id === 'electromagnetic-compatibility') renderEmcExam(course, anchor);
     else if (sectionId === 'worked-exercises') renderWorkedExercises(course);
     else renderReader(course, sectionId, anchor);
     return course.title;
@@ -264,9 +265,20 @@
     const supplementalLink = (section, label) => section ? '<a href="#course/' + course.id + '/' + section.id + '"' + (supplement === section.supplement ? ' aria-current="page"' : '') + '>' + label + '</a>' : '';
     const materialLink = supplementalLink(material, '试卷讲解');
     const studyLink = supplementalLink(study, '专题学习');
+    const examLink = course.id === 'electromagnetic-compatibility' ? '<a href="#course/' + course.id + '/exam-review"' + (active === 'exam' ? ' aria-current="page"' : '') + '>考试复习</a>' : '';
     const workedLink = course.workedExercises?.length ? '<a href="#course/' + course.id + '/worked-exercises"' + (active === 'worked' ? ' aria-current="page"' : '') + '>已做题详解</a>' : '';
     const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
-    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive && !supplement ? ' aria-current="page"' : '') + '>' + icon('book') + (first.kind === 'outline' ? '章节目录' : '章节阅读') + '</a>' + workedLink + modelLink + studyLink + materialLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
+    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive && !supplement ? ' aria-current="page"' : '') + '>' + icon('book') + (first.kind === 'outline' ? '章节目录' : '章节阅读') + '</a>' + examLink + workedLink + modelLink + studyLink + materialLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
+  }
+
+  function loadEmcReviewMath() {
+    return Promise.all([loadStyle('assets/katex/katex.min.css'), loadScript('assets/katex/katex.runtime.js')]);
+  }
+
+  function renderEmcExam(course, anchor) {
+    main.classList.add('course-main');
+    main.innerHTML = '<a class="back-link" href="#course/' + course.id + '">' + icon('back') + '课程图谱</a><section class="course-heading"><h1>电磁兼容 · 考试复习</h1></section>' + courseViewNav(course, 'exam') + '<div class="lesson emc-exam-review" id="emc-exam-review"></div>';
+    window.LNEmcExam.render($('#emc-exam-review'), anchor, loadEmcReviewMath);
   }
 
   function renderWorkedExercises(course) {
@@ -618,6 +630,7 @@
       }
       const sequence=readingSections(course,selected),index = sequence.indexOf(selected);
       $('#lesson-pagination').innerHTML = index < 0 ? '' : (index > 0 ? '<a href="#course/' + course.id + '/' + sequence[index - 1].id + '">' + icon('back') + '上一节</a>' : '<span></span>') + (index < sequence.length - 1 ? '<a href="#course/' + course.id + '/' + sequence[index + 1].id + '">下一节' + icon('chevron') + '</a>' : '');
+      window.LNEmcExam.mountLesson(body, course, selected, loadEmcReviewMath);
       window.LNPublication.settle(body, anchor);
       restorePracticePosition(body);
     } catch (error) {

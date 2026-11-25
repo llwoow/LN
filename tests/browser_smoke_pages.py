@@ -39,6 +39,19 @@ def main():
                 page.on('response', response)
                 page.goto(base + '#overview', wait_until='networkidle')
                 assert page.locator('#course-list').count() == 1
+                for width in (1280, 390, 320):
+                    page.set_viewport_size({'width': width, 'height': 900})
+                    page.goto(base + '#course/electromagnetic-compatibility/exam-review/emc-2-3')
+                    page.locator('#exam-emc-2-3 .katex').first.wait_for()
+                    assert page.locator('#emc-review-chapter').input_value() == '2'
+                    assert not page.locator('#emc-exam-review [data-math-fallback]').count()
+                    assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), width
+                    page.locator('#exam-emc-2-3').get_by_role('link', name='回查本节正文').click()
+                    page.locator('#lesson-body .emc-review-inline').wait_for()
+                    page.locator('#lesson-body .emc-review-inline').get_by_role('link').click()
+                    page.locator('#exam-emc-2-3').wait_for()
+                page.set_viewport_size({'width': 1280, 'height': 900})
+                page.goto(base + '#overview', wait_until='networkidle')
                 search = page.get_by_role('searchbox', name='搜索课程或知识点')
                 for width in (1280, 390, 320):
                     page.set_viewport_size({'width': width, 'height': 900})
