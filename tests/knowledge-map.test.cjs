@@ -53,7 +53,7 @@ const uiContext = vm.createContext({
 });
 vm.runInContext(fs.readFileSync(path.join(root, 'knowledge-map.js'), 'utf8'), uiContext);
 const viewer = new MapElement();
-const point = { id: 'magnetic-sec11', x: 48, y: 222 };
+const point = { id: 'magnetic-sec11', section: { id: 'magnetic-sec11' }, x: 48, y: 222 };
 const captures = new Set();
 viewer._course = { id: 'electrical-machines' };
 viewer.byNode = new Map([[point.id, point]]);
@@ -91,5 +91,5 @@ assert.equal(point.y, 222);
 assert.equal(navigation.hash, '#course/electrical-machines/map', 'Pinch activated a link');
 viewer.pointerDown(event(4, 100, 100));
 viewer.pointerEnd(event(4, 100, 100));
-assert.equal(navigation.hash, 'course/electrical-machines/magnetic-sec11', 'A tap must still open the lesson');
+assert.equal(navigation.hash, '#course/electrical-machines/magnetic-sec11', 'A tap must still open the lesson');
 console.log('Fixed node coordinates, whole-map drag, pinch zoom and tap navigation verified.');

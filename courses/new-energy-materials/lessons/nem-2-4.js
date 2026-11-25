@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-2-4"]={"html":"<section class=\"article-section\" id=\"nem-2-4\"><h2>2.4 原电池与电解池</h2><p>原电池以自发氧化还原反应向外电路做功；电解池依赖外接电源驱动反应。正负极与阴阳极不是同一套命名：阳极始终发生氧化，阴极始终发生还原；电池充放电时极性角色可能转换。</p><dl class=\"nem-subtopics\"><dt id=\"nem-2-4-1\"><strong>2.4.1 原电池</strong></dt><dd>电极反应分开，电子走外电路，离子在电解质中传导以维持电荷平衡。</dd><dt id=\"nem-2-4-2\"><strong>2.4.2 电解池</strong></dt><dd>外加电压补偿反应自由能变化与过电位、欧姆损失。</dd><dt id=\"nem-2-4-3\"><strong>2.4.3 界面双电层</strong></dt><dd>电极—电解质界面发生电荷分离，影响电极电位与动力学。</dd></dl></section>"};

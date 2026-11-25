@@ -2663,6 +2663,276 @@
         "I"
       ],
       "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "im-s",
+      "title": "s",
+      "keys": [
+        "s"
+      ],
+      "description": "转差率",
+      "unitHtml": "1",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-n",
+      "title": "n",
+      "keys": [
+        "n"
+      ],
+      "description": "转子机械转速",
+      "unitHtml": "r/min",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-n_1",
+      "title": "n₁",
+      "keys": [
+        "n_1"
+      ],
+      "description": "同步机械转速",
+      "unitHtml": "r/min",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-n_2",
+      "title": "n₂",
+      "keys": [
+        "n_2"
+      ],
+      "description": "转子磁动势相对转子的速度",
+      "unitHtml": "r/min",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-f_1",
+      "title": "f₁",
+      "keys": [
+        "f_1"
+      ],
+      "description": "定子电流频率",
+      "unitHtml": "Hz",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-f_2",
+      "title": "f₂",
+      "keys": [
+        "f_2"
+      ],
+      "description": "转子绕组自身电流频率",
+      "unitHtml": "Hz",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-p",
+      "title": "p",
+      "keys": [
+        "p"
+      ],
+      "description": "极对数",
+      "unitHtml": "1",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-R_2",
+      "title": "R₂",
+      "keys": [
+        "R_2"
+      ],
+      "description": "实际每相转子电阻",
+      "unitHtml": "Ω",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-circuit",
+      "match": "E₂₀ 是相同气隙磁通下静止转子每相感应电动势有效值（V）"
+    },
+    {
+      "id": "im-X_20",
+      "title": "X₂₀",
+      "keys": [
+        "X_20"
+      ],
+      "description": "静止时每相漏电抗",
+      "unitHtml": "Ω",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-circuit",
+      "match": "E₂₀ 是相同气隙磁通下静止转子每相感应电动势有效值（V）"
+    },
+    {
+      "id": "im-E_20",
+      "title": "E₂₀",
+      "keys": [
+        "E_20"
+      ],
+      "description": "静止时每相感应电动势有效值",
+      "unitHtml": "V",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-circuit",
+      "match": "E₂₀ 是相同气隙磁通下静止转子每相感应电动势有效值（V）"
+    },
+    {
+      "id": "im-I_2",
+      "title": "I₂",
+      "keys": [
+        "I_2"
+      ],
+      "description": "每相电流有效值，方程中为相量",
+      "unitHtml": "A",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-circuit",
+      "match": "E₂₀ 是相同气隙磁通下静止转子每相感应电动势有效值（V）"
+    },
+    {
+      "id": "im-F_1",
+      "title": "F₁",
+      "keys": [
+        "F_1"
+      ],
+      "description": "定子基波空间磁动势",
+      "unitHtml": "A",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-mmf",
+      "match": "F₁、F₂ 分别表示定、转子气隙基波磁动势空间矢量"
+    },
+    {
+      "id": "im-F_2",
+      "title": "F₂",
+      "keys": [
+        "F_2"
+      ],
+      "description": "转子基波空间磁动势",
+      "unitHtml": "A",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-mmf",
+      "match": "F₁、F₂ 分别表示定、转子气隙基波磁动势空间矢量"
+    },
+    {
+      "id": "im-F_m",
+      "title": "Fₘ",
+      "keys": [
+        "F_m"
+      ],
+      "description": "合成基波磁动势",
+      "unitHtml": "A",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-mmf",
+      "match": "F₁、F₂ 分别表示定、转子气隙基波磁动势空间矢量"
+    },
+    {
+      "id": "im-m_2",
+      "title": "m₂",
+      "keys": [
+        "m_2"
+      ],
+      "description": "等效转子相数",
+      "unitHtml": "1",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-power",
+      "match": "m₂ 是转子等效相数；Pₑₘ 是气隙电磁功率"
+    },
+    {
+      "id": "im-P_em",
+      "title": "Pₑₘ",
+      "keys": [
+        "P_em"
+      ],
+      "description": "气隙电磁功率",
+      "unitHtml": "W",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-power",
+      "match": "m₂ 是转子等效相数；Pₑₘ 是气隙电磁功率"
+    },
+    {
+      "id": "im-P_Cu2",
+      "title": "P_Cu2",
+      "keys": [
+        "P_Cu2"
+      ],
+      "description": "转子铜耗",
+      "unitHtml": "W",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-power",
+      "match": "m₂ 是转子等效相数；Pₑₘ 是气隙电磁功率"
+    },
+    {
+      "id": "im-P_m",
+      "title": "Pₘ",
+      "keys": [
+        "P_m"
+      ],
+      "description": "内部转换机械功率",
+      "unitHtml": "W",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-power",
+      "match": "m₂ 是转子等效相数；Pₑₘ 是气隙电磁功率"
     }
   ]
 }

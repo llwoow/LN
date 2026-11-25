@@ -800,3 +800,20 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .dc-hw .dc-hw-source,
 .dc-hw .dc-hw-card li p,
 .dc-hw .dc-hw-card > p { text-align:left; }
+
+/* Cross-course knowledge: shared palette and compact reader annotations. */
+.cross-knowledge-inline { border-left: 2px solid var(--accent); background: var(--subtle); padding: 8px 12px; margin: 12px 0 18px; color: var(--text); font: 500 14px/1.6 var(--font); border-radius: 0 6px 6px 0; overflow-wrap: anywhere; }
+.cross-knowledge-inline > strong { display:block; font-size:12px; color:var(--muted); margin-bottom:4px; }
+.cross-knowledge-item + .cross-knowledge-item { margin-top:8px; }
+.cross-knowledge-item a,.cross-course-list a { text-decoration:underline; text-underline-offset:3px; font-weight:650; color:var(--accent); }
+.cross-knowledge-item span,.cross-course-list span { display:block; color:var(--muted); }
+.cross-course-panel { border-top:1px solid var(--border); padding-top:12px; margin:16px 0; }
+.cross-course-panel > summary { cursor:pointer; font-weight:650; }
+.cross-course-panel > summary span { color:var(--muted); font-size:12px; margin-left:6px; }
+.cross-course-panel > div { padding:10px 0; }
+.cross-course-list > div { padding:9px 0; border-bottom:1px solid var(--border); overflow-wrap:anywhere; font-size:14px; }
+.cross-course-list > div:last-child { border-bottom:0; }
+.cross-pending-links { margin-top:4px; }
+.cross-filter { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 10px; }
+.cross-filter select { max-width:100%; color:var(--text); background:var(--surface); border:1.5px solid var(--border); border-radius:6px; padding:6px 10px; font:inherit; }
+@media print { .cross-knowledge-inline { background:none; border-color:#000; } .cross-filter,.cross-course-panel { display:none; } }

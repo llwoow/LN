@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-3-6"]={"html":"<section class=\"article-section\" id=\"nem-3-6\"><h2>3.6 染料敏化太阳能电池</h2><p>染料负责吸光并向半导体注入电子，电解质或空穴传输材料使染料再生。光吸收、电子注入、回收与复合构成闭环；仅说“染料吸光发电”忽略了这些必要环节。</p><dl class=\"nem-subtopics\"><dt id=\"nem-3-6-1\"><strong>3.6.1 染料敏化太阳能电池的结构</strong></dt><dd>通常包含透明导电基底、染料敏化多孔半导体、电解质与对电极。</dd><dt id=\"nem-3-6-2\"><strong>3.6.2 染料敏化太阳能电池的工作原理</strong></dt><dd>光激发、电子注入、外电路输运与染料再生缺一不可。</dd></dl></section>"};

@@ -85,6 +85,31 @@ def main():
                 source = page.locator('[data-source-id="mit-dynamics-2-004-ps6"]')
                 assert source.get_by_role('link', name='原题').get_attribute('href').endswith('/ps6/')
                 assert source.get_by_role('link', name='课程解答').get_attribute('href').endswith('/ps6soln/')
+                # Cross-course network: real links, filter, reader anchor and return.
+                for width in (1280, 390, 320):
+                    page.set_viewport_size({'width': width, 'height': 900})
+                    page.goto(base + '#knowledge', wait_until='networkidle')
+                    page.locator('ln-knowledge-map .map-node').first.wait_for()
+                    assert page.locator('ln-knowledge-map .map-node').count() == 19
+                    assert page.locator('ln-knowledge-map .map-edge-order').count() == 0
+                    assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+                    page.locator('#cross-course-filter').select_option('power-semiconductors')
+                    page.wait_for_url('**/#knowledge/power-semiconductors')
+                    page.locator('ln-knowledge-map .map-node').first.wait_for()
+                    assert page.locator('ln-knowledge-map .map-node').count() < 19
+                    page.locator('ln-knowledge-map .map-node[href*="cross-oxide-device"]').evaluate("el => { location.hash = el.getAttribute('href'); }")
+                    body=page.locator('#lesson-body[data-lesson-key="power-semiconductors/vdmos-structure"][aria-busy=false]')
+                    body.wait_for(timeout=30000)
+                    body.locator('#cross-oxide-device').wait_for()
+                    body.locator('#cross-link-oxide-device-oxide-emc').click()
+                    target=page.locator('#lesson-body[data-lesson-key="electromagnetic-compatibility/emc-1-4"][aria-busy=false]')
+                    target.wait_for(timeout=30000)
+                    target.locator('#cross-oxide-emc').wait_for()
+                    page.go_back()
+                    body.wait_for(timeout=30000)
+                    body.locator('#cross-oxide-device').wait_for()
+                    assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+                page.set_viewport_size({'width': 1280, 'height': 900})
                 # All actual HTML courses are selected from source, including future merges.
                 for path in sorted((ROOT / 'courses').glob('*/manifest.js')):
                     course = assignment(path)

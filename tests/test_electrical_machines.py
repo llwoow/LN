@@ -43,13 +43,14 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 62)
+        self.assertEqual(len(self.sections), 63)
         self.assertIn('ac-induction-slip', self.sections)
         self.assertIn('ac-synchronous-angle', self.sections)
+        self.assertIn('induction-frequency-reduction', self.sections)
         self.assertIn('dc-chapter-test', self.sections)
         self.assertIn('data-open-practice', self.payloads['dc-chapter-test']['html'])
         self.assertIn('dc-homework-review', self.sections)
-        self.assertEqual(len({section['group'] for section in self.sections.values()}), 5)
+        self.assertEqual(len({section['group'] for section in self.sections.values()}), 6)
         self.assertEqual(self.sections['mmf-sec47']['textbookSection'], '4.7')
         self.assertIn('transformer-homework', self.sections)
         self.assertIn('winding-model', self.sections)

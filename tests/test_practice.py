@@ -40,6 +40,9 @@ class PracticeContent(unittest.TestCase):
             'emc-ground-step':100*100*.8/(2*math.pi*2*(2+.8)),
             'emc-lightning-lead-voltage':.6e-6*(1000/1e-6),
             'emc-impulse-shield-current':1/(1+3)*100,
+            'emc-nov24-oxide':4/(8e-9)/1e6,
+            'emc-nov24-faraday':round(math.pi*50*.2*200e-6*1000,2),
+            'emc-nov24-common':.04*2+20e-9*2/(100e-9),
             # New electrical materials keys independently recomputed from SI units and Hooke/Fourier relations.
             'emat-2-thermal':Fraction(4,1000)/(Fraction(1,5)*Fraction(1,100)),
             'emat-2-modulus':(400/(2e-6))/(0.1/100)/1e9,

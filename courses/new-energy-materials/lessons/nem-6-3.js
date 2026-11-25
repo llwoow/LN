@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-6-3"]={"html":"<section class=\"article-section\" id=\"nem-6-3\"><h2>6.3 核能技术</h2><p>核裂变与核聚变通过原子核结构变化释放能量。核电站通常由核反应产生热量，再借助动力循环驱动发电机；因此“核能直接变电能”对常规核电站并不准确。</p><dl class=\"nem-subtopics\"><dt id=\"nem-6-3-1\"><strong>6.3.1 核裂变能发电</strong></dt><dd>受控链式反应释放热量，反应堆与冷却系统是关键。</dd><dt id=\"nem-6-3-2\"><strong>6.3.2 核聚变能发电</strong></dt><dd>需满足约束、温度与能量增益等严格条件，不能与成熟裂变发电混为一谈。</dd></dl></section>"};

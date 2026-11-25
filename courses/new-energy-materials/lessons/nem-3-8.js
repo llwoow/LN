@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-3-8"]={"html":"<section class=\"article-section\" id=\"nem-3-8\"><h2>3.8 太阳能光热发电</h2><p>与光伏直接光电转换不同，光热发电先汇集辐射能形成热能，再经过热机和发电机输出电能。其核心限制来自集热温度、热损失与热机效率；储热可改善发电的时间调度。</p><dl class=\"nem-subtopics\"><dt id=\"nem-3-8-1\"><strong>3.8.1 太阳能光热发电技术</strong></dt><dd>聚光集热、换热、动力循环和发电机形成转换链。</dd><dt id=\"nem-3-8-2\"><strong>3.8.2 斯特林太阳能光热发电系统</strong></dt><dd>外燃式热机将温差驱动的工质循环转为机械功。</dd><dt id=\"nem-3-8-3\"><strong>3.8.3 太阳能热电站的发展趋势及相关科学问题</strong></dt><dd>关注受光条件、传热、储热及材料寿命的系统耦合。</dd></dl></section>"};
