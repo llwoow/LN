@@ -106,6 +106,21 @@ def run():
                     note = page.locator("#dc-hw-" + number + " h4", has_text="原稿疑问与澄清")
                     note.evaluate("(e) => window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 110)")
                     page.screenshot(path=str(OUT / ("dc-homework-" + number + "-notes-" + label + ".png")))
+                # Every exam route must be readable, with local KaTeX and no page-level overflow.
+                for chapter in range(1, 11):
+                    key = "exam-ch" + str(chapter)
+                    page.goto(url + "#course/electrical-machines/" + key, wait_until="domcontentloaded")
+                    body = page.locator("#lesson-body")
+                    body.locator("#" + key + "-topic-1").wait_for(timeout=20000)
+                    blocks = body.locator(".math-block")
+                    assert blocks.count() > 0, key
+                    assert body.locator(".math-block .katex-mathml math").count() == blocks.count(), key
+                    assert body.locator(".katex-error").count() == 0, key
+                    assert not page.evaluate("document.documentElement.scrollWidth > innerWidth"), key
+                    assert body.locator("h3", has_text="典型题：").count() >= 1, key
+                    if chapter in (4, 5, 6, 7):
+                        page.evaluate("window.scrollTo(0,0)")
+                        page.screenshot(path=str(OUT / ("exam-ch" + str(chapter) + "-" + label + ".png")))
                 page.close()
             browser.close()
     finally:

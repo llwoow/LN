@@ -198,5 +198,38 @@ class HomeworkCalculations(unittest.TestCase):
         self.assertAlmostEqual(maximum, 487.142857, places=5)
 
 
+
+class ExamReviewCalculations(unittest.TestCase):
+    def test_winding_factor_voltage(self):
+        kw = math.sin(math.radians(75)) * math.sin(math.radians(30)) / (4 * math.sin(math.radians(7.5)))
+        self.assertAlmostEqual(kw, .9250306488875357)
+        self.assertAlmostEqual(4.44 * 50 * 100 * .02 * kw, 410.7136081061)
+        self.assertAlmostEqual(math.sqrt(3) * 4.44 * 50 * 100 * .02 * kw, 711.3768365996)
+
+    def test_induction_power_and_torque(self):
+        slip = (1500 - 1440) / 1500
+        p_gap = 15000 - 600 - 400
+        p_out = (1 - slip) * p_gap - 300
+        self.assertEqual(p_out, 13140)
+        self.assertAlmostEqual(p_gap / (2 * math.pi * 1500 / 60), 89.12676813, places=7)
+        self.assertAlmostEqual(p_out / (2 * math.pi * 1440 / 60), 87.13733134, places=7)
+        tmax = 3 * 200**2 / (2 * 2 * math.pi * 1500 / 60 * 2)
+        self.assertAlmostEqual(tmax, 190.98593171, places=7)
+        self.assertAlmostEqual(tmax * 2 / (5 + .2), 73.45612758, places=6)
+
+    def test_salient_pole_matches_terminal_power(self):
+        u, i, xd, xq = 230, 32-24j, 4, 2
+        delta = cmath.phase(u + 1j*xq*i)
+        e0 = u*math.cos(delta) + xd*abs(i)*math.sin(delta - cmath.phase(i))
+        p = 3*u*e0/xd*math.sin(delta) + 3*u*u/2*(1/xq-1/xd)*math.sin(2*delta)
+        self.assertAlmostEqual(e0, 346.4064794496)
+        self.assertAlmostEqual(p, 3*(u*i.conjugate()).real)
+
+    def test_thermal_cycle(self):
+        a = math.exp(-1)
+        peak = 50*(1-a)/(1-a*a)
+        self.assertAlmostEqual(peak, 36.5529289315)
+        self.assertAlmostEqual(a*peak, 13.4470710685)
+
 if __name__ == '__main__':
     unittest.main()
