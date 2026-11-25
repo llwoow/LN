@@ -43,17 +43,24 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 63)
+        self.assertEqual(len(self.sections), 132)
         self.assertIn('ac-induction-slip', self.sections)
         self.assertIn('ac-synchronous-angle', self.sections)
         self.assertIn('induction-frequency-reduction', self.sections)
         self.assertIn('dc-chapter-test', self.sections)
         self.assertIn('data-open-practice', self.payloads['dc-chapter-test']['html'])
         self.assertIn('dc-homework-review', self.sections)
-        self.assertEqual(len({section['group'] for section in self.sections.values()}), 6)
+        self.assertEqual(len({section['group'] for section in self.sections.values()}), 13)
         self.assertEqual(self.sections['mmf-sec47']['textbookSection'], '4.7')
         self.assertIn('transformer-homework', self.sections)
         self.assertIn('winding-model', self.sections)
+        for chapter, count in ((0, 6), (4, 9), (5, 15), (6, 13), (7, 4), (8, 5), (9, 5), (10, 5)):
+            for number in range(1, count + 1):
+                key = 'mmf-sec47' if (chapter, number) == (4, 7) else f'book-{chapter}-{number}'
+                self.assertIn(key, self.sections)
+                self.assertEqual(self.sections[key]['textbookSection'], f'{chapter}.{number}')
+        for letter in 'abcdefgh':
+            self.assertIn('book-' + letter, self.sections)
 
     def test_dc_handwritten_homework_native_review(self):
         html = self.payloads['dc-homework-review']['html']
