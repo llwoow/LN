@@ -2409,6 +2409,47 @@
       "evidence": [],
       "downloads": [],
       "localLesson": "#course/new-energy-materials/nem-homework"
+    },
+    {
+      "id": "dsp-circular-convolution-check",
+      "title": "DFT与线性卷积：用一个短序列检查零填充",
+      "kind": "LN 站内知识推演",
+      "repository": null,
+      "checked": "2026-11-25",
+      "targets": [
+        {
+          "course": "digital-signal-processing",
+          "section": "dsp-3-4"
+        },
+        {
+          "course": "digital-signal-processing",
+          "section": "dsp-3-6"
+        }
+      ],
+      "question": "频域相乘何时等价于完整线性卷积？",
+      "summary": "以长度3和2的有限序列对比线性卷积、3点圆周卷积和4点圆周卷积；由周期折叠理解零填充条件。",
+      "steps": [
+        "在LN的DFT与圆周卷积章节确认N点周期延拓和长度条件。",
+        "用纸笔计算 x=[1,2,3]、h=[1,1] 的线性卷积 [1,3,5,3]。",
+        "把末项折回3点周期，检查圆周卷积为 [4,3,5]；再补零到4点，核对无折叠的结果。",
+        "独立作答站内同主题诊断题，改变滤波器长度检验能否迁移。"
+      ],
+      "output": "一份三种卷积结果的对照及最小零填充长度的解释。",
+      "requirements": "LN站内正文、纸笔；不要求安装软件。",
+      "license": "本站原创教学任务，不转载教材原文。",
+      "links": [],
+      "limits": [
+        "有限长序列及精确算术模型；不代表FFT实现速度、数值精度或硬件性能测试。",
+        "未经过学习者试测。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "直接按卷积定义核对教学数值；未执行外部实验。",
+        "read": "核读LN 3.4节的DFT乘积与零填充条件，并用定义复算短序列。"
+      },
+      "evidence": [],
+      "downloads": [],
+      "localLesson": "#course/digital-signal-processing/dsp-3-4"
     }
   ]
 }
