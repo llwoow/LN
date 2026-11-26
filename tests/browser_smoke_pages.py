@@ -103,13 +103,16 @@ def main():
                     page.set_viewport_size({'width': width, 'height': 900})
                     page.goto(base + '#knowledge', wait_until='networkidle')
                     page.locator('ln-knowledge-map .map-node').first.wait_for()
-                    assert page.locator('ln-knowledge-map .map-node').count() == 19
+                    expected_nodes = page.evaluate('LN_CROSS_KNOWLEDGE_DATA.nodes.length')
+                    assert page.locator('ln-knowledge-map .map-node').count() == expected_nodes
                     assert page.locator('ln-knowledge-map .map-edge-order').count() == 0
                     assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
                     page.locator('#cross-course-filter').select_option('power-semiconductors')
                     page.wait_for_url('**/#knowledge/power-semiconductors')
                     page.locator('ln-knowledge-map .map-node').first.wait_for()
-                    assert page.locator('ln-knowledge-map .map-node').count() < 19
+                    expected_filtered = page.evaluate("LNCrossKnowledge.graphCourse('power-semiconductors').sections.length")
+                    assert 0 < expected_filtered < expected_nodes
+                    assert page.locator('ln-knowledge-map .map-node').count() == expected_filtered
                     page.locator('ln-knowledge-map .map-node[href*="cross-oxide-device"]').evaluate("el => { location.hash = el.getAttribute('href'); }")
                     body=page.locator('#lesson-body[data-lesson-key="power-semiconductors/vdmos-structure"][aria-busy=false]')
                     body.wait_for(timeout=30000)
