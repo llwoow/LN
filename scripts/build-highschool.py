@@ -84,10 +84,10 @@ def build():
             def map_note(section):
                 if section.get('supplement') == 'study':
                     return ' · '.join(section['keywords'])
-                return section.get('curriculum') or ('试卷讲解与学习记录' if section['id'] == 'physics-001' else '逐题讲解与运动模型')
+                return section.get('curriculum') or section.get('note') or ('试卷讲解与学习记录' if section['id'] == 'physics-001' else '逐题讲解与运动模型')
             manifest['knowledgeMap']['nodes'] = [{'section': s['id'], 'title': s['title'], 'note': map_note(s)} for s in manifest['sections']]
             manifest['outlineOnly'] = False
-            manifest['topics'] = ['教材目录', *[m['group'] for m in materials]]
+            manifest['topics'] = ['教材目录', *dict.fromkeys(m.get('label',m['group']) for m in materials)]
             if (folder / 'glossary.json').is_file():
                 manifest['glossary'] = 'courses/' + course_id + '/glossary-index.js'
         (folder / 'manifest.js').write_text('window.LN_HS_' + slug.upper() + '=' + dump(manifest) + ';\n', encoding='utf-8', newline='\n')

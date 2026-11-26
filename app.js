@@ -261,14 +261,16 @@
     const modelActive = model && selectedId === model.id;
     const material = course.sections.find(section=>section.supplement === 'physics-001');
     const study = course.sections.find(section=>section.supplement === 'study');
+    const english = course.sections.find(section=>section.supplement === 'english-2027');
     const supplement = course.sections.find(section=>section.id === selectedId)?.supplement;
     const supplementalLink = (section, label) => section ? '<a href="#course/' + course.id + '/' + section.id + '"' + (supplement === section.supplement ? ' aria-current="page"' : '') + '>' + label + '</a>' : '';
     const materialLink = supplementalLink(material, '试卷讲解');
     const studyLink = supplementalLink(study, '专题学习');
+    const englishLink = supplementalLink(english, '英语讲义');
     const examLink = course.id === 'electromagnetic-compatibility' ? '<a href="#course/' + course.id + '/exam-review"' + (active === 'exam' ? ' aria-current="page"' : '') + '>考试复习</a>' : '';
     const workedLink = course.workedExercises?.length ? '<a href="#course/' + course.id + '/worked-exercises"' + (active === 'worked' ? ' aria-current="page"' : '') + '>已做题详解</a>' : '';
     const modelLink = model ? '<a href="#course/' + course.id + '/' + model.id + '"' + (modelActive ? ' aria-current="page"' : '') + '>' + icon('cube') + '3D 模型</a>' : '';
-    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive && !supplement ? ' aria-current="page"' : '') + '>' + icon('book') + (first.kind === 'outline' ? '章节目录' : '章节阅读') + '</a>' + examLink + workedLink + modelLink + studyLink + materialLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
+    return '<nav class="course-view-nav" aria-label="课程视图"><a href="#course/' + course.id + '/map"' + (active === 'map' ? ' aria-current="page"' : '') + '>' + icon('network') + '知识图谱</a><a href="#course/' + course.id + '/' + first.id + '"' + (active === 'reader' && !modelActive && !supplement ? ' aria-current="page"' : '') + '>' + icon('book') + (first.kind === 'outline' ? '章节目录' : '章节阅读') + '</a>' + examLink + workedLink + modelLink + studyLink + materialLink + englishLink + window.LNResources.button(course) + window.LNPractice.button(course) + '</nav>';
   }
 
   function loadEmcReviewMath() {
@@ -423,6 +425,7 @@
       if (selected.kind === 'model') await loadWindingAssets();
       if (selected.id.startsWith('transformer-')) await loadStyle('courses/electrical-machines/model/transformer-lesson.css');
       if (selected.supplement === 'physics-001') await Promise.all([loadScript('courses/hs-physics/physics-001/models.js'), loadScript('courses/hs-physics/physics-001/reader.js'), loadStyle('courses/hs-physics/physics-001/reader.css')]);
+      if (selected.supplement === 'english-2027') await Promise.all([loadScript('courses/hs-english/review-2027/reader.js'), loadStyle('courses/hs-english/review-2027/reader.css')]);
       const body = $('#lesson-body');
       if (!body || body.dataset.lessonKey !== key) return;
       const payload = outline ? {} : window.LN_LESSONS[key];
@@ -610,6 +613,7 @@
           }
         }
         if (selected.supplement === 'physics-001') window.LNPhysics001.mount(body, payload);
+        if (selected.supplement === 'english-2027') window.LNEnglish2027.mount(body, payload);
       }
       body.setAttribute('aria-busy', 'false');
       body.classList.toggle('model-lesson', selected.kind === 'model');
@@ -681,6 +685,8 @@
 
   function renderRoute() {
     window.LNPhysics001?.onRoute();
+    window.LNEnglish2027?.onRoute();
+    window.LNPractice.onRoute?.();
     window.LNResources.onRoute();
     window.LNPublication.onRoute();
     window.LNGlossary.onRoute();

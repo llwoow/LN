@@ -60,6 +60,7 @@ jobs:
         run: |
           python tests/browser_smoke_pages.py
           python tests/practice-v2.browser.py
+          python tests/english2027.browser.py --dist
       - name: Attach audit review screenshots to the PR run
         if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4

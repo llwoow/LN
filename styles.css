@@ -829,3 +829,7 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .emc-review-inline {border-top:1px solid var(--border);margin-top:24px;padding-top:12px;min-width:0;}
 .emc-review-note,.emc-review-focus {color:var(--muted);}
 .emc-review-example summary {cursor:pointer;font-weight:600;}
+
+/* Native English practice can open before any course reading stylesheet. */
+.practice-prompt audio { display: block; width: 100%; max-width: 100%; margin: 14px 0; }
+.practice-panel .english-model { white-space: pre-wrap; font-family: Georgia, serif; line-height: 1.9; }
