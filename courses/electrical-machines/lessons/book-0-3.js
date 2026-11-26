@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["electrical-machines/book-0-3"]={"html":"<section class=\"reader-section\" id=\"book-0-3\"><h2>0.3 我国电机工业概况</h2><p>从发电设备、输配电变压器到工业电机、牵引电驱与精密伺服，电机工业是能源和制造系统的基础。设计要同时处理电磁、绝缘、机械、热、制造成本和运行维护。产业历史及统计数字以教材和正式资料为准。</p><p>理解为什么效率、绝缘寿命和温升不能仅由额定功率决定。</p><p>相关知识：<a href=\"#course/electrical-machines/transformer-sec28\">2.8 运行特性及温升</a></p></section>"};

@@ -43,17 +43,29 @@ class CourseIntegrity(unittest.TestCase):
         cls.markup = {key: Elements(value.get('html', '')) for key, value in cls.payloads.items()}
 
     def test_complete_chapters(self):
-        self.assertEqual(len(self.sections), 63)
+        self.assertEqual(len(self.sections), 142)
         self.assertIn('ac-induction-slip', self.sections)
         self.assertIn('ac-synchronous-angle', self.sections)
         self.assertIn('induction-frequency-reduction', self.sections)
         self.assertIn('dc-chapter-test', self.sections)
         self.assertIn('data-open-practice', self.payloads['dc-chapter-test']['html'])
         self.assertIn('dc-homework-review', self.sections)
-        self.assertEqual(len({section['group'] for section in self.sections.values()}), 6)
+        self.assertEqual(len({section['group'] for section in self.sections.values()}), 13)
         self.assertEqual(self.sections['mmf-sec47']['textbookSection'], '4.7')
         self.assertIn('transformer-homework', self.sections)
         self.assertIn('winding-model', self.sections)
+        for chapter, count in ((0, 6), (4, 9), (5, 15), (6, 13), (7, 4), (8, 5), (9, 5), (10, 5)):
+            for number in range(1, count + 1):
+                key = 'mmf-sec47' if (chapter, number) == (4, 7) else f'book-{chapter}-{number}'
+                self.assertIn(key, self.sections)
+                self.assertEqual(self.sections[key]['textbookSection'], f'{chapter}.{number}')
+        for chapter in range(1, 11):
+            key = f'exam-ch{chapter}'
+            self.assertIn(key, self.sections)
+            self.assertIn('katex-mathml', self.payloads[key]['html'])
+            self.assertIn('典型题：', self.payloads[key]['html'])
+        for letter in 'abcdefgh':
+            self.assertIn('book-' + letter, self.sections)
 
     def test_dc_handwritten_homework_native_review(self):
         html = self.payloads['dc-homework-review']['html']
@@ -185,6 +197,64 @@ class HomeworkCalculations(unittest.TestCase):
         maximum = 320 + 320 * weights[0] / weights[1]
         self.assertAlmostEqual(maximum, 487.142857, places=5)
 
+
+
+class ExamReviewCalculations(unittest.TestCase):
+    def test_winding_factor_voltage(self):
+        kw = math.sin(math.radians(75)) * math.sin(math.radians(30)) / (4 * math.sin(math.radians(7.5)))
+        self.assertAlmostEqual(kw, .9250306488875357)
+        self.assertAlmostEqual(4.44 * 50 * 100 * .02 * kw, 410.7136081061)
+        self.assertAlmostEqual(math.sqrt(3) * 4.44 * 50 * 100 * .02 * kw, 711.3768365996)
+
+    def test_induction_power_and_torque(self):
+        slip = (1500 - 1440) / 1500
+        p_gap = 15000 - 600 - 400
+        p_out = (1 - slip) * p_gap - 300
+        self.assertEqual(p_out, 13140)
+        self.assertAlmostEqual(p_gap / (2 * math.pi * 1500 / 60), 89.12676813, places=7)
+        self.assertAlmostEqual(p_out / (2 * math.pi * 1440 / 60), 87.13733134, places=7)
+        tmax = 3 * 200**2 / (2 * 2 * math.pi * 1500 / 60 * 2)
+        self.assertAlmostEqual(tmax, 190.98593171, places=7)
+        self.assertAlmostEqual(tmax * 2 / (5 + .2), 73.45612758, places=6)
+
+
+    def test_induction_exact_t_network(self):
+        u = 220
+        z1 = .5+1j
+        zm = 1/(1/400+1/(20j))
+        z2 = .4/.04+1j
+        zin = z1+zm*z2/(zm+z2)
+        i1 = u/zin
+        e = u-z1*i1
+        i2 = e/z2
+        p1 = 3*(u*i1.conjugate()).real
+        pg = 3*abs(i2)**2*.4/.04
+        self.assertAlmostEqual(p1, 12713.41953703038)
+        self.assertAlmostEqual(pg, 11606.119565337533)
+        self.assertAlmostEqual(p1-3*abs(i1)**2*.5-3*abs(e)**2/400, pg)
+        self.assertAlmostEqual((.96*pg-200)/p1, .8606555263006644)
+
+    def test_salient_pole_matches_terminal_power(self):
+        u, i, xd, xq = 230, 32-24j, 4, 2
+        delta = cmath.phase(u + 1j*xq*i)
+        e0 = u*math.cos(delta) + xd*abs(i)*math.sin(delta - cmath.phase(i))
+        p = 3*u*e0/xd*math.sin(delta) + 3*u*u/2*(1/xq-1/xd)*math.sin(2*delta)
+        self.assertAlmostEqual(e0, 346.4064794496)
+        self.assertAlmostEqual(p, 3*(u*i.conjugate()).real)
+
+    def test_grid_excitation_at_fixed_active_power(self):
+        u, xs, p, e = 230, 2, 20700, 260
+        component = p * xs / (3 * u)
+        q = 3 * u / xs * (math.sqrt(e**2-component**2)-u)
+        self.assertAlmostEqual(q, 7928.863420647267)
+        self.assertAlmostEqual(math.hypot(u, component), 237.69728648009422)
+        self.assertAlmostEqual(p/(3*u), 30)
+
+    def test_thermal_cycle(self):
+        a = math.exp(-1)
+        peak = 50*(1-a)/(1-a*a)
+        self.assertAlmostEqual(peak, 36.5529289315)
+        self.assertAlmostEqual(a*peak, 13.4470710685)
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["electrical-machines/book-0-6"]={"html":"<section class=\"reader-section\" id=\"book-0-6\"><h2>0.6 学习方法</h2><p>先由物理过程判断方向和变化趋势，再选模型求量，最后以单位、极限、功率平衡和参数数量级反查。特别注意电角度与机械角度、实际量与归算量、轴功率与电磁功率、额定条件与理想条件。</p><p>学习检验：改变转速、负载或励磁后，先说出哪些量固定，再列式。</p><p>相关知识：<a href=\"#course/electrical-machines/dc-homework-review\">第三章已做习题 · 原题与二次批改</a></p></section>"};
