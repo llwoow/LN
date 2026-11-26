@@ -817,3 +817,15 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .cross-filter { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 10px; }
 .cross-filter select { max-width:100%; color:var(--text); background:var(--surface); border:1.5px solid var(--border); border-radius:6px; padding:6px 10px; font:inherit; }
 @media print { .cross-knowledge-inline { background:none; border-color:#000; } .cross-filter,.cross-course-panel { display:none; } }
+
+/* EMC review: retain native theme and keep long equations locally scrollable. */
+.emc-exam-review {max-width: 900px; margin: 20px auto; min-width: 0;}
+.emc-review-controls {display:flex;flex-wrap:wrap;gap:12px;margin:16px 0;}
+.emc-review-controls label {display:grid;gap:4px;min-width:0;flex:1 1 210px;}
+.emc-review-controls input,.emc-review-controls select {width:100%;min-width:0;background:var(--surface);color:var(--text);border:1px solid var(--border);padding:9px;border-radius:6px;font:inherit;}
+.emc-review-row,.emc-review-example {border-top:1px solid var(--border);padding:16px 0;scroll-margin-top:80px;min-width:0;}
+.emc-review-formula {overflow-x:auto;max-width:100%;min-width:0;padding:10px 4px;background:var(--subtle);margin:8px 0;overflow-wrap:anywhere;}
+.emc-review-formula .katex-display {margin:0.25em 0;}
+.emc-review-inline {border-top:1px solid var(--border);margin-top:24px;padding-top:12px;min-width:0;}
+.emc-review-note,.emc-review-focus {color:var(--muted);}
+.emc-review-example summary {cursor:pointer;font-weight:600;}

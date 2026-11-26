@@ -2450,6 +2450,41 @@
       "evidence": [],
       "downloads": [],
       "localLesson": "#course/digital-signal-processing/dsp-3-4"
+    },
+    {
+      "id": "dsp-sampling-alias-check",
+      "title": "抽样混叠：相同离散序列能否辨别连续频率？",
+      "kind": "站内公式复算任务",
+      "repository": null,
+      "checked": "2026-11-25",
+      "targets": [
+        {
+          "course": "digital-signal-processing",
+          "section": "dsp-1-4"
+        }
+      ],
+      "question": "采样率1 kHz，100 Hz与900 Hz实余弦的离散样本是否相同？",
+      "summary": "按现有抽样重点页的数字频率和混叠关系作独立计算。",
+      "steps": [
+        "设采样时刻 t=n/1000。",
+        "100 Hz的样值为 cos(0.2πn)，900 Hz为 cos(1.8πn)=cos(2πn−0.2πn)。",
+        "整数n下两序列相同；解释为什么模拟抗混叠滤波必须在采样前。"
+      ],
+      "output": "比较两组数字频率和样值，给出无法唯一识别连续频率的原因。",
+      "requirements": "三角函数周期性、数字频率；无需外部软件。",
+      "license": "本站原创计算任务；不转载第三方资料。",
+      "links": [],
+      "evidence": [],
+      "downloads": [],
+      "limits": [
+        "只比较零初相实余弦及理想等间隔采样；非完整抽样实验。"
+      ],
+      "verification": {
+        "executed": false,
+        "scope": "代数推导示例，未进行实测。",
+        "read": "对应现有1.4节抽样提纲，非教材全文复核。"
+      },
+      "localLesson": "#course/digital-signal-processing/dsp-1-4"
     }
   ]
 }
