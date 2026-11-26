@@ -4,6 +4,7 @@
 
 - [在线使用](https://llwoow.github.io/LN/) · [原 LN 站点](https://ln-llwoow.lqw193wql.chatgpt.site)
 - [进度与维护说明](PROGRESS.md)
+- [课程验收工具](https://llwoow.github.io/LN/audit/) · [使用说明](audit/README.md)
 - [项目要求](REQUIREMENTS.md) · [教学标准](TEACHING.md)
 - [隐私与资料发布规范](PUBLICATION.md) · [公开审查记录](PUBLICATION-REVIEW-2026-11-14.md)
 

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-1-2"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-1-2\">1.2 线性移不变系统（LSI）</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>1.2.1 线性：齐次和可加性</li><li>1.2.2 移不变：先延迟输入再运算等于延迟输出</li><li>1.2.3 LSI：冲激响应与卷积</li><li>1.2.4 因果：h(n)=0（n&lt;0）</li><li>1.2.5 BIBO稳定：Σ|h(n)| 有限</li></ul><p><strong>重点与判断：</strong>不能由系统线性推出移不变，也不能由因果推出稳定。给定系统关系应逐条验证。</p></section>"};

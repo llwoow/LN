@@ -30,23 +30,16 @@ class HighSchoolIntegrity(unittest.TestCase):
     def test_outline_nodes_have_no_teaching_payload(self):
         index = assignment(ROOT/'reference-index.js')
         for course in self.courses:
-            folder = ROOT/'courses'/course['id']
-            if course['id'] in {'hs-physics','hs-english'}:
-                self.assertFalse(course['outlineOnly'])
-                for section in course['sections']:
-                    if section['kind']=='outline':
-                        self.assertNotIn('src',section)
-                        self.assertNotIn(section['id'],index[course['id']]['sections'])
-                continue
-            self.assertTrue(course['outlineOnly'])
-            self.assertNotIn('glossary', course)
-            self.assertFalse((folder/'content.json').exists())
-            self.assertFalse(list(folder.glob('lessons/*.js')))
-            self.assertFalse(course['knowledgeMap'].get('links'))
-            self.assertEqual(index[course['id']], {'sections': {}, 'targets': []})
+            self.assertFalse(course['outlineOnly'])
+            studies = [s for s in course['sections'] if s.get('supplement') == 'study']
+            self.assertEqual(len(studies), 1, course['id'])
+            study = studies[0]
+            self.assertIn(study['id'], index[course['id']]['sections'])
+            self.assertTrue(any(link['to'] == study['id'] for link in course['knowledgeMap']['links']))
             for section in course['sections']:
-                self.assertEqual(section['kind'], 'outline')
-                self.assertNotIn('src', section)
+                if section['kind'] == 'outline':
+                    self.assertNotIn('src', section)
+                    self.assertNotIn(section['id'], index[course['id']]['sections'])
 
     def test_teaching_catalogs_exclude_outline_courses(self):
         outline = {course['id'] for course in self.courses if course['outlineOnly']}
@@ -54,6 +47,10 @@ class HighSchoolIntegrity(unittest.TestCase):
         resources = assignment(ROOT/'courses/resources/catalog.js')
         self.assertFalse(any(q['course'] in outline for q in practice['questions']))
         self.assertFalse(any(t['course'] in outline for r in practice['sources'] + resources['resources'] for t in r['targets']))
+        for course in self.courses:
+            study = next(s for s in course['sections'] if s.get('supplement') == 'study')
+            self.assertTrue(any(q['course'] == course['id'] and study['id'] in q['sections'] for q in practice['questions']))
+            self.assertTrue(any(t['course'] == course['id'] and t['section'] == study['id'] for r in resources['resources'] for t in r['targets']))
 
     def test_original_evidence_and_version_differences_are_retained(self):
         data = json.loads((ROOT/'courses/highschool/catalog.json').read_text(encoding='utf-8'))

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-3-4"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-3-4\">3.4 DFT性质与圆周卷积</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>3.4.1 线性</li><li>3.4.2 圆周移位</li><li>3.4.3 圆周共轭对称</li><li>3.4.4 圆周翻褶</li><li>3.4.5 对偶</li><li>3.4.6 实/虚序列的频谱对称</li><li>3.4.7 Parseval能量关系</li><li>3.4.8 圆周卷积定理</li><li>3.4.9 线性卷积和圆周卷积的关系</li></ul><p><strong>重点与判断：</strong>用DFT乘积求线性卷积前须补零，使 N≥L+M−1，否则周期折叠混入。对于实序列 X(N−k)=X*(k)。</p></section>"};

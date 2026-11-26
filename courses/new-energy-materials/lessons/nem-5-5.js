@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-5-5"]={"html":"<section class=\"article-section\" id=\"nem-5-5\"><h2>5.5 金属-空气电池</h2><p>金属作负极，空气中的氧气参与正极反应，因氧化剂来自环境，电芯名义比能量比较时需注意统计边界。金属电极腐蚀、空气电极催化与电解质管理是关键限制。</p><dl class=\"nem-subtopics\"><dt id=\"nem-5-5-1\"><strong>5.5.1 锌-空气电池</strong></dt><dd>锌氧化供电子，空气电极氧还原受催化与传质影响。</dd><dt id=\"nem-5-5-2\"><strong>5.5.2 铝-空气电池</strong></dt><dd>铝的活性高，但自腐蚀与产物管理很重要。</dd><dt id=\"nem-5-5-3\"><strong>5.5.3 锂-空气电池</strong></dt><dd>高理论能量受到氧反应可逆性、电解质稳定与副反应约束。</dd></dl></section>"};

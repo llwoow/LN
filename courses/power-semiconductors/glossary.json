@@ -383,9 +383,63 @@
         "mosfet-resistance"
       ],
       "match": "控制栅本身是 PN 结"
+    },
+    {
+      "id": "dynamic-ron",
+      "title": "动态导通电阻",
+      "aliases": [
+        "动态导通电阻",
+        "dynamic on-resistance"
+      ],
+      "english": "Dynamic On-Resistance",
+      "description": "经历指定开关应力后的导通电阻，随器件工况与取样时刻而变。",
+      "section": "wide-bandgap",
+      "match": "动态导通电阻是器件经历给定关断应力后"
     }
   ],
   "symbolDefinitions": [
+    {
+      "id": "psd-periodic-on-duration",
+      "section": "device-selection",
+      "sections": [
+        "device-selection"
+      ],
+      "sourceAnchor": "psd-pulse-period-symbols",
+      "match": "通电时长记为",
+      "title": "通电时长 t_on",
+      "keys": [
+        "t_on"
+      ],
+      "description": "一个矩形功率脉冲持续加热的时间，单位 s。"
+    },
+    {
+      "id": "psd-periodic-period",
+      "section": "device-selection",
+      "sections": [
+        "device-selection"
+      ],
+      "sourceAnchor": "psd-pulse-period-symbols",
+      "match": "通电时长记为",
+      "title": "重复周期 T",
+      "keys": [
+        "T"
+      ],
+      "description": "从一个脉冲开始到下一个开始的时间，单位 s；含通电段和关断段。"
+    },
+    {
+      "id": "psd-periodic-peak-rise",
+      "section": "device-selection",
+      "sections": [
+        "device-selection"
+      ],
+      "sourceAnchor": "psd-pulse-period-symbols",
+      "match": "通电时长记为",
+      "title": "峰值温升 ΔT_pk",
+      "keys": [
+        "delta:T_pk"
+      ],
+      "description": "重复脉冲达到周期稳定以后，通电段末尾的结温相对于固定壳温的升高量，单位 K。"
+    },
     {
       "id": "gate-source-voltage",
       "keys": [
@@ -1009,6 +1063,24 @@
       ],
       "unitHtml": "A",
       "match": "把PNP记作T₁、NPN记作T₂"
+    },
+    {
+      "id": "psd-pulse-symbols",
+      "section": "device-selection",
+      "sections": [
+        "device-selection"
+      ],
+      "sourceAnchor": "psd-pulse-symbols",
+      "match": "是结温超过壳温的部分",
+      "title": "R_θ、τ、P、ΔT、a",
+      "keys": [
+        "R_θ",
+        "τ",
+        "P",
+        "delta:T",
+        "a"
+      ],
+      "description": "本算例的量、参考方向与单位。"
     }
   ]
 }

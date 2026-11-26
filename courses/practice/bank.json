@@ -4969,6 +4969,2005 @@
       "readingAnchor": "dc-branch-reasoning"
     },
     {
+      "id": "english-day-1-q1",
+      "course": "english",
+      "sections": [
+        "day-1"
+      ],
+      "readingSection": "day-1",
+      "readingAnchor": "eng-day-1-q1",
+      "type": "single",
+      "title": "Day 1 · 第1题 · 调整见面时间",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "你原本约好下午两点见面，但突然有事，想改到三点。哪句话最自然？",
+      "hint": "辨认接受、提前和推迟的措辞。",
+      "transfer": "把约见地点和日期分别换掉，再口头确认新的安排。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "I have a thing. You must change the time.",
+          "feedback": "语气强硬且 I have a thing 不自然地表达临时变故。"
+        },
+        {
+          "id": "B",
+          "text": "Something came up. Can we push it back to three?",
+          "feedback": "先解释临时状况，再礼貌请求推迟，准确。"
+        },
+        {
+          "id": "C",
+          "text": "I am not free. You should wait for me.",
+          "feedback": "把改变计划的责任强加给对方，不够自然。"
+        },
+        {
+          "id": "D",
+          "text": "Something happened. Let's cancel everything.",
+          "feedback": "题目只要改时间，并非取消全部计划。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "先解释临时状况，再礼貌请求推迟，准确。",
+        "语气强硬且 I have a thing 不自然地表达临时变故。",
+        "把改变计划的责任强加给对方，不够自然。",
+        "题目只要改时间，并非取消全部计划。"
+      ]
+    },
+    {
+      "id": "english-day-1-q2",
+      "course": "english",
+      "sections": [
+        "day-1"
+      ],
+      "readingSection": "day-1",
+      "readingAnchor": "eng-day-1-q2",
+      "type": "single",
+      "title": "Day 1 · 第2题 · 调整见面时间",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "朋友说：I'm down for that, but can we move it up to 10? 这是什么意思？",
+      "hint": "辨认接受、提前和推迟的措辞。",
+      "transfer": "把约见地点和日期分别换掉，再口头确认新的安排。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "我不想参加，能取消吗？",
+          "feedback": "down for that 是接受邀请。"
+        },
+        {
+          "id": "B",
+          "text": "我愿意参加，但能推迟到十点吗？",
+          "feedback": "move up 表示提前，不是推迟。"
+        },
+        {
+          "id": "C",
+          "text": "我愿意参加，但能提前到十点吗？",
+          "feedback": "正确。move it up to 10 指更早改到十点。"
+        },
+        {
+          "id": "D",
+          "text": "我还没决定，十点再说。",
+          "feedback": "down for that 已明确表示愿意参加。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "steps": [
+        "正确。move it up to 10 指更早改到十点。",
+        "down for that 是接受邀请。",
+        "move up 表示提前，不是推迟。",
+        "down for that 已明确表示愿意参加。"
+      ]
+    },
+    {
+      "id": "english-day-1-q3",
+      "course": "english",
+      "sections": [
+        "day-1"
+      ],
+      "readingSection": "day-1",
+      "readingAnchor": "eng-day-1-q3",
+      "type": "open",
+      "title": "Day 1 · 第3题 · 调整见面时间",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句英语自然表达：“嘿，明天下午你有空吗？我想约你一起去图书馆学习。如果你没空，我们也可以改到周五。”",
+      "hint": "辨认接受、提前和推迟的措辞。",
+      "transfer": "把约见地点和日期分别换掉，再口头确认新的安排。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Hey, are you free tomorrow afternoon? Are you up for studying together at the library? If tomorrow doesn't work for you, we could do Friday instead.",
+        "核心是邀请、给出地点、提供备选日期。不需要逐字翻译；Friday instead 可自然表达“改到周五”。",
+        "4分参考量规：准确完整传意2分；语法和句型1分；场景适用、自然表达1分。其他语法正确且意思等效的表达亦可得分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-2-q1",
+      "course": "english",
+      "sections": [
+        "day-2"
+      ],
+      "readingSection": "day-2",
+      "readingAnchor": "eng-day-2-q1",
+      "type": "single",
+      "title": "Day 2 · 第1题 · 描述故障并求助",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "“这个程序总是崩溃，我还没弄清原因。”哪句最自然？",
+      "hint": "区分出现的问题、预期效果和实际结果。",
+      "transfer": "改用实验设备的故障作为情境，说明预期、症状和需要哪种帮助。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "The program always falls down. I don't understand it.",
+          "feedback": "程序崩溃一般说 crash，而非 fall down。"
+        },
+        {
+          "id": "B",
+          "text": "The program keeps crashing, and I haven't figured out why.",
+          "feedback": "keep + -ing 表反复发生；haven't figured out 强调尚未找到原因。"
+        },
+        {
+          "id": "C",
+          "text": "The program is broken forever. I can't know why.",
+          "feedback": "broken forever 过于绝对；can't know 也不自然。"
+        },
+        {
+          "id": "D",
+          "text": "The program crashes one time. I can't find it.",
+          "feedback": "one time 与“总是”矛盾，find it 也不指找原因。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "keep + -ing 表反复发生；haven't figured out 强调尚未找到原因。",
+        "程序崩溃一般说 crash，而非 fall down。",
+        "broken forever 过于绝对；can't know 也不自然。",
+        "one time 与“总是”矛盾，find it 也不指找原因。"
+      ]
+    },
+    {
+      "id": "english-day-2-q2",
+      "course": "english",
+      "sections": [
+        "day-2"
+      ],
+      "readingSection": "day-2",
+      "readingAnchor": "eng-day-2-q2",
+      "type": "open",
+      "title": "Day 2 · 第2题 · 描述故障并求助",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改正两处错误：It's suppose to showing the results, but nothing appears.",
+      "hint": "区分出现的问题、预期效果和实际结果。",
+      "transfer": "改用实验设备的故障作为情境，说明预期、症状和需要哪种帮助。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：It's supposed to show the results, but nothing appears.",
+        "be supposed to 是固定结构：supposed 有 -d；to 后接动词原形 show，而不是 showing。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-2-q3",
+      "course": "english",
+      "sections": [
+        "day-2"
+      ],
+      "readingSection": "day-2",
+      "readingAnchor": "eng-day-2-q3",
+      "type": "open",
+      "title": "Day 2 · 第3题 · 描述故障并求助",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句英语向客服描述：“你好，我遇到了一个问题。这个应用本来应该自动保存我的学习进度，但它似乎没有正常工作。你能帮我看看吗？”",
+      "hint": "区分出现的问题、预期效果和实际结果。",
+      "transfer": "改用实验设备的故障作为情境，说明预期、症状和需要哪种帮助。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Hi, I ran into a problem with the app. It's supposed to save my progress automatically, but it doesn't seem to be working. Could you give me a hand?",
+        "描述障碍 → 预期与实际 → 求助。还可说 Could you take a look?；不要用 you must fix it 作为普通求助。",
+        "4分参考量规：准确完整传意2分；语法和句型1分；场景适用、自然表达1分。其他语法正确且意思等效的表达亦可得分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-3-q1",
+      "course": "english",
+      "sections": [
+        "day-3"
+      ],
+      "readingSection": "day-3",
+      "readingAnchor": "eng-day-3-q1",
+      "type": "single",
+      "title": "Day 3 · 第1题 · 礼貌表达异议",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "想礼貌地表达与同学不同的看法，哪句最合适？",
+      "hint": "先厘清对方的观点，再说清自己的理由。",
+      "transfer": "改为支持对方的方案，同时提出一个让方案更稳妥的条件。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "You're completely wrong.",
+          "feedback": "直接指责，不符合礼貌讨论。"
+        },
+        {
+          "id": "B",
+          "text": "I see your point, but I'm not sure I agree.",
+          "feedback": "理解对方后表示不同意，最符合要求。"
+        },
+        {
+          "id": "C",
+          "text": "I don't care about your opinion.",
+          "feedback": "表达漠不关心，会破坏沟通。"
+        },
+        {
+          "id": "D",
+          "text": "Your idea makes no sense.",
+          "feedback": "否定对方想法而不解释理由。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "理解对方后表示不同意，最符合要求。",
+        "直接指责，不符合礼貌讨论。",
+        "表达漠不关心，会破坏沟通。",
+        "否定对方想法而不解释理由。"
+      ]
+    },
+    {
+      "id": "english-day-3-q2",
+      "course": "english",
+      "sections": [
+        "day-3"
+      ],
+      "readingSection": "day-3",
+      "readingAnchor": "eng-day-3-q2",
+      "type": "single",
+      "title": "Day 3 · 第2题 · 礼貌表达异议",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "Ben 认为边开发边测试的主要好处是什么？",
+      "hint": "先厘清对方的观点，再说清自己的理由。",
+      "transfer": "改为支持对方的方案，同时提出一个让方案更稳妥的条件。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "It would make the app look better.",
+          "feedback": "对话没有提界面外观。"
+        },
+        {
+          "id": "B",
+          "text": "It would eliminate the need for testing.",
+          "feedback": "恰好相反，方案要求持续测试。"
+        },
+        {
+          "id": "C",
+          "text": "It could save time.",
+          "feedback": "正确。原话 would save us time。"
+        },
+        {
+          "id": "D",
+          "text": "It would require more developers.",
+          "feedback": "对话没有提人员数量。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "steps": [
+        "正确。原话 would save us time。",
+        "对话没有提界面外观。",
+        "恰好相反，方案要求持续测试。",
+        "对话没有提人员数量。"
+      ]
+    },
+    {
+      "id": "english-day-3-q3",
+      "course": "english",
+      "sections": [
+        "day-3"
+      ],
+      "readingSection": "day-3",
+      "readingAnchor": "eng-day-3-q3",
+      "type": "open",
+      "title": "Day 3 · 第3题 · 礼貌表达异议",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句自然英语表达：“我理解你的想法，但我不太赞同。我认为我们应该先完成一个简单的版本，然后逐步改进。”",
+      "hint": "先厘清对方的观点，再说清自己的理由。",
+      "transfer": "改为支持对方的方案，同时提出一个让方案更稳妥的条件。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：I see your point, but I'm not sure I agree. I'd argue that we should build a simple version first and improve it step by step.",
+        "清楚表明异议即可；不用强迫自己使用所有短语。也可以说 I think it would be better to start with a simple version.",
+        "4分参考量规：准确完整传意2分；语法和句型1分；场景适用、自然表达1分。其他语法正确且意思等效的表达亦可得分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-4-q1",
+      "course": "english",
+      "sections": [
+        "day-4"
+      ],
+      "readingSection": "day-4",
+      "readingAnchor": "eng-day-4-q1",
+      "type": "single",
+      "title": "Day 4 · 第1题 · 澄清讲解步骤",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "老师的每个单词你都听清了，但没有理解推导过程。哪句更合适？",
+      "hint": "说清哪里跟不上，区分请求解释与表达反对。",
+      "transfer": "假设你只没听懂最后一步，礼貌请对方用一个例子说明。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "I didn't hear any words.",
+          "feedback": "与“每个词都听清”矛盾。"
+        },
+        {
+          "id": "B",
+          "text": "I'm not sure I follow. Could you explain that step?",
+          "feedback": "正确，明确表示跟不上思路，并请求解释某一步。"
+        },
+        {
+          "id": "C",
+          "text": "You should speak louder.",
+          "feedback": "问题不在音量。"
+        },
+        {
+          "id": "D",
+          "text": "I don't agree with your explanation.",
+          "feedback": "没理解不等于明确不同意。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "正确，明确表示跟不上思路，并请求解释某一步。",
+        "与“每个词都听清”矛盾。",
+        "问题不在音量。",
+        "没理解不等于明确不同意。"
+      ]
+    },
+    {
+      "id": "english-day-4-q2",
+      "course": "english",
+      "sections": [
+        "day-4"
+      ],
+      "readingSection": "day-4",
+      "readingAnchor": "eng-day-4-q2",
+      "type": "open",
+      "title": "Day 4 · 第2题 · 澄清讲解步骤",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改写：Could you explain me how this system works?",
+      "hint": "说清哪里跟不上，区分请求解释与表达反对。",
+      "transfer": "假设你只没听懂最后一步，礼貌请对方用一个例子说明。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Could you explain to me how this system works?",
+        "explain something to someone；也可说 Could you explain how this system works to me? 先解释内容、再接收话者，不能说 explain me… 。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-4-q3",
+      "course": "english",
+      "sections": [
+        "day-4"
+      ],
+      "readingSection": "day-4",
+      "readingAnchor": "eng-day-4-q3",
+      "type": "open",
+      "title": "Day 4 · 第3题 · 澄清讲解步骤",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "写两句英语：“我大概明白你的意思了，但能不能一步步给我讲一下？我想确认自己没有遗漏重要步骤。”",
+      "hint": "说清哪里跟不上，区分请求解释与表达反对。",
+      "transfer": "假设你只没听懂最后一步，礼貌请对方用一个例子说明。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：I think I get the idea, but could you walk me through it step by step? I just want to make sure I haven't missed any important steps.",
+        "表达部分理解 → 请求分步说明 → 说明核对目的；haven't missed 表示截至现在未漏掉任何步骤。",
+        "4分参考量规：准确完整传意2分；语法和句型1分；场景适用、自然表达1分。其他语法正确且意思等效的表达亦可得分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-5-q1",
+      "course": "english",
+      "sections": [
+        "day-5"
+      ],
+      "readingSection": "day-5",
+      "readingAnchor": "eng-day-5-q1",
+      "type": "single",
+      "title": "Day 5 · 第1题 · 汇报项目进度",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "Ben 对项目进度的判断是什么？",
+      "hint": "留意已结束的过去时间与截至现在的成果。",
+      "transfer": "把已经处理的问题改成仍在发生的问题，再检查时态和进度表述。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "The project has already been completed.",
+          "feedback": "硬件完成不等于整个项目完成。"
+        },
+        {
+          "id": "B",
+          "text": "The project has been cancelled.",
+          "feedback": "没有取消项目。"
+        },
+        {
+          "id": "C",
+          "text": "The project is mostly on track, despite a technical issue.",
+          "feedback": "正确。总体可按计划，但存在传感器读数问题。"
+        },
+        {
+          "id": "D",
+          "text": "The project will definitely be delayed by a week.",
+          "feedback": "Ben 只是认为可能延误，并未确定延迟一周。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "steps": [
+        "正确。总体可按计划，但存在传感器读数问题。",
+        "硬件完成不等于整个项目完成。",
+        "没有取消项目。",
+        "Ben 只是认为可能延误，并未确定延迟一周。"
+      ]
+    },
+    {
+      "id": "english-day-5-q2",
+      "course": "english",
+      "sections": [
+        "day-5"
+      ],
+      "readingSection": "day-5",
+      "readingAnchor": "eng-day-5-q2",
+      "type": "open",
+      "title": "Day 5 · 第2题 · 汇报项目进度",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改写原句：We've finished the hardware setup yesterday, and we're on track to finishing the project by Friday.",
+      "hint": "留意已结束的过去时间与截至现在的成果。",
+      "transfer": "把已经处理的问题改成仍在发生的问题，再检查时态和进度表述。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：We finished the hardware setup yesterday, and we're on track to finish the project by Friday.",
+        "两处修改：yesterday 是明确的已结束时间，通常用 finished；on track to finish 中的 to 是不定式标记，后面接动词原形。补充：若写 We had finished… yesterday，在没有另一个过去参照事件的独立进度汇报中也不合适；更自然的是 We finished… yesterday。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-5-q3",
+      "course": "english",
+      "sections": [
+        "day-5"
+      ],
+      "readingSection": "day-5",
+      "readingAnchor": "eng-day-5-q3",
+      "type": "open",
+      "title": "Day 5 · 第3题 · 汇报项目进度",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句自然英语：“我们已经完成了大部分工作，但测试时遇到了一点问题。如果今天能解决，我们应该可以在周一前完成。”",
+      "hint": "留意已结束的过去时间与截至现在的成果。",
+      "transfer": "把已经处理的问题改成仍在发生的问题，再检查时态和进度表述。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：We've finished most of the work, but we ran into a snag during testing. If we can fix it today, we should be able to wrap things up by Monday.",
+        "截至现在的成果：we've finished；之前测试出现障碍：ran into；条件与预计：If we can fix it today, we should be able to… 。by Monday 是最迟周一。",
+        "4分参考量规：意义完整2分，语法与形式1分，表达自然和场景契合1分；其他意义等效的表达也可能满分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-6-q1",
+      "course": "english",
+      "sections": [
+        "day-6"
+      ],
+      "readingSection": "day-6",
+      "readingAnchor": "eng-day-6-q1",
+      "type": "single",
+      "title": "Day 6 · 第1题 · 处理过去事件的先后关系",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "By the time the teacher arrived, we _____ the experiment.",
+      "hint": "先找叙述的参照时间，再判断事件发生在它之前还是之后。",
+      "transfer": "添加一个后来发生的事件，重写两句，说明何处需要过去完成时。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "finish",
+          "feedback": "finish 原形既不符合这一叙述时态，也无必要助动词。"
+        },
+        {
+          "id": "B",
+          "text": "have finished",
+          "feedback": "have finished 参照现在；这里到达发生在过去。"
+        },
+        {
+          "id": "C",
+          "text": "had finished",
+          "feedback": "正确。到达之前已经完成。"
+        },
+        {
+          "id": "D",
+          "text": "are finishing",
+          "feedback": "are finishing 是现在进行时，与过去叙事不匹配。"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "steps": [
+        "正确。到达之前已经完成。",
+        "finish 原形既不符合这一叙述时态，也无必要助动词。",
+        "have finished 参照现在；这里到达发生在过去。",
+        "are finishing 是现在进行时，与过去叙事不匹配。"
+      ]
+    },
+    {
+      "id": "english-day-6-q2",
+      "course": "english",
+      "sections": [
+        "day-6"
+      ],
+      "readingSection": "day-6",
+      "readingAnchor": "eng-day-6-q2",
+      "type": "open",
+      "title": "Day 6 · 第2题 · 处理过去事件的先后关系",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改写：We have completed the testing last night, but we still need to fix a few bugs.",
+      "hint": "先找叙述的参照时间，再判断事件发生在它之前还是之后。",
+      "transfer": "添加一个后来发生的事件，重写两句，说明何处需要过去完成时。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：We completed the testing last night, but we still need to fix a few bugs.",
+        "last night 是明确而结束的过去时间，此处将 have completed 改为 completed。后半句 still need 保留，因为说的是现在仍需处理的问题。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-6-q3",
+      "course": "english",
+      "sections": [
+        "day-6"
+      ],
+      "readingSection": "day-6",
+      "readingAnchor": "eng-day-6-q3",
+      "type": "open",
+      "title": "Day 6 · 第3题 · 处理过去事件的先后关系",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句自然英语：“测试比预期花了更长时间，所以我们落后于计划。不过我们已经解决了主要问题，我会随时告诉你最新进展。”",
+      "hint": "先找叙述的参照时间，再判断事件发生在它之前还是之后。",
+      "transfer": "添加一个后来发生的事件，重写两句，说明何处需要过去完成时。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Testing took longer than expected, so we're behind schedule. However, we've fixed the main issue, and I'll keep you posted.",
+        "took：过去实际耗时；we're behind：现在的进度状态；we've fixed：截至现在的修复成果；I'll keep：未来沟通承诺。",
+        "4分参考量规：意义完整2分，语法与形式1分，表达自然和场景契合1分；其他意义等效的表达也可能满分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-7-q1",
+      "course": "english",
+      "sections": [
+        "day-7"
+      ],
+      "readingSection": "day-7",
+      "readingAnchor": "eng-day-7-q1",
+      "type": "single",
+      "title": "Day 7 · 第1题 · 提出建议与偏好",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "想委婉建议同学先测试程序，哪句话最自然？",
+      "hint": "检查 worth、would rather 和建议句型后接的形式。",
+      "transfer": "同一个建议分别用 How about 和 Why don’t we 表达，再补一句理由。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "You must test it because my idea is better.",
+          "feedback": "语气强硬，强调自己更好并不适合建议。"
+        },
+        {
+          "id": "B",
+          "text": "It might be worth testing it first.",
+          "feedback": "正确。be worth + -ing，语气委婉。"
+        },
+        {
+          "id": "C",
+          "text": "It might be worth to test it first.",
+          "feedback": "典型错误：worth 后不接 to test。"
+        },
+        {
+          "id": "D",
+          "text": "You should be worth testing it.",
+          "feedback": "把主语 you 当成“值得被测试”的对象，句意也改变。"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "steps": [
+        "正确。be worth + -ing，语气委婉。",
+        "语气强硬，强调自己更好并不适合建议。",
+        "典型错误：worth 后不接 to test。",
+        "把主语 you 当成“值得被测试”的对象，句意也改变。"
+      ]
+    },
+    {
+      "id": "english-day-7-q2",
+      "course": "english",
+      "sections": [
+        "day-7"
+      ],
+      "readingSection": "day-7",
+      "readingAnchor": "eng-day-7-q2",
+      "type": "open",
+      "title": "Day 7 · 第2题 · 提出建议与偏好",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "改写：Why don't we to start with a simpler design? I'd rather testing it first.",
+      "hint": "检查 worth、would rather 和建议句型后接的形式。",
+      "transfer": "同一个建议分别用 How about 和 Why don’t we 表达，再补一句理由。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：Why don't we start with a simpler design? I'd rather test it first.",
+        "Why don't we + 动词原形 start；would rather + 动词原形 test。不要混淆另一结构 How about starting…?；正确搭配不是靠是否表达建议来决定。",
+        "把改写句放回完整对话，检查它仍然传达题干给出的原意。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "english-day-7-q3",
+      "course": "english",
+      "sections": [
+        "day-7"
+      ],
+      "readingSection": "day-7",
+      "readingAnchor": "eng-day-7-q3",
+      "type": "open",
+      "title": "Day 7 · 第3题 · 提出建议与偏好",
+      "skills": [
+        "解释表达"
+      ],
+      "prompt": "用2–3句英语：“要不先做一个简单的版本？这样做的好处是我们可以更早发现问题。我宁愿先确保它能正常运行。”",
+      "hint": "检查 worth、would rather 和建议句型后接的形式。",
+      "transfer": "同一个建议分别用 How about 和 Why don’t we 表达，再补一句理由。",
+      "origin": "参考：英语 Day 1–7 课程。",
+      "steps": [
+        "参考表达：How about starting with a simpler version? The upside is that we can catch problems earlier. I'd rather make sure it works properly first.",
+        "可得分要点：提议小版本（1分）；更早发现问题（1分）；偏好先确保正确运行（1分）；语法和自然度（1分）。不必与示例完全一致。",
+        "4分参考量规：意义完整2分，语法与形式1分，表达自然和场景契合1分；其他意义等效的表达也可能满分。"
+      ],
+      "rubric": [
+        "完整表达题干的核心信息。",
+        "时态、搭配和句法与叙述条件一致。",
+        "语气适合场景，改写后仍保留题干原意。"
+      ]
+    },
+    {
+      "id": "ac-dominant-pole-window",
+      "course": "automatic-control",
+      "sections": [
+        "ac-3-4"
+      ],
+      "readingSection": "ac-3-4",
+      "readingAnchor": "dominant-pole-residue",
+      "title": "用误差预算选主导极点",
+      "type": "single",
+      "prompt": "某稳定系统单位阶跃的终值为 1，暂态为 −0.002e⁻ᵗ − 1.198e⁻⁵ᵗ + 0.200e⁻¹⁰ᵗ（t 以秒计）。只保留最慢项与终值，t=0.2 s 时绝对误差在 0.01 以内吗？",
+      "options": [
+        {
+          "id": "calculate-discarded",
+          "text": "不能。两项被舍弃的暂态合计约为 −0.414。",
+          "feedback": "误差由被舍弃的项相加，符号不同会部分抵消，仍远超 0.01。"
+        },
+        {
+          "id": "nearest-axis",
+          "text": "能。−1 离虚轴最近，所以它始终主导。",
+          "feedback": "最慢只给衰减速度，中间项的初始权重约是最慢项的 599 倍。"
+        },
+        {
+          "id": "slow-only",
+          "text": "能。最慢项在这个时刻的幅值还不到 0.002。",
+          "feedback": "这项是已经保留的项，不能用它的幅值代替被舍弃项造成的误差。"
+        }
+      ],
+      "answer": [
+        "calculate-discarded"
+      ],
+      "hint": "把完整响应减去约化响应，剩下的是哪两项？",
+      "steps": [
+        "保留 1−0.002e⁻ᵗ，完整模型减去该式得到 −1.198e⁻⁵ᵗ+0.200e⁻¹⁰ᵗ。",
+        "在 0.2 s 代入，分别约为 −0.4407 与 +0.0271，合计约 −0.4137。绝对值明显超过容差。",
+        "如要在 t≥T 保证误差，能用 1.198e⁻⁵ᵀ+0.200e⁻¹⁰ᵀ 给该区间的误差上界。"
+      ],
+      "transfer": "若观测点换成控制器的内部状态，为什么需要另求该状态的响应和权重？",
+      "skills": [
+        "推导计算",
+        "边界与反例"
+      ],
+      "origin": "LN 原创。依据课程的指数模态与误差比较方法编写，未做学习者试测。"
+    },
+    {
+      "id": "emc-lc-natural-frequency-gain",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-5-2",
+        "emc-5-4"
+      ],
+      "readingSection": "emc-5-2",
+      "readingAnchor": "emc-lc-peaking",
+      "title": "计算 LC 低通的谐振电压增益",
+      "type": "numeric",
+      "prompt": "理想电压源串 100 μH 电感，输出节点并联 1 μF 和 20 Ω。于 ω₀=1/√(LC) 测负载端电压与源电压的幅值比，它以 dB 表示是多少？保留两位小数，增益填正值。",
+      "answer": 6.020599913279624,
+      "tolerance": 0.02,
+      "unit": "dB",
+      "hint": "在固有频率处，分母中的 1−ω²LC 正好抵消。剩下的虚部由谁决定？",
+      "steps": [
+        "先写并联支路导纳 1/R+jωC。把并联支路和串联电感分压，得到 H=1/(1−ω²LC+jωL/R)。",
+        "固有频率处 1−ω²LC=0，幅值比为 R√(C/L)=20×0.1=2。",
+        "使用电压幅值换算 20 log₁₀(2)≈6.02 dB。这个结果对应固有频率处，不能直接当成峰值频点或现场插入损耗。"
+      ],
+      "rubric": [
+        "针对实际连接列出复阻抗或导纳。",
+        "区分固有频率与幅值峰值频率。",
+        "以 20 log₁₀ 换算电压幅值比。"
+      ],
+      "transfer": "若把负载换成闭环恒功率变换器，在哪个频带内需要重新建模？",
+      "skills": [
+        "建模",
+        "推导计算",
+        "迁移设计"
+      ],
+      "origin": "LN 原创，参数与结果独立复算。电路分析参考 TI 输入滤波器应用资料。"
+    },
+    {
+      "id": "psd-gan-loss-window",
+      "course": "power-semiconductors",
+      "sections": [
+        "wide-bandgap",
+        "switching"
+      ],
+      "readingSection": "wide-bandgap",
+      "readingAnchor": "gan-dynamic-ron",
+      "title": "区分 GaN 导通窗、开关窗和测量偏差",
+      "type": "open",
+      "prompt": "同一 GaN 器件测得开通后 100 ns 的电压/电流比比稳态偏大。若要判断这是导通电阻变化、温升还是探头时差，提出一组可比较的记录与判据，并说明损耗统计怎样避免重复。",
+      "rubric": [
+        "固定电流、结温起点、栅驱和取样延迟，单独改变关断应力或导通时间。",
+        "用已知边沿检查探头时延，明确电流与漏压的时间对齐和导通压降量程。",
+        "独立计入转换时窗的 v×i 与导通时窗的 v×i，避免重复积分。",
+        "报告波形和条件，只在测过的工况内得出判断。"
+      ],
+      "hint": "想想为什么“开通以后”还需要说明采样的准确时刻，以及测量系统的恢复时间。",
+      "steps": [
+        "先定义电流、电压探头所看的端口及时间基准，在同样的边沿上标定时差，再检查 100 ns 时探头是否仍过载或恢复。",
+        "保持起始温度、导通电流与取样时刻一致，对不同关断应力重复记录。另做等温与不同温度对照，便于分辨温漂。",
+        "若差异在校准后仍随应力或通断时间系统变化，才有证据支持动态导通电阻变化。分开积分开关重叠时窗和稳态导通时窗。"
+      ],
+      "transfer": "若电流纹波不可忽略，用哪一组同步数据计算整个导通窗的能量？",
+      "skills": [
+        "因果与证据",
+        "迁移设计",
+        "边界与反例"
+      ],
+      "origin": "LN 原创研究阅读题，基于 Cusumano 等 2025 年公开论文所讨论的测量问题，不照录原实验。"
+    },
+    {
+      "id": "hs-core-poetry-evidence",
+      "course": "hs-chinese",
+      "sections": [
+        "study-poetry"
+      ],
+      "readingSection": "study-poetry",
+      "readingAnchor": "study-poetry-evidence",
+      "title": "从动静和次序解释山居画面",
+      "prompt": "结合“竹喧归浣女，莲动下渔舟”，解释为什么有人物活动仍可读出山景的清幽。写两到三句，注明至少两个词句证据。",
+      "hint": "诗句先让读者得到什么感官线索，再说明什么原因？",
+      "steps": [
+        "从“竹喧”指出先有可听的声响，从“莲动”指出先有可见的变化。",
+        "归来的浣女和顺水经过的舟交代了一时的声响或动静，主景仍是山中的清幽环境。",
+        "“空”不要求眼前完全无人。论证应落在这一组诗的写法上，不由此推出诗人的全部生平。"
+      ],
+      "transfer": "若把诗句改写成“浣女归，渔舟下”，感知次序和阅读效果有哪些变化？",
+      "skills": [
+        "因果与证据",
+        "解释表达"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "open",
+      "rubric": [
+        "指出两个具体词句并解释感官线索。",
+        "说明一时动静怎样与清幽主景相衬。",
+        "避免只写“借景抒情”或跳到无法由诗句支持的生平结论。"
+      ]
+    },
+    {
+      "id": "hs-core-clause-scope",
+      "course": "hs-english",
+      "sections": [
+        "study-relative-clauses"
+      ],
+      "readingSection": "study-relative-clauses",
+      "readingAnchor": "study-clause-scope",
+      "title": "一对逗号圈出的是哪一组地点",
+      "prompt": "读句子 The four bridges, which were built before 1980, were inspected. 哪个结论能由句子直接支持？",
+      "hint": "先删去逗号里的从句，检查主句描述的对象是否仍然是四座桥。",
+      "steps": [
+        "主句说已经确定的四座桥接受了检查。",
+        "从句是补充说明，这四座桥都在 1980 年前建造。",
+        "句子没有列出四座之外的桥，也没有说检查人员只检查了 1980 年前建的桥。"
+      ],
+      "transfer": "改写成 The bridges that were built before 1980 were inspected. 原文还承诺桥的数目是四座吗？",
+      "skills": [
+        "因果与证据",
+        "解释表达"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "all-four",
+          "text": "这四座桥都在 1980 年前建造，并接受了检查。",
+          "feedback": "逗号中的从句给已确定的四座桥补充共同信息。"
+        },
+        {
+          "id": "some-four",
+          "text": "四座中只有部分在 1980 年前建造。",
+          "feedback": "句中没有用从句从四座桥中挑一个子集。"
+        },
+        {
+          "id": "city-all",
+          "text": "这座城市的所有桥都接受了检查。",
+          "feedback": "句子没有交代这是否是城市全部桥梁。"
+        }
+      ],
+      "answer": [
+        "all-four"
+      ]
+    },
+    {
+      "id": "hs-core-conditional-denominator",
+      "course": "hs-math",
+      "sections": [
+        "study-conditional-probability"
+      ],
+      "readingSection": "study-conditional-probability",
+      "readingAnchor": "study-conditional-denominator",
+      "title": "已报警的零件有多少比例确有缺陷",
+      "prompt": "一批测试件中 8 件缺陷且报警、2 件缺陷但未报警、12 件合格却报警、178 件合格且未报警。任抽一件已报警测试件，它有缺陷的概率填多少百分数？填写数字，例如 25 表示 25%。",
+      "hint": "把限制“已经报警”圈出来，先数这一列总数。",
+      "steps": [
+        "已报警一列有 8+12=20 件。",
+        "其中实际有缺陷者 8 件，所以条件概率为 8/20=0.4。",
+        "换算为百分数 40%，与缺陷件的报警率 8/10 是不同条件。"
+      ],
+      "transfer": "保持报警率不变，批次整体缺陷率降低时，为什么报警中的真缺陷比例会变？",
+      "skills": [
+        "建模",
+        "推导计算"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "numeric",
+      "answer": 40,
+      "tolerance": 0.01,
+      "unit": "%",
+      "rubric": [
+        "用已报警总数 20 作分母。",
+        "用同时缺陷且报警的 8 作分子。",
+        "以正确的百分数表示。"
+      ]
+    },
+    {
+      "id": "hs-core-capacitor-boundary",
+      "course": "hs-physics",
+      "sections": [
+        "study-capacitor"
+      ],
+      "readingSection": "study-capacitor",
+      "readingAnchor": "study-capacitor-constraint",
+      "title": "断开电源后电容变大，能量是多少",
+      "prompt": "3 μF 的理想电容器先充到 6 V，再断开电源。忽略漏电，插入电介质后电容为 9 μF，电场储能是多少 μJ？",
+      "hint": "断开之后极板电荷还可以流到哪里？",
+      "steps": [
+        "断开且无漏电，极板自由电荷保持 3 μF×6 V=18 μC。",
+        "新电压为 18 μC/9 μF=2 V。",
+        "能量是 QV/2，得到 18 μJ，低于原状态的 54 μJ。"
+      ],
+      "transfer": "如果一直接在 6 V 电源上，为什么这次结果会变为 162 μJ？",
+      "skills": [
+        "建模",
+        "推导计算"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "numeric",
+      "answer": 18,
+      "tolerance": 0.01,
+      "unit": "μJ",
+      "rubric": [
+        "说明电荷不变而电压会变。",
+        "求出变化后的电压 2 V。",
+        "用正确的能量表达式和单位。"
+      ]
+    },
+    {
+      "id": "hs-core-equilibrium-quotient",
+      "course": "hs-chemistry",
+      "sections": [
+        "study-equilibrium"
+      ],
+      "readingSection": "study-equilibrium",
+      "readingAnchor": "study-reaction-quotient",
+      "title": "气体膨胀的瞬间，反应商怎么变",
+      "prompt": "理想气相反应 2A⇌B 恒温达到平衡后迅速把体积扩成原来两倍。反应尚未显著进行时，Q_c 与原 K_c 有何关系？随后净反应方向如何？",
+      "hint": "浓度都减半，分母中 A 的指数是多少？",
+      "steps": [
+        "瞬时 [A] 与 [B] 均减半。",
+        "反应商的分子乘 1/2，分母乘 1/4，因此 Q_c 变成原来两倍。",
+        "温度不变，K_c 不变。Q_c 大于 K_c，随后反应净方向向 A。"
+      ],
+      "transfer": "如果改成恒温恒容加入不反应的惰性气体，哪些量会变，Q_c 会变吗？",
+      "skills": [
+        "建模",
+        "推导计算"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "reverse",
+          "text": "Q_c=2K_c，净方向向 A。",
+          "feedback": "净反应降低当前过高的反应商。"
+        },
+        {
+          "id": "forward",
+          "text": "Q_c=K_c/2，净方向向 B。",
+          "feedback": "忽略了分母是浓度平方。"
+        },
+        {
+          "id": "unchanged",
+          "text": "Q_c=K_c，认为两种气体浓度均减半能完全抵消。",
+          "feedback": "各浓度的指数不同，缩放并不抵消。"
+        }
+      ],
+      "answer": [
+        "reverse"
+      ]
+    },
+    {
+      "id": "hs-core-testcross-evidence",
+      "course": "hs-biology",
+      "sections": [
+        "study-testcross"
+      ],
+      "readingSection": "study-testcross",
+      "readingAnchor": "study-testcross-evidence",
+      "title": "五株显性后代还能支持哪些判断",
+      "prompt": "完全显性的单基因豌豆模型中，待测紫花与 aa 白花测交。若观察到 5 株独立后代全为紫花，关于待测亲本，哪项解释成立？",
+      "hint": "先假定亲本确为 Aa，求在该条件下连续观察到五株紫花的概率。",
+      "steps": [
+        "如果亲本为 AA，五株都紫花与预测相容。",
+        "如果亲本为 Aa，每株约有 1/2 紫花，五株全紫概率为 1/32。",
+        "这个低概率使全紫更支持 AA，但不能排除 Aa，也不等于观察后 Aa 的概率。"
+      ],
+      "transfer": "若第六株是白花，理论模型下为什么能排除 AA？",
+      "skills": [
+        "因果与证据",
+        "边界与反例"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "possible",
+          "text": "仍可能为 Aa；假定为 Aa 时，五株全紫的概率为 1/32。",
+          "feedback": "把基因型作为条件得出观察到的概率。"
+        },
+        {
+          "id": "certain",
+          "text": "一定是 AA，因为 Aa 会精确地每两株出一株白花。",
+          "feedback": "1∶1 是概率分布，有限观察不必精确等分。"
+        },
+        {
+          "id": "reverse",
+          "text": "待测亲本为 Aa 的概率已经确定为 1/32。",
+          "feedback": "这是倒置条件。观测后的亲本概率还需要先验信息。"
+        }
+      ],
+      "answer": [
+        "possible"
+      ]
+    },
+    {
+      "id": "hs-core-privacy-basis",
+      "course": "hs-politics",
+      "sections": [
+        "study-personal-data"
+      ],
+      "readingSection": "study-personal-data",
+      "readingAnchor": "study-privacy-basis",
+      "title": "给学校报名表做一次必要性审查",
+      "prompt": "一次校内讲座只需确认参加者身份、名额和发送变更通知。活动方要求填家庭地址，并称“参加者点了同意”。用课堂材料题方式判断并提出改法。",
+      "hint": "分别回答“依据是什么”和“哪个字段对这个用途必要”。",
+      "steps": [
+        "指出同意可能是处理依据之一，具体成立与否仍看活动条件。",
+        "用目的相关及最小范围核对家庭住址，题设没有说明核验或通知必须使用它。",
+        "给出更少字段的设计，例如用校内账号核验和通知，说明用途与保存期限。"
+      ],
+      "transfer": "如果活动变为确需上门配送，哪些事实会改变对地址必要性的判断？",
+      "skills": [
+        "因果与证据",
+        "迁移设计",
+        "解释表达"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "open",
+      "rubric": [
+        "结合条文区分处理依据与收集范围。",
+        "指出题设目的与家庭住址缺少直接对应。",
+        "提出与具体目的匹配的字段或通知方式。"
+      ]
+    },
+    {
+      "id": "hs-core-charter-evidence",
+      "course": "hs-history",
+      "sections": [
+        "study-charter"
+      ],
+      "readingSection": "study-charter",
+      "readingAnchor": "study-charter-evidence",
+      "title": "日期真的，事件也一定是真的吗",
+      "prompt": "一段材料写：“联合国于 1945 年 6 月 26 日成立，因为《联合国宪章》于当日签署。”下列哪项核查最能判定此断言？",
+      "hint": "文本签署和条约生效分别是哪类事件？",
+      "steps": [
+        "用会议史料核实 6 月 26 日是签署。",
+        "用条文第 110 条与条约登记确定生效条件和日期。",
+        "生效是 1945 年 10 月 24 日；应修改“成立”日期，保留正确的签署日期。"
+      ],
+      "transfer": "若材料改说“制度目标已经完全实现”，需要哪类新增材料检验？",
+      "skills": [
+        "因果与证据",
+        "解释表达"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "compare",
+          "text": "核对《宪章》的生效条件和条约登记，将签署与生效分开。",
+          "feedback": "两种资料一起支撑制度事件与时间线。"
+        },
+        {
+          "id": "discard",
+          "text": "因为断言错误，6 月 26 日也应从时间线删除。",
+          "feedback": "6 月 26 日的签署事件确有记录。"
+        },
+        {
+          "id": "purpose",
+          "text": "只要读到宪章写着创建组织，就能判定当日生效。",
+          "feedback": "条文的目标与满足生效条件是两件事。"
+        }
+      ],
+      "answer": [
+        "compare"
+      ]
+    },
+    {
+      "id": "hs-core-runoff-peak",
+      "course": "hs-geography",
+      "sections": [
+        "study-runoff"
+      ],
+      "readingSection": "study-runoff",
+      "readingAnchor": "study-runoff-volume",
+      "title": "径流总量更高能推出洪峰一定更高吗",
+      "prompt": "两个教学流域接受相同降雨。甲的直接径流总量比乙大。说明仅凭此信息能判断到什么程度，再写出至少两项用于比较洪峰的观测或条件。",
+      "hint": "流量过程线下的面积与最高点各表示什么？",
+      "steps": [
+        "直接径流体积是流量过程线的面积，甲面积较大。",
+        "面积可以来自更长的排水时段，因此不能确定最高点更高。",
+        "比较同口径出口流量过程线和峰现时刻，同时核查雨强分布、地面含水与调蓄差异。"
+      ],
+      "transfer": "若甲的调蓄池扩大、峰值变低，而总量仍大，怎样画出可能的两条过程曲线？",
+      "skills": [
+        "建模",
+        "因果与证据",
+        "迁移设计"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "open",
+      "rubric": [
+        "准确区分体积、峰值和时间。",
+        "解释面积大可对应延长的流量过程。",
+        "给出至少两项能控制或观测的比较条件。"
+      ]
+    },
+    {
+      "id": "ac-core-sensor-bias",
+      "course": "automatic-control",
+      "sections": [
+        "ac-1-1"
+      ],
+      "readingSection": "ac-1-1",
+      "readingAnchor": "control-sensor-offset",
+      "title": "反馈消除了读数误差以后",
+      "prompt": "恒速控制器把传感器显示稳定到 1000 r/min，传感器恒定高报 20 r/min。其他条件正常，轴上真实转速如何？",
+      "hint": "写出比较器看到的量等于真实值加什么。",
+      "steps": [
+        "传感器读数 = 真实转速 + 20 r/min。",
+        "稳态读数等于 1000，所以实际为 980 r/min。",
+        "闭环抑制测量误差不自动消除传感器偏差，应通过独立基准核查。"
+      ],
+      "transfer": "更换为正确校准的传感器后，换上较大负载会以同样方式表现吗？",
+      "skills": [
+        "建模",
+        "边界与反例"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "below",
+          "text": "980 r/min。",
+          "feedback": "反馈稳定了有偏读数。"
+        },
+        {
+          "id": "equal",
+          "text": "1000 r/min。",
+          "feedback": "误差为零只相对于控制器看到的测量值。"
+        },
+        {
+          "id": "above",
+          "text": "1020 r/min。",
+          "feedback": "高报意味着真实量应从显示值减去偏差。"
+        }
+      ],
+      "answer": [
+        "below"
+      ]
+    },
+    {
+      "id": "ac-core-motor-port",
+      "course": "automatic-control",
+      "sections": [
+        "ac-2-1"
+      ],
+      "readingSection": "ac-2-1",
+      "readingAnchor": "control-motor-ports",
+      "title": "负载转矩突然增大，哪个状态在第一刻变斜",
+      "prompt": "恒磁通电机原处稳态，保持电压不变并突然加大反向负载转矩。绕组电感和转动惯量均大于零。哪个判断正确？",
+      "hint": "分别看负载直接出现在两条状态方程的哪一条。",
+      "steps": [
+        "负载转矩直接进机械侧，角加速度在该瞬间降低。",
+        "电流与转速都连续，不能跳跃。",
+        "电压不变且电流转速连续，第一瞬间的电流斜率仍等于原值；随后转速变了，反电势才改变电流动态。"
+      ],
+      "transfer": "施加的端电压突然改变而负载不变时，两个方程的作用次序怎样变化？",
+      "skills": [
+        "建模",
+        "因果与证据"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "mechanical",
+          "text": "角加速度当即下降，电流与转速在该瞬间都不跳。",
+          "feedback": "负载直接影响机械方程，连续状态通过反电势慢慢耦合。"
+        },
+        {
+          "id": "both-jump",
+          "text": "转速和电流瞬时都增大。",
+          "feedback": "有限转矩与电压不能在有限惯量和电感下让状态跳跃。"
+        },
+        {
+          "id": "current-first",
+          "text": "电流首先跳变，因为负载直接加入电压方程。",
+          "feedback": "负载转矩没有直接加进电压平衡。"
+        }
+      ],
+      "answer": [
+        "mechanical"
+      ]
+    },
+    {
+      "id": "ac-core-gain-margin",
+      "course": "automatic-control",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "readingSection": "ac-5-6-9",
+      "readingAnchor": "control-margin-example",
+      "title": "按相位交越计算增益可乘多少倍",
+      "prompt": "负反馈有开环 L(s)=2/(1+s)³，时间尺度为秒。取开环相位为 −180° 的正频率，得到的线性增益裕度是多少倍？",
+      "hint": "三个相同的一阶环节分别贡献 −60°；再求该处的模。",
+      "steps": [
+        "令 arctan(ω)=60° 得 ω=√3 rad/s。",
+        "开环模为 2/(1+3)^(3/2)=0.25。",
+        "还可乘 1/0.25=4 才达到负实轴上的临界点 −1。"
+      ],
+      "transfer": "若回路另有时延，为什么相位交越频率需要重算？",
+      "skills": [
+        "建模",
+        "推导计算"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "numeric",
+      "answer": 4,
+      "tolerance": 0.01,
+      "unit": "倍",
+      "rubric": [
+        "区分相位交越和增益交越。",
+        "在正确频率求开环幅值。",
+        "增益裕度填写倍数而非 dB。"
+      ]
+    },
+    {
+      "id": "ac-delay-from-bode",
+      "course": "automatic-control",
+      "sections": [
+        "ac-5-6-9"
+      ],
+      "readingSection": "ac-5-6-9",
+      "readingAnchor": "control-delay-budget",
+      "title": "通讯延迟怎样改变两种稳定裕度",
+      "prompt": "一个原本稳定的单位负反馈回路，开环扫频只有一次 0 dB 交越和一次 −180° 交越。8 rad/s 时是 0 dB、−145°，15 rad/s 时是 −8 dB、−180°。幅值与连续相位随频率上升而下降。现在在回路中加入 50 ms 纯通讯延迟。哪个分析正确？",
+      "hint": "延迟平移时间波形。在原 0 dB 的同一频率上，幅值和相位分别改变多少？",
+      "steps": [
+        "原相位裕度在 8 rad/s 处读取，是 35°；原增益裕度在 15 rad/s 处读取，是 8 dB。",
+        "纯延迟保持幅值，0 dB 处仍为 8 rad/s。相位多滞后 8×0.050=0.40 rad，约 22.9°，所以相位裕度约为 12.1°。",
+        "15 rad/s 处的相位现在低于 −180°；8 rad/s 处仍高于 −180°。新的首次 −180° 交越在两者之间，要到新交越频率重读幅值；原 8 dB 不能沿用。"
+      ],
+      "transfer": "如果通讯环节还对相邻两次样本取平均，为什么应先重新找 0 dB 交越？提示：输入交替高低时，平均后的幅值会变吗？",
+      "skills": [
+        "因果与证据",
+        "推导计算",
+        "迁移设计"
+      ],
+      "origin": "LN 原创诊断题，解析已复算，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "phase-only",
+          "text": "0 dB 交越仍是 8 rad/s，相位裕度约 12°；增益裕度要在新的 −180° 交越处重读。",
+          "feedback": "延迟只移动相频曲线。幅值交越不动，相位交越向较低频率移动。"
+        },
+        {
+          "id": "unchanged",
+          "text": "幅频曲线没动，所以增益裕度仍是 8 dB。",
+          "feedback": "幅频曲线不变，但读幅值的位置由相频曲线决定，−180° 的交越已经换了频率。"
+        },
+        {
+          "id": "wrong-cross",
+          "text": "在 15 rad/s 处算延迟造成的相位变化，从原来的 35° 里扣除。",
+          "feedback": "35° 是 8 rad/s 处到 −180° 的距离。扣除的相位必须在同一个角频率算。"
+        }
+      ],
+      "answer": [
+        "phase-only"
+      ]
+    },
+    {
+      "id": "ac-core-zoh-vs-euler",
+      "course": "automatic-control",
+      "sections": [
+        "ac-8-5-2"
+      ],
+      "readingSection": "ac-8-5-2",
+      "readingAnchor": "control-zoh-current",
+      "title": "欧拉更新发散能否说明连续电路不稳定",
+      "prompt": "固定转子 RL 对象的时间常数为 2 ms，电压按零阶保持，以 5 ms 为更新间隔。前向欧拉迭代出现交替发散。最合理的解释是什么？",
+      "hint": "比较真实衰减系数 exp(−5/2) 与近似系数 1−5/2 的模。",
+      "steps": [
+        "精确粗采样系数约为 0.082，开环绕组会衰减。",
+        "前向欧拉的 −1.5 模大于 1，数值误差会翻转并变大。",
+        "闭环情况还依赖控制律、时延和更新顺序，另作判断。"
+      ],
+      "transfer": "使前向欧拉系数严格待在单位圆内的步长范围是什么？",
+      "skills": [
+        "推导计算",
+        "边界与反例"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "numerical",
+          "text": "这可由近似步长过大造成，原连续开环仍衰减。",
+          "feedback": "两个系数的绝对值分处单位圆内外。"
+        },
+        {
+          "id": "physical",
+          "text": "说明真实开环绕组已经不稳定。",
+          "feedback": "精确采样模型对零输入仍衰减。"
+        },
+        {
+          "id": "same",
+          "text": "两种方法系数相同，发散只能来自传感器。",
+          "feedback": "指数与一阶近似在较大参数下不同。"
+        }
+      ],
+      "answer": [
+        "numerical"
+      ]
+    },
+    {
+      "id": "emat-core-dielectric-loss",
+      "course": "electrical-materials",
+      "sections": [
+        "em-3-1"
+      ],
+      "readingSection": "em-3-1",
+      "readingAnchor": "materials-loss-tangent",
+      "title": "从正交电流和损耗角求有功",
+      "prompt": "某等效电容在小信号正弦条件下 C=1 μF，频率 10 kHz，电压有效值 10 V，tanδ=0.02。用并联损耗模型求平均有功，单位 W。",
+      "hint": "有效值乘同相电流才是有功。先求 ωC。",
+      "steps": [
+        "正交电流幅值的有效值为 ωCU，其中 ω=2π×10000 rad/s。",
+        "用损耗角正切算同相电流：ωCU×0.02。",
+        "乘电压有效值，得约 0.1257 W。"
+      ],
+      "transfer": "若保持频率、材料电容和损耗角不变而电压加倍，结果如何？",
+      "skills": [
+        "建模",
+        "推导计算"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "numeric",
+      "answer": 0.12566370614359174,
+      "tolerance": 0.003,
+      "unit": "W",
+      "rubric": [
+        "使用角频率而非直接使用 Hz。",
+        "区分同相与正交电流。",
+        "以电压有效值计算有功。"
+      ]
+    },
+    {
+      "id": "emat-core-energy-density",
+      "course": "electrical-materials",
+      "sections": [
+        "em-7-1"
+      ],
+      "readingSection": "em-7-1",
+      "readingAnchor": "study-capacitor-energy-density",
+      "title": "介电常数更高就能存更多吗",
+      "prompt": "假想介质 B 的介电率为 A 的 4 倍，允许场强为 A 的一半。在各自允许场强下比较理想线性能量密度。",
+      "hint": "除了介电率，场强这一项是一次还是平方？",
+      "steps": [
+        "按相同单位使用线性均匀近似 w=εE²/2。",
+        "取比值 w_B/w_A=4×(1/2)²。",
+        "结果为 1；实际材料比较还需核对损耗、可靠性及应用的降额。"
+      ],
+      "transfer": "若两种材料均能在相同场强下工作，理想储能密度比是多少？",
+      "skills": [
+        "推导计算",
+        "边界与反例"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "equal",
+          "text": "一样大。",
+          "feedback": "介电率的倍数正好抵消场强平方项的缩小。"
+        },
+        {
+          "id": "large",
+          "text": "B 是 A 的 4 倍。",
+          "feedback": "这是双方同场强时才成立的比值。"
+        },
+        {
+          "id": "double",
+          "text": "B 是 A 的 2 倍。",
+          "feedback": "把场强当成线性因子忽略了平方。"
+        }
+      ],
+      "answer": [
+        "equal"
+      ]
+    },
+    {
+      "id": "em-core-induction-loss",
+      "course": "electrical-machines",
+      "sections": [
+        "ac-induction-slip"
+      ],
+      "readingSection": "ac-induction-slip",
+      "readingAnchor": "induction-airgap-power",
+      "title": "用转差分配转子电阻耗散",
+      "prompt": "50 Hz 四极异步电机以 1425 r/min 正向稳态运行，气隙送入转子的功率为 8.0 kW。基波模型忽略转子铁耗，求转子电阻耗散（W）。",
+      "hint": "先把四极转为两个极对，再用气隙与机械功率的差。",
+      "steps": [
+        "同步速度为 60×50/2=1500 r/min。",
+        "转差为 (1500−1425)/1500=0.05。",
+        "转子电阻耗散为转差乘气隙输入，即 0.05×8000=400 W。"
+      ],
+      "transfer": "若进入发电且转差、气隙功率均为负，电阻耗散有没有可能是负数？",
+      "skills": [
+        "建模",
+        "推导计算"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "numeric",
+      "answer": 400,
+      "tolerance": 0.5,
+      "unit": "W",
+      "rubric": [
+        "由极对数算同步转速。",
+        "求无量纲转差。",
+        "分清气隙功率、耗散和最终轴功率。"
+      ]
+    },
+    {
+      "id": "emc-core-reflected-field",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-6-1"
+      ],
+      "readingSection": "emc-6-1",
+      "readingAnchor": "emc-site-coherent-reflection",
+      "title": "同源反射为什么可能让读数下降",
+      "prompt": "理想窄带模型中，天线接到原场和一条幅值为原场一半的同极化反射分量，两者恰好反相。合场相对只有原场时约变化多少 dB？",
+      "hint": "先加相量，然后做电场幅值的对数换算。",
+      "steps": [
+        "将同极化场在共同参考下相加，反相分量为 −0.5 倍。",
+        "总电场的幅值为 0.5 倍。",
+        "20log₁₀(0.5)≈−6.02 dB；这不是把两路的 dB 直接做减法。"
+      ],
+      "transfer": "当两路成为不相关噪声时，为什么不能沿用固定反相模型？",
+      "skills": [
+        "建模",
+        "边界与反例"
+      ],
+      "origin": "LN 原创专题练习，解析已核对，难度待学习者试做。",
+      "type": "single",
+      "options": [
+        {
+          "id": "lower",
+          "text": "约下降 6.02 dB。",
+          "feedback": "幅值下降为原来的 1/2。"
+        },
+        {
+          "id": "power-ratio",
+          "text": "约下降 3.01 dB。",
+          "feedback": "以电场幅值比取 20 倍常用对数。"
+        },
+        {
+          "id": "same",
+          "text": "原场与反射场功率不同，不能相互削弱。",
+          "feedback": "同源相干场按相量相加，反相时能削弱。"
+        }
+      ],
+      "answer": [
+        "lower"
+      ]
+    },
+    {
+      "id": "nem-homework-q1",
+      "course": "new-energy-materials",
+      "sections": [
+        "nem-1-2",
+        "nem-2-3",
+        "nem-homework"
+      ],
+      "readingSection": "nem-homework",
+      "readingAnchor": "nem-homework-q1",
+      "title": "课堂第1题：能量形式和能量转化",
+      "type": "open",
+      "prompt": "常见的能量形式有哪些？能量的转化是如何实现的？",
+      "steps": [
+        "教材将常见能量分为机械、热、电、辐射、化学、核六类；动能和势能是机械能的子类。",
+        "说明形式转换依赖物理作用、化学反应或核反应和具体装置；可举燃烧、发电机、光伏、充放电等实例。",
+        "能量转换遵循总量守恒，但实际过程具有方向性，存在不可逆性与可用能损失。"
+      ],
+      "transfer": "分别用一条能量链说明火力发电与太阳能光伏发电，指出它们为何不是同一种转换机制。",
+      "rubric": [
+        "六种能量形式列举正确，不混淆一级类别和子类。",
+        "能说清至少两种转换机制及对应实例。",
+        "写明能量守恒与实际转换的不可逆性。"
+      ],
+      "skills": [
+        "因果与证据",
+        "解释表达"
+      ],
+      "hint": "先列教材六大类，再解释一种实际装置如何把输入能量变成输出能量。",
+      "origin": "课堂课后题，本站按教材第1—2章编写自评要点；不是教师评分标准。"
+    },
+    {
+      "id": "nem-homework-q2",
+      "course": "new-energy-materials",
+      "sections": [
+        "nem-2-2",
+        "nem-homework"
+      ],
+      "readingSection": "nem-homework",
+      "readingAnchor": "nem-homework-q2",
+      "title": "课堂第2题：储能技术及其目的",
+      "type": "open",
+      "prompt": "什么是储能技术？常见的储能技术有哪些？其目的是什么？",
+      "steps": [
+        "先定义：用物理或化学方法将暂时不需要的能量储存，并在需要时释放。",
+        "按照本教材分为机械、热、电、化学四种储存方式；举抽水蓄能、飞轮、储热、电池、超导储能、氢储能等实例。",
+        "解释目的：调节时间上的供需不平衡，削峰填谷、促进新能源消纳、改善供电可靠性和系统灵活性。",
+        "辨析教材按储存形式组织与工程按电化学、电磁等机制细分的不同口径。"
+      ],
+      "transfer": "蓄电池为什么可列在电能储存装置中，却又属于电化学储能？给出储存阶段内部实际的能量形式。",
+      "rubric": [
+        "准确解释储存与按需释放的定义。",
+        "分类口径清楚并至少举出几种典型技术。",
+        "说明供需平衡、削峰填谷等具体应用目的。",
+        "理解电能输入输出与实际内部储存形式可以不同。"
+      ],
+      "skills": [
+        "解释表达",
+        "边界与反例"
+      ],
+      "hint": "按“定义、类别和例子、用途”三个问点作答，不必写设备详图。",
+      "origin": "课堂课后题，本站按教材第2章编写自评要点；不是教师评分标准。"
+    },
+    {
+      "id": "emc-nov24-oxide",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-1-4"
+      ],
+      "title": "静电电压与栅氧电场",
+      "type": "numeric",
+      "prompt": "假设某传统 MOS 的栅氧厚度为 8 nm，某一瞬间实际落在氧化层两端的电压为 4 V，按均匀平面介质模型求平均电场，单位 MV/m。人体的外部静电电压不参与本题计算。",
+      "answer": 500,
+      "unit": "MV/m",
+      "tolerance": 0.02,
+      "rubric": [
+        "用实际介质电压而非放电源开路电压",
+        "8 nm 换算为 8×10⁻⁹ m",
+        "得到 500 MV/m，并区分场强与器件击穿额定值"
+      ],
+      "steps": [
+        "介质平均场强 E≈U/d。",
+        "代入 4/(8×10⁻⁹)=5×10⁸ V/m。",
+        "换算得 500 MV/m；这不是实际器件保证击穿阈值。"
+      ],
+      "transfer": "若在介质电压不变时厚度减半，场强如何变化？为什么仍不能由此断言一定击穿？",
+      "skills": [
+        "推导计算",
+        "边界与反例"
+      ],
+      "hint": "介质平均场强 E≈U/d。",
+      "origin": "本站原创诊断题；所给数值为教学假设，非实测或标准原题。",
+      "readingSection": "emc-1-4",
+      "readingAnchor": "emc-mos-breakdown"
+    },
+    {
+      "id": "emc-nov24-nonthermal",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-1-4"
+      ],
+      "title": "非热效应的科学含义",
+      "type": "single",
+      "prompt": "某交变磁场引起组织内感应电场并刺激神经，同时可能伴随少量发热。以下哪种说法合理？",
+      "options": [
+        {
+          "id": "a",
+          "text": "只要有发热，就不能称为非热效应",
+          "feedback": "非热效应按作用机制而非是否存在任何发热来区分。"
+        },
+        {
+          "id": "b",
+          "text": "神经刺激可以是非热作用，少量伴随发热不改变这一判断",
+          "feedback": "神经刺激由感应电场作用解释，不要求发热绝对为零。"
+        },
+        {
+          "id": "c",
+          "text": "一切非热效应均意味着健康损伤",
+          "feedback": "可观察的生物效应不必然构成健康损害。"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "steps": [
+        "区分温升及其生理作用和感应电场对兴奋组织的作用。",
+        "判断刺激机制是否依赖温升，不能用是否存在任何热量分类。",
+        "还须独立判断效应的强度和健康后果。"
+      ],
+      "transfer": "说明为什么单一功率密度无法作为所有频段的热/非热效应分界。",
+      "skills": [
+        "因果与证据",
+        "解释表达"
+      ],
+      "hint": "区分温升及其生理作用和感应电场对兴奋组织的作用。",
+      "origin": "本站原创诊断题；所给数值为教学假设，非实测或标准原题。",
+      "readingSection": "emc-1-4",
+      "readingAnchor": "emc-bio-mechanisms"
+    },
+    {
+      "id": "emc-nov24-risk",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-1-4"
+      ],
+      "title": "统计关联能证明什么",
+      "type": "single",
+      "prompt": "一项住宅平均工频磁场暴露研究发现高暴露组儿童白血病发生率较高。现有材料未建立确定因果机制。以下哪项结论最严谨？",
+      "options": [
+        {
+          "id": "a",
+          "text": "该研究证明强工频电场使居民血液和神经系统变性",
+          "feedback": "研究的暴露量是磁场，且关联不能直接推出所称因果与其他疾病。"
+        },
+        {
+          "id": "b",
+          "text": "只要没有确定机制，所有统计关联均可忽略",
+          "feedback": "相关性仍有研究与风险评价价值，不能用机制未知抹除观察。"
+        },
+        {
+          "id": "c",
+          "text": "该关联值得进一步研究，但不能据此确立因果、疾病阈值或个体预测",
+          "feedback": "区分证据类型、暴露量与结局，避免超出研究支持范围。"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "steps": [
+        "先辨认暴露量为工频磁场，而非工频电场。",
+        "统计关联可能受混杂、偏差和其他因素影响。",
+        "因果和个体风险推断需要更多证据；环境控制值不是疾病阈值。"
+      ],
+      "transfer": "如何设计证据比较，区分短时局部电器暴露与长期住宅平均磁场？",
+      "skills": [
+        "因果与证据",
+        "边界与反例"
+      ],
+      "hint": "先辨认暴露量为工频磁场，而非工频电场。",
+      "origin": "本站原创诊断题；所给数值为教学假设，非实测或标准原题。",
+      "readingSection": "emc-1-4",
+      "readingAnchor": "emc-bio-mechanisms"
+    },
+    {
+      "id": "emc-nov24-faraday",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-1-4"
+      ],
+      "title": "法拉第定律中的周长与面积",
+      "type": "numeric",
+      "prompt": "理想轴对称模型：均匀正弦磁场垂直穿过固定圆面，磁感应强度峰值为 200 μT，频率 50 Hz，圆形积分回路半径 0.2 m。求圆周处切向感应电场的峰值，单位 mV/m，结果保留三位有效数字。",
+      "answer": 6.28,
+      "unit": "mV/m",
+      "tolerance": 0.02,
+      "rubric": [
+        "左侧电场线积分化为 2πrEφ",
+        "右侧磁通化为 πr²B，再对时间求导",
+        "取峰值得 πfrBm，并核对单位"
+      ],
+      "steps": [
+        "由 ∮E·dl=−dΦ/dt，均匀垂直磁场给出 Φ=πr²B。",
+        "切向场沿圆周恒定，故 2πrEφ=−πr²dB/dt。",
+        "峰值 π×50×0.2×200×10⁻⁶≈0.00628 V/m，即 6.28 mV/m。"
+      ],
+      "transfer": "若磁场在圆面上不均匀，哪些积分不能再直接化为周长或面积乘局部场值？",
+      "skills": [
+        "建模",
+        "推导计算"
+      ],
+      "hint": "由 ∮E·dl=−dΦ/dt，均匀垂直磁场给出 Φ=πr²B。",
+      "origin": "本站原创诊断题；所给数值为教学假设，非实测或标准原题。",
+      "readingSection": "emc-1-4",
+      "readingAnchor": "emc-human-induction"
+    },
+    {
+      "id": "emc-nov24-common",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-2-2"
+      ],
+      "title": "公共回流压降与隔离边界",
+      "type": "numeric",
+      "prompt": "两个电路共享一段返回导体，公共电阻 40 mΩ、电感 20 nH。干扰设备回流在 100 ns 内从 0 A 线性上升到 2 A，忽略受扰设备反作用、分布参数，取干扰电流方向上的压降为正。求线性上升结束前一瞬由干扰设备引起的公共压降，单位 V。",
+      "answer": 0.48,
+      "unit": "V",
+      "tolerance": 0.02,
+      "rubric": [
+        "公共压降等于电阻与电感压降之和",
+        "R 项为 0.08 V，L 项为 0.40 V",
+        "结果为 0.48 V，并限定斜坡末端前"
+      ],
+      "steps": [
+        "在所选正方向下 u=Ri+L di/dt。",
+        "电阻项 0.040×2=0.08 V，电感项 20×10⁻⁹×2/(100×10⁻⁹)=0.40 V。",
+        "相加为 0.48 V；斜坡结束后 di/dt 改变，电感压降不再是该值。"
+      ],
+      "transfer": "若信号通道改为光纤但仍共享这一回流段，干扰电压是否消失？解释其路径。",
+      "skills": [
+        "建模",
+        "推导计算"
+      ],
+      "hint": "在所选正方向下 u=Ri+L di/dt。",
+      "origin": "本站原创诊断题；所给数值为教学假设，非实测或标准原题。",
+      "readingSection": "emc-2-2",
+      "readingAnchor": "emc-common-source"
+    },
+    {
+      "id": "emc-nov24-direction",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-2-2"
+      ],
+      "title": "电流流向与场变化方向",
+      "type": "single",
+      "prompt": "半无限均匀良导体占 x≥0，表面平行 yz 平面。均匀激励使 E=Ey(x) ey、J=σE。关于 ∇²E 化简，哪项正确？",
+      "options": [
+        {
+          "id": "a",
+          "text": "电场指向 y，必须对 y 求二阶导数",
+          "feedback": "场的分量方向与场的空间依赖方向不同。"
+        },
+        {
+          "id": "b",
+          "text": "电场随 x 变化，所以 y 分量不能存在",
+          "feedback": "横向场分量完全可以沿深度发生幅值和相位变化。"
+        },
+        {
+          "id": "c",
+          "text": "沿 y、z 无变化，∇²E=(d²Ey/dx²)ey",
+          "feedback": "直角坐标下拉普拉斯逐分量作用，均匀性消去另外两项。"
+        }
+      ],
+      "answer": [
+        "c"
+      ],
+      "steps": [
+        "先指定导体几何和坐标。",
+        "Ey 是 y 方向分量，但只以深度 x 为自变量。",
+        "∂²/∂y² 和 ∂²/∂z² 均为零，得到一维方程。"
+      ],
+      "transfer": "若导体改为圆柱，写出轴对称轴向场所需的径向拉普拉斯项，并说明何时可用平面近似。",
+      "skills": [
+        "建模",
+        "解释表达"
+      ],
+      "hint": "先指定导体几何和坐标。",
+      "origin": "本站原创诊断题；所给数值为教学假设，非实测或标准原题。",
+      "readingSection": "emc-2-2",
+      "readingAnchor": "emc-skin-derivation"
+    },
+    {
+      "id": "emc-nov24-effective",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-2-2"
+      ],
+      "title": "趋肤深度为何可以等效成厚度",
+      "type": "single",
+      "prompt": "一根圆导线处于强集肤条件，真实电流密度相量按 e⁻⁽¹⁺ʲ⁾ˣ/δ 衰减。有人认为 δ 处仍有电流，所以 S_eff≈πdδ 一定错误。哪项判断正确？",
+      "options": [
+        {
+          "id": "a",
+          "text": "δ 是物理边界，δ 以外电流严格为零",
+          "feedback": "δ 处幅值仍为表面值的 1/e，不是截断边界。"
+        },
+        {
+          "id": "b",
+          "text": "在同总电流和平均焦耳损耗的等效意义下，δ 可作薄导电层厚度",
+          "feedback": "保留相量积分的相位，并用损耗定义电阻，能得到有效面积 πdδ。"
+        },
+        {
+          "id": "c",
+          "text": "只积分电流密度的幅值就能严格得到总交流电流",
+          "feedback": "不同深度相位不同，总电流应进行复相量积分。"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "steps": [
+        "真实分布连续衰减且有相位变化。",
+        "同一总电流下，将平均焦耳损耗与等效均匀电阻的损耗对应。",
+        "在 δ≪d/2 时得 R′AC≈1/(σπdδ)，故 S_eff≈πdδ。"
+      ],
+      "transfer": "当频率下降到 δ 与半径同量级时，这个等效薄环模型为什么不再适用？",
+      "skills": [
+        "因果与证据",
+        "边界与反例"
+      ],
+      "hint": "真实分布连续衰减且有相位变化。",
+      "origin": "本站原创诊断题；所给数值为教学假设，非实测或标准原题。",
+      "readingSection": "emc-2-2",
+      "readingAnchor": "emc-skin-effective"
+    },
+    {
+      "id": "emc-nov24-skin-scaling",
+      "course": "electromagnetic-compatibility",
+      "sections": [
+        "emc-2-2"
+      ],
+      "title": "交流电阻的频率尺度规律",
+      "type": "single",
+      "prompt": "固定材料参数、圆导线直径及长度，忽略邻近效应。频率从 f 升高至 100f，且两种状态均满足强集肤条件。下列变化规律哪项正确？",
+      "options": [
+        {
+          "id": "a",
+          "text": "δ 降至 1/100，交流电阻增至 100 倍",
+          "feedback": "趋肤深度与频率平方根成反比，不是与频率本身成反比。"
+        },
+        {
+          "id": "b",
+          "text": "δ 降至 1/10，交流电阻近似增至 10 倍",
+          "feedback": "在强集肤下 R_AC∝1/δ∝√f。"
+        },
+        {
+          "id": "c",
+          "text": "直流电阻也增加 10 倍",
+          "feedback": "材料电导率及几何固定时，直流电阻不随该交流激励频率变化。"
+        }
+      ],
+      "answer": [
+        "b"
+      ],
+      "steps": [
+        "由 δ=1/√(πfμσ)，频率提高 100 倍使 δ 减至 1/10。",
+        "强集肤下等效面积 S_eff≈πdδ，故 R_AC∝1/δ。",
+        "交流电阻近似增至 10 倍，必须检查两个频率都满足近似条件。"
+      ],
+      "transfer": "为什么不能将这一规律推广到起始频率很低、δ 远大于半径的情况？",
+      "skills": [
+        "推导计算",
+        "边界与反例"
+      ],
+      "hint": "由 δ=1/√(πfμσ)，频率提高 100 倍使 δ 减至 1/10。",
+      "origin": "本站原创诊断题；所给数值为教学假设，非实测或标准原题。",
+      "readingSection": "emc-2-2",
+      "readingAnchor": "emc-skin-effective"
+    },
+    {
+      "id": "dsp-core-circular-convolution",
+      "course": "digital-signal-processing",
+      "sections": [
+        "dsp-3-4",
+        "dsp-3-6"
+      ],
+      "title": "为什么DFT乘积前必须补零",
+      "type": "single",
+      "prompt": "有限长序列 x=[1,2,3] 和 h=[1,1]。若用同一长度的DFT、逐频点相乘后IDFT，且希望得到完整线性卷积，最小变换长度及结果是什么？",
+      "options": [
+        {
+          "id": "0",
+          "text": "N=3，结果 [4,3,5]",
+          "feedback": "这是3点圆周卷积：线性卷积末尾的3折回索引0，因而得到4。它并不等于完整线性卷积。"
+        },
+        {
+          "id": "1",
+          "text": "N=4，结果 [1,3,5,3]",
+          "feedback": "正确。线性卷积长度为3+2−1=4，补零到4点后不存在周期折叠。"
+        },
+        {
+          "id": "2",
+          "text": "N=5，结果 [1,3,5,3,0]",
+          "feedback": "5点也能恢复线性卷积并附带一个零，但并非所问的最小长度。"
+        }
+      ],
+      "answer": [
+        "1"
+      ],
+      "steps": [
+        "先在时域直接算 y[n]=x[n]+x[n−1]，序列区间外按零处理，得到 [1,3,5,3]。",
+        "DFT频域相乘对应N点圆周卷积；若N=3，索引3的值3会加回索引0，得到 [4,3,5]。",
+        "取 N≥3+2−1，线性卷积有效支撑不跨越一个周期，因此最小长度为4。"
+      ],
+      "transfer": "把 h 改为长度3的序列，先确定保证无折叠的最小变换长度，再用一个非零末项说明为什么不能进一步缩短。",
+      "skills": [
+        "推导计算",
+        "边界与反例"
+      ],
+      "hint": "先直接计算线性卷积，再考虑DFT隐含的周期延拓。",
+      "origin": "本站原创诊断题；数值按线性和圆周卷积定义直接复算，未经学习者试测。"
+    },
+    {
       "id": "hw-2-2",
       "course": "electrical-machines",
       "sections": [

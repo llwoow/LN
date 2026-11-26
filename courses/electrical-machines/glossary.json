@@ -2393,6 +2393,546 @@
       ],
       "match": "功率关系与转矩系数可以相互检验",
       "description": "按本节Te=CTΦIa定义的系数。"
+    },
+    {
+      "id": "mmf-i",
+      "keys": [
+        "i_A",
+        "i_B",
+        "i_C"
+      ],
+      "title": "i_A、i_B、i_C",
+      "description": "三相瞬时电流。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "A",
+      "match": "三相瞬时电流"
+    },
+    {
+      "id": "mmf-irms",
+      "keys": [
+        "I_φ"
+      ],
+      "title": "I_φ",
+      "description": "相电流有效值。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "A",
+      "match": "相电流有效值，单位均"
+    },
+    {
+      "id": "mmf-omega",
+      "keys": [
+        "ω"
+      ],
+      "title": "ω",
+      "description": "电流的电角频率，等于 2πf。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "rad/s",
+      "match": "电流的电角频率"
+    },
+    {
+      "id": "mmf-t",
+      "keys": [
+        "t"
+      ],
+      "title": "t",
+      "description": "距所选时刻的时间。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "s",
+      "match": "距所选时刻的时间"
+    },
+    {
+      "id": "mmf-theta",
+      "keys": [
+        "θ"
+      ],
+      "title": "θ",
+      "description": "相对于 A 相轴线、沿顺时针为正的空间电角度。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "° 或 rad",
+      "match": "选 A 相绕组轴线"
+    },
+    {
+      "id": "mmf-fphi",
+      "keys": [
+        "F_φ1"
+      ],
+      "title": "F_φ1",
+      "description": "单相基波磁动势的空间峰值，取相电流达到峰值时的幅值。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "安匝",
+      "match": "单相基波磁动势随电流"
+    },
+    {
+      "id": "mmf-phase",
+      "keys": [
+        "f_A1",
+        "f_B1",
+        "f_C1"
+      ],
+      "title": "f_A1、f_B1、f_C1",
+      "description": "指定位置和时刻各相的基波磁动势。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "安匝",
+      "match": "指定位置和时刻给出"
+    },
+    {
+      "id": "mmf-total",
+      "keys": [
+        "f_1"
+      ],
+      "title": "f_1",
+      "description": "指定位置与时刻的三相合成基波磁动势。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "安匝",
+      "match": "因此三相合成基波磁动势"
+    },
+    {
+      "id": "mmf-p",
+      "keys": [
+        "p"
+      ],
+      "title": "p",
+      "description": "磁极对数，四极电机的 p 为 2。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "无量纲",
+      "match": "对 p 对极电机"
+    },
+    {
+      "id": "mmf-mech",
+      "keys": [
+        "Ω_s"
+      ],
+      "title": "Ω_s",
+      "description": "合成磁场波峰的机械同步角速度。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "rad/s",
+      "match": "机械同步角速度"
+    },
+    {
+      "id": "mmf-ns",
+      "keys": [
+        "n_s"
+      ],
+      "title": "n_s",
+      "description": "合成磁场波峰每分钟的机械转数。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "r/min",
+      "match": "每分钟的机械转数"
+    },
+    {
+      "id": "mmf-freq",
+      "keys": [
+        "f"
+      ],
+      "title": "f",
+      "description": "相电流频率。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "Hz",
+      "match": "电流频率（Hz）"
+    },
+    {
+      "id": "mmf-turns",
+      "keys": [
+        "N_φ"
+      ],
+      "title": "N_φ",
+      "description": "每相串联匝数。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "匝",
+      "match": "按每相串联匝数"
+    },
+    {
+      "id": "mmf-kw",
+      "keys": [
+        "k_w1"
+      ],
+      "title": "k_w1",
+      "description": "基波绕组系数。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "无量纲",
+      "match": "按每相串联匝数"
+    },
+    {
+      "id": "mmf-peak",
+      "keys": [
+        "F_1"
+      ],
+      "title": "F_1",
+      "description": "三相合成基波磁动势的空间峰值。",
+      "section": "mmf-sec47",
+      "sections": [
+        "mmf-sec47"
+      ],
+      "unitHtml": "安匝",
+      "match": "合成波最大值恒为"
+    },
+    {
+      "id": "induction-slip-symbols",
+      "section": "ac-induction-slip",
+      "sections": [
+        "ac-induction-slip"
+      ],
+      "sourceAnchor": "induction-slip-symbols",
+      "match": "是转子机械转速",
+      "title": "f_1、p、n_s、n、s、f_2",
+      "keys": [
+        "f_1",
+        "p",
+        "n_s",
+        "n",
+        "s",
+        "f_2"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "induction-power-symbols",
+      "section": "ac-induction-slip",
+      "sections": [
+        "ac-induction-slip"
+      ],
+      "sourceAnchor": "induction-power-symbols",
+      "match": "以流入转子为正",
+      "title": "P_g、P_conv、P_Cu2、T_e、ω_s、ω",
+      "keys": [
+        "P_g",
+        "P_conv",
+        "P_Cu2",
+        "T_e",
+        "ω_s",
+        "ω"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "synchronous-angle-symbols",
+      "section": "ac-synchronous-angle",
+      "sections": [
+        "ac-synchronous-angle"
+      ],
+      "sourceAnchor": "synchronous-angle-symbols",
+      "match": "是每相同步电抗",
+      "title": "V、E、δ、X_s、I",
+      "keys": [
+        "V",
+        "E",
+        "δ",
+        "X_s",
+        "I"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "im-s",
+      "title": "s",
+      "keys": [
+        "s"
+      ],
+      "description": "转差率",
+      "unitHtml": "1",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-n",
+      "title": "n",
+      "keys": [
+        "n"
+      ],
+      "description": "转子机械转速",
+      "unitHtml": "r/min",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-n_1",
+      "title": "n₁",
+      "keys": [
+        "n_1"
+      ],
+      "description": "同步机械转速",
+      "unitHtml": "r/min",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-n_2",
+      "title": "n₂",
+      "keys": [
+        "n_2"
+      ],
+      "description": "转子磁动势相对转子的速度",
+      "unitHtml": "r/min",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-f_1",
+      "title": "f₁",
+      "keys": [
+        "f_1"
+      ],
+      "description": "定子电流频率",
+      "unitHtml": "Hz",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-f_2",
+      "title": "f₂",
+      "keys": [
+        "f_2"
+      ],
+      "description": "转子绕组自身电流频率",
+      "unitHtml": "Hz",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-p",
+      "title": "p",
+      "keys": [
+        "p"
+      ],
+      "description": "极对数",
+      "unitHtml": "1",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-speed",
+      "match": "n₁ 是同步机械转速"
+    },
+    {
+      "id": "im-R_2",
+      "title": "R₂",
+      "keys": [
+        "R_2"
+      ],
+      "description": "实际每相转子电阻",
+      "unitHtml": "Ω",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-circuit",
+      "match": "E₂₀ 是相同气隙磁通下静止转子每相感应电动势有效值（V）"
+    },
+    {
+      "id": "im-X_20",
+      "title": "X₂₀",
+      "keys": [
+        "X_20"
+      ],
+      "description": "静止时每相漏电抗",
+      "unitHtml": "Ω",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-circuit",
+      "match": "E₂₀ 是相同气隙磁通下静止转子每相感应电动势有效值（V）"
+    },
+    {
+      "id": "im-E_20",
+      "title": "E₂₀",
+      "keys": [
+        "E_20"
+      ],
+      "description": "静止时每相感应电动势有效值",
+      "unitHtml": "V",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-circuit",
+      "match": "E₂₀ 是相同气隙磁通下静止转子每相感应电动势有效值（V）"
+    },
+    {
+      "id": "im-I_2",
+      "title": "I₂",
+      "keys": [
+        "I_2"
+      ],
+      "description": "每相电流有效值，方程中为相量",
+      "unitHtml": "A",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-circuit",
+      "match": "E₂₀ 是相同气隙磁通下静止转子每相感应电动势有效值（V）"
+    },
+    {
+      "id": "im-F_1",
+      "title": "F₁",
+      "keys": [
+        "F_1"
+      ],
+      "description": "定子基波空间磁动势",
+      "unitHtml": "A",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-mmf",
+      "match": "F₁、F₂ 分别表示定、转子气隙基波磁动势空间矢量"
+    },
+    {
+      "id": "im-F_2",
+      "title": "F₂",
+      "keys": [
+        "F_2"
+      ],
+      "description": "转子基波空间磁动势",
+      "unitHtml": "A",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-mmf",
+      "match": "F₁、F₂ 分别表示定、转子气隙基波磁动势空间矢量"
+    },
+    {
+      "id": "im-F_m",
+      "title": "Fₘ",
+      "keys": [
+        "F_m"
+      ],
+      "description": "合成基波磁动势",
+      "unitHtml": "A",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-mmf",
+      "match": "F₁、F₂ 分别表示定、转子气隙基波磁动势空间矢量"
+    },
+    {
+      "id": "im-m_2",
+      "title": "m₂",
+      "keys": [
+        "m_2"
+      ],
+      "description": "等效转子相数",
+      "unitHtml": "1",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-power",
+      "match": "m₂ 是转子等效相数；Pₑₘ 是气隙电磁功率"
+    },
+    {
+      "id": "im-P_em",
+      "title": "Pₑₘ",
+      "keys": [
+        "P_em"
+      ],
+      "description": "气隙电磁功率",
+      "unitHtml": "W",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-power",
+      "match": "m₂ 是转子等效相数；Pₑₘ 是气隙电磁功率"
+    },
+    {
+      "id": "im-P_Cu2",
+      "title": "P_Cu2",
+      "keys": [
+        "P_Cu2"
+      ],
+      "description": "转子铜耗",
+      "unitHtml": "W",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-power",
+      "match": "m₂ 是转子等效相数；Pₑₘ 是气隙电磁功率"
+    },
+    {
+      "id": "im-P_m",
+      "title": "Pₘ",
+      "keys": [
+        "P_m"
+      ],
+      "description": "内部转换机械功率",
+      "unitHtml": "W",
+      "section": "induction-frequency-reduction",
+      "sections": [
+        "induction-frequency-reduction"
+      ],
+      "sourceAnchor": "im-symbol-power",
+      "match": "m₂ 是转子等效相数；Pₑₘ 是气隙电磁功率"
     }
   ]
 }

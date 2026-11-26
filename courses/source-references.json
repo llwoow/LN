@@ -25,5 +25,14 @@
     "title": "功率半导体器件第二章教学答卷",
     "scope": "原创网页讲解和作图；教材/厂商资料见各节引用",
     "html": "answers/power-semiconductors/chapter-2/答案.html"
+  },
+  "new-energy-materials": {
+    "title": "王新东、王萌《新能源材料与器件》",
+    "publisher": "化学工业出版社",
+    "isbn": "9787122335494",
+    "url": null,
+    "scope": "七章目录和知识系统简读；教材原件不公开。",
+    "originalExerciseSource": "课堂课后题，两问，仅公开题面与整理的参考答案",
+    "status": "原书公开授权页面未核实，不提供原件链接"
   }
 }

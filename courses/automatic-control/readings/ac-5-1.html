@@ -1,0 +1,35 @@
+<section class="reader-section">
+<h2>从正弦测量到伯德图</h2>
+<p>在反馈电路里给测量信号加一级 RC 低通，高频噪声会被压下去。但当真实信号变化较快时，这一级也会压低信号并使波峰来得更晚。要区分这两种影响，可以给单独的 RC 电路输入等幅正弦波，从慢到快逐个测量。每次换频率后等暂态衰减。在这个线性电路里，稳态输出和输入同频，因此记下幅值比和相位差，就能重建输出正弦波。</p>
+<p><a href="#course/automatic-control/ac-5-6-9/control-frequency-recap">频响与稳定裕度 · 公式与重点速查</a></p>
+<h3 id="control-frequency-rc" data-knowledge-kind="方法" data-knowledge-terms="频响 一阶 RC 低通 幅值 相位">同一个电容，为什么既降低幅值又推迟波峰</h3>
+<p id="control-frequency-symbols">设串联电阻为 \(R\)（Ω）、并接输出电容为 \(C\)（F），输入和输出电压同一参考地，无额外负载。\(H(j\omega)\) 是输出对输入的复相量比，\(\omega\) 是角频率（rad/s），\(j\) 是虚数单位，\(\tau=RC\) 为时间常数（s）。</p>
+<p>两元件流过同一个交流电流。电容的电流相位领先电压 90°，所以它的阻抗 \(1/(j\omega C)\) 自带相位信息。把电容电压除以电阻与电容的总电压，共同电流就消掉了：</p>
+\[\begin{aligned}
+ H(j\omega) &= \frac{1/(j\omega C)}{R+1/(j\omega C)}\\
+ &= \frac{1}{1+j\omega\tau}.
+\end{aligned}\]
+<p>式（C.5.1.1）的分母在复平面上是一个直角三角形，横边为 1，竖边为 \(\omega\tau\)。取倒数时，模变成原模的倒数，角变为相反数：</p>
+\[\begin{aligned}
+ |H(j\omega)| &= \frac{1}{\sqrt{1+(\omega\tau)^2}},\\
+ \angle H(j\omega) &= -\arctan(\omega\tau).
+\end{aligned}\]
+<p id="control-rc-cutoff-symbols">当电容的阻抗大小等于 \(R\) 时，\(\omega\tau=1\)。式（C.5.1.2）给出幅值比 \(1/\sqrt2\)、相位 −45°。这就是这个无负载一阶低通的截止点。记截止频率为 \(f_{\mathrm c}\)（Hz），对应角频率为 \(\omega_{\mathrm{RC}}\)（rad/s），一般频率 \(f\) 与角频率的关系是 \(\omega=2\pi f\)。</p>
+\[\begin{aligned}
+ \omega_{\mathrm{RC}} &= \frac{1}{RC},\\
+ f_{\mathrm c} &= \frac{1}{2\pi RC}.
+\end{aligned}\]
+<p>当 \(\omega\tau\ll1\)，电容阻抗远大于电阻，输出接近输入。当 \(\omega\tau\gg1\)，电压大多落在电阻上，式（C.5.1.1）近似为 \(1/(j\omega\tau)\)，相当于对输入做比例积分，所以相位趋近 −90°。实际测量若探头的阻抗与电容阻抗相近，要把探头也并入分压模型；加入电感后还可能出现<a href="#course/electromagnetic-compatibility/emc-5-2/emc-lc-peaking">二阶谐振抬升</a>。</p>
+<h3 id="control-bode-reading" data-knowledge-kind="方法" data-knowledge-terms="伯德图 Bode 对数刻度 分贝 幅频 相频">把同一轮测量画成两条曲线</h3>
+<p id="control-bode-definition">伯德图沿同一条对数频率轴画两张图。上图是幅值的分贝数，下图是相位。按对数排刻度时，10 到 100 与 100 到 1000 rad/s 相隔一样远。一个频率下读出的幅值和相位，画在相同横坐标上。</p>
+<p id="control-bode-measurement">从双通道示波器读两条稳态波形。用同一种口径量输入幅值 \(A_i\) 和输出幅值 \(A_o\)（V），例如都用峰峰值。从输入波峰到对应输出波峰的时间差记为 \(\Delta t\)（s），输出晚到取正。一个周期长 \(1/f\)，相差一个周期就是 360°，所以输出相对输入的相位 \(\varphi\)（°）等于延迟占周期的比例乘 −360°。电压幅值比取对数后得到 \(M_{\mathrm{dB}}\)（dB）：</p>
+\[\begin{aligned}
+ M_{\mathrm{dB}} &= 20\log_{10}(A_o/A_i),\\
+ \varphi &= -360^\circ f\,\Delta t.
+\end{aligned}\]
+<p>用理想读数走一遍。取 \(R=10\,\mathrm{k\Omega}\)、\(C=1\,\mu\mathrm F\)，由式（C.5.1.3）算得 \(f_{\mathrm c}\approx15.9\,\mathrm{Hz}\)。此处若输入为 \(1.00\,\mathrm V\)，模型给出的输出约为 \(0.707\,\mathrm V\)，波峰晚约 \(7.85\,\mathrm{ms}\)。代入式（C.5.1.4），得到 <strong>−3.01 dB、−45°</strong>。逐点扫频时，相差整周的相位在示波器上看起来相同；需要画连续相位曲线时，应密一点取点，再用相邻频点的趋势展开相位。</p>
+<p>在高频近似下，频率乘十使输出幅值再乘 \(1/10\)，所以曲线下降 \(20\log_{10}(1/10)=-20\,\mathrm{dB}\)。串联环节若各自的传递函数已计入级间加载，复数频响相乘，画到伯德图上就是 <strong>dB 相加、相位相加</strong>。下一页用这一步从一个环节过渡到整圈反馈。</p>
+<h3 id="control-rc-design" data-knowledge-kind="跨学科" data-knowledge-terms="RC 选型 一阶滤波 抑噪 截止频率 相位预算">一道实际选型会遇到的矛盾</h3>
+<p>假设测量链要保留 20 Hz 的信号，同时把 1 kHz 的噪声幅值压到原来的十分之一。由式（C.5.1.2）和式（C.5.1.3），将 \(\omega\tau\) 写成 \(f/f_{\mathrm c}\)。在 1 kHz 要有 \(|H|\le0.1\)，所以 \(1+(1000/f_{\mathrm c})^2\ge100\)，得到 <strong>\(f_{\mathrm c}\le100.5\,\mathrm{Hz}\)</strong>。</p>
+<p>若反馈还要求滤波器在 20 Hz 引入的相位滞后至多 10°，则 \(\arctan(20/f_{\mathrm c})\le10^\circ\)，得到 <strong>\(f_{\mathrm c}\ge113.4\,\mathrm{Hz}\)</strong>。两个条件没有交集，换一组电阻电容也解决不了。此时可以先看能否在噪声进入测量链之前降低它，再重新评估<a href="#course/automatic-control/ac-5-6-9">整个反馈回路的相位余量</a>。</p>
+</section>

@@ -37,4 +37,9 @@ class Physics001(unittest.TestCase):
   entries=A(ROOT/'courses/hs-physics/glossary-index.js')['entries']
   ks=[e for e in entries if 'k' in e.get('keys',[])];self.assertEqual(len(ks),4)
   self.assertTrue(all(len(e['sections'])==1 for e in ks));self.assertEqual(len({e['source']['section'] for e in ks}),4)
+ def test_topic_glossary_survives_the_exam_build(self):
+  entries=A(ROOT/'courses/hs-physics/glossary-index.js')['entries']
+  topic=next(e for e in entries if e['id']=='study-capacitor-charge-change')
+  self.assertEqual(topic['sections'],['study-capacitor'])
+  self.assertEqual(topic['source']['anchor'],'study-capacitor-source-charge')
 if __name__=='__main__':unittest.main()

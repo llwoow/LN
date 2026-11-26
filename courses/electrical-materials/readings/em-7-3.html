@@ -1,0 +1,9 @@
+<section class="reader-section">
+<h2>锂离子电池端电压的快跳和慢变来源不同</h2>
+<p>电池开路时的端电压与荷电状态、温度等有关，带载后的端电压还受内部耗散与极化影响。同一电池停止放电后端电压可能回升，这并不表示已经重新充入电量。可以先用等效电路理解各部分在测量中怎样出现。</p>
+<h3 id="materials-battery-pulse" data-knowledge-kind="跨学科" data-knowledge-terms="锂电池 OCV SOC 脉冲 内阻 极化 零阶保持 端电压">用阶跃波形把近即时压降和缓变分离</h3>
+<p id="materials-battery-symbols">放电电流 \(I\) 取正（A），\(U_\mathrm{oc}\) 是当前温度和荷电状态下的准静态开路电压（V），\(R_0\) 为串联等效电阻（Ω），\(v_p\) 是选定单 RC 极化支路的电压（V），由 \(R_p,C_p\) 给出时间常数 \(R_p C_p\)（s）。\(U_\mathrm{term}\) 为端电压（V）。短脉冲内先忽略荷电状态对 \(U_\mathrm{oc}\) 的变化。</p>
+\[U_\mathrm{term}=U_\mathrm{oc}-IR_0-v_p,\qquad \dot v_p=\frac{I}{C_p}-\frac{v_p}{R_pC_p}.\]
+<p>取合成数据模型 \(U_\mathrm{oc}=3.8\,\mathrm V\)、\(R_0=50\,\mathrm{m\Omega}\)、\(R_p=20\,\mathrm{m\Omega}\)、时间常数 2 s。由静置开路突然换到 10 A 放电，理想近时电压先降 0.5 V，之后又逐步下降，在 2 s 时增加约 \(0.2(1-e^{-1})=0.126\) V 的极化压降。恢复开路后欧姆贡献先消失，极化逐渐衰减。该数据描述等效模型，不是商品电芯的额定能力。</p>
+<p>取样太慢会把一部分极化压降混进 \(R_0\)，引线和接触也会改变表观结果。估计参数时记录温度、工作状态以及信号时间基准，并用另一组数据检查拟合。可用<a href="#course/automatic-control/ac-8-5-2/control-zoh-current">零阶保持的一阶离散更新</a>复算波形。参考 <a href="https://www.mathworks.com/help/simscape-battery/ref/batteryequivalentcircuit.html" target="_blank" rel="noopener">MathWorks · Battery Equivalent Circuit</a>。</p>
+</section>

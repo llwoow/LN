@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-6-2"]={"html":"<section class=\"article-section\" id=\"nem-6-2\"><h2>6.2 风能技术</h2><p>风轮从流动空气获取机械功，发电机将轴功转换为电能。风速、扫风面积与功率系数决定可利用功率；风能波动需要并网控制与系统灵活性配合，不能把装机功率等同于持续发电量。</p><dl class=\"nem-subtopics\"><dt id=\"nem-6-2-1\"><strong>6.2.1 风能的特点</strong></dt><dd>能流受风况、地形和时间变化影响。</dd><dt id=\"nem-6-2-2\"><strong>6.2.2 我国的风能资源</strong></dt><dd>资源评估应区分风速统计与实际可利用电量。</dd><dt id=\"nem-6-2-3\"><strong>6.2.3 风能资源的利用</strong></dt><dd>机组、变流器和电网协调决定电能输出质量。</dd></dl></section>"};

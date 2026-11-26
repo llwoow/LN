@@ -32,14 +32,11 @@ with tempfile.TemporaryDirectory(prefix='ln-english-') as folder:
             page.on('response',lambda r:bad.append([r.status,r.url]) if r.status>=400 else None)
             def read(code):
                 page.goto(base+'#course/hs-english/english-2027-'+code.lower())
-                body=page.locator('#lesson-body[aria-busy=false]');body.wait_for();return body
-            def panel():return page.locator('#practice-dialog [data-practice-panel]')
+                body=page.locator('#lesson-body[data-lesson-key="hs-english/english-2027-'+code.lower()+'"][aria-busy=false]');body.wait_for();return body
+            def panel():return page.locator('main [data-practice-panel]')
             def record(id):return page.evaluate('(id)=>JSON.parse(localStorage.getItem("ln.practice.v1"))[id]','hs-english2027-'+id)
             def practice(id):
-                if page.locator('#practice-dialog').evaluate('(d)=>d.open'):
-                    page.locator('#practice-dialog [data-close-practice]').click()
-                page.evaluate('(id)=>{const b=document.createElement("button");b.dataset.testOpen="";b.dataset.openPractice="";b.dataset.practiceCourse="hs-english";b.dataset.practiceQuestion="hs-english2027-"+id;b.textContent="打开练习";document.querySelector("main").append(b);}',id)
-                page.locator('[data-test-open]').click();page.locator('[data-test-open]').evaluate('(b)=>b.remove()')
+                page.goto(base+'#practice/hs-english//hs-english2027-'+id)
                 panel().locator('[data-question-id="hs-english2027-'+id+'"]').wait_for()
             def answer(q,value=None):
                 box=panel()
@@ -64,14 +61,14 @@ with tempfile.TemporaryDirectory(prefix='ln-english-') as folder:
             box.locator('[data-p-redo]').click();box.locator('[data-p-value]').fill('but');box.locator('[data-p-submit]').click()
             r=record('G08');assert r['attempts'][0]['correct'] is False and not r['attempts'][0]['assisted'] and r['attempts'][1]['correct'] and r['attempts'][1]['assisted']
             checks.append('wrong first response preserved after correction')
-            box.locator('[data-p-favorite]').click();page.locator('#practice-dialog [data-close-practice]').click()
+            box.locator('[data-p-favorite]').click();read('home')
             # Legacy import is scoped and does not trust a supplied correctness flag.
             old={'assessment':'hainan-english-2027-v1','records':{'G08':{'reason':'legacy reason','value':'but','selected':'','attempts':[{'answer':'and','correct':True,'time':'2026-11-01T00:00:00Z'}]},'M13':{'reason':'<img src=x onerror="window.injected=1">','value':'that','selected':'','attempts':[{'answer':'that','correct':True,'time':'2026-11-01T00:00:00Z'}]}}}
             page.locator('[data-english-import]').set_input_files({'name':'legacy.json','mimeType':'application/json','buffer':json.dumps(old).encode()})
             page.wait_for_function('document.querySelector("[data-english-status]").textContent.includes("合并 2")')
             r=record('G08');assert r['attempts'][0]['answer']=='and' and not r['attempts'][0]['correct'] and not r['attempts'][-1]['correct'] and r['attempts'][-1]['assisted']
             practice('M13');assert panel().locator('[data-p-reason]').input_value().startswith('<img src=x') and not page.evaluate('Boolean(window.injected)')
-            page.locator('#practice-dialog [data-close-practice]').click()
+            read('home')
             checks.append('legacy import retains first response, recomputes result, escapes notes')
             # All authored inputs reach shared feedback; this is not an independent answer-key validation.
             for q in questions:
@@ -84,8 +81,8 @@ with tempfile.TemporaryDirectory(prefix='ln-english-') as folder:
             # Revealing then hiding feedback never restores independent conditions.
             practice('M24');box=panel();box.locator('[data-p-reveal]').click();box.locator('[data-p-redo]').click();box.locator('[data-p-value]').fill("haven't");box.locator('[data-p-submit]').click();assert record('M24')['attempts'][-1]['assisted']
             practice('S01');panel().locator('[name=p-answer][value=B]').check();assert 'S01 This makes' in panel().locator('.practice-prompt').inner_text()
-            page.locator('#practice-dialog [data-close-practice]').click()
-            read('P17');practice('G01');assert record('G01')['feedbackSeen'];page.locator('#practice-dialog [data-close-practice]').click()
+            read('home')
+            read('P17');practice('G01');assert record('G01')['feedbackSeen'];read('home')
             checks.append('reference and seven-select context behavior retained')
             for id in ['K06','K09','T02','T03','T07']:
                 body=read(id);lab=body.locator('[data-english-lab]');before=lab.locator('[data-english-scene]').inner_text();lab.locator('[data-state="1"]').click();assert before!=lab.locator('[data-english-scene]').inner_text()
@@ -95,13 +92,15 @@ with tempfile.TemporaryDirectory(prefix='ln-english-') as folder:
             read('home')
             for id in ['L01','L02','L03','L04','L05','L06','L09','L12','L15','L18']:
                 practice(id);audio=panel().locator('audio');print('Audio check',id,flush=True);audio.evaluate('(a)=>{a.preload="auto";a.load()}')
-                page.wait_for_function('(()=>{let a=document.querySelector("#practice-dialog audio");return a&&a.readyState>=2&&a.duration>0})()')
-                audio.evaluate('(a)=>a.play()');page.wait_for_function('document.querySelector("#practice-dialog audio").currentTime>0.05');audio.evaluate('(a)=>{a.pause();a.currentTime=1}')
-                page.wait_for_function('(()=>{let a=document.querySelector("#practice-dialog audio");return a.paused&&Math.abs(a.currentTime-1)<0.2})()')
+                page.wait_for_function('(()=>{let a=document.querySelector("main [data-practice-panel] audio");return a&&a.readyState>=2&&a.duration>0})()')
+                audio.evaluate('(a)=>a.play()');page.wait_for_function('document.querySelector("main [data-practice-panel] audio").currentTime>0.05');audio.evaluate('(a)=>{a.pause();a.currentTime=1}')
+                page.wait_for_function('(()=>{let a=document.querySelector("main [data-practice-panel] audio");return a.paused&&Math.abs(a.currentTime-1)<0.2})()')
             panel().locator('[data-practice-transcript] summary').click();page.wait_for_timeout(80)
             assert all(record(id)['feedbackSeen'] for id in ['L18','L19','L20'])
-            page.locator('#practice-dialog [data-close-practice]').click()
-            assert not page.locator('#practice-dialog audio[src]').count()
+            audio_handle=panel().locator('audio').element_handle()
+            read('home')
+            assert audio_handle.evaluate('(a)=>a.paused&&!a.hasAttribute("src")')
+            assert not page.locator('main [data-practice-panel] audio[src]').count()
             checks.append('ten audio clips load/play/pause/seek; close releases audio')
             # New grammar records participate in LN collections and export.
             page.goto(base+'#practice/hs-english');page.locator('main [data-practice-mode=favorites]').click();assert page.locator('main [data-p-question] option[value="hs-english2027-G08"]').count()==1
@@ -121,7 +120,7 @@ with tempfile.TemporaryDirectory(prefix='ln-english-') as folder:
                 for code in ['home','K00','K03','K09','K21','T02','T07','P01','P08','P13','P20']:
                     read(code);assert not page.evaluate('document.documentElement.scrollWidth>innerWidth'),(width,code)
                 practice('G08');assert not page.evaluate('document.documentElement.scrollWidth>innerWidth'),width
-                page.locator('#practice-dialog [data-close-practice]').click()
+                read('home')
                 read('K09');page.evaluate('document.documentElement.dataset.theme="dark"');page.screenshot(path=str(OUT/f'mobile-{width}.png'),full_page=True)
             page.set_viewport_size({'width':1440,'height':1000});page.evaluate('document.documentElement.dataset.theme="light"');read('K09');page.screenshot(path=str(OUT/'desktop.png'),full_page=True)
             checks.append('390/320px reader and practice fit without document overflow')

@@ -6,7 +6,9 @@ const vm = require('node:vm');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const context = vm.createContext({ window: {} });
-for (const file of ['courses/electrical-machines/manifest.js', 'courses/electrical-machines/knowledge-map.js', 'courses/automatic-control/manifest.js', 'courses/automatic-control/knowledge-map.js', 'courses/electromagnetic-compatibility/manifest.js', 'courses/electromagnetic-compatibility/knowledge-map.js', 'courses/electrical-materials/manifest.js', 'courses/electrical-materials/knowledge-map.js', 'courses/robot-drive-engineering/manifest.js', 'courses/robot-drive-engineering/knowledge-map.js', 'courses/power-semiconductors/manifest.js', 'courses/highschool/courses.js', 'courses.js']) {
+const entry = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const courseScripts = Array.from(entry.matchAll(/<script src="(courses\/[^"]+\/(?:manifest|knowledge-map|courses)\.js)" defer><\/script>/g), match => match[1]);
+for (const file of [...courseScripts, 'courses.js']) {
   vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context, { filename: file });
 }
 for (const course of context.window.LN_COURSES) {
@@ -51,7 +53,7 @@ const uiContext = vm.createContext({
 });
 vm.runInContext(fs.readFileSync(path.join(root, 'knowledge-map.js'), 'utf8'), uiContext);
 const viewer = new MapElement();
-const point = { id: 'magnetic-sec11', x: 48, y: 222 };
+const point = { id: 'magnetic-sec11', section: { id: 'magnetic-sec11' }, x: 48, y: 222 };
 const captures = new Set();
 viewer._course = { id: 'electrical-machines' };
 viewer.byNode = new Map([[point.id, point]]);
@@ -89,5 +91,5 @@ assert.equal(point.y, 222);
 assert.equal(navigation.hash, '#course/electrical-machines/map', 'Pinch activated a link');
 viewer.pointerDown(event(4, 100, 100));
 viewer.pointerEnd(event(4, 100, 100));
-assert.equal(navigation.hash, 'course/electrical-machines/magnetic-sec11', 'A tap must still open the lesson');
+assert.equal(navigation.hash, '#course/electrical-machines/magnetic-sec11', 'A tap must still open the lesson');
 console.log('Fixed node coordinates, whole-map drag, pinch zoom and tap navigation verified.');

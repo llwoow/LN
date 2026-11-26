@@ -36,12 +36,21 @@ class PracticeContent(unittest.TestCase):
             'emc-magnetic-cylinder':20*math.log10((201**2-199**2*(20/22)**2)/(4*200)),
             'emc-probe-emf':2*math.pi*100000*.5e-6*.1*1000,
             'emc-capacitor-resonance':1/(2*math.pi*math.sqrt(1e-9*1e-6))/1e6,
+            'emc-lc-natural-frequency-gain':20*math.log10(20*math.sqrt(1e-6/100e-6)),
             'emc-ground-step':100*100*.8/(2*math.pi*2*(2+.8)),
             'emc-lightning-lead-voltage':.6e-6*(1000/1e-6),
             'emc-impulse-shield-current':1/(1+3)*100,
+            'emc-nov24-oxide':4/(8e-9)/1e6,
+            'emc-nov24-faraday':round(math.pi*50*.2*200e-6*1000,2),
+            'emc-nov24-common':.04*2+20e-9*2/(100e-9),
             # New electrical materials keys independently recomputed from SI units and Hooke/Fourier relations.
             'emat-2-thermal':Fraction(4,1000)/(Fraction(1,5)*Fraction(1,100)),
-            'emat-2-modulus':(400/(2e-6))/(0.1/100)/1e9}
+            'emat-2-modulus':(400/(2e-6))/(0.1/100)/1e9,
+            'hs-core-conditional-denominator':100*Fraction(8,8+12),
+            'hs-core-capacitor-boundary':Fraction((3*6)**2,2*9),
+            'ac-core-gain-margin':1/abs(2/(1+math.sqrt(3)*1j)**3),
+            'emat-core-dielectric-loss':100*(2*math.pi*1e4*1e-6)*.02,
+            'em-core-induction-loss':8000*Fraction(1500-1425,1500)}
         # Robot-drive keys have an independent calculation registry in test_robot_drive.py.
         numeric={q['id'] for q in self.questions if q['type']=='numeric' and q['course']!='robot-drive-engineering'}
         self.assertEqual(numeric,set(expected))

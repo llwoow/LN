@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-5-3"]={"html":"<section class=\"article-section\" id=\"nem-5-3\"><h2>5.3 固态锂电池</h2><p>固态电解质替换传统液态电解液后，仍需离子通道、稳定电极界面和足够的接触面积。固态并不自动意味着零枝晶、无界面阻抗或绝对安全；要区分实验室材料电导率与电芯运行表现。</p><dl class=\"nem-subtopics\"><dt id=\"nem-5-3-1\"><strong>5.3.1 固态电解质</strong></dt><dd>比较离子电导、电子绝缘、化学稳定与加工兼容性。</dd><dt id=\"nem-5-3-2\"><strong>5.3.2 正极材料</strong></dt><dd>复合正极需要离子和电子两套连通网络。</dd><dt id=\"nem-5-3-3\"><strong>5.3.3 负极材料</strong></dt><dd>重点关注界面接触、体积变化与不均匀沉积。</dd></dl></section>"};

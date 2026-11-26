@@ -10,21 +10,25 @@ subprocess.run([sys.executable, str(root / 'scripts/build-transformer-homework.p
 subprocess.run([sys.executable, str(root / 'scripts/build-physics001.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-english2027.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-highschool.py')], check=True)
+subprocess.run([sys.executable, str(root / 'scripts/build-course-readings.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-robot-drive.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-power-semiconductors.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/check-teaching.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-resource-library.py')], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/build-practice.py')], check=True)
+subprocess.run([sys.executable, str(root / 'scripts/build-dc-chapter.py'), '--check'], check=True)
 subprocess.run([sys.executable, str(root / 'scripts/check-publication.py')], check=True)
 out = root / 'dist'
 if out.exists():
     shutil.rmtree(out)
 out.mkdir()
-for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.js', 'publication.js', 'glossary.js', 'highschool-library.js', 'resource-library.js', 'practice.js'):
+for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.js', 'publication.js', 'glossary.js', 'highschool-library.js', 'resource-library.js', 'practice.js', 'practice-v2.css'):
     shutil.copy2(root / name, out / name)
+shutil.copytree(root / 'audit', out / 'audit', ignore=shutil.ignore_patterns('*.md', 'inventory.json'))
+subprocess.run([sys.executable, str(root / 'scripts/build-course-audit.py'), '--output', str(out / 'audit/inventory.json')], check=True)
 for name in ('assets', 'courses'):
     shutil.copytree(root / name, out / name,
-                    ignore=shutil.ignore_patterns('*.md', '*.pdf', '*.xlsx', '*.xls', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.zip', '*.7z', '*.rar', '__pycache__', 'verification', 'originals'))
+                    ignore=shutil.ignore_patterns('*.md', '*.pdf', '*.xlsx', '*.xls', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.zip', '*.7z', '*.rar', '__pycache__', 'verification', 'originals', 'readings', 'studies'))
 # The authored standalone answer is a separate reading/print artifact, not source PDFs.
 answer_source = root / 'answers/power-semiconductors/chapter-2'
 answer_out = out / 'answers/power-semiconductors/chapter-2'
@@ -34,8 +38,7 @@ shutil.copytree(answer_source / 'assets', answer_out / 'assets')
 model = Path('courses/hs-physics/physics-001/verification/motion_models.py')
 (out/model).parent.mkdir(parents=True,exist_ok=True)
 shutil.copy2(root/model,out/model)
-# Original documents never replace the HTML reader. Only a separately reviewed,
-# explicitly approved optional supplement may bypass the default document ignore.
+# Original documents are optional reviewed supplements, not the reader.
 rights = json.loads((root / 'publication-rights.json').read_text())
 shutil.copy2(root / 'publication-rights.json', out / 'publication-rights.json')
 for entry in rights['documents']:

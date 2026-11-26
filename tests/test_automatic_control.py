@@ -40,10 +40,12 @@ class AutomaticControlTests(unittest.TestCase):
         ids=[s["id"] for s in sections]
         self.assertEqual(len(ids),len(set(ids)))
         self.assertEqual(len(set(s["group"] for s in sections)),8)
-        self.assertEqual([s["id"] for s in sections if s["kind"] != "outline"],[
+        self.assertEqual([s["id"] for s in sections if s["kind"] != "outline" and "manuscript" not in s],[
             "ac-3-1","ac-3-2","ac-3-3","ac-3-4","ac-3-5","ac-3-6","ac-3-7","ac-homework3",
-            "ac-4-1","ac-4-2","ac-4-2-1","ac-4-2-2","ac-4-2-3","ac-4-2-4","ac-4-3","ac-4-4"
+            "ac-4-1","ac-4-2","ac-4-2-1","ac-4-2-2","ac-4-2-3","ac-4-2-4","ac-4-3","ac-4-3-1","ac-4-4","ac-homework4"
         ])
+        self.assertEqual({s['id'] for s in sections if 'manuscript' in s},
+                         {'ac-1-1', 'ac-2-1', 'ac-5-1', 'ac-5-6-9', 'ac-6-5', 'ac-7-1', 'ac-8-5-2'})
         self.assertEqual(self.course["textbook"]["isbn"],"9787302665564")
         self.assertEqual(self.course["textbook"]["edition"],3)
         for section in sections:
@@ -55,6 +57,80 @@ class AutomaticControlTests(unittest.TestCase):
             self.assertIn("reader-section",html)
             parser=Parser(); parser.feed(html)
             self.assertEqual(parser.math_open,parser.math_close,section["id"])
+
+    def test_root_locus_five_classroom_problems(self):
+        lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-homework4.js")
+        self.assertEqual({q["number"] for q in lesson["questions"]},
+                         {"4-7", "4-10", "4-12", "4-14", "4-18"})
+        html = lesson["html"]
+        parser = Parser()
+        parser.feed(html)
+        for number in ("4-7","4-10","4-12","4-14","4-18"):
+            self.assertIn("question-"+number, parser.ids)
+            self.assertIn("problem-"+number, parser.ids)
+        self.assertEqual(html.count("<figure "), 10)
+        self.assertEqual(html.count("<svg "), 10)
+        self.assertEqual(parser.math_open, parser.math_close)
+        for marker in ("−2±j√6", "K*=100", "K*=260",
+                       "K*=32", "K*=91/4", "b=40/3",
+                       "K*=4±2√3", "cₙ(∞)=lim"):
+            self.assertIn(marker, html)
+        self.assertAlmostEqual((4+4*math.sqrt(5)),12.94427190999916)
+        self.assertAlmostEqual((4-2*math.sqrt(3)),0.5358983848622456)
+        self.assertAlmostEqual((91/4),22.75)
+        # Independently verify characteristic equations, not just published labels.
+        p47=lambda s,k:s**4+8*s**3+36*s**2+80*s+k
+        dp47=lambda s:4*s**3+24*s**2+72*s+80
+        self.assertAlmostEqual(abs(p47(-2,64)),0,places=9)
+        self.assertAlmostEqual(abs(dp47(-2)),0,places=9)
+        for s in (-2+1j*math.sqrt(6), -2-1j*math.sqrt(6)):
+            self.assertAlmostEqual(abs(p47(s,100)),0,places=8)
+            self.assertAlmostEqual(abs(dp47(s)),0,places=8)
+        for s in (1j*math.sqrt(10), -1j*math.sqrt(10)):
+            self.assertAlmostEqual(abs(p47(s,260)),0,places=8)
+        p410=lambda s,k,h2:s**4+7*s**3+10*s**2+(2*k*s if h2 else 0)+k
+        self.assertAlmostEqual(abs(p410(-4,32,False)),0,places=9)
+        self.assertAlmostEqual(abs(4*(-4)**3+21*(-4)**2+20*(-4)),0,places=9)
+        for s in (1j*math.sqrt(13/2), -1j*math.sqrt(13/2)):
+            self.assertAlmostEqual(abs(p410(s,91/4,True)),0,places=8)
+        b=4+4*math.sqrt(5)
+        self.assertAlmostEqual((b-4)**2-80,0,places=9)
+        self.assertAlmostEqual(400-30*(40/3),0,places=9)
+        for k in (4-2*math.sqrt(3),4+2*math.sqrt(3)):
+            s=(k-2)/2
+            self.assertAlmostEqual(s*s+(2-k)*s+k,0,places=9)
+        for s in (1j*math.sqrt(2),-1j*math.sqrt(2)):
+            self.assertAlmostEqual(abs(s**3+s**2+2*s+2),0,places=9)
+        self.assertEqual(1/2,0.5)
+        self.assertEqual(len(self.index["automatic-control"]["sections"]["ac-homework4"]["figures"]), 10)
+
+    def test_cubic_synthesis_lesson(self):
+        lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-4-3-1.js")["html"]
+        for phrase in ("−1+j", "dG/ds", "ωn", "ωd", "虚轴交点",
+                       "data-ac-synthesis", "data-ac-syn-quiz", "data-ac-tex"):
+            self.assertIn(phrase, lesson)
+        self.assertEqual(lesson.count("data-ac-syn-question"), 6)
+        self.assertIn("4.3.1", lesson)
+        self.assertEqual(lesson.count("<svg"), 3)  # two native SVG figures + one interactive graph
+        self.assertEqual(lesson.count("<figure"), 2)
+        self.assertEqual(lesson.count('data-equation="U.4.3.1.'), 17)
+        refs = self.index["automatic-control"]["sections"]["ac-4-3-1"]
+        self.assertEqual(len(refs["equations"]), 17)
+        self.assertEqual(len(refs["figures"]), 2)
+        self.assertEqual(refs["equations"][-1]["number"], "U.4.3.1.17")
+        glossary = assignment(ROOT / "courses/automatic-control/glossary-index.js")
+        scoped = [e for e in glossary["entries"] if e.get("source", {}).get("section") == "ac-4-3-1"]
+        self.assertGreaterEqual(len(scoped), 13)
+        self.assertEqual(len({e["id"] for e in scoped}), len(scoped))
+        css = (ROOT / "courses/automatic-control/root-locus-synthesis.css").read_text(encoding="utf-8")
+        self.assertIn(".ac-syn-curves{stroke:", css)
+        self.assertNotIn(r"\\n.ac-syn-curves", css)
+        self.assertNotIn("<script", lesson)
+        root = (ROOT / "courses/automatic-control/root-locus-synthesis.js").read_text(encoding="utf-8")
+        self.assertIn("LN_MOUNT_AC_SYNTHESIS", root)
+        self.assertIn("Math.cbrt", root)
+        app = (ROOT / "app.js").read_text(encoding="utf-8")
+        self.assertIn("selected.id === 'ac-4-3-1'", app)
 
     def test_homework_source_and_anchors(self):
         data=assignment(ROOT/"courses/automatic-control/lessons/ac-homework3.js")
@@ -68,10 +144,11 @@ class AutomaticControlTests(unittest.TestCase):
 
     def test_practice_bank(self):
         course_questions=[q for q in self.bank["questions"] if q["course"]=="automatic-control"]
-        self.assertEqual(len(course_questions),13)
+        self.assertIn('ac-dominant-pole-window', {q['id'] for q in course_questions})
+        self.assertIn('ac-delay-from-bode', {q['id'] for q in course_questions})
         self.assertEqual({q["id"] for q in course_questions},{q["id"] for q in self.compiled["questions"] if q["course"]=="automatic-control"})
         self.assertIn("automatic-control",self.index)
-        self.assertEqual(len(self.index["automatic-control"]["sections"]),16)
+        self.assertEqual(len(self.index["automatic-control"]["sections"]),25)
 
     def test_root_locus_lesson_and_bank(self):
         lesson = assignment(ROOT / "courses/automatic-control/lessons/ac-4-2-2.js")["html"]

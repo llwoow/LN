@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-6-4"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-6-4\">6.4 最小相位滞后滤波器</h2><p>学习提纲 · 重点。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>6.4.1 最小、混合、最大相位及全通分解</li><li>6.4.2 最小相位性质</li><li>6.4.3 逆系统补偿幅度失真</li></ul><p><strong>重点与判断：</strong>对因果稳定有理系统且无纯延迟等障碍，最小相位要求稳定因果逆；单位圆零点、延迟和非最小相位零点限制精确逆补偿。</p></section>"};

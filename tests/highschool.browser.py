@@ -19,8 +19,8 @@ with sync_playwright() as p:
             page.goto(BASE+'#course/'+course['id'])
             page.locator('ln-knowledge-map').wait_for()
             assert page.locator('.map-node').count() == len(course['sections'])
-            assert bool(page.locator('[data-open-practice]').count()) == (course['id'] in {'hs-physics','hs-english'})
-            assert bool(page.locator('[data-open-resources]').count()) == (course['id'] in {'hs-physics','hs-english'})
+            assert page.locator('[data-open-practice]').count() > 0
+            assert page.locator('[data-open-resources]').count() > 0
             page.locator('.map-node').first.click()
             body = page.locator('#lesson-body[aria-busy="false"]')
             body.wait_for()
@@ -37,6 +37,21 @@ with sync_playwright() as p:
         assert page.locator('.source-citation').count() == 1
         assert page.locator('a[href^="https:"]').count() >= 28
         assert not any('/hs-' in url and '/lessons/' in url for url in requests)
+        for course in courses:
+            page.goto(BASE+'#course/'+course['id'])
+            study = next(section for section in course['sections'] if section.get('supplement') == 'study')
+            page.get_by_role('link', name='专题学习').click()
+            body = page.locator(f'#lesson-body[data-lesson-key="{course["id"]}/{study["id"]}"][aria-busy="false"]')
+            body.wait_for()
+            assert body.locator('h2').count() == 1
+            assert not page.evaluate('document.documentElement.scrollWidth>innerWidth'), (width, course['id'])
+            launch = body.locator('a[data-open-practice]')
+            question = launch.get_attribute('href').rsplit('/', 1)[1]
+            launch.click()
+            assert page.locator('[data-p-question]').input_value() == question
+            page.get_by_role('link', name='返回正文').click()
+            body.wait_for()
+            page.wait_for_function('id => document.activeElement?.getAttribute("href")?.endsWith("/" + id)', arg=question)
         assert not errors, errors
         page.close()
     browser.close()

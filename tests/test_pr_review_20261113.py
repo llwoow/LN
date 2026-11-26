@@ -17,7 +17,9 @@ class ReviewedPRs(unittest.TestCase):
   course=assignment(ROOT/'courses/electrical-materials/manifest.js')
   book=[s for s in course['sections'] if s.get('textbookSection')]
   self.assertEqual(len(book),29)
-  self.assertEqual(sum(s['kind']=='outline' for s in book),24)
+  self.assertEqual(sum(s['kind']=='outline' for s in book),17)
+  self.assertEqual({s['id'] for s in book if 'manuscript' in s},
+                   {'em-1-2','em-3-1','em-4-4','em-5-1','em-6-3','em-7-1','em-7-3'})
   self.assertEqual({s['id'] for s in course['sections'] if s['id'].startswith('em-test-')},{'em-test-summary','em-test-fill','em-test-short','em-test-review'})
   for s in book:
    if s['kind']=='outline':self.assertNotIn('src',s)

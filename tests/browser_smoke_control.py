@@ -24,6 +24,20 @@ def run() -> None:
             browser = pw.chromium.launch(channel="chrome", headless=True, args=["--no-sandbox"])
             for name, width, height in [("desktop", 1366, 900), ("mobile", 390, 844)]:
                 page = browser.new_page(viewport={"width": width, "height": height}, device_scale_factor=1)
+                for course, sections in {
+                    'electrical-machines': ['transformer-homework', 'dc-homework-review'],
+                    'electrical-materials': ['em-test-summary', 'em-test-fill', 'em-test-short', 'em-test-review'],
+                    'automatic-control': ['ac-homework3', 'ac-homework4'],
+                    'power-semiconductors': ['chapter-2-test'],
+                }.items():
+                    page.goto(base + '#course/' + course, wait_until='domcontentloaded')
+                    page.locator('.course-view-nav a').filter(has_text='已做题详解').click()
+                    page.locator('ul[aria-label="已做题详解"]').wait_for()
+                    links = page.locator('ul[aria-label="已做题详解"] a')
+                    assert links.count() == len(sections)
+                    assert [link.get_attribute('href') for link in links.all()] == [
+                        '#course/' + course + '/' + section for section in sections]
+                    assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
                 page.goto(base + "#course/automatic-control/ac-3-6", wait_until="domcontentloaded")
                 page.locator("#ac-dynamic-error").wait_for(timeout=20000)
                 page.evaluate('document.fonts.ready')
@@ -58,6 +72,36 @@ def run() -> None:
                 assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
                 page.screenshot(path=str(OUT / ("automatic-control-" + name + "-homework.png")), full_page=True)
 
+                # Chapter 4 classroom homework: verify the NEW reader content, not only old lessons.
+                page.goto(base + "#course/automatic-control/ac-homework4", wait_until="domcontentloaded")
+                page.locator("#question-4-7").wait_for(timeout=20000)
+                page.locator("#question-4-18").wait_for()
+                assert page.locator("figure").count() == 10
+                assert page.locator("#problem-4-7 svg").count() == 1
+                assert page.locator("#problem-4-10 svg").count() == 2
+                assert page.locator("#problem-4-12 svg").count() == 2
+                assert page.locator("#problem-4-14 svg").count() == 1
+                assert page.locator("#problem-4-18 svg").count() == 4
+                assert "91/4" in page.locator("#problem-4-10").inner_text()
+                assert "±j√6" in page.locator("#problem-4-7").inner_text()
+                assert "单位阶跃扰动" in page.locator("#problem-4-18").inner_text()
+                assert "0<K*<2" in page.locator("#problem-4-14 table").last.inner_text()
+                assert "0<K<1" in page.locator("#problem-4-18 table").last.inner_text()
+                assert "0<K*<91/4" in page.locator("#problem-4-10").inner_text()
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+                if width < 560:
+                    assert page.locator("#ac-hw4-fig-1 [role='region']").evaluate(
+                        "(el) => el.scrollWidth > el.clientWidth")
+                page.locator("#problem-4-7").screenshot(
+                    path=str(OUT / ("automatic-control-" + name + "-classroom-47.png")))
+                page.locator("#problem-4-18").screenshot(
+                    path=str(OUT / ("automatic-control-" + name + "-classroom-418.png")))
+                if not page.locator('[data-homework-jump]').is_visible():
+                    page.locator('[data-reader-directory]').click()
+                page.locator('[data-homework-jump]').select_option('4-14')
+                page.locator('#question-4-14.reference-target').wait_for(timeout=10000)
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+
                 page.goto(base + "#course/automatic-control/ac-3-3", wait_until="domcontentloaded")
                 symbol = page.locator('math [data-definition="ac-natural-frequency"]').first
                 symbol.wait_for(); symbol.scroll_into_view_if_needed()
@@ -87,6 +131,37 @@ def run() -> None:
                 assert page.locator("[data-ac-root-moving] circle[fill='#1676b5']").count() == 2
                 page.locator("[data-ac-set-k='5']").click()
                 page.screenshot(path=str(OUT / ("automatic-control-" + name + "-root-locus.png")), full_page=True)
+                page.goto(base + "#course/automatic-control/ac-4-3-1", wait_until="domcontentloaded")
+                page.locator("[data-ac-synthesis][data-mounted='true']").wait_for(timeout=20000)
+                page.locator("[data-ac-syn-status]").wait_for()
+                assert "临界稳定" in page.locator("[data-ac-syn-status]").inner_text()
+                assert page.locator("[data-ac-tex] .katex").count() >= 7
+                assert page.locator(".ac-syn .paper-equation.is-numbered").count() == 17
+                assert page.locator(".ac-syn figure.paper-figure").count() == 2
+                curve_fill = page.locator(".ac-syn-curves path").first.evaluate(
+                    '(n) => getComputedStyle(n).fill')
+                assert curve_fill == "none", "actual root locus must not have solid path fill"
+                zeta_symbol = page.locator('.ac-syn [data-definition="ac-syn-zeta"]').first
+                zeta_symbol.wait_for(timeout=10000)
+                zeta_symbol.click(force=True)
+                page.locator('#definition-popover:popover-open').wait_for(timeout=10000)
+                assert "阻尼比" in page.locator('#definition-popover:popover-open').inner_text()
+                page.keyboard.press("Escape")
+
+                assert page.locator("[data-ac-syn-question]").count() == 6
+                page.locator("[data-ac-syn-preset='1']").click()
+                assert "ζ=0.5" in page.locator("[data-ac-syn-preset='1']").inner_text()
+                assert "渐近稳定" in page.locator("[data-ac-syn-status]").inner_text()
+                page.locator("[data-ac-syn-preset='2']").click()
+                assert "渐近稳定" in page.locator("[data-ac-syn-status]").inner_text()
+                page.locator("[data-ac-syn-preset='6']").click()
+                assert "不稳定" in page.locator("[data-ac-syn-status]").inner_text()
+                page.locator("[data-ac-syn-question]").first.locator("[data-ac-syn-choice='1']").click()
+                assert "正确" in page.locator("[data-ac-syn-question]").first.locator("[data-ac-syn-feedback]").inner_text()
+                if width < 560:
+                    assert page.locator(".ac-syn-plot-wrap").evaluate('(n)=>n.scrollWidth>n.clientWidth')
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+                page.screenshot(path=str(OUT / ("automatic-control-" + name + "-cubic-geometry.png")), full_page=True)
                 page.close()
             browser.close()
     finally:

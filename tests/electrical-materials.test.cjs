@@ -12,7 +12,7 @@ const course = ctx.window.LN_ELECTRICAL_MATERIALS;
 const map = ctx.window.LN_ELECTRICAL_MATERIALS_MAP;
 const bookIds=new Set(course.sections.filter(s=>s.textbookSection).map(s=>s.id));
 assert.equal(bookIds.size,29);
-assert.equal(course.sections.filter(s=>s.kind==='outline').length,24);
+assert.equal(course.sections.filter(s=>s.kind==='outline').length,17);
 for(const id of ['em-test-summary','em-test-fill','em-test-short','em-test-review'])assert(course.sections.some(s=>s.id===id&&s.kind==='html'));
 assert.equal(course.sections.length,33);
 const found = new Set();
@@ -26,9 +26,10 @@ for(const s of course.sections) {
   vm.runInContext(lesson,child,{filename:s.src});
   const html = child.window.LN_LESSONS[course.id+'/'+s.id].html;
   assert(/<h2[ >]/.test(html), s.id+' lacks a real reading title');
-  if(s.textbookSection)assert(html.includes('reading-reference'), s.id+' lacks brief reference');
+  if(s.textbookSection)assert(!html.includes('reading-reference'), s.id+' repeats a course-level reference');
 }
-assert.equal(map.nodes.length,course.sections.length);
+const visibleIds = course.sections.filter(s => s.kind !== 'outline').map(s => s.id);
+assert.deepEqual(new Set(Array.from(map.nodes, node => node.section)), new Set(visibleIds));
 for(const n of map.nodes) assert(found.has(n.section));
 for(const e of map.links){assert(found.has(e.from)&&found.has(e.to)&&e.description);}
 const toc = JSON.parse(fs.readFileSync(path.join(root,'courses/electrical-materials/curriculum.json'),'utf8'));

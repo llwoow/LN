@@ -2,6 +2,20 @@
   "lazy": true,
   "terms": [
     {
+      "id": "materials-term-esr",
+      "section": "em-3-1",
+      "sections": [
+        "em-3-1"
+      ],
+      "aliases": [
+        "ESR"
+      ],
+      "title": "等效串联电阻",
+      "english": "Equivalent Series Resistance",
+      "match": "就是这个阻抗的实部",
+      "description": "同一频率下，端口复阻抗的实部。实测值可能包括介质、电极和引线损耗。"
+    },
+    {
       "id": "emat-pauli",
       "title": "泡利不相容原理",
       "english": "Pauli Exclusion Principle",
@@ -630,6 +644,48 @@
     }
   ],
   "symbolDefinitions": [
+    {
+      "id": "materials-copper-source-voltage",
+      "section": "em-5-1",
+      "sections": [
+        "em-5-1"
+      ],
+      "sourceAnchor": "materials-copper-supply-symbols",
+      "match": "导线去回总电阻",
+      "title": "电源电压 U_s",
+      "keys": [
+        "U_s"
+      ],
+      "description": "理想恒压源的端电压，单位 V。"
+    },
+    {
+      "id": "materials-copper-resistive-load",
+      "section": "em-5-1",
+      "sections": [
+        "em-5-1"
+      ],
+      "sourceAnchor": "materials-copper-supply-symbols",
+      "match": "导线去回总电阻",
+      "title": "负载电阻 R_L",
+      "keys": [
+        "R_L"
+      ],
+      "description": "与去回导线串联的电阻性负载，单位 Ω。"
+    },
+    {
+      "id": "materials-dielectric-esr",
+      "section": "em-3-1",
+      "sections": [
+        "em-3-1"
+      ],
+      "sourceAnchor": "materials-dielectric-esr-definition",
+      "match": "就是这个阻抗的实部",
+      "title": "等效串联电阻 R_s",
+      "keys": [
+        "R_s"
+      ],
+      "description": "在指定频率下，端口复阻抗的实部，单位 Ω。"
+    },
     {
       "id": "emat-quantum-n",
       "title": "主量子数 n",
@@ -1306,6 +1362,126 @@
       ],
       "match": "uₙ₊₁和uₙ₋₁分别是第n+1与第n−1个原子相对各自平衡位置的位移，与中心原子的uₙ一起决定两侧弹簧的伸长差。",
       "sourceAnchor": "adjacent-atom-displacements"
+    },
+    {
+      "id": "materials-dielectric-symbols",
+      "section": "em-3-1",
+      "sections": [
+        "em-3-1"
+      ],
+      "sourceAnchor": "materials-dielectric-symbols",
+      "match": "定义为损耗角正切",
+      "title": "G、C、U、f、ω、δ、P",
+      "keys": [
+        "G",
+        "C",
+        "U",
+        "f",
+        "ω",
+        "δ",
+        "P"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-junction-symbols",
+      "section": "em-4-4",
+      "sections": [
+        "em-4-4"
+      ],
+      "sourceAnchor": "materials-junction-symbols",
+      "match": "包含内建势与外加反偏",
+      "title": "q、N_D、ε、W、E_pk、V_dep",
+      "keys": [
+        "q",
+        "N_D",
+        "ε",
+        "ϵ",
+        "W",
+        "E_pk",
+        "V_dep"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-transport-symbols",
+      "section": "em-5-1",
+      "sections": [
+        "em-5-1"
+      ],
+      "sourceAnchor": "materials-transport-symbols",
+      "match": "这段电流路径的长度",
+      "title": "ρ、ℓ、A、I、R、ΔU、P",
+      "keys": [
+        "ρ",
+        "ℓ",
+        "A",
+        "I",
+        "R",
+        "delta:U",
+        "P"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-magnetic-symbols",
+      "section": "em-6-3",
+      "sections": [
+        "em-6-3"
+      ],
+      "sourceAnchor": "materials-magnetic-symbols",
+      "match": "每单位体积的能量损失",
+      "title": "B、H、w_cyc",
+      "keys": [
+        "B",
+        "H",
+        "w_cyc"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-capacitor-symbols",
+      "section": "em-7-1",
+      "sections": [
+        "em-7-1"
+      ],
+      "sourceAnchor": "materials-capacitor-symbols",
+      "match": "是相对介电常数",
+      "title": "ε、ε_r、A、d、U、C、E、w",
+      "keys": [
+        "ε",
+        "ϵ",
+        "ε_r",
+        "ϵ_r",
+        "A",
+        "d",
+        "U",
+        "C",
+        "E",
+        "w"
+      ],
+      "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "materials-battery-symbols",
+      "section": "em-7-3",
+      "sections": [
+        "em-7-3"
+      ],
+      "sourceAnchor": "materials-battery-symbols",
+      "match": "当前温度和荷电状态",
+      "title": "I、U_oc、R_0、v_p、R_p、C_p、U_term",
+      "keys": [
+        "I",
+        "U_oc",
+        "R_0",
+        "v_p",
+        "dot:v_p",
+        "R_p",
+        "C_p",
+        "U_term"
+      ],
+      "description": "本算例的量、参考方向与单位。"
     }
   ]
 }

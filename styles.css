@@ -90,6 +90,17 @@ h1 { font-size: 28px; line-height: 1.4; font-weight: 750; letter-spacing: -.5px;
 .course-search input { width: 100%; border: 0; outline: none; padding: 0; color: var(--text); background: none; font-size: 14px; }
 .course-search input:focus-visible { outline: none; }
 .course-search input::placeholder { color: var(--muted); opacity: 1; }
+.knowledge-results-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.knowledge-results-head h2 { font-size: 18px; margin: 0; }
+.knowledge-results-head select { min-height: 40px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); color: var(--text); }
+#knowledge-search-results { padding: 16px 0; border-bottom: var(--line-width) solid var(--border); }
+#knowledge-result-list { list-style: none; padding: 0; margin: 8px 0 0; }
+#knowledge-result-list a { display: grid; grid-template-columns: 4em minmax(0, 1fr); gap: 8px; padding: 9px 8px; border-radius: 7px; min-height: 44px; }
+#knowledge-result-list a:hover { background: var(--hover); }
+#knowledge-result-list strong, #knowledge-result-list small { display: block; overflow-wrap: anywhere; }
+#knowledge-result-list small, .knowledge-result-kind { color: var(--muted); font-size: 13px; }
+#knowledge-result-list + button:not([hidden]) { margin: 8px; }
+[data-more-knowledge][hidden] { display: none; }
 .filter-row { display: flex; gap: 5px; padding-bottom: 10px; border-bottom: var(--line-width) solid var(--border); }
 .filter-button { padding: 7px 12px; color: var(--muted); font-size: 13px; font-weight: 600; border-radius: 8px; }
 .filter-button:hover { background: var(--hover); }
@@ -139,6 +150,11 @@ h1 { font-size: 28px; line-height: 1.4; font-weight: 750; letter-spacing: -.5px;
 .lesson-tools { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; color: var(--muted); font-size: 11px; margin-bottom: 24px; }
 .lesson-tools span { margin-right: auto; }
 .lesson-tools a:hover { color: var(--text); text-decoration: underline; }
+.lesson-tools .lesson-source-tool { flex: 0 0 100%; min-width: 0; max-width: 100%; box-sizing: border-box; border: 1px solid var(--border); border-radius: 8px; padding: 7px 11px; color: var(--text); font-size: 12px; }
+.lesson-tools .lesson-source-tool > summary { cursor: pointer; font-weight: 600; }
+.lesson-tools .lesson-source-tool p, .lesson-tools .lesson-source-tool ul { margin: 7px 0 0; padding-left: 18px; overflow-wrap: anywhere; line-height: 1.65; }
+.lesson-tools .lesson-source-tool a { color: var(--accent); overflow-wrap: anywhere; }
+
 .lesson { max-width: 72ch; font-size: 17px; font-weight: 500; overflow-wrap: break-word; }
 .lesson h2 { font-size: 22px; font-weight: 700; margin: 38px 0 20px; line-height: 1.5; }
 .lesson > h2:first-child, .lesson > section > h2:first-child { margin-top: 0; }
@@ -159,7 +175,7 @@ h1 { font-size: 28px; line-height: 1.4; font-weight: 750; letter-spacing: -.5px;
 .lesson .math-inline::-webkit-scrollbar, .lesson .math.inline::-webkit-scrollbar { display: none; }
 .equation-anchor { scroll-margin-top: 24px; }
 .lesson figure { margin: 28px 0; }
-.lesson figure > img, .lesson a > img.original-diagram { display: block; width: 100%; height: auto; }
+.lesson figure > img, .lesson a > img.original-diagram, .lesson .plot-zoom > img { display: block; width: 100%; height: auto; }
 .lesson figure > svg { display: block; width: 100%; }
 .lesson figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .lesson img.original-diagram { background: #fff; padding: 8px; border: var(--line-width) solid var(--border); border-radius: 6px; }
@@ -379,6 +395,8 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .reader-dock-item .icon { width: 18px; height: 18px; }
 .reader-dock-item:hover:not(:disabled) { color: var(--accent); background: var(--accent-soft); }
 .reader-dock-item:disabled { color: var(--muted); opacity: .4; cursor: default; }
+.practice-return { min-height: 44px; color: var(--accent); }
+.practice-return[hidden] { display: none; }
 .is-reading .topbar { gap: 8px; padding-inline: 16px; }
 .is-reading .topbar-left { flex: 1 1 100px; }
 .is-reading .topbar-actions { flex-shrink: 0; }
@@ -399,7 +417,7 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .reader-directory-content .outline-group > summary { padding: 9px 4px; font-size: 14px; }
 .reader-directory-content .outline-group a { min-height: 40px; font-size: 14px; }
 @media (max-width: 960px) { .reader-outline { position: static; max-height: none; } }
-@media (max-width: 1099px) { .reader-dock-item span { display: none; } }
+@media (max-width: 1099px) { .reader-dock .reader-dock-item span { display: none; } }
 @media (max-width: 720px) {
   :root { --topbar-height: 58px; }
   .topbar { left: 0; }
@@ -590,10 +608,6 @@ html { scroll-padding-top: calc(var(--topbar-height) + 16px); scroll-padding-bot
 .publication-body .source-material-heading { margin-top: 2.2em; padding-top: 1.2em; border-top: 1.5px solid var(--border); font: 700 15px/1.7 var(--font); }
 .resource-nav-button { display: inline-flex; align-items: center; gap: 7px; padding: 7px 11px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); font: 600 13px/1.6 var(--font); text-align: left; cursor: pointer; }
 .resource-nav-button:hover { background: var(--hover); }
-.practice-dialog { width: min(820px, calc(100% - 24px)); max-height: 88dvh; padding: 18px; overflow: auto; color: var(--text); background: var(--surface); border: 1.5px solid var(--border); border-radius: 12px; }
-.practice-dialog::backdrop { background: #0005; }
-.practice-dialog > .dialog-heading { position: sticky; top: -18px; z-index: 2; padding: 12px 0; background: var(--surface); }
-body.practice-open { overflow: hidden; }
 .practice-panel { max-width: 800px; min-width: 0; }
 [data-practice-hub] { max-width: 820px; min-width: 0; }
 .practice-modes { display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0 18px; padding-bottom: 10px; border-bottom: 1.5px solid var(--border); }
@@ -637,7 +651,7 @@ body.practice-open { overflow: hidden; }
 .practice-reading { display: grid; gap: 6px; margin-top: 24px; }
 .practice-evidence { padding: 14px 0; border-top: 1px solid var(--border); font-size: 14px; line-height: 1.8; }
 .practice-panel [data-p-error]:not(:empty) { font-weight: 750; border-left: 3px solid var(--text); padding-left: 10px; }
-@media (max-width: 480px) { .practice-dialog { padding: 12px; width: calc(100% - 16px); } .practice-dialog > .dialog-heading { top: -12px; } .practice-controls { grid-template-columns: 1fr 1fr; } .practice-prompt { font-size: 16px; } }
+@media (max-width: 480px) { .practice-controls { grid-template-columns: 1fr 1fr; } .practice-prompt { font-size: 16px; } }
 @media print { .practice-controls, .practice-actions, .practice-pagination, .practice-picker, [data-p-storage] { display: none; } }
 .directory-resource-shortcut { flex-shrink: 0; padding: 6px 12px; border-bottom: 1px solid var(--border); }
 .resource-dialog { width: min(820px, calc(100% - 24px)); max-height: 85dvh; padding: 18px; overflow: auto; color: var(--text); background: var(--surface); border: 1.5px solid var(--border); border-radius: 12px; }
@@ -748,6 +762,73 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 .instrument-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; }
 .instrument-scroll img { display:block; width:100%; min-width:680px; max-width:none; height:auto; }
 .instrument-scroll:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+/* DC chapter 3 reviewed homework: native HTML reader */
+
+.dc-hw{--dc-hw-ok:#166534;--dc-hw-warn:#a16207;--dc-hw-bad:#b42318}
+:root[data-theme='dark'] .dc-hw{--dc-hw-ok:#8ee0a0;--dc-hw-warn:#f0ca75;--dc-hw-bad:#ffaca4}
+.dc-hw .dc-hw-ok{color:var(--dc-hw-ok)}.dc-hw .dc-hw-warn{color:var(--dc-hw-warn)}.dc-hw .dc-hw-bad{color:var(--dc-hw-bad)}
+.dc-hw .dc-hw-card{border-top:2px solid var(--border);padding:1.4rem 0;margin:1.8rem 0;scroll-margin-top:90px}
+.dc-hw .dc-hw-card h3{font-size:1.4em;line-height:1.5}
+.dc-hw .dc-hw-grade,.dc-hw .dc-hw-related{font-family:var(--font);font-size:.9em;color:var(--muted)}
+.dc-hw .dc-hw-source{border-left:3px solid var(--accent);padding:12px 16px;background:var(--subtle);border-radius:0 8px 8px 0}
+.dc-hw .dc-hw-card ol{padding-left:1.4em}.dc-hw .dc-hw-card li{margin:1rem 0;padding-bottom:.65rem;border-bottom:1px solid var(--border)}
+.dc-hw .dc-hw-card li p{margin:.3em 0}.dc-hw .dc-hw-card h4{margin:1.2rem 0 .5rem}
+.dc-hw .dc-hw-toc{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:12px 0 20px}
+.dc-hw .dc-hw-toc a{display:inline-flex;padding:6px 10px;border:1px solid var(--border);border-radius:7px;background:var(--subtle);font:600 14px/1.5 var(--font)}
+.dc-hw .dc-hw-top,.dc-hw .dc-hw-related{font-size:.85em}
+.dc-hw a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:640px){.dc-hw .dc-hw-card{padding:1rem 0;margin:1rem 0}.dc-hw .dc-hw-source{padding:10px 12px}.dc-hw .dc-hw-card h3{font-size:1.22em}}
+
+
+
+/* Chapter 3 homework: KaTeX formulas are scrollable on narrow screens. */
+.dc-hw .dc-hw-katex-math {
+  max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain;
+  margin:9px 0 12px; padding:10px 12px;
+  background:var(--subtle); border-left:2px solid var(--border);
+  border-radius:0 6px 6px 0; text-align:left;
+}
+.dc-hw .dc-hw-katex-math .katex-display {margin:0;text-align:left}
+.dc-hw .dc-hw-katex-math .katex-display > .katex {text-align:left;white-space:nowrap}
+.dc-hw .dc-hw-katex-inline {white-space:nowrap}
+.dc-hw .dc-hw-math-fallback {color:var(--muted);font-size:13px}
+@media(max-width:640px){.dc-hw .dc-hw-katex-math{padding:9px 8px}}
+
+
+/* Keep short handwritten-step notes from being stretched by reader justification. */
+.dc-hw .dc-hw-source,
+.dc-hw .dc-hw-card li p,
+.dc-hw .dc-hw-card > p { text-align:left; }
+
+/* Cross-course knowledge: shared palette and compact reader annotations. */
+.cross-knowledge-inline { border-left: 2px solid var(--accent); background: var(--subtle); padding: 8px 12px; margin: 12px 0 18px; color: var(--text); font: 500 14px/1.6 var(--font); border-radius: 0 6px 6px 0; overflow-wrap: anywhere; }
+.cross-knowledge-inline > strong { display:block; font-size:12px; color:var(--muted); margin-bottom:4px; }
+.cross-knowledge-item + .cross-knowledge-item { margin-top:8px; }
+.cross-knowledge-item a,.cross-course-list a { text-decoration:underline; text-underline-offset:3px; font-weight:650; color:var(--accent); }
+.cross-knowledge-item span,.cross-course-list span { display:block; color:var(--muted); }
+.cross-course-panel { border-top:1px solid var(--border); padding-top:12px; margin:16px 0; }
+.cross-course-panel > summary { cursor:pointer; font-weight:650; }
+.cross-course-panel > summary span { color:var(--muted); font-size:12px; margin-left:6px; }
+.cross-course-panel > div { padding:10px 0; }
+.cross-course-list > div { padding:9px 0; border-bottom:1px solid var(--border); overflow-wrap:anywhere; font-size:14px; }
+.cross-course-list > div:last-child { border-bottom:0; }
+.cross-pending-links { margin-top:4px; }
+.cross-filter { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 10px; }
+.cross-filter select { max-width:100%; color:var(--text); background:var(--surface); border:1.5px solid var(--border); border-radius:6px; padding:6px 10px; font:inherit; }
+@media print { .cross-knowledge-inline { background:none; border-color:#000; } .cross-filter,.cross-course-panel { display:none; } }
+
+/* EMC review: retain native theme and keep long equations locally scrollable. */
+.emc-exam-review {max-width: 900px; margin: 20px auto; min-width: 0;}
+.emc-review-controls {display:flex;flex-wrap:wrap;gap:12px;margin:16px 0;}
+.emc-review-controls label {display:grid;gap:4px;min-width:0;flex:1 1 210px;}
+.emc-review-controls input,.emc-review-controls select {width:100%;min-width:0;background:var(--surface);color:var(--text);border:1px solid var(--border);padding:9px;border-radius:6px;font:inherit;}
+.emc-review-row,.emc-review-example {border-top:1px solid var(--border);padding:16px 0;scroll-margin-top:80px;min-width:0;}
+.emc-review-formula {overflow-x:auto;max-width:100%;min-width:0;padding:10px 4px;background:var(--subtle);margin:8px 0;overflow-wrap:anywhere;}
+.emc-review-formula .katex-display {margin:0.25em 0;}
+.emc-review-inline {border-top:1px solid var(--border);margin-top:24px;padding-top:12px;min-width:0;}
+.emc-review-note,.emc-review-focus {color:var(--muted);}
+.emc-review-example summary {cursor:pointer;font-weight:600;}
 
 /* Native English practice can open before any course reading stylesheet. */
 .practice-prompt audio { display: block; width: 100%; max-width: 100%; margin: 14px 0; }

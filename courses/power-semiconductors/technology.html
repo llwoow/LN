@@ -54,8 +54,18 @@
 <p>A 的导通损耗是 16 W，B 是 14 W。频率 5 kHz 时，动态项是 1 W 和 1.75 W，B 的器件损耗较低。频率 20 kHz 时，动态项是 4 W 和 7 W，合计为 20 W 和 21 W，此时 A 较低。把两式相等可得交点 \(2\,\mathrm W/(150\,\mu\mathrm J)\approx13.33\,\mathrm{kHz}\)。它只属于这组条件，不是器件类别的固定分界。</p>
 <p>若两者有效结到环境热阻都近似为 \(3.0\,\mathrm{K/W}\)，环境 40 ℃，20 kHz 的初估结温是 100 ℃和 103 ℃。下一步要按估计结温更新导通和开关参数，重复计算。若过流只有短脉冲，换用<a href="#course/power-semiconductors/junction-termination/def-thermal-impedance">瞬态热阻抗</a>和对应的 SOA 数据。对 MOSFET，读 \(R_{\mathrm{DS(on)}}\) 要带 \(V_{GS}\) 和结温。对 IGBT，读 \(V_{\mathrm{CE(sat)}}\) 要带 \(V_{GE}\)、电流和结温。两类的 \(E_{\mathrm{on}},E_{\mathrm{off}}\) 还要对照母线、门极电阻及对侧续流器件。典型值用于估算，保证边界需核对最大值、温升迭代与测量。</p>
 <p>要验证能量，可在双脉冲测试中先用第一脉冲建立电感电流，再记录第二脉冲的开通和关断波形。电压和电流探头应先核对时延对齐，按明确的积分窗计算 \(vi\)。否则两个边沿的时间偏移会直接变成能量误差。上例已经把开关测量口径写成每周期器件端口能量，不能再额外套一个三角重叠项。</p>
+
+<h3 id="psd-pulse-train-thermal" data-knowledge-kind="难点" data-knowledge-terms="结温 热阻抗 脉冲 重复脉冲 热记忆 Zth SOA">连续脉冲之前的结温从哪里接上</h3>
+<p id="psd-pulse-symbols">取壳温不变的单时间常数教学模型。\(R_\theta=2\,\mathrm{K/W}\) 是结到壳热阻，\(\tau=10\,\mathrm{ms}\) 是热时间常数，\(\Delta T\) 是结温超过壳温的部分（K）。施加恒功率 \(P\)（W）后，温升差向 \(PR_\theta\) 按指数收敛。令导通及关断间隔均为 5 ms，发热为 10 W，一段内初值的保留率 \(a=e^{-0.5}\)。</p>
+<p>若从冷的模型起步，第一个脉冲末端仅升高 \(20(1-a)\approx7.87\) K。周期稳定后，下一次通电脉冲的开始温升是上一峰值乘 \(a\)。把这部分余热代回上升段，得 \(\Delta T_\mathrm{pk}=a^2\Delta T_\mathrm{pk}+20(1-a)\)，所以峰值约 12.45 K，关断后降到约 7.55 K。按占空比求得的 10 K 是该线性稳态模型的平均值，单次脉冲与平均功率都不能代替峰值判断。</p>
+<p id="psd-pulse-period-symbols">可把通电时长记为 \(t_{\mathrm{on}}\)，周期记为 \(T\)（单位 s）。上一峰值经过关断和下一次通电后保留的比例是 \(e^{-T/\tau}\)。本次通电新增加的部分是 \(PR_\theta(1-e^{-t_{\mathrm{on}}/\tau})\)。令这一峰和上一峰相等，移项得到：</p>
+<div class="math-block" id="eq-periodic-peak" data-equation="3.3">\[\Delta T_\mathrm{pk}=PR_\theta\,
+\frac{1-e^{-t_{\mathrm{on}}/\tau}}{1-e^{-T/\tau}}.\]</div>
+<p>用式（3.3）比较两组同为 50% 占空比、10 W 通态功率的脉冲。周期为 1 ms 时峰值温升约 <strong>10.25 K</strong>；周期为 100 ms 时约 <strong>19.87 K</strong>。两组平均功率均为 5 W，但长脉冲有足够时间升向 20 K 的通态稳态温升，短脉冲的温升则在 10 K 附近小幅起伏。此结论只针对通态功率固定的模型；改变实际开关频率时，还须重算式（3.1）的开关损耗。</p>
+<p>数据手册的热阻抗曲线可能提供不同占空比及测试边界。先分清结到壳还是结到环境，再查是否包含重复脉冲；任意功率波形在近似线性热路径下可用阶跃响应叠加。实际器件还有热网络多时标、热态导通电阻和壳温动态。参考 <a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-application-note-dynamic-thermal-behavior-of-mosfets-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon · MOSFET 瞬态热行为</a>。</p>
 <h3 id="worked-datasheet">读一次真实数据手册</h3>
 <p>以 STW40N65M2（DS10858 Rev. 2）为例。厂家表 4 在 \(V_{GS}=0\)、\(I_D=1\,\mathrm{mA}\) 下给出漏源击穿电压最小值 650 V。阈值典型 3 V，判据是 \(I_D=250\,\mu\mathrm A\)。导通电阻则是在 \(V_{GS}=10\,\mathrm V\)、\(I_D=16\,\mathrm A\)、壳温 25 ℃ 下给出，典型 87 mΩ、最大 99 mΩ。三个数对应三个不同测试条件，3 V 的阈值不能作为按 99 mΩ 计算的驱动电压。</p>
 <p>按上述通态测试点的最大电阻复算，16 A 时的导通压降约 1.58 V，瞬时导通损耗约 25.3 W。这里用的是冷壳条件下的电阻，连续运行要重新校核热态电阻。厂家表 5 的总栅电荷典型值 56.5 nC 来自 520 V、32 A 的门极充电测试，不能拿它反推上述 16 A 测试下的开关能量。把数值连同测试条件抄到选型表，才能判断哪些数据可以放进同一个模型。</p>
+<p><strong>选型时回查三项。</strong> 先用实际端口波形核对峰值、脉宽和安全工作区。再用式（3.1）分别算通态和每期开关能量，统一测试条件及是否计入续流损耗。最后按与实际热路径对应的热参数求结温；重复脉冲需检查峰值，单时常数近似可回看式（3.3）。</p>
 <details class="reading-references"><summary>参考</summary><p>《Fundamentals of Power Semiconductor Devices》 · <a href="https://www.infineon.com/assets/row/public/documents/24/42/infineon-an2011-05-igbt-modules-explanation-applicationnotes-en.pdf" target="_blank" rel="noopener">Infineon AN 2011-05 的 SOA、能量和热参数</a> · <a href="https://www.st.com/resource/en/datasheet/stw40n65m2.pdf" target="_blank" rel="noopener">STW40N65M2 数据手册表 4–5</a></p></details>
 </section>

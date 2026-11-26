@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-4-4"]={"html":"<section class=\"article-section\" id=\"nem-4-4\"><h2>4.4 电解水制氢</h2><p>电解水利用外加电能驱动水分解。电压除可逆电压外还要克服活化、欧姆与浓差等损失。碱性、PEM和固体氧化物电解方式在电解质、温度、传输离子和材料要求上不同。</p><dl class=\"nem-subtopics\"><dt id=\"nem-4-4-1\"><strong>4.4.1 碱性电解水制氢</strong></dt><dd>碱性电解液中主要依赖氢氧根离子导电。</dd><dt id=\"nem-4-4-2\"><strong>4.4.2 质子交换膜电解水制氢</strong></dt><dd>PEM由质子传导膜隔开两极，膜与催化剂决定损失和耐久性。</dd><dt id=\"nem-4-4-3\"><strong>4.4.3 固体氧化物电解水</strong></dt><dd>高温可利用热量降低部分电功需求，但对材料密封与寿命要求高。</dd></dl></section>"};

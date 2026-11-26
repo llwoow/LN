@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["new-energy-materials/nem-6-5"]={"html":"<section class=\"article-section\" id=\"nem-6-5\"><h2>6.5 地热能技术</h2><p>地热利用地球内部热量。高温资源可经蒸汽或其他动力循环发电，较低温资源更适合直接供热或热泵系统；选择方式取决于温度、流量和回灌条件。</p><dl class=\"nem-subtopics\"><dt id=\"nem-6-5-1\"><strong>6.5.1 发电利用</strong></dt><dd>热流体驱动动力循环，需注意结垢、腐蚀与回灌。</dd><dt id=\"nem-6-5-2\"><strong>6.5.2 直接利用</strong></dt><dd>采暖、温泉和工艺热利用应匹配温度等级。</dd></dl></section>"};

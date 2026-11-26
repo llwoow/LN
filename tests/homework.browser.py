@@ -58,15 +58,15 @@ with sync_playwright() as p:
   assert abs(page.locator('#problem-2-20 .homework-prompt .paper-reference').first.bounding_box()['y']-y)<4
   # Each exercise opens its own stable record, supporting favorite, mistake and redo.
   button=page.locator('#problem-2-22 [data-practice-question="hw-2-22"]');button.scroll_into_view_if_needed();y=page.evaluate('scrollY');button.click()
-  dialog=page.locator('#practice-dialog[open]');dialog.wait_for();assert dialog.locator('[data-p-question]').input_value()=='hw-2-22'
-  dialog.locator('[data-p-reason]').fill('用空载和短路数据区分励磁支路与串联阻抗，再统一基准并复算效率。')
-  dialog.locator('[data-p-submit]').click();dialog.locator('[data-p-favorite]').click();dialog.locator('[data-p-mistake]').click()
+  practice=page.locator('main.practice-main');practice.wait_for();assert practice.locator('[data-p-question]').input_value()=='hw-2-22'
+  practice.locator('[data-p-reason]').fill('用空载和短路数据区分励磁支路与串联阻抗，再统一基准并复算效率。')
+  practice.locator('[data-p-submit]').click();practice.locator('[data-p-favorite]').click();practice.locator('[data-p-mistake]').click()
   record=page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["hw-2-22"]');assert record['favorite'] and record['selfMistake'] and len(record['attempts'])==1
-  dialog.locator('[data-p-redo]').click();assert dialog.locator('[data-p-reason]').input_value()==''
+  practice.locator('[data-p-redo]').click();assert practice.locator('[data-p-reason]').input_value()==''
   assert len(page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["hw-2-22"].attempts'))==1
-  dialog.locator('[data-practice-mode="favorites"]').click();assert dialog.locator('[data-p-question]').input_value()=='hw-2-22'
-  dialog.locator('[data-practice-mode="mistakes"]').click();assert dialog.locator('[data-p-question]').input_value()=='hw-2-22'
-  dialog.locator('[data-close-practice]').click();page.wait_for_function('!document.querySelector("#practice-dialog").open');assert abs(page.evaluate('scrollY')-y)<4
+  practice.locator('[data-practice-mode="favorites"]').click();assert practice.locator('[data-p-question]').input_value()=='hw-2-22'
+  practice.locator('[data-practice-mode="mistakes"]').click();assert practice.locator('[data-p-question]').input_value()=='hw-2-22'
+  page.locator('[data-practice-return]').click();page.wait_for_function('y => Math.abs(scrollY-y)<4 && document.activeElement.dataset.practiceQuestion==="hw-2-22"',arg=y)
   # Old PDF page bookmarks still lead into native content.
   read('page-8');page.wait_for_function('document.querySelector("#page-8").classList.contains("reference-target")')
   page.locator('#question-2-19').scroll_into_view_if_needed();page.screenshot(path='.preview/homework-reading-'+str(width)+'.png')

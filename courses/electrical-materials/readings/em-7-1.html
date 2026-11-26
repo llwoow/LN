@@ -1,0 +1,10 @@
+<section class="reader-section">
+<h2>储能介质应比较哪一个电场下的能量密度</h2>
+<p>同规格电容器的电容值越高，在相同电压下可储更多能。但比较介质时，还得先问两种材料能否在同一个电场下长期工作。隔离电压、局部电场和温升约束经常决定哪一种选择有用。</p>
+<h3 id="study-capacitor-energy-density" data-knowledge-kind="方法" data-knowledge-terms="电介质 储能密度 电场 击穿 介电常数 降额 电容">把器件尺寸与材料属性分开</h3>
+<p id="materials-capacitor-symbols">平板内均匀、线性介质的 \(\varepsilon=\varepsilon_0\varepsilon_r\)（F/m），\(\varepsilon_r\) 是相对介电常数。取板面积 \(A\)、间距 \(d\)、电压 \(U\)，有 \(C=\varepsilon A/d\)，电场 \(E=U/d\)（V/m）。把器件能量 \(CU^2/2\) 除以有效介质体积 \(Ad\)，得到能量密度 \(w\)（J/m³）。</p>
+\[w=\frac12\varepsilon E^2.\]
+<p>取两种假想介质 A、B。A 的 \(\varepsilon_r=4\)，给定允许场强 50 MV/m；B 的 \(\varepsilon_r=10\)，允许 20 MV/m。在各自允许场强下，A 约 44.3 kJ/m³，B 约 17.7 kJ/m³。介电常数较高的 B 反而输在允许场强的平方项；若双方都仅运行在远低于上限的同一场强，则 B 在这个理想线性模型下储能更多。</p>
+<p>工程上“允许”往往低于单次试样测得的击穿场强，并受频率、温度、厚度、缺陷和寿命要求影响。若介质非线性且有显著滞回，应根据实际电位移与电场循环核查可恢复能量及损耗。关于电源连线和能量来源，参见<a href="#course/hs-physics/study-capacitor/study-capacitor-constraint">电容器接电与断开的对照</a>。</p>
+<p><a class="secondary-button" data-open-practice href="#practice/electrical-materials/em-7-1/emat-core-energy-density">练一题：材料参数改变后的储能比较</a></p>
+</section>

@@ -1,0 +1,19 @@
+{
+  "lazy": true,
+  "symbolDefinitions": [
+    {
+      "id": "study-testcross-observation-count",
+      "section": "study-testcross",
+      "sections": [
+        "study-testcross"
+      ],
+      "sourceAnchor": "study-testcross-size-definition",
+      "match": "独立观察的后代数",
+      "title": "独立后代数 n",
+      "keys": [
+        "n"
+      ],
+      "description": "测交中独立观察并确认表型的后代个数。"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-1-1"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-1-1\">1.1 离散序列及运算</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>1.1.1 序列与索引：区分连续时间、离散时间和数字量</li><li>1.1.2 移位、反折、相加相乘：先看索引变换次序</li><li>1.1.3 线性卷积：翻折、移位、相乘求和</li><li>1.1.4 相关：相对位移下的相似性，复序列须共轭</li><li>1.1.5 单位冲激、阶跃、指数等典型序列</li><li>1.1.6 周期性：正弦数字角频率与 2π 的比值为有理数才有周期</li><li>1.1.7 冲激展开：x(n)=Σx(k)δ(n−k)</li></ul><p><strong>重点与判断：</strong>有限序列卷积长度通常为 L+M−1；冲激展开是下一节推导系统卷积的起点。</p></section>"};

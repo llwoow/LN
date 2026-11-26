@@ -1,0 +1,25 @@
+<section class="reader-section">
+<h2>精确采样模型为什么不等同于欧拉近似</h2>
+<p>电驱中的数字控制器每隔固定时间更新命令。若被控对象连续演化，沿时间轴画出两次更新之间真正加在对象上的量，再决定离散系数。下面把固定转子的 RL 绕组当成一阶对象，忽略电刷和驱动限流，假定在相邻采样之间端电压恒定。</p>
+<h3 id="control-zoh-current" data-knowledge-kind="方法" data-knowledge-terms="零阶保持 ZOH 精确离散化 欧拉法 采样 RL 单位圆">跟着一个采样间隔把电流从初值推到下一刻</h3>
+<p id="control-zoh-symbols">\(R,L\) 分别是绕组电阻（Ω）和电感（H），\(T_s\) 为采样间隔（s），\(i_k\) 是第 \(k\) 次采样的电流（A），\(u_k\) 为该间隔内保持的端电压（V）。在步内方程 \(L\,di/dt=u_k-Ri\) 中，\(i\) 是此刻电流，\(t\) 是时间。因 \(u_k\) 恒定，差值 \(i-u_k/R\) 的导数等于这个差值乘 \(-R/L\)，所以经过 \(T_s\) 后保留初始差值的 \(a=e^{-RT_s/L}\)。把固定的 \(u_k/R\) 加回来就得到：</p>
+\[\begin{aligned}
+ i_{k+1}&=a i_k+(1-a)\frac{u_k}{R},\\
+ a&=e^{-RT_s/L}.
+\end{aligned}\]
+<p>取 \(R=2\,\Omega,L=4\,\mathrm{mH},u_0=6\,\mathrm V,i_0=0\)。保持 1 ms 时，\(a=e^{-0.5}\approx0.6065\)，故 \(i_1\approx1.18\,\mathrm A\)。逐步迭代还会趋近 3 A。对同一微分方程采用前向欧拉，则用 \(1-RT_s/L\) 代替指数系数。1 ms 时该系数为 0.5，一步预测成了 1.5 A。</p>
+<p>若增大到 5 ms，精确保持模型的系数为 \(e^{-2.5}\approx0.0821\)，原开环绕组仍会衰减；而显式欧拉系数为 −1.5，数值误差会变号并放大。这里的发散来自计算步长。</p>
+<h3 id="control-zoh-physical-feedback" data-knowledge-kind="难点" data-knowledge-terms="采样反馈 真实不稳定 单位圆 离散极点">加上真正的采样反馈，还会不会发散？</h3>
+<p id="control-zoh-feedback-symbols">现在让控制器在采样时测电流，立刻给出 \(u_k=-K i_k\)，并将这个电压保持到下一次更新。\(K\) 的单位是 V/A，这里只研究电流偏离零点后的响应，假定没有饱和。把这一实际控制律代入式（C.8.5.2.1），得到闭环离散极点 \(z_{\rm cl}\)，它就是一步后偏差要乘的系数：</p>
+\[\begin{aligned}
+ i_{k+1}&=z_{\rm cl}i_k,\\
+ z_{\rm cl}&=a-(1-a)K/R.
+\end{aligned}\]
+<p>取 \(K=4\,\mathrm{V/A}\)，就有 \(z_{\rm cl}=3a-2\)。1 ms 时为 −0.180，电流交替变号但逐步缩小；5 ms 时为 −1.754，精确的采样闭环也会放大偏差。原因是电压按上一次读到的电流设定：电流已经反向时，旧命令仍然在施加。用式（C.8.5.2.2）令 \(|z_{\rm cl}|&lt;1\)，要求 \(a&gt;1/3\)，从而 \(T_s&lt;(L/R)\ln3\approx2.20\,\mathrm{ms}\)。这是此例在理想即时更新、无饱和下的边界；有额外延迟时还需要改写时序。</p>
+<h3 id="control-delay-vs-hold" data-knowledge-kind="跨学科" data-knowledge-terms="控制稳定性 采样保持 纯延迟 离散极点 频响 伯德">同一个绕组，为什么算出两种稳定上限？</h3>
+<p>前一算例每次读数后会保持命令。现在改成连续读电流、连续调同样比例的电压，并在这条连续路径上只加纯延迟。两种接法都在判断扰动是否衰减。分别追踪扰动怎样返回，就能知道该用哪种稳定判据。</p>
+<p id="control-continuous-current-loop">仍用 \(R=2\,\Omega\)、\(L=4\,\mathrm{mH}\)、\(K=4\,\mathrm{V/A}\)。记角频率为 \(\omega\)（rad/s），\(j\) 为虚数单位。在绕组方程里，把电流的正弦稳态求导换成乘 \(j\omega\)，就得到连续回路的开环比 \(K/(R+j\omega L)\)。分母的模等于 \(K\) 时是 0 dB，于是角频率为 \(\sqrt{K^2-R^2}/L\)，约 866 rad/s。此时分母的角是 60°，开环相位为 −60°，所以相位裕度是 120°。按<a href="#course/automatic-control/ac-5-6-9/control-delay-budget">相位余量与纯延迟的关系</a>，把 120° 换成弧度再除以 866，得首次临界延迟约 <strong>2.42 ms</strong>。</p>
+<p>若控制器每 <strong>2.30 ms</strong> 才读一次，并把算出的电压一直保持到下一次读数，就该用式（C.8.5.2.2）。代入得到一步乘数约 −1.05，偏差会逐步放大。连续回路单纯把整条波形后移 2.30 ms 时，幅值保持原样，仍低于它的 2.42 ms 临界延迟。采样保持则在电流已经变化后继续施加旧电压，直接改变了每步的反馈作用，因此得用 <strong>2.20 ms 的采样边界</strong>判断。</p>
+<p><strong>归纳起来，先判断改动发生在哪里。</strong> 连续信号只被整体推后，用频响判断剩余相位。读数和输出按时钟更新，从采样递推查闭环极点。若只是仿真步长改变，就比较精确递推和欧拉近似。实机可用<a href="#course/robot-drive-engineering/rd-sampling-time">采样、计算到 PWM 生效的时间轴</a>标清信号何时取得、何时施加、保持多久，再决定模型。</p>
+<p><a class="secondary-button" data-open-practice href="#practice/automatic-control/ac-8-5-2/ac-core-zoh-vs-euler">练一题：区分数值发散和实际不稳定</a></p>
+</section>

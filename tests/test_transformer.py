@@ -11,7 +11,7 @@ REF=runpy.run_path(str(ROOT/'scripts/build-reference-index.py'))
 class TransformerCompletion(unittest.TestCase):
     def test_fourteen_sections_are_real_and_preserve_reference_routes(self):
         c=REF['assignment'](ROOT/'courses/electrical-machines/manifest.js')
-        canonical=[s for s in c['sections'] if s.get('textbookSection')]
+        canonical=[s for s in c['sections'] if s.get('textbookSection') and s['group']=='第2章 变压器']
         self.assertEqual([s['textbookSection'] for s in canonical],['2.'+str(i) for i in range(1,15)])
         self.assertEqual(len({s['teachingIndex'] for s in c['sections']}),len(c['sections']))
         self.assertEqual(c['textbook']['isbn'],'9787111447092')

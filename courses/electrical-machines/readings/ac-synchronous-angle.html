@@ -1,0 +1,9 @@
+<section class="reader-section">
+<h2>同步转速不变时，负载怎样改变电磁功率</h2>
+<p>异步机的基波转子电流由转差产生。同步电机的转子励磁可以由直流绕组或永磁体提供，转子磁场不需要靠转差建立。稳态接在定频电源上的同步机，增加负载时转速可以保持不变，变化的是转子场与定子电气相量之间的角度。</p>
+<h3 id="synchronous-load-angle" data-knowledge-kind="难点" data-knowledge-terms="同步机 功角 相量 同步电抗 电磁功率 永磁">从每相电压平衡推成功角关系</h3>
+<p id="synchronous-angle-symbols">采用三相平衡、非凸极、忽略电枢电阻的简化模型。每相端电压有效值相量为 \(V\angle0\)，内部电动势取 \(E\angle(-\delta)\)，两者单位 V。\(\delta\) 为电动机内电势相对端电压滞后的电角度，\(X_s\) 是每相同步电抗（Ω），\(I\) 为流入定子的电流相量（A）。由电压平衡得</p>
+\[I=\frac{V-E(\cos\delta-j\sin\delta)}{jX_s}=\frac{E\sin\delta}{X_s}-j\frac{V-E\cos\delta}{X_s}.\]
+<p>与参考端电压同相的电流分量决定有功，乘三相数后得到 \(P_e=3VE\sin\delta/X_s\)（W）。正角度按此约定吸收有功，功角变大通常可多给机械负载一些功率。取 \(V=230\,\mathrm V,E=210\,\mathrm V,X_s=4\,\Omega,\delta=20^\circ\)，估算约 12.4 kW。若是 50 Hz、四极，转速依旧为 1500 r/min，忽略损耗时电磁转矩约 79 N·m。</p>
+<p>在正弦简化模型中功率曲线有极大值，再加负载可能找不到同步平衡，而不是电机可以无限把功角推大。实际凸极、变量励磁、驱动限流及暂态都会改变结论。不要把这里的功角直接当成<a href="#course/robot-drive-engineering/rd-foc">矢量控制中所用的转子位置或电流角</a>；两个方法都要先声明参考轴与相位。教材参考见课程级资料。</p>
+</section>

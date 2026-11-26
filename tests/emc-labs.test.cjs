@@ -6,7 +6,7 @@ const source=fs.readFileSync(path.join(__dirname,'../courses/electromagnetic-com
 vm.runInContext(source.replace('window.LN_MOUNT_EMC_LABS=mount;','window.__review=specs;window.LN_MOUNT_EMC_LABS=mount;'),context);
 const models=context.window.__review;
 // Rounded display oracles from independent units/closed-form calculations.
-const expected={capacitive:['0.953 V','17.7°'],'skin-depth':['66.1 μm','13.1 dB'],filter:['50.3 kHz'],
+const expected={'oxide-field':['1 GV/m'],'induced-field':['1.57 mV/m'],'common-return':['0.400 V'],'skin-wire':['66.1 μm','7.57'],capacitive:['0.953 V','17.7°'],'skin-depth':['66.1 μm','13.1 dB'],filter:['50.3 kHz'],
  'capacitor-srf':['5.03 MHz','20 mΩ'],'line-reflection':['2.50 ns','1.65 V','3.30 V'],
  'eddy-shield':['15.9 kHz','0.200'],'probe-ideal':['31.4 mV'],'ground-rise':['3.18e+3 V','227 V'],
  'surge-lead':['600 V'],'impulse-shield':['25%','2.91 MHz'],switching:['15.9 kHz','200 kV']};

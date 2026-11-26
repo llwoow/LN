@@ -1,0 +1,10 @@
+<section class="reader-section">
+<h2>反馈系统究竟在控制哪个量</h2>
+<p>设有一只带温度传感器的恒温箱。把设定值设为 40 °C，显示也稳定在 40 °C。箱内放入一支经过校准的温度计，结果是 38 °C。这种情况可以与闭环正常工作同时发生，因为比较器看到的是传感器读数。</p>
+<h3 id="control-sensor-offset" data-knowledge-kind="概念" data-knowledge-terms="闭环 反馈 给定 扰动 传感器偏差">从显示、真实量和执行信号画回路</h3>
+<p id="control-loop-symbols">设给定值为 \(r\)，实际温度为 \(y\)，传感器输出为 \(y_m\)，比较误差为 \(e\)，单位均为 °C（误差是温差）。若传感器偏高 \(b=2\,\mathrm K\)，则 \(y_m=y+b\)。控制器把 \(e=r-y_m\) 变成加热功率命令，箱体则把功率和环境变化变成新的温度。</p>
+\[e=r-y-b.\]
+<p>只要调节器最后使 \(e=0\)，真实温度就为 \(r-b=38\,{}^\circ\mathrm C\)。若改成室外降温，热量外流增加，反馈可以通过增加加热功率来补偿；偏差发生在测量一侧，按旧传感器的误差调得越小，也不会自动识别这 2 K。可用一支独立传感器或已知参考点检验测量端。</p>
+<p>工程上还有可达性。即使传感器没有偏差，若环境低温且加热器已经开到最大，给定温度仍可能不可达。先沿信号回路画出偏差注入位置，再转到<a href="#course/automatic-control/ac-2-1/control-motor-model">由能量与受力编写对象方程</a>和<a href="#course/automatic-control/ac-7-1/control-saturated-equilibrium">有饱和约束的平衡点</a>。</p>
+<p><a class="secondary-button" data-open-practice href="#practice/automatic-control/ac-1-1/ac-core-sensor-bias">练一题：区分负载扰动和读数偏差</a></p>
+</section>

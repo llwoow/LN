@@ -7,6 +7,12 @@ on:
     paths:
       - '.github/workflows/pages.yml'
       - 'tests/browser_smoke_pages.py'
+      - 'audit/**'
+      - 'scripts/build-course-audit.py'
+      - 'tests/test_course_audit.py'
+      - 'tests/practice-v2.browser.py'
+      - 'practice.js'
+      - 'practice-v2.css'
       - 'scripts/build-static.py'
       - 'scripts/check-publication.py'
       - '.gitleaks.toml'
@@ -51,9 +57,18 @@ jobs:
           python -m pip install --disable-pip-version-check playwright
           python -m playwright install --with-deps chromium
       - name: Verify site assets and navigation under the Pages subdirectory
-        run: python tests/browser_smoke_pages.py
-      - name: Verify English reading, records and listening under the Pages path
-        run: python tests/english2027.browser.py --dist
+        run: |
+          python tests/browser_smoke_pages.py
+          python tests/practice-v2.browser.py
+          python tests/english2027.browser.py --dist
+      - name: Attach audit review screenshots to the PR run
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ln-audit-preview-${{ github.event.pull_request.number }}
+          path: nov13-browser-artifacts/audit-*.png
+          if-no-files-found: ignore
+          retention-days: 14
       - name: Upload the verified static site
         uses: actions/upload-pages-artifact@v3
         with:

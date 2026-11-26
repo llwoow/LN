@@ -1,0 +1,14 @@
+<section class="reader-section">
+<h2>从端口电压到角速度：两条守恒关系接起一个模型</h2>
+<p>给定电压后，电流要经过电枢电感才能建立，角速度还要等待转矩改变量。判断这是几阶对象，先看系统里哪些状态需要独立初值。以下以他励直流电机为例，磁通固定，绕组参数恒定，忽略刷压降和高频换向。</p>
+<h3 id="control-motor-model" data-knowledge-kind="方法" data-knowledge-terms="微分方程 电枢电流 转速 负载扰动 传递函数 建模">电气侧与机械侧的信号怎样互相作用</h3>
+<p id="control-motor-symbols">以流入电机正电端的电枢电流 \(i\)（A）和同向角速度 \(\omega\)（rad/s）为状态。\(u\) 是施加的端电压（V），沿反向定义为正的负载转矩为 \(T_L\)（N·m）。\(R,L\) 是电枢电阻和电感（Ω、H），\(J,b\) 为转动惯量和线性黏性阻力系数（kg·m²、N·m·s/rad），\(k_e,k_t\) 分别是反电势与转矩常数（V·s/rad、N·m/A）。</p>
+\[L\dot i=u-Ri-k_e\omega,\qquad J\dot\omega=k_t i-b\omega-T_L.\]
+<p>第一式来自端口电压平衡。转速升高后反电势占去更多端电压，会压低继续驱动电流的能力。第二式是转矩平衡，外负载取反向，所以在右边为负。先让两式相乘检查电磁能量：把第一式乘电流、第二式乘转速，机电转换功率在统一 SI 单位且 \(k_e,k_t\) 数值相同的模型里一进一出，和式只剩输入、损耗、外部负载以及储能变化。</p>
+<h3 id="control-motor-ports" data-knowledge-kind="跨学科" data-knowledge-terms="负载扰动 电机 正负号 拉普拉斯 零初值">为什么加电和加负载是两条不同通道</h3>
+<p>零初始状态下作拉普拉斯变换。用 \(s\) 表示复频率，\(\Omega(s)\)、\(U(s)\) 和 \(T_L(s)\) 是相应时域变量的变换。先从第二式写 \(k_t I=(Js+b)\Omega+T_L\)，再代回电气方程，得到</p>
+\[\Omega(s)=\frac{k_t U(s)-(Ls+R)T_L(s)}{(Ls+R)(Js+b)+k_e k_t}.\]
+<p>加电和加负载通常共用极点，但分子不同。取 \(R=2\,\Omega,b=0.02\,\mathrm{N\,m\,s/rad},k_t=k_e=0.1\)（各自 SI 单位），令 \(u=12\,\mathrm V,T_L=0.2\,\mathrm{N\,m}\)，从稳态方程消去电流得 \(\omega=(1.2-0.4)/(0.04+0.01)=16\,\mathrm{rad/s}\)，再由转矩平衡得 \(i=5.2\,\mathrm A\)。代回电压式 \(2\times5.2+0.1\times16=12\)，符号和量纲相符。</p>
+<p>若电机原本在转，不能用“传递函数乘输入”直接表示全部响应；原状态还提供零输入分量。短时间估算电流建立、或只看慢速机电行为时，是否能删去一条状态，可用<a href="#course/electrical-machines/dc-sec35/dc-stall-timescale">限流时间及反电势大小</a>和<a href="#course/automatic-control/ac-3-4/dominant-pole-residue">对所选输出的误差预算</a>判断。</p>
+<p><a class="secondary-button" data-open-practice href="#practice/automatic-control/ac-2-1/ac-core-motor-port">练一题：负载改变时哪个状态先动</a></p>
+</section>

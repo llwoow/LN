@@ -839,6 +839,7 @@
     },
     {
       "id": 11,
+      "modelNote": "<h3 id=\"hs-power-traction\" data-knowledge-kind=\"跨学科\" data-knowledge-terms=\"恒功率 牵引力限制 车辆 电机\">真实起步如何接上恒功率模型？</h3><p>可用一个有限牵引力模型接上零速。设最大牵引力 2000 N、恒功率段功率 20 kW，转入恒功率时速率为 10 m/s。更慢时取牵引力 2000 N；更快时取 20000/v。两段在 10 m/s 处都给 2000 N，避免了零速除法。对照<a href=\"#course/electrical-machines/dc-sec35/dc-stall-timescale\">电机为何需区分限流前后</a>，两种模型都要先检查驱动允许什么，再使用相应公式。</p>",
       "title": "恒功率启动：加速度减小，速度曲线向下弯",
       "answer": "BC（按常规理想模型）",
       "tags": [

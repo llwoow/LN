@@ -45,15 +45,15 @@ with sync_playwright() as p:
   gif.locator('[data-stop-gif]').click();assert not gif.locator('img[src]').count()
   # Viewing worked analysis then choosing redo cannot turn a later answer into an independent first answer.
   page.goto(route(13));page.locator('#lesson-body[aria-busy=false]').wait_for()
-  page.locator('#lesson-body [data-open-practice]').click();dialog=page.locator('#practice-dialog')
-  assert dialog.locator('[data-question-id]').get_attribute('data-question-id')=='hs-physics001-13'
-  dialog.locator('[data-p-redo]').click()
-  for option in ['A','B','D']:dialog.locator('[name=p-answer][value='+option+']').check()
-  dialog.locator('[data-p-submit]').click()
+  page.locator('#lesson-body [data-open-practice]').click();practice=page.locator('main.practice-main')
+  assert practice.locator('[data-question-id]').get_attribute('data-question-id')=='hs-physics001-13'
+  practice.locator('[data-p-redo]').click()
+  for option in ['A','B','D']:practice.locator('[name=p-answer][value='+option+']').check()
+  practice.locator('[data-p-submit]').click()
   r=page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["hs-physics001-13"]')
   assert r['attempts'][0]['correct'] is True and r['attempts'][0]['assisted'] is True
-  dialog.locator('[data-p-favorite]').click();dialog.locator('[data-p-mistake]').click()
-  dialog.locator('[data-close-practice]').click()
+  practice.locator('[data-p-favorite]').click();practice.locator('[data-p-mistake]').click()
+  page.locator('[data-practice-return]').click();page.locator('#lesson-body[aria-busy=false]').wait_for()
   before=page.evaluate('localStorage.getItem("ln.practice.v1")')
   page.goto(BASE+'#course/hs-physics/physics-001');page.locator('[data-notes-import]').wait_for()
   data={'assessment':'physics-001','records':{'7':{'rating':1,'note':'<img src=x onerror=alert(1)> 还要检查绳长','updatedAt':'2026-11-10T00:00:00Z'},'19':{'rating':3,'note':'invalid','updatedAt':'2026-11-10T00:00:00Z'}}}

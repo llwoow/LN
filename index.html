@@ -18,10 +18,14 @@
     } catch {}
   </script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="practice-v2.css">
+  <link rel="stylesheet" href="courses/electrical-machines/assessment/dc-chapter.css">
   <script src="courses/electrical-machines/manifest.js" defer></script>
   <script src="courses/electrical-machines/knowledge-map.js" defer></script>
   <script src="courses/electrical-materials/manifest.js" defer></script>
   <script src="courses/electrical-materials/knowledge-map.js" defer></script>
+  <script src="courses/new-energy-materials/manifest.js" defer></script>
+  <script src="courses/new-energy-materials/knowledge-map.js" defer></script>
   <script src="courses/electromagnetic-compatibility/manifest.js" defer></script>
   <script src="courses/electromagnetic-compatibility/knowledge-map.js" defer></script>
   <script src="courses/automatic-control/manifest.js" defer></script>
@@ -29,19 +33,29 @@
   <script src="courses/power-semiconductors/manifest.js" defer></script>
   <script src="courses/robot-drive-engineering/manifest.js" defer></script>
   <script src="courses/robot-drive-engineering/knowledge-map.js" defer></script>
+  <script src="courses/english/manifest.js" defer></script>
+  <script src="courses/english/knowledge-map.js" defer></script>
+  <script src="courses/english/drafts.js" defer></script>
   <script src="courses/highschool/courses.js" defer></script>
   <script src="courses/highschool/catalog.js" defer></script>
+  <script src="courses/digital-signal-processing/manifest.js" defer></script>
+  <script src="courses/digital-signal-processing/knowledge-map.js" defer></script>
   <script src="courses.js" defer></script>
   <script src="courses/resources/catalog.js" defer></script>
   <script src="resource-library.js" defer></script>
   <script src="courses/practice/bank.js" defer></script>
+  <script src="courses/electrical-machines/assessment/dc-chapter.js" defer></script>
   <script src="practice.js" defer></script>
   <script src="highschool-library.js" defer></script>
   <script src="knowledge-map.js" defer></script>
+  <script src="courses/cross-knowledge-data.js" defer></script>
+  <script src="courses/cross-knowledge.js" defer></script>
   <script src="reference-index.js" defer></script>
   <script src="publication.js" defer></script>
   <script src="glossary-index.js" defer></script>
   <script src="glossary.js" defer></script>
+  <script src="courses/electromagnetic-compatibility/exam-review-data.js" defer></script>
+  <script src="courses/electromagnetic-compatibility/exam-review.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -82,6 +96,7 @@
         <a class="nav-link" href="#favorites" data-nav="favorites"><svg class="icon"><use href="#i-star"/></svg>收藏<span class="nav-count" id="favorite-count"></span></a>
         <a class="nav-link highschool-entry" href="#highschool" data-nav="highschool"><svg class="icon"><use href="#i-book"/></svg>高中</a>
         <a class="nav-link" href="#resources" data-nav="resources"><svg class="icon"><use href="#i-file"/></svg>实作与资料</a>
+        <a class="nav-link" href="#knowledge" data-nav="knowledge"><svg class="icon"><use href="#i-network"/></svg>跨课程知识</a>
         <a class="nav-link" href="#practice" data-nav="practice"><svg class="icon"><use href="#i-book"/></svg>练习</a>
       </nav>
       <section class="sidebar-section" id="sidebar-favorites" aria-labelledby="sidebar-favorites-title" hidden>
@@ -104,7 +119,7 @@
       <div class="topbar-left"><button class="icon-button sidebar-toggle" id="sidebar-toggle" aria-label="展开侧栏" aria-controls="sidebar" aria-expanded="true" title="展开侧栏"><svg class="icon"><use href="#i-panel"/></svg></button><span id="breadcrumb-current">课程</span></div>
       <div id="reader-question-slot" hidden></div>
       <nav class="reader-dock" id="reader-dock" aria-label="阅读快捷操作" hidden></nav>
-      <div class="topbar-actions"><button class="icon-button" id="quick-theme" aria-label="切换到夜间模式" title="切换日间 / 夜间"><svg class="icon"><use href="#i-moon"/></svg></button><button class="icon-button" id="top-settings" aria-label="外观设置" title="外观"><svg class="icon"><use href="#i-sliders"/></svg></button></div>
+      <div class="topbar-actions"><a class="reader-dock-item practice-return" data-practice-return hidden><svg class="icon" aria-hidden="true"><use href="#i-back"/></svg><span>返回正文</span></a><button class="icon-button" id="quick-theme" aria-label="切换到夜间模式" title="切换日间 / 夜间"><svg class="icon"><use href="#i-moon"/></svg></button><button class="icon-button" id="top-settings" aria-label="外观设置" title="外观"><svg class="icon"><use href="#i-sliders"/></svg></button></div>
     </header>
     <main id="main" tabindex="-1"></main>
   </div>
@@ -119,11 +134,6 @@
   <dialog class="resource-dialog" id="resource-dialog" aria-labelledby="resource-dialog-title">
     <div class="dialog-heading"><h2 id="resource-dialog-title">实作与资料</h2><button class="icon-button" data-close-resources aria-label="关闭实作资料">×</button></div>
     <div id="resource-dialog-content"></div>
-  </dialog>
-
-  <dialog class="practice-dialog" id="practice-dialog" aria-labelledby="practice-dialog-title">
-    <div class="dialog-heading"><h2 id="practice-dialog-title">练习</h2><button class="icon-button" data-close-practice aria-label="关闭练习">×</button></div>
-    <div id="practice-dialog-content"></div>
   </dialog>
 
   <dialog class="settings-dialog" id="settings-dialog" aria-labelledby="settings-title">

@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-5-3"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-5-3\">5.3 FIR基本结构</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>5.3.1 有限响应与稳定性</li><li>5.3.2 直接卷积型</li><li>5.3.3 级联型</li><li>5.3.4 频率抽样型</li><li>5.3.5 FFT快速卷积</li><li>5.3.6 线性相位对称系数复用</li></ul><p><strong>重点与判断：</strong>偶对称先加、奇对称先减，可减少乘法；频率抽样型可能含递归支路，理论极零抵消对量化敏感。</p></section>"};

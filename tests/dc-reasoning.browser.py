@@ -45,8 +45,8 @@ def run():
 
                 page.goto(url + "#course/electrical-machines/dc-answers", wait_until="domcontentloaded")
                 page.locator('[data-practice-question="dc-branch-wave-six"]').click()
-                dialog = page.locator('#practice-dialog:modal')
-                panel = dialog.locator('[data-practice-panel]')
+                practice = page.locator('main.practice-main')
+                panel = practice.locator('[data-practice-panel]')
                 panel.locator('input[value="divide-poles"]').check()
                 panel.locator('[data-p-submit]').click()
                 assert panel.locator('.practice-feedback h3').inner_text() == '答案尚不吻合，检查下面的推理'
@@ -58,7 +58,8 @@ def run():
                 state = page.evaluate('JSON.parse(localStorage.getItem("ln.practice.v1"))["dc-branch-wave-six"]')
                 assert state['favorite'] and state['attempts'][0]['correct'] is False
                 assert state['attempts'][-1]['correct'] is True
-                dialog.locator('[data-close-practice]').click()
+                page.locator('[data-practice-return]').click()
+                page.locator('#lesson-body[aria-busy=false]').wait_for()
                 assert page.locator('#dc-concept-diagnostics [data-practice-question]').count() == 5
                 assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
                 page.screenshot(path=str(OUT / ("dc-diagnostics-" + label + ".png")), full_page=True)
@@ -68,6 +69,58 @@ def run():
                 section.wait_for(timeout=20000)
                 assert "356.52" in section.inner_text()
                 assert "待确认" in section.inner_text()
+
+                # Capture the newly authored native-HTML homework review on this PR branch.
+                page.goto(url + "#course/electrical-machines/dc-homework-review", wait_until="domcontentloaded")
+                review = page.locator("#dc-homework-review")
+                review.wait_for(timeout=20000)
+                assert page.locator(".dc-hw-card").count() == 9
+                assert page.locator(".dc-hw-card h4", has_text="原题").count() == 9
+                assert page.locator(".dc-hw-toc").evaluate("(e) => getComputedStyle(e).display") == "flex"
+                formulas = page.locator("[data-dc-tex]")
+                assert formulas.count() >= 50
+                rendered_count = page.locator("[data-dc-tex] .katex").count()
+                if rendered_count != formulas.count():
+                    report = page.evaluate("""() => ({
+                        loaded: !!window.katex,
+                        total: document.querySelectorAll('[data-dc-tex]').length,
+                        rendered: document.querySelectorAll('[data-dc-tex] .katex').length,
+                        firstUnrendered: [...document.querySelectorAll('[data-dc-tex]')]
+                          .filter(el => !el.querySelector('.katex')).slice(0, 6)
+                          .map(el => ({tex:el.dataset.dcTex, text:el.textContent.slice(0,120)}))
+                    })""")
+                    print("KaTeX render diagnostic:", report, flush=True)
+                assert rendered_count == formulas.count()
+                assert page.locator("[data-dc-tex] math").count() == formulas.count()
+                assert page.locator(".katex-error").count() == 0
+                assert not page.evaluate("Array.from(document.querySelectorAll('[data-dc-tex]')).some(el => el.scrollWidth > el.clientWidth && getComputedStyle(el).overflowX !== 'auto')")
+
+                assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
+                page.evaluate("window.scrollTo(0, 0)")
+                page.screenshot(path=str(OUT / ("dc-homework-opening-" + label + ".png")))
+                for number in ("3-9", "3-13", "3-17", "3-18"):
+                    card = page.locator("#dc-hw-" + number)
+                    card.evaluate("(e) => window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 110)")
+                    page.screenshot(path=str(OUT / ("dc-homework-" + number + "-" + label + ".png")))
+                for number in ("3-13", "3-17"):
+                    note = page.locator("#dc-hw-" + number + " h4", has_text="原稿疑问与澄清")
+                    note.evaluate("(e) => window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 110)")
+                    page.screenshot(path=str(OUT / ("dc-homework-" + number + "-notes-" + label + ".png")))
+                # Every exam route must be readable, with local KaTeX and no page-level overflow.
+                for chapter in range(1, 11):
+                    key = "exam-ch" + str(chapter)
+                    page.goto(url + "#course/electrical-machines/" + key, wait_until="domcontentloaded")
+                    body = page.locator("#lesson-body")
+                    body.locator("#" + key + "-topic-1").wait_for(timeout=20000)
+                    blocks = body.locator(".math-block")
+                    assert blocks.count() > 0, key
+                    assert body.locator(".math-block .katex-mathml math").count() == blocks.count(), key
+                    assert body.locator(".katex-error").count() == 0, key
+                    assert not page.evaluate("document.documentElement.scrollWidth > innerWidth"), key
+                    assert body.locator("h3", has_text="典型题：").count() >= 1, key
+                    if chapter in (4, 5, 6, 7):
+                        page.evaluate("window.scrollTo(0,0)")
+                        page.screenshot(path=str(OUT / ("exam-ch" + str(chapter) + "-" + label + ".png")))
                 page.close()
             browser.close()
     finally:

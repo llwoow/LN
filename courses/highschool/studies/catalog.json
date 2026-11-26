@@ -1,0 +1,182 @@
+{
+  "chinese": [
+    {
+      "id": "study-poetry",
+      "title": "诗歌鉴赏：从“竹喧”到“归浣女”",
+      "file": "chinese.html",
+      "keywords": [
+        "古典诗词",
+        "证据",
+        "描写次序"
+      ],
+      "connections": [
+        {
+          "section": "yw-01-k03",
+          "label": "诗句作为证据",
+          "description": "用声响和动静出现的次序解释写景，并核对推论是否超出原句。"
+        }
+      ],
+      "equationPrefix": "S.1"
+    }
+  ],
+  "english": [
+    {
+      "id": "study-relative-clauses",
+      "title": "关系从句：一句话到底说了哪些人",
+      "file": "english.html",
+      "keywords": [
+        "英语阅读",
+        "定语从句",
+        "陈述范围"
+      ],
+      "connections": [
+        {
+          "section": "yy-02-k03",
+          "label": "按英文限定范围阅读",
+          "description": "用一段调查材料区分限定性与非限定性从句，核对 all 和 only 的推断。"
+        }
+      ],
+      "equationPrefix": "S.1"
+    }
+  ],
+  "math": [
+    {
+      "id": "study-conditional-probability",
+      "title": "条件概率：报警后怎样换分母",
+      "file": "math.html",
+      "keywords": [
+        "双向表",
+        "条件概率",
+        "基准率"
+      ],
+      "connections": [
+        {
+          "section": "sx-02-k05",
+          "label": "条件改变样本范围",
+          "description": "同一个交叉计数分别除以报警总数和缺陷总数，得到不同的条件概率。"
+        }
+      ],
+      "equationPrefix": "S.1"
+    }
+  ],
+  "physics": [
+    {
+      "id": "study-capacitor",
+      "title": "电容储能：接电源与断电源",
+      "file": "physics.html",
+      "keywords": [
+        "电容",
+        "电介质",
+        "能量"
+      ],
+      "connections": [
+        {
+          "section": "wl-03-k02",
+          "label": "电场能量的边界",
+          "description": "从连线判断电荷或电压恒定，再核对源功、电场能和机械功。"
+        }
+      ],
+      "equationPrefix": "S.1"
+    }
+  ],
+  "chemistry": [
+    {
+      "id": "study-equilibrium",
+      "title": "化学平衡：压缩后反应往哪边走",
+      "file": "chemistry.html",
+      "keywords": [
+        "反应商",
+        "气相平衡",
+        "惰性气体"
+      ],
+      "connections": [
+        {
+          "section": "hx-03-k02",
+          "label": "先算瞬时反应商",
+          "description": "恒温时比较瞬时反应商和平衡常数，区分改体积和只改总压。"
+        }
+      ],
+      "equationPrefix": "S.1"
+    }
+  ],
+  "biology": [
+    {
+      "id": "study-testcross",
+      "title": "测交：小样本怎样支持基因型判断",
+      "file": "biology.html",
+      "keywords": [
+        "遗传",
+        "测交",
+        "证据强度"
+      ],
+      "connections": [
+        {
+          "section": "sw-02-k01",
+          "label": "从分离定律到观测证据",
+          "description": "隐性亲本固定一个等位基因，后代为另一方配子提供可检验线索。"
+        }
+      ],
+      "equationPrefix": "S.1"
+    }
+  ],
+  "politics": [
+    {
+      "id": "study-personal-data",
+      "title": "法治案例：报名表为什么要减少字段",
+      "file": "politics.html",
+      "keywords": [
+        "权利保护",
+        "最小必要",
+        "材料分析"
+      ],
+      "connections": [
+        {
+          "section": "zz-03-k03",
+          "label": "把条文应用到具体目的",
+          "description": "区分处理个人信息的依据与收集范围，逐项核对报名字段。"
+        }
+      ],
+      "equationPrefix": "S.1"
+    }
+  ],
+  "history": [
+    {
+      "id": "study-charter",
+      "title": "史料核验：三个日期与同一份宪章",
+      "file": "history.html",
+      "keywords": [
+        "联合国",
+        "史料",
+        "通过签署生效"
+      ],
+      "connections": [
+        {
+          "section": "ls-02-k05",
+          "label": "按历史事件对照史料",
+          "description": "用会议材料区分通过和签署，再用条约登记核对生效。"
+        }
+      ],
+      "equationPrefix": "S.1"
+    }
+  ],
+  "geography": [
+    {
+      "id": "study-runoff",
+      "title": "城市地表与径流：总量不等于洪峰",
+      "file": "geography.html",
+      "keywords": [
+        "水循环",
+        "地表径流",
+        "城市内涝"
+      ],
+      "connections": [
+        {
+          "section": "dl-01-k03",
+          "label": "从地表性质到水文过程",
+          "description": "用流量过程线区分直接径流总量、峰值与峰现时间。"
+        }
+      ],
+      "equationPrefix": "S.1"
+    }
+  ]
+}

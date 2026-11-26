@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["electrical-machines/book-6-2"]={"html":"<section class=\"reader-section\" id=\"book-6-2\"><h2>6.2 同步发电机的空载与负载磁场</h2><p>空载场来自转子励磁；负载时定子电枢电流建立旋转磁动势，与转子场在同一同步参考系下合成。电枢反应的助磁、去磁和交磁性质取决于电流相对内部电势的相位，不应只看端电压功率因数。</p><p>在发电机参考方向下，以内部电势为参照，纯感性电枢电流近似去磁，纯容性近似助磁；一般相位分解为直、交轴。</p><p>相关知识：<a href=\"#course/electrical-machines/dc-sec33\">3.3 空载和负载时的磁场</a></p></section>"};

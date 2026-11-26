@@ -1,0 +1,2 @@
+window.LN_LESSONS=window.LN_LESSONS||{};
+window.LN_LESSONS["digital-signal-processing/dsp-1-4"]={"html":"<section class=\"article-section\"><h2 id=\"dsp-1-4\">1.4 连续时间信号的抽样</h2><p>学习提纲 · 核心。本节为重点略读，详细推导、例题与教材正文核对待补。</p><ul><li>1.4.1 理想抽样与冲激串</li><li>1.4.2 抽样定理与频谱周期复制</li><li>1.4.3 实际抽样、保持及抗混叠</li><li>*1.4.4 带通抽样：频带折叠不得重叠</li><li>*1.4.5 连续信号、抽样冲激串、离散序列之间的区别</li><li>1.4.6 sinc 插值重构</li><li>1.4.7 正弦抽样与频率等价</li></ul><p><strong>重点与判断：</strong>低通带限模型下需使频谱复制不重叠，通常选 fs&gt;2fmax；数字频率 ω=2πf/fs。混叠后不能仅靠数字低通恢复。</p></section>"};
