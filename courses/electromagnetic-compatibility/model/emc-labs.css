@@ -12,3 +12,7 @@
 .emc-lab math[display='block'] { overflow-x:auto; }
 @media (max-width:600px) {.emc-lab { padding:13px 12px; }.emc-lab-inputs { grid-template-columns:1fr; }}
 @media print {.emc-lab-ui { break-inside:avoid; }}
+
+.emc-grounding-diagram svg { min-width: 0; max-width: 720px; margin-inline: auto; }
+.emc-grounding-explainer { margin: 1.1em 0 1.6em; }
+.emc-grounding-explainer h4 { margin: 1em 0 .5em; }

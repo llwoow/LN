@@ -10,6 +10,7 @@ const expected={'mode-split':['I1=11 mA','I2=-9 mA','2 mA'],'lisn-two-port':['ID
  'capacitor-srf':['5.03 MHz','20 mΩ'],'line-reflection':['2.50 ns','1.65 V','3.30 V'],
  'eddy-shield':['15.9 kHz','0.200'],'probe-ideal':['31.4 mV'],'ground-rise':['3.18e+3 V','227 V'],
  'surge-lead':['600 V'],'impulse-shield':['25%','2.91 MHz'],switching:['15.9 kHz','200 kV']};
+Object.assign(expected,{'ground-case':['110 V'],'ground-float':['地环路'],'ground-topology':['共用地线'],'ground-mixed':['15.9 Ω'],'ground-partition':['0 mV'],'ground-loop':['200 mA','10 mV'],'ground-flux':['3.14 mV'],'ground-suppression':['切断'],'ground-choke':['19.8 μH'],'ground-shield-point':['B点','40 mV'],'ground-shield-end':['单端'],'ground-length':['λ=10 m','0.500 m','1 m'],'ground-skin':['66.1 μm','3.03']});
 assert.equal(Object.keys(models).length,Object.keys(expected).length);
 for(const [name,model] of Object.entries(models)){
  const initial=Object.fromEntries(model.inputs.map(s=>[s.key,s.value]));
