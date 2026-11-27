@@ -156,8 +156,9 @@
     const selected = courses.find(c => c.id === selectedId);
     const visible = courses.filter(c => isHighSchool(c) === inHighSchool());
     const groupNames = [...new Set(visible.map(groupFor))];
-    if (lastSidebarRoute !== location.hash) {
-      lastSidebarRoute = location.hash;
+    const sidebarRoute = currentView === 'course' ? 'course/' + selectedId : currentView;
+    if (lastSidebarRoute !== sidebarRoute) {
+      lastSidebarRoute = sidebarRoute;
       if (currentView === 'course' && selected) {
         openGroups.add(groupFor(selected));
         sidebarMode = 'directory';
@@ -167,6 +168,7 @@
     if (!Array.isArray(navState?.groups) && !openGroups.size && groupNames.length) openGroups.add(groupNames[0]);
     const sectionId = location.hash.split('/')[2];
     const directory = selected && currentView === 'course' ? listedSections(selected) : [];
+    const activeGroup = directory.find(section => section.id === sectionId)?.group ?? directory[0]?.group;
     const useDirectory = sidebarMode === 'directory' && directory.length;
     $('#sidebar-nav-mode').hidden = !directory.length;
     for (const btn of $('[data-sidebar-mode]')) btn.setAttribute('aria-pressed', String(btn.dataset.sidebarMode === sidebarMode));
@@ -175,7 +177,7 @@
         (selected.id === 'electromagnetic-compatibility' ? '<a class="sidebar-course-link" href="#course/' + selected.id + '/exam-review">考试复习</a>' : '') +
         (selected.workedExercises?.length ? '<a class="sidebar-course-link" href="#course/' + selected.id + '/worked-exercises">已做题详解</a>' : '') +
         (!selected.outlineOnly ? '<a class="sidebar-course-link" href="#practice/' + selected.id + '">习题自测</a><a class="sidebar-course-link" href="#resources/' + selected.id + '">实作与资料</a>' : '') +
-        [...new Set(directory.map(s => s.group))].map(group => '<details class="ln-course-group"' + (directory.find(s => s.id === sectionId)?.group === group || !sectionId ? ' open' : '') + '><summary>' + escapeHTML(group) + '</summary><nav>' + directory.filter(s => s.group === group).map(s => '<a class="ln-section-link" href="#course/' + selected.id + '/' + s.id + '"' + (sectionId === s.id ? ' aria-current="page"' : '') + '>' + escapeHTML(s.title) + '</a>').join('') + '</nav></details>').join('') + '</div>'
+        [...new Set(directory.map(s => s.group))].map(group => '<details class="ln-course-group"' + (activeGroup === group ? ' open' : '') + '><summary>' + escapeHTML(group) + '</summary><nav>' + directory.filter(s => s.group === group).map(s => '<a class="ln-section-link" href="#course/' + selected.id + '/' + s.id + '"' + (sectionId === s.id ? ' aria-current="page"' : '') + '>' + escapeHTML(s.title) + '</a>').join('') + '</nav></details>').join('') + '</div>'
       : groupNames.map(group => '<details class="ln-course-group" data-library-group="' + escapeHTML(group) + '"' + (openGroups.has(group) ? ' open' : '') + '><summary>' + escapeHTML(group) + '<small>' + visible.filter(c => groupFor(c) === group).length + '</small></summary><nav>' + visible.filter(c => groupFor(c) === group).map(c => row(c) + models(c)).join('') + '</nav></details>').join('');
     $('#subject-nav').closest('.subject-group').hidden = true;
     const historyList = $('#ln-recent-list');

@@ -63,6 +63,26 @@ def main():
                 page.locator('#ln-search-results a[href="#course/digital-signal-processing"]').wait_for()
                 page.get_by_role('button', name='关闭搜索').click()
                 assert page.locator('[data-library-group="控制与信号"]').count() == 1
+                for width in (1280, 390, 320):
+                    page.set_viewport_size({'width': width, 'height': 800})
+                    page.goto(base + '#course/electrical-machines')
+                    if width <= 390:
+                        page.locator('#sidebar-toggle').click()
+                    directory = page.locator('.ln-sidebar-directory')
+                    assert directory.locator('details[open]').count() == 1
+                    page.locator('[data-sidebar-mode="courses"]').click()
+                    page.evaluate("location.hash = '#course/electrical-machines/dc-sec34'")
+                    page.locator('#lesson-body[aria-busy=false][data-lesson-key$="/dc-sec34"]').wait_for()
+                    if width <= 390:
+                        page.locator('#sidebar-toggle').click()
+                    assert page.locator('[data-sidebar-mode="courses"]').get_attribute('aria-pressed') == 'true'
+                    page.locator('[data-sidebar-mode="directory"]').click()
+                    current = directory.locator('[aria-current="page"]')
+                    assert current.is_visible()
+                    assert current.get_attribute('href').endswith('/dc-sec34')
+                    assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+                page.set_viewport_size({'width': 1280, 'height': 900})
+                page.goto(base + '#overview', wait_until='networkidle')
                 search = page.get_by_role('searchbox', name='搜索课程或知识点')
                 for width in (1280, 390, 320):
                     page.set_viewport_size({'width': width, 'height': 900})
