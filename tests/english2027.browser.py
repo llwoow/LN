@@ -46,7 +46,7 @@ with tempfile.TemporaryDirectory(prefix='ln-english-') as folder:
                 else:box.locator('[data-p-reason]').fill('A draft for human review of content, structure and language.')
                 box.locator('[data-p-submit]').click();box.locator('.practice-feedback').wait_for()
             # Existing course entry, native graph and all supplied chapters.
-            page.goto(base+'#highschool');page.locator('a[href="#course/hs-english"]').first.click()
+            page.goto(base+'#highschool');page.locator('#course-list a[href="#course/hs-english"]').click()
             page.locator('ln-knowledge-map svg').wait_for()
             page.get_by_role('link',name='英语讲义',exact=True).click();page.locator('[data-english-records]').wait_for()
             for section in course['sections']:
