@@ -833,3 +833,49 @@ mjx-container .definition-symbol:focus-visible{outline:2px solid var(--accent);o
 /* Native English practice can open before any course reading stylesheet. */
 .practice-prompt audio { display: block; width: 100%; max-width: 100%; margin: 14px 0; }
 .practice-panel .english-model { white-space: pre-wrap; font-family: Georgia, serif; line-height: 1.9; }
+
+/* LN compact course navigation and universal search */
+.ln-course-group>summary{display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13px;font-weight:650;padding:7px 10px;list-style:none;overflow-wrap:anywhere}
+.ln-course-group>summary::-webkit-details-marker{display:none}
+.ln-course-group>summary::before{content:'›';font-size:17px;line-height:1}
+.ln-course-group[open]>summary::before{transform:rotate(90deg)}
+.ln-course-group>summary small{margin-left:auto;color:var(--muted);font-weight:500}
+.ln-course-group nav{padding-left:8px}
+.ln-sidebar-modes{display:flex;gap:3px;margin:4px 8px 8px;background:var(--subtle);border:1px solid var(--border);border-radius:7px;padding:3px}
+.ln-sidebar-modes[hidden]{display:none}
+.ln-sidebar-modes button{flex:1;padding:4px;border-radius:5px;font-size:13px}
+.ln-sidebar-modes button[aria-pressed=true]{background:var(--hover);font-weight:650}
+.ln-section-link{display:block;padding:6px 9px;border-radius:6px;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.ln-section-link:hover,.ln-section-link[aria-current=page]{background:var(--hover)}
+.ln-section-link[aria-current=page]{font-weight:650;color:var(--accent)}
+.ln-section-link small{display:block;color:var(--muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.filter-row{flex-wrap:wrap}
+.ln-top-search{display:flex;align-items:center;gap:5px;width:auto;padding-inline:8px}
+.ln-top-search span{font-size:13px}
+.ln-search-dialog{box-sizing:border-box;width:min(650px,calc(100% - 24px));max-height:85dvh;overflow:auto;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);padding:18px;box-shadow:0 12px 50px #0003}
+.ln-search-dialog::backdrop{background:#0006}
+.ln-search-dialog .ln-search-field{box-sizing:border-box;width:100%;margin:10px 0}
+.ln-search-filters{display:flex;gap:8px;flex-wrap:wrap}
+.ln-search-filters select{min-height:36px;max-width:100%;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:5px 8px;font:inherit;font-size:13px}
+#ln-search-results{list-style:none;margin:8px 0;padding:0}
+#ln-search-results a{display:flex;align-items:flex-start;gap:10px;padding:9px 5px;border-bottom:1px solid var(--border);overflow-wrap:anywhere}
+#ln-search-results a:hover,.ln-history-query:hover{background:var(--hover)}
+#ln-search-results a>span:last-child{min-width:0}
+#ln-search-results small{display:block;color:var(--muted);font-size:12px}
+#ln-search-results mark{color:var(--text);background:var(--accent-soft);font-weight:750}
+.ln-history-query{padding:7px 10px;text-align:left;width:100%;overflow-wrap:anywhere}
+@media(max-width:1100px){.ln-top-search span{display:none}}
+@media(max-width:720px){.ln-top-search{padding-inline:4px}.ln-search-dialog{padding:12px}.ln-search-dialog .course-search input{font-size:16px}.ln-search-filters select{flex:1;min-width:0}}
+@media print{.ln-search-dialog{display:none}}
+
+/* One visible chapter navigation on desktop, with the original reader outline
+   retained for collapsed sidebar and mobile, and fixed directory always available. */
+@media(min-width:721px){
+  html[data-sidebar=expanded] .reader-layout{grid-template-columns:minmax(0,1fr)}
+  html[data-sidebar=expanded] .reader-outline{display:none}
+}
+@media(max-width:420px){
+  .is-reading #quick-theme{display:none}
+  .is-reading .ln-top-search{min-width:32px;width:32px}
+  .is-reading .reader-dock-item{min-width:32px;padding-inline:6px}
+}

@@ -52,6 +52,17 @@ def main():
                     page.locator('#exam-emc-2-3').wait_for()
                 page.set_viewport_size({'width': 1280, 'height': 900})
                 page.goto(base + '#overview', wait_until='networkidle')
+                # New universal search: works from any route without leaving it.
+                page.get_by_role('button', name='打开全站搜索').click()
+                universal = page.get_by_role('searchbox', name='全站搜索关键词')
+                universal.fill('FFT')
+                page.locator('#ln-search-results a').first.wait_for()
+                assert page.url.endswith('#overview')
+                page.get_by_label('搜索范围', exact=True).select_option('higher')
+                page.get_by_label('搜索类型', exact=True).select_option('课程')
+                page.locator('#ln-search-results a[href="#course/digital-signal-processing"]').wait_for()
+                page.get_by_role('button', name='关闭搜索').click()
+                assert page.locator('[data-library-group="控制与信号"]').count() == 1
                 search = page.get_by_role('searchbox', name='搜索课程或知识点')
                 for width in (1280, 390, 320):
                     page.set_viewport_size({'width': width, 'height': 900})

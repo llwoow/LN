@@ -7,6 +7,16 @@
   const icon = (name) => '<svg class="icon" aria-hidden="true"><use href="#i-' + name + '"/></svg>';
   const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
   const categories = Object.fromEntries(Object.entries({ science: '理学', engineering: '工学', computing: '计算机' }).filter(([, name]) => courses.some((course) => course.category === name)));
+  const libraryGroups = Object.fromEntries(Object.entries({
+    electrical: '电气工程', control: '控制与信号', electronics: '电子与嵌入式',
+    materials: '材料与能源', general: '通用能力', mathematics: '数学与建模'
+  }).filter(([, name]) => courses.some(course => course.level !== 'highschool' && course.libraryGroup === name)));
+  for (const course of courses.filter(c => c.level !== 'highschool')) {
+    if (!Object.values(libraryGroups).includes(course.libraryGroup))
+      libraryGroups['group-' + course.id] = course.libraryGroup;
+  }
+  const groupFor = course => isHighSchool(course) ? course.track : course.libraryGroup;
+  const matchesCategory = (course, value) => value === '全部' || groupFor(course) === value || course.category === value;
   const palettes = [
     { id: 'ink', name: '黑白', color: '#414141' },
     { id: 'sage', name: '鼠尾草', color: '#65876b' },
@@ -53,6 +63,13 @@
   const isHighSchool = (course) => course.level === 'highschool';
   const courseHome = (course) => isHighSchool(course) ? '#highschool' : '#overview';
   const inHighSchool = () => currentView === 'highschool' || (['course','resources','practice'].includes(currentView) && isHighSchool(courses.find(c => c.id === location.hash.split('/')[1]) || {}));
+  const navState = readStored('ln.navigation.v1', {});
+  const openGroups = new Set(Array.isArray(navState?.groups) ? navState.groups : []);
+  let sidebarMode = 'courses';
+  let lastSidebarRoute = '';
+  let recent = readStored('ln.recent.v1', []);
+  if (!Array.isArray(recent)) recent = [];
+  const saveGroups = () => writeStored('ln.navigation.v1', JSON.stringify({groups:[...openGroups]}));
   let toastTimer;
   const scriptLoads = new Map();
   const styleLoads = new Map();
@@ -136,8 +153,37 @@
     const selectedId = location.hash.split('/')[1];
     const row = (course) => '<a class="sidebar-course-link" href="#course/' + course.id + '"' + (currentView === 'course' && selectedId === course.id ? ' aria-current="page"' : '') + '>' + icon('book') + '<span class="sidebar-course-name">' + escapeHTML(course.title) + '</span>' + '</a>';
     const models = (course) => course.sections.filter((section) => section.kind === 'model').map((section) => '<a class="sidebar-model-link" href="#course/' + course.id + '/' + section.id + '"' + (selectedId === course.id && location.hash.split('/')[2] === section.id ? ' aria-current="page"' : '') + '>' + icon('cube') + '<span>' + escapeHTML(section.title) + '</span></a>').join('');
-    $('#sidebar-course-list').innerHTML = courses.filter(course => isHighSchool(course) === inHighSchool()).map((course) => row(course) + models(course)).join('');
-    $('#subject-nav').closest('.subject-group').hidden = inHighSchool();
+    const selected = courses.find(c => c.id === selectedId);
+    const visible = courses.filter(c => isHighSchool(c) === inHighSchool());
+    const groupNames = [...new Set(visible.map(groupFor))];
+    if (lastSidebarRoute !== location.hash) {
+      lastSidebarRoute = location.hash;
+      if (currentView === 'course' && selected) {
+        openGroups.add(groupFor(selected));
+        sidebarMode = 'directory';
+        saveGroups();
+      } else sidebarMode = 'courses';
+    }
+    if (!Array.isArray(navState?.groups) && !openGroups.size && groupNames.length) openGroups.add(groupNames[0]);
+    const sectionId = location.hash.split('/')[2];
+    const directory = selected && currentView === 'course' ? listedSections(selected) : [];
+    const useDirectory = sidebarMode === 'directory' && directory.length;
+    $('#sidebar-nav-mode').hidden = !directory.length;
+    for (const btn of $('[data-sidebar-mode]')) btn.setAttribute('aria-pressed', String(btn.dataset.sidebarMode === sidebarMode));
+    $('#sidebar-course-list').innerHTML = useDirectory
+      ? '<div class="ln-sidebar-directory"><a class="sidebar-course-link" href="#course/' + selected.id + '/map">' + icon('network') + '知识图谱</a>' +
+        (selected.id === 'electromagnetic-compatibility' ? '<a class="sidebar-course-link" href="#course/' + selected.id + '/exam-review">考试复习</a>' : '') +
+        (selected.workedExercises?.length ? '<a class="sidebar-course-link" href="#course/' + selected.id + '/worked-exercises">已做题详解</a>' : '') +
+        (!selected.outlineOnly ? '<a class="sidebar-course-link" href="#practice/' + selected.id + '">习题自测</a><a class="sidebar-course-link" href="#resources/' + selected.id + '">实作与资料</a>' : '') +
+        [...new Set(directory.map(s => s.group))].map(group => '<details class="ln-course-group"' + (directory.find(s => s.id === sectionId)?.group === group || !sectionId ? ' open' : '') + '><summary>' + escapeHTML(group) + '</summary><nav>' + directory.filter(s => s.group === group).map(s => '<a class="ln-section-link" href="#course/' + selected.id + '/' + s.id + '"' + (sectionId === s.id ? ' aria-current="page"' : '') + '>' + escapeHTML(s.title) + '</a>').join('') + '</nav></details>').join('') + '</div>'
+      : groupNames.map(group => '<details class="ln-course-group" data-library-group="' + escapeHTML(group) + '"' + (openGroups.has(group) ? ' open' : '') + '><summary>' + escapeHTML(group) + '<small>' + visible.filter(c => groupFor(c) === group).length + '</small></summary><nav>' + visible.filter(c => groupFor(c) === group).map(c => row(c) + models(c)).join('') + '</nav></details>').join('');
+    $('#subject-nav').closest('.subject-group').hidden = true;
+    const historyList = $('#ln-recent-list');
+    historyList.innerHTML = recent.filter(r => courses.some(c => c.id === r.course && c.sections.some(s => s.id === r.section))).slice(0,3).map(r => {
+      const c = courses.find(c => c.id === r.course), s = c.sections.find(s => s.id === r.section);
+      return '<a class="ln-section-link" href="#course/' + c.id + '/' + s.id + '"><strong>' + escapeHTML(c.title) + '</strong><small>' + escapeHTML(s.title) + '</small></a>';
+    }).join('');
+    $('#ln-recent').hidden = !historyList.children.length;
     const saved = courses.filter((course) => favorites.has(course.id));
     $('#sidebar-favorites').hidden = !saved.length;
     $('#sidebar-favorite-list').innerHTML = saved.map(row).join('');
@@ -149,7 +195,7 @@
   }
 
   function courseRow(course) {
-    return '<li class="course-row"><a class="course-link" href="#course/' + course.id + '"><span class="course-symbol">' + icon('book') + '</span><div class="course-text"><h2>' + escapeHTML(course.title) + '</h2><p>' + course.topics.map(escapeHTML).join(' · ') + '</p></div><span class="course-category">' + escapeHTML(isHighSchool(course) ? course.track : course.category) + '</span></a><a class="course-map-shortcut" href="#course/' + course.id + '/map" aria-label="打开' + escapeHTML(course.title) + '知识图谱">' + icon('network') + '<span>图谱</span></a>' + favoriteButton(course) + '</li>';
+    return '<li class="course-row"><a class="course-link" href="#course/' + course.id + '"><span class="course-symbol">' + icon('book') + '</span><div class="course-text"><h2>' + escapeHTML(course.title) + '</h2><p>' + course.topics.map(escapeHTML).join(' · ') + '</p></div><span class="course-category">' + escapeHTML(groupFor(course)) + '</span></a><a class="course-map-shortcut" href="#course/' + course.id + '/map" aria-label="打开' + escapeHTML(course.title) + '知识图谱">' + icon('network') + '<span>图谱</span></a>' + favoriteButton(course) + '</li>';
   }
 
   function buildKnowledgeEntries() {
@@ -196,7 +242,7 @@
     const matches = knowledgeEntries.filter(row =>
       (currentView !== 'favorites' || favorites.has(row.course.id)) &&
       (currentView !== 'highschool' || isHighSchool(row.course)) &&
-      (category === '全部' || category === (currentView === 'highschool' ? row.course.track : row.course.category)) &&
+      matchesCategory(row.course, category) &&
       (!knowledgeKind || row.kind === knowledgeKind) && tokens.every(token => row.search.includes(token)));
     const rank = row => row.titleKey === text ? 0 : row.titleKey.includes(text) ? 1 : row.route.endsWith('/' + row.section.id) ? 3 : 2;
     matches.sort((a, b) => rank(a) - rank(b));
@@ -207,7 +253,7 @@
   }
 
   function renderRows() {
-    const matching = courses.filter((course) => (currentView === 'favorites' || isHighSchool(course) === (currentView === 'highschool')) && (currentView !== 'favorites' || favorites.has(course.id)) && (category === '全部' || (currentView === 'highschool' ? course.track : course.category) === category) && [course.title, course.category, ...course.topics, ...(course.sections || []).flatMap((section) => [section.title, ...(section.keywords || [])])].join(' ').toLowerCase().includes(query.toLowerCase().trim()));
+    const matching = courses.filter((course) => (currentView === 'favorites' || isHighSchool(course) === (currentView === 'highschool')) && (currentView !== 'favorites' || favorites.has(course.id)) && matchesCategory(course, category) && [course.title, course.category, groupFor(course), ...course.topics, ...(course.sections || []).flatMap((section) => [section.title, ...(section.keywords || [])])].join(' ').toLowerCase().includes(query.toLowerCase().trim()));
     $('#result-count').textContent = matching.length + ' 门' + (currentView === 'highschool' ? ' · 海南2027届' : '');
     const emptyFavorites = currentView === 'favorites' && !favorites.size;
     const knowledgeMatches = renderKnowledgeResults();
@@ -224,7 +270,7 @@
 
   function renderOverview() {
     const title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : '课程';
-    const filters = currentView === 'highschool' ? ['全部', '语言', '数理化生', '政史地'] : ['全部', ...Object.values(categories)];
+    const filters = currentView === 'highschool' ? ['全部', '语言', '数理化生', '政史地'] : ['全部', ...new Set([...Object.values(libraryGroups), ...(category !== '全部' && !Object.values(libraryGroups).includes(category) ? [category] : [])])];
     const libraryLink = currentView === 'highschool' ? '<a class="library-link" href="#highschool/resources">教材与来源</a>' : '';
     main.innerHTML = '<section aria-labelledby="page-title"><div class="page-heading"><div><h1 id="page-title">' + title + '</h1><p class="page-meta" id="result-count"></p></div>' + libraryLink + '<label class="course-search">' + icon('search') + '<input id="course-search" type="search" aria-label="搜索课程或知识点" placeholder="搜索课程、知识点…" value="' + escapeHTML(query) + '" autocomplete="off"></label></div><div class="filter-row"' + (filters.length < 3 ? ' hidden' : '') + ' aria-label="筛选学科">' + filters.map((name) => '<button class="filter-button" data-filter="' + name + '" aria-pressed="' + (name === category) + '">' + name + '</button>').join('') + '</div><section id="knowledge-search-results" aria-labelledby="knowledge-results-title" hidden><div class="knowledge-results-head"><h2 id="knowledge-results-title">相关知识</h2><select id="knowledge-kind" aria-label="知识类型"><option value="">所有类型</option>' + knowledgeKinds.map(kind => '<option>' + kind + '</option>').join('') + '</select></div><p id="knowledge-result-count" class="page-meta" role="status"></p><ul id="knowledge-result-list"></ul><button class="secondary-button" data-more-knowledge hidden>显示更多</button></section><ul class="course-list" id="course-list" aria-live="polite" aria-label="课程列表"></ul></section>';
     $('#knowledge-kind').value = knowledgeKind;
@@ -708,10 +754,16 @@
       if (lastLibrary !== currentView) { query = ''; knowledgeKind = ''; knowledgeLimit = knowledgePageSize; }
       lastLibrary = currentView;
     }
-    category = view === 'category' ? (categories[id] || '全部') : '全部';
+    category = view === 'category' ? (libraryGroups[id] || categories[id] || '全部') : '全部';
     let title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : (category === '全部' ? '课程' : category);
     const outlineCourse = courses.find(course => course.id === id && course.outlineOnly);
-    if (currentView === 'course') title = renderCourse(id, sectionId, anchor);
+    if (currentView === 'course') {
+      title = renderCourse(id, sectionId, anchor);
+      if (courses.find(c => c.id === id)?.sections.some(s => s.id === sectionId)) {
+        recent = [{course:id, section:sectionId}, ...recent.filter(r => r.course !== id || r.section !== sectionId)].slice(0,12);
+        writeStored('ln.recent.v1', JSON.stringify(recent));
+      }
+    }
     else if (outlineCourse && ['practice', 'resources'].includes(currentView)) {
       title = outlineCourse.title;
       main.innerHTML = '<h1>' + escapeHTML(title) + '</h1><p>当前仅保留目录。</p><a class="secondary-button" href="#course/' + id + '">打开目录</a>';
@@ -747,15 +799,96 @@
     if (!dialog.open) dialog.showModal();
   }
 
-  function focusSearch() {
-    if (['overview', 'favorites', 'highschool'].includes(currentView) && $('#course-search')) {
-      if (mobile.matches && mobileOpen) setSidebar(false);
-      $('#course-search').focus();
-    } else {
-      addEventListener('hashchange', () => $('#course-search')?.focus(), { once: true });
-      location.hash = inHighSchool() ? 'highschool' : 'overview';
-    }
+  const globalSearch = $('#ln-global-search');
+  const globalInput = $('#ln-search-input');
+  const normalizeSearch = value => String(value ?? '').normalize('NFKC').toLowerCase().replace(/\\(?:left|right|mathrm|mathbf|mathit|operatorname)\b/g, '').replace(/\\frac\s*\{([^{}]+)\}\s*\{([^{}]+)\}/g, '$1/$2').replace(/[{}]/g, '').trim();
+  const aliases = [['bode','伯德图','波特图','bode图'],['fft','快速傅里叶变换'],['dft','离散傅里叶变换'],['emc','电磁兼容'],['routh','劳斯'],['fir','有限冲激响应'],['iir','无限冲激响应'],['esd','静电放电'],['旋转磁场','旋转磁动势'],['3d','三维']];
+  let fullSearchEntries = [];
+  let fullSearchLoaded = false;
+  let searchLoading = null;
+  let searchLimit = 40;
+  let searchHistory = readStored('ln.search-history.v1', []);
+  if (!Array.isArray(searchHistory)) searchHistory = [];
+  const rememberSearch = () => {
+    const q = globalInput.value.trim();
+    if (q) { searchHistory = [q, ...searchHistory.filter(v => v !== q)].slice(0,8); writeStored('ln.search-history.v1', JSON.stringify(searchHistory)); }
+  };
+  function highlightSearch(value, q) {
+    const s = String(value), at = s.toLowerCase().indexOf(q.toLowerCase());
+    return at < 0 || !q ? escapeHTML(s) : escapeHTML(s.slice(0,at)) + '<mark>' + escapeHTML(s.slice(at,at+q.length)) + '</mark>' + escapeHTML(s.slice(at+q.length));
   }
+  function renderGlobalSearch() {
+    const q = globalInput.value.trim(), normalized = normalizeSearch(q);
+    const type = $('#ln-search-kind').value, scope = $('#ln-search-scope').value;
+    const list = $('#ln-search-results'), status = $('#ln-search-status');
+    if (!normalized) {
+      status.textContent = searchHistory.length ? '最近搜索' : '输入课程、知识点、公式或习题';
+      list.innerHTML = searchHistory.map(v => '<li><button class="ln-history-query" data-recent-query="' + escapeHTML(v) + '">' + escapeHTML(v) + '</button></li>').join('');
+      $('#ln-search-more').hidden = true; return;
+    }
+    knowledgeEntries ||= buildKnowledgeEntries();
+    const base = courses.map(course => ({course, kind:'课程', label:'课程', title:course.title, route:'#course/'+course.id, search:[course.title,groupFor(course),...course.topics].join(' ')}));
+    const terms = normalized.split(/\s+/).map(t => [t, ...aliases.filter(a => a.includes(t)).flat()]);
+    const rows = [...base, ...knowledgeEntries, ...fullSearchEntries].filter(row => {
+      if (type && row.kind !== type && row.label !== type) return false;
+      if (scope === 'higher' && isHighSchool(row.course) || scope === 'highschool' && !isHighSchool(row.course)) return false;
+      const hay = normalizeSearch(row.search);
+      const compact = hay.replace(/\s+/g,'');
+      return terms.every(group => group.some(t => hay.includes(t) || compact.includes(t.replace(/\s+/g,''))));
+    });
+    const score = row => {
+      const title = normalizeSearch(row.title);
+      return title === normalized ? 0 : title.includes(normalized) ? 1 : row.kind === '正文' ? 5 : row.kind === '课程' ? 3 : 2;
+    };
+    rows.sort((a,b) => score(a)-score(b));
+    const unique = [...new Map(rows.map(r => [r.kind+'|'+r.route+(r.kind==='公式'?'|'+r.title:''),r])).values()];
+    status.textContent = '找到 ' + unique.length + ' 项' + (!fullSearchLoaded ? ' · 正文索引尚未加载' : '');
+    list.innerHTML = unique.slice(0,searchLimit).map(row => '<li><a href="' + escapeHTML(row.route) + '"><span class="knowledge-result-kind">' + escapeHTML(row.label || row.kind) + '</span><span><strong>' + highlightSearch(row.title,q) + '</strong><small>' + escapeHTML(row.course.title + (row.section ? ' · '+row.section.title : '')) + '</small></span></a></li>').join('');
+    $('#ln-search-more').hidden = unique.length <= searchLimit;
+  }
+  function focusSearch() {
+    if (mobile.matches && mobileOpen) setSidebar(false);
+    if (!globalSearch.open) globalSearch.showModal();
+    globalInput.focus(); globalInput.select();
+    renderGlobalSearch();
+    if (!searchLoading && !fullSearchLoaded) searchLoading = fetch('courses/search-content.json').then(r => {if(!r.ok) throw Error('索引不可用'); return r.json();}).then(rows => {
+      fullSearchEntries = rows.flatMap(row => {
+        const course = courses.find(c => c.id === row.course);
+        const section = course?.sections.find(s => s.id === row.section);
+        if (!section) return [];
+        return [{course,section,kind:row.kind,label:row.kind,title:row.title || section.title,route:'#course/'+course.id+'/'+section.id+(row.anchor?'/'+encodeURIComponent(row.anchor):''),search:[row.text,row.title,section.title,course.title].join(' ')}];
+      });
+      fullSearchLoaded = true;
+      if (globalSearch.open) renderGlobalSearch();
+    }).catch(() => {searchLoading = null;});
+  }
+  globalInput.addEventListener('input', () => {searchLimit=40; renderGlobalSearch();});
+  for (const id of ['ln-search-kind','ln-search-scope']) $('#'+id).addEventListener('change', () => {searchLimit=40; renderGlobalSearch();});
+  $('#ln-search-more').addEventListener('click', () => {searchLimit+=40; renderGlobalSearch();});
+  $('#ln-search-close').addEventListener('click', () => globalSearch.close());
+  $('#ln-search-results').addEventListener('click', event => {
+    const recent = event.target.closest('[data-recent-query]');
+    if (recent) {globalInput.value=recent.dataset.recentQuery; searchLimit=40; renderGlobalSearch(); globalInput.focus(); return;}
+    if (event.target.closest('a')) { rememberSearch(); globalSearch.close(); }
+  });
+  globalInput.addEventListener('keydown', event => {
+    if(event.key==='Enter' || event.key==='ArrowDown') {
+      const first=$('#ln-search-results a');
+      if(first){event.preventDefault(); if(event.key==='Enter')first.click(); else first.focus();}
+    }
+  });
+  globalSearch.addEventListener('close', () => rememberSearch());
+  $('#ln-top-search').addEventListener('click', focusSearch);
+  $('#sidebar-nav-mode').addEventListener('click', event => {
+    const button=event.target.closest('[data-sidebar-mode]');
+    if (button) {sidebarMode=button.dataset.sidebarMode; renderSidebarCourses();}
+  });
+  $('#sidebar-course-list').addEventListener('toggle', event => {
+    const group=event.target.dataset.libraryGroup;
+    if (!group || !event.target.isConnected) return;
+    if (event.target.open) openGroups.add(group); else openGroups.delete(group);
+    saveGroups();
+  }, true);
 
   readerDock.addEventListener('click', (event) => {
     if (event.target.closest('[data-reader-directory]')) openReaderDirectory();
@@ -866,10 +999,11 @@
     navigateRoute();
   });
   document.addEventListener('keydown', (event) => {
-    if (dialog.open || readerDirectory.open || $('#resource-dialog').open || $('dialog.practice-exam-confirm:modal')) return;
+    if (globalSearch.open || dialog.open || readerDirectory.open || $('#resource-dialog').open || $('dialog.practice-exam-confirm:modal')) return;
     if (event.key === 'Escape' && mobileOpen) { setSidebar(false); return; }
-    if (event.target.closest('input, textarea, select, [contenteditable]')) return;
-    if (event.key === '/' || ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k')) {
+    const shortcut = (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k';
+    if (!shortcut && event.target.closest('input, textarea, select, [contenteditable]')) return;
+    if (event.key === '/' || shortcut) {
       event.preventDefault();
       focusSearch();
     }

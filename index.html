@@ -86,7 +86,7 @@
     <div class="sidebar-header">
       <a class="brand" href="#overview" aria-label="LN 首页">LN</a>
       <div class="sidebar-header-actions">
-        <button class="icon-button" id="search-shortcut" aria-label="搜索课程" title="搜索课程 /"><svg class="icon"><use href="#i-search"/></svg></button>
+        <button class="icon-button" id="search-shortcut" aria-label="全站搜索" title="全站搜索 Ctrl+K"><svg class="icon"><use href="#i-search"/></svg></button>
         <button class="icon-button" id="collapse-sidebar" aria-label="收起侧栏" aria-controls="sidebar" aria-expanded="true" title="收起侧栏"><svg class="icon"><use href="#i-panel"/></svg></button>
       </div>
     </div>
@@ -103,8 +103,10 @@
         <h2 class="sidebar-section-title" id="sidebar-favorites-title">收藏</h2>
         <nav class="sidebar-course-list" id="sidebar-favorite-list" aria-label="收藏的课程"></nav>
       </section>
+      <section class="sidebar-section" id="ln-recent" hidden><h2 class="sidebar-section-title">最近学习</h2><nav id="ln-recent-list" aria-label="最近学习"></nav></section>
       <details class="sidebar-section sidebar-courses" open>
         <summary>课程<svg class="icon"><use href="#i-chevron"/></svg></summary>
+        <div id="sidebar-nav-mode" class="ln-sidebar-modes" hidden><button data-sidebar-mode="courses" aria-pressed="true">课程</button><button data-sidebar-mode="directory" aria-pressed="false">目录</button></div>
         <nav class="sidebar-course-list" id="sidebar-course-list" aria-label="课程快捷入口"></nav>
       </details>
       <details class="subject-group" open><summary>学科<svg class="icon"><use href="#i-chevron"/></svg></summary><nav id="subject-nav" aria-label="学科"></nav></details>
@@ -119,11 +121,17 @@
       <div class="topbar-left"><button class="icon-button sidebar-toggle" id="sidebar-toggle" aria-label="展开侧栏" aria-controls="sidebar" aria-expanded="true" title="展开侧栏"><svg class="icon"><use href="#i-panel"/></svg></button><span id="breadcrumb-current">课程</span></div>
       <div id="reader-question-slot" hidden></div>
       <nav class="reader-dock" id="reader-dock" aria-label="阅读快捷操作" hidden></nav>
-      <div class="topbar-actions"><a class="reader-dock-item practice-return" data-practice-return hidden><svg class="icon" aria-hidden="true"><use href="#i-back"/></svg><span>返回正文</span></a><button class="icon-button" id="quick-theme" aria-label="切换到夜间模式" title="切换日间 / 夜间"><svg class="icon"><use href="#i-moon"/></svg></button><button class="icon-button" id="top-settings" aria-label="外观设置" title="外观"><svg class="icon"><use href="#i-sliders"/></svg></button></div>
+      <div class="topbar-actions"><button class="ln-top-search icon-button" id="ln-top-search" aria-label="打开全站搜索" title="全站搜索 Ctrl+K"><svg class="icon"><use href="#i-search"/></svg><span>搜索</span></button><a class="reader-dock-item practice-return" data-practice-return hidden><svg class="icon" aria-hidden="true"><use href="#i-back"/></svg><span>返回正文</span></a><button class="icon-button" id="quick-theme" aria-label="切换到夜间模式" title="切换日间 / 夜间"><svg class="icon"><use href="#i-moon"/></svg></button><button class="icon-button" id="top-settings" aria-label="外观设置" title="外观"><svg class="icon"><use href="#i-sliders"/></svg></button></div>
     </header>
     <main id="main" tabindex="-1"></main>
   </div>
 
+  <dialog id="ln-global-search" class="ln-search-dialog" aria-labelledby="ln-search-title">
+    <div class="dialog-heading"><h2 id="ln-search-title">全站搜索</h2><button id="ln-search-close" class="icon-button" aria-label="关闭搜索"><svg class="icon"><use href="#i-close"/></svg></button></div>
+    <label class="course-search ln-search-field"><svg class="icon"><use href="#i-search"/></svg><input id="ln-search-input" type="search" aria-label="全站搜索关键词" placeholder="课程、知识点、公式、习题…" autocomplete="off"></label>
+    <div class="ln-search-filters"><select id="ln-search-scope" aria-label="搜索范围"><option value="">全站</option><option value="higher">专业及通用课程</option><option value="highschool">高中</option></select><select id="ln-search-kind" aria-label="搜索类型"><option value="">全部类型</option><option>课程</option><option>目录</option><option>概念</option><option>公式</option><option>方法</option><option>习题</option><option>难点</option><option>跨学科</option><option>研究</option><option>正文</option></select></div>
+    <p class="page-meta" id="ln-search-status" role="status"></p><ul id="ln-search-results"></ul><button class="secondary-button" id="ln-search-more" hidden>显示更多</button>
+  </dialog>
   <dialog class="reader-directory" id="reader-directory" aria-labelledby="reader-directory-title">
     <div class="reader-directory-heading"><h2 id="reader-directory-title">目录</h2><button class="icon-button" id="close-reader-directory" aria-label="关闭目录" title="关闭目录"><svg class="icon"><use href="#i-close"/></svg></button></div>
     <div id="reader-directory-question" hidden></div>

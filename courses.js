@@ -10,4 +10,17 @@ window.LN_COURSES = Object.freeze([
   { ...window.LN_ENGLISH, knowledgeMap: window.LN_ENGLISH_MAP },
   { ...window.LN_POWER_SEMICONDUCTORS, workedExercises: ['chapter-2-test'] },
   ...(window.LN_HIGH_SCHOOL_COURSES || [])
-]);
+].map(course => Object.freeze({
+  ...course,
+  libraryGroup: ({
+    'electrical-machines': '电气工程',
+    'electromagnetic-compatibility': '电气工程',
+    'power-semiconductors': '电子与嵌入式',
+    'robot-drive-engineering': '电子与嵌入式',
+    'automatic-control': '控制与信号',
+    'digital-signal-processing': '控制与信号',
+    'electrical-materials': '材料与能源',
+    'new-energy-materials': '材料与能源',
+    'english': '通用能力'
+  })[course.id] || (course.level === 'highschool' ? course.track : course.category)
+})));
