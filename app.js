@@ -589,6 +589,13 @@
             console.error('LN DC homework KaTeX rendering failed', error);
           }
         }
+        if (course.id === 'electrical-materials' && selected.id === 'em-4-3') {
+          try {
+            await loadScript('courses/electrical-materials/mobility-lab.js');
+            if (!body.isConnected || body.dataset.lessonKey !== key) return;
+            window.LN_MobilityLab?.mount(body);
+          } catch { /* The static diagram and derivation stay available. */ }
+        }
         bindInlineModels(body);
         // Keep the original winding 3D model intact; the comparison lab is a separate idealized model.
         if (course.id === 'electrical-machines' && body.querySelector('.dc-reasoning')) {

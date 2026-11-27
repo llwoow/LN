@@ -1,0 +1,39 @@
+<section class="reader-section" data-mobility-lab>
+<h2>半导体的载流子迁移率与电导特性</h2>
+<h3 id="materials-mobility" data-knowledge-kind="概念" data-knowledge-terms="迁移率 mobility 漂移速度 电场 电子 空穴">迁移率：电场如何使载流子漂移</h3>
+<p id="materials-mobility-symbols">载流子迁移率定义：μ、μₙ、μₚ 为正的迁移率，单位 m²/(V·s)；v_d 为平均漂移速率（m/s），E 为电场强度大小（V/m），E_x 为有符号的电场分量。τ 为动量弛豫时间（s），m* 为载流子有效质量（kg），e 为正的基本电荷量（C）。n、p 为电子与空穴浓度（m⁻³），J 为传统电流密度（A/m²），σ 为电导率（S/m），ρ 为电阻率（Ω·m）。</p>
+<p>没有外电场时，载流子仍有无规则的热运动，但平衡时平均速度为零。施加电场后，热运动上叠加了定向漂移。低场下平均漂移速率与电场强度近似成正比：</p>
+\[\boxed{\mu=\frac{v_d}{E}},\qquad v_d=\mu E.\]
+<p>取 x 轴向右，电子带负电、空穴带正电，因此有符号的漂移速度分别是：</p>
+\[v_{nx}=-\mu_nE_x,\qquad v_{px}=\mu_pE_x.\]
+<figure id="materials-mobility-drift-figure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 175" style="display:block;width:100%;max-width:480px;height:auto;margin:auto" role="img" aria-labelledby="mobility-figure-title"><title id="mobility-figure-title">电子与空穴在电场下的漂移方向</title><defs><marker id="mobility-E-head" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="currentColor"/></marker><marker id="mobility-n-head" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#3885df"/></marker><marker id="mobility-p-head" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#dc8841"/></marker></defs><rect x="20" y="43" width="300" height="120" rx="7" fill="#888" fill-opacity=".07" stroke="currentColor" stroke-opacity=".4"/><text x="170" y="15" text-anchor="middle" fill="currentColor" font-size="12">电场 E</text><line data-mobility-arrow="E" x1="85" y1="24" x2="255" y2="24" stroke="currentColor" stroke-width="2" marker-end="url(#mobility-E-head)"/><rect data-mobility-plate="left" x="40" y="49" width="10" height="107" fill="#dc8841" opacity=".5"/><text data-mobility-sign="left" x="45" y="39" text-anchor="middle" fill="currentColor" font-size="17">+</text><rect data-mobility-plate="right" x="290" y="49" width="10" height="107" fill="#3885df" opacity=".5"/><text data-mobility-sign="right" x="295" y="39" text-anchor="middle" fill="currentColor" font-size="17">−</text><circle cx="175" cy="78" r="12" fill="#3885df"/><text x="175" y="83" fill="#fff" text-anchor="middle" font-size="16">−</text><text x="175" y="60" text-anchor="middle" fill="currentColor" font-size="12">电子</text><circle cx="175" cy="132" r="12" fill="#dc8841"/><text x="175" y="137" fill="#fff" text-anchor="middle" font-size="16">+</text><text x="175" y="114" text-anchor="middle" fill="currentColor" font-size="12">空穴</text><line data-mobility-arrow="n" x1="161" y1="78" x2="101" y2="78" stroke="#3885df" stroke-width="2.5" marker-end="url(#mobility-n-head)"/><line data-mobility-arrow="p" x1="189" y1="132" x2="210" y2="132" stroke="#dc8841" stroke-width="2.5" marker-end="url(#mobility-p-head)"/></svg><figcaption>图 M.4.3.1 电子与空穴的漂移方向。下面的交互模块可以改变箭头方向和长度；箭头不是微观运动轨迹。</figcaption></figure>
+<p>电子运动方向与电场相反，空穴运动方向与电场相同。迁移率本身取正值，不是磁导率 μ。</p>
+<h3 id="materials-mobility-origin" data-knowledge-kind="原理" data-knowledge-terms="动量弛豫时间 有效质量 散射">从电场力到迁移率</h3>
+<p>电场力使电子加速，但晶格、杂质等散射会使平均定向动量逐渐丧失。在低场、各向同性、稳态弛豫时间近似下：</p>
+\[\frac{d\langle p_x\rangle}{dt}=-eE_x-\frac{\langle p_x\rangle}{\tau}=0.\]
+<p>这里的平均动量不是空穴浓度 p。由有效质量与平均速度的关系得到：</p>
+\[v_{nx}=-\frac{eE_x\tau}{m_n^*},\qquad\boxed{\mu_n=\frac{e\tau}{m_n^*}}.\]
+<p>空穴同样满足正迁移率关系，但其有效质量和弛豫时间未必与电子相同。散射越少（τ 越大），或有效质量越小，迁移率越大。τ 是动量弛豫时间，不是复合寿命。</p>
+<h3 id="materials-mobility-conductivity" data-knowledge-kind="公式" data-knowledge-terms="电导率 电阻率 电流密度 欧姆定律">电子和空穴怎样共同贡献电导</h3>
+<p>用电荷量乘粒子通量求传统电流密度。负电荷向左运动也会产生向右的电流，因此电子与空穴的漂移电流相加，而不是抵消。</p>
+\[J_{nx}=(-e)n v_{nx}=en\mu_nE_x,\qquad J_{px}=ep\mu_pE_x.\]
+\[J_x=e(n\mu_n+p\mu_p)E_x=\sigma E_x.\]
+\[\boxed{\sigma=e(n\mu_n+p\mu_p)},\qquad\boxed{\rho=\frac1\sigma}.\]
+<p>使用 SI 单位时，迁移率从 cm²/(V·s) 换为 m²/(V·s) 乘 10⁻⁴，浓度从 cm⁻³ 换为 m⁻³ 乘 10⁶。这里只讨论均匀材料的低场漂移电流；浓度不均匀时还存在扩散电流。</p>
+<h3 id="materials-mobility-lab" data-knowledge-kind="方法" data-knowledge-terms="迁移率 实验 漂移 电导">交互实验：改变电场、迁移率与浓度</h3>
+<p>调节参数，观察上图及下方的实时计算。各参数为独立教学假设，不代表某一温度下真实材料的自洽载流子分布。</p>
+<div style="border:1px solid currentColor;border-radius:8px;padding:12px;display:grid;gap:12px">
+<label style="display:block;min-width:0">有符号电场 E_x (V/m)：<output data-mobility-value="E">1000</output><input aria-label="有符号电场 E_x (V/m)" data-mobility-input="E" type="range" min="-1000" max="1000" step="50" value="1000" style="display:block;width:100%;max-width:100%"></label>
+<label style="display:block;min-width:0">电子迁移率 μₙ (cm²/(V·s))：<output data-mobility-value="muN">1350</output><input aria-label="电子迁移率 μₙ (cm²/(V·s))" data-mobility-input="muN" type="range" min="10" max="2000" step="10" value="1350" style="display:block;width:100%;max-width:100%"></label>
+<label style="display:block;min-width:0">空穴迁移率 μₚ (cm²/(V·s))：<output data-mobility-value="muP">480</output><input aria-label="空穴迁移率 μₚ (cm²/(V·s))" data-mobility-input="muP" type="range" min="10" max="2000" step="10" value="480" style="display:block;width:100%;max-width:100%"></label>
+<label style="display:block;min-width:0">电子浓度 log₁₀(n / m⁻³)：<output data-mobility-value="logN">16</output><input aria-label="电子浓度 log₁₀(n / m⁻³)" data-mobility-input="logN" type="range" min="14" max="22" step="0.5" value="16" style="display:block;width:100%;max-width:100%"></label>
+<label style="display:block;min-width:0">空穴浓度 log₁₀(p / m⁻³)：<output data-mobility-value="logP">16</output><input aria-label="空穴浓度 log₁₀(p / m⁻³)" data-mobility-input="logP" type="range" min="14" max="22" step="0.5" value="16" style="display:block;width:100%;max-width:100%"></label>
+<button type="button" class="secondary-button" data-mobility-reset>恢复初始参数</button>
+<div aria-live="polite"><p>电子漂移速度：<strong data-mobility-result="vn">−135 m/s</strong>；空穴漂移速度：<strong data-mobility-result="vp">48 m/s</strong></p><p>电导率：<strong data-mobility-result="sigma">2.932e−4 S/m</strong>；电阻率：<strong data-mobility-result="rho">3.411e3 Ω·m</strong></p><p>电子电流密度：<strong data-mobility-result="jn">0.2163 A/m²</strong>；空穴电流密度：<strong data-mobility-result="jp">0.07690 A/m²</strong>；总电流密度：<strong data-mobility-result="j">0.2932 A/m²</strong></p></div>
+</div>
+<p>令 E_x 反号：电子、空穴的漂移方向同时反转，电流也反向，但 σ 和 ρ 不变。令电场为零：漂移电流消失，材料电导率仍非零。增大浓度可增大电流，但不直接改变此独立参数模型的漂移速度。</p>
+<h3 id="materials-mobility-temperature" data-knowledge-kind="难点" data-knowledge-terms="本征导电 掺杂 温度 电阻率 晶格散射">升温为何可能使半导体电阻率下降</h3>
+<table><caption>表 M.4.3.1 本征导电区的典型温度变化</caption><thead><tr><th>物理量</th><th>升温后的典型变化</th></tr></thead><tbody><tr><td>电子、空穴浓度 n、p</td><td>显著增加</td></tr><tr><td>晶格热振动与散射</td><td>增强</td></tr><tr><td>迁移率</td><td>晶格散射主导时减小</td></tr><tr><td>电导率 / 电阻率</td><td>通常增大 / 减小</td></tr></tbody></table>
+<p>本征导电区，浓度的增长通常压过迁移率的下降，所以电阻率下降。金属中载流子浓度近似固定，升温后散射增加通常使电阻率增大。掺杂半导体在杂质冻结区、杂质完全电离区、本征导电区的温度规律并不相同，不能把负温度系数推广到所有条件。高电场下还可能出现速度饱和，此时不宜继续套用恒定迁移率的线性关系。</p>
+<p>联系：<a href="#course/electrical-materials/em-2-3">2.3 能带与电导</a>解释载流子从哪里来；本节解释它们如何输运；<a href="#course/electrical-materials/em-4-4">4.4 p-n结</a>进一步讨论浓度分布与耗尽区电场。<a href="#course/power-semiconductors/carrier-transport">功率半导体器件：漂移、扩散与载流子寿命</a>把漂移电流推广到有浓度梯度的情况。</p>
+</section>

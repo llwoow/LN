@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "electrical-materials-browser-artifacts"
 OUT.mkdir(exist_ok=True)
 COURSE = "electrical-materials"
-LESSONS = ["em-2-1", "em-2-2", "em-2-3", "em-2-4", "em-2-5", "em-test-summary", "em-test-fill", "em-test-short", "em-test-review"]
+LESSONS = ["em-2-1", "em-2-2", "em-2-3", "em-2-4", "em-2-5", "em-4-3", "em-test-summary", "em-test-fill", "em-test-short", "em-test-review"]
 SIZES = [("desktop", 1440, 900), ("phone", 390, 844), ("phone-small", 320, 690)]
 
 def main():
@@ -46,6 +46,16 @@ def main():
                         assert fig.locator("figcaption").count(), (sid, "missing figure caption")
                         for svg in fig.locator("svg").all():
                             assert svg.locator("title").count(), (sid, "missing SVG accessibility title")
+                    if sid == "em-4-3":
+                        assert body.locator("[data-mobility-lab][data-mounted=true]").count()
+                        field = body.locator('[data-mobility-input=E]')
+                        field.fill("-1000")
+                        assert float(body.locator('[data-mobility-result=vn]').inner_text().split()[0]) > 0
+                        field.fill("0")
+                        assert body.locator('[data-mobility-result=j]').inner_text() == "0 A/m²"
+                        assert body.locator('[data-mobility-arrow=n]').evaluate("(e) => getComputedStyle(e).visibility") == "hidden"
+                        body.locator("[data-mobility-reset]").click()
+                        assert field.input_value() == "1000"
                     if sid == "em-2-4":
                         assert body.locator("math").count() >= 2, "Missing chapter 2 thermal equations"
                     page.screenshot(path=str(OUT / (sid + "-" + name + ".png")), full_page=True)

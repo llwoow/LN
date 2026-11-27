@@ -1482,6 +1482,143 @@
         "U_term"
       ],
       "description": "本算例的量、参考方向与单位。"
+    },
+    {
+      "id": "emat-mobility-mu",
+      "section": "em-4-3",
+      "sections": [
+        "em-4-3"
+      ],
+      "sourceAnchor": "materials-mobility-symbols",
+      "match": "载流子迁移率定义：",
+      "title": "迁移率 μ、μₙ、μₚ",
+      "keys": [
+        "μ",
+        "μ_n",
+        "μ_p"
+      ],
+      "description": "低场漂移速率与电场强度之比，取正值，单位 m²/(V·s)。"
+    },
+    {
+      "id": "emat-mobility-v",
+      "section": "em-4-3",
+      "sections": [
+        "em-4-3"
+      ],
+      "sourceAnchor": "materials-mobility-symbols",
+      "match": "载流子迁移率定义：",
+      "title": "漂移速度",
+      "keys": [
+        "v_d",
+        "v_nx",
+        "v_px"
+      ],
+      "description": "平均定向速度，单位 m/s。"
+    },
+    {
+      "id": "emat-mobility-field",
+      "section": "em-4-3",
+      "sections": [
+        "em-4-3"
+      ],
+      "sourceAnchor": "materials-mobility-symbols",
+      "match": "载流子迁移率定义：",
+      "title": "电场强度",
+      "keys": [
+        "E",
+        "E_x"
+      ],
+      "description": "E 为大小，E_x 为有符号 x 分量，单位 V/m。"
+    },
+    {
+      "id": "emat-mobility-tau",
+      "section": "em-4-3",
+      "sections": [
+        "em-4-3"
+      ],
+      "sourceAnchor": "materials-mobility-symbols",
+      "match": "载流子迁移率定义：",
+      "title": "动量弛豫时间",
+      "keys": [
+        "τ"
+      ],
+      "description": "平均定向动量衰减的特征时间，单位 s。"
+    },
+    {
+      "id": "emat-mobility-mass",
+      "section": "em-4-3",
+      "sections": [
+        "em-4-3"
+      ],
+      "sourceAnchor": "materials-mobility-symbols",
+      "match": "载流子迁移率定义：",
+      "title": "有效质量",
+      "keys": [
+        "m_n^*",
+        "m^*"
+      ],
+      "description": "描述载流子加速度响应的有效质量，单位 kg。"
+    },
+    {
+      "id": "emat-mobility-density",
+      "section": "em-4-3",
+      "sections": [
+        "em-4-3"
+      ],
+      "sourceAnchor": "materials-mobility-symbols",
+      "match": "载流子迁移率定义：",
+      "title": "载流子浓度",
+      "keys": [
+        "n",
+        "p"
+      ],
+      "description": "电子、空穴数密度，单位 m⁻³。"
+    },
+    {
+      "id": "emat-mobility-charge",
+      "section": "em-4-3",
+      "sections": [
+        "em-4-3"
+      ],
+      "sourceAnchor": "materials-mobility-symbols",
+      "match": "载流子迁移率定义：",
+      "title": "基本电荷量",
+      "keys": [
+        "e"
+      ],
+      "description": "正的基本电荷量，约 1.602176634×10⁻¹⁹ C。"
+    },
+    {
+      "id": "emat-mobility-current",
+      "section": "em-4-3",
+      "sections": [
+        "em-4-3"
+      ],
+      "sourceAnchor": "materials-mobility-symbols",
+      "match": "载流子迁移率定义：",
+      "title": "传统电流密度",
+      "keys": [
+        "J",
+        "J_x",
+        "J_nx",
+        "J_px"
+      ],
+      "description": "单位面积传统电流，单位 A/m²。"
+    },
+    {
+      "id": "emat-mobility-conductivity",
+      "section": "em-4-3",
+      "sections": [
+        "em-4-3"
+      ],
+      "sourceAnchor": "materials-mobility-symbols",
+      "match": "载流子迁移率定义：",
+      "title": "电导率与电阻率",
+      "keys": [
+        "σ",
+        "ρ"
+      ],
+      "description": "电导率 S/m，电阻率 Ω·m，均匀各向同性欧姆模型中互为倒数。"
     }
   ]
 }
