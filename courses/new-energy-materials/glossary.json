@@ -1,0 +1,146 @@
+{
+  "lazy": true,
+  "symbolDefinitions": [
+    {
+      "id": "pv-h",
+      "title": "h",
+      "keys": [
+        "h"
+      ],
+      "section": "nem-3-1",
+      "sections": [
+        "nem-3-1"
+      ],
+      "match": "h 为普朗克常量（J·s），ν 为光频率（Hz），E_g 为禁带宽度（J或eV，比较时单位统一）。",
+      "sourceAnchor": "pv-energy-def",
+      "description": "普朗克常量，J·s。"
+    },
+    {
+      "id": "pv-nu",
+      "title": "ν",
+      "keys": [
+        "ν"
+      ],
+      "section": "nem-3-1",
+      "sections": [
+        "nem-3-1"
+      ],
+      "match": "h 为普朗克常量（J·s），ν 为光频率（Hz），E_g 为禁带宽度（J或eV，比较时单位统一）。",
+      "sourceAnchor": "pv-energy-def",
+      "description": "光频率，Hz。"
+    },
+    {
+      "id": "pv-eg",
+      "title": "E_g",
+      "keys": [
+        "E_g"
+      ],
+      "section": "nem-3-1",
+      "sections": [
+        "nem-3-1"
+      ],
+      "match": "h 为普朗克常量（J·s），ν 为光频率（Hz），E_g 为禁带宽度（J或eV，比较时单位统一）。",
+      "sourceAnchor": "pv-energy-def",
+      "description": "禁带宽度，J或eV。"
+    },
+    {
+      "id": "pv-q",
+      "title": "q",
+      "keys": [
+        "q"
+      ],
+      "section": "nem-3-1",
+      "sections": [
+        "nem-3-1"
+      ],
+      "match": "F 为电场力（N），q 为带符号的载流子电荷（C），E 为电场强度（V/m）。",
+      "sourceAnchor": "pv-force-def",
+      "description": "带符号的载流子电荷，C。"
+    },
+    {
+      "id": "pv-e",
+      "title": "E",
+      "keys": [
+        "bold:E",
+        "E"
+      ],
+      "section": "nem-3-1",
+      "sections": [
+        "nem-3-1"
+      ],
+      "match": "F 为电场力（N），q 为带符号的载流子电荷（C），E 为电场强度（V/m）。",
+      "sourceAnchor": "pv-force-def",
+      "description": "电场强度，V/m。"
+    },
+    {
+      "id": "pv-f",
+      "title": "F",
+      "keys": [
+        "bold:F",
+        "F"
+      ],
+      "section": "nem-3-1",
+      "sections": [
+        "nem-3-1"
+      ],
+      "match": "F 为电场力（N），q 为带符号的载流子电荷（C），E 为电场强度（V/m）。",
+      "sourceAnchor": "pv-force-def",
+      "description": "电场力，N。"
+    },
+    {
+      "id": "pv-phi",
+      "title": "φ",
+      "keys": [
+        "φ"
+      ],
+      "section": "nem-3-1",
+      "sections": [
+        "nem-3-1"
+      ],
+      "match": "φ 为电势（V），∇ 表示空间梯度，E 为电场强度（V/m）。",
+      "sourceAnchor": "pv-potential-def",
+      "description": "静电势，V。"
+    },
+    {
+      "id": "pv-rho",
+      "title": "ρ",
+      "keys": [
+        "ρ"
+      ],
+      "section": "nem-3-1",
+      "sections": [
+        "nem-3-1"
+      ],
+      "match": "ε 为介电常数（F/m），ρ 为净空间电荷密度（C/m³）。",
+      "sourceAnchor": "pv-gauss-def",
+      "description": "净空间电荷密度，C/m³。"
+    },
+    {
+      "id": "pv-eps",
+      "title": "ε",
+      "keys": [
+        "ε"
+      ],
+      "section": "nem-3-1",
+      "sections": [
+        "nem-3-1"
+      ],
+      "match": "ε 为介电常数（F/m），ρ 为净空间电荷密度（C/m³）。",
+      "sourceAnchor": "pv-gauss-def",
+      "description": "介电常数，F/m。"
+    }
+  ],
+  "terms": [
+    {
+      "id": "pv-field-term",
+      "title": "光生电场",
+      "english": "Photoinduced electric field",
+      "aliases": [
+        "光生电场"
+      ],
+      "section": "nem-3-1",
+      "match": "光生电场是光生载流子分离后，电荷重新分布引起的附加电场；并不是光波本身携带的交变电场。",
+      "description": "非平衡载流子分离引起的附加电场。"
+    }
+  ]
+}
