@@ -171,7 +171,7 @@
     const activeGroup = directory.find(section => section.id === sectionId)?.group ?? directory[0]?.group;
     const useDirectory = sidebarMode === 'directory' && directory.length;
     $('#sidebar-nav-mode').hidden = !directory.length;
-    for (const btn of $('[data-sidebar-mode]')) btn.setAttribute('aria-pressed', String(btn.dataset.sidebarMode === sidebarMode));
+    for (const btn of $$('[data-sidebar-mode]')) btn.setAttribute('aria-pressed', String(btn.dataset.sidebarMode === sidebarMode));
     $('#sidebar-course-list').innerHTML = useDirectory
       ? '<div class="ln-sidebar-directory"><a class="sidebar-course-link" href="#course/' + selected.id + '/map">' + icon('network') + '知识图谱</a>' +
         (selected.id === 'electromagnetic-compatibility' ? '<a class="sidebar-course-link" href="#course/' + selected.id + '/exam-review">考试复习</a>' : '') +
