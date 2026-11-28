@@ -16,3 +16,7 @@
 .emc-grounding-diagram svg { min-width: 0; max-width: 720px; margin-inline: auto; }
 .emc-grounding-explainer { margin: 1.1em 0 1.6em; }
 .emc-grounding-explainer h4 { margin: 1em 0 .5em; }
+
+.emc-review-table { max-width:100%; overflow-x:auto; margin:12px 0; }
+.emc-review-table table { width:100%; border-collapse:collapse; }
+.emc-review-table th,.emc-review-table td { text-align:left; padding:9px 11px; border-bottom:1px solid var(--border); vertical-align:top; }

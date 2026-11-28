@@ -330,7 +330,8 @@
   function renderEmcExam(course, anchor) {
     main.classList.add('course-main');
     main.innerHTML = '<a class="back-link" href="#course/' + course.id + '">' + icon('back') + '课程图谱</a><section class="course-heading"><h1>电磁兼容 · 考试复习</h1></section>' + courseViewNav(course, 'exam') + '<div class="lesson emc-exam-review" id="emc-exam-review"></div>';
-    window.LNEmcExam.render($('#emc-exam-review'), anchor, loadEmcReviewMath);
+    void loadStyle('courses/electromagnetic-compatibility/model/emc-labs.css').catch(()=>{});
+    window.LNEmcExam.render($('#emc-exam-review'), anchor, loadEmcReviewMath, () => Promise.all([loadScript('courses/electromagnetic-compatibility/model/emc-labs.js'),loadStyle('courses/electromagnetic-compatibility/model/emc-labs.css')]));
   }
 
   function renderWorkedExercises(course) {
