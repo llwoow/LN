@@ -48,8 +48,33 @@ def main():
                     assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), width
                     page.locator('#exam-emc-2-3').get_by_role('link', name='回查本节正文').click()
                     page.locator('#lesson-body .emc-review-inline').wait_for()
-                    page.locator('#lesson-body .emc-review-inline').get_by_role('link').click()
+                    page.locator('#lesson-body .emc-review-inline').get_by_role('link', name='本节公式、考试重点与章末自测', exact=False).click()
                     page.locator('#exam-emc-2-3').wait_for()
+                # Historical EMC chapter 1 tests: no answers in DOM until submission.
+                page.on('dialog', lambda dialog: dialog.accept())
+                page.goto(base + '#course/electromagnetic-compatibility/exam-review/test-a')
+                page.locator('#emc-test-Q30').wait_for()
+                assert page.locator('.emc-test-question').count() == 30
+                assert page.locator('.emc-test-feedback').count() == 0
+                page.locator('#emc-test-Q01 input[data-choice="1"]').check()
+                assert '已答 1 / 30' in page.locator('[data-test-status]').inner_text()
+                page.locator('[data-action="submit"]').click()
+                assert page.locator('.emc-test-feedback').count() == 30
+                assert '自动核对 2/78' in page.locator('[data-test-status]').inner_text()
+                page.reload()
+                page.locator('.emc-test-feedback').first.wait_for()
+                page.locator('[data-action="reset"]').click()
+                assert page.locator('.emc-test-feedback').count() == 0
+                page.goto(base + '#course/electromagnetic-compatibility/exam-review/test-b2')
+                page.locator('#emc-test-Q12').wait_for()
+                assert page.locator('.emc-test-question').count() == 12
+                assert page.locator('.emc-test-figure svg').count() == 3
+                assert page.locator('.emc-test-feedback').count() == 0
+                page.locator('[data-action="submit"]').click()
+                page.locator('[data-mark="Q01-0"]').fill('3')
+                assert '主观自评 3/100' in page.locator('[data-test-status]').inner_text()
+                page.locator('[data-action="reset"]').click()
+                assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
                 page.set_viewport_size({'width': 1280, 'height': 900})
                 page.goto(base + '#overview', wait_until='networkidle')
                 # New universal search: works from any route without leaving it.
