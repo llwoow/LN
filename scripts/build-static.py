@@ -22,7 +22,7 @@ out = root / 'dist'
 if out.exists():
     shutil.rmtree(out)
 out.mkdir()
-for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.js', 'publication.js', 'glossary.js', 'highschool-library.js', 'resource-library.js', 'practice.js', 'practice-v2.css'):
+for name in ('index.html', 'styles.css', 'app.js', 'courses.js', 'knowledge-map.js', 'publication.js', 'glossary.js', 'highschool-library.js', 'resource-library.js', 'practice.js', 'practice-v2.css', 'print.js', 'print.css'):
     shutil.copy2(root / name, out / name)
 shutil.copytree(root / 'audit', out / 'audit', ignore=shutil.ignore_patterns('*.md', 'inventory.json'))
 subprocess.run([sys.executable, str(root / 'scripts/build-course-audit.py'), '--output', str(out / 'audit/inventory.json')], check=True)

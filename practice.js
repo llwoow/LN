@@ -317,6 +317,65 @@
     return '<h3>原站题目 · '+items.length+' 道</h3>'+items.map(item=>{const s=bank.sources.find(s=>s.id===item.sourceId);return '<section class="external-review" data-external-record="'+escape(item.key)+'"><h4>'+escape(s.title+' · '+item.ref)+'</h4><p>'+escape(item.note||'尚未记录分析')+'</p><p>'+sourceLinks(s)+'</p><p>'+knowledgeLinks(s)+'</p><p>状态：'+(item.reviewed?'已手动标记复习，原错题记录保留':'待复习')+'</p><button class="resource-nav-button" data-external-review>标记已复习</button><button class="resource-nav-button" data-external-favorite>'+ (item.favorite?'取消收藏':'收藏此题')+'</button></section>';}).join('');
   }
 
+
+  // Historic papers share the existing practice store without changing any bank ID/version.
+  const paperCourse='electromagnetic-compatibility';
+  const paperItems=()=>{if(!records.paperItems||typeof records.paperItems!=='object'||Array.isArray(records.paperItems))records.paperItems={};return records.paperItems;};
+  const paperId=(version,id)=>'emc-ch1-'+version+'-'+id;
+  function importPaperRound(version,round,results){
+    if(!['A','B2'].includes(version)||typeof round!=='string'||!round||!Array.isArray(results))return false;
+    try{records=readStored(key);}catch{return false;}
+    const items=paperItems();
+    for(const result of results){
+      if(!/^Q\d{2}$/.test(result.id)||!['auto','self','pending'].includes(result.evidence))continue;
+      const id=paperId(version,result.id);
+      const r=items[id]||(items[id]={version,id:result.id,course:paperCourse,attempts:[],mistake:false,favorite:false,reviewed:false});
+      const n=r.attempts.findIndex(a=>a.round===round);
+      const old=n<0?null:r.attempts[n];
+      // Same submission may receive or revise manual marks; never append twice.
+      const attempt={round,time:old?.time||new Date().toISOString(),answer:result.answer,draft:result.draft||'',marks:result.marks||{},score:result.score,max:result.max,evidence:result.evidence,assisted:old?.assisted??Boolean(r.attempts.length||result.redo),incomplete:Boolean(result.incomplete)};
+      if(n<0)r.attempts.push(attempt);else r.attempts[n]=attempt;
+      const wrong=attempt.evidence!=='pending'&&attempt.score<attempt.max;
+      if(wrong){r.mistake=true;if(!old||old.score!==attempt.score||old.evidence!==attempt.evidence)r.reviewed=false;}
+      if(!wrong&&r.mistake&&attempt.evidence==='auto'&&attempt.score===attempt.max&&n<0)r.reviewed=true;
+    }
+    save();return persistent;
+  }
+  function markPaper(version,id,action){
+    try{records=readStored(key);}catch{return false;}
+    const k=paperId(version,id),r=paperItems()[k]||(paperItems()[k]={version,id,course:paperCourse,attempts:[],mistake:false,favorite:false,reviewed:false});
+    if(action==='favorite')r.favorite=!r.favorite;
+    if(action==='mistake'){r.mistake=true;r.reviewed=false;}
+    if(action==='reviewed'&&r.mistake)r.reviewed=true;
+    save();return persistent;
+  }
+  const paperHref=r=>'#course/'+paperCourse+'/exam-review/test-'+r.version.toLowerCase()+'-'+r.id;
+  function paperCollection(course,mode){
+    if(course!==paperCourse)return '';
+    const items=Object.entries(paperItems()).filter(([,r])=>r&&r.course===course&&r[mode==='mistakes'?'mistake':'favorite']);
+    return '<h3>章节试卷 · '+items.length+' 题</h3>'+items.map(([id,r])=>{
+      const q=window.LN_EMC_TESTS?.[r.version]?.find(q=>q.id===r.id),a=r.attempts.at(-1);
+      if(!q)return '';
+      const history=r.attempts.map((a,i)=>'<li>'+escape((i===0?(a.assisted?'首次记录（参考后）':'首次记录'):'后续作答')+' · '+(a.evidence==='pending'?'待自评':a.score+'/'+a.max+(a.evidence==='self'?'（自评）':'（自动核对）'))+(a.incomplete?' · 未完整作答':''))+'<p>'+escape(window.LNEmcChapterTest.answerText(q,a.answer))+'</p>'+(a.draft?'<p>'+escape(a.draft)+'</p>':'')+'</li>').join('');
+      return '<section class="external-review ln-paper-record" data-paper-record="'+escape(id)+'"><h4>'+escape(r.version+' · '+r.id+' '+(q.title||q.chapter||''))+'</h4><div>'+q.stem+'</div><p>'+escape(r.reviewed?'已复习（保留历史）':'待复习')+(a?' · '+escape(a.evidence==='pending'?'待自评':a.score+'/'+a.max+(a.evidence==='self'?'（自评）':'（自动核对）')):'')+'</p><a href="'+paperHref(r)+'">遮住解析，单题重做</a> · <a href="#course/'+paperCourse+'/'+escape(q.lesson)+'">回查知识点</a><details><summary>历史作答（'+r.attempts.length+'次）</summary><ol>'+history+'</ol></details><button class="resource-nav-button" data-paper-action="reviewed">标记已复习</button> <button class="resource-nav-button" data-paper-action="favorite">'+(r.favorite?'取消收藏':'收藏此题')+'</button></section>';
+    }).join('');
+  }
+  function printMistakes(course,answers){
+    try{records=readStored(key);}catch{}
+    const match=c=>!course||c===course;
+    let html=questions.filter(q=>match(q.course)&&isMistake(records[q.id])).map(q=>{
+      const r=records[q.id];
+      const opts=q.options?'<ol type="A">'+q.options.map(o=>'<li>'+escape(o.text)+'</li>').join('')+'</ol>':'';
+      return '<section class="ln-print-question"><h3>'+escape((courses.find(c=>c.id===q.course)?.title||q.course)+' · '+q.id)+'</h3><div>'+(q.promptHtml||escape(q.prompt))+'</div>'+opts+(answers?'<p>最近保存作答：'+escape(q.options?q.options.filter(o=>r.selected?.includes(o.id)).map(o=>o.text).join('；'):r.value||r.reason||'未保存')+'</p><h4>参考推理</h4><ol>'+q.steps.map((s,i)=>'<li>'+(q.stepsHtml?.[i]||escape(s))+'</li>').join('')+'</ol>':'<div class="ln-answer-space"></div>')+'<p>回查：<a href="'+practiceHref(q.course,q.section,q.id)+'">原题</a></p></section>';
+    }).join('');
+    for(const r of Object.values(paperItems()).filter(r=>match(r.course)&&r.mistake)){
+      const q=window.LN_EMC_TESTS?.[r.version]?.find(q=>q.id===r.id);if(!q)continue;
+      html+=window.LNEmcChapterTest.printQuestion(q,r.version,answers?'graded':'exam',r.attempts.at(-1));
+    }
+    html+=extItems().filter(r=>r.mistake&&bank.sources.some(s=>s.id===r.sourceId&&s.targets.some(t=>match(t.course)))).map(r=>'<section><h3>'+escape(r.ref)+'</h3>'+(answers?'<p>'+escape(r.note)+'</p>':'<p>外部原题：请按下方链接查看。</p><div class="ln-answer-space"></div>')+'<p>外部来源：'+sourceLinks(bank.sources.find(s=>s.id===r.sourceId))+'</p></section>').join('');
+    return html||'<p>此范围暂无可导出的错题。</p>';
+  }
+
   const examRecordName='ln.practice.exam.v1';
   function examScope(course,section){
     const items=questions.filter(q=>q.course===course);
@@ -340,6 +399,23 @@
       session.index=Math.max(0,Math.min(session.ids.length-1,Math.floor(Number(session.index)||0)));
       if(!session.ids.includes(session.reviewId))session.reviewId=null;
     }
+
+
+    // Use the full selected paper, not only the presently displayed question.
+    content.lnPrintExam=mode=>{
+      if(!session)throw Error('请先选择题量并开始本次测试。');
+      if(mode==='graded'&&!session.finished)throw Error('请先交卷。');
+      const list=m=>session.ids.map((id,i)=>{
+        const q=byId.get(id),a=session.answers[id]||blankAnswer;
+        const options=q.options?'<ol type="A">'+(a.order||q.options.map(o=>o.id)).map(id=>'<li>'+escape(q.options.find(o=>o.id===id)?.text||'')+'</li>').join('')+'</ol>':'';
+        let s='<section class="ln-print-question"><h3>第'+(i+1)+'题 · '+escape(q.title)+'</h3><div>'+(q.promptHtml||escape(q.prompt))+'</div>'+options+(q.unit?'<p>单位：'+escape(q.unit)+'</p>':'');
+        if(m==='exam')return s+'<div class="ln-answer-space"></div></section>';
+        if(m==='graded')s+='<h4>个人答卷</h4><p class="ln-print-personal">'+escape(q.options?q.options.filter(o=>a.selected?.includes(o.id)).map(o=>o.text).join('；'):a.value||a.reason||'未答')+'</p><p>'+escape(q.type==='open'?'主观自评：'+(session.selfChecks?.[id]?.length||0)+'/'+q.rubric.length:resultFor(q)===undefined?'未答':resultFor(q)?'答案吻合':'答案未吻合')+'</p>';
+        const answer=q.options?q.options.filter(o=>q.answer.includes(o.id)).map(o=>o.text).join('；'):q.type==='numeric'?q.answer+' '+q.unit:q.type==='fill'?q.answer.join(' / '):'按参考要点自评';
+        return s+'<h4>参考答案与推理</h4><p>'+escape(answer)+'</p><ol>'+q.steps.map((v,j)=>'<li>'+(q.stepsHtml?.[j]||escape(v))+'</li>').join('')+'</ol>'+(q.rubric?'<h4>自评要点</h4><ol>'+q.rubric.map((v,j)=>'<li>'+(q.rubricHtml?.[j]||escape(v))+'</li>').join('')+'</ol>':'')+'</section>';
+      }).join('');
+      return '<h1>'+escape(courses.find(c=>c.id===course)?.title||'课程')+' · 章节测试</h1><p>'+session.ids.length+' 题</p>'+(mode==='combined'?list('exam')+'<h2 class="ln-print-new-page">参考答案</h2>'+list('answer'):list(mode));
+    };
 
     const roundOf=value=>value?.roundId || value?.createdAt;
     function persistSession(replace=false) {
@@ -672,7 +748,7 @@
   function mountHub(root,initialCourse,section,initialQuestion){
     const hub=root.querySelector('[data-practice-hub]'),content=hub.querySelector('[data-practice-content]');
     let course=courses.some(c=>c.id===initialCourse)?initialCourse:courses[0].id;
-    let mode=questions.some(q=>q.course===course)?'local':'sources';
+    let mode=location.hash.endsWith('/mistakes')?'mistakes':questions.some(q=>q.course===course)?'local':'sources';
     function render(){
       stopMedia(content);
       hub.querySelectorAll('[data-practice-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.practiceMode===mode)));
@@ -694,7 +770,7 @@
       }else{
         const native=questions.filter(q=>q.course===course&&(mode==='mistakes'?isMistake(record(q)):record(q).favorite));
         html+='<p class="practice-note">错题记录和收藏独立保留；重做不会覆盖独立首答。所有数据仅在当前浏览器。</p>'+
-          externalCollection(course,mode)+'<h3>站内练习 · '+native.length+'题</h3>'+(native.length?shell(course):'<p>暂无对应的站内题。</p>');
+          externalCollection(course,mode)+paperCollection(course,mode)+'<h3>站内练习 · '+native.length+'题</h3>'+(native.length?shell(course):'<p>暂无对应的站内题。</p>');
       }
       content.innerHTML=html;
       if(mode!=='sources'&&content.querySelector('[data-practice-panel]')){
@@ -720,6 +796,8 @@
         if(saveButton.dataset.sourceSave==='mistake')item.reviewed=false;
         save();status.textContent=persistent?'已保存，可在错题集或收藏集按课程再做。':'当前浏览器无法持久保存这条记录。';return;
       }
+      const paper=event.target.closest('[data-paper-record]'),action=event.target.closest('[data-paper-action]');
+      if(paper&&action){const r=paperItems()[paper.dataset.paperRecord];if(r){markPaper(r.version,r.id,action.dataset.paperAction);render();}return;}
       const external=event.target.closest('[data-external-record]');
       if(external){
         const item=extItems().find(i=>i.key===external.dataset.externalRecord);
@@ -761,5 +839,6 @@
     }
     save();return {count,persistent};
   }
-  window.LNPractice={exportEnglishRecords,importEnglishRecords,onRoute:()=>stopMedia(document.querySelector('[data-practice-hub]')),noteReferenceUse: id=>{const q=questions.find(q=>q.id===id);if(q){const r=record(q);r.revealed=true;r.feedbackSeen=true;save();}},button,prepareLesson,pageHtml:()=>'<h1 class="practice-page-title">练习</h1>'+hubHtml(),mount:mountHub};
+  window.LNPractice={importPaperRound,markPaper,printMistakes,exportEnglishRecords,importEnglishRecords,onRoute:()=>stopMedia(document.querySelector('[data-practice-hub]')),noteReferenceUse: id=>{const q=questions.find(q=>q.id===id);if(q){const r=record(q);r.revealed=true;r.feedbackSeen=true;save();}},button,prepareLesson,pageHtml:()=>'<h1 class="practice-page-title">练习</h1>'+hubHtml(),mount:mountHub};
+  window.LNEmcChapterTest?.syncAll?.();
 })();
