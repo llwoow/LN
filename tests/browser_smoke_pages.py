@@ -65,6 +65,27 @@ def main():
                 assert page.locator('[data-library-group="控制与信号"]').count() == 1
                 for width in (1280, 390, 320):
                     page.set_viewport_size({'width': width, 'height': 800})
+                    page.goto(base + '#overview')
+                    all_courses = page.locator('#course-list .course-link')
+                    high_school_courses = page.locator('#course-list .course-link[href^="#course/hs-"]')
+                    assert high_school_courses.count() == 9 and all_courses.count() > 9
+                    page.get_by_role('button', name='高中', exact=True).click()
+                    assert all_courses.count() == 9 and high_school_courses.count() == 9
+                    assert page.get_by_role('link', name='教材与来源').is_visible()
+                    if width <= 390:
+                        page.locator('#sidebar-toggle').click()
+                    group = page.locator('#sidebar-course-list > [data-library-group="高中"]')
+                    assert page.locator('#sidebar-course-list > [data-library-group="电气工程"]').count() == 1
+                    assert page.locator('[data-nav="highschool"]').count() == 0
+                    if group.get_attribute('open') is None:
+                        group.locator('summary').click()
+                    group.get_by_role('link', name='英语', exact=True).click()
+                    page.locator('ln-knowledge-map').wait_for()
+                    page.locator('.back-link[href="#category/highschool"]').click()
+                    assert page.get_by_role('button', name='高中', exact=True).get_attribute('aria-pressed') == 'true'
+                    assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+                    page.goto(base + '#highschool')
+                    page.wait_for_url('**/#category/highschool')
                     page.goto(base + '#course/electrical-machines')
                     if width <= 390:
                         page.locator('#sidebar-toggle').click()

@@ -689,9 +689,9 @@ body.resource-open { overflow: hidden; }
 .school-map .map-groups { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; }
 .school-map .map-groups button { flex-shrink: 0; max-width: 200px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 @media (max-width: 720px) {
-  .page-heading:has(.library-link) { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; }
-  .page-heading:has(.library-link) > .course-search { width: 100%; grid-column: 1 / -1; }
-  .filter-row { overflow-x: auto; }
+  .page-heading:has(.library-link:not([hidden])) { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; }
+  .page-heading:has(.library-link:not([hidden])) > .course-search { width: 100%; grid-column: 1 / -1; }
+  .filter-row { flex-wrap: wrap; }
   .filter-button { white-space: nowrap; flex-shrink: 0; }
   .highschool-resources { font-size: 16px; }
 }

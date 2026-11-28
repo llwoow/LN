@@ -10,9 +10,8 @@ with sync_playwright() as p:
         page.on('request', lambda request: requests.append(request.url))
         page.on('pageerror', lambda error: errors.append(str(error)))
         page.goto(BASE)
-        assert page.locator('#course-list a[href^="#course/hs-"]').count() == 0
-        if width<1100:page.locator('#sidebar-toggle').click()
-        page.locator('.highschool-entry').click()
+        assert page.locator('#course-list .course-link[href^="#course/hs-"]').count() == 9
+        page.get_by_role('button', name='高中', exact=True).click()
         page.wait_for_function('document.querySelectorAll("#course-list .course-row").length === 9')
         courses = page.evaluate("LN_COURSES.filter(c => c.level === 'highschool')")
         for course in courses:

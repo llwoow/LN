@@ -17,7 +17,7 @@
       ['https://resource.unischool.cn/jc/nse_shr_old/','外研高中修订版资源','与人教主题、单元顺序分别查找，不混用旧版 Module 体系。'],
       ['https://www.ictr.edu.cn/download_center/fangan.html','课标与课程方案','2020底本保留历史标签；2025日常修订的存在不等于已完成逐条差分。']
     ];
-    return '<a class="back-link" href="#highschool">← 高中</a><section class="highschool-resources publication-body"><h1>教材与来源</h1><p class="page-meta">海南 · 2027届 · 本次整理 '+escape(data.checked)+'</p>'+
+    return '<a class="back-link" href="#category/highschool">← 高中</a><section class="highschool-resources publication-body"><h1>教材与来源</h1><p class="page-meta">海南 · 2027届 · 本次整理 '+escape(data.checked)+'</p>'+
       '<p>高中目录按所附核验报告的九科、50册主索引与235个知识节点组织。选科和课程类别沿用原报告。</p>'+
       '<p>海南采用六科自主选三的3＋3框架。'+link('https://www.eol.cn/kaoshi/gaokao/gkzc/202610/t20261026_2786604.shtml','2027报名通知转载')+'支持选科规则，不据此预测卷型、题量或新增考点。非统编六科的个人实际版本、教材印次和学校进度仍需与实书核对。</p>'+
       '<p class="source-citation">引用：用户提供《海南2027届九科教材与知识分布核验报告》及配套索引表。逐项依据见下方来源目录与版本差异。</p>'+

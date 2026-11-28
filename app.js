@@ -6,16 +6,17 @@
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const icon = (name) => '<svg class="icon" aria-hidden="true"><use href="#i-' + name + '"/></svg>';
   const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+  const isHighSchool = (course) => course.level === 'highschool';
+  const groupFor = course => isHighSchool(course) ? '高中' : course.libraryGroup;
   const categories = Object.fromEntries(Object.entries({ science: '理学', engineering: '工学', computing: '计算机' }).filter(([, name]) => courses.some((course) => course.category === name)));
   const libraryGroups = Object.fromEntries(Object.entries({
     electrical: '电气工程', control: '控制与信号', electronics: '电子与嵌入式',
-    materials: '材料与能源', general: '通用能力', mathematics: '数学与建模'
-  }).filter(([, name]) => courses.some(course => course.level !== 'highschool' && course.libraryGroup === name)));
-  for (const course of courses.filter(c => c.level !== 'highschool')) {
-    if (!Object.values(libraryGroups).includes(course.libraryGroup))
-      libraryGroups['group-' + course.id] = course.libraryGroup;
+    materials: '材料与能源', general: '通用能力', mathematics: '数学与建模', highschool: '高中'
+  }).filter(([, name]) => courses.some(course => groupFor(course) === name)));
+  for (const course of courses) {
+    if (!Object.values(libraryGroups).includes(groupFor(course)))
+      libraryGroups['group-' + course.id] = groupFor(course);
   }
-  const groupFor = course => isHighSchool(course) ? course.track : course.libraryGroup;
   const matchesCategory = (course, value) => value === '全部' || groupFor(course) === value || course.category === value;
   const palettes = [
     { id: 'ink', name: '黑白', color: '#414141' },
@@ -60,9 +61,7 @@
   let knowledgeEntries;
   let knowledgeKind = '';
   let knowledgeLimit = knowledgePageSize;
-  const isHighSchool = (course) => course.level === 'highschool';
-  const courseHome = (course) => isHighSchool(course) ? '#highschool' : '#overview';
-  const inHighSchool = () => currentView === 'highschool' || (['course','resources','practice'].includes(currentView) && isHighSchool(courses.find(c => c.id === location.hash.split('/')[1]) || {}));
+  const courseHome = (course) => isHighSchool(course) ? '#category/highschool' : '#overview';
   const navState = readStored('ln.navigation.v1', {});
   const openGroups = new Set(Array.isArray(navState?.groups) ? navState.groups : []);
   let sidebarMode = 'courses';
@@ -154,8 +153,7 @@
     const row = (course) => '<a class="sidebar-course-link" href="#course/' + course.id + '"' + (currentView === 'course' && selectedId === course.id ? ' aria-current="page"' : '') + '>' + icon('book') + '<span class="sidebar-course-name">' + escapeHTML(course.title) + '</span>' + '</a>';
     const models = (course) => course.sections.filter((section) => section.kind === 'model').map((section) => '<a class="sidebar-model-link" href="#course/' + course.id + '/' + section.id + '"' + (selectedId === course.id && location.hash.split('/')[2] === section.id ? ' aria-current="page"' : '') + '>' + icon('cube') + '<span>' + escapeHTML(section.title) + '</span></a>').join('');
     const selected = courses.find(c => c.id === selectedId);
-    const visible = courses.filter(c => isHighSchool(c) === inHighSchool());
-    const groupNames = [...new Set(visible.map(groupFor))];
+    const groupNames = Object.values(libraryGroups);
     const sidebarRoute = currentView === 'course' ? 'course/' + selectedId : currentView;
     if (lastSidebarRoute !== sidebarRoute) {
       lastSidebarRoute = sidebarRoute;
@@ -178,7 +176,10 @@
         (selected.workedExercises?.length ? '<a class="sidebar-course-link" href="#course/' + selected.id + '/worked-exercises">已做题详解</a>' : '') +
         (!selected.outlineOnly ? '<a class="sidebar-course-link" href="#practice/' + selected.id + '">习题自测</a><a class="sidebar-course-link" href="#resources/' + selected.id + '">实作与资料</a>' : '') +
         [...new Set(directory.map(s => s.group))].map(group => '<details class="ln-course-group"' + (activeGroup === group ? ' open' : '') + '><summary>' + escapeHTML(group) + '</summary><nav>' + directory.filter(s => s.group === group).map(s => '<a class="ln-section-link" href="#course/' + selected.id + '/' + s.id + '"' + (sectionId === s.id ? ' aria-current="page"' : '') + '>' + escapeHTML(s.title) + '</a>').join('') + '</nav></details>').join('') + '</div>'
-      : groupNames.map(group => '<details class="ln-course-group" data-library-group="' + escapeHTML(group) + '"' + (openGroups.has(group) ? ' open' : '') + '><summary>' + escapeHTML(group) + '<small>' + visible.filter(c => groupFor(c) === group).length + '</small></summary><nav>' + visible.filter(c => groupFor(c) === group).map(c => row(c) + models(c)).join('') + '</nav></details>').join('');
+      : groupNames.map(group => {
+        const groupCourses = courses.filter(course => groupFor(course) === group);
+        return '<details class="ln-course-group" data-library-group="' + escapeHTML(group) + '"' + (openGroups.has(group) ? ' open' : '') + '><summary>' + escapeHTML(group) + '<small>' + groupCourses.length + '</small></summary><nav>' + groupCourses.map(c => row(c) + models(c)).join('') + '</nav></details>';
+      }).join('');
     $('#subject-nav').closest('.subject-group').hidden = true;
     const historyList = $('#ln-recent-list');
     historyList.innerHTML = recent.filter(r => courses.some(c => c.id === r.course && c.sections.some(s => s.id === r.section))).slice(0,3).map(r => {
@@ -243,7 +244,6 @@
     const tokens = text.split(/\s+/);
     const matches = knowledgeEntries.filter(row =>
       (currentView !== 'favorites' || favorites.has(row.course.id)) &&
-      (currentView !== 'highschool' || isHighSchool(row.course)) &&
       matchesCategory(row.course, category) &&
       (!knowledgeKind || row.kind === knowledgeKind) && tokens.every(token => row.search.includes(token)));
     const rank = row => row.titleKey === text ? 0 : row.titleKey.includes(text) ? 1 : row.route.endsWith('/' + row.section.id) ? 3 : 2;
@@ -255,8 +255,10 @@
   }
 
   function renderRows() {
-    const matching = courses.filter((course) => (currentView === 'favorites' || isHighSchool(course) === (currentView === 'highschool')) && (currentView !== 'favorites' || favorites.has(course.id)) && matchesCategory(course, category) && [course.title, course.category, groupFor(course), ...course.topics, ...(course.sections || []).flatMap((section) => [section.title, ...(section.keywords || [])])].join(' ').toLowerCase().includes(query.toLowerCase().trim()));
-    $('#result-count').textContent = matching.length + ' 门' + (currentView === 'highschool' ? ' · 海南2027届' : '');
+    const matching = courses.filter((course) => (currentView !== 'favorites' || favorites.has(course.id)) && matchesCategory(course, category) && [course.title, course.category, groupFor(course), course.track, ...course.topics, ...(course.sections || []).flatMap((section) => [section.title, ...(section.keywords || [])])].join(' ').toLowerCase().includes(query.toLowerCase().trim()));
+    const highSchoolFilter = currentView === 'overview' && category === libraryGroups.highschool;
+    $('#result-count').textContent = matching.length + ' 门' + (highSchoolFilter ? ' · 海南2027届' : '');
+    $('#highschool-sources').hidden = !highSchoolFilter;
     const emptyFavorites = currentView === 'favorites' && !favorites.size;
     const knowledgeMatches = renderKnowledgeResults();
     $('#result-count').hidden = !matching.length && !!knowledgeMatches;
@@ -271,9 +273,9 @@
   }
 
   function renderOverview() {
-    const title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : '课程';
-    const filters = currentView === 'highschool' ? ['全部', '语言', '数理化生', '政史地'] : ['全部', ...new Set([...Object.values(libraryGroups), ...(category !== '全部' && !Object.values(libraryGroups).includes(category) ? [category] : [])])];
-    const libraryLink = currentView === 'highschool' ? '<a class="library-link" href="#highschool/resources">教材与来源</a>' : '';
+    const title = currentView === 'favorites' ? '收藏' : '课程';
+    const filters = [...new Set(['全部', ...Object.values(libraryGroups), category])];
+    const libraryLink = '<a id="highschool-sources" class="library-link" href="#highschool/resources" hidden>教材与来源</a>';
     main.innerHTML = '<section aria-labelledby="page-title"><div class="page-heading"><div><h1 id="page-title">' + title + '</h1><p class="page-meta" id="result-count"></p></div>' + libraryLink + '<label class="course-search">' + icon('search') + '<input id="course-search" type="search" aria-label="搜索课程或知识点" placeholder="搜索课程、知识点…" value="' + escapeHTML(query) + '" autocomplete="off"></label></div><div class="filter-row"' + (filters.length < 3 ? ' hidden' : '') + ' aria-label="筛选学科">' + filters.map((name) => '<button class="filter-button" data-filter="' + name + '" aria-pressed="' + (name === category) + '">' + name + '</button>').join('') + '</div><section id="knowledge-search-results" aria-labelledby="knowledge-results-title" hidden><div class="knowledge-results-head"><h2 id="knowledge-results-title">相关知识</h2><select id="knowledge-kind" aria-label="知识类型"><option value="">所有类型</option>' + knowledgeKinds.map(kind => '<option>' + kind + '</option>').join('') + '</select></div><p id="knowledge-result-count" class="page-meta" role="status"></p><ul id="knowledge-result-list"></ul><button class="secondary-button" data-more-knowledge hidden>显示更多</button></section><ul class="course-list" id="course-list" aria-live="polite" aria-label="课程列表"></ul></section>';
     $('#knowledge-kind').value = knowledgeKind;
     renderRows();
@@ -745,7 +747,12 @@
     window.LNResources.onRoute();
     window.LNPublication.onRoute();
     window.LNGlossary.onRoute();
-    const [view, id, sectionId, rawAnchor] = location.hash.slice(1).split('/');
+    let [view, id, sectionId, rawAnchor] = location.hash.slice(1).split('/');
+    if (view === 'highschool' && !id) {
+      view = 'category';
+      id = 'highschool';
+      history.replaceState(history.state, '', '#category/highschool');
+    }
     let anchor = rawAnchor;
     try { anchor = rawAnchor ? decodeURIComponent(rawAnchor) : ''; } catch { anchor = ''; }
     if (readerDirectory.open) readerDirectory.close();
@@ -759,12 +766,12 @@
     document.body.classList.remove('is-reading', 'directory-open');
     main.classList.remove('course-main', 'map-main', 'practice-main');
     currentView = ['favorites', 'course', 'highschool', 'resources', 'practice', 'knowledge'].includes(view) ? view : 'overview';
-    if (['overview', 'highschool', 'favorites'].includes(currentView) && !(view === 'highschool' && id === 'resources')) {
+    if (['overview', 'favorites'].includes(currentView)) {
       if (lastLibrary !== currentView) { query = ''; knowledgeKind = ''; knowledgeLimit = knowledgePageSize; }
       lastLibrary = currentView;
     }
     category = view === 'category' ? (libraryGroups[id] || categories[id] || '全部') : '全部';
-    let title = currentView === 'highschool' ? '高中' : currentView === 'favorites' ? '收藏' : (category === '全部' ? '课程' : category);
+    let title = currentView === 'favorites' ? '收藏' : (category === '全部' ? '课程' : category);
     const outlineCourse = courses.find(course => course.id === id && course.outlineOnly);
     if (currentView === 'course') {
       title = renderCourse(id, sectionId, anchor);
@@ -785,7 +792,7 @@
     $('#breadcrumb-current').textContent = title;
     document.title = title === '课程' ? 'LN' : title + ' · LN';
     $$('[data-nav]').forEach((link) => {
-      if ((link.dataset.nav === currentView || (link.dataset.nav === 'highschool' && currentView === 'course' && inHighSchool())) && category === '全部') link.setAttribute('aria-current', 'page');
+      if (link.dataset.nav === currentView && category === '全部') link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
     });
     if (currentView === 'course') {
