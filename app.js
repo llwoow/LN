@@ -331,6 +331,10 @@
     main.classList.add('course-main');
     main.innerHTML = '<a class="back-link" href="#course/' + course.id + '">' + icon('back') + '课程图谱</a><section class="course-heading"><h1>电磁兼容 · 考试复习</h1></section>' + courseViewNav(course, 'exam') + '<div class="lesson emc-exam-review" id="emc-exam-review"></div>';
     void loadStyle('courses/electromagnetic-compatibility/model/emc-labs.css').catch(()=>{});
+    if(anchor==='test-a'||anchor==='test-b2'){
+      const root=$('#emc-exam-review');root.textContent='加载试卷…';
+      void Promise.all([loadScript('courses/electromagnetic-compatibility/chapter1-tests-data.js'),loadScript('courses/electromagnetic-compatibility/chapter1-tests.js'),loadStyle('courses/electromagnetic-compatibility/chapter1-tests.css')]).then(()=>{if(root.isConnected)window.LNEmcChapterTest.mount(root,anchor==='test-a'?'A':'B2');}).catch(()=>{if(root.isConnected)root.textContent='试卷加载失败，请刷新重试。';});return;
+    }
     window.LNEmcExam.render($('#emc-exam-review'), anchor, loadEmcReviewMath, () => Promise.all([loadScript('courses/electromagnetic-compatibility/model/emc-labs.js'),loadStyle('courses/electromagnetic-compatibility/model/emc-labs.css')]));
   }
 

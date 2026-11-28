@@ -1,0 +1,9 @@
+
+.emc-test-question{border:1px solid var(--border,#8888);border-radius:8px;padding:16px;margin:18px 0;scroll-margin-top:84px}
+.emc-test-question h3{margin:0 0 12px;display:flex;justify-content:space-between;gap:12px}
+.emc-test-question h3 small{font-size:.8em;white-space:nowrap}
+.emc-test-question textarea{display:block;width:100%;min-height:100px;resize:vertical;padding:8px;font:inherit;color:inherit;background:transparent;border:1px solid var(--border,#888);border-radius:5px;box-sizing:border-box}
+.emc-test-option{display:flex;align-items:flex-start;gap:8px;padding:8px;border:1px solid var(--border,#8885);border-radius:5px;margin:6px 0;cursor:pointer}
+.emc-test-option input{margin-top:.45em;flex:none}.emc-test-field{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}.emc-test-field input,.emc-test-rubric input{width:8em;max-width:100%;font:inherit;color:inherit;background:transparent;border:1px solid var(--border,#888);padding:4px}
+.emc-test-toolbar{padding:10px 0;border-bottom:1px solid var(--border,#888)}.emc-test-nav{display:flex;flex-wrap:wrap;gap:5px;margin:9px 0}.emc-test-toolbar button{font:inherit;font-size:.85em;color:inherit;background:transparent;border:1px solid var(--border,#888);border-radius:4px;padding:6px 9px;cursor:pointer}
+.emc-test-feedback{border-top:1px solid var(--border,#888);margin-top:14px;padding-top:10px}.emc-test-rubric{margin:8px 0}.emc-test-scroll{overflow-x:auto;max-width:100%}.emc-test-scroll table{border-collapse:collapse;width:100%;font-size:.9em}.emc-test-scroll th,.emc-test-scroll td{padding:7px;border-bottom:1px solid var(--border,#888);text-align:left}.emc-test-figure svg,.emc-test-question .dmdrawing{width:100%;height:auto;max-width:100%;display:block;margin:auto}.emc-test-figure{margin:12px 0;text-align:center}
